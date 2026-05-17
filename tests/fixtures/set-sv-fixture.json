@@ -1,0 +1,25 @@
+[
+  {
+    "id": "sv1-1",
+    "name": "Bulbasaur",
+    "supertype": "Pokémon",
+    "nationalPokedexNumbers": [1]
+  },
+  {
+    "id": "sv1-2",
+    "name": "Ivysaur",
+    "supertype": "Pokémon",
+    "nationalPokedexNumbers": [2]
+  },
+  {
+    "id": "sv1-3",
+    "name": "Pikachu V",
+    "supertype": "Pokémon",
+    "nationalPokedexNumbers": [25]
+  },
+  {
+    "id": "sv1-100",
+    "name": "Professor's Research",
+    "supertype": "Trainer"
+  }
+]

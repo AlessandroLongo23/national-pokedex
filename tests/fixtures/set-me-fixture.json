@@ -1,0 +1,20 @@
+[
+  {
+    "id": "me1-1",
+    "name": "Inteleon ex",
+    "supertype": "Pokémon",
+    "nationalPokedexNumbers": [818]
+  },
+  {
+    "id": "me1-2",
+    "name": "Kyogre",
+    "supertype": "Pokémon",
+    "nationalPokedexNumbers": [382]
+  },
+  {
+    "id": "me1-3",
+    "name": "Ivysaur (reprint)",
+    "supertype": "Pokémon",
+    "nationalPokedexNumbers": [2]
+  }
+]
