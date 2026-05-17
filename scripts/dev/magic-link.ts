@@ -46,7 +46,7 @@ async function main() {
   const redirectTo = process.env.MAGIC_LINK_REDIRECT_TO ?? "http://localhost:3000/auth/callback";
   const { data, error } = await admin.auth.admin.generateLink({
     type: "magiclink",
-    email,
+    email: email!,
     options: { redirectTo },
   });
 
