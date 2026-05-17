@@ -4,6 +4,7 @@ import { OwnedProvider } from "./OwnedContext";
 import { HeadlineStats } from "./sections/HeadlineStats";
 import { CoverageByGen } from "./sections/CoverageByGen";
 import { MEAddedList } from "./sections/MEAddedList";
+import { PokedexGrid } from "./sections/PokedexGrid";
 
 export function DashboardClient({ initialOwned }: { initialOwned: number[] }) {
   return (
@@ -20,6 +21,7 @@ export function DashboardClient({ initialOwned }: { initialOwned: number[] }) {
         <HeadlineStats />
         <CoverageByGen />
         <MEAddedList />
+        <PokedexGrid />
       </main>
     </OwnedProvider>
   );
