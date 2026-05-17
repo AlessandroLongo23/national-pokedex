@@ -1,6 +1,9 @@
 "use client";
 
 import { OwnedProvider } from "./OwnedContext";
+import { HeadlineStats } from "./sections/HeadlineStats";
+import { CoverageByGen } from "./sections/CoverageByGen";
+import { MEAddedList } from "./sections/MEAddedList";
 
 export function DashboardClient({ initialOwned }: { initialOwned: number[] }) {
   return (
@@ -14,7 +17,9 @@ export function DashboardClient({ initialOwned }: { initialOwned: number[] }) {
             Scarlet &amp; Violet + Mega Evolution — your binder progress
           </p>
         </header>
-        <p className="text-muted">Sections coming online…</p>
+        <HeadlineStats />
+        <CoverageByGen />
+        <MEAddedList />
       </main>
     </OwnedProvider>
   );
