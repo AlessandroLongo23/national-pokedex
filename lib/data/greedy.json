@@ -1,0 +1,170 @@
+[
+  {
+    "rank": 1,
+    "setId": "me2pt5",
+    "setName": "Ascended Heroes",
+    "newCount": 174,
+    "cumulative": 174,
+    "releaseDate": "2026/01/30"
+  },
+  {
+    "rank": 2,
+    "setId": "sv4",
+    "setName": "Paradox Rift",
+    "newCount": 131,
+    "cumulative": 305,
+    "releaseDate": "2023/11/03"
+  },
+  {
+    "rank": 3,
+    "setId": "sv3pt5",
+    "setName": "151",
+    "newCount": 115,
+    "cumulative": 420,
+    "releaseDate": "2023/09/22"
+  },
+  {
+    "rank": 4,
+    "setId": "sv3",
+    "setName": "Obsidian Flames",
+    "newCount": 95,
+    "cumulative": 515,
+    "releaseDate": "2023/08/11"
+  },
+  {
+    "rank": 5,
+    "setId": "sv2",
+    "setName": "Paldea Evolved",
+    "newCount": 77,
+    "cumulative": 592,
+    "releaseDate": "2023/06/09"
+  },
+  {
+    "rank": 6,
+    "setId": "sv5",
+    "setName": "Temporal Forces",
+    "newCount": 61,
+    "cumulative": 653,
+    "releaseDate": "2024/03/22"
+  },
+  {
+    "rank": 7,
+    "setId": "sv6",
+    "setName": "Twilight Masquerade",
+    "newCount": 47,
+    "cumulative": 700,
+    "releaseDate": "2024/05/24"
+  },
+  {
+    "rank": 8,
+    "setId": "sv8",
+    "setName": "Surging Sparks",
+    "newCount": 42,
+    "cumulative": 742,
+    "releaseDate": "2024/11/08"
+  },
+  {
+    "rank": 9,
+    "setId": "sv9",
+    "setName": "Journey Together",
+    "newCount": 39,
+    "cumulative": 781,
+    "releaseDate": "2025/03/28"
+  },
+  {
+    "rank": 10,
+    "setId": "sv7",
+    "setName": "Stellar Crown",
+    "newCount": 27,
+    "cumulative": 808,
+    "releaseDate": "2024/09/13"
+  },
+  {
+    "rank": 11,
+    "setId": "sv10",
+    "setName": "Destined Rivals",
+    "newCount": 25,
+    "cumulative": 833,
+    "releaseDate": "2025/05/30"
+  },
+  {
+    "rank": 12,
+    "setId": "rsv10pt5",
+    "setName": "White Flare",
+    "newCount": 20,
+    "cumulative": 853,
+    "releaseDate": "2025/07/18"
+  },
+  {
+    "rank": 13,
+    "setId": "me1",
+    "setName": "Mega Evolution",
+    "newCount": 18,
+    "cumulative": 871,
+    "releaseDate": "2025/09/26"
+  },
+  {
+    "rank": 14,
+    "setId": "zsv10pt5",
+    "setName": "Black Bolt",
+    "newCount": 16,
+    "cumulative": 887,
+    "releaseDate": "2025/07/18"
+  },
+  {
+    "rank": 15,
+    "setId": "me3",
+    "setName": "Perfect Order",
+    "newCount": 12,
+    "cumulative": 899,
+    "releaseDate": "2026/03/27"
+  },
+  {
+    "rank": 16,
+    "setId": "sv8pt5",
+    "setName": "Prismatic Evolutions",
+    "newCount": 6,
+    "cumulative": 905,
+    "releaseDate": "2025/01/17"
+  },
+  {
+    "rank": 17,
+    "setId": "me2",
+    "setName": "Phantasmal Flames",
+    "newCount": 5,
+    "cumulative": 910,
+    "releaseDate": "2025/11/14"
+  },
+  {
+    "rank": 18,
+    "setId": "sv1",
+    "setName": "Scarlet & Violet",
+    "newCount": 4,
+    "cumulative": 914,
+    "releaseDate": "2023/03/31"
+  },
+  {
+    "rank": 19,
+    "setId": "svp",
+    "setName": "Scarlet & Violet Black Star Promos",
+    "newCount": 1,
+    "cumulative": 915,
+    "releaseDate": "2023/01/01"
+  },
+  {
+    "rank": 20,
+    "setId": "sv4pt5",
+    "setName": "Paldean Fates",
+    "newCount": 1,
+    "cumulative": 916,
+    "releaseDate": "2024/01/26"
+  },
+  {
+    "rank": 21,
+    "setId": "sv6pt5",
+    "setName": "Shrouded Fable",
+    "newCount": 1,
+    "cumulative": 917,
+    "releaseDate": "2024/08/02"
+  }
+]
