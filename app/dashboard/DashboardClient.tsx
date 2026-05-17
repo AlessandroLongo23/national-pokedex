@@ -7,6 +7,9 @@ import { HeadlineStats } from "./sections/HeadlineStats";
 import { CoverageByGen } from "./sections/CoverageByGen";
 import { MEAddedList } from "./sections/MEAddedList";
 import { PokedexGrid } from "./sections/PokedexGrid";
+import { SetsTable } from "./sections/SetsTable";
+import { GreedyOrder } from "./sections/GreedyOrder";
+import { MissingList } from "./sections/MissingList";
 
 export function DashboardClient({ initialOwned }: { initialOwned: number[] }) {
   return (
@@ -25,6 +28,9 @@ export function DashboardClient({ initialOwned }: { initialOwned: number[] }) {
           <CoverageByGen />
           <MEAddedList />
           <PokedexGrid />
+          <SetsTable />
+          <GreedyOrder />
+          <MissingList />
         </main>
         <Tooltip />
       </TooltipProvider>
