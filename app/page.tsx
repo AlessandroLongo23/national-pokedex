@@ -1,8 +1,10 @@
-export default function Home() {
-  return (
-    <main className="p-8">
-      <h1 className="text-2xl font-bold">National Pokédex Tracker</h1>
-      <p className="mt-2 text-sm">Scaffold up.</p>
-    </main>
-  );
+import { redirect } from "next/navigation";
+import { getSupabaseServer } from "@/lib/supabase/server";
+
+export default async function Home() {
+  const supabase = await getSupabaseServer();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  redirect(user ? "/dashboard" : "/login");
 }
