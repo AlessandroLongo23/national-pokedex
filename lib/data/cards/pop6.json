@@ -1,0 +1,380 @@
+[
+  {
+    "id": "pop6-1",
+    "name": "Bastiodon",
+    "setId": "pop6",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      411
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Shieldon",
+    "artist": "Kazuyuki Kano",
+    "imageSmall": "https://images.pokemontcg.io/pop6/1.png",
+    "imageLarge": "https://images.pokemontcg.io/pop6/1_hires.png"
+  },
+  {
+    "id": "pop6-2",
+    "name": "Lucario",
+    "setId": "pop6",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      448
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Riolu",
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/pop6/2.png",
+    "imageLarge": "https://images.pokemontcg.io/pop6/2_hires.png"
+  },
+  {
+    "id": "pop6-3",
+    "name": "Manaphy",
+    "setId": "pop6",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      490
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/pop6/3.png",
+    "imageLarge": "https://images.pokemontcg.io/pop6/3_hires.png"
+  },
+  {
+    "id": "pop6-4",
+    "name": "Pachirisu",
+    "setId": "pop6",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      417
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/pop6/4.png",
+    "imageLarge": "https://images.pokemontcg.io/pop6/4_hires.png"
+  },
+  {
+    "id": "pop6-5",
+    "name": "Rampardos",
+    "setId": "pop6",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      409
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Cranidos",
+    "artist": "Kazuyuki Kano",
+    "imageSmall": "https://images.pokemontcg.io/pop6/5.png",
+    "imageLarge": "https://images.pokemontcg.io/pop6/5_hires.png"
+  },
+  {
+    "id": "pop6-6",
+    "name": "Drifloon",
+    "setId": "pop6",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      425
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/pop6/6.png",
+    "imageLarge": "https://images.pokemontcg.io/pop6/6_hires.png"
+  },
+  {
+    "id": "pop6-7",
+    "name": "Gible",
+    "setId": "pop6",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      443
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/pop6/7.png",
+    "imageLarge": "https://images.pokemontcg.io/pop6/7_hires.png"
+  },
+  {
+    "id": "pop6-8",
+    "name": "Riolu",
+    "setId": "pop6",
+    "number": "8",
+    "numberInt": 8,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      447
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/pop6/8.png",
+    "imageLarge": "https://images.pokemontcg.io/pop6/8_hires.png"
+  },
+  {
+    "id": "pop6-9",
+    "name": "Pikachu",
+    "setId": "pop6",
+    "number": "9",
+    "numberInt": 9,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      25
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/pop6/9.png",
+    "imageLarge": "https://images.pokemontcg.io/pop6/9_hires.png"
+  },
+  {
+    "id": "pop6-10",
+    "name": "Staravia",
+    "setId": "pop6",
+    "number": "10",
+    "numberInt": 10,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      397
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Starly",
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/pop6/10.png",
+    "imageLarge": "https://images.pokemontcg.io/pop6/10_hires.png"
+  },
+  {
+    "id": "pop6-11",
+    "name": "Bidoof",
+    "setId": "pop6",
+    "number": "11",
+    "numberInt": 11,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      399
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/pop6/11.png",
+    "imageLarge": "https://images.pokemontcg.io/pop6/11_hires.png"
+  },
+  {
+    "id": "pop6-12",
+    "name": "Buneary",
+    "setId": "pop6",
+    "number": "12",
+    "numberInt": 12,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      427
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/pop6/12.png",
+    "imageLarge": "https://images.pokemontcg.io/pop6/12_hires.png"
+  },
+  {
+    "id": "pop6-13",
+    "name": "Cherubi",
+    "setId": "pop6",
+    "number": "13",
+    "numberInt": 13,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      420
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/pop6/13.png",
+    "imageLarge": "https://images.pokemontcg.io/pop6/13_hires.png"
+  },
+  {
+    "id": "pop6-14",
+    "name": "Chimchar",
+    "setId": "pop6",
+    "number": "14",
+    "numberInt": 14,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      390
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/pop6/14.png",
+    "imageLarge": "https://images.pokemontcg.io/pop6/14_hires.png"
+  },
+  {
+    "id": "pop6-15",
+    "name": "Piplup",
+    "setId": "pop6",
+    "number": "15",
+    "numberInt": 15,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      393
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/pop6/15.png",
+    "imageLarge": "https://images.pokemontcg.io/pop6/15_hires.png"
+  },
+  {
+    "id": "pop6-16",
+    "name": "Starly",
+    "setId": "pop6",
+    "number": "16",
+    "numberInt": 16,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      396
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/pop6/16.png",
+    "imageLarge": "https://images.pokemontcg.io/pop6/16_hires.png"
+  },
+  {
+    "id": "pop6-17",
+    "name": "Turtwig",
+    "setId": "pop6",
+    "number": "17",
+    "numberInt": 17,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      387
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/pop6/17.png",
+    "imageLarge": "https://images.pokemontcg.io/pop6/17_hires.png"
+  }
+]

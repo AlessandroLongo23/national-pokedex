@@ -1,0 +1,2204 @@
+[
+  {
+    "id": "neo4-1",
+    "name": "Dark Ampharos",
+    "setId": "neo4",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      181
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Dark Flaaffy",
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/neo4/1.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/1_hires.png"
+  },
+  {
+    "id": "neo4-2",
+    "name": "Dark Crobat",
+    "setId": "neo4",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      169
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Dark Golbat",
+    "artist": "Shin-ichi Yoshikawa, CR CG gangs",
+    "imageSmall": "https://images.pokemontcg.io/neo4/2.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/2_hires.png"
+  },
+  {
+    "id": "neo4-3",
+    "name": "Dark Donphan",
+    "setId": "neo4",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      232
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Phanpy",
+    "artist": "Shin-ichi Yoshida",
+    "imageSmall": "https://images.pokemontcg.io/neo4/3.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/3_hires.png"
+  },
+  {
+    "id": "neo4-4",
+    "name": "Dark Espeon",
+    "setId": "neo4",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      196
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Eevee",
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/neo4/4.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/4_hires.png"
+  },
+  {
+    "id": "neo4-5",
+    "name": "Dark Feraligatr",
+    "setId": "neo4",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      160
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Dark Croconaw",
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/neo4/5.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/5_hires.png"
+  },
+  {
+    "id": "neo4-6",
+    "name": "Dark Gengar",
+    "setId": "neo4",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      94
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Dark Haunter",
+    "artist": "Aya Kusube",
+    "imageSmall": "https://images.pokemontcg.io/neo4/6.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/6_hires.png"
+  },
+  {
+    "id": "neo4-7",
+    "name": "Dark Houndoom",
+    "setId": "neo4",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      229
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Houndour",
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/neo4/7.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/7_hires.png"
+  },
+  {
+    "id": "neo4-8",
+    "name": "Dark Porygon2",
+    "setId": "neo4",
+    "number": "8",
+    "numberInt": 8,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      233
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Porygon",
+    "artist": "Shin-ichi Yoshikawa, CR CG gangs",
+    "imageSmall": "https://images.pokemontcg.io/neo4/8.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/8_hires.png"
+  },
+  {
+    "id": "neo4-9",
+    "name": "Dark Scizor",
+    "setId": "neo4",
+    "number": "9",
+    "numberInt": 9,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      212
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Scyther",
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/neo4/9.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/9_hires.png"
+  },
+  {
+    "id": "neo4-10",
+    "name": "Dark Typhlosion",
+    "setId": "neo4",
+    "number": "10",
+    "numberInt": 10,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      157
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Dark Quilava",
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/neo4/10.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/10_hires.png"
+  },
+  {
+    "id": "neo4-11",
+    "name": "Dark Tyranitar",
+    "setId": "neo4",
+    "number": "11",
+    "numberInt": 11,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      248
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Dark Pupitar",
+    "artist": "Shin-ichi Yoshida",
+    "imageSmall": "https://images.pokemontcg.io/neo4/11.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/11_hires.png"
+  },
+  {
+    "id": "neo4-12",
+    "name": "Light Arcanine",
+    "setId": "neo4",
+    "number": "12",
+    "numberInt": 12,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      59
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Growlithe",
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/neo4/12.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/12_hires.png"
+  },
+  {
+    "id": "neo4-13",
+    "name": "Light Azumarill",
+    "setId": "neo4",
+    "number": "13",
+    "numberInt": 13,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      184
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Marill",
+    "artist": "Yuka Morii",
+    "imageSmall": "https://images.pokemontcg.io/neo4/13.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/13_hires.png"
+  },
+  {
+    "id": "neo4-14",
+    "name": "Light Dragonite",
+    "setId": "neo4",
+    "number": "14",
+    "numberInt": 14,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      149
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Light Dragonair",
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/neo4/14.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/14_hires.png"
+  },
+  {
+    "id": "neo4-15",
+    "name": "Light Togetic",
+    "setId": "neo4",
+    "number": "15",
+    "numberInt": 15,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      176
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Togepi",
+    "artist": "Naoyo Kimura",
+    "imageSmall": "https://images.pokemontcg.io/neo4/15.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/15_hires.png"
+  },
+  {
+    "id": "neo4-17",
+    "name": "Dark Ariados",
+    "setId": "neo4",
+    "number": "17",
+    "numberInt": 17,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      168
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Spinarak",
+    "artist": "Toshinao Aoki",
+    "imageSmall": "https://images.pokemontcg.io/neo4/17.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/17_hires.png"
+  },
+  {
+    "id": "neo4-18",
+    "name": "Dark Magcargo",
+    "setId": "neo4",
+    "number": "18",
+    "numberInt": 18,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      219
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Slugma",
+    "artist": "Toshinao Aoki",
+    "imageSmall": "https://images.pokemontcg.io/neo4/18.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/18_hires.png"
+  },
+  {
+    "id": "neo4-19",
+    "name": "Dark Omastar",
+    "setId": "neo4",
+    "number": "19",
+    "numberInt": 19,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      139
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Dark Omanyte",
+    "artist": "Tomokazu Komiya",
+    "imageSmall": "https://images.pokemontcg.io/neo4/19.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/19_hires.png"
+  },
+  {
+    "id": "neo4-20",
+    "name": "Dark Slowking",
+    "setId": "neo4",
+    "number": "20",
+    "numberInt": 20,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      199
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Slowpoke",
+    "artist": "Tomokazu Komiya",
+    "imageSmall": "https://images.pokemontcg.io/neo4/20.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/20_hires.png"
+  },
+  {
+    "id": "neo4-21",
+    "name": "Dark Ursaring",
+    "setId": "neo4",
+    "number": "21",
+    "numberInt": 21,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      217
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Teddiursa",
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/neo4/21.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/21_hires.png"
+  },
+  {
+    "id": "neo4-22",
+    "name": "Light Dragonair",
+    "setId": "neo4",
+    "number": "22",
+    "numberInt": 22,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      148
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Dratini",
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/neo4/22.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/22_hires.png"
+  },
+  {
+    "id": "neo4-23",
+    "name": "Light Lanturn",
+    "setId": "neo4",
+    "number": "23",
+    "numberInt": 23,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      171
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Chinchou",
+    "artist": "Miki Tanaka",
+    "imageSmall": "https://images.pokemontcg.io/neo4/23.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/23_hires.png"
+  },
+  {
+    "id": "neo4-24",
+    "name": "Light Ledian",
+    "setId": "neo4",
+    "number": "24",
+    "numberInt": 24,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      166
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Ledyba",
+    "artist": "Tomokazu Komiya",
+    "imageSmall": "https://images.pokemontcg.io/neo4/24.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/24_hires.png"
+  },
+  {
+    "id": "neo4-25",
+    "name": "Light Machamp",
+    "setId": "neo4",
+    "number": "25",
+    "numberInt": 25,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      68
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Light Machoke",
+    "artist": "Miki Tanaka",
+    "imageSmall": "https://images.pokemontcg.io/neo4/25.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/25_hires.png"
+  },
+  {
+    "id": "neo4-26",
+    "name": "Light Piloswine",
+    "setId": "neo4",
+    "number": "26",
+    "numberInt": 26,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      221
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Swinub",
+    "artist": "Yukiko Baba",
+    "imageSmall": "https://images.pokemontcg.io/neo4/26.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/26_hires.png"
+  },
+  {
+    "id": "neo4-27",
+    "name": "Unown [G]",
+    "setId": "neo4",
+    "number": "27",
+    "numberInt": 27,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      201
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "CR CG gangs",
+    "imageSmall": "https://images.pokemontcg.io/neo4/27.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/27_hires.png"
+  },
+  {
+    "id": "neo4-28",
+    "name": "Unown [H]",
+    "setId": "neo4",
+    "number": "28",
+    "numberInt": 28,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      201
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "CR CG gangs",
+    "imageSmall": "https://images.pokemontcg.io/neo4/28.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/28_hires.png"
+  },
+  {
+    "id": "neo4-29",
+    "name": "Unown [W]",
+    "setId": "neo4",
+    "number": "29",
+    "numberInt": 29,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      201
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "CR CG gangs",
+    "imageSmall": "https://images.pokemontcg.io/neo4/29.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/29_hires.png"
+  },
+  {
+    "id": "neo4-30",
+    "name": "Unown [X]",
+    "setId": "neo4",
+    "number": "30",
+    "numberInt": 30,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      201
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "CR CG gangs",
+    "imageSmall": "https://images.pokemontcg.io/neo4/30.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/30_hires.png"
+  },
+  {
+    "id": "neo4-31",
+    "name": "Chansey",
+    "setId": "neo4",
+    "number": "31",
+    "numberInt": 31,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      113
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Yuka Morii",
+    "imageSmall": "https://images.pokemontcg.io/neo4/31.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/31_hires.png"
+  },
+  {
+    "id": "neo4-32",
+    "name": "Dark Croconaw",
+    "setId": "neo4",
+    "number": "32",
+    "numberInt": 32,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      159
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Totodile",
+    "artist": "Shin-ichi Yoshida",
+    "imageSmall": "https://images.pokemontcg.io/neo4/32.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/32_hires.png"
+  },
+  {
+    "id": "neo4-33",
+    "name": "Dark Exeggutor",
+    "setId": "neo4",
+    "number": "33",
+    "numberInt": 33,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      103
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Exeggcute",
+    "artist": "Toshinao Aoki",
+    "imageSmall": "https://images.pokemontcg.io/neo4/33.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/33_hires.png"
+  },
+  {
+    "id": "neo4-34",
+    "name": "Dark Flaaffy",
+    "setId": "neo4",
+    "number": "34",
+    "numberInt": 34,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      180
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Mareep",
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/neo4/34.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/34_hires.png"
+  },
+  {
+    "id": "neo4-35",
+    "name": "Dark Forretress",
+    "setId": "neo4",
+    "number": "35",
+    "numberInt": 35,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      205
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Pineco",
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/neo4/35.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/35_hires.png"
+  },
+  {
+    "id": "neo4-36",
+    "name": "Dark Haunter",
+    "setId": "neo4",
+    "number": "36",
+    "numberInt": 36,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      93
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Gastly",
+    "artist": "Aya Kusube",
+    "imageSmall": "https://images.pokemontcg.io/neo4/36.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/36_hires.png"
+  },
+  {
+    "id": "neo4-37",
+    "name": "Dark Omanyte",
+    "setId": "neo4",
+    "number": "37",
+    "numberInt": 37,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      138
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Mysterious Fossil",
+    "artist": "Tomokazu Komiya",
+    "imageSmall": "https://images.pokemontcg.io/neo4/37.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/37_hires.png"
+  },
+  {
+    "id": "neo4-38",
+    "name": "Dark Pupitar",
+    "setId": "neo4",
+    "number": "38",
+    "numberInt": 38,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      247
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Larvitar",
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/neo4/38.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/38_hires.png"
+  },
+  {
+    "id": "neo4-39",
+    "name": "Dark Quilava",
+    "setId": "neo4",
+    "number": "39",
+    "numberInt": 39,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      156
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Cyndaquil",
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/neo4/39.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/39_hires.png"
+  },
+  {
+    "id": "neo4-40",
+    "name": "Dark Wigglytuff",
+    "setId": "neo4",
+    "number": "40",
+    "numberInt": 40,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      40
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Jigglypuff",
+    "artist": "Miki Tanaka",
+    "imageSmall": "https://images.pokemontcg.io/neo4/40.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/40_hires.png"
+  },
+  {
+    "id": "neo4-41",
+    "name": "Heracross",
+    "setId": "neo4",
+    "number": "41",
+    "numberInt": 41,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      214
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "K. Hoshiba, CR CG gangs",
+    "imageSmall": "https://images.pokemontcg.io/neo4/41.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/41_hires.png"
+  },
+  {
+    "id": "neo4-42",
+    "name": "Hitmonlee",
+    "setId": "neo4",
+    "number": "42",
+    "numberInt": 42,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      106
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Yukiko Baba",
+    "imageSmall": "https://images.pokemontcg.io/neo4/42.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/42_hires.png"
+  },
+  {
+    "id": "neo4-43",
+    "name": "Houndour",
+    "setId": "neo4",
+    "number": "43",
+    "numberInt": 43,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      228
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Yukiko Baba",
+    "imageSmall": "https://images.pokemontcg.io/neo4/43.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/43_hires.png"
+  },
+  {
+    "id": "neo4-44",
+    "name": "Jigglypuff",
+    "setId": "neo4",
+    "number": "44",
+    "numberInt": 44,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      39
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Yuka Morii",
+    "imageSmall": "https://images.pokemontcg.io/neo4/44.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/44_hires.png"
+  },
+  {
+    "id": "neo4-45",
+    "name": "Light Dewgong",
+    "setId": "neo4",
+    "number": "45",
+    "numberInt": 45,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      87
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Seel",
+    "artist": "Masako Yamashita",
+    "imageSmall": "https://images.pokemontcg.io/neo4/45.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/45_hires.png"
+  },
+  {
+    "id": "neo4-46",
+    "name": "Light Flareon",
+    "setId": "neo4",
+    "number": "46",
+    "numberInt": 46,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      136
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Eevee",
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/neo4/46.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/46_hires.png"
+  },
+  {
+    "id": "neo4-47",
+    "name": "Light Golduck",
+    "setId": "neo4",
+    "number": "47",
+    "numberInt": 47,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      55
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Psyduck",
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/neo4/47.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/47_hires.png"
+  },
+  {
+    "id": "neo4-48",
+    "name": "Light Jolteon",
+    "setId": "neo4",
+    "number": "48",
+    "numberInt": 48,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      135
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Eevee",
+    "artist": "Naoyo Kimura",
+    "imageSmall": "https://images.pokemontcg.io/neo4/48.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/48_hires.png"
+  },
+  {
+    "id": "neo4-49",
+    "name": "Light Machoke",
+    "setId": "neo4",
+    "number": "49",
+    "numberInt": 49,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      67
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Machop",
+    "artist": "Miki Tanaka",
+    "imageSmall": "https://images.pokemontcg.io/neo4/49.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/49_hires.png"
+  },
+  {
+    "id": "neo4-50",
+    "name": "Light Ninetales",
+    "setId": "neo4",
+    "number": "50",
+    "numberInt": 50,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      38
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Vulpix",
+    "artist": "Masako Yamashita",
+    "imageSmall": "https://images.pokemontcg.io/neo4/50.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/50_hires.png"
+  },
+  {
+    "id": "neo4-51",
+    "name": "Light Slowbro",
+    "setId": "neo4",
+    "number": "51",
+    "numberInt": 51,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      80
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Slowpoke",
+    "artist": "Tomokazu Komiya",
+    "imageSmall": "https://images.pokemontcg.io/neo4/51.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/51_hires.png"
+  },
+  {
+    "id": "neo4-52",
+    "name": "Light Vaporeon",
+    "setId": "neo4",
+    "number": "52",
+    "numberInt": 52,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      134
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Eevee",
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/neo4/52.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/52_hires.png"
+  },
+  {
+    "id": "neo4-53",
+    "name": "Light Venomoth",
+    "setId": "neo4",
+    "number": "53",
+    "numberInt": 53,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      49
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Venonat",
+    "artist": "Masako Yamashita",
+    "imageSmall": "https://images.pokemontcg.io/neo4/53.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/53_hires.png"
+  },
+  {
+    "id": "neo4-54",
+    "name": "Light Wigglytuff",
+    "setId": "neo4",
+    "number": "54",
+    "numberInt": 54,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      40
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Jigglypuff",
+    "artist": "Naoyo Kimura",
+    "imageSmall": "https://images.pokemontcg.io/neo4/54.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/54_hires.png"
+  },
+  {
+    "id": "neo4-55",
+    "name": "Scyther",
+    "setId": "neo4",
+    "number": "55",
+    "numberInt": 55,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      123
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Shin-ichi Yoshida",
+    "imageSmall": "https://images.pokemontcg.io/neo4/55.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/55_hires.png"
+  },
+  {
+    "id": "neo4-56",
+    "name": "Togepi",
+    "setId": "neo4",
+    "number": "56",
+    "numberInt": 56,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      175
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Yuka Morii",
+    "imageSmall": "https://images.pokemontcg.io/neo4/56.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/56_hires.png"
+  },
+  {
+    "id": "neo4-57",
+    "name": "Unown [C]",
+    "setId": "neo4",
+    "number": "57",
+    "numberInt": 57,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      201
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "CR CG gangs",
+    "imageSmall": "https://images.pokemontcg.io/neo4/57.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/57_hires.png"
+  },
+  {
+    "id": "neo4-58",
+    "name": "Unown [P]",
+    "setId": "neo4",
+    "number": "58",
+    "numberInt": 58,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      201
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "CR CG gangs",
+    "imageSmall": "https://images.pokemontcg.io/neo4/58.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/58_hires.png"
+  },
+  {
+    "id": "neo4-59",
+    "name": "Unown [Q]",
+    "setId": "neo4",
+    "number": "59",
+    "numberInt": 59,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      201
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "CR CG gangs",
+    "imageSmall": "https://images.pokemontcg.io/neo4/59.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/59_hires.png"
+  },
+  {
+    "id": "neo4-60",
+    "name": "Unown [Z]",
+    "setId": "neo4",
+    "number": "60",
+    "numberInt": 60,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      201
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "CR CG gangs",
+    "imageSmall": "https://images.pokemontcg.io/neo4/60.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/60_hires.png"
+  },
+  {
+    "id": "neo4-61",
+    "name": "Cyndaquil",
+    "setId": "neo4",
+    "number": "61",
+    "numberInt": 61,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      155
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Yukiko Baba",
+    "imageSmall": "https://images.pokemontcg.io/neo4/61.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/61_hires.png"
+  },
+  {
+    "id": "neo4-62",
+    "name": "Dark Octillery",
+    "setId": "neo4",
+    "number": "62",
+    "numberInt": 62,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      224
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Remoraid",
+    "artist": "Shin-ichi Yoshida",
+    "imageSmall": "https://images.pokemontcg.io/neo4/62.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/62_hires.png"
+  },
+  {
+    "id": "neo4-63",
+    "name": "Dratini",
+    "setId": "neo4",
+    "number": "63",
+    "numberInt": 63,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      147
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Yuka Morii",
+    "imageSmall": "https://images.pokemontcg.io/neo4/63.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/63_hires.png"
+  },
+  {
+    "id": "neo4-64",
+    "name": "Exeggcute",
+    "setId": "neo4",
+    "number": "64",
+    "numberInt": 64,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      102
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Toshinao Aoki",
+    "imageSmall": "https://images.pokemontcg.io/neo4/64.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/64_hires.png"
+  },
+  {
+    "id": "neo4-65",
+    "name": "Gastly",
+    "setId": "neo4",
+    "number": "65",
+    "numberInt": 65,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      92
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Aya Kusube",
+    "imageSmall": "https://images.pokemontcg.io/neo4/65.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/65_hires.png"
+  },
+  {
+    "id": "neo4-66",
+    "name": "Girafarig",
+    "setId": "neo4",
+    "number": "66",
+    "numberInt": 66,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      203
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Yuka Morii",
+    "imageSmall": "https://images.pokemontcg.io/neo4/66.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/66_hires.png"
+  },
+  {
+    "id": "neo4-67",
+    "name": "Gligar",
+    "setId": "neo4",
+    "number": "67",
+    "numberInt": 67,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      207
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/neo4/67.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/67_hires.png"
+  },
+  {
+    "id": "neo4-68",
+    "name": "Growlithe",
+    "setId": "neo4",
+    "number": "68",
+    "numberInt": 68,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      58
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/neo4/68.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/68_hires.png"
+  },
+  {
+    "id": "neo4-69",
+    "name": "Hitmonchan",
+    "setId": "neo4",
+    "number": "69",
+    "numberInt": 69,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      107
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Shin-ichi Yoshida",
+    "imageSmall": "https://images.pokemontcg.io/neo4/69.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/69_hires.png"
+  },
+  {
+    "id": "neo4-70",
+    "name": "Larvitar",
+    "setId": "neo4",
+    "number": "70",
+    "numberInt": 70,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      246
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/neo4/70.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/70_hires.png"
+  },
+  {
+    "id": "neo4-71",
+    "name": "Ledyba",
+    "setId": "neo4",
+    "number": "71",
+    "numberInt": 71,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      165
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Tomokazu Komiya",
+    "imageSmall": "https://images.pokemontcg.io/neo4/71.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/71_hires.png"
+  },
+  {
+    "id": "neo4-72",
+    "name": "Light Sunflora",
+    "setId": "neo4",
+    "number": "72",
+    "numberInt": 72,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      192
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Sunkern",
+    "artist": "Toshinao Aoki",
+    "imageSmall": "https://images.pokemontcg.io/neo4/72.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/72_hires.png"
+  },
+  {
+    "id": "neo4-73",
+    "name": "Machop",
+    "setId": "neo4",
+    "number": "73",
+    "numberInt": 73,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      66
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Toshinao Aoki",
+    "imageSmall": "https://images.pokemontcg.io/neo4/73.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/73_hires.png"
+  },
+  {
+    "id": "neo4-74",
+    "name": "Mantine",
+    "setId": "neo4",
+    "number": "74",
+    "numberInt": 74,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      226
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Yukiko Baba",
+    "imageSmall": "https://images.pokemontcg.io/neo4/74.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/74_hires.png"
+  },
+  {
+    "id": "neo4-75",
+    "name": "Mareep",
+    "setId": "neo4",
+    "number": "75",
+    "numberInt": 75,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      179
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/neo4/75.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/75_hires.png"
+  },
+  {
+    "id": "neo4-76",
+    "name": "Phanpy",
+    "setId": "neo4",
+    "number": "76",
+    "numberInt": 76,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      231
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Miki Tanaka",
+    "imageSmall": "https://images.pokemontcg.io/neo4/76.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/76_hires.png"
+  },
+  {
+    "id": "neo4-77",
+    "name": "Pineco",
+    "setId": "neo4",
+    "number": "77",
+    "numberInt": 77,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      204
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/neo4/77.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/77_hires.png"
+  },
+  {
+    "id": "neo4-78",
+    "name": "Porygon",
+    "setId": "neo4",
+    "number": "78",
+    "numberInt": 78,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      137
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Hiromichi Sugiyama, CR CG gangs",
+    "imageSmall": "https://images.pokemontcg.io/neo4/78.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/78_hires.png"
+  },
+  {
+    "id": "neo4-79",
+    "name": "Psyduck",
+    "setId": "neo4",
+    "number": "79",
+    "numberInt": 79,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      54
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Yuka Morii",
+    "imageSmall": "https://images.pokemontcg.io/neo4/79.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/79_hires.png"
+  },
+  {
+    "id": "neo4-80",
+    "name": "Remoraid",
+    "setId": "neo4",
+    "number": "80",
+    "numberInt": 80,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      223
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Jungo Suzuki, CR CG gangs",
+    "imageSmall": "https://images.pokemontcg.io/neo4/80.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/80_hires.png"
+  },
+  {
+    "id": "neo4-81",
+    "name": "Seel",
+    "setId": "neo4",
+    "number": "81",
+    "numberInt": 81,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      86
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Masako Yamashita",
+    "imageSmall": "https://images.pokemontcg.io/neo4/81.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/81_hires.png"
+  },
+  {
+    "id": "neo4-82",
+    "name": "Slugma",
+    "setId": "neo4",
+    "number": "82",
+    "numberInt": 82,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      218
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/neo4/82.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/82_hires.png"
+  },
+  {
+    "id": "neo4-83",
+    "name": "Sunkern",
+    "setId": "neo4",
+    "number": "83",
+    "numberInt": 83,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      191
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Etsuya Hattori",
+    "imageSmall": "https://images.pokemontcg.io/neo4/83.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/83_hires.png"
+  },
+  {
+    "id": "neo4-84",
+    "name": "Swinub",
+    "setId": "neo4",
+    "number": "84",
+    "numberInt": 84,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      220
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/neo4/84.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/84_hires.png"
+  },
+  {
+    "id": "neo4-85",
+    "name": "Totodile",
+    "setId": "neo4",
+    "number": "85",
+    "numberInt": 85,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      158
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Miki Tanaka",
+    "imageSmall": "https://images.pokemontcg.io/neo4/85.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/85_hires.png"
+  },
+  {
+    "id": "neo4-86",
+    "name": "Unown [L]",
+    "setId": "neo4",
+    "number": "86",
+    "numberInt": 86,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      201
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "CR CG gangs",
+    "imageSmall": "https://images.pokemontcg.io/neo4/86.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/86_hires.png"
+  },
+  {
+    "id": "neo4-87",
+    "name": "Unown [S]",
+    "setId": "neo4",
+    "number": "87",
+    "numberInt": 87,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      201
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "CR CG gangs",
+    "imageSmall": "https://images.pokemontcg.io/neo4/87.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/87_hires.png"
+  },
+  {
+    "id": "neo4-88",
+    "name": "Unown [T]",
+    "setId": "neo4",
+    "number": "88",
+    "numberInt": 88,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      201
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "CR CG gangs",
+    "imageSmall": "https://images.pokemontcg.io/neo4/88.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/88_hires.png"
+  },
+  {
+    "id": "neo4-89",
+    "name": "Unown [V]",
+    "setId": "neo4",
+    "number": "89",
+    "numberInt": 89,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      201
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "CR CG gangs",
+    "imageSmall": "https://images.pokemontcg.io/neo4/89.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/89_hires.png"
+  },
+  {
+    "id": "neo4-90",
+    "name": "Venonat",
+    "setId": "neo4",
+    "number": "90",
+    "numberInt": 90,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      48
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Masako Yamashita",
+    "imageSmall": "https://images.pokemontcg.io/neo4/90.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/90_hires.png"
+  },
+  {
+    "id": "neo4-91",
+    "name": "Vulpix",
+    "setId": "neo4",
+    "number": "91",
+    "numberInt": 91,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      37
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Masako Yamashita",
+    "imageSmall": "https://images.pokemontcg.io/neo4/91.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/91_hires.png"
+  },
+  {
+    "id": "neo4-106",
+    "name": "Shining Celebi",
+    "setId": "neo4",
+    "number": "106",
+    "numberInt": 106,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Shining",
+    "dex": [
+      251
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Hironobu Yoshida",
+    "imageSmall": "https://images.pokemontcg.io/neo4/106.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/106_hires.png"
+  },
+  {
+    "id": "neo4-107",
+    "name": "Shining Charizard",
+    "setId": "neo4",
+    "number": "107",
+    "numberInt": 107,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Shining",
+    "dex": [
+      6
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Hironobu Yoshida",
+    "imageSmall": "https://images.pokemontcg.io/neo4/107.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/107_hires.png"
+  },
+  {
+    "id": "neo4-108",
+    "name": "Shining Kabutops",
+    "setId": "neo4",
+    "number": "108",
+    "numberInt": 108,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Shining",
+    "dex": [
+      141
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Hironobu Yoshida",
+    "imageSmall": "https://images.pokemontcg.io/neo4/108.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/108_hires.png"
+  },
+  {
+    "id": "neo4-109",
+    "name": "Shining Mewtwo",
+    "setId": "neo4",
+    "number": "109",
+    "numberInt": 109,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Shining",
+    "dex": [
+      150
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Hironobu Yoshida",
+    "imageSmall": "https://images.pokemontcg.io/neo4/109.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/109_hires.png"
+  },
+  {
+    "id": "neo4-110",
+    "name": "Shining Noctowl",
+    "setId": "neo4",
+    "number": "110",
+    "numberInt": 110,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Shining",
+    "dex": [
+      164
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/neo4/110.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/110_hires.png"
+  },
+  {
+    "id": "neo4-111",
+    "name": "Shining Raichu",
+    "setId": "neo4",
+    "number": "111",
+    "numberInt": 111,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Shining",
+    "dex": [
+      26
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Hironobu Yoshida",
+    "imageSmall": "https://images.pokemontcg.io/neo4/111.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/111_hires.png"
+  },
+  {
+    "id": "neo4-112",
+    "name": "Shining Steelix",
+    "setId": "neo4",
+    "number": "112",
+    "numberInt": 112,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Shining",
+    "dex": [
+      208
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/neo4/112.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/112_hires.png"
+  },
+  {
+    "id": "neo4-113",
+    "name": "Shining Tyranitar",
+    "setId": "neo4",
+    "number": "113",
+    "numberInt": 113,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Shining",
+    "dex": [
+      248
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/neo4/113.png",
+    "imageLarge": "https://images.pokemontcg.io/neo4/113_hires.png"
+  }
+]

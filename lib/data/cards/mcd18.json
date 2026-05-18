@@ -1,0 +1,266 @@
+[
+  {
+    "id": "mcd18-1",
+    "name": "Growlithe",
+    "setId": "mcd18",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      58
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "MAHOU",
+    "imageSmall": "https://images.pokemontcg.io/mcd18/1.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd18/1_hires.png"
+  },
+  {
+    "id": "mcd18-2",
+    "name": "Psyduck",
+    "setId": "mcd18",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      54
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Shibuzoh.",
+    "imageSmall": "https://images.pokemontcg.io/mcd18/2.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd18/2_hires.png"
+  },
+  {
+    "id": "mcd18-3",
+    "name": "Horsea",
+    "setId": "mcd18",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      116
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Saya Tsuruta",
+    "imageSmall": "https://images.pokemontcg.io/mcd18/3.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd18/3_hires.png"
+  },
+  {
+    "id": "mcd18-4",
+    "name": "Pikachu",
+    "setId": "mcd18",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      25
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Shibuzoh.",
+    "imageSmall": "https://images.pokemontcg.io/mcd18/4.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd18/4_hires.png"
+  },
+  {
+    "id": "mcd18-5",
+    "name": "Slowpoke",
+    "setId": "mcd18",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      79
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mina Nakai",
+    "imageSmall": "https://images.pokemontcg.io/mcd18/5.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd18/5_hires.png"
+  },
+  {
+    "id": "mcd18-6",
+    "name": "Machop",
+    "setId": "mcd18",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      66
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/mcd18/6.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd18/6_hires.png"
+  },
+  {
+    "id": "mcd18-7",
+    "name": "Cubone",
+    "setId": "mcd18",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      104
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "sui",
+    "imageSmall": "https://images.pokemontcg.io/mcd18/7.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd18/7_hires.png"
+  },
+  {
+    "id": "mcd18-8",
+    "name": "Magnemite",
+    "setId": "mcd18",
+    "number": "8",
+    "numberInt": 8,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      81
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "MAHOU",
+    "imageSmall": "https://images.pokemontcg.io/mcd18/8.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd18/8_hires.png"
+  },
+  {
+    "id": "mcd18-9",
+    "name": "Dratini",
+    "setId": "mcd18",
+    "number": "9",
+    "numberInt": 9,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      147
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Naoyo Kimura",
+    "imageSmall": "https://images.pokemontcg.io/mcd18/9.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd18/9_hires.png"
+  },
+  {
+    "id": "mcd18-10",
+    "name": "Chansey",
+    "setId": "mcd18",
+    "number": "10",
+    "numberInt": 10,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      113
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Megumi Mizutani",
+    "imageSmall": "https://images.pokemontcg.io/mcd18/10.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd18/10_hires.png"
+  },
+  {
+    "id": "mcd18-11",
+    "name": "Eevee",
+    "setId": "mcd18",
+    "number": "11",
+    "numberInt": 11,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      133
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Shibuzoh.",
+    "imageSmall": "https://images.pokemontcg.io/mcd18/11.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd18/11_hires.png"
+  },
+  {
+    "id": "mcd18-12",
+    "name": "Porygon",
+    "setId": "mcd18",
+    "number": "12",
+    "numberInt": 12,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      137
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Shin Nagasawa",
+    "imageSmall": "https://images.pokemontcg.io/mcd18/12.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd18/12_hires.png"
+  }
+]

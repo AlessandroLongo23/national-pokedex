@@ -1,0 +1,270 @@
+[
+  {
+    "id": "pop5-1",
+    "name": "Ho-Oh",
+    "setId": "pop5",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      250
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/pop5/1.png",
+    "imageLarge": "https://images.pokemontcg.io/pop5/1_hires.png"
+  },
+  {
+    "id": "pop5-2",
+    "name": "Lugia",
+    "setId": "pop5",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      249
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/pop5/2.png",
+    "imageLarge": "https://images.pokemontcg.io/pop5/2_hires.png"
+  },
+  {
+    "id": "pop5-3",
+    "name": "Mew δ",
+    "setId": "pop5",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      151
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/pop5/3.png",
+    "imageLarge": "https://images.pokemontcg.io/pop5/3_hires.png"
+  },
+  {
+    "id": "pop5-5",
+    "name": "Charmeleon δ",
+    "setId": "pop5",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      5
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Charmander",
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/pop5/5.png",
+    "imageLarge": "https://images.pokemontcg.io/pop5/5_hires.png"
+  },
+  {
+    "id": "pop5-10",
+    "name": "Charmander δ",
+    "setId": "pop5",
+    "number": "10",
+    "numberInt": 10,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      4
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/pop5/10.png",
+    "imageLarge": "https://images.pokemontcg.io/pop5/10_hires.png"
+  },
+  {
+    "id": "pop5-11",
+    "name": "Meowth δ",
+    "setId": "pop5",
+    "number": "11",
+    "numberInt": 11,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      52
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/pop5/11.png",
+    "imageLarge": "https://images.pokemontcg.io/pop5/11_hires.png"
+  },
+  {
+    "id": "pop5-12",
+    "name": "Pikachu",
+    "setId": "pop5",
+    "number": "12",
+    "numberInt": 12,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      25
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Naoyo Kimura",
+    "imageSmall": "https://images.pokemontcg.io/pop5/12.png",
+    "imageLarge": "https://images.pokemontcg.io/pop5/12_hires.png"
+  },
+  {
+    "id": "pop5-13",
+    "name": "Pikachu δ",
+    "setId": "pop5",
+    "number": "13",
+    "numberInt": 13,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      25
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ryo Ueda",
+    "imageSmall": "https://images.pokemontcg.io/pop5/13.png",
+    "imageLarge": "https://images.pokemontcg.io/pop5/13_hires.png"
+  },
+  {
+    "id": "pop5-14",
+    "name": "Pelipper δ",
+    "setId": "pop5",
+    "number": "14",
+    "numberInt": 14,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      279
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Wingull",
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/pop5/14.png",
+    "imageLarge": "https://images.pokemontcg.io/pop5/14_hires.png"
+  },
+  {
+    "id": "pop5-15",
+    "name": "Zangoose δ",
+    "setId": "pop5",
+    "number": "15",
+    "numberInt": 15,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      335
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/pop5/15.png",
+    "imageLarge": "https://images.pokemontcg.io/pop5/15_hires.png"
+  },
+  {
+    "id": "pop5-16",
+    "name": "Espeon ★",
+    "setId": "pop5",
+    "number": "16",
+    "numberInt": 16,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      196
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic",
+      "Star"
+    ],
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/pop5/16.png",
+    "imageLarge": "https://images.pokemontcg.io/pop5/16_hires.png"
+  },
+  {
+    "id": "pop5-17",
+    "name": "Umbreon ★",
+    "setId": "pop5",
+    "number": "17",
+    "numberInt": 17,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      197
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic",
+      "Star"
+    ],
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/pop5/17.png",
+    "imageLarge": "https://images.pokemontcg.io/pop5/17_hires.png"
+  }
+]

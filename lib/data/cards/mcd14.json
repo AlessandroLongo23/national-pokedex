@@ -1,0 +1,266 @@
+[
+  {
+    "id": "mcd14-1",
+    "name": "Weedle",
+    "setId": "mcd14",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      13
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Akira Komayama",
+    "imageSmall": "https://images.pokemontcg.io/mcd14/1.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd14/1_hires.png"
+  },
+  {
+    "id": "mcd14-2",
+    "name": "Chespin",
+    "setId": "mcd14",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      650
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/mcd14/2.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd14/2_hires.png"
+  },
+  {
+    "id": "mcd14-3",
+    "name": "Fennekin",
+    "setId": "mcd14",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      653
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/mcd14/3.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd14/3_hires.png"
+  },
+  {
+    "id": "mcd14-4",
+    "name": "Froakie",
+    "setId": "mcd14",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      656
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/mcd14/4.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd14/4_hires.png"
+  },
+  {
+    "id": "mcd14-5",
+    "name": "Pikachu",
+    "setId": "mcd14",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      25
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "MAHOU",
+    "imageSmall": "https://images.pokemontcg.io/mcd14/5.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd14/5_hires.png"
+  },
+  {
+    "id": "mcd14-6",
+    "name": "Inkay",
+    "setId": "mcd14",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      686
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/mcd14/6.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd14/6_hires.png"
+  },
+  {
+    "id": "mcd14-7",
+    "name": "Honedge",
+    "setId": "mcd14",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      679
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/mcd14/7.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd14/7_hires.png"
+  },
+  {
+    "id": "mcd14-8",
+    "name": "Snubbull",
+    "setId": "mcd14",
+    "number": "8",
+    "numberInt": 8,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      209
+    ],
+    "types": [
+      "Fairy"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Naoki Saito",
+    "imageSmall": "https://images.pokemontcg.io/mcd14/8.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd14/8_hires.png"
+  },
+  {
+    "id": "mcd14-9",
+    "name": "Swirlix",
+    "setId": "mcd14",
+    "number": "9",
+    "numberInt": 9,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      684
+    ],
+    "types": [
+      "Fairy"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/mcd14/9.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd14/9_hires.png"
+  },
+  {
+    "id": "mcd14-10",
+    "name": "Bunnelby",
+    "setId": "mcd14",
+    "number": "10",
+    "numberInt": 10,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      659
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/mcd14/10.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd14/10_hires.png"
+  },
+  {
+    "id": "mcd14-11",
+    "name": "Fletchling",
+    "setId": "mcd14",
+    "number": "11",
+    "numberInt": 11,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      661
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/mcd14/11.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd14/11_hires.png"
+  },
+  {
+    "id": "mcd14-12",
+    "name": "Furfrou",
+    "setId": "mcd14",
+    "number": "12",
+    "numberInt": 12,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      676
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/mcd14/12.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd14/12_hires.png"
+  }
+]

@@ -1,0 +1,3957 @@
+[
+  {
+    "id": "swsh10-1",
+    "name": "Beedrill V",
+    "setId": "swsh10",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo V",
+    "dex": [
+      15
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 210,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "Ayaka Yoshida",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/1.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/1_hires.png"
+  },
+  {
+    "id": "swsh10-2",
+    "name": "Hisuian Voltorb",
+    "setId": "swsh10",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      100
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "nagimiso",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/2.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/2_hires.png"
+  },
+  {
+    "id": "swsh10-3",
+    "name": "Hisuian Electrode",
+    "setId": "swsh10",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      101
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Hisuian Voltorb",
+    "artist": "Akira Komayama",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/3.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/3_hires.png"
+  },
+  {
+    "id": "swsh10-4",
+    "name": "Scyther",
+    "setId": "swsh10",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      123
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "GIDORA",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/4.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/4_hires.png"
+  },
+  {
+    "id": "swsh10-5",
+    "name": "Scyther",
+    "setId": "swsh10",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      123
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Uta",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/5.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/5_hires.png"
+  },
+  {
+    "id": "swsh10-6",
+    "name": "Yanma",
+    "setId": "swsh10",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      193
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "OKACHEKE",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/6.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/6_hires.png"
+  },
+  {
+    "id": "swsh10-7",
+    "name": "Yanmega",
+    "setId": "swsh10",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      469
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Yanma",
+    "artist": "Masakazu Fukuda",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/7.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/7_hires.png"
+  },
+  {
+    "id": "swsh10-8",
+    "name": "Heracross",
+    "setId": "swsh10",
+    "number": "8",
+    "numberInt": 8,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      214
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "aoki",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/8.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/8_hires.png"
+  },
+  {
+    "id": "swsh10-9",
+    "name": "Kricketot",
+    "setId": "swsh10",
+    "number": "9",
+    "numberInt": 9,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      401
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Masakazu Fukuda",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/9.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/9_hires.png"
+  },
+  {
+    "id": "swsh10-10",
+    "name": "Kricketune",
+    "setId": "swsh10",
+    "number": "10",
+    "numberInt": 10,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      402
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Kricketot",
+    "artist": "Mitsuhiro Arita",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/10.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/10_hires.png"
+  },
+  {
+    "id": "swsh10-11",
+    "name": "Combee",
+    "setId": "swsh10",
+    "number": "11",
+    "numberInt": 11,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      415
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "sowsow",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/11.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/11_hires.png"
+  },
+  {
+    "id": "swsh10-12",
+    "name": "Vespiquen",
+    "setId": "swsh10",
+    "number": "12",
+    "numberInt": 12,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      416
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Combee",
+    "artist": "Yuya Oka",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/12.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/12_hires.png"
+  },
+  {
+    "id": "swsh10-13",
+    "name": "Leafeon",
+    "setId": "swsh10",
+    "number": "13",
+    "numberInt": 13,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      470
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Eevee",
+    "artist": "Atsushi Furusawa",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/13.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/13_hires.png"
+  },
+  {
+    "id": "swsh10-14",
+    "name": "Shaymin",
+    "setId": "swsh10",
+    "number": "14",
+    "numberInt": 14,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      492
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/14.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/14_hires.png"
+  },
+  {
+    "id": "swsh10-15",
+    "name": "Petilil",
+    "setId": "swsh10",
+    "number": "15",
+    "numberInt": 15,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      548
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Yukiko Baba",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/15.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/15_hires.png"
+  },
+  {
+    "id": "swsh10-16",
+    "name": "Hisuian Lilligant",
+    "setId": "swsh10",
+    "number": "16",
+    "numberInt": 16,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      549
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Petilil",
+    "artist": "Mizue",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/16.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/16_hires.png"
+  },
+  {
+    "id": "swsh10-17",
+    "name": "Hisuian Lilligant V",
+    "setId": "swsh10",
+    "number": "17",
+    "numberInt": 17,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo V",
+    "dex": [
+      549
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 200,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "5ban Graphics",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/17.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/17_hires.png"
+  },
+  {
+    "id": "swsh10-18",
+    "name": "Hisuian Lilligant VSTAR",
+    "setId": "swsh10",
+    "number": "18",
+    "numberInt": 18,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Holo VSTAR",
+    "dex": [
+      549
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 260,
+    "subtypes": [
+      "VSTAR"
+    ],
+    "evolvesFrom": "Hisuian Lilligant V",
+    "artist": "5ban Graphics",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/18.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/18_hires.png"
+  },
+  {
+    "id": "swsh10-19",
+    "name": "Rowlet",
+    "setId": "swsh10",
+    "number": "19",
+    "numberInt": 19,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      722
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "kawayoo",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/19.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/19_hires.png"
+  },
+  {
+    "id": "swsh10-20",
+    "name": "Dartrix",
+    "setId": "swsh10",
+    "number": "20",
+    "numberInt": 20,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      723
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Rowlet",
+    "artist": "0313",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/20.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/20_hires.png"
+  },
+  {
+    "id": "swsh10-21",
+    "name": "Ponyta",
+    "setId": "swsh10",
+    "number": "21",
+    "numberInt": 21,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      77
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Jiro Sasumo",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/21.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/21_hires.png"
+  },
+  {
+    "id": "swsh10-22",
+    "name": "Rapidash",
+    "setId": "swsh10",
+    "number": "22",
+    "numberInt": 22,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      78
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Ponyta",
+    "artist": "Ligton",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/22.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/22_hires.png"
+  },
+  {
+    "id": "swsh10-23",
+    "name": "Cyndaquil",
+    "setId": "swsh10",
+    "number": "23",
+    "numberInt": 23,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      155
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "sui",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/23.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/23_hires.png"
+  },
+  {
+    "id": "swsh10-24",
+    "name": "Quilava",
+    "setId": "swsh10",
+    "number": "24",
+    "numberInt": 24,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      156
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Cyndaquil",
+    "artist": "Pani Kobayashi",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/24.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/24_hires.png"
+  },
+  {
+    "id": "swsh10-25",
+    "name": "Heatran V",
+    "setId": "swsh10",
+    "number": "25",
+    "numberInt": 25,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo V",
+    "dex": [
+      485
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 220,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "Mitsuhiro Arita",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/25.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/25_hires.png"
+  },
+  {
+    "id": "swsh10-26",
+    "name": "Heatran VMAX",
+    "setId": "swsh10",
+    "number": "26",
+    "numberInt": 26,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Holo VMAX",
+    "dex": [
+      485
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 330,
+    "subtypes": [
+      "VMAX"
+    ],
+    "evolvesFrom": "Heatran V",
+    "artist": "N-DESIGN Inc.",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/26.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/26_hires.png"
+  },
+  {
+    "id": "swsh10-27",
+    "name": "Radiant Heatran",
+    "setId": "swsh10",
+    "number": "27",
+    "numberInt": 27,
+    "rarity": "UltraRare",
+    "rarityRaw": "Radiant Rare",
+    "dex": [
+      485
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 160,
+    "subtypes": [
+      "Basic",
+      "Radiant"
+    ],
+    "artist": "Shigenori Negishi",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/27.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/27_hires.png"
+  },
+  {
+    "id": "swsh10-28",
+    "name": "Psyduck",
+    "setId": "swsh10",
+    "number": "28",
+    "numberInt": 28,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      54
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "GOSSAN",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/28.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/28_hires.png"
+  },
+  {
+    "id": "swsh10-29",
+    "name": "Golduck",
+    "setId": "swsh10",
+    "number": "29",
+    "numberInt": 29,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      55
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Psyduck",
+    "artist": "otumami",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/29.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/29_hires.png"
+  },
+  {
+    "id": "swsh10-30",
+    "name": "Starmie V",
+    "setId": "swsh10",
+    "number": "30",
+    "numberInt": 30,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo V",
+    "dex": [
+      121
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 190,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "Eske Yoshinob",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/30.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/30_hires.png"
+  },
+  {
+    "id": "swsh10-31",
+    "name": "Swinub",
+    "setId": "swsh10",
+    "number": "31",
+    "numberInt": 31,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      220
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/31.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/31_hires.png"
+  },
+  {
+    "id": "swsh10-32",
+    "name": "Piloswine",
+    "setId": "swsh10",
+    "number": "32",
+    "numberInt": 32,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      221
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Swinub",
+    "artist": "yuu",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/32.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/32_hires.png"
+  },
+  {
+    "id": "swsh10-33",
+    "name": "Mamoswine",
+    "setId": "swsh10",
+    "number": "33",
+    "numberInt": 33,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      473
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 180,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Piloswine",
+    "artist": "Uta",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/33.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/33_hires.png"
+  },
+  {
+    "id": "swsh10-34",
+    "name": "Mantine",
+    "setId": "swsh10",
+    "number": "34",
+    "numberInt": 34,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      226
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "OKACHEKE",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/34.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/34_hires.png"
+  },
+  {
+    "id": "swsh10-35",
+    "name": "Barboach",
+    "setId": "swsh10",
+    "number": "35",
+    "numberInt": 35,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      339
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mizue",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/35.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/35_hires.png"
+  },
+  {
+    "id": "swsh10-36",
+    "name": "Whiscash",
+    "setId": "swsh10",
+    "number": "36",
+    "numberInt": 36,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      340
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Barboach",
+    "artist": "Shinji Kanda",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/36.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/36_hires.png"
+  },
+  {
+    "id": "swsh10-37",
+    "name": "Regice",
+    "setId": "swsh10",
+    "number": "37",
+    "numberInt": 37,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      378
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "aoki",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/37.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/37_hires.png"
+  },
+  {
+    "id": "swsh10-38",
+    "name": "Glaceon",
+    "setId": "swsh10",
+    "number": "38",
+    "numberInt": 38,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      471
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Eevee",
+    "artist": "saino misaki",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/38.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/38_hires.png"
+  },
+  {
+    "id": "swsh10-39",
+    "name": "Origin Forme Palkia V",
+    "setId": "swsh10",
+    "number": "39",
+    "numberInt": 39,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo V",
+    "dex": [
+      484
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 220,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "aky CG Works",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/39.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/39_hires.png"
+  },
+  {
+    "id": "swsh10-40",
+    "name": "Origin Forme Palkia VSTAR",
+    "setId": "swsh10",
+    "number": "40",
+    "numberInt": 40,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Holo VSTAR",
+    "dex": [
+      484
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 280,
+    "subtypes": [
+      "VSTAR"
+    ],
+    "evolvesFrom": "Origin Forme Palkia V",
+    "artist": "aky CG Works",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/40.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/40_hires.png"
+  },
+  {
+    "id": "swsh10-41",
+    "name": "Oshawott",
+    "setId": "swsh10",
+    "number": "41",
+    "numberInt": 41,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      501
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Saya Tsuruta",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/41.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/41_hires.png"
+  },
+  {
+    "id": "swsh10-42",
+    "name": "Dewott",
+    "setId": "swsh10",
+    "number": "42",
+    "numberInt": 42,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      502
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Oshawott",
+    "artist": "Mina Nakai",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/42.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/42_hires.png"
+  },
+  {
+    "id": "swsh10-43",
+    "name": "Hisuian Basculin",
+    "setId": "swsh10",
+    "number": "43",
+    "numberInt": 43,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      550
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/43.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/43_hires.png"
+  },
+  {
+    "id": "swsh10-44",
+    "name": "Hisuian Basculegion",
+    "setId": "swsh10",
+    "number": "44",
+    "numberInt": 44,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      902
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Hisuian Basculin",
+    "artist": "Akira Komayama",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/44.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/44_hires.png"
+  },
+  {
+    "id": "swsh10-45",
+    "name": "Keldeo",
+    "setId": "swsh10",
+    "number": "45",
+    "numberInt": 45,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      647
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Naoyo Kimura",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/45.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/45_hires.png"
+  },
+  {
+    "id": "swsh10-46",
+    "name": "Radiant Greninja",
+    "setId": "swsh10",
+    "number": "46",
+    "numberInt": 46,
+    "rarity": "UltraRare",
+    "rarityRaw": "Radiant Rare",
+    "dex": [
+      658
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic",
+      "Radiant"
+    ],
+    "artist": "Souichirou Gunjima",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/46.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/46_hires.png"
+  },
+  {
+    "id": "swsh10-47",
+    "name": "Bergmite",
+    "setId": "swsh10",
+    "number": "47",
+    "numberInt": 47,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      712
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/47.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/47_hires.png"
+  },
+  {
+    "id": "swsh10-48",
+    "name": "Hisuian Avalugg",
+    "setId": "swsh10",
+    "number": "48",
+    "numberInt": 48,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      713
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Bergmite",
+    "artist": "Kagemaru Himeno",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/48.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/48_hires.png"
+  },
+  {
+    "id": "swsh10-49",
+    "name": "Galarian Mr. Rime V",
+    "setId": "swsh10",
+    "number": "49",
+    "numberInt": 49,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo V",
+    "dex": [
+      866
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 210,
+    "subtypes": [
+      "Basic",
+      "V",
+      "Fusion Strike"
+    ],
+    "artist": "5ban Graphics",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/49.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/49_hires.png"
+  },
+  {
+    "id": "swsh10-50",
+    "name": "Luxray V",
+    "setId": "swsh10",
+    "number": "50",
+    "numberInt": 50,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo V",
+    "dex": [
+      405
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 210,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "AKIRA EGAWA",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/50.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/50_hires.png"
+  },
+  {
+    "id": "swsh10-51",
+    "name": "Regieleki",
+    "setId": "swsh10",
+    "number": "51",
+    "numberInt": 51,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      894
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Shiburingaru",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/51.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/51_hires.png"
+  },
+  {
+    "id": "swsh10-52",
+    "name": "Hisuian Typhlosion",
+    "setId": "swsh10",
+    "number": "52",
+    "numberInt": 52,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      157
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Quilava",
+    "artist": "Kouki Saitou",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/52.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/52_hires.png"
+  },
+  {
+    "id": "swsh10-53",
+    "name": "Hisuian Typhlosion V",
+    "setId": "swsh10",
+    "number": "53",
+    "numberInt": 53,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo V",
+    "dex": [
+      157
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 210,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "Shin Nagasawa",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/53.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/53_hires.png"
+  },
+  {
+    "id": "swsh10-54",
+    "name": "Hisuian Typhlosion VSTAR",
+    "setId": "swsh10",
+    "number": "54",
+    "numberInt": 54,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Holo VSTAR",
+    "dex": [
+      157
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 260,
+    "subtypes": [
+      "VSTAR"
+    ],
+    "evolvesFrom": "Hisuian Typhlosion V",
+    "artist": "5ban Graphics",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/54.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/54_hires.png"
+  },
+  {
+    "id": "swsh10-55",
+    "name": "Togepi",
+    "setId": "swsh10",
+    "number": "55",
+    "numberInt": 55,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      175
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mizue",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/55.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/55_hires.png"
+  },
+  {
+    "id": "swsh10-56",
+    "name": "Togetic",
+    "setId": "swsh10",
+    "number": "56",
+    "numberInt": 56,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      176
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Togepi",
+    "artist": "Tika Matsuno",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/56.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/56_hires.png"
+  },
+  {
+    "id": "swsh10-57",
+    "name": "Togekiss",
+    "setId": "swsh10",
+    "number": "57",
+    "numberInt": 57,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      468
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Togetic",
+    "artist": "sui",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/57.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/57_hires.png"
+  },
+  {
+    "id": "swsh10-58",
+    "name": "Misdreavus",
+    "setId": "swsh10",
+    "number": "58",
+    "numberInt": 58,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      200
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "AKIRA EGAWA",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/58.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/58_hires.png"
+  },
+  {
+    "id": "swsh10-59",
+    "name": "Mismagius",
+    "setId": "swsh10",
+    "number": "59",
+    "numberInt": 59,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      429
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Misdreavus",
+    "artist": "Ligton",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/59.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/59_hires.png"
+  },
+  {
+    "id": "swsh10-60",
+    "name": "Ralts",
+    "setId": "swsh10",
+    "number": "60",
+    "numberInt": 60,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      280
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Hataya",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/60.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/60_hires.png"
+  },
+  {
+    "id": "swsh10-61",
+    "name": "Kirlia",
+    "setId": "swsh10",
+    "number": "61",
+    "numberInt": 61,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      281
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Ralts",
+    "artist": "Saya Tsuruta",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/61.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/61_hires.png"
+  },
+  {
+    "id": "swsh10-62",
+    "name": "Gallade",
+    "setId": "swsh10",
+    "number": "62",
+    "numberInt": 62,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      475
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 160,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Kirlia",
+    "artist": "Atsushi Furusawa",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/62.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/62_hires.png"
+  },
+  {
+    "id": "swsh10-63",
+    "name": "Drifloon",
+    "setId": "swsh10",
+    "number": "63",
+    "numberInt": 63,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      425
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Narumi Sato",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/63.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/63_hires.png"
+  },
+  {
+    "id": "swsh10-64",
+    "name": "Drifblim",
+    "setId": "swsh10",
+    "number": "64",
+    "numberInt": 64,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      426
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Drifloon",
+    "artist": "Kyoko Umemoto",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/64.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/64_hires.png"
+  },
+  {
+    "id": "swsh10-65",
+    "name": "Uxie",
+    "setId": "swsh10",
+    "number": "65",
+    "numberInt": 65,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      480
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "sui",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/65.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/65_hires.png"
+  },
+  {
+    "id": "swsh10-66",
+    "name": "Mesprit",
+    "setId": "swsh10",
+    "number": "66",
+    "numberInt": 66,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      481
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "zig",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/66.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/66_hires.png"
+  },
+  {
+    "id": "swsh10-67",
+    "name": "Azelf",
+    "setId": "swsh10",
+    "number": "67",
+    "numberInt": 67,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      482
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Taira Akitsu",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/67.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/67_hires.png"
+  },
+  {
+    "id": "swsh10-68",
+    "name": "Diancie",
+    "setId": "swsh10",
+    "number": "68",
+    "numberInt": 68,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      719
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Yuu Nishida",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/68.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/68_hires.png"
+  },
+  {
+    "id": "swsh10-69",
+    "name": "Wyrdeer",
+    "setId": "swsh10",
+    "number": "69",
+    "numberInt": 69,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      899
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Stantler",
+    "artist": "Mizue",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/69.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/69_hires.png"
+  },
+  {
+    "id": "swsh10-70",
+    "name": "Hisuian Growlithe",
+    "setId": "swsh10",
+    "number": "70",
+    "numberInt": 70,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      58
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Akira Komayama",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/70.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/70_hires.png"
+  },
+  {
+    "id": "swsh10-71",
+    "name": "Hisuian Arcanine",
+    "setId": "swsh10",
+    "number": "71",
+    "numberInt": 71,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      59
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Hisuian Growlithe",
+    "artist": "Kagemaru Himeno",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/71.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/71_hires.png"
+  },
+  {
+    "id": "swsh10-72",
+    "name": "Machamp V",
+    "setId": "swsh10",
+    "number": "72",
+    "numberInt": 72,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo V",
+    "dex": [
+      68
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 220,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "kawayoo",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/72.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/72_hires.png"
+  },
+  {
+    "id": "swsh10-73",
+    "name": "Machamp VMAX",
+    "setId": "swsh10",
+    "number": "73",
+    "numberInt": 73,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Holo VMAX",
+    "dex": [
+      68
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 330,
+    "subtypes": [
+      "VMAX"
+    ],
+    "evolvesFrom": "Machamp V",
+    "artist": "N-DESIGN Inc.",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/73.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/73_hires.png"
+  },
+  {
+    "id": "swsh10-74",
+    "name": "Sudowoodo",
+    "setId": "swsh10",
+    "number": "74",
+    "numberInt": 74,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      185
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "HYOGONOSUKE",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/74.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/74_hires.png"
+  },
+  {
+    "id": "swsh10-75",
+    "name": "Regirock",
+    "setId": "swsh10",
+    "number": "75",
+    "numberInt": 75,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      377
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Souichirou Gunjima",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/75.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/75_hires.png"
+  },
+  {
+    "id": "swsh10-76",
+    "name": "Cranidos",
+    "setId": "swsh10",
+    "number": "76",
+    "numberInt": 76,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      408
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Unidentified Fossil",
+    "artist": "Hataya",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/76.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/76_hires.png"
+  },
+  {
+    "id": "swsh10-77",
+    "name": "Rampardos",
+    "setId": "swsh10",
+    "number": "77",
+    "numberInt": 77,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      409
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 170,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Cranidos",
+    "artist": "Nisota Niso",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/77.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/77_hires.png"
+  },
+  {
+    "id": "swsh10-78",
+    "name": "Lucario V",
+    "setId": "swsh10",
+    "number": "78",
+    "numberInt": 78,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo V",
+    "dex": [
+      448
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 210,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "takuyoa",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/78.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/78_hires.png"
+  },
+  {
+    "id": "swsh10-79",
+    "name": "Hippopotas",
+    "setId": "swsh10",
+    "number": "79",
+    "numberInt": 79,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      449
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "nagimiso",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/79.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/79_hires.png"
+  },
+  {
+    "id": "swsh10-80",
+    "name": "Hippowdon",
+    "setId": "swsh10",
+    "number": "80",
+    "numberInt": 80,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      450
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Hippopotas",
+    "artist": "Kyoko Umemoto",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/80.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/80_hires.png"
+  },
+  {
+    "id": "swsh10-81",
+    "name": "Radiant Hawlucha",
+    "setId": "swsh10",
+    "number": "81",
+    "numberInt": 81,
+    "rarity": "UltraRare",
+    "rarityRaw": "Radiant Rare",
+    "dex": [
+      701
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic",
+      "Radiant"
+    ],
+    "artist": "Masakazu Fukuda",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/81.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/81_hires.png"
+  },
+  {
+    "id": "swsh10-82",
+    "name": "Hisuian Decidueye",
+    "setId": "swsh10",
+    "number": "82",
+    "numberInt": 82,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      724
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 160,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Dartrix",
+    "artist": "Kouki Saitou",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/82.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/82_hires.png"
+  },
+  {
+    "id": "swsh10-83",
+    "name": "Hisuian Decidueye V",
+    "setId": "swsh10",
+    "number": "83",
+    "numberInt": 83,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo V",
+    "dex": [
+      724
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 220,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "Shin Nagasawa",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/83.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/83_hires.png"
+  },
+  {
+    "id": "swsh10-84",
+    "name": "Hisuian Decidueye VSTAR",
+    "setId": "swsh10",
+    "number": "84",
+    "numberInt": 84,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Holo VSTAR",
+    "dex": [
+      724
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 270,
+    "subtypes": [
+      "VSTAR"
+    ],
+    "evolvesFrom": "Hisuian Decidueye V",
+    "artist": "5ban Graphics",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/84.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/84_hires.png"
+  },
+  {
+    "id": "swsh10-85",
+    "name": "Kleavor",
+    "setId": "swsh10",
+    "number": "85",
+    "numberInt": 85,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      900
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Scyther",
+    "artist": "Shin Nagasawa",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/85.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/85_hires.png"
+  },
+  {
+    "id": "swsh10-86",
+    "name": "Kleavor",
+    "setId": "swsh10",
+    "number": "86",
+    "numberInt": 86,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      900
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Scyther",
+    "artist": "Anesaki Dynamic",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/86.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/86_hires.png"
+  },
+  {
+    "id": "swsh10-87",
+    "name": "Kleavor V",
+    "setId": "swsh10",
+    "number": "87",
+    "numberInt": 87,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo V",
+    "dex": [
+      900
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 210,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "5ban Graphics",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/87.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/87_hires.png"
+  },
+  {
+    "id": "swsh10-88",
+    "name": "Hisuian Qwilfish",
+    "setId": "swsh10",
+    "number": "88",
+    "numberInt": 88,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      211
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/88.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/88_hires.png"
+  },
+  {
+    "id": "swsh10-89",
+    "name": "Hisuian Qwilfish",
+    "setId": "swsh10",
+    "number": "89",
+    "numberInt": 89,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      211
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "OKACHEKE",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/89.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/89_hires.png"
+  },
+  {
+    "id": "swsh10-90",
+    "name": "Hisuian Overqwil",
+    "setId": "swsh10",
+    "number": "90",
+    "numberInt": 90,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      904
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Hisuian Qwilfish",
+    "artist": "AKIRA EGAWA",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/90.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/90_hires.png"
+  },
+  {
+    "id": "swsh10-91",
+    "name": "Hisuian Overqwil",
+    "setId": "swsh10",
+    "number": "91",
+    "numberInt": 91,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      904
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Hisuian Qwilfish",
+    "artist": "Anesaki Dynamic",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/91.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/91_hires.png"
+  },
+  {
+    "id": "swsh10-92",
+    "name": "Hisuian Sneasel",
+    "setId": "swsh10",
+    "number": "92",
+    "numberInt": 92,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      215
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mizue",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/92.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/92_hires.png"
+  },
+  {
+    "id": "swsh10-93",
+    "name": "Hisuian Sneasler",
+    "setId": "swsh10",
+    "number": "93",
+    "numberInt": 93,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      903
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Hisuian Sneasel",
+    "artist": "Kouki Saitou",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/93.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/93_hires.png"
+  },
+  {
+    "id": "swsh10-94",
+    "name": "Hisuian Sneasler V",
+    "setId": "swsh10",
+    "number": "94",
+    "numberInt": 94,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo V",
+    "dex": [
+      903
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 190,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "5ban Graphics",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/94.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/94_hires.png"
+  },
+  {
+    "id": "swsh10-95",
+    "name": "Poochyena",
+    "setId": "swsh10",
+    "number": "95",
+    "numberInt": 95,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      261
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "KIYOTAKA OSHIYAMA",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/95.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/95_hires.png"
+  },
+  {
+    "id": "swsh10-96",
+    "name": "Mightyena",
+    "setId": "swsh10",
+    "number": "96",
+    "numberInt": 96,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      262
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Poochyena",
+    "artist": "otumami",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/96.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/96_hires.png"
+  },
+  {
+    "id": "swsh10-97",
+    "name": "Absol",
+    "setId": "swsh10",
+    "number": "97",
+    "numberInt": 97,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      359
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "GIDORA",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/97.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/97_hires.png"
+  },
+  {
+    "id": "swsh10-98",
+    "name": "Darkrai V",
+    "setId": "swsh10",
+    "number": "98",
+    "numberInt": 98,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo V",
+    "dex": [
+      491
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 210,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "takuyoa",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/98.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/98_hires.png"
+  },
+  {
+    "id": "swsh10-99",
+    "name": "Darkrai VSTAR",
+    "setId": "swsh10",
+    "number": "99",
+    "numberInt": 99,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Holo VSTAR",
+    "dex": [
+      491
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 270,
+    "subtypes": [
+      "VSTAR"
+    ],
+    "evolvesFrom": "Darkrai V",
+    "artist": "5ban Graphics",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/99.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/99_hires.png"
+  },
+  {
+    "id": "swsh10-100",
+    "name": "Hisuian Samurott",
+    "setId": "swsh10",
+    "number": "100",
+    "numberInt": 100,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      503
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 170,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Dewott",
+    "artist": "Kouki Saitou",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/100.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/100_hires.png"
+  },
+  {
+    "id": "swsh10-101",
+    "name": "Hisuian Samurott V",
+    "setId": "swsh10",
+    "number": "101",
+    "numberInt": 101,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo V",
+    "dex": [
+      503
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 220,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "Shin Nagasawa",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/101.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/101_hires.png"
+  },
+  {
+    "id": "swsh10-102",
+    "name": "Hisuian Samurott VSTAR",
+    "setId": "swsh10",
+    "number": "102",
+    "numberInt": 102,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Holo VSTAR",
+    "dex": [
+      503
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 270,
+    "subtypes": [
+      "VSTAR"
+    ],
+    "evolvesFrom": "Hisuian Samurott V",
+    "artist": "5ban Graphics",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/102.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/102_hires.png"
+  },
+  {
+    "id": "swsh10-103",
+    "name": "Nickit",
+    "setId": "swsh10",
+    "number": "103",
+    "numberInt": 103,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      827
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Naoyo Kimura",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/103.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/103_hires.png"
+  },
+  {
+    "id": "swsh10-104",
+    "name": "Thievul",
+    "setId": "swsh10",
+    "number": "104",
+    "numberInt": 104,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      828
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Nickit",
+    "artist": "KIYOTAKA OSHIYAMA",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/104.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/104_hires.png"
+  },
+  {
+    "id": "swsh10-105",
+    "name": "Magnemite",
+    "setId": "swsh10",
+    "number": "105",
+    "numberInt": 105,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      81
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mitsuhiro Arita",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/105.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/105_hires.png"
+  },
+  {
+    "id": "swsh10-106",
+    "name": "Magneton",
+    "setId": "swsh10",
+    "number": "106",
+    "numberInt": 106,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      82
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Magnemite",
+    "artist": "Saya Tsuruta",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/106.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/106_hires.png"
+  },
+  {
+    "id": "swsh10-107",
+    "name": "Magnezone",
+    "setId": "swsh10",
+    "number": "107",
+    "numberInt": 107,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      462
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Magneton",
+    "artist": "GOSSAN",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/107.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/107_hires.png"
+  },
+  {
+    "id": "swsh10-108",
+    "name": "Registeel",
+    "setId": "swsh10",
+    "number": "108",
+    "numberInt": 108,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      379
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "hatachu",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/108.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/108_hires.png"
+  },
+  {
+    "id": "swsh10-109",
+    "name": "Shieldon",
+    "setId": "swsh10",
+    "number": "109",
+    "numberInt": 109,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      410
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Unidentified Fossil",
+    "artist": "Yuka Morii",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/109.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/109_hires.png"
+  },
+  {
+    "id": "swsh10-110",
+    "name": "Bastiodon",
+    "setId": "swsh10",
+    "number": "110",
+    "numberInt": 110,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      411
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 160,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Shieldon",
+    "artist": "Yuya Oka",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/110.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/110_hires.png"
+  },
+  {
+    "id": "swsh10-111",
+    "name": "Bronzor",
+    "setId": "swsh10",
+    "number": "111",
+    "numberInt": 111,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      436
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/111.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/111_hires.png"
+  },
+  {
+    "id": "swsh10-112",
+    "name": "Bronzong",
+    "setId": "swsh10",
+    "number": "112",
+    "numberInt": 112,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      437
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Bronzor",
+    "artist": "Shinji Kanda",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/112.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/112_hires.png"
+  },
+  {
+    "id": "swsh10-113",
+    "name": "Origin Forme Dialga V",
+    "setId": "swsh10",
+    "number": "113",
+    "numberInt": 113,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo V",
+    "dex": [
+      483
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 220,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "5ban Graphics",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/113.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/113_hires.png"
+  },
+  {
+    "id": "swsh10-114",
+    "name": "Origin Forme Dialga VSTAR",
+    "setId": "swsh10",
+    "number": "114",
+    "numberInt": 114,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Holo VSTAR",
+    "dex": [
+      483
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 280,
+    "subtypes": [
+      "VSTAR"
+    ],
+    "evolvesFrom": "Origin Forme Dialga V",
+    "artist": "5ban Graphics",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/114.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/114_hires.png"
+  },
+  {
+    "id": "swsh10-115",
+    "name": "Pawniard",
+    "setId": "swsh10",
+    "number": "115",
+    "numberInt": 115,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      624
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Tomokazu Komiya",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/115.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/115_hires.png"
+  },
+  {
+    "id": "swsh10-116",
+    "name": "Bisharp",
+    "setId": "swsh10",
+    "number": "116",
+    "numberInt": 116,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      625
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Pawniard",
+    "artist": "NC Empire",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/116.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/116_hires.png"
+  },
+  {
+    "id": "swsh10-117",
+    "name": "Garchomp V",
+    "setId": "swsh10",
+    "number": "117",
+    "numberInt": 117,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo V",
+    "dex": [
+      445
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 200,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "N-DESIGN Inc.",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/117.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/117_hires.png"
+  },
+  {
+    "id": "swsh10-118",
+    "name": "Regidrago",
+    "setId": "swsh10",
+    "number": "118",
+    "numberInt": 118,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      895
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "DOM",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/118.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/118_hires.png"
+  },
+  {
+    "id": "swsh10-119",
+    "name": "Eevee",
+    "setId": "swsh10",
+    "number": "119",
+    "numberInt": 119,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      133
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "sowsow",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/119.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/119_hires.png"
+  },
+  {
+    "id": "swsh10-120",
+    "name": "Hoothoot",
+    "setId": "swsh10",
+    "number": "120",
+    "numberInt": 120,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      163
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Pani Kobayashi",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/120.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/120_hires.png"
+  },
+  {
+    "id": "swsh10-121",
+    "name": "Noctowl",
+    "setId": "swsh10",
+    "number": "121",
+    "numberInt": 121,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      164
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Hoothoot",
+    "artist": "Nisota Niso",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/121.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/121_hires.png"
+  },
+  {
+    "id": "swsh10-122",
+    "name": "Teddiursa",
+    "setId": "swsh10",
+    "number": "122",
+    "numberInt": 122,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      216
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Nagomi Nijo",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/122.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/122_hires.png"
+  },
+  {
+    "id": "swsh10-123",
+    "name": "Ursaring",
+    "setId": "swsh10",
+    "number": "123",
+    "numberInt": 123,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      217
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Teddiursa",
+    "artist": "Teeziro",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/123.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/123_hires.png"
+  },
+  {
+    "id": "swsh10-124",
+    "name": "Ursaluna",
+    "setId": "swsh10",
+    "number": "124",
+    "numberInt": 124,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      901
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 180,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Ursaring",
+    "artist": "nagimiso",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/124.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/124_hires.png"
+  },
+  {
+    "id": "swsh10-125",
+    "name": "Stantler",
+    "setId": "swsh10",
+    "number": "125",
+    "numberInt": 125,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      234
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Teeziro",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/125.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/125_hires.png"
+  },
+  {
+    "id": "swsh10-126",
+    "name": "Miltank",
+    "setId": "swsh10",
+    "number": "126",
+    "numberInt": 126,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      241
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "saino misaki",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/126.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/126_hires.png"
+  },
+  {
+    "id": "swsh10-127",
+    "name": "Glameow",
+    "setId": "swsh10",
+    "number": "127",
+    "numberInt": 127,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      431
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Naoyo Kimura",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/127.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/127_hires.png"
+  },
+  {
+    "id": "swsh10-128",
+    "name": "Purugly",
+    "setId": "swsh10",
+    "number": "128",
+    "numberInt": 128,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      432
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Glameow",
+    "artist": "Mina Nakai",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/128.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/128_hires.png"
+  },
+  {
+    "id": "swsh10-129",
+    "name": "Chatot",
+    "setId": "swsh10",
+    "number": "129",
+    "numberInt": 129,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      441
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Shin Nagasawa",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/129.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/129_hires.png"
+  },
+  {
+    "id": "swsh10-130",
+    "name": "Regigigas",
+    "setId": "swsh10",
+    "number": "130",
+    "numberInt": 130,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      486
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Yuya Oka",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/130.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/130_hires.png"
+  },
+  {
+    "id": "swsh10-131",
+    "name": "Rufflet",
+    "setId": "swsh10",
+    "number": "131",
+    "numberInt": 131,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      627
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Eri Yamaki",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/131.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/131_hires.png"
+  },
+  {
+    "id": "swsh10-132",
+    "name": "Hisuian Braviary",
+    "setId": "swsh10",
+    "number": "132",
+    "numberInt": 132,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      628
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Rufflet",
+    "artist": "Shin Nagasawa",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/132.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/132_hires.png"
+  },
+  {
+    "id": "swsh10-133",
+    "name": "Oranguru V",
+    "setId": "swsh10",
+    "number": "133",
+    "numberInt": 133,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo V",
+    "dex": [
+      765
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 210,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "Uta",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/133.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/133_hires.png"
+  },
+  {
+    "id": "swsh10-134",
+    "name": "Wyrdeer V",
+    "setId": "swsh10",
+    "number": "134",
+    "numberInt": 134,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo V",
+    "dex": [
+      899
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 220,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "aky CG Works",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/134.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/134_hires.png"
+  },
+  {
+    "id": "swsh10-160",
+    "name": "Beedrill V",
+    "setId": "swsh10",
+    "number": "160",
+    "numberInt": 160,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      15
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 210,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "Ayaka Yoshida",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/160.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/160_hires.png"
+  },
+  {
+    "id": "swsh10-161",
+    "name": "Beedrill V",
+    "setId": "swsh10",
+    "number": "161",
+    "numberInt": 161,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      15
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 210,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "Narumi Sato",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/161.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/161_hires.png"
+  },
+  {
+    "id": "swsh10-162",
+    "name": "Hisuian Lilligant V",
+    "setId": "swsh10",
+    "number": "162",
+    "numberInt": 162,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      549
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 200,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "5ban Graphics",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/162.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/162_hires.png"
+  },
+  {
+    "id": "swsh10-163",
+    "name": "Hisuian Lilligant V",
+    "setId": "swsh10",
+    "number": "163",
+    "numberInt": 163,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      549
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 200,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "kodama",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/163.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/163_hires.png"
+  },
+  {
+    "id": "swsh10-164",
+    "name": "Virizion V",
+    "setId": "swsh10",
+    "number": "164",
+    "numberInt": 164,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      640
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 200,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "Saki Hayashiro",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/164.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/164_hires.png"
+  },
+  {
+    "id": "swsh10-165",
+    "name": "Heatran V",
+    "setId": "swsh10",
+    "number": "165",
+    "numberInt": 165,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      485
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 220,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "Studio Bora Inc.",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/165.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/165_hires.png"
+  },
+  {
+    "id": "swsh10-166",
+    "name": "Starmie V",
+    "setId": "swsh10",
+    "number": "166",
+    "numberInt": 166,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      121
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 190,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "Eske Yoshinob",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/166.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/166_hires.png"
+  },
+  {
+    "id": "swsh10-167",
+    "name": "Origin Forme Palkia V",
+    "setId": "swsh10",
+    "number": "167",
+    "numberInt": 167,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      484
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 220,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "Oswaldo KATO",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/167.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/167_hires.png"
+  },
+  {
+    "id": "swsh10-168",
+    "name": "Luxray V",
+    "setId": "swsh10",
+    "number": "168",
+    "numberInt": 168,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      405
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 210,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "MUGENUP",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/168.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/168_hires.png"
+  },
+  {
+    "id": "swsh10-169",
+    "name": "Hisuian Typhlosion V",
+    "setId": "swsh10",
+    "number": "169",
+    "numberInt": 169,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      157
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 210,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "5ban Graphics",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/169.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/169_hires.png"
+  },
+  {
+    "id": "swsh10-170",
+    "name": "Jirachi V",
+    "setId": "swsh10",
+    "number": "170",
+    "numberInt": 170,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      385
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 180,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "N-DESIGN Inc.",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/170.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/170_hires.png"
+  },
+  {
+    "id": "swsh10-171",
+    "name": "Machamp V",
+    "setId": "swsh10",
+    "number": "171",
+    "numberInt": 171,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      68
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 220,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "Ryo Ueda",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/171.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/171_hires.png"
+  },
+  {
+    "id": "swsh10-172",
+    "name": "Machamp V",
+    "setId": "swsh10",
+    "number": "172",
+    "numberInt": 172,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      68
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 220,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "Shinya Komatsu",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/172.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/172_hires.png"
+  },
+  {
+    "id": "swsh10-173",
+    "name": "Hisuian Decidueye V",
+    "setId": "swsh10",
+    "number": "173",
+    "numberInt": 173,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      724
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 220,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "5ban Graphics",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/173.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/173_hires.png"
+  },
+  {
+    "id": "swsh10-174",
+    "name": "Hisuian Sneasler V",
+    "setId": "swsh10",
+    "number": "174",
+    "numberInt": 174,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      903
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 190,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "5ban Graphics",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/174.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/174_hires.png"
+  },
+  {
+    "id": "swsh10-175",
+    "name": "Hisuian Sneasler V",
+    "setId": "swsh10",
+    "number": "175",
+    "numberInt": 175,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      903
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 190,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "OKACHEKE",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/175.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/175_hires.png"
+  },
+  {
+    "id": "swsh10-176",
+    "name": "Hisuian Samurott V",
+    "setId": "swsh10",
+    "number": "176",
+    "numberInt": 176,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      503
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 220,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "5ban Graphics",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/176.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/176_hires.png"
+  },
+  {
+    "id": "swsh10-177",
+    "name": "Origin Forme Dialga V",
+    "setId": "swsh10",
+    "number": "177",
+    "numberInt": 177,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      483
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 220,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "Mitsuhiro Arita",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/177.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/177_hires.png"
+  },
+  {
+    "id": "swsh10-178",
+    "name": "Garchomp V",
+    "setId": "swsh10",
+    "number": "178",
+    "numberInt": 178,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      445
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 200,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "N-DESIGN Inc.",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/178.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/178_hires.png"
+  },
+  {
+    "id": "swsh10-179",
+    "name": "Oranguru V",
+    "setId": "swsh10",
+    "number": "179",
+    "numberInt": 179,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      765
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 210,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "Toyste Beach",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/179.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/179_hires.png"
+  },
+  {
+    "id": "swsh10-180",
+    "name": "Wyrdeer V",
+    "setId": "swsh10",
+    "number": "180",
+    "numberInt": 180,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      899
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 220,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "aky CG Works",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/180.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/180_hires.png"
+  },
+  {
+    "id": "swsh10-190",
+    "name": "Hisuian Lilligant VSTAR",
+    "setId": "swsh10",
+    "number": "190",
+    "numberInt": 190,
+    "rarity": "HyperRare",
+    "rarityRaw": "Rare Rainbow",
+    "dex": [
+      549
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 260,
+    "subtypes": [
+      "VSTAR"
+    ],
+    "evolvesFrom": "Hisuian Lilligant V",
+    "artist": "5ban Graphics",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/190.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/190_hires.png"
+  },
+  {
+    "id": "swsh10-191",
+    "name": "Heatran VMAX",
+    "setId": "swsh10",
+    "number": "191",
+    "numberInt": 191,
+    "rarity": "HyperRare",
+    "rarityRaw": "Rare Rainbow",
+    "dex": [
+      485
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 330,
+    "subtypes": [
+      "VMAX"
+    ],
+    "evolvesFrom": "Heatran V",
+    "artist": "N-DESIGN Inc.",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/191.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/191_hires.png"
+  },
+  {
+    "id": "swsh10-192",
+    "name": "Origin Forme Palkia VSTAR",
+    "setId": "swsh10",
+    "number": "192",
+    "numberInt": 192,
+    "rarity": "HyperRare",
+    "rarityRaw": "Rare Rainbow",
+    "dex": [
+      484
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 280,
+    "subtypes": [
+      "VSTAR"
+    ],
+    "evolvesFrom": "Origin Forme Palkia V",
+    "artist": "aky CG Works",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/192.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/192_hires.png"
+  },
+  {
+    "id": "swsh10-193",
+    "name": "Hisuian Typhlosion VSTAR",
+    "setId": "swsh10",
+    "number": "193",
+    "numberInt": 193,
+    "rarity": "HyperRare",
+    "rarityRaw": "Rare Rainbow",
+    "dex": [
+      157
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 260,
+    "subtypes": [
+      "VSTAR"
+    ],
+    "evolvesFrom": "Hisuian Typhlosion V",
+    "artist": "5ban Graphics",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/193.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/193_hires.png"
+  },
+  {
+    "id": "swsh10-194",
+    "name": "Machamp VMAX",
+    "setId": "swsh10",
+    "number": "194",
+    "numberInt": 194,
+    "rarity": "HyperRare",
+    "rarityRaw": "Rare Rainbow",
+    "dex": [
+      68
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 330,
+    "subtypes": [
+      "VMAX"
+    ],
+    "evolvesFrom": "Machamp V",
+    "artist": "N-DESIGN Inc.",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/194.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/194_hires.png"
+  },
+  {
+    "id": "swsh10-195",
+    "name": "Hisuian Decidueye VSTAR",
+    "setId": "swsh10",
+    "number": "195",
+    "numberInt": 195,
+    "rarity": "HyperRare",
+    "rarityRaw": "Rare Rainbow",
+    "dex": [
+      724
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 270,
+    "subtypes": [
+      "VSTAR"
+    ],
+    "evolvesFrom": "Hisuian Decidueye V",
+    "artist": "5ban Graphics",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/195.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/195_hires.png"
+  },
+  {
+    "id": "swsh10-196",
+    "name": "Kleavor VSTAR",
+    "setId": "swsh10",
+    "number": "196",
+    "numberInt": 196,
+    "rarity": "HyperRare",
+    "rarityRaw": "Rare Rainbow",
+    "dex": [
+      900
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 270,
+    "subtypes": [
+      "VSTAR"
+    ],
+    "evolvesFrom": "Kleavor V",
+    "artist": "5ban Graphics",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/196.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/196_hires.png"
+  },
+  {
+    "id": "swsh10-197",
+    "name": "Hisuian Samurott VSTAR",
+    "setId": "swsh10",
+    "number": "197",
+    "numberInt": 197,
+    "rarity": "HyperRare",
+    "rarityRaw": "Rare Rainbow",
+    "dex": [
+      503
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 270,
+    "subtypes": [
+      "VSTAR"
+    ],
+    "evolvesFrom": "Hisuian Samurott V",
+    "artist": "5ban Graphics",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/197.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/197_hires.png"
+  },
+  {
+    "id": "swsh10-198",
+    "name": "Origin Forme Dialga VSTAR",
+    "setId": "swsh10",
+    "number": "198",
+    "numberInt": 198,
+    "rarity": "HyperRare",
+    "rarityRaw": "Rare Rainbow",
+    "dex": [
+      483
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 280,
+    "subtypes": [
+      "VSTAR"
+    ],
+    "evolvesFrom": "Origin Forme Dialga V",
+    "artist": "5ban Graphics",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/198.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/198_hires.png"
+  },
+  {
+    "id": "swsh10-208",
+    "name": "Origin Forme Palkia VSTAR",
+    "setId": "swsh10",
+    "number": "208",
+    "numberInt": 208,
+    "rarity": "HyperRare",
+    "rarityRaw": "Rare Secret",
+    "dex": [
+      484
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 280,
+    "subtypes": [
+      "VSTAR"
+    ],
+    "evolvesFrom": "Origin Forme Palkia V",
+    "artist": "aky CG Works",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/208.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/208_hires.png"
+  },
+  {
+    "id": "swsh10-209",
+    "name": "Hisuian Samurott VSTAR",
+    "setId": "swsh10",
+    "number": "209",
+    "numberInt": 209,
+    "rarity": "HyperRare",
+    "rarityRaw": "Rare Secret",
+    "dex": [
+      503
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 270,
+    "subtypes": [
+      "VSTAR"
+    ],
+    "evolvesFrom": "Hisuian Samurott V",
+    "artist": "5ban Graphics",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/209.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/209_hires.png"
+  },
+  {
+    "id": "swsh10-210",
+    "name": "Origin Forme Dialga VSTAR",
+    "setId": "swsh10",
+    "number": "210",
+    "numberInt": 210,
+    "rarity": "HyperRare",
+    "rarityRaw": "Rare Secret",
+    "dex": [
+      483
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 280,
+    "subtypes": [
+      "VSTAR"
+    ],
+    "evolvesFrom": "Origin Forme Dialga V",
+    "artist": "5ban Graphics",
+    "regulationMark": "F",
+    "imageSmall": "https://images.pokemontcg.io/swsh10/210.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh10/210_hires.png"
+  }
+]

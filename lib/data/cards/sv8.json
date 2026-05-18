@@ -1,0 +1,4705 @@
+[
+  {
+    "id": "sv8-1",
+    "name": "Exeggcute",
+    "setId": "sv8",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      102
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 30,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/1.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/1_hires.png"
+  },
+  {
+    "id": "sv8-2",
+    "name": "Exeggcute",
+    "setId": "sv8",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      102
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/2.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/2_hires.png"
+  },
+  {
+    "id": "sv8-3",
+    "name": "Exeggutor",
+    "setId": "sv8",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      103
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Exeggcute",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/3.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/3_hires.png"
+  },
+  {
+    "id": "sv8-4",
+    "name": "Durant ex",
+    "setId": "sv8",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      632
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 190,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/4.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/4_hires.png"
+  },
+  {
+    "id": "sv8-5",
+    "name": "Scatterbug",
+    "setId": "sv8",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      664
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/5.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/5_hires.png"
+  },
+  {
+    "id": "sv8-6",
+    "name": "Spewpa",
+    "setId": "sv8",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      665
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Scatterbug",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/6.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/6_hires.png"
+  },
+  {
+    "id": "sv8-7",
+    "name": "Vivillon",
+    "setId": "sv8",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      666
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Spewpa",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/7.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/7_hires.png"
+  },
+  {
+    "id": "sv8-8",
+    "name": "Morelull",
+    "setId": "sv8",
+    "number": "8",
+    "numberInt": 8,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      755
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/8.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/8_hires.png"
+  },
+  {
+    "id": "sv8-9",
+    "name": "Shiinotic",
+    "setId": "sv8",
+    "number": "9",
+    "numberInt": 9,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      756
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Morelull",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/9.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/9_hires.png"
+  },
+  {
+    "id": "sv8-10",
+    "name": "Dhelmise",
+    "setId": "sv8",
+    "number": "10",
+    "numberInt": 10,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      781
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/10.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/10_hires.png"
+  },
+  {
+    "id": "sv8-11",
+    "name": "Zarude",
+    "setId": "sv8",
+    "number": "11",
+    "numberInt": 11,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      893
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/11.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/11_hires.png"
+  },
+  {
+    "id": "sv8-12",
+    "name": "Capsakid",
+    "setId": "sv8",
+    "number": "12",
+    "numberInt": 12,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      951
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/12.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/12_hires.png"
+  },
+  {
+    "id": "sv8-13",
+    "name": "Rellor",
+    "setId": "sv8",
+    "number": "13",
+    "numberInt": 13,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      953
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/13.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/13_hires.png"
+  },
+  {
+    "id": "sv8-14",
+    "name": "Rabsca",
+    "setId": "sv8",
+    "number": "14",
+    "numberInt": 14,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      954
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Rellor",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/14.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/14_hires.png"
+  },
+  {
+    "id": "sv8-15",
+    "name": "Wo-Chien",
+    "setId": "sv8",
+    "number": "15",
+    "numberInt": 15,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      1001
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/15.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/15_hires.png"
+  },
+  {
+    "id": "sv8-16",
+    "name": "Vulpix",
+    "setId": "sv8",
+    "number": "16",
+    "numberInt": 16,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      37
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/16.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/16_hires.png"
+  },
+  {
+    "id": "sv8-17",
+    "name": "Ninetales",
+    "setId": "sv8",
+    "number": "17",
+    "numberInt": 17,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      38
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Vulpix",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/17.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/17_hires.png"
+  },
+  {
+    "id": "sv8-18",
+    "name": "Paldean Tauros",
+    "setId": "sv8",
+    "number": "18",
+    "numberInt": 18,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      128
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/18.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/18_hires.png"
+  },
+  {
+    "id": "sv8-19",
+    "name": "Ho-Oh",
+    "setId": "sv8",
+    "number": "19",
+    "numberInt": 19,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      250
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/19.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/19_hires.png"
+  },
+  {
+    "id": "sv8-20",
+    "name": "Castform Sunny Form",
+    "setId": "sv8",
+    "number": "20",
+    "numberInt": 20,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      351
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/20.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/20_hires.png"
+  },
+  {
+    "id": "sv8-21",
+    "name": "Victini",
+    "setId": "sv8",
+    "number": "21",
+    "numberInt": 21,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      494
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/21.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/21_hires.png"
+  },
+  {
+    "id": "sv8-22",
+    "name": "Pansear",
+    "setId": "sv8",
+    "number": "22",
+    "numberInt": 22,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      513
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/22.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/22_hires.png"
+  },
+  {
+    "id": "sv8-23",
+    "name": "Simisear",
+    "setId": "sv8",
+    "number": "23",
+    "numberInt": 23,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      514
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Pansear",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/23.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/23_hires.png"
+  },
+  {
+    "id": "sv8-24",
+    "name": "Larvesta",
+    "setId": "sv8",
+    "number": "24",
+    "numberInt": 24,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      636
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/24.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/24_hires.png"
+  },
+  {
+    "id": "sv8-25",
+    "name": "Volcarona",
+    "setId": "sv8",
+    "number": "25",
+    "numberInt": 25,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      637
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Larvesta",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/25.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/25_hires.png"
+  },
+  {
+    "id": "sv8-26",
+    "name": "Oricorio",
+    "setId": "sv8",
+    "number": "26",
+    "numberInt": 26,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      741
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/26.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/26_hires.png"
+  },
+  {
+    "id": "sv8-27",
+    "name": "Sizzlipede",
+    "setId": "sv8",
+    "number": "27",
+    "numberInt": 27,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      850
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/27.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/27_hires.png"
+  },
+  {
+    "id": "sv8-28",
+    "name": "Centiskorch",
+    "setId": "sv8",
+    "number": "28",
+    "numberInt": 28,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      851
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Sizzlipede",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/28.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/28_hires.png"
+  },
+  {
+    "id": "sv8-29",
+    "name": "Fuecoco",
+    "setId": "sv8",
+    "number": "29",
+    "numberInt": 29,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      909
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/29.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/29_hires.png"
+  },
+  {
+    "id": "sv8-30",
+    "name": "Crocalor",
+    "setId": "sv8",
+    "number": "30",
+    "numberInt": 30,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      910
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Fuecoco",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/30.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/30_hires.png"
+  },
+  {
+    "id": "sv8-31",
+    "name": "Skeledirge",
+    "setId": "sv8",
+    "number": "31",
+    "numberInt": 31,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      911
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 180,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Crocalor",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/31.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/31_hires.png"
+  },
+  {
+    "id": "sv8-32",
+    "name": "Charcadet",
+    "setId": "sv8",
+    "number": "32",
+    "numberInt": 32,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      935
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/32.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/32_hires.png"
+  },
+  {
+    "id": "sv8-33",
+    "name": "Charcadet",
+    "setId": "sv8",
+    "number": "33",
+    "numberInt": 33,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      935
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/33.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/33_hires.png"
+  },
+  {
+    "id": "sv8-34",
+    "name": "Armarouge",
+    "setId": "sv8",
+    "number": "34",
+    "numberInt": 34,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      936
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Charcadet",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/34.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/34_hires.png"
+  },
+  {
+    "id": "sv8-35",
+    "name": "Ceruledge",
+    "setId": "sv8",
+    "number": "35",
+    "numberInt": 35,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      937
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Charcadet",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/35.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/35_hires.png"
+  },
+  {
+    "id": "sv8-36",
+    "name": "Ceruledge ex",
+    "setId": "sv8",
+    "number": "36",
+    "numberInt": 36,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      937
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 270,
+    "subtypes": [
+      "Stage 1",
+      "Tera",
+      "ex"
+    ],
+    "evolvesFrom": "Charcadet",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/36.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/36_hires.png"
+  },
+  {
+    "id": "sv8-37",
+    "name": "Scovillain ex",
+    "setId": "sv8",
+    "number": "37",
+    "numberInt": 37,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      952
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 260,
+    "subtypes": [
+      "Stage 1",
+      "ex"
+    ],
+    "evolvesFrom": "Capsakid",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/37.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/37_hires.png"
+  },
+  {
+    "id": "sv8-38",
+    "name": "Gouging Fire",
+    "setId": "sv8",
+    "number": "38",
+    "numberInt": 38,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      1020
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic",
+      "Ancient"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/38.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/38_hires.png"
+  },
+  {
+    "id": "sv8-39",
+    "name": "Paldean Tauros",
+    "setId": "sv8",
+    "number": "39",
+    "numberInt": 39,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      128
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/39.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/39_hires.png"
+  },
+  {
+    "id": "sv8-40",
+    "name": "Mantine",
+    "setId": "sv8",
+    "number": "40",
+    "numberInt": 40,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      226
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/40.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/40_hires.png"
+  },
+  {
+    "id": "sv8-41",
+    "name": "Feebas",
+    "setId": "sv8",
+    "number": "41",
+    "numberInt": 41,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      349
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 30,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/41.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/41_hires.png"
+  },
+  {
+    "id": "sv8-42",
+    "name": "Milotic ex",
+    "setId": "sv8",
+    "number": "42",
+    "numberInt": 42,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      350
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 270,
+    "subtypes": [
+      "Stage 1",
+      "ex"
+    ],
+    "evolvesFrom": "Feebas",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/42.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/42_hires.png"
+  },
+  {
+    "id": "sv8-43",
+    "name": "Spheal",
+    "setId": "sv8",
+    "number": "43",
+    "numberInt": 43,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      363
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/43.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/43_hires.png"
+  },
+  {
+    "id": "sv8-44",
+    "name": "Sealeo",
+    "setId": "sv8",
+    "number": "44",
+    "numberInt": 44,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      364
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Spheal",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/44.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/44_hires.png"
+  },
+  {
+    "id": "sv8-45",
+    "name": "Walrein",
+    "setId": "sv8",
+    "number": "45",
+    "numberInt": 45,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      365
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 170,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Sealeo",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/45.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/45_hires.png"
+  },
+  {
+    "id": "sv8-46",
+    "name": "Shellos",
+    "setId": "sv8",
+    "number": "46",
+    "numberInt": 46,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      422
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/46.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/46_hires.png"
+  },
+  {
+    "id": "sv8-47",
+    "name": "Cryogonal",
+    "setId": "sv8",
+    "number": "47",
+    "numberInt": 47,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      615
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/47.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/47_hires.png"
+  },
+  {
+    "id": "sv8-48",
+    "name": "Black Kyurem ex",
+    "setId": "sv8",
+    "number": "48",
+    "numberInt": 48,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      646
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 230,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/48.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/48_hires.png"
+  },
+  {
+    "id": "sv8-49",
+    "name": "Bruxish",
+    "setId": "sv8",
+    "number": "49",
+    "numberInt": 49,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      779
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/49.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/49_hires.png"
+  },
+  {
+    "id": "sv8-50",
+    "name": "Quaxly",
+    "setId": "sv8",
+    "number": "50",
+    "numberInt": 50,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      912
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/50.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/50_hires.png"
+  },
+  {
+    "id": "sv8-51",
+    "name": "Quaxwell",
+    "setId": "sv8",
+    "number": "51",
+    "numberInt": 51,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      913
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Quaxly",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/51.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/51_hires.png"
+  },
+  {
+    "id": "sv8-52",
+    "name": "Quaquaval",
+    "setId": "sv8",
+    "number": "52",
+    "numberInt": 52,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      914
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 170,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Quaxwell",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/52.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/52_hires.png"
+  },
+  {
+    "id": "sv8-53",
+    "name": "Cetoddle",
+    "setId": "sv8",
+    "number": "53",
+    "numberInt": 53,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      974
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/53.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/53_hires.png"
+  },
+  {
+    "id": "sv8-54",
+    "name": "Cetitan",
+    "setId": "sv8",
+    "number": "54",
+    "numberInt": 54,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      975
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 180,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Cetoddle",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/54.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/54_hires.png"
+  },
+  {
+    "id": "sv8-55",
+    "name": "Iron Bundle",
+    "setId": "sv8",
+    "number": "55",
+    "numberInt": 55,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      991
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic",
+      "Future"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/55.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/55_hires.png"
+  },
+  {
+    "id": "sv8-56",
+    "name": "Chien-Pao",
+    "setId": "sv8",
+    "number": "56",
+    "numberInt": 56,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      1002
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/56.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/56_hires.png"
+  },
+  {
+    "id": "sv8-57",
+    "name": "Pikachu ex",
+    "setId": "sv8",
+    "number": "57",
+    "numberInt": 57,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      25
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 200,
+    "subtypes": [
+      "Basic",
+      "Tera",
+      "ex"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/57.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/57_hires.png"
+  },
+  {
+    "id": "sv8-58",
+    "name": "Magnemite",
+    "setId": "sv8",
+    "number": "58",
+    "numberInt": 58,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      81
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/58.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/58_hires.png"
+  },
+  {
+    "id": "sv8-59",
+    "name": "Magneton",
+    "setId": "sv8",
+    "number": "59",
+    "numberInt": 59,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      82
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Magnemite",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/59.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/59_hires.png"
+  },
+  {
+    "id": "sv8-60",
+    "name": "Magnezone",
+    "setId": "sv8",
+    "number": "60",
+    "numberInt": 60,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      462
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 170,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Magneton",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/60.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/60_hires.png"
+  },
+  {
+    "id": "sv8-61",
+    "name": "Rotom",
+    "setId": "sv8",
+    "number": "61",
+    "numberInt": 61,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      479
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/61.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/61_hires.png"
+  },
+  {
+    "id": "sv8-62",
+    "name": "Blitzle",
+    "setId": "sv8",
+    "number": "62",
+    "numberInt": 62,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      522
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/62.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/62_hires.png"
+  },
+  {
+    "id": "sv8-63",
+    "name": "Zebstrika",
+    "setId": "sv8",
+    "number": "63",
+    "numberInt": 63,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      523
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Blitzle",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/63.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/63_hires.png"
+  },
+  {
+    "id": "sv8-64",
+    "name": "Stunfisk",
+    "setId": "sv8",
+    "number": "64",
+    "numberInt": 64,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      618
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/64.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/64_hires.png"
+  },
+  {
+    "id": "sv8-65",
+    "name": "Tapu Koko",
+    "setId": "sv8",
+    "number": "65",
+    "numberInt": 65,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      785
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/65.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/65_hires.png"
+  },
+  {
+    "id": "sv8-66",
+    "name": "Wattrel",
+    "setId": "sv8",
+    "number": "66",
+    "numberInt": 66,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      940
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/66.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/66_hires.png"
+  },
+  {
+    "id": "sv8-67",
+    "name": "Kilowattrel",
+    "setId": "sv8",
+    "number": "67",
+    "numberInt": 67,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      941
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Wattrel",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/67.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/67_hires.png"
+  },
+  {
+    "id": "sv8-68",
+    "name": "Kilowattrel ex",
+    "setId": "sv8",
+    "number": "68",
+    "numberInt": 68,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      941
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 260,
+    "subtypes": [
+      "Stage 1",
+      "ex"
+    ],
+    "evolvesFrom": "Wattrel",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/68.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/68_hires.png"
+  },
+  {
+    "id": "sv8-69",
+    "name": "Miraidon",
+    "setId": "sv8",
+    "number": "69",
+    "numberInt": 69,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      1008
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Basic",
+      "Future"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/69.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/69_hires.png"
+  },
+  {
+    "id": "sv8-70",
+    "name": "Togepi",
+    "setId": "sv8",
+    "number": "70",
+    "numberInt": 70,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      175
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/70.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/70_hires.png"
+  },
+  {
+    "id": "sv8-71",
+    "name": "Togetic",
+    "setId": "sv8",
+    "number": "71",
+    "numberInt": 71,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      176
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Togepi",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/71.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/71_hires.png"
+  },
+  {
+    "id": "sv8-72",
+    "name": "Togekiss",
+    "setId": "sv8",
+    "number": "72",
+    "numberInt": 72,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      468
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Togetic",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/72.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/72_hires.png"
+  },
+  {
+    "id": "sv8-73",
+    "name": "Marill",
+    "setId": "sv8",
+    "number": "73",
+    "numberInt": 73,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      183
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/73.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/73_hires.png"
+  },
+  {
+    "id": "sv8-74",
+    "name": "Azumarill",
+    "setId": "sv8",
+    "number": "74",
+    "numberInt": 74,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      184
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Marill",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/74.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/74_hires.png"
+  },
+  {
+    "id": "sv8-75",
+    "name": "Smoochum",
+    "setId": "sv8",
+    "number": "75",
+    "numberInt": 75,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      238
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 30,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/75.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/75_hires.png"
+  },
+  {
+    "id": "sv8-76",
+    "name": "Latias ex",
+    "setId": "sv8",
+    "number": "76",
+    "numberInt": 76,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      380
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 210,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/76.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/76_hires.png"
+  },
+  {
+    "id": "sv8-77",
+    "name": "Latios",
+    "setId": "sv8",
+    "number": "77",
+    "numberInt": 77,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      381
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/77.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/77_hires.png"
+  },
+  {
+    "id": "sv8-78",
+    "name": "Uxie",
+    "setId": "sv8",
+    "number": "78",
+    "numberInt": 78,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      480
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/78.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/78_hires.png"
+  },
+  {
+    "id": "sv8-79",
+    "name": "Mesprit",
+    "setId": "sv8",
+    "number": "79",
+    "numberInt": 79,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      481
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/79.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/79_hires.png"
+  },
+  {
+    "id": "sv8-80",
+    "name": "Azelf",
+    "setId": "sv8",
+    "number": "80",
+    "numberInt": 80,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      482
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/80.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/80_hires.png"
+  },
+  {
+    "id": "sv8-81",
+    "name": "Sigilyph",
+    "setId": "sv8",
+    "number": "81",
+    "numberInt": 81,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      561
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/81.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/81_hires.png"
+  },
+  {
+    "id": "sv8-82",
+    "name": "Yamask",
+    "setId": "sv8",
+    "number": "82",
+    "numberInt": 82,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      562
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/82.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/82_hires.png"
+  },
+  {
+    "id": "sv8-83",
+    "name": "Cofagrigus",
+    "setId": "sv8",
+    "number": "83",
+    "numberInt": 83,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      563
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Yamask",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/83.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/83_hires.png"
+  },
+  {
+    "id": "sv8-84",
+    "name": "Espurr",
+    "setId": "sv8",
+    "number": "84",
+    "numberInt": 84,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      677
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/84.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/84_hires.png"
+  },
+  {
+    "id": "sv8-85",
+    "name": "Meowstic",
+    "setId": "sv8",
+    "number": "85",
+    "numberInt": 85,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      678
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Espurr",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/85.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/85_hires.png"
+  },
+  {
+    "id": "sv8-86",
+    "name": "Sylveon ex",
+    "setId": "sv8",
+    "number": "86",
+    "numberInt": 86,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      700
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 270,
+    "subtypes": [
+      "Stage 1",
+      "Tera",
+      "ex"
+    ],
+    "evolvesFrom": "Eevee",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/86.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/86_hires.png"
+  },
+  {
+    "id": "sv8-87",
+    "name": "Dedenne",
+    "setId": "sv8",
+    "number": "87",
+    "numberInt": 87,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      702
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/87.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/87_hires.png"
+  },
+  {
+    "id": "sv8-88",
+    "name": "Xerneas",
+    "setId": "sv8",
+    "number": "88",
+    "numberInt": 88,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      716
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/88.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/88_hires.png"
+  },
+  {
+    "id": "sv8-89",
+    "name": "Oricorio",
+    "setId": "sv8",
+    "number": "89",
+    "numberInt": 89,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      741
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/89.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/89_hires.png"
+  },
+  {
+    "id": "sv8-90",
+    "name": "Sandygast",
+    "setId": "sv8",
+    "number": "90",
+    "numberInt": 90,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      769
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/90.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/90_hires.png"
+  },
+  {
+    "id": "sv8-91",
+    "name": "Palossand ex",
+    "setId": "sv8",
+    "number": "91",
+    "numberInt": 91,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      770
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 280,
+    "subtypes": [
+      "Stage 1",
+      "Tera",
+      "ex"
+    ],
+    "evolvesFrom": "Sandygast",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/91.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/91_hires.png"
+  },
+  {
+    "id": "sv8-92",
+    "name": "Tapu Lele",
+    "setId": "sv8",
+    "number": "92",
+    "numberInt": 92,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      786
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/92.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/92_hires.png"
+  },
+  {
+    "id": "sv8-93",
+    "name": "Indeedee",
+    "setId": "sv8",
+    "number": "93",
+    "numberInt": 93,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      876
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/93.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/93_hires.png"
+  },
+  {
+    "id": "sv8-94",
+    "name": "Flittle",
+    "setId": "sv8",
+    "number": "94",
+    "numberInt": 94,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      955
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/94.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/94_hires.png"
+  },
+  {
+    "id": "sv8-95",
+    "name": "Espathra",
+    "setId": "sv8",
+    "number": "95",
+    "numberInt": 95,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      956
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Flittle",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/95.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/95_hires.png"
+  },
+  {
+    "id": "sv8-96",
+    "name": "Flutter Mane",
+    "setId": "sv8",
+    "number": "96",
+    "numberInt": 96,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      987
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic",
+      "Ancient"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/96.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/96_hires.png"
+  },
+  {
+    "id": "sv8-97",
+    "name": "Gimmighoul",
+    "setId": "sv8",
+    "number": "97",
+    "numberInt": 97,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      999
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/97.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/97_hires.png"
+  },
+  {
+    "id": "sv8-98",
+    "name": "Mankey",
+    "setId": "sv8",
+    "number": "98",
+    "numberInt": 98,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      56
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/98.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/98_hires.png"
+  },
+  {
+    "id": "sv8-99",
+    "name": "Primeape",
+    "setId": "sv8",
+    "number": "99",
+    "numberInt": 99,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      57
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Mankey",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/99.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/99_hires.png"
+  },
+  {
+    "id": "sv8-100",
+    "name": "Annihilape",
+    "setId": "sv8",
+    "number": "100",
+    "numberInt": 100,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      979
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Primeape",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/100.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/100_hires.png"
+  },
+  {
+    "id": "sv8-101",
+    "name": "Paldean Tauros",
+    "setId": "sv8",
+    "number": "101",
+    "numberInt": 101,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      128
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/101.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/101_hires.png"
+  },
+  {
+    "id": "sv8-102",
+    "name": "Phanpy",
+    "setId": "sv8",
+    "number": "102",
+    "numberInt": 102,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      231
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/102.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/102_hires.png"
+  },
+  {
+    "id": "sv8-103",
+    "name": "Donphan",
+    "setId": "sv8",
+    "number": "103",
+    "numberInt": 103,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      232
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Phanpy",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/103.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/103_hires.png"
+  },
+  {
+    "id": "sv8-104",
+    "name": "Trapinch",
+    "setId": "sv8",
+    "number": "104",
+    "numberInt": 104,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      328
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/104.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/104_hires.png"
+  },
+  {
+    "id": "sv8-105",
+    "name": "Vibrava",
+    "setId": "sv8",
+    "number": "105",
+    "numberInt": 105,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      329
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Trapinch",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/105.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/105_hires.png"
+  },
+  {
+    "id": "sv8-106",
+    "name": "Flygon ex",
+    "setId": "sv8",
+    "number": "106",
+    "numberInt": 106,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      330
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 310,
+    "subtypes": [
+      "Stage 2",
+      "Tera",
+      "ex"
+    ],
+    "evolvesFrom": "Vibrava",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/106.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/106_hires.png"
+  },
+  {
+    "id": "sv8-107",
+    "name": "Gastrodon",
+    "setId": "sv8",
+    "number": "107",
+    "numberInt": 107,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      423
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Shellos",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/107.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/107_hires.png"
+  },
+  {
+    "id": "sv8-108",
+    "name": "Drilbur",
+    "setId": "sv8",
+    "number": "108",
+    "numberInt": 108,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      529
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/108.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/108_hires.png"
+  },
+  {
+    "id": "sv8-109",
+    "name": "Excadrill",
+    "setId": "sv8",
+    "number": "109",
+    "numberInt": 109,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      530
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Drilbur",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/109.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/109_hires.png"
+  },
+  {
+    "id": "sv8-110",
+    "name": "Landorus",
+    "setId": "sv8",
+    "number": "110",
+    "numberInt": 110,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      645
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/110.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/110_hires.png"
+  },
+  {
+    "id": "sv8-111",
+    "name": "Passimian",
+    "setId": "sv8",
+    "number": "111",
+    "numberInt": 111,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      766
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/111.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/111_hires.png"
+  },
+  {
+    "id": "sv8-112",
+    "name": "Clobbopus",
+    "setId": "sv8",
+    "number": "112",
+    "numberInt": 112,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      852
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/112.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/112_hires.png"
+  },
+  {
+    "id": "sv8-113",
+    "name": "Grapploct",
+    "setId": "sv8",
+    "number": "113",
+    "numberInt": 113,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      853
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Clobbopus",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/113.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/113_hires.png"
+  },
+  {
+    "id": "sv8-114",
+    "name": "Glimmet",
+    "setId": "sv8",
+    "number": "114",
+    "numberInt": 114,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      969
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/114.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/114_hires.png"
+  },
+  {
+    "id": "sv8-115",
+    "name": "Glimmora",
+    "setId": "sv8",
+    "number": "115",
+    "numberInt": 115,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      970
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Glimmet",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/115.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/115_hires.png"
+  },
+  {
+    "id": "sv8-116",
+    "name": "Koraidon",
+    "setId": "sv8",
+    "number": "116",
+    "numberInt": 116,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      1007
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic",
+      "Ancient"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/116.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/116_hires.png"
+  },
+  {
+    "id": "sv8-117",
+    "name": "Deino",
+    "setId": "sv8",
+    "number": "117",
+    "numberInt": 117,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      633
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/117.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/117_hires.png"
+  },
+  {
+    "id": "sv8-118",
+    "name": "Zweilous",
+    "setId": "sv8",
+    "number": "118",
+    "numberInt": 118,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      634
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Deino",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/118.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/118_hires.png"
+  },
+  {
+    "id": "sv8-119",
+    "name": "Hydreigon ex",
+    "setId": "sv8",
+    "number": "119",
+    "numberInt": 119,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      635
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 330,
+    "subtypes": [
+      "Stage 2",
+      "Tera",
+      "ex"
+    ],
+    "evolvesFrom": "Zweilous",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/119.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/119_hires.png"
+  },
+  {
+    "id": "sv8-120",
+    "name": "Shroodle",
+    "setId": "sv8",
+    "number": "120",
+    "numberInt": 120,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      944
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/120.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/120_hires.png"
+  },
+  {
+    "id": "sv8-121",
+    "name": "Grafaiai",
+    "setId": "sv8",
+    "number": "121",
+    "numberInt": 121,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      945
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Shroodle",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/121.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/121_hires.png"
+  },
+  {
+    "id": "sv8-122",
+    "name": "Alolan Diglett",
+    "setId": "sv8",
+    "number": "122",
+    "numberInt": 122,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      50
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/122.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/122_hires.png"
+  },
+  {
+    "id": "sv8-123",
+    "name": "Alolan Dugtrio",
+    "setId": "sv8",
+    "number": "123",
+    "numberInt": 123,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      51
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Alolan Diglett",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/123.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/123_hires.png"
+  },
+  {
+    "id": "sv8-124",
+    "name": "Skarmory",
+    "setId": "sv8",
+    "number": "124",
+    "numberInt": 124,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      227
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/124.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/124_hires.png"
+  },
+  {
+    "id": "sv8-125",
+    "name": "Registeel",
+    "setId": "sv8",
+    "number": "125",
+    "numberInt": 125,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      379
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/125.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/125_hires.png"
+  },
+  {
+    "id": "sv8-126",
+    "name": "Bronzor",
+    "setId": "sv8",
+    "number": "126",
+    "numberInt": 126,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      436
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/126.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/126_hires.png"
+  },
+  {
+    "id": "sv8-127",
+    "name": "Bronzong",
+    "setId": "sv8",
+    "number": "127",
+    "numberInt": 127,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      437
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Bronzor",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/127.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/127_hires.png"
+  },
+  {
+    "id": "sv8-128",
+    "name": "Klefki",
+    "setId": "sv8",
+    "number": "128",
+    "numberInt": 128,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      707
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/128.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/128_hires.png"
+  },
+  {
+    "id": "sv8-129",
+    "name": "Duraludon",
+    "setId": "sv8",
+    "number": "129",
+    "numberInt": 129,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      884
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/129.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/129_hires.png"
+  },
+  {
+    "id": "sv8-130",
+    "name": "Archaludon ex",
+    "setId": "sv8",
+    "number": "130",
+    "numberInt": 130,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      1018
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 300,
+    "subtypes": [
+      "Stage 1",
+      "ex"
+    ],
+    "evolvesFrom": "Duraludon",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/130.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/130_hires.png"
+  },
+  {
+    "id": "sv8-131",
+    "name": "Gholdengo",
+    "setId": "sv8",
+    "number": "131",
+    "numberInt": 131,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      1000
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Gimmighoul",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/131.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/131_hires.png"
+  },
+  {
+    "id": "sv8-132",
+    "name": "Iron Crown",
+    "setId": "sv8",
+    "number": "132",
+    "numberInt": 132,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      1023
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic",
+      "Future"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/132.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/132_hires.png"
+  },
+  {
+    "id": "sv8-133",
+    "name": "Alolan Exeggutor ex",
+    "setId": "sv8",
+    "number": "133",
+    "numberInt": 133,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      103
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 300,
+    "subtypes": [
+      "Stage 1",
+      "Tera",
+      "ex"
+    ],
+    "evolvesFrom": "Exeggcute",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/133.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/133_hires.png"
+  },
+  {
+    "id": "sv8-134",
+    "name": "Altaria",
+    "setId": "sv8",
+    "number": "134",
+    "numberInt": 134,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      334
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Swablu",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/134.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/134_hires.png"
+  },
+  {
+    "id": "sv8-135",
+    "name": "Dialga",
+    "setId": "sv8",
+    "number": "135",
+    "numberInt": 135,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      483
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/135.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/135_hires.png"
+  },
+  {
+    "id": "sv8-136",
+    "name": "Palkia",
+    "setId": "sv8",
+    "number": "136",
+    "numberInt": 136,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      484
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/136.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/136_hires.png"
+  },
+  {
+    "id": "sv8-137",
+    "name": "Turtonator",
+    "setId": "sv8",
+    "number": "137",
+    "numberInt": 137,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      776
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/137.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/137_hires.png"
+  },
+  {
+    "id": "sv8-138",
+    "name": "Applin",
+    "setId": "sv8",
+    "number": "138",
+    "numberInt": 138,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      840
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/138.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/138_hires.png"
+  },
+  {
+    "id": "sv8-139",
+    "name": "Flapple",
+    "setId": "sv8",
+    "number": "139",
+    "numberInt": 139,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      841
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Applin",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/139.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/139_hires.png"
+  },
+  {
+    "id": "sv8-140",
+    "name": "Appletun",
+    "setId": "sv8",
+    "number": "140",
+    "numberInt": 140,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      842
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Applin",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/140.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/140_hires.png"
+  },
+  {
+    "id": "sv8-141",
+    "name": "Eternatus",
+    "setId": "sv8",
+    "number": "141",
+    "numberInt": 141,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      890
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/141.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/141_hires.png"
+  },
+  {
+    "id": "sv8-142",
+    "name": "Tatsugiri ex",
+    "setId": "sv8",
+    "number": "142",
+    "numberInt": 142,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      978
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 160,
+    "subtypes": [
+      "Basic",
+      "Tera",
+      "ex"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/142.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/142_hires.png"
+  },
+  {
+    "id": "sv8-143",
+    "name": "Eevee",
+    "setId": "sv8",
+    "number": "143",
+    "numberInt": 143,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      133
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/143.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/143_hires.png"
+  },
+  {
+    "id": "sv8-144",
+    "name": "Snorlax",
+    "setId": "sv8",
+    "number": "144",
+    "numberInt": 144,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      143
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/144.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/144_hires.png"
+  },
+  {
+    "id": "sv8-145",
+    "name": "Slakoth",
+    "setId": "sv8",
+    "number": "145",
+    "numberInt": 145,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      287
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/145.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/145_hires.png"
+  },
+  {
+    "id": "sv8-146",
+    "name": "Vigoroth",
+    "setId": "sv8",
+    "number": "146",
+    "numberInt": 146,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      288
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Slakoth",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/146.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/146_hires.png"
+  },
+  {
+    "id": "sv8-147",
+    "name": "Slaking ex",
+    "setId": "sv8",
+    "number": "147",
+    "numberInt": 147,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      289
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 340,
+    "subtypes": [
+      "Stage 2",
+      "ex"
+    ],
+    "evolvesFrom": "Vigoroth",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/147.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/147_hires.png"
+  },
+  {
+    "id": "sv8-148",
+    "name": "Swablu",
+    "setId": "sv8",
+    "number": "148",
+    "numberInt": 148,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      333
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/148.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/148_hires.png"
+  },
+  {
+    "id": "sv8-149",
+    "name": "Zangoose",
+    "setId": "sv8",
+    "number": "149",
+    "numberInt": 149,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      335
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/149.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/149_hires.png"
+  },
+  {
+    "id": "sv8-150",
+    "name": "Kecleon",
+    "setId": "sv8",
+    "number": "150",
+    "numberInt": 150,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      352
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/150.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/150_hires.png"
+  },
+  {
+    "id": "sv8-151",
+    "name": "Bouffalant",
+    "setId": "sv8",
+    "number": "151",
+    "numberInt": 151,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      626
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/151.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/151_hires.png"
+  },
+  {
+    "id": "sv8-152",
+    "name": "Rufflet",
+    "setId": "sv8",
+    "number": "152",
+    "numberInt": 152,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      627
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/152.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/152_hires.png"
+  },
+  {
+    "id": "sv8-153",
+    "name": "Braviary",
+    "setId": "sv8",
+    "number": "153",
+    "numberInt": 153,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      628
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Rufflet",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/153.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/153_hires.png"
+  },
+  {
+    "id": "sv8-154",
+    "name": "Helioptile",
+    "setId": "sv8",
+    "number": "154",
+    "numberInt": 154,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      694
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/154.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/154_hires.png"
+  },
+  {
+    "id": "sv8-155",
+    "name": "Heliolisk",
+    "setId": "sv8",
+    "number": "155",
+    "numberInt": 155,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      695
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Helioptile",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/155.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/155_hires.png"
+  },
+  {
+    "id": "sv8-156",
+    "name": "Oranguru",
+    "setId": "sv8",
+    "number": "156",
+    "numberInt": 156,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      765
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/156.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/156_hires.png"
+  },
+  {
+    "id": "sv8-157",
+    "name": "Tandemaus",
+    "setId": "sv8",
+    "number": "157",
+    "numberInt": 157,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      924
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/157.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/157_hires.png"
+  },
+  {
+    "id": "sv8-158",
+    "name": "Maushold",
+    "setId": "sv8",
+    "number": "158",
+    "numberInt": 158,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      925
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Tandemaus",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/158.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/158_hires.png"
+  },
+  {
+    "id": "sv8-159",
+    "name": "Cyclizar ex",
+    "setId": "sv8",
+    "number": "159",
+    "numberInt": 159,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      967
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 210,
+    "subtypes": [
+      "Basic",
+      "Tera",
+      "ex"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/159.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/159_hires.png"
+  },
+  {
+    "id": "sv8-160",
+    "name": "Flamigo ex",
+    "setId": "sv8",
+    "number": "160",
+    "numberInt": 160,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      973
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 200,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/160.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/160_hires.png"
+  },
+  {
+    "id": "sv8-161",
+    "name": "Terapagos",
+    "setId": "sv8",
+    "number": "161",
+    "numberInt": 161,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      1024
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/161.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/161_hires.png"
+  },
+  {
+    "id": "sv8-192",
+    "name": "Exeggcute",
+    "setId": "sv8",
+    "number": "192",
+    "numberInt": 192,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      102
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 30,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/192.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/192_hires.png"
+  },
+  {
+    "id": "sv8-193",
+    "name": "Vivillon",
+    "setId": "sv8",
+    "number": "193",
+    "numberInt": 193,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      666
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Spewpa",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/193.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/193_hires.png"
+  },
+  {
+    "id": "sv8-194",
+    "name": "Shiinotic",
+    "setId": "sv8",
+    "number": "194",
+    "numberInt": 194,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      756
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Morelull",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/194.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/194_hires.png"
+  },
+  {
+    "id": "sv8-195",
+    "name": "Castform Sunny Form",
+    "setId": "sv8",
+    "number": "195",
+    "numberInt": 195,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      351
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/195.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/195_hires.png"
+  },
+  {
+    "id": "sv8-196",
+    "name": "Larvesta",
+    "setId": "sv8",
+    "number": "196",
+    "numberInt": 196,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      636
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/196.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/196_hires.png"
+  },
+  {
+    "id": "sv8-197",
+    "name": "Ceruledge",
+    "setId": "sv8",
+    "number": "197",
+    "numberInt": 197,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      937
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Charcadet",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/197.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/197_hires.png"
+  },
+  {
+    "id": "sv8-198",
+    "name": "Feebas",
+    "setId": "sv8",
+    "number": "198",
+    "numberInt": 198,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      349
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 30,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/198.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/198_hires.png"
+  },
+  {
+    "id": "sv8-199",
+    "name": "Spheal",
+    "setId": "sv8",
+    "number": "199",
+    "numberInt": 199,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      363
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/199.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/199_hires.png"
+  },
+  {
+    "id": "sv8-200",
+    "name": "Bruxish",
+    "setId": "sv8",
+    "number": "200",
+    "numberInt": 200,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      779
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/200.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/200_hires.png"
+  },
+  {
+    "id": "sv8-201",
+    "name": "Cetitan",
+    "setId": "sv8",
+    "number": "201",
+    "numberInt": 201,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      975
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 180,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Cetoddle",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/201.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/201_hires.png"
+  },
+  {
+    "id": "sv8-202",
+    "name": "Stunfisk",
+    "setId": "sv8",
+    "number": "202",
+    "numberInt": 202,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      618
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/202.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/202_hires.png"
+  },
+  {
+    "id": "sv8-203",
+    "name": "Latios",
+    "setId": "sv8",
+    "number": "203",
+    "numberInt": 203,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      381
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/203.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/203_hires.png"
+  },
+  {
+    "id": "sv8-204",
+    "name": "Mesprit",
+    "setId": "sv8",
+    "number": "204",
+    "numberInt": 204,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      481
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/204.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/204_hires.png"
+  },
+  {
+    "id": "sv8-205",
+    "name": "Phanpy",
+    "setId": "sv8",
+    "number": "205",
+    "numberInt": 205,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      231
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/205.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/205_hires.png"
+  },
+  {
+    "id": "sv8-206",
+    "name": "Vibrava",
+    "setId": "sv8",
+    "number": "206",
+    "numberInt": 206,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      329
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Trapinch",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/206.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/206_hires.png"
+  },
+  {
+    "id": "sv8-207",
+    "name": "Clobbopus",
+    "setId": "sv8",
+    "number": "207",
+    "numberInt": 207,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      852
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/207.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/207_hires.png"
+  },
+  {
+    "id": "sv8-208",
+    "name": "Alolan Dugtrio",
+    "setId": "sv8",
+    "number": "208",
+    "numberInt": 208,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      51
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Alolan Diglett",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/208.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/208_hires.png"
+  },
+  {
+    "id": "sv8-209",
+    "name": "Skarmory",
+    "setId": "sv8",
+    "number": "209",
+    "numberInt": 209,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      227
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/209.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/209_hires.png"
+  },
+  {
+    "id": "sv8-210",
+    "name": "Flapple",
+    "setId": "sv8",
+    "number": "210",
+    "numberInt": 210,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      841
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Applin",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/210.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/210_hires.png"
+  },
+  {
+    "id": "sv8-211",
+    "name": "Appletun",
+    "setId": "sv8",
+    "number": "211",
+    "numberInt": 211,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      842
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Applin",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/211.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/211_hires.png"
+  },
+  {
+    "id": "sv8-212",
+    "name": "Slakoth",
+    "setId": "sv8",
+    "number": "212",
+    "numberInt": 212,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      287
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/212.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/212_hires.png"
+  },
+  {
+    "id": "sv8-213",
+    "name": "Kecleon",
+    "setId": "sv8",
+    "number": "213",
+    "numberInt": 213,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      352
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/213.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/213_hires.png"
+  },
+  {
+    "id": "sv8-214",
+    "name": "Braviary",
+    "setId": "sv8",
+    "number": "214",
+    "numberInt": 214,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      628
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Rufflet",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/214.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/214_hires.png"
+  },
+  {
+    "id": "sv8-215",
+    "name": "Durant ex",
+    "setId": "sv8",
+    "number": "215",
+    "numberInt": 215,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      632
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 190,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/215.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/215_hires.png"
+  },
+  {
+    "id": "sv8-216",
+    "name": "Scovillain ex",
+    "setId": "sv8",
+    "number": "216",
+    "numberInt": 216,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      952
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 260,
+    "subtypes": [
+      "Stage 1",
+      "ex"
+    ],
+    "evolvesFrom": "Capsakid",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/216.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/216_hires.png"
+  },
+  {
+    "id": "sv8-217",
+    "name": "Milotic ex",
+    "setId": "sv8",
+    "number": "217",
+    "numberInt": 217,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      350
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 270,
+    "subtypes": [
+      "Stage 1",
+      "ex"
+    ],
+    "evolvesFrom": "Feebas",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/217.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/217_hires.png"
+  },
+  {
+    "id": "sv8-218",
+    "name": "Black Kyurem ex",
+    "setId": "sv8",
+    "number": "218",
+    "numberInt": 218,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      646
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 230,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/218.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/218_hires.png"
+  },
+  {
+    "id": "sv8-219",
+    "name": "Pikachu ex",
+    "setId": "sv8",
+    "number": "219",
+    "numberInt": 219,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      25
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 200,
+    "subtypes": [
+      "Basic",
+      "Tera",
+      "ex"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/219.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/219_hires.png"
+  },
+  {
+    "id": "sv8-220",
+    "name": "Latias ex",
+    "setId": "sv8",
+    "number": "220",
+    "numberInt": 220,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      380
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 210,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/220.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/220_hires.png"
+  },
+  {
+    "id": "sv8-221",
+    "name": "Palossand ex",
+    "setId": "sv8",
+    "number": "221",
+    "numberInt": 221,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      770
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 280,
+    "subtypes": [
+      "Stage 1",
+      "Tera",
+      "ex"
+    ],
+    "evolvesFrom": "Sandygast",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/221.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/221_hires.png"
+  },
+  {
+    "id": "sv8-222",
+    "name": "Flygon ex",
+    "setId": "sv8",
+    "number": "222",
+    "numberInt": 222,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      330
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 310,
+    "subtypes": [
+      "Stage 2",
+      "Tera",
+      "ex"
+    ],
+    "evolvesFrom": "Vibrava",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/222.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/222_hires.png"
+  },
+  {
+    "id": "sv8-223",
+    "name": "Hydreigon ex",
+    "setId": "sv8",
+    "number": "223",
+    "numberInt": 223,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      635
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 330,
+    "subtypes": [
+      "Stage 2",
+      "Tera",
+      "ex"
+    ],
+    "evolvesFrom": "Zweilous",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/223.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/223_hires.png"
+  },
+  {
+    "id": "sv8-224",
+    "name": "Archaludon ex",
+    "setId": "sv8",
+    "number": "224",
+    "numberInt": 224,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      1018
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 300,
+    "subtypes": [
+      "Stage 1",
+      "ex"
+    ],
+    "evolvesFrom": "Duraludon",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/224.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/224_hires.png"
+  },
+  {
+    "id": "sv8-225",
+    "name": "Alolan Exeggutor ex",
+    "setId": "sv8",
+    "number": "225",
+    "numberInt": 225,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      103
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 300,
+    "subtypes": [
+      "Stage 1",
+      "Tera",
+      "ex"
+    ],
+    "evolvesFrom": "Exeggcute",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/225.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/225_hires.png"
+  },
+  {
+    "id": "sv8-226",
+    "name": "Tatsugiri ex",
+    "setId": "sv8",
+    "number": "226",
+    "numberInt": 226,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      978
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 160,
+    "subtypes": [
+      "Basic",
+      "Tera",
+      "ex"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/226.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/226_hires.png"
+  },
+  {
+    "id": "sv8-227",
+    "name": "Slaking ex",
+    "setId": "sv8",
+    "number": "227",
+    "numberInt": 227,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      289
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 340,
+    "subtypes": [
+      "Stage 2",
+      "ex"
+    ],
+    "evolvesFrom": "Vigoroth",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/227.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/227_hires.png"
+  },
+  {
+    "id": "sv8-228",
+    "name": "Cyclizar ex",
+    "setId": "sv8",
+    "number": "228",
+    "numberInt": 228,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      967
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 210,
+    "subtypes": [
+      "Basic",
+      "Tera",
+      "ex"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/228.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/228_hires.png"
+  },
+  {
+    "id": "sv8-236",
+    "name": "Durant ex",
+    "setId": "sv8",
+    "number": "236",
+    "numberInt": 236,
+    "rarity": "SpecialIllustrationRare",
+    "rarityRaw": "Special Illustration Rare",
+    "dex": [
+      632
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 190,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/236.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/236_hires.png"
+  },
+  {
+    "id": "sv8-237",
+    "name": "Milotic ex",
+    "setId": "sv8",
+    "number": "237",
+    "numberInt": 237,
+    "rarity": "SpecialIllustrationRare",
+    "rarityRaw": "Special Illustration Rare",
+    "dex": [
+      350
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 270,
+    "subtypes": [
+      "Stage 1",
+      "ex"
+    ],
+    "evolvesFrom": "Feebas",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/237.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/237_hires.png"
+  },
+  {
+    "id": "sv8-238",
+    "name": "Pikachu ex",
+    "setId": "sv8",
+    "number": "238",
+    "numberInt": 238,
+    "rarity": "SpecialIllustrationRare",
+    "rarityRaw": "Special Illustration Rare",
+    "dex": [
+      25
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 200,
+    "subtypes": [
+      "Basic",
+      "Tera",
+      "ex"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/238.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/238_hires.png"
+  },
+  {
+    "id": "sv8-239",
+    "name": "Latias ex",
+    "setId": "sv8",
+    "number": "239",
+    "numberInt": 239,
+    "rarity": "SpecialIllustrationRare",
+    "rarityRaw": "Special Illustration Rare",
+    "dex": [
+      380
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 210,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/239.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/239_hires.png"
+  },
+  {
+    "id": "sv8-240",
+    "name": "Hydreigon ex",
+    "setId": "sv8",
+    "number": "240",
+    "numberInt": 240,
+    "rarity": "SpecialIllustrationRare",
+    "rarityRaw": "Special Illustration Rare",
+    "dex": [
+      635
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 330,
+    "subtypes": [
+      "Stage 2",
+      "Tera",
+      "ex"
+    ],
+    "evolvesFrom": "Zweilous",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/240.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/240_hires.png"
+  },
+  {
+    "id": "sv8-241",
+    "name": "Archaludon ex",
+    "setId": "sv8",
+    "number": "241",
+    "numberInt": 241,
+    "rarity": "SpecialIllustrationRare",
+    "rarityRaw": "Special Illustration Rare",
+    "dex": [
+      1018
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 300,
+    "subtypes": [
+      "Stage 1",
+      "ex"
+    ],
+    "evolvesFrom": "Duraludon",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/241.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/241_hires.png"
+  },
+  {
+    "id": "sv8-242",
+    "name": "Alolan Exeggutor ex",
+    "setId": "sv8",
+    "number": "242",
+    "numberInt": 242,
+    "rarity": "SpecialIllustrationRare",
+    "rarityRaw": "Special Illustration Rare",
+    "dex": [
+      103
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 300,
+    "subtypes": [
+      "Stage 1",
+      "Tera",
+      "ex"
+    ],
+    "evolvesFrom": "Exeggcute",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/242.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/242_hires.png"
+  },
+  {
+    "id": "sv8-247",
+    "name": "Pikachu ex",
+    "setId": "sv8",
+    "number": "247",
+    "numberInt": 247,
+    "rarity": "HyperRare",
+    "rarityRaw": "Hyper Rare",
+    "dex": [
+      25
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 200,
+    "subtypes": [
+      "Basic",
+      "Tera",
+      "ex"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/247.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/247_hires.png"
+  },
+  {
+    "id": "sv8-248",
+    "name": "Alolan Exeggutor ex",
+    "setId": "sv8",
+    "number": "248",
+    "numberInt": 248,
+    "rarity": "HyperRare",
+    "rarityRaw": "Hyper Rare",
+    "dex": [
+      103
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 300,
+    "subtypes": [
+      "Stage 1",
+      "Tera",
+      "ex"
+    ],
+    "evolvesFrom": "Exeggcute",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv8/248.png",
+    "imageLarge": "https://images.pokemontcg.io/sv8/248_hires.png"
+  }
+]

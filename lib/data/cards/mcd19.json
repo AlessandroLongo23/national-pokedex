@@ -1,0 +1,268 @@
+[
+  {
+    "id": "mcd19-1",
+    "name": "Caterpie",
+    "setId": "mcd19",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      10
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Sekio",
+    "imageSmall": "https://images.pokemontcg.io/mcd19/1.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd19/1_hires.png"
+  },
+  {
+    "id": "mcd19-2",
+    "name": "Alolan Exeggutor",
+    "setId": "mcd19",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      103
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 160,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Exeggcute",
+    "artist": "Satoshi Shirai",
+    "imageSmall": "https://images.pokemontcg.io/mcd19/2.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd19/2_hires.png"
+  },
+  {
+    "id": "mcd19-3",
+    "name": "Magmar",
+    "setId": "mcd19",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      126
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Yumi",
+    "imageSmall": "https://images.pokemontcg.io/mcd19/3.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd19/3_hires.png"
+  },
+  {
+    "id": "mcd19-4",
+    "name": "Alolan Sandshrew",
+    "setId": "mcd19",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      27
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Shin Nagasawa",
+    "imageSmall": "https://images.pokemontcg.io/mcd19/4.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd19/4_hires.png"
+  },
+  {
+    "id": "mcd19-5",
+    "name": "Lapras",
+    "setId": "mcd19",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      131
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Saya Tsuruta",
+    "imageSmall": "https://images.pokemontcg.io/mcd19/5.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd19/5_hires.png"
+  },
+  {
+    "id": "mcd19-6",
+    "name": "Pikachu",
+    "setId": "mcd19",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      25
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/mcd19/6.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd19/6_hires.png"
+  },
+  {
+    "id": "mcd19-7",
+    "name": "Gastly",
+    "setId": "mcd19",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      92
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Shibuzoh.",
+    "imageSmall": "https://images.pokemontcg.io/mcd19/7.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd19/7_hires.png"
+  },
+  {
+    "id": "mcd19-8",
+    "name": "Mankey",
+    "setId": "mcd19",
+    "number": "8",
+    "numberInt": 8,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      56
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Miki Tanaka",
+    "imageSmall": "https://images.pokemontcg.io/mcd19/8.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd19/8_hires.png"
+  },
+  {
+    "id": "mcd19-9",
+    "name": "Onix",
+    "setId": "mcd19",
+    "number": "9",
+    "numberInt": 9,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      95
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/mcd19/9.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd19/9_hires.png"
+  },
+  {
+    "id": "mcd19-10",
+    "name": "Alolan Meowth",
+    "setId": "mcd19",
+    "number": "10",
+    "numberInt": 10,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      52
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Akira Komayama",
+    "imageSmall": "https://images.pokemontcg.io/mcd19/10.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd19/10_hires.png"
+  },
+  {
+    "id": "mcd19-11",
+    "name": "Alolan Dugtrio",
+    "setId": "mcd19",
+    "number": "11",
+    "numberInt": 11,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      51
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Alolan Diglett",
+    "artist": "Megumi Mizutani",
+    "imageSmall": "https://images.pokemontcg.io/mcd19/11.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd19/11_hires.png"
+  },
+  {
+    "id": "mcd19-12",
+    "name": "Eevee",
+    "setId": "mcd19",
+    "number": "12",
+    "numberInt": 12,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      133
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/mcd19/12.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd19/12_hires.png"
+  }
+]

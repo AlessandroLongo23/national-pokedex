@@ -1,0 +1,363 @@
+[
+  {
+    "id": "ru1-1",
+    "name": "Venusaur",
+    "setId": "ru1",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      3
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Ivysaur",
+    "artist": "Pokemon Rumble",
+    "imageSmall": "https://images.pokemontcg.io/ru1/1.png",
+    "imageLarge": "https://images.pokemontcg.io/ru1/1_hires.png"
+  },
+  {
+    "id": "ru1-2",
+    "name": "Cherrim",
+    "setId": "ru1",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      421
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Cherubi",
+    "artist": "Pokemon Rumble",
+    "imageSmall": "https://images.pokemontcg.io/ru1/2.png",
+    "imageLarge": "https://images.pokemontcg.io/ru1/2_hires.png"
+  },
+  {
+    "id": "ru1-3",
+    "name": "Ninetales",
+    "setId": "ru1",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      38
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Vulpix",
+    "artist": "Pokemon Rumble",
+    "imageSmall": "https://images.pokemontcg.io/ru1/3.png",
+    "imageLarge": "https://images.pokemontcg.io/ru1/3_hires.png"
+  },
+  {
+    "id": "ru1-4",
+    "name": "Heatran",
+    "setId": "ru1",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      485
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Pokemon Rumble",
+    "imageSmall": "https://images.pokemontcg.io/ru1/4.png",
+    "imageLarge": "https://images.pokemontcg.io/ru1/4_hires.png"
+  },
+  {
+    "id": "ru1-5",
+    "name": "Starmie",
+    "setId": "ru1",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      121
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Staryu",
+    "artist": "Pokemon Rumble",
+    "imageSmall": "https://images.pokemontcg.io/ru1/5.png",
+    "imageLarge": "https://images.pokemontcg.io/ru1/5_hires.png"
+  },
+  {
+    "id": "ru1-6",
+    "name": "Gyarados",
+    "setId": "ru1",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      130
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Magikarp",
+    "artist": "Pokemon Rumble",
+    "imageSmall": "https://images.pokemontcg.io/ru1/6.png",
+    "imageLarge": "https://images.pokemontcg.io/ru1/6_hires.png"
+  },
+  {
+    "id": "ru1-7",
+    "name": "Pikachu",
+    "setId": "ru1",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      25
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Pokemon Rumble",
+    "imageSmall": "https://images.pokemontcg.io/ru1/7.png",
+    "imageLarge": "https://images.pokemontcg.io/ru1/7_hires.png"
+  },
+  {
+    "id": "ru1-8",
+    "name": "Zapdos",
+    "setId": "ru1",
+    "number": "8",
+    "numberInt": 8,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      145
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Pokemon Rumble",
+    "imageSmall": "https://images.pokemontcg.io/ru1/8.png",
+    "imageLarge": "https://images.pokemontcg.io/ru1/8_hires.png"
+  },
+  {
+    "id": "ru1-9",
+    "name": "Mewtwo",
+    "setId": "ru1",
+    "number": "9",
+    "numberInt": 9,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      150
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Pokemon Rumble",
+    "imageSmall": "https://images.pokemontcg.io/ru1/9.png",
+    "imageLarge": "https://images.pokemontcg.io/ru1/9_hires.png"
+  },
+  {
+    "id": "ru1-10",
+    "name": "Mew",
+    "setId": "ru1",
+    "number": "10",
+    "numberInt": 10,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      151
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Pokemon Rumble",
+    "imageSmall": "https://images.pokemontcg.io/ru1/10.png",
+    "imageLarge": "https://images.pokemontcg.io/ru1/10_hires.png"
+  },
+  {
+    "id": "ru1-11",
+    "name": "Diglett",
+    "setId": "ru1",
+    "number": "11",
+    "numberInt": 11,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      50
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 30,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Pokemon Rumble",
+    "imageSmall": "https://images.pokemontcg.io/ru1/11.png",
+    "imageLarge": "https://images.pokemontcg.io/ru1/11_hires.png"
+  },
+  {
+    "id": "ru1-12",
+    "name": "Lucario",
+    "setId": "ru1",
+    "number": "12",
+    "numberInt": 12,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      448
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Riolu",
+    "artist": "Pokemon Rumble",
+    "imageSmall": "https://images.pokemontcg.io/ru1/12.png",
+    "imageLarge": "https://images.pokemontcg.io/ru1/12_hires.png"
+  },
+  {
+    "id": "ru1-13",
+    "name": "Skuntank",
+    "setId": "ru1",
+    "number": "13",
+    "numberInt": 13,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      435
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Stunky",
+    "artist": "Pokemon Rumble",
+    "imageSmall": "https://images.pokemontcg.io/ru1/13.png",
+    "imageLarge": "https://images.pokemontcg.io/ru1/13_hires.png"
+  },
+  {
+    "id": "ru1-14",
+    "name": "Bastiodon",
+    "setId": "ru1",
+    "number": "14",
+    "numberInt": 14,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      411
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Shieldon",
+    "artist": "Pokemon Rumble",
+    "imageSmall": "https://images.pokemontcg.io/ru1/14.png",
+    "imageLarge": "https://images.pokemontcg.io/ru1/14_hires.png"
+  },
+  {
+    "id": "ru1-15",
+    "name": "Rattata",
+    "setId": "ru1",
+    "number": "15",
+    "numberInt": 15,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      19
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 30,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Pokemon Rumble",
+    "imageSmall": "https://images.pokemontcg.io/ru1/15.png",
+    "imageLarge": "https://images.pokemontcg.io/ru1/15_hires.png"
+  },
+  {
+    "id": "ru1-16",
+    "name": "Bibarel",
+    "setId": "ru1",
+    "number": "16",
+    "numberInt": 16,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      400
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Bidoof",
+    "artist": "Pokemon Rumble",
+    "imageSmall": "https://images.pokemontcg.io/ru1/16.png",
+    "imageLarge": "https://images.pokemontcg.io/ru1/16_hires.png"
+  }
+]

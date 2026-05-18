@@ -1,0 +1,266 @@
+[
+  {
+    "id": "mcd11-1",
+    "name": "Snivy",
+    "setId": "mcd11",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      495
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/mcd11/1.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd11/1_hires.png"
+  },
+  {
+    "id": "mcd11-2",
+    "name": "Maractus",
+    "setId": "mcd11",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      556
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/mcd11/2.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd11/2_hires.png"
+  },
+  {
+    "id": "mcd11-3",
+    "name": "Tepig",
+    "setId": "mcd11",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      498
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/mcd11/3.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd11/3_hires.png"
+  },
+  {
+    "id": "mcd11-4",
+    "name": "Oshawott",
+    "setId": "mcd11",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      501
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/mcd11/4.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd11/4_hires.png"
+  },
+  {
+    "id": "mcd11-5",
+    "name": "Alomomola",
+    "setId": "mcd11",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      594
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "sui",
+    "imageSmall": "https://images.pokemontcg.io/mcd11/5.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd11/5_hires.png"
+  },
+  {
+    "id": "mcd11-6",
+    "name": "Blitzle",
+    "setId": "mcd11",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      522
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/mcd11/6.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd11/6_hires.png"
+  },
+  {
+    "id": "mcd11-7",
+    "name": "Munna",
+    "setId": "mcd11",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      517
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/mcd11/7.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd11/7_hires.png"
+  },
+  {
+    "id": "mcd11-8",
+    "name": "Sandile",
+    "setId": "mcd11",
+    "number": "8",
+    "numberInt": 8,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      551
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/mcd11/8.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd11/8_hires.png"
+  },
+  {
+    "id": "mcd11-9",
+    "name": "Zorua",
+    "setId": "mcd11",
+    "number": "9",
+    "numberInt": 9,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      570
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/mcd11/9.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd11/9_hires.png"
+  },
+  {
+    "id": "mcd11-10",
+    "name": "Klink",
+    "setId": "mcd11",
+    "number": "10",
+    "numberInt": 10,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      599
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/mcd11/10.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd11/10_hires.png"
+  },
+  {
+    "id": "mcd11-11",
+    "name": "Pidove",
+    "setId": "mcd11",
+    "number": "11",
+    "numberInt": 11,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      519
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/mcd11/11.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd11/11_hires.png"
+  },
+  {
+    "id": "mcd11-12",
+    "name": "Audino",
+    "setId": "mcd11",
+    "number": "12",
+    "numberInt": 12,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      531
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "MAHOU",
+    "imageSmall": "https://images.pokemontcg.io/mcd11/12.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd11/12_hires.png"
+  }
+]

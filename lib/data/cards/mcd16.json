@@ -1,0 +1,266 @@
+[
+  {
+    "id": "mcd16-1",
+    "name": "Vulpix",
+    "setId": "mcd16",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      37
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "kirisAki",
+    "imageSmall": "https://images.pokemontcg.io/mcd16/1.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd16/1_hires.png"
+  },
+  {
+    "id": "mcd16-2",
+    "name": "Torchic",
+    "setId": "mcd16",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      255
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "sui",
+    "imageSmall": "https://images.pokemontcg.io/mcd16/2.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd16/2_hires.png"
+  },
+  {
+    "id": "mcd16-3",
+    "name": "Fennekin",
+    "setId": "mcd16",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      653
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/mcd16/3.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd16/3_hires.png"
+  },
+  {
+    "id": "mcd16-4",
+    "name": "Magikarp",
+    "setId": "mcd16",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      129
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 30,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Akira Komayama",
+    "imageSmall": "https://images.pokemontcg.io/mcd16/4.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd16/4_hires.png"
+  },
+  {
+    "id": "mcd16-5",
+    "name": "Totodile",
+    "setId": "mcd16",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      158
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/mcd16/5.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd16/5_hires.png"
+  },
+  {
+    "id": "mcd16-6",
+    "name": "Pikachu",
+    "setId": "mcd16",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      25
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Naoki Saito",
+    "imageSmall": "https://images.pokemontcg.io/mcd16/6.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd16/6_hires.png"
+  },
+  {
+    "id": "mcd16-7",
+    "name": "Scraggy",
+    "setId": "mcd16",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      559
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Tomokazu Komiya",
+    "imageSmall": "https://images.pokemontcg.io/mcd16/7.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd16/7_hires.png"
+  },
+  {
+    "id": "mcd16-8",
+    "name": "Jigglypuff",
+    "setId": "mcd16",
+    "number": "8",
+    "numberInt": 8,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      39
+    ],
+    "types": [
+      "Fairy"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kanako Eo",
+    "imageSmall": "https://images.pokemontcg.io/mcd16/8.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd16/8_hires.png"
+  },
+  {
+    "id": "mcd16-9",
+    "name": "Togepi",
+    "setId": "mcd16",
+    "number": "9",
+    "numberInt": 9,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      175
+    ],
+    "types": [
+      "Fairy"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "HiRON",
+    "imageSmall": "https://images.pokemontcg.io/mcd16/9.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd16/9_hires.png"
+  },
+  {
+    "id": "mcd16-10",
+    "name": "Dedenne",
+    "setId": "mcd16",
+    "number": "10",
+    "numberInt": 10,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      702
+    ],
+    "types": [
+      "Fairy"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/mcd16/10.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd16/10_hires.png"
+  },
+  {
+    "id": "mcd16-11",
+    "name": "Meowth",
+    "setId": "mcd16",
+    "number": "11",
+    "numberInt": 11,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      52
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kanako Eo",
+    "imageSmall": "https://images.pokemontcg.io/mcd16/11.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd16/11_hires.png"
+  },
+  {
+    "id": "mcd16-12",
+    "name": "Eevee",
+    "setId": "mcd16",
+    "number": "12",
+    "numberInt": 12,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      133
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/mcd16/12.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd16/12_hires.png"
+  }
+]

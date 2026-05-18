@@ -1,0 +1,2082 @@
+[
+  {
+    "id": "me3-1",
+    "name": "Spinarak",
+    "setId": "me3",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      167
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-1/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-1/large"
+  },
+  {
+    "id": "me3-2",
+    "name": "Ariados",
+    "setId": "me3",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      168
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Spinarak",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-2/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-2/large"
+  },
+  {
+    "id": "me3-3",
+    "name": "Shaymin",
+    "setId": "me3",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      492
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-3/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-3/large"
+  },
+  {
+    "id": "me3-4",
+    "name": "Snivy",
+    "setId": "me3",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      495
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-4/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-4/large"
+  },
+  {
+    "id": "me3-5",
+    "name": "Servine",
+    "setId": "me3",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      496
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Snivy",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-5/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-5/large"
+  },
+  {
+    "id": "me3-6",
+    "name": "Serperior",
+    "setId": "me3",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      497
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 160,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Servine",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-6/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-6/large"
+  },
+  {
+    "id": "me3-7",
+    "name": "Scatterbug",
+    "setId": "me3",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      664
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-7/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-7/large"
+  },
+  {
+    "id": "me3-8",
+    "name": "Spewpa",
+    "setId": "me3",
+    "number": "8",
+    "numberInt": 8,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      665
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Scatterbug",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-8/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-8/large"
+  },
+  {
+    "id": "me3-9",
+    "name": "Vivillon",
+    "setId": "me3",
+    "number": "9",
+    "numberInt": 9,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      666
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Spewpa",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-9/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-9/large"
+  },
+  {
+    "id": "me3-10",
+    "name": "Rowlet",
+    "setId": "me3",
+    "number": "10",
+    "numberInt": 10,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      722
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-10/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-10/large"
+  },
+  {
+    "id": "me3-11",
+    "name": "Dartrix",
+    "setId": "me3",
+    "number": "11",
+    "numberInt": 11,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      723
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Rowlet",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-11/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-11/large"
+  },
+  {
+    "id": "me3-12",
+    "name": "Decidueye ex",
+    "setId": "me3",
+    "number": "12",
+    "numberInt": 12,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      724
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 320,
+    "subtypes": [
+      "Stage 2",
+      "ex"
+    ],
+    "evolvesFrom": "Dartrix",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-12/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-12/large"
+  },
+  {
+    "id": "me3-13",
+    "name": "Fletchinder",
+    "setId": "me3",
+    "number": "13",
+    "numberInt": 13,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      662
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Fletchling",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-13/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-13/large"
+  },
+  {
+    "id": "me3-14",
+    "name": "Talonflame",
+    "setId": "me3",
+    "number": "14",
+    "numberInt": 14,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      663
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Fletchinder",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-14/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-14/large"
+  },
+  {
+    "id": "me3-15",
+    "name": "Salandit",
+    "setId": "me3",
+    "number": "15",
+    "numberInt": 15,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      757
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-15/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-15/large"
+  },
+  {
+    "id": "me3-16",
+    "name": "Salazzle ex",
+    "setId": "me3",
+    "number": "16",
+    "numberInt": 16,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      758
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 260,
+    "subtypes": [
+      "Stage 1",
+      "ex"
+    ],
+    "evolvesFrom": "Salandit",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-16/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-16/large"
+  },
+  {
+    "id": "me3-17",
+    "name": "Turtonator",
+    "setId": "me3",
+    "number": "17",
+    "numberInt": 17,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      776
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-17/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-17/large"
+  },
+  {
+    "id": "me3-18",
+    "name": "Seel",
+    "setId": "me3",
+    "number": "18",
+    "numberInt": 18,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      86
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-18/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-18/large"
+  },
+  {
+    "id": "me3-19",
+    "name": "Dewgong",
+    "setId": "me3",
+    "number": "19",
+    "numberInt": 19,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      87
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Seel",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-19/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-19/large"
+  },
+  {
+    "id": "me3-20",
+    "name": "Staryu",
+    "setId": "me3",
+    "number": "20",
+    "numberInt": 20,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      120
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-20/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-20/large"
+  },
+  {
+    "id": "me3-21",
+    "name": "Mega Starmie ex",
+    "setId": "me3",
+    "number": "21",
+    "numberInt": 21,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      121
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 330,
+    "subtypes": [
+      "Stage 1",
+      "MEGA",
+      "ex"
+    ],
+    "evolvesFrom": "Staryu",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-21/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-21/large"
+  },
+  {
+    "id": "me3-22",
+    "name": "Lapras ex",
+    "setId": "me3",
+    "number": "22",
+    "numberInt": 22,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      131
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 210,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-22/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-22/large"
+  },
+  {
+    "id": "me3-23",
+    "name": "Amaura",
+    "setId": "me3",
+    "number": "23",
+    "numberInt": 23,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      698
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Antique Sail Fossil",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-23/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-23/large"
+  },
+  {
+    "id": "me3-24",
+    "name": "Aurorus",
+    "setId": "me3",
+    "number": "24",
+    "numberInt": 24,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      699
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 170,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Amaura",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-24/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-24/large"
+  },
+  {
+    "id": "me3-25",
+    "name": "Volcanion",
+    "setId": "me3",
+    "number": "25",
+    "numberInt": 25,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      721
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-25/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-25/large"
+  },
+  {
+    "id": "me3-26",
+    "name": "Shinx",
+    "setId": "me3",
+    "number": "26",
+    "numberInt": 26,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      403
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-26/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-26/large"
+  },
+  {
+    "id": "me3-27",
+    "name": "Luxio",
+    "setId": "me3",
+    "number": "27",
+    "numberInt": 27,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      404
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Shinx",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-27/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-27/large"
+  },
+  {
+    "id": "me3-28",
+    "name": "Luxray",
+    "setId": "me3",
+    "number": "28",
+    "numberInt": 28,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      405
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Luxio",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-28/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-28/large"
+  },
+  {
+    "id": "me3-29",
+    "name": "Dedenne",
+    "setId": "me3",
+    "number": "29",
+    "numberInt": 29,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      702
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-29/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-29/large"
+  },
+  {
+    "id": "me3-30",
+    "name": "Clefairy",
+    "setId": "me3",
+    "number": "30",
+    "numberInt": 30,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      35
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-30/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-30/large"
+  },
+  {
+    "id": "me3-31",
+    "name": "Mega Clefable ex",
+    "setId": "me3",
+    "number": "31",
+    "numberInt": 31,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      36
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 320,
+    "subtypes": [
+      "Stage 1",
+      "MEGA",
+      "ex"
+    ],
+    "evolvesFrom": "Clefairy",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-31/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-31/large"
+  },
+  {
+    "id": "me3-32",
+    "name": "Mawile",
+    "setId": "me3",
+    "number": "32",
+    "numberInt": 32,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      303
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-32/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-32/large"
+  },
+  {
+    "id": "me3-33",
+    "name": "Espurr",
+    "setId": "me3",
+    "number": "33",
+    "numberInt": 33,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      677
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-33/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-33/large"
+  },
+  {
+    "id": "me3-34",
+    "name": "Meowstic",
+    "setId": "me3",
+    "number": "34",
+    "numberInt": 34,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      678
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Espurr",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-34/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-34/large"
+  },
+  {
+    "id": "me3-35",
+    "name": "Spritzee",
+    "setId": "me3",
+    "number": "35",
+    "numberInt": 35,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      682
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-35/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-35/large"
+  },
+  {
+    "id": "me3-36",
+    "name": "Aromatisse",
+    "setId": "me3",
+    "number": "36",
+    "numberInt": 36,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      683
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Spritzee",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-36/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-36/large"
+  },
+  {
+    "id": "me3-37",
+    "name": "Nosepass",
+    "setId": "me3",
+    "number": "37",
+    "numberInt": 37,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      299
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-37/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-37/large"
+  },
+  {
+    "id": "me3-38",
+    "name": "Probopass",
+    "setId": "me3",
+    "number": "38",
+    "numberInt": 38,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      476
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Nosepass",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-38/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-38/large"
+  },
+  {
+    "id": "me3-39",
+    "name": "Hippopotas",
+    "setId": "me3",
+    "number": "39",
+    "numberInt": 39,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      449
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-39/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-39/large"
+  },
+  {
+    "id": "me3-40",
+    "name": "Hippowdon",
+    "setId": "me3",
+    "number": "40",
+    "numberInt": 40,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      450
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Hippopotas",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-40/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-40/large"
+  },
+  {
+    "id": "me3-41",
+    "name": "Landorus",
+    "setId": "me3",
+    "number": "41",
+    "numberInt": 41,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      645
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-41/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-41/large"
+  },
+  {
+    "id": "me3-42",
+    "name": "Binacle",
+    "setId": "me3",
+    "number": "42",
+    "numberInt": 42,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      688
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-42/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-42/large"
+  },
+  {
+    "id": "me3-43",
+    "name": "Barbaracle",
+    "setId": "me3",
+    "number": "43",
+    "numberInt": 43,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      689
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Binacle",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-43/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-43/large"
+  },
+  {
+    "id": "me3-44",
+    "name": "Tyrunt",
+    "setId": "me3",
+    "number": "44",
+    "numberInt": 44,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      696
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Antique Jaw Fossil",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-44/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-44/large"
+  },
+  {
+    "id": "me3-45",
+    "name": "Tyrantrum",
+    "setId": "me3",
+    "number": "45",
+    "numberInt": 45,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      697
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 180,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Tyrunt",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-45/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-45/large"
+  },
+  {
+    "id": "me3-46",
+    "name": "Hawlucha",
+    "setId": "me3",
+    "number": "46",
+    "numberInt": 46,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      701
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-46/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-46/large"
+  },
+  {
+    "id": "me3-47",
+    "name": "Mega Zygarde ex",
+    "setId": "me3",
+    "number": "47",
+    "numberInt": 47,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      718
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 310,
+    "subtypes": [
+      "Basic",
+      "MEGA",
+      "ex"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-47/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-47/large"
+  },
+  {
+    "id": "me3-48",
+    "name": "Gastly",
+    "setId": "me3",
+    "number": "48",
+    "numberInt": 48,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      92
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-48/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-48/large"
+  },
+  {
+    "id": "me3-49",
+    "name": "Haunter",
+    "setId": "me3",
+    "number": "49",
+    "numberInt": 49,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      93
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Gastly",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-49/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-49/large"
+  },
+  {
+    "id": "me3-50",
+    "name": "Gengar",
+    "setId": "me3",
+    "number": "50",
+    "numberInt": 50,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      94
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Haunter",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-50/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-50/large"
+  },
+  {
+    "id": "me3-51",
+    "name": "Skorupi",
+    "setId": "me3",
+    "number": "51",
+    "numberInt": 51,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      451
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-51/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-51/large"
+  },
+  {
+    "id": "me3-52",
+    "name": "Drapion",
+    "setId": "me3",
+    "number": "52",
+    "numberInt": 52,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      452
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Skorupi",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-52/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-52/large"
+  },
+  {
+    "id": "me3-53",
+    "name": "Yveltal ex",
+    "setId": "me3",
+    "number": "53",
+    "numberInt": 53,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      717
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 210,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-53/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-53/large"
+  },
+  {
+    "id": "me3-54",
+    "name": "Chien-Pao",
+    "setId": "me3",
+    "number": "54",
+    "numberInt": 54,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      1002
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-54/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-54/large"
+  },
+  {
+    "id": "me3-55",
+    "name": "Mega Skarmory ex",
+    "setId": "me3",
+    "number": "55",
+    "numberInt": 55,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      227
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 260,
+    "subtypes": [
+      "Basic",
+      "MEGA",
+      "ex"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-55/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-55/large"
+  },
+  {
+    "id": "me3-56",
+    "name": "Honedge",
+    "setId": "me3",
+    "number": "56",
+    "numberInt": 56,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      679
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-56/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-56/large"
+  },
+  {
+    "id": "me3-57",
+    "name": "Doublade",
+    "setId": "me3",
+    "number": "57",
+    "numberInt": 57,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      680
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Honedge",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-57/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-57/large"
+  },
+  {
+    "id": "me3-58",
+    "name": "Aegislash",
+    "setId": "me3",
+    "number": "58",
+    "numberInt": 58,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      681
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Doublade",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-58/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-58/large"
+  },
+  {
+    "id": "me3-59",
+    "name": "Klefki",
+    "setId": "me3",
+    "number": "59",
+    "numberInt": 59,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      707
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-59/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-59/large"
+  },
+  {
+    "id": "me3-60",
+    "name": "Rattata",
+    "setId": "me3",
+    "number": "60",
+    "numberInt": 60,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      19
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-60/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-60/large"
+  },
+  {
+    "id": "me3-61",
+    "name": "Raticate",
+    "setId": "me3",
+    "number": "61",
+    "numberInt": 61,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      20
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Rattata",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-61/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-61/large"
+  },
+  {
+    "id": "me3-62",
+    "name": "Meowth ex",
+    "setId": "me3",
+    "number": "62",
+    "numberInt": 62,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      52
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 170,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-62/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-62/large"
+  },
+  {
+    "id": "me3-63",
+    "name": "Snorlax",
+    "setId": "me3",
+    "number": "63",
+    "numberInt": 63,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      143
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 160,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-63/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-63/large"
+  },
+  {
+    "id": "me3-64",
+    "name": "Bunnelby",
+    "setId": "me3",
+    "number": "64",
+    "numberInt": 64,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      659
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-64/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-64/large"
+  },
+  {
+    "id": "me3-65",
+    "name": "Diggersby",
+    "setId": "me3",
+    "number": "65",
+    "numberInt": 65,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      660
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Bunnelby",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-65/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-65/large"
+  },
+  {
+    "id": "me3-66",
+    "name": "Fletchling",
+    "setId": "me3",
+    "number": "66",
+    "numberInt": 66,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      661
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-66/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-66/large"
+  },
+  {
+    "id": "me3-67",
+    "name": "Furfrou",
+    "setId": "me3",
+    "number": "67",
+    "numberInt": 67,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      676
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-67/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-67/large"
+  },
+  {
+    "id": "me3-89",
+    "name": "Spewpa",
+    "setId": "me3",
+    "number": "89",
+    "numberInt": 89,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      665
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Scatterbug",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-89/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-89/large"
+  },
+  {
+    "id": "me3-90",
+    "name": "Rowlet",
+    "setId": "me3",
+    "number": "90",
+    "numberInt": 90,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      722
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-90/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-90/large"
+  },
+  {
+    "id": "me3-91",
+    "name": "Talonflame",
+    "setId": "me3",
+    "number": "91",
+    "numberInt": 91,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      663
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Fletchinder",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-91/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-91/large"
+  },
+  {
+    "id": "me3-92",
+    "name": "Aurorus",
+    "setId": "me3",
+    "number": "92",
+    "numberInt": 92,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      699
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 170,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Amaura",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-92/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-92/large"
+  },
+  {
+    "id": "me3-93",
+    "name": "Dedenne",
+    "setId": "me3",
+    "number": "93",
+    "numberInt": 93,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      702
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-93/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-93/large"
+  },
+  {
+    "id": "me3-94",
+    "name": "Clefairy",
+    "setId": "me3",
+    "number": "94",
+    "numberInt": 94,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      35
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-94/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-94/large"
+  },
+  {
+    "id": "me3-95",
+    "name": "Espurr",
+    "setId": "me3",
+    "number": "95",
+    "numberInt": 95,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      677
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-95/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-95/large"
+  },
+  {
+    "id": "me3-96",
+    "name": "Probopass",
+    "setId": "me3",
+    "number": "96",
+    "numberInt": 96,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      476
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Nosepass",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-96/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-96/large"
+  },
+  {
+    "id": "me3-97",
+    "name": "Drapion",
+    "setId": "me3",
+    "number": "97",
+    "numberInt": 97,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      452
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Skorupi",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-97/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-97/large"
+  },
+  {
+    "id": "me3-98",
+    "name": "Doublade",
+    "setId": "me3",
+    "number": "98",
+    "numberInt": 98,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      680
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Honedge",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-98/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-98/large"
+  },
+  {
+    "id": "me3-99",
+    "name": "Raticate",
+    "setId": "me3",
+    "number": "99",
+    "numberInt": 99,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      20
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Rattata",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-99/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-99/large"
+  },
+  {
+    "id": "me3-100",
+    "name": "Decidueye ex",
+    "setId": "me3",
+    "number": "100",
+    "numberInt": 100,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      724
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 320,
+    "subtypes": [
+      "Stage 2",
+      "ex"
+    ],
+    "evolvesFrom": "Dartrix",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-100/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-100/large"
+  },
+  {
+    "id": "me3-101",
+    "name": "Salazzle ex",
+    "setId": "me3",
+    "number": "101",
+    "numberInt": 101,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      758
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 260,
+    "subtypes": [
+      "Stage 1",
+      "ex"
+    ],
+    "evolvesFrom": "Salandit",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-101/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-101/large"
+  },
+  {
+    "id": "me3-102",
+    "name": "Mega Starmie ex",
+    "setId": "me3",
+    "number": "102",
+    "numberInt": 102,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      121
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 330,
+    "subtypes": [
+      "Stage 1",
+      "MEGA",
+      "ex"
+    ],
+    "evolvesFrom": "Staryu",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-102/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-102/large"
+  },
+  {
+    "id": "me3-103",
+    "name": "Mega Clefable ex",
+    "setId": "me3",
+    "number": "103",
+    "numberInt": 103,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      36
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 320,
+    "subtypes": [
+      "Stage 1",
+      "MEGA",
+      "ex"
+    ],
+    "evolvesFrom": "Clefairy",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-103/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-103/large"
+  },
+  {
+    "id": "me3-104",
+    "name": "Mega Zygarde ex",
+    "setId": "me3",
+    "number": "104",
+    "numberInt": 104,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      718
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 310,
+    "subtypes": [
+      "Basic",
+      "MEGA",
+      "ex"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-104/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-104/large"
+  },
+  {
+    "id": "me3-105",
+    "name": "Yveltal ex",
+    "setId": "me3",
+    "number": "105",
+    "numberInt": 105,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      717
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 210,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-105/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-105/large"
+  },
+  {
+    "id": "me3-106",
+    "name": "Mega Skarmory ex",
+    "setId": "me3",
+    "number": "106",
+    "numberInt": 106,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      227
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 260,
+    "subtypes": [
+      "Basic",
+      "MEGA",
+      "ex"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-106/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-106/large"
+  },
+  {
+    "id": "me3-107",
+    "name": "Meowth ex",
+    "setId": "me3",
+    "number": "107",
+    "numberInt": 107,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      52
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 170,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-107/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-107/large"
+  },
+  {
+    "id": "me3-118",
+    "name": "Mega Starmie ex",
+    "setId": "me3",
+    "number": "118",
+    "numberInt": 118,
+    "rarity": "SpecialIllustrationRare",
+    "rarityRaw": "Special Illustration Rare",
+    "dex": [
+      121
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 330,
+    "subtypes": [
+      "Stage 1",
+      "MEGA",
+      "ex"
+    ],
+    "evolvesFrom": "Staryu",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-118/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-118/large"
+  },
+  {
+    "id": "me3-119",
+    "name": "Mega Clefable ex",
+    "setId": "me3",
+    "number": "119",
+    "numberInt": 119,
+    "rarity": "SpecialIllustrationRare",
+    "rarityRaw": "Special Illustration Rare",
+    "dex": [
+      36
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 320,
+    "subtypes": [
+      "Stage 1",
+      "MEGA",
+      "ex"
+    ],
+    "evolvesFrom": "Clefairy",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-119/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-119/large"
+  },
+  {
+    "id": "me3-120",
+    "name": "Mega Zygarde ex",
+    "setId": "me3",
+    "number": "120",
+    "numberInt": 120,
+    "rarity": "SpecialIllustrationRare",
+    "rarityRaw": "Special Illustration Rare",
+    "dex": [
+      718
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 310,
+    "subtypes": [
+      "Basic",
+      "MEGA",
+      "ex"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-120/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-120/large"
+  },
+  {
+    "id": "me3-121",
+    "name": "Meowth ex",
+    "setId": "me3",
+    "number": "121",
+    "numberInt": 121,
+    "rarity": "SpecialIllustrationRare",
+    "rarityRaw": "Special Illustration Rare",
+    "dex": [
+      52
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 170,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-121/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-121/large"
+  },
+  {
+    "id": "me3-124",
+    "name": "Mega Zygarde ex",
+    "setId": "me3",
+    "number": "124",
+    "numberInt": 124,
+    "rarity": "Unknown",
+    "rarityRaw": "Mega Hyper Rare",
+    "dex": [
+      718
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 310,
+    "subtypes": [
+      "Basic",
+      "MEGA",
+      "ex"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me3-124/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-124/large"
+  }
+]

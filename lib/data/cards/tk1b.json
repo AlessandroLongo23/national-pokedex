@@ -1,0 +1,158 @@
+[
+  {
+    "id": "tk1b-1",
+    "name": "Electrike",
+    "setId": "tk1b",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      309
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/tk1b/1.png",
+    "imageLarge": "https://images.pokemontcg.io/tk1b/1_hires.png"
+  },
+  {
+    "id": "tk1b-2",
+    "name": "Latios",
+    "setId": "tk1b",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      381
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kyoko Koizumi",
+    "imageSmall": "https://images.pokemontcg.io/tk1b/2.png",
+    "imageLarge": "https://images.pokemontcg.io/tk1b/2_hires.png"
+  },
+  {
+    "id": "tk1b-3",
+    "name": "Linoone",
+    "setId": "tk1b",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      264
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Zigzagoon",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/tk1b/3.png",
+    "imageLarge": "https://images.pokemontcg.io/tk1b/3_hires.png"
+  },
+  {
+    "id": "tk1b-4",
+    "name": "Magnemite",
+    "setId": "tk1b",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      81
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Tomokazu Komiya",
+    "imageSmall": "https://images.pokemontcg.io/tk1b/4.png",
+    "imageLarge": "https://images.pokemontcg.io/tk1b/4_hires.png"
+  },
+  {
+    "id": "tk1b-5",
+    "name": "Magneton",
+    "setId": "tk1b",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      82
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Magnemite",
+    "artist": "Kyoko Umemoto",
+    "imageSmall": "https://images.pokemontcg.io/tk1b/5.png",
+    "imageLarge": "https://images.pokemontcg.io/tk1b/5_hires.png"
+  },
+  {
+    "id": "tk1b-6",
+    "name": "Pikachu",
+    "setId": "tk1b",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      25
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/tk1b/6.png",
+    "imageLarge": "https://images.pokemontcg.io/tk1b/6_hires.png"
+  },
+  {
+    "id": "tk1b-7",
+    "name": "Zigzagoon",
+    "setId": "tk1b",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      263
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/tk1b/7.png",
+    "imageLarge": "https://images.pokemontcg.io/tk1b/7_hires.png"
+  }
+]

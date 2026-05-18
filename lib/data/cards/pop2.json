@@ -1,0 +1,292 @@
+[
+  {
+    "id": "pop2-1",
+    "name": "Entei",
+    "setId": "pop2",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      244
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/pop2/1.png",
+    "imageLarge": "https://images.pokemontcg.io/pop2/1_hires.png"
+  },
+  {
+    "id": "pop2-2",
+    "name": "Pidgeot",
+    "setId": "pop2",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      18
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Pidgeotto",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/pop2/2.png",
+    "imageLarge": "https://images.pokemontcg.io/pop2/2_hires.png"
+  },
+  {
+    "id": "pop2-3",
+    "name": "Raikou",
+    "setId": "pop2",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      243
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/pop2/3.png",
+    "imageLarge": "https://images.pokemontcg.io/pop2/3_hires.png"
+  },
+  {
+    "id": "pop2-4",
+    "name": "Suicune",
+    "setId": "pop2",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      245
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/pop2/4.png",
+    "imageLarge": "https://images.pokemontcg.io/pop2/4_hires.png"
+  },
+  {
+    "id": "pop2-5",
+    "name": "Tauros",
+    "setId": "pop2",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      128
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/pop2/5.png",
+    "imageLarge": "https://images.pokemontcg.io/pop2/5_hires.png"
+  },
+  {
+    "id": "pop2-6",
+    "name": "Venusaur",
+    "setId": "pop2",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      3
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Ivysaur",
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/pop2/6.png",
+    "imageLarge": "https://images.pokemontcg.io/pop2/6_hires.png"
+  },
+  {
+    "id": "pop2-7",
+    "name": "Ivysaur",
+    "setId": "pop2",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      2
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Bulbasaur",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/pop2/7.png",
+    "imageLarge": "https://images.pokemontcg.io/pop2/7_hires.png"
+  },
+  {
+    "id": "pop2-12",
+    "name": "Bulbasaur",
+    "setId": "pop2",
+    "number": "12",
+    "numberInt": 12,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      1
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Midori Harada",
+    "imageSmall": "https://images.pokemontcg.io/pop2/12.png",
+    "imageLarge": "https://images.pokemontcg.io/pop2/12_hires.png"
+  },
+  {
+    "id": "pop2-13",
+    "name": "Cacnea",
+    "setId": "pop2",
+    "number": "13",
+    "numberInt": 13,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      331
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/pop2/13.png",
+    "imageLarge": "https://images.pokemontcg.io/pop2/13_hires.png"
+  },
+  {
+    "id": "pop2-14",
+    "name": "Luvdisc",
+    "setId": "pop2",
+    "number": "14",
+    "numberInt": 14,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      370
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/pop2/14.png",
+    "imageLarge": "https://images.pokemontcg.io/pop2/14_hires.png"
+  },
+  {
+    "id": "pop2-15",
+    "name": "Phanpy",
+    "setId": "pop2",
+    "number": "15",
+    "numberInt": 15,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      231
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Tomokazu Komiya",
+    "imageSmall": "https://images.pokemontcg.io/pop2/15.png",
+    "imageLarge": "https://images.pokemontcg.io/pop2/15_hires.png"
+  },
+  {
+    "id": "pop2-16",
+    "name": "Pikachu",
+    "setId": "pop2",
+    "number": "16",
+    "numberInt": 16,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      25
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Yuka Morii",
+    "imageSmall": "https://images.pokemontcg.io/pop2/16.png",
+    "imageLarge": "https://images.pokemontcg.io/pop2/16_hires.png"
+  },
+  {
+    "id": "pop2-17",
+    "name": "Celebi ex",
+    "setId": "pop2",
+    "number": "17",
+    "numberInt": 17,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      251
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "artist": "Ryo Ueda",
+    "imageSmall": "https://images.pokemontcg.io/pop2/17.png",
+    "imageLarge": "https://images.pokemontcg.io/pop2/17_hires.png"
+  }
+]

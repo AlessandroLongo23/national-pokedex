@@ -1,0 +1,404 @@
+[
+  {
+    "id": "det1-1",
+    "name": "Bulbasaur",
+    "setId": "det1",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      1
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "MPC Film",
+    "imageSmall": "https://images.pokemontcg.io/det1/1.png",
+    "imageLarge": "https://images.pokemontcg.io/det1/1_hires.png"
+  },
+  {
+    "id": "det1-2",
+    "name": "Ludicolo",
+    "setId": "det1",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      272
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Lombre",
+    "artist": "Framestore",
+    "imageSmall": "https://images.pokemontcg.io/det1/2.png",
+    "imageLarge": "https://images.pokemontcg.io/det1/2_hires.png"
+  },
+  {
+    "id": "det1-3",
+    "name": "Morelull",
+    "setId": "det1",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      755
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "MPC Film",
+    "imageSmall": "https://images.pokemontcg.io/det1/3.png",
+    "imageLarge": "https://images.pokemontcg.io/det1/3_hires.png"
+  },
+  {
+    "id": "det1-4",
+    "name": "Charmander",
+    "setId": "det1",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      4
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "MPC Film",
+    "imageSmall": "https://images.pokemontcg.io/det1/4.png",
+    "imageLarge": "https://images.pokemontcg.io/det1/4_hires.png"
+  },
+  {
+    "id": "det1-5",
+    "name": "Charizard",
+    "setId": "det1",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      6
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 180,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Charmeleon",
+    "artist": "Framestore",
+    "imageSmall": "https://images.pokemontcg.io/det1/5.png",
+    "imageLarge": "https://images.pokemontcg.io/det1/5_hires.png"
+  },
+  {
+    "id": "det1-6",
+    "name": "Arcanine",
+    "setId": "det1",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      59
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Growlithe",
+    "artist": "MPC Film",
+    "imageSmall": "https://images.pokemontcg.io/det1/6.png",
+    "imageLarge": "https://images.pokemontcg.io/det1/6_hires.png"
+  },
+  {
+    "id": "det1-7",
+    "name": "Psyduck",
+    "setId": "det1",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      54
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Framestore",
+    "imageSmall": "https://images.pokemontcg.io/det1/7.png",
+    "imageLarge": "https://images.pokemontcg.io/det1/7_hires.png"
+  },
+  {
+    "id": "det1-8",
+    "name": "Magikarp",
+    "setId": "det1",
+    "number": "8",
+    "numberInt": 8,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      129
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 30,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Framestore",
+    "imageSmall": "https://images.pokemontcg.io/det1/8.png",
+    "imageLarge": "https://images.pokemontcg.io/det1/8_hires.png"
+  },
+  {
+    "id": "det1-9",
+    "name": "Greninja",
+    "setId": "det1",
+    "number": "9",
+    "numberInt": 9,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      658
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Frogadier",
+    "artist": "MPC Film",
+    "imageSmall": "https://images.pokemontcg.io/det1/9.png",
+    "imageLarge": "https://images.pokemontcg.io/det1/9_hires.png"
+  },
+  {
+    "id": "det1-10",
+    "name": "Detective Pikachu",
+    "setId": "det1",
+    "number": "10",
+    "numberInt": 10,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      25
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "MPC Film",
+    "imageSmall": "https://images.pokemontcg.io/det1/10.png",
+    "imageLarge": "https://images.pokemontcg.io/det1/10_hires.png"
+  },
+  {
+    "id": "det1-11",
+    "name": "Mr. Mime",
+    "setId": "det1",
+    "number": "11",
+    "numberInt": 11,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      122
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "MPC Film",
+    "imageSmall": "https://images.pokemontcg.io/det1/11.png",
+    "imageLarge": "https://images.pokemontcg.io/det1/11_hires.png"
+  },
+  {
+    "id": "det1-12",
+    "name": "Mewtwo",
+    "setId": "det1",
+    "number": "12",
+    "numberInt": 12,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      150
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "MPC Film",
+    "imageSmall": "https://images.pokemontcg.io/det1/12.png",
+    "imageLarge": "https://images.pokemontcg.io/det1/12_hires.png"
+  },
+  {
+    "id": "det1-13",
+    "name": "Machamp",
+    "setId": "det1",
+    "number": "13",
+    "numberInt": 13,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      68
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 160,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Machoke",
+    "artist": "MPC Film",
+    "imageSmall": "https://images.pokemontcg.io/det1/13.png",
+    "imageLarge": "https://images.pokemontcg.io/det1/13_hires.png"
+  },
+  {
+    "id": "det1-14",
+    "name": "Jigglypuff",
+    "setId": "det1",
+    "number": "14",
+    "numberInt": 14,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      39
+    ],
+    "types": [
+      "Fairy"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Framestore",
+    "imageSmall": "https://images.pokemontcg.io/det1/14.png",
+    "imageLarge": "https://images.pokemontcg.io/det1/14_hires.png"
+  },
+  {
+    "id": "det1-15",
+    "name": "Snubbull",
+    "setId": "det1",
+    "number": "15",
+    "numberInt": 15,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      209
+    ],
+    "types": [
+      "Fairy"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Framestore",
+    "imageSmall": "https://images.pokemontcg.io/det1/15.png",
+    "imageLarge": "https://images.pokemontcg.io/det1/15_hires.png"
+  },
+  {
+    "id": "det1-16",
+    "name": "Lickitung",
+    "setId": "det1",
+    "number": "16",
+    "numberInt": 16,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      108
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "MPC Film",
+    "imageSmall": "https://images.pokemontcg.io/det1/16.png",
+    "imageLarge": "https://images.pokemontcg.io/det1/16_hires.png"
+  },
+  {
+    "id": "det1-17",
+    "name": "Ditto",
+    "setId": "det1",
+    "number": "17",
+    "numberInt": 17,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      132
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "MPC Film",
+    "imageSmall": "https://images.pokemontcg.io/det1/17.png",
+    "imageLarge": "https://images.pokemontcg.io/det1/17_hires.png"
+  },
+  {
+    "id": "det1-18",
+    "name": "Slaking",
+    "setId": "det1",
+    "number": "18",
+    "numberInt": 18,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      289
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 180,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Vigoroth",
+    "artist": "Framestore",
+    "imageSmall": "https://images.pokemontcg.io/det1/18.png",
+    "imageLarge": "https://images.pokemontcg.io/det1/18_hires.png"
+  }
+]

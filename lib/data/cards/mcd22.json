@@ -1,0 +1,350 @@
+[
+  {
+    "id": "mcd22-1",
+    "name": "Ledyba",
+    "setId": "mcd22",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      165
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Naoyo Kimura",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/mcd22/1.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd22/1_hires.png"
+  },
+  {
+    "id": "mcd22-2",
+    "name": "Rowlet",
+    "setId": "mcd22",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      722
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "HYOGONOSUKE",
+    "regulationMark": "D",
+    "imageSmall": "https://images.pokemontcg.io/mcd22/2.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd22/2_hires.png"
+  },
+  {
+    "id": "mcd22-3",
+    "name": "Gossifleur",
+    "setId": "mcd22",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      829
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mizue",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/mcd22/3.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd22/3_hires.png"
+  },
+  {
+    "id": "mcd22-4",
+    "name": "Growlithe",
+    "setId": "mcd22",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      58
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Narumi Sato",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/mcd22/4.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd22/4_hires.png"
+  },
+  {
+    "id": "mcd22-5",
+    "name": "Victini",
+    "setId": "mcd22",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      494
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Teeziro",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/mcd22/5.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd22/5_hires.png"
+  },
+  {
+    "id": "mcd22-6",
+    "name": "Lapras",
+    "setId": "mcd22",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      131
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsushi Furusawa",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/mcd22/6.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd22/6_hires.png"
+  },
+  {
+    "id": "mcd22-7",
+    "name": "Pikachu",
+    "setId": "mcd22",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      25
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "chibi",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/mcd22/7.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd22/7_hires.png"
+  },
+  {
+    "id": "mcd22-8",
+    "name": "Chinchou",
+    "setId": "mcd22",
+    "number": "8",
+    "numberInt": 8,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      170
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "sowsow",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/mcd22/8.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd22/8_hires.png"
+  },
+  {
+    "id": "mcd22-9",
+    "name": "Flaaffy",
+    "setId": "mcd22",
+    "number": "9",
+    "numberInt": 9,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      180
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Mareep",
+    "artist": "sui",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/mcd22/9.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd22/9_hires.png"
+  },
+  {
+    "id": "mcd22-10",
+    "name": "Tynamo",
+    "setId": "mcd22",
+    "number": "10",
+    "numberInt": 10,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      602
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "sowsow",
+    "regulationMark": "D",
+    "imageSmall": "https://images.pokemontcg.io/mcd22/10.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd22/10_hires.png"
+  },
+  {
+    "id": "mcd22-11",
+    "name": "Cutiefly",
+    "setId": "mcd22",
+    "number": "11",
+    "numberInt": 11,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      742
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 30,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Yukiko Baba",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/mcd22/11.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd22/11_hires.png"
+  },
+  {
+    "id": "mcd22-12",
+    "name": "Bewear",
+    "setId": "mcd22",
+    "number": "12",
+    "numberInt": 12,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      760
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Stufful",
+    "artist": "Shigenori Negishi",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/mcd22/12.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd22/12_hires.png"
+  },
+  {
+    "id": "mcd22-13",
+    "name": "Pangoro",
+    "setId": "mcd22",
+    "number": "13",
+    "numberInt": 13,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      675
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Pancham",
+    "artist": "HYOGONOSUKE",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/mcd22/13.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd22/13_hires.png"
+  },
+  {
+    "id": "mcd22-14",
+    "name": "Drampa",
+    "setId": "mcd22",
+    "number": "14",
+    "numberInt": 14,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      780
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Tomokazu Komiya",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/mcd22/14.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd22/14_hires.png"
+  },
+  {
+    "id": "mcd22-15",
+    "name": "Smeargle",
+    "setId": "mcd22",
+    "number": "15",
+    "numberInt": 15,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      235
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/mcd22/15.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd22/15_hires.png"
+  }
+]

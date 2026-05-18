@@ -1,0 +1,342 @@
+[
+  {
+    "id": "pop3-1",
+    "name": "Blastoise",
+    "setId": "pop3",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      9
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Wartortle",
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/pop3/1.png",
+    "imageLarge": "https://images.pokemontcg.io/pop3/1_hires.png"
+  },
+  {
+    "id": "pop3-2",
+    "name": "Flareon",
+    "setId": "pop3",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      136
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Eevee",
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/pop3/2.png",
+    "imageLarge": "https://images.pokemontcg.io/pop3/2_hires.png"
+  },
+  {
+    "id": "pop3-3",
+    "name": "Jolteon",
+    "setId": "pop3",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      135
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Eevee",
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/pop3/3.png",
+    "imageLarge": "https://images.pokemontcg.io/pop3/3_hires.png"
+  },
+  {
+    "id": "pop3-4",
+    "name": "Minun",
+    "setId": "pop3",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      312
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Sumiyoshi Kizuki",
+    "imageSmall": "https://images.pokemontcg.io/pop3/4.png",
+    "imageLarge": "https://images.pokemontcg.io/pop3/4_hires.png"
+  },
+  {
+    "id": "pop3-5",
+    "name": "Plusle",
+    "setId": "pop3",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      311
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Sumiyoshi Kizuki",
+    "imageSmall": "https://images.pokemontcg.io/pop3/5.png",
+    "imageLarge": "https://images.pokemontcg.io/pop3/5_hires.png"
+  },
+  {
+    "id": "pop3-6",
+    "name": "Vaporeon",
+    "setId": "pop3",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      134
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Eevee",
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/pop3/6.png",
+    "imageLarge": "https://images.pokemontcg.io/pop3/6_hires.png"
+  },
+  {
+    "id": "pop3-7",
+    "name": "Combusken",
+    "setId": "pop3",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      256
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Torchic",
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/pop3/7.png",
+    "imageLarge": "https://images.pokemontcg.io/pop3/7_hires.png"
+  },
+  {
+    "id": "pop3-8",
+    "name": "Donphan",
+    "setId": "pop3",
+    "number": "8",
+    "numberInt": 8,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      232
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Phanpy",
+    "artist": "Tomoaki Imakuni",
+    "imageSmall": "https://images.pokemontcg.io/pop3/8.png",
+    "imageLarge": "https://images.pokemontcg.io/pop3/8_hires.png"
+  },
+  {
+    "id": "pop3-9",
+    "name": "Forretress",
+    "setId": "pop3",
+    "number": "9",
+    "numberInt": 9,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      205
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Pineco",
+    "artist": "Midori Harada",
+    "imageSmall": "https://images.pokemontcg.io/pop3/9.png",
+    "imageLarge": "https://images.pokemontcg.io/pop3/9_hires.png"
+  },
+  {
+    "id": "pop3-12",
+    "name": "Ditto",
+    "setId": "pop3",
+    "number": "12",
+    "numberInt": 12,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      132
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Yuka Morii",
+    "imageSmall": "https://images.pokemontcg.io/pop3/12.png",
+    "imageLarge": "https://images.pokemontcg.io/pop3/12_hires.png"
+  },
+  {
+    "id": "pop3-13",
+    "name": "Eevee",
+    "setId": "pop3",
+    "number": "13",
+    "numberInt": 13,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      133
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/pop3/13.png",
+    "imageLarge": "https://images.pokemontcg.io/pop3/13_hires.png"
+  },
+  {
+    "id": "pop3-14",
+    "name": "Ivysaur",
+    "setId": "pop3",
+    "number": "14",
+    "numberInt": 14,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      2
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Bulbasaur",
+    "artist": "Midori Harada",
+    "imageSmall": "https://images.pokemontcg.io/pop3/14.png",
+    "imageLarge": "https://images.pokemontcg.io/pop3/14_hires.png"
+  },
+  {
+    "id": "pop3-15",
+    "name": "Marshtomp",
+    "setId": "pop3",
+    "number": "15",
+    "numberInt": 15,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      259
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Mudkip",
+    "artist": "Midori Harada",
+    "imageSmall": "https://images.pokemontcg.io/pop3/15.png",
+    "imageLarge": "https://images.pokemontcg.io/pop3/15_hires.png"
+  },
+  {
+    "id": "pop3-16",
+    "name": "Pichu Bros.",
+    "setId": "pop3",
+    "number": "16",
+    "numberInt": 16,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      172
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/pop3/16.png",
+    "imageLarge": "https://images.pokemontcg.io/pop3/16_hires.png"
+  },
+  {
+    "id": "pop3-17",
+    "name": "Ho-Oh ex",
+    "setId": "pop3",
+    "number": "17",
+    "numberInt": 17,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      250
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/pop3/17.png",
+    "imageLarge": "https://images.pokemontcg.io/pop3/17_hires.png"
+  }
+]

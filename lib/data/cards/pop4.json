@@ -1,0 +1,315 @@
+[
+  {
+    "id": "pop4-1",
+    "name": "Chimecho δ",
+    "setId": "pop4",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      358
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/pop4/1.png",
+    "imageLarge": "https://images.pokemontcg.io/pop4/1_hires.png"
+  },
+  {
+    "id": "pop4-2",
+    "name": "Deoxys δ",
+    "setId": "pop4",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      386
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/pop4/2.png",
+    "imageLarge": "https://images.pokemontcg.io/pop4/2_hires.png"
+  },
+  {
+    "id": "pop4-3",
+    "name": "Flygon",
+    "setId": "pop4",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      330
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Vibrava",
+    "artist": "Hisao Nakamura",
+    "imageSmall": "https://images.pokemontcg.io/pop4/3.png",
+    "imageLarge": "https://images.pokemontcg.io/pop4/3_hires.png"
+  },
+  {
+    "id": "pop4-4",
+    "name": "Mew",
+    "setId": "pop4",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      151
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Nakaoka",
+    "imageSmall": "https://images.pokemontcg.io/pop4/4.png",
+    "imageLarge": "https://images.pokemontcg.io/pop4/4_hires.png"
+  },
+  {
+    "id": "pop4-5",
+    "name": "Sceptile",
+    "setId": "pop4",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      254
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Grovyle",
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/pop4/5.png",
+    "imageLarge": "https://images.pokemontcg.io/pop4/5_hires.png"
+  },
+  {
+    "id": "pop4-6",
+    "name": "Combusken",
+    "setId": "pop4",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      256
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Torchic",
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/pop4/6.png",
+    "imageLarge": "https://images.pokemontcg.io/pop4/6_hires.png"
+  },
+  {
+    "id": "pop4-7",
+    "name": "Grovyle",
+    "setId": "pop4",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      253
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Treecko",
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/pop4/7.png",
+    "imageLarge": "https://images.pokemontcg.io/pop4/7_hires.png"
+  },
+  {
+    "id": "pop4-11",
+    "name": "Mudkip",
+    "setId": "pop4",
+    "number": "11",
+    "numberInt": 11,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      258
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/pop4/11.png",
+    "imageLarge": "https://images.pokemontcg.io/pop4/11_hires.png"
+  },
+  {
+    "id": "pop4-12",
+    "name": "Pidgey",
+    "setId": "pop4",
+    "number": "12",
+    "numberInt": 12,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      16
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Hisao Nakamura",
+    "imageSmall": "https://images.pokemontcg.io/pop4/12.png",
+    "imageLarge": "https://images.pokemontcg.io/pop4/12_hires.png"
+  },
+  {
+    "id": "pop4-13",
+    "name": "Pikachu",
+    "setId": "pop4",
+    "number": "13",
+    "numberInt": 13,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      25
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/pop4/13.png",
+    "imageLarge": "https://images.pokemontcg.io/pop4/13_hires.png"
+  },
+  {
+    "id": "pop4-14",
+    "name": "Squirtle",
+    "setId": "pop4",
+    "number": "14",
+    "numberInt": 14,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      7
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/pop4/14.png",
+    "imageLarge": "https://images.pokemontcg.io/pop4/14_hires.png"
+  },
+  {
+    "id": "pop4-15",
+    "name": "Treecko δ",
+    "setId": "pop4",
+    "number": "15",
+    "numberInt": 15,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      252
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/pop4/15.png",
+    "imageLarge": "https://images.pokemontcg.io/pop4/15_hires.png"
+  },
+  {
+    "id": "pop4-16",
+    "name": "Wobbuffet",
+    "setId": "pop4",
+    "number": "16",
+    "numberInt": 16,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      202
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/pop4/16.png",
+    "imageLarge": "https://images.pokemontcg.io/pop4/16_hires.png"
+  },
+  {
+    "id": "pop4-17",
+    "name": "Deoxys ex",
+    "setId": "pop4",
+    "number": "17",
+    "numberInt": 17,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      386
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "artist": "Hiromichi Sugiyama",
+    "imageSmall": "https://images.pokemontcg.io/pop4/17.png",
+    "imageLarge": "https://images.pokemontcg.io/pop4/17_hires.png"
+  }
+]

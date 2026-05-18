@@ -1,0 +1,388 @@
+[
+  {
+    "id": "pop1-1",
+    "name": "Blaziken",
+    "setId": "pop1",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      257
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Combusken",
+    "artist": "Katsura Tabata",
+    "imageSmall": "https://images.pokemontcg.io/pop1/1.png",
+    "imageLarge": "https://images.pokemontcg.io/pop1/1_hires.png"
+  },
+  {
+    "id": "pop1-2",
+    "name": "Metagross",
+    "setId": "pop1",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      376
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Metang",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/pop1/2.png",
+    "imageLarge": "https://images.pokemontcg.io/pop1/2_hires.png"
+  },
+  {
+    "id": "pop1-3",
+    "name": "Rayquaza",
+    "setId": "pop1",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      384
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Katsura Tabata",
+    "imageSmall": "https://images.pokemontcg.io/pop1/3.png",
+    "imageLarge": "https://images.pokemontcg.io/pop1/3_hires.png"
+  },
+  {
+    "id": "pop1-4",
+    "name": "Sceptile",
+    "setId": "pop1",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      254
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Grovyle",
+    "artist": "Hiromichi Sugiyama",
+    "imageSmall": "https://images.pokemontcg.io/pop1/4.png",
+    "imageLarge": "https://images.pokemontcg.io/pop1/4_hires.png"
+  },
+  {
+    "id": "pop1-5",
+    "name": "Swampert",
+    "setId": "pop1",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      260
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Marshtomp",
+    "artist": "Hiromichi Sugiyama",
+    "imageSmall": "https://images.pokemontcg.io/pop1/5.png",
+    "imageLarge": "https://images.pokemontcg.io/pop1/5_hires.png"
+  },
+  {
+    "id": "pop1-6",
+    "name": "Beautifly",
+    "setId": "pop1",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      267
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Silcoon",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/pop1/6.png",
+    "imageLarge": "https://images.pokemontcg.io/pop1/6_hires.png"
+  },
+  {
+    "id": "pop1-7",
+    "name": "Masquerain",
+    "setId": "pop1",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      284
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Surskit",
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/pop1/7.png",
+    "imageLarge": "https://images.pokemontcg.io/pop1/7_hires.png"
+  },
+  {
+    "id": "pop1-8",
+    "name": "Murkrow",
+    "setId": "pop1",
+    "number": "8",
+    "numberInt": 8,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      198
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/pop1/8.png",
+    "imageLarge": "https://images.pokemontcg.io/pop1/8_hires.png"
+  },
+  {
+    "id": "pop1-9",
+    "name": "Pupitar",
+    "setId": "pop1",
+    "number": "9",
+    "numberInt": 9,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      247
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Larvitar",
+    "artist": "Hisao Nakamura",
+    "imageSmall": "https://images.pokemontcg.io/pop1/9.png",
+    "imageLarge": "https://images.pokemontcg.io/pop1/9_hires.png"
+  },
+  {
+    "id": "pop1-10",
+    "name": "Torkoal",
+    "setId": "pop1",
+    "number": "10",
+    "numberInt": 10,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      324
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/pop1/10.png",
+    "imageLarge": "https://images.pokemontcg.io/pop1/10_hires.png"
+  },
+  {
+    "id": "pop1-11",
+    "name": "Larvitar",
+    "setId": "pop1",
+    "number": "11",
+    "numberInt": 11,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      246
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Hisao Nakamura",
+    "imageSmall": "https://images.pokemontcg.io/pop1/11.png",
+    "imageLarge": "https://images.pokemontcg.io/pop1/11_hires.png"
+  },
+  {
+    "id": "pop1-12",
+    "name": "Minun",
+    "setId": "pop1",
+    "number": "12",
+    "numberInt": 12,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      312
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/pop1/12.png",
+    "imageLarge": "https://images.pokemontcg.io/pop1/12_hires.png"
+  },
+  {
+    "id": "pop1-13",
+    "name": "Plusle",
+    "setId": "pop1",
+    "number": "13",
+    "numberInt": 13,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      311
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/pop1/13.png",
+    "imageLarge": "https://images.pokemontcg.io/pop1/13_hires.png"
+  },
+  {
+    "id": "pop1-14",
+    "name": "Surskit",
+    "setId": "pop1",
+    "number": "14",
+    "numberInt": 14,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      283
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/pop1/14.png",
+    "imageLarge": "https://images.pokemontcg.io/pop1/14_hires.png"
+  },
+  {
+    "id": "pop1-15",
+    "name": "Swellow",
+    "setId": "pop1",
+    "number": "15",
+    "numberInt": 15,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      277
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Taillow",
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/pop1/15.png",
+    "imageLarge": "https://images.pokemontcg.io/pop1/15_hires.png"
+  },
+  {
+    "id": "pop1-16",
+    "name": "Armaldo ex",
+    "setId": "pop1",
+    "number": "16",
+    "numberInt": 16,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      348
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 160,
+    "subtypes": [
+      "Stage 2",
+      "ex"
+    ],
+    "evolvesFrom": "Anorith",
+    "artist": "Hikaru Koike",
+    "imageSmall": "https://images.pokemontcg.io/pop1/16.png",
+    "imageLarge": "https://images.pokemontcg.io/pop1/16_hires.png"
+  },
+  {
+    "id": "pop1-17",
+    "name": "Tyranitar ex",
+    "setId": "pop1",
+    "number": "17",
+    "numberInt": 17,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      248
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Stage 2",
+      "ex"
+    ],
+    "evolvesFrom": "Pupitar",
+    "artist": "Hisao Nakamura",
+    "imageSmall": "https://images.pokemontcg.io/pop1/17.png",
+    "imageLarge": "https://images.pokemontcg.io/pop1/17_hires.png"
+  }
+]

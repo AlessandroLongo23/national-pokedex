@@ -1,0 +1,158 @@
+[
+  {
+    "id": "tk1a-1",
+    "name": "Bagon",
+    "setId": "tk1a",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      371
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/tk1a/1.png",
+    "imageLarge": "https://images.pokemontcg.io/tk1a/1_hires.png"
+  },
+  {
+    "id": "tk1a-2",
+    "name": "Combusken",
+    "setId": "tk1a",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      256
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Torchic",
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/tk1a/2.png",
+    "imageLarge": "https://images.pokemontcg.io/tk1a/2_hires.png"
+  },
+  {
+    "id": "tk1a-3",
+    "name": "Delcatty",
+    "setId": "tk1a",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      301
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Skitty",
+    "artist": "Midori Harada",
+    "imageSmall": "https://images.pokemontcg.io/tk1a/3.png",
+    "imageLarge": "https://images.pokemontcg.io/tk1a/3_hires.png"
+  },
+  {
+    "id": "tk1a-4",
+    "name": "Latias",
+    "setId": "tk1a",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      380
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Nakaoka",
+    "imageSmall": "https://images.pokemontcg.io/tk1a/4.png",
+    "imageLarge": "https://images.pokemontcg.io/tk1a/4_hires.png"
+  },
+  {
+    "id": "tk1a-5",
+    "name": "Numel",
+    "setId": "tk1a",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      322
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Yuka Morii",
+    "imageSmall": "https://images.pokemontcg.io/tk1a/5.png",
+    "imageLarge": "https://images.pokemontcg.io/tk1a/5_hires.png"
+  },
+  {
+    "id": "tk1a-6",
+    "name": "Skitty",
+    "setId": "tk1a",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      300
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/tk1a/6.png",
+    "imageLarge": "https://images.pokemontcg.io/tk1a/6_hires.png"
+  },
+  {
+    "id": "tk1a-7",
+    "name": "Torchic",
+    "setId": "tk1a",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      255
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Hironobu Yoshida",
+    "imageSmall": "https://images.pokemontcg.io/tk1a/7.png",
+    "imageLarge": "https://images.pokemontcg.io/tk1a/7_hires.png"
+  }
+]

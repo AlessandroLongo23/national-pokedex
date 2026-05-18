@@ -1,0 +1,3222 @@
+[
+  {
+    "id": "sm7-1",
+    "name": "Bellsprout",
+    "setId": "sm7",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      69
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Masako Yamashita",
+    "imageSmall": "https://images.pokemontcg.io/sm7/1.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/1_hires.png"
+  },
+  {
+    "id": "sm7-2",
+    "name": "Weepinbell",
+    "setId": "sm7",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      70
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Bellsprout",
+    "artist": "Miki Tanaka",
+    "imageSmall": "https://images.pokemontcg.io/sm7/2.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/2_hires.png"
+  },
+  {
+    "id": "sm7-3",
+    "name": "Victreebel",
+    "setId": "sm7",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      71
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Weepinbell",
+    "artist": "Miki Tanaka",
+    "imageSmall": "https://images.pokemontcg.io/sm7/3.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/3_hires.png"
+  },
+  {
+    "id": "sm7-4",
+    "name": "Scyther",
+    "setId": "sm7",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      123
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Hajime Kusajima",
+    "imageSmall": "https://images.pokemontcg.io/sm7/4.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/4_hires.png"
+  },
+  {
+    "id": "sm7-5",
+    "name": "Spinarak",
+    "setId": "sm7",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      167
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Sachiko Adachi",
+    "imageSmall": "https://images.pokemontcg.io/sm7/5.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/5_hires.png"
+  },
+  {
+    "id": "sm7-6",
+    "name": "Ariados",
+    "setId": "sm7",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      168
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Spinarak",
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/sm7/6.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/6_hires.png"
+  },
+  {
+    "id": "sm7-7",
+    "name": "Treecko",
+    "setId": "sm7",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      252
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Sekio",
+    "imageSmall": "https://images.pokemontcg.io/sm7/7.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/7_hires.png"
+  },
+  {
+    "id": "sm7-8",
+    "name": "Treecko",
+    "setId": "sm7",
+    "number": "8",
+    "numberInt": 8,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      252
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "tetsuya koizumi",
+    "imageSmall": "https://images.pokemontcg.io/sm7/8.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/8_hires.png"
+  },
+  {
+    "id": "sm7-9",
+    "name": "Grovyle",
+    "setId": "sm7",
+    "number": "9",
+    "numberInt": 9,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      253
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Treecko",
+    "artist": "Shin Nagasawa",
+    "imageSmall": "https://images.pokemontcg.io/sm7/9.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/9_hires.png"
+  },
+  {
+    "id": "sm7-10",
+    "name": "Sceptile",
+    "setId": "sm7",
+    "number": "10",
+    "numberInt": 10,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      254
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Grovyle",
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/sm7/10.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/10_hires.png"
+  },
+  {
+    "id": "sm7-11",
+    "name": "Seedot",
+    "setId": "sm7",
+    "number": "11",
+    "numberInt": 11,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      273
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "miki kudo",
+    "imageSmall": "https://images.pokemontcg.io/sm7/11.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/11_hires.png"
+  },
+  {
+    "id": "sm7-12",
+    "name": "Seedot",
+    "setId": "sm7",
+    "number": "12",
+    "numberInt": 12,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      273
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Misa Tsutsui",
+    "imageSmall": "https://images.pokemontcg.io/sm7/12.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/12_hires.png"
+  },
+  {
+    "id": "sm7-13",
+    "name": "Nuzleaf",
+    "setId": "sm7",
+    "number": "13",
+    "numberInt": 13,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      274
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Seedot",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/sm7/13.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/13_hires.png"
+  },
+  {
+    "id": "sm7-14",
+    "name": "Shiftry-GX",
+    "setId": "sm7",
+    "number": "14",
+    "numberInt": 14,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo GX",
+    "dex": [
+      275
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 240,
+    "subtypes": [
+      "Stage 2",
+      "GX"
+    ],
+    "evolvesFrom": "Nuzleaf",
+    "artist": "PLANETA Igarashi",
+    "imageSmall": "https://images.pokemontcg.io/sm7/14.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/14_hires.png"
+  },
+  {
+    "id": "sm7-15",
+    "name": "Surskit",
+    "setId": "sm7",
+    "number": "15",
+    "numberInt": 15,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      283
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/sm7/15.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/15_hires.png"
+  },
+  {
+    "id": "sm7-16",
+    "name": "Masquerain",
+    "setId": "sm7",
+    "number": "16",
+    "numberInt": 16,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      284
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Surskit",
+    "artist": "Yukiko Baba",
+    "imageSmall": "https://images.pokemontcg.io/sm7/16.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/16_hires.png"
+  },
+  {
+    "id": "sm7-17",
+    "name": "Volbeat",
+    "setId": "sm7",
+    "number": "17",
+    "numberInt": 17,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      313
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Saya Tsuruta",
+    "imageSmall": "https://images.pokemontcg.io/sm7/17.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/17_hires.png"
+  },
+  {
+    "id": "sm7-18",
+    "name": "Illumise",
+    "setId": "sm7",
+    "number": "18",
+    "numberInt": 18,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      314
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Saya Tsuruta",
+    "imageSmall": "https://images.pokemontcg.io/sm7/18.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/18_hires.png"
+  },
+  {
+    "id": "sm7-19",
+    "name": "Cacnea",
+    "setId": "sm7",
+    "number": "19",
+    "numberInt": 19,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      331
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/sm7/19.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/19_hires.png"
+  },
+  {
+    "id": "sm7-20",
+    "name": "Cacturne",
+    "setId": "sm7",
+    "number": "20",
+    "numberInt": 20,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      332
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Cacnea",
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/sm7/20.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/20_hires.png"
+  },
+  {
+    "id": "sm7-21",
+    "name": "Tropius",
+    "setId": "sm7",
+    "number": "21",
+    "numberInt": 21,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      357
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/sm7/21.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/21_hires.png"
+  },
+  {
+    "id": "sm7-22",
+    "name": "Dhelmise",
+    "setId": "sm7",
+    "number": "22",
+    "numberInt": 22,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      781
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kyoko Umemoto",
+    "imageSmall": "https://images.pokemontcg.io/sm7/22.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/22_hires.png"
+  },
+  {
+    "id": "sm7-23",
+    "name": "Slugma",
+    "setId": "sm7",
+    "number": "23",
+    "numberInt": 23,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      218
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Midori Harada",
+    "imageSmall": "https://images.pokemontcg.io/sm7/23.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/23_hires.png"
+  },
+  {
+    "id": "sm7-24",
+    "name": "Magcargo",
+    "setId": "sm7",
+    "number": "24",
+    "numberInt": 24,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      219
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Slugma",
+    "artist": "Midori Harada",
+    "imageSmall": "https://images.pokemontcg.io/sm7/24.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/24_hires.png"
+  },
+  {
+    "id": "sm7-25",
+    "name": "Torchic",
+    "setId": "sm7",
+    "number": "25",
+    "numberInt": 25,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      255
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/sm7/25.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/25_hires.png"
+  },
+  {
+    "id": "sm7-26",
+    "name": "Torchic",
+    "setId": "sm7",
+    "number": "26",
+    "numberInt": 26,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      255
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "MAHOU",
+    "imageSmall": "https://images.pokemontcg.io/sm7/26.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/26_hires.png"
+  },
+  {
+    "id": "sm7-27",
+    "name": "Combusken",
+    "setId": "sm7",
+    "number": "27",
+    "numberInt": 27,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      256
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Torchic",
+    "artist": "Mizue",
+    "imageSmall": "https://images.pokemontcg.io/sm7/27.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/27_hires.png"
+  },
+  {
+    "id": "sm7-28",
+    "name": "Blaziken-GX",
+    "setId": "sm7",
+    "number": "28",
+    "numberInt": 28,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo GX",
+    "dex": [
+      257
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 240,
+    "subtypes": [
+      "Stage 2",
+      "GX"
+    ],
+    "evolvesFrom": "Combusken",
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/sm7/28.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/28_hires.png"
+  },
+  {
+    "id": "sm7-29",
+    "name": "Torkoal",
+    "setId": "sm7",
+    "number": "29",
+    "numberInt": 29,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      324
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/sm7/29.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/29_hires.png"
+  },
+  {
+    "id": "sm7-30",
+    "name": "Oricorio",
+    "setId": "sm7",
+    "number": "30",
+    "numberInt": 30,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      741
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Naoyo Kimura",
+    "imageSmall": "https://images.pokemontcg.io/sm7/30.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/30_hires.png"
+  },
+  {
+    "id": "sm7-31",
+    "name": "Articuno-GX",
+    "setId": "sm7",
+    "number": "31",
+    "numberInt": 31,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo GX",
+    "dex": [
+      144
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 170,
+    "subtypes": [
+      "Basic",
+      "GX"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/sm7/31.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/31_hires.png"
+  },
+  {
+    "id": "sm7-32",
+    "name": "Mudkip",
+    "setId": "sm7",
+    "number": "32",
+    "numberInt": 32,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      258
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Shigenori Negishi",
+    "imageSmall": "https://images.pokemontcg.io/sm7/32.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/32_hires.png"
+  },
+  {
+    "id": "sm7-33",
+    "name": "Mudkip",
+    "setId": "sm7",
+    "number": "33",
+    "numberInt": 33,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      258
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Misa Tsutsui",
+    "imageSmall": "https://images.pokemontcg.io/sm7/33.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/33_hires.png"
+  },
+  {
+    "id": "sm7-34",
+    "name": "Marshtomp",
+    "setId": "sm7",
+    "number": "34",
+    "numberInt": 34,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      259
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Mudkip",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/sm7/34.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/34_hires.png"
+  },
+  {
+    "id": "sm7-35",
+    "name": "Swampert",
+    "setId": "sm7",
+    "number": "35",
+    "numberInt": 35,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      260
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 160,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Marshtomp",
+    "artist": "SATOSHI NAKAI",
+    "imageSmall": "https://images.pokemontcg.io/sm7/35.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/35_hires.png"
+  },
+  {
+    "id": "sm7-36",
+    "name": "Lotad",
+    "setId": "sm7",
+    "number": "36",
+    "numberInt": 36,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      270
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/sm7/36.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/36_hires.png"
+  },
+  {
+    "id": "sm7-37",
+    "name": "Lombre",
+    "setId": "sm7",
+    "number": "37",
+    "numberInt": 37,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      271
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Lotad",
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/sm7/37.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/37_hires.png"
+  },
+  {
+    "id": "sm7-38",
+    "name": "Ludicolo",
+    "setId": "sm7",
+    "number": "38",
+    "numberInt": 38,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      272
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Lombre",
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/sm7/38.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/38_hires.png"
+  },
+  {
+    "id": "sm7-39",
+    "name": "Wailmer",
+    "setId": "sm7",
+    "number": "39",
+    "numberInt": 39,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      320
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/sm7/39.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/39_hires.png"
+  },
+  {
+    "id": "sm7-40",
+    "name": "Wailord",
+    "setId": "sm7",
+    "number": "40",
+    "numberInt": 40,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      321
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 220,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Wailmer",
+    "artist": "Anesaki Dynamic",
+    "imageSmall": "https://images.pokemontcg.io/sm7/40.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/40_hires.png"
+  },
+  {
+    "id": "sm7-41",
+    "name": "Clamperl",
+    "setId": "sm7",
+    "number": "41",
+    "numberInt": 41,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      366
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "sui",
+    "imageSmall": "https://images.pokemontcg.io/sm7/41.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/41_hires.png"
+  },
+  {
+    "id": "sm7-42",
+    "name": "Huntail",
+    "setId": "sm7",
+    "number": "42",
+    "numberInt": 42,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      367
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Clamperl",
+    "artist": "Shigenori Negishi",
+    "imageSmall": "https://images.pokemontcg.io/sm7/42.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/42_hires.png"
+  },
+  {
+    "id": "sm7-43",
+    "name": "Gorebyss",
+    "setId": "sm7",
+    "number": "43",
+    "numberInt": 43,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      368
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Clamperl",
+    "artist": "Mizue",
+    "imageSmall": "https://images.pokemontcg.io/sm7/43.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/43_hires.png"
+  },
+  {
+    "id": "sm7-44",
+    "name": "Luvdisc",
+    "setId": "sm7",
+    "number": "44",
+    "numberInt": 44,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      370
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Asako Ito",
+    "imageSmall": "https://images.pokemontcg.io/sm7/44.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/44_hires.png"
+  },
+  {
+    "id": "sm7-45",
+    "name": "Regice",
+    "setId": "sm7",
+    "number": "45",
+    "numberInt": 45,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      378
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "kodama",
+    "imageSmall": "https://images.pokemontcg.io/sm7/45.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/45_hires.png"
+  },
+  {
+    "id": "sm7-46",
+    "name": "Kyogre",
+    "setId": "sm7",
+    "number": "46",
+    "numberInt": 46,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      382
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Shin Nagasawa",
+    "imageSmall": "https://images.pokemontcg.io/sm7/46.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/46_hires.png"
+  },
+  {
+    "id": "sm7-47",
+    "name": "Voltorb",
+    "setId": "sm7",
+    "number": "47",
+    "numberInt": 47,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      100
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/sm7/47.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/47_hires.png"
+  },
+  {
+    "id": "sm7-48",
+    "name": "Electrode-GX",
+    "setId": "sm7",
+    "number": "48",
+    "numberInt": 48,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo GX",
+    "dex": [
+      101
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 190,
+    "subtypes": [
+      "Stage 1",
+      "GX"
+    ],
+    "evolvesFrom": "Voltorb",
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/sm7/48.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/48_hires.png"
+  },
+  {
+    "id": "sm7-49",
+    "name": "Chinchou",
+    "setId": "sm7",
+    "number": "49",
+    "numberInt": 49,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      170
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Aya Kusube",
+    "imageSmall": "https://images.pokemontcg.io/sm7/49.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/49_hires.png"
+  },
+  {
+    "id": "sm7-50",
+    "name": "Lanturn",
+    "setId": "sm7",
+    "number": "50",
+    "numberInt": 50,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      171
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Chinchou",
+    "artist": "Aya Kusube",
+    "imageSmall": "https://images.pokemontcg.io/sm7/50.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/50_hires.png"
+  },
+  {
+    "id": "sm7-51",
+    "name": "Electrike",
+    "setId": "sm7",
+    "number": "51",
+    "numberInt": 51,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      309
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/sm7/51.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/51_hires.png"
+  },
+  {
+    "id": "sm7-52",
+    "name": "Manectric",
+    "setId": "sm7",
+    "number": "52",
+    "numberInt": 52,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      310
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Electrike",
+    "artist": "Sanosuke Sakuma",
+    "imageSmall": "https://images.pokemontcg.io/sm7/52.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/52_hires.png"
+  },
+  {
+    "id": "sm7-53",
+    "name": "Plusle",
+    "setId": "sm7",
+    "number": "53",
+    "numberInt": 53,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      311
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kanako Eo",
+    "imageSmall": "https://images.pokemontcg.io/sm7/53.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/53_hires.png"
+  },
+  {
+    "id": "sm7-54",
+    "name": "Minun",
+    "setId": "sm7",
+    "number": "54",
+    "numberInt": 54,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      312
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Sumiyoshi Kizuki",
+    "imageSmall": "https://images.pokemontcg.io/sm7/54.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/54_hires.png"
+  },
+  {
+    "id": "sm7-55",
+    "name": "Oricorio",
+    "setId": "sm7",
+    "number": "55",
+    "numberInt": 55,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      741
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Sekio",
+    "imageSmall": "https://images.pokemontcg.io/sm7/55.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/55_hires.png"
+  },
+  {
+    "id": "sm7-56",
+    "name": "Mr. Mime-GX",
+    "setId": "sm7",
+    "number": "56",
+    "numberInt": 56,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo GX",
+    "dex": [
+      122
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Basic",
+      "GX"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/sm7/56.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/56_hires.png"
+  },
+  {
+    "id": "sm7-57",
+    "name": "Gulpin",
+    "setId": "sm7",
+    "number": "57",
+    "numberInt": 57,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      316
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Yuka Morii",
+    "imageSmall": "https://images.pokemontcg.io/sm7/57.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/57_hires.png"
+  },
+  {
+    "id": "sm7-58",
+    "name": "Swalot",
+    "setId": "sm7",
+    "number": "58",
+    "numberInt": 58,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      317
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Gulpin",
+    "artist": "Yuka Morii",
+    "imageSmall": "https://images.pokemontcg.io/sm7/58.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/58_hires.png"
+  },
+  {
+    "id": "sm7-59",
+    "name": "Spoink",
+    "setId": "sm7",
+    "number": "59",
+    "numberInt": 59,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      325
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "MAHOU",
+    "imageSmall": "https://images.pokemontcg.io/sm7/59.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/59_hires.png"
+  },
+  {
+    "id": "sm7-60",
+    "name": "Grumpig",
+    "setId": "sm7",
+    "number": "60",
+    "numberInt": 60,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      326
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Spoink",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/sm7/60.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/60_hires.png"
+  },
+  {
+    "id": "sm7-61",
+    "name": "Lunatone",
+    "setId": "sm7",
+    "number": "61",
+    "numberInt": 61,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      337
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Hisao Nakamura",
+    "imageSmall": "https://images.pokemontcg.io/sm7/61.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/61_hires.png"
+  },
+  {
+    "id": "sm7-62",
+    "name": "Solrock",
+    "setId": "sm7",
+    "number": "62",
+    "numberInt": 62,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      338
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kyoko Umemoto",
+    "imageSmall": "https://images.pokemontcg.io/sm7/62.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/62_hires.png"
+  },
+  {
+    "id": "sm7-63",
+    "name": "Shuppet",
+    "setId": "sm7",
+    "number": "63",
+    "numberInt": 63,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      353
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/sm7/63.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/63_hires.png"
+  },
+  {
+    "id": "sm7-64",
+    "name": "Shuppet",
+    "setId": "sm7",
+    "number": "64",
+    "numberInt": 64,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      353
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Eri Yamaki",
+    "imageSmall": "https://images.pokemontcg.io/sm7/64.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/64_hires.png"
+  },
+  {
+    "id": "sm7-65",
+    "name": "Banette",
+    "setId": "sm7",
+    "number": "65",
+    "numberInt": 65,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      354
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Shuppet",
+    "artist": "Eri Yamaki",
+    "imageSmall": "https://images.pokemontcg.io/sm7/65.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/65_hires.png"
+  },
+  {
+    "id": "sm7-66",
+    "name": "Banette-GX",
+    "setId": "sm7",
+    "number": "66",
+    "numberInt": 66,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo GX",
+    "dex": [
+      354
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 190,
+    "subtypes": [
+      "Stage 1",
+      "GX"
+    ],
+    "evolvesFrom": "Shuppet",
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/sm7/66.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/66_hires.png"
+  },
+  {
+    "id": "sm7-67",
+    "name": "Deoxys",
+    "setId": "sm7",
+    "number": "67",
+    "numberInt": 67,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      386
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/sm7/67.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/67_hires.png"
+  },
+  {
+    "id": "sm7-68",
+    "name": "Deoxys",
+    "setId": "sm7",
+    "number": "68",
+    "numberInt": 68,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      386
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ayaka Yoshida",
+    "imageSmall": "https://images.pokemontcg.io/sm7/68.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/68_hires.png"
+  },
+  {
+    "id": "sm7-69",
+    "name": "Deoxys",
+    "setId": "sm7",
+    "number": "69",
+    "numberInt": 69,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      386
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/sm7/69.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/69_hires.png"
+  },
+  {
+    "id": "sm7-70",
+    "name": "Lunala",
+    "setId": "sm7",
+    "number": "70",
+    "numberInt": 70,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      792
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 160,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Cosmoem",
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/sm7/70.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/70_hires.png"
+  },
+  {
+    "id": "sm7-71",
+    "name": "Onix",
+    "setId": "sm7",
+    "number": "71",
+    "numberInt": 71,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      95
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/sm7/71.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/71_hires.png"
+  },
+  {
+    "id": "sm7-72",
+    "name": "Phanpy",
+    "setId": "sm7",
+    "number": "72",
+    "numberInt": 72,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      231
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/sm7/72.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/72_hires.png"
+  },
+  {
+    "id": "sm7-73",
+    "name": "Donphan",
+    "setId": "sm7",
+    "number": "73",
+    "numberInt": 73,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      232
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Phanpy",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/sm7/73.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/73_hires.png"
+  },
+  {
+    "id": "sm7-74",
+    "name": "Larvitar",
+    "setId": "sm7",
+    "number": "74",
+    "numberInt": 74,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      246
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/sm7/74.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/74_hires.png"
+  },
+  {
+    "id": "sm7-75",
+    "name": "Pupitar",
+    "setId": "sm7",
+    "number": "75",
+    "numberInt": 75,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      247
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Larvitar",
+    "artist": "Hironobu Yoshida",
+    "imageSmall": "https://images.pokemontcg.io/sm7/75.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/75_hires.png"
+  },
+  {
+    "id": "sm7-76",
+    "name": "Meditite",
+    "setId": "sm7",
+    "number": "76",
+    "numberInt": 76,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      307
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Shibuzoh.",
+    "imageSmall": "https://images.pokemontcg.io/sm7/76.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/76_hires.png"
+  },
+  {
+    "id": "sm7-77",
+    "name": "Medicham",
+    "setId": "sm7",
+    "number": "77",
+    "numberInt": 77,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      308
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Meditite",
+    "artist": "Misa Tsutsui",
+    "imageSmall": "https://images.pokemontcg.io/sm7/77.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/77_hires.png"
+  },
+  {
+    "id": "sm7-78",
+    "name": "Baltoy",
+    "setId": "sm7",
+    "number": "78",
+    "numberInt": 78,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      343
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/sm7/78.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/78_hires.png"
+  },
+  {
+    "id": "sm7-79",
+    "name": "Claydol",
+    "setId": "sm7",
+    "number": "79",
+    "numberInt": 79,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      344
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Baltoy",
+    "artist": "Yumi",
+    "imageSmall": "https://images.pokemontcg.io/sm7/79.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/79_hires.png"
+  },
+  {
+    "id": "sm7-80",
+    "name": "Regirock",
+    "setId": "sm7",
+    "number": "80",
+    "numberInt": 80,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      377
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ayaka Yoshida",
+    "imageSmall": "https://images.pokemontcg.io/sm7/80.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/80_hires.png"
+  },
+  {
+    "id": "sm7-81",
+    "name": "Groudon",
+    "setId": "sm7",
+    "number": "81",
+    "numberInt": 81,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      383
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/sm7/81.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/81_hires.png"
+  },
+  {
+    "id": "sm7-82",
+    "name": "Palossand-GX",
+    "setId": "sm7",
+    "number": "82",
+    "numberInt": 82,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo GX",
+    "dex": [
+      770
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 210,
+    "subtypes": [
+      "Stage 1",
+      "GX"
+    ],
+    "evolvesFrom": "Sandygast",
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/sm7/82.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/82_hires.png"
+  },
+  {
+    "id": "sm7-83",
+    "name": "Minior",
+    "setId": "sm7",
+    "number": "83",
+    "numberInt": 83,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      774
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "sui",
+    "imageSmall": "https://images.pokemontcg.io/sm7/83.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/83_hires.png"
+  },
+  {
+    "id": "sm7-84",
+    "name": "Alolan Rattata",
+    "setId": "sm7",
+    "number": "84",
+    "numberInt": 84,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      19
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Shibuzoh.",
+    "imageSmall": "https://images.pokemontcg.io/sm7/84.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/84_hires.png"
+  },
+  {
+    "id": "sm7-85",
+    "name": "Alolan Raticate-GX",
+    "setId": "sm7",
+    "number": "85",
+    "numberInt": 85,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo GX",
+    "dex": [
+      20
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 200,
+    "subtypes": [
+      "Stage 1",
+      "GX"
+    ],
+    "evolvesFrom": "Alolan Rattata",
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/sm7/85.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/85_hires.png"
+  },
+  {
+    "id": "sm7-86",
+    "name": "Sneasel",
+    "setId": "sm7",
+    "number": "86",
+    "numberInt": 86,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      215
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/sm7/86.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/86_hires.png"
+  },
+  {
+    "id": "sm7-87",
+    "name": "Tyranitar",
+    "setId": "sm7",
+    "number": "87",
+    "numberInt": 87,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      248
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 170,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Pupitar",
+    "artist": "Hironobu Yoshida",
+    "imageSmall": "https://images.pokemontcg.io/sm7/87.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/87_hires.png"
+  },
+  {
+    "id": "sm7-88",
+    "name": "Sableye",
+    "setId": "sm7",
+    "number": "88",
+    "numberInt": 88,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      302
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Yukiko Baba",
+    "imageSmall": "https://images.pokemontcg.io/sm7/88.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/88_hires.png"
+  },
+  {
+    "id": "sm7-89",
+    "name": "Steelix",
+    "setId": "sm7",
+    "number": "89",
+    "numberInt": 89,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      208
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 190,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Onix",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/sm7/89.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/89_hires.png"
+  },
+  {
+    "id": "sm7-90",
+    "name": "Scizor-GX",
+    "setId": "sm7",
+    "number": "90",
+    "numberInt": 90,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo GX",
+    "dex": [
+      212
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 210,
+    "subtypes": [
+      "Stage 1",
+      "GX"
+    ],
+    "evolvesFrom": "Scyther",
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/sm7/90.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/90_hires.png"
+  },
+  {
+    "id": "sm7-91",
+    "name": "Mawile",
+    "setId": "sm7",
+    "number": "91",
+    "numberInt": 91,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      303
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/sm7/91.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/91_hires.png"
+  },
+  {
+    "id": "sm7-92",
+    "name": "Beldum",
+    "setId": "sm7",
+    "number": "92",
+    "numberInt": 92,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      374
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Naoyo Kimura",
+    "imageSmall": "https://images.pokemontcg.io/sm7/92.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/92_hires.png"
+  },
+  {
+    "id": "sm7-93",
+    "name": "Beldum",
+    "setId": "sm7",
+    "number": "93",
+    "numberInt": 93,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      374
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Hasuno",
+    "imageSmall": "https://images.pokemontcg.io/sm7/93.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/93_hires.png"
+  },
+  {
+    "id": "sm7-94",
+    "name": "Metang",
+    "setId": "sm7",
+    "number": "94",
+    "numberInt": 94,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      375
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Beldum",
+    "artist": "SATOSHI NAKAI",
+    "imageSmall": "https://images.pokemontcg.io/sm7/94.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/94_hires.png"
+  },
+  {
+    "id": "sm7-95",
+    "name": "Metagross",
+    "setId": "sm7",
+    "number": "95",
+    "numberInt": 95,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      376
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 170,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Metang",
+    "artist": "TOKIYA",
+    "imageSmall": "https://images.pokemontcg.io/sm7/95.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/95_hires.png"
+  },
+  {
+    "id": "sm7-96",
+    "name": "Registeel",
+    "setId": "sm7",
+    "number": "96",
+    "numberInt": 96,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      379
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Shin Nagasawa",
+    "imageSmall": "https://images.pokemontcg.io/sm7/96.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/96_hires.png"
+  },
+  {
+    "id": "sm7-97",
+    "name": "Jirachi ◇",
+    "setId": "sm7",
+    "number": "97",
+    "numberInt": 97,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Prism Star",
+    "dex": [
+      385
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic",
+      "Prism Star"
+    ],
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/sm7/97.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/97_hires.png"
+  },
+  {
+    "id": "sm7-98",
+    "name": "Heatran",
+    "setId": "sm7",
+    "number": "98",
+    "numberInt": 98,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      485
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/sm7/98.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/98_hires.png"
+  },
+  {
+    "id": "sm7-99",
+    "name": "Solgaleo",
+    "setId": "sm7",
+    "number": "99",
+    "numberInt": 99,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      791
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 160,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Cosmoem",
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/sm7/99.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/99_hires.png"
+  },
+  {
+    "id": "sm7-100",
+    "name": "Celesteela",
+    "setId": "sm7",
+    "number": "100",
+    "numberInt": 100,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      797
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Basic",
+      "Ultra Beast"
+    ],
+    "artist": "kawayoo",
+    "imageSmall": "https://images.pokemontcg.io/sm7/100.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/100_hires.png"
+  },
+  {
+    "id": "sm7-101",
+    "name": "Kartana",
+    "setId": "sm7",
+    "number": "101",
+    "numberInt": 101,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      798
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic",
+      "Ultra Beast"
+    ],
+    "artist": "Hasuno",
+    "imageSmall": "https://images.pokemontcg.io/sm7/101.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/101_hires.png"
+  },
+  {
+    "id": "sm7-102",
+    "name": "Stakataka-GX",
+    "setId": "sm7",
+    "number": "102",
+    "numberInt": 102,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo GX",
+    "dex": [
+      805
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 180,
+    "subtypes": [
+      "Basic",
+      "GX",
+      "Ultra Beast"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/sm7/102.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/102_hires.png"
+  },
+  {
+    "id": "sm7-103",
+    "name": "Bagon",
+    "setId": "sm7",
+    "number": "103",
+    "numberInt": 103,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      371
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Yumi",
+    "imageSmall": "https://images.pokemontcg.io/sm7/103.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/103_hires.png"
+  },
+  {
+    "id": "sm7-104",
+    "name": "Bagon",
+    "setId": "sm7",
+    "number": "104",
+    "numberInt": 104,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      371
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "sui",
+    "imageSmall": "https://images.pokemontcg.io/sm7/104.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/104_hires.png"
+  },
+  {
+    "id": "sm7-105",
+    "name": "Shelgon",
+    "setId": "sm7",
+    "number": "105",
+    "numberInt": 105,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      372
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Bagon",
+    "artist": "Asako Ito",
+    "imageSmall": "https://images.pokemontcg.io/sm7/105.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/105_hires.png"
+  },
+  {
+    "id": "sm7-106",
+    "name": "Salamence",
+    "setId": "sm7",
+    "number": "106",
+    "numberInt": 106,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      373
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Shelgon",
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/sm7/106.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/106_hires.png"
+  },
+  {
+    "id": "sm7-107",
+    "name": "Latias ◇",
+    "setId": "sm7",
+    "number": "107",
+    "numberInt": 107,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Prism Star",
+    "dex": [
+      380
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic",
+      "Prism Star"
+    ],
+    "artist": "Anesaki Dynamic",
+    "imageSmall": "https://images.pokemontcg.io/sm7/107.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/107_hires.png"
+  },
+  {
+    "id": "sm7-108",
+    "name": "Latios ◇",
+    "setId": "sm7",
+    "number": "108",
+    "numberInt": 108,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Prism Star",
+    "dex": [
+      381
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Basic",
+      "Prism Star"
+    ],
+    "artist": "Anesaki Dynamic",
+    "imageSmall": "https://images.pokemontcg.io/sm7/108.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/108_hires.png"
+  },
+  {
+    "id": "sm7-109",
+    "name": "Rayquaza-GX",
+    "setId": "sm7",
+    "number": "109",
+    "numberInt": 109,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo GX",
+    "dex": [
+      384
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 180,
+    "subtypes": [
+      "Basic",
+      "GX"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/sm7/109.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/109_hires.png"
+  },
+  {
+    "id": "sm7-110",
+    "name": "Dunsparce",
+    "setId": "sm7",
+    "number": "110",
+    "numberInt": 110,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      206
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/sm7/110.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/110_hires.png"
+  },
+  {
+    "id": "sm7-111",
+    "name": "Wingull",
+    "setId": "sm7",
+    "number": "111",
+    "numberInt": 111,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      278
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/sm7/111.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/111_hires.png"
+  },
+  {
+    "id": "sm7-112",
+    "name": "Pelipper",
+    "setId": "sm7",
+    "number": "112",
+    "numberInt": 112,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      279
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Wingull",
+    "artist": "Shigenori Negishi",
+    "imageSmall": "https://images.pokemontcg.io/sm7/112.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/112_hires.png"
+  },
+  {
+    "id": "sm7-113",
+    "name": "Slakoth",
+    "setId": "sm7",
+    "number": "113",
+    "numberInt": 113,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      287
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/sm7/113.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/113_hires.png"
+  },
+  {
+    "id": "sm7-114",
+    "name": "Vigoroth",
+    "setId": "sm7",
+    "number": "114",
+    "numberInt": 114,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      288
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Slakoth",
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/sm7/114.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/114_hires.png"
+  },
+  {
+    "id": "sm7-115",
+    "name": "Slaking",
+    "setId": "sm7",
+    "number": "115",
+    "numberInt": 115,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      289
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 160,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Vigoroth",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/sm7/115.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/115_hires.png"
+  },
+  {
+    "id": "sm7-116",
+    "name": "Whismur",
+    "setId": "sm7",
+    "number": "116",
+    "numberInt": 116,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      293
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Shibuzoh.",
+    "imageSmall": "https://images.pokemontcg.io/sm7/116.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/116_hires.png"
+  },
+  {
+    "id": "sm7-117",
+    "name": "Whismur",
+    "setId": "sm7",
+    "number": "117",
+    "numberInt": 117,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      293
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Asako Ito",
+    "imageSmall": "https://images.pokemontcg.io/sm7/117.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/117_hires.png"
+  },
+  {
+    "id": "sm7-118",
+    "name": "Loudred",
+    "setId": "sm7",
+    "number": "118",
+    "numberInt": 118,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      294
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Whismur",
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/sm7/118.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/118_hires.png"
+  },
+  {
+    "id": "sm7-119",
+    "name": "Exploud",
+    "setId": "sm7",
+    "number": "119",
+    "numberInt": 119,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      295
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Loudred",
+    "artist": "kawayoo",
+    "imageSmall": "https://images.pokemontcg.io/sm7/119.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/119_hires.png"
+  },
+  {
+    "id": "sm7-120",
+    "name": "Skitty",
+    "setId": "sm7",
+    "number": "120",
+    "numberInt": 120,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      300
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/sm7/120.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/120_hires.png"
+  },
+  {
+    "id": "sm7-121",
+    "name": "Delcatty",
+    "setId": "sm7",
+    "number": "121",
+    "numberInt": 121,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      301
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Skitty",
+    "artist": "Sekio",
+    "imageSmall": "https://images.pokemontcg.io/sm7/121.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/121_hires.png"
+  },
+  {
+    "id": "sm7-122",
+    "name": "Kecleon",
+    "setId": "sm7",
+    "number": "122",
+    "numberInt": 122,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      352
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "OOYAMA",
+    "imageSmall": "https://images.pokemontcg.io/sm7/122.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/122_hires.png"
+  },
+  {
+    "id": "sm7-152",
+    "name": "Shiftry-GX",
+    "setId": "sm7",
+    "number": "152",
+    "numberInt": 152,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      275
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 240,
+    "subtypes": [
+      "Stage 2",
+      "GX"
+    ],
+    "evolvesFrom": "Nuzleaf",
+    "artist": "PLANETA Igarashi",
+    "imageSmall": "https://images.pokemontcg.io/sm7/152.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/152_hires.png"
+  },
+  {
+    "id": "sm7-153",
+    "name": "Blaziken-GX",
+    "setId": "sm7",
+    "number": "153",
+    "numberInt": 153,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      257
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 240,
+    "subtypes": [
+      "Stage 2",
+      "GX"
+    ],
+    "evolvesFrom": "Combusken",
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/sm7/153.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/153_hires.png"
+  },
+  {
+    "id": "sm7-154",
+    "name": "Articuno-GX",
+    "setId": "sm7",
+    "number": "154",
+    "numberInt": 154,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      144
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 170,
+    "subtypes": [
+      "Basic",
+      "GX"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/sm7/154.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/154_hires.png"
+  },
+  {
+    "id": "sm7-155",
+    "name": "Electrode-GX",
+    "setId": "sm7",
+    "number": "155",
+    "numberInt": 155,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      101
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 190,
+    "subtypes": [
+      "Stage 1",
+      "GX"
+    ],
+    "evolvesFrom": "Voltorb",
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/sm7/155.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/155_hires.png"
+  },
+  {
+    "id": "sm7-156",
+    "name": "Mr. Mime-GX",
+    "setId": "sm7",
+    "number": "156",
+    "numberInt": 156,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      122
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Basic",
+      "GX"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/sm7/156.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/156_hires.png"
+  },
+  {
+    "id": "sm7-157",
+    "name": "Banette-GX",
+    "setId": "sm7",
+    "number": "157",
+    "numberInt": 157,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      354
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 190,
+    "subtypes": [
+      "Stage 1",
+      "GX"
+    ],
+    "evolvesFrom": "Shuppet",
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/sm7/157.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/157_hires.png"
+  },
+  {
+    "id": "sm7-158",
+    "name": "Scizor-GX",
+    "setId": "sm7",
+    "number": "158",
+    "numberInt": 158,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      212
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 210,
+    "subtypes": [
+      "Stage 1",
+      "GX"
+    ],
+    "evolvesFrom": "Scyther",
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/sm7/158.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/158_hires.png"
+  },
+  {
+    "id": "sm7-159",
+    "name": "Stakataka-GX",
+    "setId": "sm7",
+    "number": "159",
+    "numberInt": 159,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      805
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 180,
+    "subtypes": [
+      "Basic",
+      "GX",
+      "Ultra Beast"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/sm7/159.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/159_hires.png"
+  },
+  {
+    "id": "sm7-160",
+    "name": "Rayquaza-GX",
+    "setId": "sm7",
+    "number": "160",
+    "numberInt": 160,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      384
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 180,
+    "subtypes": [
+      "Basic",
+      "GX"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/sm7/160.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/160_hires.png"
+  },
+  {
+    "id": "sm7-169",
+    "name": "Shiftry-GX",
+    "setId": "sm7",
+    "number": "169",
+    "numberInt": 169,
+    "rarity": "HyperRare",
+    "rarityRaw": "Rare Rainbow",
+    "dex": [
+      275
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 240,
+    "subtypes": [
+      "Stage 2",
+      "GX"
+    ],
+    "evolvesFrom": "Nuzleaf",
+    "artist": "PLANETA Igarashi",
+    "imageSmall": "https://images.pokemontcg.io/sm7/169.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/169_hires.png"
+  },
+  {
+    "id": "sm7-170",
+    "name": "Blaziken-GX",
+    "setId": "sm7",
+    "number": "170",
+    "numberInt": 170,
+    "rarity": "HyperRare",
+    "rarityRaw": "Rare Rainbow",
+    "dex": [
+      257
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 240,
+    "subtypes": [
+      "Stage 2",
+      "GX"
+    ],
+    "evolvesFrom": "Combusken",
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/sm7/170.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/170_hires.png"
+  },
+  {
+    "id": "sm7-171",
+    "name": "Articuno-GX",
+    "setId": "sm7",
+    "number": "171",
+    "numberInt": 171,
+    "rarity": "HyperRare",
+    "rarityRaw": "Rare Rainbow",
+    "dex": [
+      144
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 170,
+    "subtypes": [
+      "Basic",
+      "GX"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/sm7/171.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/171_hires.png"
+  },
+  {
+    "id": "sm7-172",
+    "name": "Electrode-GX",
+    "setId": "sm7",
+    "number": "172",
+    "numberInt": 172,
+    "rarity": "HyperRare",
+    "rarityRaw": "Rare Rainbow",
+    "dex": [
+      101
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 190,
+    "subtypes": [
+      "Stage 1",
+      "GX"
+    ],
+    "evolvesFrom": "Voltorb",
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/sm7/172.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/172_hires.png"
+  },
+  {
+    "id": "sm7-173",
+    "name": "Mr. Mime-GX",
+    "setId": "sm7",
+    "number": "173",
+    "numberInt": 173,
+    "rarity": "HyperRare",
+    "rarityRaw": "Rare Rainbow",
+    "dex": [
+      122
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Basic",
+      "GX"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/sm7/173.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/173_hires.png"
+  },
+  {
+    "id": "sm7-174",
+    "name": "Banette-GX",
+    "setId": "sm7",
+    "number": "174",
+    "numberInt": 174,
+    "rarity": "HyperRare",
+    "rarityRaw": "Rare Rainbow",
+    "dex": [
+      354
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 190,
+    "subtypes": [
+      "Stage 1",
+      "GX"
+    ],
+    "evolvesFrom": "Shuppet",
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/sm7/174.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/174_hires.png"
+  },
+  {
+    "id": "sm7-175",
+    "name": "Scizor-GX",
+    "setId": "sm7",
+    "number": "175",
+    "numberInt": 175,
+    "rarity": "HyperRare",
+    "rarityRaw": "Rare Rainbow",
+    "dex": [
+      212
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 210,
+    "subtypes": [
+      "Stage 1",
+      "GX"
+    ],
+    "evolvesFrom": "Scyther",
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/sm7/175.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/175_hires.png"
+  },
+  {
+    "id": "sm7-176",
+    "name": "Stakataka-GX",
+    "setId": "sm7",
+    "number": "176",
+    "numberInt": 176,
+    "rarity": "HyperRare",
+    "rarityRaw": "Rare Rainbow",
+    "dex": [
+      805
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 180,
+    "subtypes": [
+      "Basic",
+      "GX",
+      "Ultra Beast"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/sm7/176.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/176_hires.png"
+  },
+  {
+    "id": "sm7-177",
+    "name": "Rayquaza-GX",
+    "setId": "sm7",
+    "number": "177",
+    "numberInt": 177,
+    "rarity": "HyperRare",
+    "rarityRaw": "Rare Rainbow",
+    "dex": [
+      384
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 180,
+    "subtypes": [
+      "Basic",
+      "GX"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/sm7/177.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/177_hires.png"
+  },
+  {
+    "id": "sm7-10a",
+    "name": "Sceptile",
+    "setId": "sm7",
+    "number": "10a",
+    "numberInt": 9010,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      254
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Grovyle",
+    "artist": "Hitoshi Ariga",
+    "imageSmall": "https://images.pokemontcg.io/sm7/10a.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/10a_hires.png"
+  },
+  {
+    "id": "sm7-177a",
+    "name": "Rayquaza-GX",
+    "setId": "sm7",
+    "number": "177a",
+    "numberInt": 9177,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Ultra",
+    "dex": [
+      384
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 180,
+    "subtypes": [
+      "Basic",
+      "GX"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/sm7/177a.png",
+    "imageLarge": "https://images.pokemontcg.io/sm7/177a_hires.png"
+  }
+]

@@ -1,0 +1,158 @@
+[
+  {
+    "id": "tk2b-1",
+    "name": "Arcanine",
+    "setId": "tk2b",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      59
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Growlithe",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/tk2b/1.png",
+    "imageLarge": "https://images.pokemontcg.io/tk2b/1_hires.png"
+  },
+  {
+    "id": "tk2b-2",
+    "name": "Charmander",
+    "setId": "tk2b",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      4
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Midori Harada",
+    "imageSmall": "https://images.pokemontcg.io/tk2b/2.png",
+    "imageLarge": "https://images.pokemontcg.io/tk2b/2_hires.png"
+  },
+  {
+    "id": "tk2b-3",
+    "name": "Charmeleon",
+    "setId": "tk2b",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      5
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Charmander",
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/tk2b/3.png",
+    "imageLarge": "https://images.pokemontcg.io/tk2b/3_hires.png"
+  },
+  {
+    "id": "tk2b-4",
+    "name": "Growlithe",
+    "setId": "tk2b",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      58
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/tk2b/4.png",
+    "imageLarge": "https://images.pokemontcg.io/tk2b/4_hires.png"
+  },
+  {
+    "id": "tk2b-5",
+    "name": "Mareep",
+    "setId": "tk2b",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      179
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Naoyo Kimura",
+    "imageSmall": "https://images.pokemontcg.io/tk2b/5.png",
+    "imageLarge": "https://images.pokemontcg.io/tk2b/5_hires.png"
+  },
+  {
+    "id": "tk2b-6",
+    "name": "Minun",
+    "setId": "tk2b",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      312
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Katsura Tabata",
+    "imageSmall": "https://images.pokemontcg.io/tk2b/6.png",
+    "imageLarge": "https://images.pokemontcg.io/tk2b/6_hires.png"
+  },
+  {
+    "id": "tk2b-7",
+    "name": "Vulpix",
+    "setId": "tk2b",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      37
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Midori Harada",
+    "imageSmall": "https://images.pokemontcg.io/tk2b/7.png",
+    "imageLarge": "https://images.pokemontcg.io/tk2b/7_hires.png"
+  }
+]

@@ -1,0 +1,382 @@
+[
+  {
+    "id": "pop7-1",
+    "name": "Ampharos",
+    "setId": "pop7",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      181
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Flaaffy",
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/pop7/1.png",
+    "imageLarge": "https://images.pokemontcg.io/pop7/1_hires.png"
+  },
+  {
+    "id": "pop7-2",
+    "name": "Gallade",
+    "setId": "pop7",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      475
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Kirlia",
+    "artist": "Daisuke Ito",
+    "imageSmall": "https://images.pokemontcg.io/pop7/2.png",
+    "imageLarge": "https://images.pokemontcg.io/pop7/2_hires.png"
+  },
+  {
+    "id": "pop7-3",
+    "name": "Latias",
+    "setId": "pop7",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      380
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Daisuke Ito",
+    "imageSmall": "https://images.pokemontcg.io/pop7/3.png",
+    "imageLarge": "https://images.pokemontcg.io/pop7/3_hires.png"
+  },
+  {
+    "id": "pop7-4",
+    "name": "Latios",
+    "setId": "pop7",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      381
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Daisuke Ito",
+    "imageSmall": "https://images.pokemontcg.io/pop7/4.png",
+    "imageLarge": "https://images.pokemontcg.io/pop7/4_hires.png"
+  },
+  {
+    "id": "pop7-5",
+    "name": "Mothim",
+    "setId": "pop7",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      414
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Burmy",
+    "artist": "Kazuyuki Kano",
+    "imageSmall": "https://images.pokemontcg.io/pop7/5.png",
+    "imageLarge": "https://images.pokemontcg.io/pop7/5_hires.png"
+  },
+  {
+    "id": "pop7-6",
+    "name": "Delibird",
+    "setId": "pop7",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      225
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/pop7/6.png",
+    "imageLarge": "https://images.pokemontcg.io/pop7/6_hires.png"
+  },
+  {
+    "id": "pop7-7",
+    "name": "Flaaffy",
+    "setId": "pop7",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      180
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Mareep",
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/pop7/7.png",
+    "imageLarge": "https://images.pokemontcg.io/pop7/7_hires.png"
+  },
+  {
+    "id": "pop7-8",
+    "name": "Kirlia",
+    "setId": "pop7",
+    "number": "8",
+    "numberInt": 8,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      281
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Ralts",
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/pop7/8.png",
+    "imageLarge": "https://images.pokemontcg.io/pop7/8_hires.png"
+  },
+  {
+    "id": "pop7-9",
+    "name": "Stantler",
+    "setId": "pop7",
+    "number": "9",
+    "numberInt": 9,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      234
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/pop7/9.png",
+    "imageLarge": "https://images.pokemontcg.io/pop7/9_hires.png"
+  },
+  {
+    "id": "pop7-10",
+    "name": "Wormadam Sandy Cloak",
+    "setId": "pop7",
+    "number": "10",
+    "numberInt": 10,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      413
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Burmy Sandy Cloak",
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/pop7/10.png",
+    "imageLarge": "https://images.pokemontcg.io/pop7/10_hires.png"
+  },
+  {
+    "id": "pop7-11",
+    "name": "Burmy Plant Cloak",
+    "setId": "pop7",
+    "number": "11",
+    "numberInt": 11,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      412
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/pop7/11.png",
+    "imageLarge": "https://images.pokemontcg.io/pop7/11_hires.png"
+  },
+  {
+    "id": "pop7-12",
+    "name": "Burmy Sandy Cloak",
+    "setId": "pop7",
+    "number": "12",
+    "numberInt": 12,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      412
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Midori Harada",
+    "imageSmall": "https://images.pokemontcg.io/pop7/12.png",
+    "imageLarge": "https://images.pokemontcg.io/pop7/12_hires.png"
+  },
+  {
+    "id": "pop7-13",
+    "name": "Corsola",
+    "setId": "pop7",
+    "number": "13",
+    "numberInt": 13,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      222
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Midori Harada",
+    "imageSmall": "https://images.pokemontcg.io/pop7/13.png",
+    "imageLarge": "https://images.pokemontcg.io/pop7/13_hires.png"
+  },
+  {
+    "id": "pop7-14",
+    "name": "Mareep",
+    "setId": "pop7",
+    "number": "14",
+    "numberInt": 14,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      179
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/pop7/14.png",
+    "imageLarge": "https://images.pokemontcg.io/pop7/14_hires.png"
+  },
+  {
+    "id": "pop7-15",
+    "name": "Ralts",
+    "setId": "pop7",
+    "number": "15",
+    "numberInt": 15,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      280
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Sumiyoshi Kizuki",
+    "imageSmall": "https://images.pokemontcg.io/pop7/15.png",
+    "imageLarge": "https://images.pokemontcg.io/pop7/15_hires.png"
+  },
+  {
+    "id": "pop7-16",
+    "name": "Sentret",
+    "setId": "pop7",
+    "number": "16",
+    "numberInt": 16,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      161
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Midori Harada",
+    "imageSmall": "https://images.pokemontcg.io/pop7/16.png",
+    "imageLarge": "https://images.pokemontcg.io/pop7/16_hires.png"
+  },
+  {
+    "id": "pop7-17",
+    "name": "Spinda",
+    "setId": "pop7",
+    "number": "17",
+    "numberInt": 17,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      327
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/pop7/17.png",
+    "imageLarge": "https://images.pokemontcg.io/pop7/17_hires.png"
+  }
+]

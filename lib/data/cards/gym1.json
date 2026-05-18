@@ -1,0 +1,2033 @@
+[
+  {
+    "id": "gym1-1",
+    "name": "Blaine's Moltres",
+    "setId": "gym1",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      146
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/1.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/1_hires.png"
+  },
+  {
+    "id": "gym1-2",
+    "name": "Brock's Rhydon",
+    "setId": "gym1",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      112
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Brock's Rhyhorn",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/2.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/2_hires.png"
+  },
+  {
+    "id": "gym1-3",
+    "name": "Erika's Clefable",
+    "setId": "gym1",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      36
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Erika's Clefairy",
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/gym1/3.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/3_hires.png"
+  },
+  {
+    "id": "gym1-4",
+    "name": "Erika's Dragonair",
+    "setId": "gym1",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      148
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Erika's Dratini",
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/gym1/4.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/4_hires.png"
+  },
+  {
+    "id": "gym1-5",
+    "name": "Erika's Vileplume",
+    "setId": "gym1",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      45
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Erika's Gloom",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/5.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/5_hires.png"
+  },
+  {
+    "id": "gym1-6",
+    "name": "Lt. Surge's Electabuzz",
+    "setId": "gym1",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      125
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/6.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/6_hires.png"
+  },
+  {
+    "id": "gym1-7",
+    "name": "Lt. Surge's Fearow",
+    "setId": "gym1",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      22
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Lt. Surge's Spearow",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/7.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/7_hires.png"
+  },
+  {
+    "id": "gym1-8",
+    "name": "Lt. Surge's Magneton",
+    "setId": "gym1",
+    "number": "8",
+    "numberInt": 8,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      82
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Lt. Surge's Magnemite",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/8.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/8_hires.png"
+  },
+  {
+    "id": "gym1-9",
+    "name": "Misty's Seadra",
+    "setId": "gym1",
+    "number": "9",
+    "numberInt": 9,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      117
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Misty's Horsea",
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/gym1/9.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/9_hires.png"
+  },
+  {
+    "id": "gym1-10",
+    "name": "Misty's Tentacruel",
+    "setId": "gym1",
+    "number": "10",
+    "numberInt": 10,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      73
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Misty's Tentacool",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/10.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/10_hires.png"
+  },
+  {
+    "id": "gym1-11",
+    "name": "Rocket's Hitmonchan",
+    "setId": "gym1",
+    "number": "11",
+    "numberInt": 11,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      107
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/11.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/11_hires.png"
+  },
+  {
+    "id": "gym1-12",
+    "name": "Rocket's Moltres",
+    "setId": "gym1",
+    "number": "12",
+    "numberInt": 12,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      146
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/12.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/12_hires.png"
+  },
+  {
+    "id": "gym1-13",
+    "name": "Rocket's Scyther",
+    "setId": "gym1",
+    "number": "13",
+    "numberInt": 13,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      123
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/13.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/13_hires.png"
+  },
+  {
+    "id": "gym1-14",
+    "name": "Sabrina's Gengar",
+    "setId": "gym1",
+    "number": "14",
+    "numberInt": 14,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      94
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Sabrina's Haunter",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/14.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/14_hires.png"
+  },
+  {
+    "id": "gym1-20",
+    "name": "Brock's Golem",
+    "setId": "gym1",
+    "number": "20",
+    "numberInt": 20,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      76
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Brock's Graveler",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/20.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/20_hires.png"
+  },
+  {
+    "id": "gym1-21",
+    "name": "Brock's Onix",
+    "setId": "gym1",
+    "number": "21",
+    "numberInt": 21,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      95
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Benimaru Itoh",
+    "imageSmall": "https://images.pokemontcg.io/gym1/21.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/21_hires.png"
+  },
+  {
+    "id": "gym1-22",
+    "name": "Brock's Rhyhorn",
+    "setId": "gym1",
+    "number": "22",
+    "numberInt": 22,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      111
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/22.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/22_hires.png"
+  },
+  {
+    "id": "gym1-23",
+    "name": "Brock's Sandslash",
+    "setId": "gym1",
+    "number": "23",
+    "numberInt": 23,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      28
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Brock's Sandshrew",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/23.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/23_hires.png"
+  },
+  {
+    "id": "gym1-24",
+    "name": "Brock's Zubat",
+    "setId": "gym1",
+    "number": "24",
+    "numberInt": 24,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      41
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 30,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/24.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/24_hires.png"
+  },
+  {
+    "id": "gym1-25",
+    "name": "Erika's Clefairy",
+    "setId": "gym1",
+    "number": "25",
+    "numberInt": 25,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      35
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/25.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/25_hires.png"
+  },
+  {
+    "id": "gym1-26",
+    "name": "Erika's Victreebel",
+    "setId": "gym1",
+    "number": "26",
+    "numberInt": 26,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      71
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Erika's Weepinbell",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/26.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/26_hires.png"
+  },
+  {
+    "id": "gym1-27",
+    "name": "Lt. Surge's Electabuzz",
+    "setId": "gym1",
+    "number": "27",
+    "numberInt": 27,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      125
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/27.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/27_hires.png"
+  },
+  {
+    "id": "gym1-28",
+    "name": "Lt. Surge's Raichu",
+    "setId": "gym1",
+    "number": "28",
+    "numberInt": 28,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      26
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Lt. Surge's Pikachu",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/28.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/28_hires.png"
+  },
+  {
+    "id": "gym1-29",
+    "name": "Misty's Cloyster",
+    "setId": "gym1",
+    "number": "29",
+    "numberInt": 29,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      91
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Misty's Shellder",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/29.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/29_hires.png"
+  },
+  {
+    "id": "gym1-30",
+    "name": "Misty's Goldeen",
+    "setId": "gym1",
+    "number": "30",
+    "numberInt": 30,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      118
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 30,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/30.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/30_hires.png"
+  },
+  {
+    "id": "gym1-31",
+    "name": "Misty's Poliwrath",
+    "setId": "gym1",
+    "number": "31",
+    "numberInt": 31,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      62
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Misty's Poliwhirl",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/31.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/31_hires.png"
+  },
+  {
+    "id": "gym1-32",
+    "name": "Misty's Tentacool",
+    "setId": "gym1",
+    "number": "32",
+    "numberInt": 32,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      72
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/32.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/32_hires.png"
+  },
+  {
+    "id": "gym1-33",
+    "name": "Rocket's Snorlax",
+    "setId": "gym1",
+    "number": "33",
+    "numberInt": 33,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      143
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Shin-ichi Yoshida",
+    "imageSmall": "https://images.pokemontcg.io/gym1/33.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/33_hires.png"
+  },
+  {
+    "id": "gym1-34",
+    "name": "Sabrina's Venomoth",
+    "setId": "gym1",
+    "number": "34",
+    "numberInt": 34,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      49
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Sabrina's Venonat",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/34.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/34_hires.png"
+  },
+  {
+    "id": "gym1-35",
+    "name": "Blaine's Growlithe",
+    "setId": "gym1",
+    "number": "35",
+    "numberInt": 35,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      58
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/35.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/35_hires.png"
+  },
+  {
+    "id": "gym1-36",
+    "name": "Blaine's Kangaskhan",
+    "setId": "gym1",
+    "number": "36",
+    "numberInt": 36,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      115
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/36.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/36_hires.png"
+  },
+  {
+    "id": "gym1-37",
+    "name": "Blaine's Magmar",
+    "setId": "gym1",
+    "number": "37",
+    "numberInt": 37,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      126
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/37.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/37_hires.png"
+  },
+  {
+    "id": "gym1-38",
+    "name": "Brock's Geodude",
+    "setId": "gym1",
+    "number": "38",
+    "numberInt": 38,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      74
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/gym1/38.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/38_hires.png"
+  },
+  {
+    "id": "gym1-39",
+    "name": "Brock's Golbat",
+    "setId": "gym1",
+    "number": "39",
+    "numberInt": 39,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      42
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Brock's Zubat",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/39.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/39_hires.png"
+  },
+  {
+    "id": "gym1-40",
+    "name": "Brock's Graveler",
+    "setId": "gym1",
+    "number": "40",
+    "numberInt": 40,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      75
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Brock's Geodude",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/40.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/40_hires.png"
+  },
+  {
+    "id": "gym1-41",
+    "name": "Brock's Lickitung",
+    "setId": "gym1",
+    "number": "41",
+    "numberInt": 41,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      108
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/41.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/41_hires.png"
+  },
+  {
+    "id": "gym1-42",
+    "name": "Erika's Dratini",
+    "setId": "gym1",
+    "number": "42",
+    "numberInt": 42,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      147
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/42.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/42_hires.png"
+  },
+  {
+    "id": "gym1-43",
+    "name": "Erika's Exeggcute",
+    "setId": "gym1",
+    "number": "43",
+    "numberInt": 43,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      102
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/gym1/43.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/43_hires.png"
+  },
+  {
+    "id": "gym1-44",
+    "name": "Erika's Exeggutor",
+    "setId": "gym1",
+    "number": "44",
+    "numberInt": 44,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      103
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Erika's Exeggcute",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/44.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/44_hires.png"
+  },
+  {
+    "id": "gym1-45",
+    "name": "Erika's Gloom",
+    "setId": "gym1",
+    "number": "45",
+    "numberInt": 45,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      44
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Erika's Oddish",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/45.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/45_hires.png"
+  },
+  {
+    "id": "gym1-46",
+    "name": "Erika's Gloom",
+    "setId": "gym1",
+    "number": "46",
+    "numberInt": 46,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      44
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Erika's Oddish",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/46.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/46_hires.png"
+  },
+  {
+    "id": "gym1-47",
+    "name": "Erika's Oddish",
+    "setId": "gym1",
+    "number": "47",
+    "numberInt": 47,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      43
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/gym1/47.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/47_hires.png"
+  },
+  {
+    "id": "gym1-48",
+    "name": "Erika's Weepinbell",
+    "setId": "gym1",
+    "number": "48",
+    "numberInt": 48,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      70
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Erika's Bellsprout",
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/gym1/48.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/48_hires.png"
+  },
+  {
+    "id": "gym1-49",
+    "name": "Erika's Weepinbell",
+    "setId": "gym1",
+    "number": "49",
+    "numberInt": 49,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      70
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Erika's Bellsprout",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/49.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/49_hires.png"
+  },
+  {
+    "id": "gym1-50",
+    "name": "Lt. Surge's Magnemite",
+    "setId": "gym1",
+    "number": "50",
+    "numberInt": 50,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      81
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 30,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/gym1/50.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/50_hires.png"
+  },
+  {
+    "id": "gym1-51",
+    "name": "Lt. Surge's Raticate",
+    "setId": "gym1",
+    "number": "51",
+    "numberInt": 51,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      20
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Lt. Surge's Rattata",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/51.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/51_hires.png"
+  },
+  {
+    "id": "gym1-52",
+    "name": "Lt. Surge's Spearow",
+    "setId": "gym1",
+    "number": "52",
+    "numberInt": 52,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      21
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 30,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/52.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/52_hires.png"
+  },
+  {
+    "id": "gym1-53",
+    "name": "Misty's Poliwhirl",
+    "setId": "gym1",
+    "number": "53",
+    "numberInt": 53,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      61
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Misty's Poliwag",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/53.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/53_hires.png"
+  },
+  {
+    "id": "gym1-54",
+    "name": "Misty's Psyduck",
+    "setId": "gym1",
+    "number": "54",
+    "numberInt": 54,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      54
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/gym1/54.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/54_hires.png"
+  },
+  {
+    "id": "gym1-55",
+    "name": "Misty's Seaking",
+    "setId": "gym1",
+    "number": "55",
+    "numberInt": 55,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      119
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Misty's Goldeen",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/55.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/55_hires.png"
+  },
+  {
+    "id": "gym1-56",
+    "name": "Misty's Starmie",
+    "setId": "gym1",
+    "number": "56",
+    "numberInt": 56,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      121
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Misty's Staryu",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/56.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/56_hires.png"
+  },
+  {
+    "id": "gym1-57",
+    "name": "Misty's Tentacool",
+    "setId": "gym1",
+    "number": "57",
+    "numberInt": 57,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      72
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/57.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/57_hires.png"
+  },
+  {
+    "id": "gym1-58",
+    "name": "Sabrina's Haunter",
+    "setId": "gym1",
+    "number": "58",
+    "numberInt": 58,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      93
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Sabrina's Gastly",
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/gym1/58.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/58_hires.png"
+  },
+  {
+    "id": "gym1-59",
+    "name": "Sabrina's Jynx",
+    "setId": "gym1",
+    "number": "59",
+    "numberInt": 59,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      124
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/59.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/59_hires.png"
+  },
+  {
+    "id": "gym1-60",
+    "name": "Sabrina's Slowbro",
+    "setId": "gym1",
+    "number": "60",
+    "numberInt": 60,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      80
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Sabrina's Slowpoke",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/60.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/60_hires.png"
+  },
+  {
+    "id": "gym1-61",
+    "name": "Blaine's Charmander",
+    "setId": "gym1",
+    "number": "61",
+    "numberInt": 61,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      4
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/61.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/61_hires.png"
+  },
+  {
+    "id": "gym1-62",
+    "name": "Blaine's Growlithe",
+    "setId": "gym1",
+    "number": "62",
+    "numberInt": 62,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      58
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/gym1/62.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/62_hires.png"
+  },
+  {
+    "id": "gym1-63",
+    "name": "Blaine's Ponyta",
+    "setId": "gym1",
+    "number": "63",
+    "numberInt": 63,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      77
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/63.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/63_hires.png"
+  },
+  {
+    "id": "gym1-64",
+    "name": "Blaine's Tauros",
+    "setId": "gym1",
+    "number": "64",
+    "numberInt": 64,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      128
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/64.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/64_hires.png"
+  },
+  {
+    "id": "gym1-65",
+    "name": "Blaine's Vulpix",
+    "setId": "gym1",
+    "number": "65",
+    "numberInt": 65,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      37
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/65.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/65_hires.png"
+  },
+  {
+    "id": "gym1-66",
+    "name": "Brock's Geodude",
+    "setId": "gym1",
+    "number": "66",
+    "numberInt": 66,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      74
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/66.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/66_hires.png"
+  },
+  {
+    "id": "gym1-67",
+    "name": "Brock's Mankey",
+    "setId": "gym1",
+    "number": "67",
+    "numberInt": 67,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      56
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/gym1/67.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/67_hires.png"
+  },
+  {
+    "id": "gym1-68",
+    "name": "Brock's Mankey",
+    "setId": "gym1",
+    "number": "68",
+    "numberInt": 68,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      56
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/68.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/68_hires.png"
+  },
+  {
+    "id": "gym1-69",
+    "name": "Brock's Onix",
+    "setId": "gym1",
+    "number": "69",
+    "numberInt": 69,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      95
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/69.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/69_hires.png"
+  },
+  {
+    "id": "gym1-70",
+    "name": "Brock's Rhyhorn",
+    "setId": "gym1",
+    "number": "70",
+    "numberInt": 70,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      111
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/70.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/70_hires.png"
+  },
+  {
+    "id": "gym1-71",
+    "name": "Brock's Sandshrew",
+    "setId": "gym1",
+    "number": "71",
+    "numberInt": 71,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      27
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/71.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/71_hires.png"
+  },
+  {
+    "id": "gym1-72",
+    "name": "Brock's Sandshrew",
+    "setId": "gym1",
+    "number": "72",
+    "numberInt": 72,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      27
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/72.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/72_hires.png"
+  },
+  {
+    "id": "gym1-73",
+    "name": "Brock's Vulpix",
+    "setId": "gym1",
+    "number": "73",
+    "numberInt": 73,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      37
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/73.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/73_hires.png"
+  },
+  {
+    "id": "gym1-74",
+    "name": "Brock's Zubat",
+    "setId": "gym1",
+    "number": "74",
+    "numberInt": 74,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      41
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/gym1/74.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/74_hires.png"
+  },
+  {
+    "id": "gym1-75",
+    "name": "Erika's Bellsprout",
+    "setId": "gym1",
+    "number": "75",
+    "numberInt": 75,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      69
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/gym1/75.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/75_hires.png"
+  },
+  {
+    "id": "gym1-76",
+    "name": "Erika's Bellsprout",
+    "setId": "gym1",
+    "number": "76",
+    "numberInt": 76,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      69
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/76.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/76_hires.png"
+  },
+  {
+    "id": "gym1-77",
+    "name": "Erika's Exeggcute",
+    "setId": "gym1",
+    "number": "77",
+    "numberInt": 77,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      102
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/77.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/77_hires.png"
+  },
+  {
+    "id": "gym1-78",
+    "name": "Erika's Oddish",
+    "setId": "gym1",
+    "number": "78",
+    "numberInt": 78,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      43
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/78.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/78_hires.png"
+  },
+  {
+    "id": "gym1-79",
+    "name": "Erika's Tangela",
+    "setId": "gym1",
+    "number": "79",
+    "numberInt": 79,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      114
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/79.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/79_hires.png"
+  },
+  {
+    "id": "gym1-80",
+    "name": "Lt. Surge's Magnemite",
+    "setId": "gym1",
+    "number": "80",
+    "numberInt": 80,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      81
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/80.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/80_hires.png"
+  },
+  {
+    "id": "gym1-81",
+    "name": "Lt. Surge's Pikachu",
+    "setId": "gym1",
+    "number": "81",
+    "numberInt": 81,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      25
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/81.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/81_hires.png"
+  },
+  {
+    "id": "gym1-82",
+    "name": "Lt. Surge's Rattata",
+    "setId": "gym1",
+    "number": "82",
+    "numberInt": 82,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      19
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/82.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/82_hires.png"
+  },
+  {
+    "id": "gym1-83",
+    "name": "Lt. Surge's Spearow",
+    "setId": "gym1",
+    "number": "83",
+    "numberInt": 83,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      21
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/gym1/83.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/83_hires.png"
+  },
+  {
+    "id": "gym1-84",
+    "name": "Lt. Surge's Voltorb",
+    "setId": "gym1",
+    "number": "84",
+    "numberInt": 84,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      100
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/84.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/84_hires.png"
+  },
+  {
+    "id": "gym1-85",
+    "name": "Misty's Goldeen",
+    "setId": "gym1",
+    "number": "85",
+    "numberInt": 85,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      118
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/gym1/85.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/85_hires.png"
+  },
+  {
+    "id": "gym1-86",
+    "name": "Misty's Horsea",
+    "setId": "gym1",
+    "number": "86",
+    "numberInt": 86,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      116
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/86.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/86_hires.png"
+  },
+  {
+    "id": "gym1-87",
+    "name": "Misty's Poliwag",
+    "setId": "gym1",
+    "number": "87",
+    "numberInt": 87,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      60
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/87.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/87_hires.png"
+  },
+  {
+    "id": "gym1-88",
+    "name": "Misty's Seel",
+    "setId": "gym1",
+    "number": "88",
+    "numberInt": 88,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      86
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/gym1/88.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/88_hires.png"
+  },
+  {
+    "id": "gym1-89",
+    "name": "Misty's Shellder",
+    "setId": "gym1",
+    "number": "89",
+    "numberInt": 89,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      90
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/89.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/89_hires.png"
+  },
+  {
+    "id": "gym1-90",
+    "name": "Misty's Staryu",
+    "setId": "gym1",
+    "number": "90",
+    "numberInt": 90,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      120
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/90.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/90_hires.png"
+  },
+  {
+    "id": "gym1-91",
+    "name": "Sabrina's Abra",
+    "setId": "gym1",
+    "number": "91",
+    "numberInt": 91,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      63
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/91.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/91_hires.png"
+  },
+  {
+    "id": "gym1-92",
+    "name": "Sabrina's Drowzee",
+    "setId": "gym1",
+    "number": "92",
+    "numberInt": 92,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      96
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/gym1/92.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/92_hires.png"
+  },
+  {
+    "id": "gym1-93",
+    "name": "Sabrina's Gastly",
+    "setId": "gym1",
+    "number": "93",
+    "numberInt": 93,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      92
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/93.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/93_hires.png"
+  },
+  {
+    "id": "gym1-94",
+    "name": "Sabrina's Mr. Mime",
+    "setId": "gym1",
+    "number": "94",
+    "numberInt": 94,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      122
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/94.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/94_hires.png"
+  },
+  {
+    "id": "gym1-95",
+    "name": "Sabrina's Slowpoke",
+    "setId": "gym1",
+    "number": "95",
+    "numberInt": 95,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      79
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/95.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/95_hires.png"
+  },
+  {
+    "id": "gym1-96",
+    "name": "Sabrina's Venonat",
+    "setId": "gym1",
+    "number": "96",
+    "numberInt": 96,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      48
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/gym1/96.png",
+    "imageLarge": "https://images.pokemontcg.io/gym1/96_hires.png"
+  }
+]

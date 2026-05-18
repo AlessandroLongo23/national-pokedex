@@ -1,0 +1,158 @@
+[
+  {
+    "id": "tk2a-1",
+    "name": "Beldum",
+    "setId": "tk2a",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      374
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/tk2a/1.png",
+    "imageLarge": "https://images.pokemontcg.io/tk2a/1_hires.png"
+  },
+  {
+    "id": "tk2a-2",
+    "name": "Electrike",
+    "setId": "tk2a",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      309
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Hiroki Fuchino",
+    "imageSmall": "https://images.pokemontcg.io/tk2a/2.png",
+    "imageLarge": "https://images.pokemontcg.io/tk2a/2_hires.png"
+  },
+  {
+    "id": "tk2a-3",
+    "name": "Grumpig",
+    "setId": "tk2a",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      326
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Spoink",
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/tk2a/3.png",
+    "imageLarge": "https://images.pokemontcg.io/tk2a/3_hires.png"
+  },
+  {
+    "id": "tk2a-4",
+    "name": "Meowth",
+    "setId": "tk2a",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      52
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/tk2a/4.png",
+    "imageLarge": "https://images.pokemontcg.io/tk2a/4_hires.png"
+  },
+  {
+    "id": "tk2a-5",
+    "name": "Metang",
+    "setId": "tk2a",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      375
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Beldum",
+    "artist": "Hisao Nakamura",
+    "imageSmall": "https://images.pokemontcg.io/tk2a/5.png",
+    "imageLarge": "https://images.pokemontcg.io/tk2a/5_hires.png"
+  },
+  {
+    "id": "tk2a-6",
+    "name": "Plusle",
+    "setId": "tk2a",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      311
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Katsura Tabata",
+    "imageSmall": "https://images.pokemontcg.io/tk2a/6.png",
+    "imageLarge": "https://images.pokemontcg.io/tk2a/6_hires.png"
+  },
+  {
+    "id": "tk2a-7",
+    "name": "Spoink",
+    "setId": "tk2a",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      325
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/tk2a/7.png",
+    "imageLarge": "https://images.pokemontcg.io/tk2a/7_hires.png"
+  }
+]

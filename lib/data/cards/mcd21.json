@@ -1,0 +1,555 @@
+[
+  {
+    "id": "mcd21-1",
+    "name": "Bulbasaur",
+    "setId": "mcd21",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      1
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mizue",
+    "imageSmall": "https://images.pokemontcg.io/mcd21/1.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd21/1_hires.png"
+  },
+  {
+    "id": "mcd21-2",
+    "name": "Chikorita",
+    "setId": "mcd21",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      152
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "sowsow",
+    "imageSmall": "https://images.pokemontcg.io/mcd21/2.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd21/2_hires.png"
+  },
+  {
+    "id": "mcd21-3",
+    "name": "Treecko",
+    "setId": "mcd21",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      252
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Akira Komayama",
+    "imageSmall": "https://images.pokemontcg.io/mcd21/3.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd21/3_hires.png"
+  },
+  {
+    "id": "mcd21-4",
+    "name": "Turtwig",
+    "setId": "mcd21",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      387
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "OOYAMA",
+    "imageSmall": "https://images.pokemontcg.io/mcd21/4.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd21/4_hires.png"
+  },
+  {
+    "id": "mcd21-5",
+    "name": "Snivy",
+    "setId": "mcd21",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      495
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/mcd21/5.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd21/5_hires.png"
+  },
+  {
+    "id": "mcd21-6",
+    "name": "Chespin",
+    "setId": "mcd21",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      650
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/mcd21/6.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd21/6_hires.png"
+  },
+  {
+    "id": "mcd21-7",
+    "name": "Rowlet",
+    "setId": "mcd21",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      722
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Megumi Mizutani",
+    "imageSmall": "https://images.pokemontcg.io/mcd21/7.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd21/7_hires.png"
+  },
+  {
+    "id": "mcd21-8",
+    "name": "Grookey",
+    "setId": "mcd21",
+    "number": "8",
+    "numberInt": 8,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      810
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "kirisAki",
+    "regulationMark": "D",
+    "imageSmall": "https://images.pokemontcg.io/mcd21/8.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd21/8_hires.png"
+  },
+  {
+    "id": "mcd21-9",
+    "name": "Charmander",
+    "setId": "mcd21",
+    "number": "9",
+    "numberInt": 9,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      4
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/mcd21/9.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd21/9_hires.png"
+  },
+  {
+    "id": "mcd21-10",
+    "name": "Cyndaquil",
+    "setId": "mcd21",
+    "number": "10",
+    "numberInt": 10,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      155
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "kirisAki",
+    "imageSmall": "https://images.pokemontcg.io/mcd21/10.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd21/10_hires.png"
+  },
+  {
+    "id": "mcd21-11",
+    "name": "Torchic",
+    "setId": "mcd21",
+    "number": "11",
+    "numberInt": 11,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      255
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "sui",
+    "imageSmall": "https://images.pokemontcg.io/mcd21/11.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd21/11_hires.png"
+  },
+  {
+    "id": "mcd21-12",
+    "name": "Chimchar",
+    "setId": "mcd21",
+    "number": "12",
+    "numberInt": 12,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      390
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/mcd21/12.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd21/12_hires.png"
+  },
+  {
+    "id": "mcd21-13",
+    "name": "Tepig",
+    "setId": "mcd21",
+    "number": "13",
+    "numberInt": 13,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      498
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/mcd21/13.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd21/13_hires.png"
+  },
+  {
+    "id": "mcd21-14",
+    "name": "Fennekin",
+    "setId": "mcd21",
+    "number": "14",
+    "numberInt": 14,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      653
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/mcd21/14.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd21/14_hires.png"
+  },
+  {
+    "id": "mcd21-15",
+    "name": "Litten",
+    "setId": "mcd21",
+    "number": "15",
+    "numberInt": 15,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      725
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Akira Komayama",
+    "imageSmall": "https://images.pokemontcg.io/mcd21/15.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd21/15_hires.png"
+  },
+  {
+    "id": "mcd21-16",
+    "name": "Scorbunny",
+    "setId": "mcd21",
+    "number": "16",
+    "numberInt": 16,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      813
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Hitoshi Ariga",
+    "regulationMark": "D",
+    "imageSmall": "https://images.pokemontcg.io/mcd21/16.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd21/16_hires.png"
+  },
+  {
+    "id": "mcd21-17",
+    "name": "Squirtle",
+    "setId": "mcd21",
+    "number": "17",
+    "numberInt": 17,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      7
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "tetsuya koizumi",
+    "imageSmall": "https://images.pokemontcg.io/mcd21/17.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd21/17_hires.png"
+  },
+  {
+    "id": "mcd21-18",
+    "name": "Totodile",
+    "setId": "mcd21",
+    "number": "18",
+    "numberInt": 18,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      158
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/mcd21/18.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd21/18_hires.png"
+  },
+  {
+    "id": "mcd21-19",
+    "name": "Mudkip",
+    "setId": "mcd21",
+    "number": "19",
+    "numberInt": 19,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      258
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Aya Kusube",
+    "imageSmall": "https://images.pokemontcg.io/mcd21/19.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd21/19_hires.png"
+  },
+  {
+    "id": "mcd21-20",
+    "name": "Piplup",
+    "setId": "mcd21",
+    "number": "20",
+    "numberInt": 20,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      393
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Shibuzoh.",
+    "imageSmall": "https://images.pokemontcg.io/mcd21/20.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd21/20_hires.png"
+  },
+  {
+    "id": "mcd21-21",
+    "name": "Oshawott",
+    "setId": "mcd21",
+    "number": "21",
+    "numberInt": 21,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      501
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/mcd21/21.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd21/21_hires.png"
+  },
+  {
+    "id": "mcd21-22",
+    "name": "Froakie",
+    "setId": "mcd21",
+    "number": "22",
+    "numberInt": 22,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      656
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/mcd21/22.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd21/22_hires.png"
+  },
+  {
+    "id": "mcd21-23",
+    "name": "Popplio",
+    "setId": "mcd21",
+    "number": "23",
+    "numberInt": 23,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      728
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/mcd21/23.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd21/23_hires.png"
+  },
+  {
+    "id": "mcd21-24",
+    "name": "Sobble",
+    "setId": "mcd21",
+    "number": "24",
+    "numberInt": 24,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      816
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mizue",
+    "regulationMark": "D",
+    "imageSmall": "https://images.pokemontcg.io/mcd21/24.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd21/24_hires.png"
+  },
+  {
+    "id": "mcd21-25",
+    "name": "Pikachu",
+    "setId": "mcd21",
+    "number": "25",
+    "numberInt": 25,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      25
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Sanosuke Sakuma",
+    "imageSmall": "https://images.pokemontcg.io/mcd21/25.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd21/25_hires.png"
+  }
+]

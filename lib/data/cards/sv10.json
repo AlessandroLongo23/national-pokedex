@@ -1,0 +1,4741 @@
+[
+  {
+    "id": "sv10-1",
+    "name": "Ethan's Pinsir",
+    "setId": "sv10",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      127
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/1.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/1_hires.png"
+  },
+  {
+    "id": "sv10-2",
+    "name": "Yanma",
+    "setId": "sv10",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      193
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/2.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/2_hires.png"
+  },
+  {
+    "id": "sv10-3",
+    "name": "Yanmega ex",
+    "setId": "sv10",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      469
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 280,
+    "subtypes": [
+      "Stage 1",
+      "ex"
+    ],
+    "evolvesFrom": "Yanma",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/3.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/3_hires.png"
+  },
+  {
+    "id": "sv10-4",
+    "name": "Pineco",
+    "setId": "sv10",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      204
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/4.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/4_hires.png"
+  },
+  {
+    "id": "sv10-5",
+    "name": "Shroomish",
+    "setId": "sv10",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      285
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/5.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/5_hires.png"
+  },
+  {
+    "id": "sv10-6",
+    "name": "Breloom",
+    "setId": "sv10",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      286
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Shroomish",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/6.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/6_hires.png"
+  },
+  {
+    "id": "sv10-7",
+    "name": "Cynthia's Roselia",
+    "setId": "sv10",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      315
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/7.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/7_hires.png"
+  },
+  {
+    "id": "sv10-8",
+    "name": "Cynthia's Roserade",
+    "setId": "sv10",
+    "number": "8",
+    "numberInt": 8,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      407
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Cynthia's Roselia",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/8.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/8_hires.png"
+  },
+  {
+    "id": "sv10-9",
+    "name": "Mow Rotom",
+    "setId": "sv10",
+    "number": "9",
+    "numberInt": 9,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      479
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/9.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/9_hires.png"
+  },
+  {
+    "id": "sv10-10",
+    "name": "Shaymin",
+    "setId": "sv10",
+    "number": "10",
+    "numberInt": 10,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      492
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/10.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/10_hires.png"
+  },
+  {
+    "id": "sv10-11",
+    "name": "Dwebble",
+    "setId": "sv10",
+    "number": "11",
+    "numberInt": 11,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      557
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/11.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/11_hires.png"
+  },
+  {
+    "id": "sv10-12",
+    "name": "Crustle",
+    "setId": "sv10",
+    "number": "12",
+    "numberInt": 12,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      558
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Dwebble",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/12.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/12_hires.png"
+  },
+  {
+    "id": "sv10-13",
+    "name": "Fomantis",
+    "setId": "sv10",
+    "number": "13",
+    "numberInt": 13,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      753
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/13.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/13_hires.png"
+  },
+  {
+    "id": "sv10-14",
+    "name": "Lurantis",
+    "setId": "sv10",
+    "number": "14",
+    "numberInt": 14,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      754
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Fomantis",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/14.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/14_hires.png"
+  },
+  {
+    "id": "sv10-15",
+    "name": "Team Rocket's Blipbug",
+    "setId": "sv10",
+    "number": "15",
+    "numberInt": 15,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      824
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/15.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/15_hires.png"
+  },
+  {
+    "id": "sv10-16",
+    "name": "Applin",
+    "setId": "sv10",
+    "number": "16",
+    "numberInt": 16,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      840
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/16.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/16_hires.png"
+  },
+  {
+    "id": "sv10-17",
+    "name": "Dipplin",
+    "setId": "sv10",
+    "number": "17",
+    "numberInt": 17,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      1011
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Applin",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/17.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/17_hires.png"
+  },
+  {
+    "id": "sv10-18",
+    "name": "Hydrapple",
+    "setId": "sv10",
+    "number": "18",
+    "numberInt": 18,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      1019
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 170,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Dipplin",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/18.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/18_hires.png"
+  },
+  {
+    "id": "sv10-19",
+    "name": "Team Rocket's Tarountula",
+    "setId": "sv10",
+    "number": "19",
+    "numberInt": 19,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      917
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/19.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/19_hires.png"
+  },
+  {
+    "id": "sv10-20",
+    "name": "Team Rocket's Spidops",
+    "setId": "sv10",
+    "number": "20",
+    "numberInt": 20,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      918
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Rocket's Tarountula",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/20.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/20_hires.png"
+  },
+  {
+    "id": "sv10-21",
+    "name": "Smoliv",
+    "setId": "sv10",
+    "number": "21",
+    "numberInt": 21,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      928
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/21.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/21_hires.png"
+  },
+  {
+    "id": "sv10-22",
+    "name": "Dolliv",
+    "setId": "sv10",
+    "number": "22",
+    "numberInt": 22,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      929
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Smoliv",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/22.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/22_hires.png"
+  },
+  {
+    "id": "sv10-23",
+    "name": "Arboliva ex",
+    "setId": "sv10",
+    "number": "23",
+    "numberInt": 23,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      930
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 310,
+    "subtypes": [
+      "Stage 2",
+      "ex"
+    ],
+    "evolvesFrom": "Dolliv",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/23.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/23_hires.png"
+  },
+  {
+    "id": "sv10-24",
+    "name": "Rellor",
+    "setId": "sv10",
+    "number": "24",
+    "numberInt": 24,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      953
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv10/24.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/24_hires.png"
+  },
+  {
+    "id": "sv10-25",
+    "name": "Rabsca ex",
+    "setId": "sv10",
+    "number": "25",
+    "numberInt": 25,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      954
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 250,
+    "subtypes": [
+      "Stage 1",
+      "ex"
+    ],
+    "evolvesFrom": "Rellor",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv10/25.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/25_hires.png"
+  },
+  {
+    "id": "sv10-26",
+    "name": "Teal Mask Ogerpon",
+    "setId": "sv10",
+    "number": "26",
+    "numberInt": 26,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      1017
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/26.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/26_hires.png"
+  },
+  {
+    "id": "sv10-27",
+    "name": "Growlithe",
+    "setId": "sv10",
+    "number": "27",
+    "numberInt": 27,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      58
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/27.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/27_hires.png"
+  },
+  {
+    "id": "sv10-28",
+    "name": "Arcanine",
+    "setId": "sv10",
+    "number": "28",
+    "numberInt": 28,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      59
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Growlithe",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/28.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/28_hires.png"
+  },
+  {
+    "id": "sv10-29",
+    "name": "Ponyta",
+    "setId": "sv10",
+    "number": "29",
+    "numberInt": 29,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      77
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/29.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/29_hires.png"
+  },
+  {
+    "id": "sv10-30",
+    "name": "Rapidash",
+    "setId": "sv10",
+    "number": "30",
+    "numberInt": 30,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      78
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Ponyta",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/30.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/30_hires.png"
+  },
+  {
+    "id": "sv10-31",
+    "name": "Team Rocket's Moltres ex",
+    "setId": "sv10",
+    "number": "31",
+    "numberInt": 31,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      146
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 220,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/31.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/31_hires.png"
+  },
+  {
+    "id": "sv10-32",
+    "name": "Ethan's Cyndaquil",
+    "setId": "sv10",
+    "number": "32",
+    "numberInt": 32,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      155
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/32.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/32_hires.png"
+  },
+  {
+    "id": "sv10-33",
+    "name": "Ethan's Quilava",
+    "setId": "sv10",
+    "number": "33",
+    "numberInt": 33,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      156
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Ethan's Cyndaquil",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/33.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/33_hires.png"
+  },
+  {
+    "id": "sv10-34",
+    "name": "Ethan's Typhlosion",
+    "setId": "sv10",
+    "number": "34",
+    "numberInt": 34,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      157
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 170,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Ethan's Quilava",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/34.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/34_hires.png"
+  },
+  {
+    "id": "sv10-35",
+    "name": "Ethan's Slugma",
+    "setId": "sv10",
+    "number": "35",
+    "numberInt": 35,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      218
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/35.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/35_hires.png"
+  },
+  {
+    "id": "sv10-36",
+    "name": "Ethan's Magcargo",
+    "setId": "sv10",
+    "number": "36",
+    "numberInt": 36,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      219
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Ethan's Slugma",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/36.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/36_hires.png"
+  },
+  {
+    "id": "sv10-37",
+    "name": "Team Rocket's Houndour",
+    "setId": "sv10",
+    "number": "37",
+    "numberInt": 37,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      228
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/37.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/37_hires.png"
+  },
+  {
+    "id": "sv10-38",
+    "name": "Team Rocket's Houndoom",
+    "setId": "sv10",
+    "number": "38",
+    "numberInt": 38,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      229
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Rocket's Houndour",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/38.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/38_hires.png"
+  },
+  {
+    "id": "sv10-39",
+    "name": "Ethan's Ho-Oh ex",
+    "setId": "sv10",
+    "number": "39",
+    "numberInt": 39,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      250
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 230,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/39.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/39_hires.png"
+  },
+  {
+    "id": "sv10-40",
+    "name": "Torchic",
+    "setId": "sv10",
+    "number": "40",
+    "numberInt": 40,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      255
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/40.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/40_hires.png"
+  },
+  {
+    "id": "sv10-41",
+    "name": "Combusken",
+    "setId": "sv10",
+    "number": "41",
+    "numberInt": 41,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      256
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Torchic",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/41.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/41_hires.png"
+  },
+  {
+    "id": "sv10-42",
+    "name": "Blaziken",
+    "setId": "sv10",
+    "number": "42",
+    "numberInt": 42,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      257
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 170,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Combusken",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/42.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/42_hires.png"
+  },
+  {
+    "id": "sv10-43",
+    "name": "Heat Rotom",
+    "setId": "sv10",
+    "number": "43",
+    "numberInt": 43,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      479
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/43.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/43_hires.png"
+  },
+  {
+    "id": "sv10-44",
+    "name": "Hearthflame Mask Ogerpon",
+    "setId": "sv10",
+    "number": "44",
+    "numberInt": 44,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      1017
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/44.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/44_hires.png"
+  },
+  {
+    "id": "sv10-45",
+    "name": "Misty's Psyduck",
+    "setId": "sv10",
+    "number": "45",
+    "numberInt": 45,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      54
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/45.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/45_hires.png"
+  },
+  {
+    "id": "sv10-46",
+    "name": "Misty's Staryu",
+    "setId": "sv10",
+    "number": "46",
+    "numberInt": 46,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      120
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/46.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/46_hires.png"
+  },
+  {
+    "id": "sv10-47",
+    "name": "Misty's Starmie",
+    "setId": "sv10",
+    "number": "47",
+    "numberInt": 47,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      121
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Misty's Staryu",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/47.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/47_hires.png"
+  },
+  {
+    "id": "sv10-48",
+    "name": "Misty's Magikarp",
+    "setId": "sv10",
+    "number": "48",
+    "numberInt": 48,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      129
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 30,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/48.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/48_hires.png"
+  },
+  {
+    "id": "sv10-49",
+    "name": "Misty's Gyarados",
+    "setId": "sv10",
+    "number": "49",
+    "numberInt": 49,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      130
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 180,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Misty's Magikarp",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/49.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/49_hires.png"
+  },
+  {
+    "id": "sv10-50",
+    "name": "Misty's Lapras",
+    "setId": "sv10",
+    "number": "50",
+    "numberInt": 50,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      131
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/50.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/50_hires.png"
+  },
+  {
+    "id": "sv10-51",
+    "name": "Team Rocket's Articuno",
+    "setId": "sv10",
+    "number": "51",
+    "numberInt": 51,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      144
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/51.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/51_hires.png"
+  },
+  {
+    "id": "sv10-52",
+    "name": "Cynthia's Feebas",
+    "setId": "sv10",
+    "number": "52",
+    "numberInt": 52,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      349
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 30,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/52.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/52_hires.png"
+  },
+  {
+    "id": "sv10-53",
+    "name": "Cynthia's Milotic",
+    "setId": "sv10",
+    "number": "53",
+    "numberInt": 53,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      350
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Cynthia's Feebas",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/53.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/53_hires.png"
+  },
+  {
+    "id": "sv10-54",
+    "name": "Clamperl",
+    "setId": "sv10",
+    "number": "54",
+    "numberInt": 54,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      366
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/54.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/54_hires.png"
+  },
+  {
+    "id": "sv10-55",
+    "name": "Huntail",
+    "setId": "sv10",
+    "number": "55",
+    "numberInt": 55,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      367
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Clamperl",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/55.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/55_hires.png"
+  },
+  {
+    "id": "sv10-56",
+    "name": "Gorebyss",
+    "setId": "sv10",
+    "number": "56",
+    "numberInt": 56,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      368
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Clamperl",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/56.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/56_hires.png"
+  },
+  {
+    "id": "sv10-57",
+    "name": "Buizel",
+    "setId": "sv10",
+    "number": "57",
+    "numberInt": 57,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      418
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/57.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/57_hires.png"
+  },
+  {
+    "id": "sv10-58",
+    "name": "Floatzel",
+    "setId": "sv10",
+    "number": "58",
+    "numberInt": 58,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      419
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Buizel",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/58.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/58_hires.png"
+  },
+  {
+    "id": "sv10-59",
+    "name": "Snover",
+    "setId": "sv10",
+    "number": "59",
+    "numberInt": 59,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      459
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/59.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/59_hires.png"
+  },
+  {
+    "id": "sv10-60",
+    "name": "Abomasnow",
+    "setId": "sv10",
+    "number": "60",
+    "numberInt": 60,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      460
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Snover",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/60.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/60_hires.png"
+  },
+  {
+    "id": "sv10-61",
+    "name": "Wash Rotom",
+    "setId": "sv10",
+    "number": "61",
+    "numberInt": 61,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      479
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/61.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/61_hires.png"
+  },
+  {
+    "id": "sv10-62",
+    "name": "Arrokuda",
+    "setId": "sv10",
+    "number": "62",
+    "numberInt": 62,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      846
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/62.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/62_hires.png"
+  },
+  {
+    "id": "sv10-63",
+    "name": "Barraskewda",
+    "setId": "sv10",
+    "number": "63",
+    "numberInt": 63,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      847
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Arrokuda",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/63.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/63_hires.png"
+  },
+  {
+    "id": "sv10-64",
+    "name": "Cetoddle",
+    "setId": "sv10",
+    "number": "64",
+    "numberInt": 64,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      974
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/64.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/64_hires.png"
+  },
+  {
+    "id": "sv10-65",
+    "name": "Cetitan ex",
+    "setId": "sv10",
+    "number": "65",
+    "numberInt": 65,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      975
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 300,
+    "subtypes": [
+      "Stage 1",
+      "ex"
+    ],
+    "evolvesFrom": "Cetoddle",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/65.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/65_hires.png"
+  },
+  {
+    "id": "sv10-66",
+    "name": "Dondozo ex",
+    "setId": "sv10",
+    "number": "66",
+    "numberInt": 66,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      977
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 260,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/66.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/66_hires.png"
+  },
+  {
+    "id": "sv10-67",
+    "name": "Wellspring Mask Ogerpon",
+    "setId": "sv10",
+    "number": "67",
+    "numberInt": 67,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      1017
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/67.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/67_hires.png"
+  },
+  {
+    "id": "sv10-68",
+    "name": "Electabuzz",
+    "setId": "sv10",
+    "number": "68",
+    "numberInt": 68,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      125
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/68.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/68_hires.png"
+  },
+  {
+    "id": "sv10-69",
+    "name": "Electivire ex",
+    "setId": "sv10",
+    "number": "69",
+    "numberInt": 69,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      466
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 280,
+    "subtypes": [
+      "Stage 1",
+      "ex"
+    ],
+    "evolvesFrom": "Electabuzz",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/69.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/69_hires.png"
+  },
+  {
+    "id": "sv10-70",
+    "name": "Team Rocket's Zapdos",
+    "setId": "sv10",
+    "number": "70",
+    "numberInt": 70,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      145
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/70.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/70_hires.png"
+  },
+  {
+    "id": "sv10-71",
+    "name": "Ethan's Pichu",
+    "setId": "sv10",
+    "number": "71",
+    "numberInt": 71,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      172
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 30,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/71.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/71_hires.png"
+  },
+  {
+    "id": "sv10-72",
+    "name": "Team Rocket's Mareep",
+    "setId": "sv10",
+    "number": "72",
+    "numberInt": 72,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      179
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/72.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/72_hires.png"
+  },
+  {
+    "id": "sv10-73",
+    "name": "Team Rocket's Flaaffy",
+    "setId": "sv10",
+    "number": "73",
+    "numberInt": 73,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      180
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Rocket's Mareep",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/73.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/73_hires.png"
+  },
+  {
+    "id": "sv10-74",
+    "name": "Team Rocket's Ampharos",
+    "setId": "sv10",
+    "number": "74",
+    "numberInt": 74,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      181
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Team Rocket's Flaaffy",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/74.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/74_hires.png"
+  },
+  {
+    "id": "sv10-75",
+    "name": "Electrike",
+    "setId": "sv10",
+    "number": "75",
+    "numberInt": 75,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      309
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/75.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/75_hires.png"
+  },
+  {
+    "id": "sv10-76",
+    "name": "Manectric",
+    "setId": "sv10",
+    "number": "76",
+    "numberInt": 76,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      310
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Electrike",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/76.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/76_hires.png"
+  },
+  {
+    "id": "sv10-77",
+    "name": "Rotom",
+    "setId": "sv10",
+    "number": "77",
+    "numberInt": 77,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      479
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/77.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/77_hires.png"
+  },
+  {
+    "id": "sv10-78",
+    "name": "Zeraora",
+    "setId": "sv10",
+    "number": "78",
+    "numberInt": 78,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      807
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/78.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/78_hires.png"
+  },
+  {
+    "id": "sv10-79",
+    "name": "Team Rocket's Drowzee",
+    "setId": "sv10",
+    "number": "79",
+    "numberInt": 79,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      96
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/79.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/79_hires.png"
+  },
+  {
+    "id": "sv10-80",
+    "name": "Team Rocket's Hypno",
+    "setId": "sv10",
+    "number": "80",
+    "numberInt": 80,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      97
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Rocket's Drowzee",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/80.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/80_hires.png"
+  },
+  {
+    "id": "sv10-81",
+    "name": "Team Rocket's Mewtwo ex",
+    "setId": "sv10",
+    "number": "81",
+    "numberInt": 81,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      150
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 280,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/81.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/81_hires.png"
+  },
+  {
+    "id": "sv10-82",
+    "name": "Team Rocket's Wobbuffet",
+    "setId": "sv10",
+    "number": "82",
+    "numberInt": 82,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      202
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/82.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/82_hires.png"
+  },
+  {
+    "id": "sv10-83",
+    "name": "Steven's Baltoy",
+    "setId": "sv10",
+    "number": "83",
+    "numberInt": 83,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      343
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/83.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/83_hires.png"
+  },
+  {
+    "id": "sv10-84",
+    "name": "Steven's Claydol",
+    "setId": "sv10",
+    "number": "84",
+    "numberInt": 84,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      344
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Steven's Baltoy",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/84.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/84_hires.png"
+  },
+  {
+    "id": "sv10-85",
+    "name": "Team Rocket's Chingling",
+    "setId": "sv10",
+    "number": "85",
+    "numberInt": 85,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      433
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 30,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/85.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/85_hires.png"
+  },
+  {
+    "id": "sv10-86",
+    "name": "Steven's Carbink",
+    "setId": "sv10",
+    "number": "86",
+    "numberInt": 86,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      703
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/86.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/86_hires.png"
+  },
+  {
+    "id": "sv10-87",
+    "name": "Team Rocket's Mimikyu",
+    "setId": "sv10",
+    "number": "87",
+    "numberInt": 87,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      778
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/87.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/87_hires.png"
+  },
+  {
+    "id": "sv10-88",
+    "name": "Team Rocket's Dottler",
+    "setId": "sv10",
+    "number": "88",
+    "numberInt": 88,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      825
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Rocket's Blipbug",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/88.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/88_hires.png"
+  },
+  {
+    "id": "sv10-89",
+    "name": "Team Rocket's Orbeetle",
+    "setId": "sv10",
+    "number": "89",
+    "numberInt": 89,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      826
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Team Rocket's Dottler",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/89.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/89_hires.png"
+  },
+  {
+    "id": "sv10-90",
+    "name": "Mankey",
+    "setId": "sv10",
+    "number": "90",
+    "numberInt": 90,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      56
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/90.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/90_hires.png"
+  },
+  {
+    "id": "sv10-91",
+    "name": "Primeape",
+    "setId": "sv10",
+    "number": "91",
+    "numberInt": 91,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      57
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Mankey",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/91.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/91_hires.png"
+  },
+  {
+    "id": "sv10-92",
+    "name": "Annihilape",
+    "setId": "sv10",
+    "number": "92",
+    "numberInt": 92,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      979
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Primeape",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/92.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/92_hires.png"
+  },
+  {
+    "id": "sv10-93",
+    "name": "Ethan's Sudowoodo",
+    "setId": "sv10",
+    "number": "93",
+    "numberInt": 93,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      185
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/93.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/93_hires.png"
+  },
+  {
+    "id": "sv10-94",
+    "name": "Team Rocket's Larvitar",
+    "setId": "sv10",
+    "number": "94",
+    "numberInt": 94,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      246
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/94.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/94_hires.png"
+  },
+  {
+    "id": "sv10-95",
+    "name": "Team Rocket's Pupitar",
+    "setId": "sv10",
+    "number": "95",
+    "numberInt": 95,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      247
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Rocket's Larvitar",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/95.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/95_hires.png"
+  },
+  {
+    "id": "sv10-96",
+    "name": "Team Rocket's Tyranitar",
+    "setId": "sv10",
+    "number": "96",
+    "numberInt": 96,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      248
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 180,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Team Rocket's Pupitar",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/96.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/96_hires.png"
+  },
+  {
+    "id": "sv10-97",
+    "name": "Nosepass",
+    "setId": "sv10",
+    "number": "97",
+    "numberInt": 97,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      299
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/97.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/97_hires.png"
+  },
+  {
+    "id": "sv10-98",
+    "name": "Probopass",
+    "setId": "sv10",
+    "number": "98",
+    "numberInt": 98,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      476
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Nosepass",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/98.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/98_hires.png"
+  },
+  {
+    "id": "sv10-99",
+    "name": "Meditite",
+    "setId": "sv10",
+    "number": "99",
+    "numberInt": 99,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      307
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/99.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/99_hires.png"
+  },
+  {
+    "id": "sv10-100",
+    "name": "Medicham",
+    "setId": "sv10",
+    "number": "100",
+    "numberInt": 100,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      308
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Meditite",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/100.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/100_hires.png"
+  },
+  {
+    "id": "sv10-101",
+    "name": "Regirock ex",
+    "setId": "sv10",
+    "number": "101",
+    "numberInt": 101,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      377
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 230,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/101.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/101_hires.png"
+  },
+  {
+    "id": "sv10-102",
+    "name": "Cynthia's Gible",
+    "setId": "sv10",
+    "number": "102",
+    "numberInt": 102,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      443
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/102.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/102_hires.png"
+  },
+  {
+    "id": "sv10-103",
+    "name": "Cynthia's Gabite",
+    "setId": "sv10",
+    "number": "103",
+    "numberInt": 103,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      444
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Cynthia's Gible",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/103.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/103_hires.png"
+  },
+  {
+    "id": "sv10-104",
+    "name": "Cynthia's Garchomp ex",
+    "setId": "sv10",
+    "number": "104",
+    "numberInt": 104,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      445
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 330,
+    "subtypes": [
+      "Stage 2",
+      "ex"
+    ],
+    "evolvesFrom": "Cynthia's Gabite",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/104.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/104_hires.png"
+  },
+  {
+    "id": "sv10-105",
+    "name": "Hippopotas",
+    "setId": "sv10",
+    "number": "105",
+    "numberInt": 105,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      449
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv10/105.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/105_hires.png"
+  },
+  {
+    "id": "sv10-106",
+    "name": "Hippowdon",
+    "setId": "sv10",
+    "number": "106",
+    "numberInt": 106,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      450
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 160,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Hippopotas",
+    "regulationMark": "H",
+    "imageSmall": "https://images.pokemontcg.io/sv10/106.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/106_hires.png"
+  },
+  {
+    "id": "sv10-107",
+    "name": "Mudbray",
+    "setId": "sv10",
+    "number": "107",
+    "numberInt": 107,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      749
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/107.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/107_hires.png"
+  },
+  {
+    "id": "sv10-108",
+    "name": "Mudsdale",
+    "setId": "sv10",
+    "number": "108",
+    "numberInt": 108,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      750
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Mudbray",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/108.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/108_hires.png"
+  },
+  {
+    "id": "sv10-109",
+    "name": "Arven's Toedscool",
+    "setId": "sv10",
+    "number": "109",
+    "numberInt": 109,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      948
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/109.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/109_hires.png"
+  },
+  {
+    "id": "sv10-110",
+    "name": "Arven's Toedscruel",
+    "setId": "sv10",
+    "number": "110",
+    "numberInt": 110,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      949
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Arven's Toedscool",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/110.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/110_hires.png"
+  },
+  {
+    "id": "sv10-111",
+    "name": "Cornerstone Mask Ogerpon",
+    "setId": "sv10",
+    "number": "111",
+    "numberInt": 111,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      1017
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/111.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/111_hires.png"
+  },
+  {
+    "id": "sv10-112",
+    "name": "Team Rocket's Ekans",
+    "setId": "sv10",
+    "number": "112",
+    "numberInt": 112,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      23
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/112.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/112_hires.png"
+  },
+  {
+    "id": "sv10-113",
+    "name": "Team Rocket's Arbok",
+    "setId": "sv10",
+    "number": "113",
+    "numberInt": 113,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      24
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Rocket's Ekans",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/113.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/113_hires.png"
+  },
+  {
+    "id": "sv10-114",
+    "name": "Team Rocket's Nidoran♀",
+    "setId": "sv10",
+    "number": "114",
+    "numberInt": 114,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      29
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/114.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/114_hires.png"
+  },
+  {
+    "id": "sv10-115",
+    "name": "Team Rocket's Nidorina",
+    "setId": "sv10",
+    "number": "115",
+    "numberInt": 115,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      30
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Rocket's Nidoran♀",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/115.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/115_hires.png"
+  },
+  {
+    "id": "sv10-116",
+    "name": "Team Rocket's Nidoqueen",
+    "setId": "sv10",
+    "number": "116",
+    "numberInt": 116,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      31
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 170,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Team Rocket's Nidorina",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/116.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/116_hires.png"
+  },
+  {
+    "id": "sv10-117",
+    "name": "Team Rocket's Nidoran♂",
+    "setId": "sv10",
+    "number": "117",
+    "numberInt": 117,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      32
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/117.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/117_hires.png"
+  },
+  {
+    "id": "sv10-118",
+    "name": "Team Rocket's Nidorino",
+    "setId": "sv10",
+    "number": "118",
+    "numberInt": 118,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      33
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Rocket's Nidoran♂",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/118.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/118_hires.png"
+  },
+  {
+    "id": "sv10-119",
+    "name": "Team Rocket's Nidoking ex",
+    "setId": "sv10",
+    "number": "119",
+    "numberInt": 119,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      34
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 330,
+    "subtypes": [
+      "Stage 2",
+      "ex"
+    ],
+    "evolvesFrom": "Team Rocket's Nidorino",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/119.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/119_hires.png"
+  },
+  {
+    "id": "sv10-120",
+    "name": "Team Rocket's Zubat",
+    "setId": "sv10",
+    "number": "120",
+    "numberInt": 120,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      41
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/120.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/120_hires.png"
+  },
+  {
+    "id": "sv10-121",
+    "name": "Team Rocket's Golbat",
+    "setId": "sv10",
+    "number": "121",
+    "numberInt": 121,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      42
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Rocket's Zubat",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/121.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/121_hires.png"
+  },
+  {
+    "id": "sv10-122",
+    "name": "Team Rocket's Crobat ex",
+    "setId": "sv10",
+    "number": "122",
+    "numberInt": 122,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      169
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 310,
+    "subtypes": [
+      "Stage 2",
+      "ex"
+    ],
+    "evolvesFrom": "Team Rocket's Golbat",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/122.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/122_hires.png"
+  },
+  {
+    "id": "sv10-123",
+    "name": "Team Rocket's Grimer",
+    "setId": "sv10",
+    "number": "123",
+    "numberInt": 123,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      88
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/123.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/123_hires.png"
+  },
+  {
+    "id": "sv10-124",
+    "name": "Team Rocket's Muk",
+    "setId": "sv10",
+    "number": "124",
+    "numberInt": 124,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      89
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Rocket's Grimer",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/124.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/124_hires.png"
+  },
+  {
+    "id": "sv10-125",
+    "name": "Team Rocket's Koffing",
+    "setId": "sv10",
+    "number": "125",
+    "numberInt": 125,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      109
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/125.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/125_hires.png"
+  },
+  {
+    "id": "sv10-126",
+    "name": "Team Rocket's Weezing",
+    "setId": "sv10",
+    "number": "126",
+    "numberInt": 126,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      110
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Rocket's Koffing",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/126.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/126_hires.png"
+  },
+  {
+    "id": "sv10-127",
+    "name": "Team Rocket's Murkrow",
+    "setId": "sv10",
+    "number": "127",
+    "numberInt": 127,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      198
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/127.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/127_hires.png"
+  },
+  {
+    "id": "sv10-128",
+    "name": "Team Rocket's Sneasel",
+    "setId": "sv10",
+    "number": "128",
+    "numberInt": 128,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      215
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/128.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/128_hires.png"
+  },
+  {
+    "id": "sv10-129",
+    "name": "Cynthia's Spiritomb",
+    "setId": "sv10",
+    "number": "129",
+    "numberInt": 129,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      442
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/129.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/129_hires.png"
+  },
+  {
+    "id": "sv10-130",
+    "name": "Marnie's Purrloin",
+    "setId": "sv10",
+    "number": "130",
+    "numberInt": 130,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      509
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/130.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/130_hires.png"
+  },
+  {
+    "id": "sv10-131",
+    "name": "Marnie's Liepard",
+    "setId": "sv10",
+    "number": "131",
+    "numberInt": 131,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      510
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Marnie's Purrloin",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/131.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/131_hires.png"
+  },
+  {
+    "id": "sv10-132",
+    "name": "Marnie's Scraggy",
+    "setId": "sv10",
+    "number": "132",
+    "numberInt": 132,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      559
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/132.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/132_hires.png"
+  },
+  {
+    "id": "sv10-133",
+    "name": "Marnie's Scrafty",
+    "setId": "sv10",
+    "number": "133",
+    "numberInt": 133,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      560
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Marnie's Scraggy",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/133.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/133_hires.png"
+  },
+  {
+    "id": "sv10-134",
+    "name": "Marnie's Impidimp",
+    "setId": "sv10",
+    "number": "134",
+    "numberInt": 134,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      859
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/134.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/134_hires.png"
+  },
+  {
+    "id": "sv10-135",
+    "name": "Marnie's Morgrem",
+    "setId": "sv10",
+    "number": "135",
+    "numberInt": 135,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      860
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Marnie's Impidimp",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/135.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/135_hires.png"
+  },
+  {
+    "id": "sv10-136",
+    "name": "Marnie's Grimmsnarl ex",
+    "setId": "sv10",
+    "number": "136",
+    "numberInt": 136,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      861
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 320,
+    "subtypes": [
+      "Stage 2",
+      "ex"
+    ],
+    "evolvesFrom": "Marnie's Morgrem",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/136.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/136_hires.png"
+  },
+  {
+    "id": "sv10-137",
+    "name": "Marnie's Morpeko",
+    "setId": "sv10",
+    "number": "137",
+    "numberInt": 137,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      877
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/137.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/137_hires.png"
+  },
+  {
+    "id": "sv10-138",
+    "name": "Arven's Maschiff",
+    "setId": "sv10",
+    "number": "138",
+    "numberInt": 138,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      942
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/138.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/138_hires.png"
+  },
+  {
+    "id": "sv10-139",
+    "name": "Arven's Mabosstiff ex",
+    "setId": "sv10",
+    "number": "139",
+    "numberInt": 139,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      943
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 270,
+    "subtypes": [
+      "Stage 1",
+      "ex"
+    ],
+    "evolvesFrom": "Arven's Maschiff",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/139.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/139_hires.png"
+  },
+  {
+    "id": "sv10-140",
+    "name": "Forretress",
+    "setId": "sv10",
+    "number": "140",
+    "numberInt": 140,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      205
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Pineco",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/140.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/140_hires.png"
+  },
+  {
+    "id": "sv10-141",
+    "name": "Skarmory",
+    "setId": "sv10",
+    "number": "141",
+    "numberInt": 141,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      227
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/141.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/141_hires.png"
+  },
+  {
+    "id": "sv10-142",
+    "name": "Steven's Skarmory",
+    "setId": "sv10",
+    "number": "142",
+    "numberInt": 142,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      227
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/142.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/142_hires.png"
+  },
+  {
+    "id": "sv10-143",
+    "name": "Steven's Beldum",
+    "setId": "sv10",
+    "number": "143",
+    "numberInt": 143,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      374
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/143.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/143_hires.png"
+  },
+  {
+    "id": "sv10-144",
+    "name": "Steven's Metang",
+    "setId": "sv10",
+    "number": "144",
+    "numberInt": 144,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      375
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Steven's Beldum",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/144.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/144_hires.png"
+  },
+  {
+    "id": "sv10-145",
+    "name": "Steven's Metagross ex",
+    "setId": "sv10",
+    "number": "145",
+    "numberInt": 145,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      376
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 340,
+    "subtypes": [
+      "Stage 2",
+      "ex"
+    ],
+    "evolvesFrom": "Steven's Metang",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/145.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/145_hires.png"
+  },
+  {
+    "id": "sv10-146",
+    "name": "Zamazenta",
+    "setId": "sv10",
+    "number": "146",
+    "numberInt": 146,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      889
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/146.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/146_hires.png"
+  },
+  {
+    "id": "sv10-147",
+    "name": "Team Rocket's Rattata",
+    "setId": "sv10",
+    "number": "147",
+    "numberInt": 147,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      19
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/147.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/147_hires.png"
+  },
+  {
+    "id": "sv10-148",
+    "name": "Team Rocket's Raticate",
+    "setId": "sv10",
+    "number": "148",
+    "numberInt": 148,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      20
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Rocket's Rattata",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/148.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/148_hires.png"
+  },
+  {
+    "id": "sv10-149",
+    "name": "Team Rocket's Meowth",
+    "setId": "sv10",
+    "number": "149",
+    "numberInt": 149,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      52
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/149.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/149_hires.png"
+  },
+  {
+    "id": "sv10-150",
+    "name": "Team Rocket's Persian ex",
+    "setId": "sv10",
+    "number": "150",
+    "numberInt": 150,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      53
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 260,
+    "subtypes": [
+      "Stage 1",
+      "ex"
+    ],
+    "evolvesFrom": "Team Rocket's Meowth",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/150.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/150_hires.png"
+  },
+  {
+    "id": "sv10-151",
+    "name": "Kangaskhan",
+    "setId": "sv10",
+    "number": "151",
+    "numberInt": 151,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      115
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/151.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/151_hires.png"
+  },
+  {
+    "id": "sv10-152",
+    "name": "Tauros",
+    "setId": "sv10",
+    "number": "152",
+    "numberInt": 152,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      128
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/152.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/152_hires.png"
+  },
+  {
+    "id": "sv10-153",
+    "name": "Team Rocket's Porygon",
+    "setId": "sv10",
+    "number": "153",
+    "numberInt": 153,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      137
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/153.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/153_hires.png"
+  },
+  {
+    "id": "sv10-154",
+    "name": "Team Rocket's Porygon2",
+    "setId": "sv10",
+    "number": "154",
+    "numberInt": 154,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      233
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Rocket's Porygon",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/154.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/154_hires.png"
+  },
+  {
+    "id": "sv10-155",
+    "name": "Team Rocket's Porygon-Z",
+    "setId": "sv10",
+    "number": "155",
+    "numberInt": 155,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      474
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Team Rocket's Porygon2",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/155.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/155_hires.png"
+  },
+  {
+    "id": "sv10-156",
+    "name": "Taillow",
+    "setId": "sv10",
+    "number": "156",
+    "numberInt": 156,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      276
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/156.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/156_hires.png"
+  },
+  {
+    "id": "sv10-157",
+    "name": "Swellow",
+    "setId": "sv10",
+    "number": "157",
+    "numberInt": 157,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      277
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Taillow",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/157.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/157_hires.png"
+  },
+  {
+    "id": "sv10-158",
+    "name": "Arven's Skwovet",
+    "setId": "sv10",
+    "number": "158",
+    "numberInt": 158,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      819
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/158.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/158_hires.png"
+  },
+  {
+    "id": "sv10-159",
+    "name": "Arven's Greedent",
+    "setId": "sv10",
+    "number": "159",
+    "numberInt": 159,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      820
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Arven's Skwovet",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/159.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/159_hires.png"
+  },
+  {
+    "id": "sv10-160",
+    "name": "Squawkabilly",
+    "setId": "sv10",
+    "number": "160",
+    "numberInt": 160,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      931
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/160.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/160_hires.png"
+  },
+  {
+    "id": "sv10-183",
+    "name": "Yanma",
+    "setId": "sv10",
+    "number": "183",
+    "numberInt": 183,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      193
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/183.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/183_hires.png"
+  },
+  {
+    "id": "sv10-184",
+    "name": "Cynthia's Roserade",
+    "setId": "sv10",
+    "number": "184",
+    "numberInt": 184,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      407
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Cynthia's Roselia",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/184.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/184_hires.png"
+  },
+  {
+    "id": "sv10-185",
+    "name": "Shaymin",
+    "setId": "sv10",
+    "number": "185",
+    "numberInt": 185,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      492
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/185.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/185_hires.png"
+  },
+  {
+    "id": "sv10-186",
+    "name": "Crustle",
+    "setId": "sv10",
+    "number": "186",
+    "numberInt": 186,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      558
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Dwebble",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/186.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/186_hires.png"
+  },
+  {
+    "id": "sv10-187",
+    "name": "Team Rocket's Spidops",
+    "setId": "sv10",
+    "number": "187",
+    "numberInt": 187,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      918
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Rocket's Tarountula",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/187.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/187_hires.png"
+  },
+  {
+    "id": "sv10-188",
+    "name": "Hydrapple",
+    "setId": "sv10",
+    "number": "188",
+    "numberInt": 188,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      1019
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 170,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Dipplin",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/188.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/188_hires.png"
+  },
+  {
+    "id": "sv10-189",
+    "name": "Rapidash",
+    "setId": "sv10",
+    "number": "189",
+    "numberInt": 189,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      78
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Ponyta",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/189.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/189_hires.png"
+  },
+  {
+    "id": "sv10-190",
+    "name": "Ethan's Typhlosion",
+    "setId": "sv10",
+    "number": "190",
+    "numberInt": 190,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      157
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 170,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Ethan's Quilava",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/190.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/190_hires.png"
+  },
+  {
+    "id": "sv10-191",
+    "name": "Team Rocket's Houndoom",
+    "setId": "sv10",
+    "number": "191",
+    "numberInt": 191,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      229
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Rocket's Houndour",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/191.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/191_hires.png"
+  },
+  {
+    "id": "sv10-192",
+    "name": "Blaziken",
+    "setId": "sv10",
+    "number": "192",
+    "numberInt": 192,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      257
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 170,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Combusken",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/192.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/192_hires.png"
+  },
+  {
+    "id": "sv10-193",
+    "name": "Misty's Psyduck",
+    "setId": "sv10",
+    "number": "193",
+    "numberInt": 193,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      54
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/193.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/193_hires.png"
+  },
+  {
+    "id": "sv10-194",
+    "name": "Misty's Lapras",
+    "setId": "sv10",
+    "number": "194",
+    "numberInt": 194,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      131
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/194.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/194_hires.png"
+  },
+  {
+    "id": "sv10-195",
+    "name": "Clamperl",
+    "setId": "sv10",
+    "number": "195",
+    "numberInt": 195,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      366
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/195.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/195_hires.png"
+  },
+  {
+    "id": "sv10-196",
+    "name": "Electrike",
+    "setId": "sv10",
+    "number": "196",
+    "numberInt": 196,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      309
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/196.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/196_hires.png"
+  },
+  {
+    "id": "sv10-197",
+    "name": "Rotom",
+    "setId": "sv10",
+    "number": "197",
+    "numberInt": 197,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      479
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/197.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/197_hires.png"
+  },
+  {
+    "id": "sv10-198",
+    "name": "Team Rocket's Orbeetle",
+    "setId": "sv10",
+    "number": "198",
+    "numberInt": 198,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      826
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Team Rocket's Dottler",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/198.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/198_hires.png"
+  },
+  {
+    "id": "sv10-199",
+    "name": "Team Rocket's Weezing",
+    "setId": "sv10",
+    "number": "199",
+    "numberInt": 199,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      110
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Rocket's Koffing",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/199.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/199_hires.png"
+  },
+  {
+    "id": "sv10-200",
+    "name": "Team Rocket's Murkrow",
+    "setId": "sv10",
+    "number": "200",
+    "numberInt": 200,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      198
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/200.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/200_hires.png"
+  },
+  {
+    "id": "sv10-201",
+    "name": "Zamazenta",
+    "setId": "sv10",
+    "number": "201",
+    "numberInt": 201,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      889
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/201.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/201_hires.png"
+  },
+  {
+    "id": "sv10-202",
+    "name": "Team Rocket's Raticate",
+    "setId": "sv10",
+    "number": "202",
+    "numberInt": 202,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      20
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Rocket's Rattata",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/202.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/202_hires.png"
+  },
+  {
+    "id": "sv10-203",
+    "name": "Team Rocket's Meowth",
+    "setId": "sv10",
+    "number": "203",
+    "numberInt": 203,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      52
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/203.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/203_hires.png"
+  },
+  {
+    "id": "sv10-204",
+    "name": "Kangaskhan",
+    "setId": "sv10",
+    "number": "204",
+    "numberInt": 204,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      115
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Basic"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/204.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/204_hires.png"
+  },
+  {
+    "id": "sv10-205",
+    "name": "Arven's Greedent",
+    "setId": "sv10",
+    "number": "205",
+    "numberInt": 205,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      820
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Arven's Skwovet",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/205.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/205_hires.png"
+  },
+  {
+    "id": "sv10-206",
+    "name": "Yanmega ex",
+    "setId": "sv10",
+    "number": "206",
+    "numberInt": 206,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      469
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 280,
+    "subtypes": [
+      "Stage 1",
+      "ex"
+    ],
+    "evolvesFrom": "Yanma",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/206.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/206_hires.png"
+  },
+  {
+    "id": "sv10-207",
+    "name": "Arboliva ex",
+    "setId": "sv10",
+    "number": "207",
+    "numberInt": 207,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      930
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 310,
+    "subtypes": [
+      "Stage 2",
+      "ex"
+    ],
+    "evolvesFrom": "Dolliv",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/207.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/207_hires.png"
+  },
+  {
+    "id": "sv10-208",
+    "name": "Team Rocket's Moltres ex",
+    "setId": "sv10",
+    "number": "208",
+    "numberInt": 208,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      146
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 220,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/208.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/208_hires.png"
+  },
+  {
+    "id": "sv10-209",
+    "name": "Ethan's Ho-Oh ex",
+    "setId": "sv10",
+    "number": "209",
+    "numberInt": 209,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      250
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 230,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/209.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/209_hires.png"
+  },
+  {
+    "id": "sv10-210",
+    "name": "Cetitan ex",
+    "setId": "sv10",
+    "number": "210",
+    "numberInt": 210,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      975
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 300,
+    "subtypes": [
+      "Stage 1",
+      "ex"
+    ],
+    "evolvesFrom": "Cetoddle",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/210.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/210_hires.png"
+  },
+  {
+    "id": "sv10-211",
+    "name": "Dondozo ex",
+    "setId": "sv10",
+    "number": "211",
+    "numberInt": 211,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      977
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 260,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/211.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/211_hires.png"
+  },
+  {
+    "id": "sv10-212",
+    "name": "Electivire ex",
+    "setId": "sv10",
+    "number": "212",
+    "numberInt": 212,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      466
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 280,
+    "subtypes": [
+      "Stage 1",
+      "ex"
+    ],
+    "evolvesFrom": "Electabuzz",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/212.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/212_hires.png"
+  },
+  {
+    "id": "sv10-213",
+    "name": "Team Rocket's Mewtwo ex",
+    "setId": "sv10",
+    "number": "213",
+    "numberInt": 213,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      150
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 280,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/213.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/213_hires.png"
+  },
+  {
+    "id": "sv10-214",
+    "name": "Regirock ex",
+    "setId": "sv10",
+    "number": "214",
+    "numberInt": 214,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      377
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 230,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/214.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/214_hires.png"
+  },
+  {
+    "id": "sv10-215",
+    "name": "Cynthia's Garchomp ex",
+    "setId": "sv10",
+    "number": "215",
+    "numberInt": 215,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      445
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 330,
+    "subtypes": [
+      "Stage 2",
+      "ex"
+    ],
+    "evolvesFrom": "Cynthia's Gabite",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/215.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/215_hires.png"
+  },
+  {
+    "id": "sv10-216",
+    "name": "Team Rocket's Nidoking ex",
+    "setId": "sv10",
+    "number": "216",
+    "numberInt": 216,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      34
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 330,
+    "subtypes": [
+      "Stage 2",
+      "ex"
+    ],
+    "evolvesFrom": "Team Rocket's Nidorino",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/216.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/216_hires.png"
+  },
+  {
+    "id": "sv10-217",
+    "name": "Team Rocket's Crobat ex",
+    "setId": "sv10",
+    "number": "217",
+    "numberInt": 217,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      169
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 310,
+    "subtypes": [
+      "Stage 2",
+      "ex"
+    ],
+    "evolvesFrom": "Team Rocket's Golbat",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/217.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/217_hires.png"
+  },
+  {
+    "id": "sv10-218",
+    "name": "Arven's Mabosstiff ex",
+    "setId": "sv10",
+    "number": "218",
+    "numberInt": 218,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      943
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 270,
+    "subtypes": [
+      "Stage 1",
+      "ex"
+    ],
+    "evolvesFrom": "Arven's Maschiff",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/218.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/218_hires.png"
+  },
+  {
+    "id": "sv10-219",
+    "name": "Team Rocket's Persian ex",
+    "setId": "sv10",
+    "number": "219",
+    "numberInt": 219,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      53
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 260,
+    "subtypes": [
+      "Stage 1",
+      "ex"
+    ],
+    "evolvesFrom": "Team Rocket's Meowth",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/219.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/219_hires.png"
+  },
+  {
+    "id": "sv10-228",
+    "name": "Yanmega ex",
+    "setId": "sv10",
+    "number": "228",
+    "numberInt": 228,
+    "rarity": "SpecialIllustrationRare",
+    "rarityRaw": "Special Illustration Rare",
+    "dex": [
+      469
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 280,
+    "subtypes": [
+      "Stage 1",
+      "ex"
+    ],
+    "evolvesFrom": "Yanma",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/228.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/228_hires.png"
+  },
+  {
+    "id": "sv10-229",
+    "name": "Team Rocket's Moltres ex",
+    "setId": "sv10",
+    "number": "229",
+    "numberInt": 229,
+    "rarity": "SpecialIllustrationRare",
+    "rarityRaw": "Special Illustration Rare",
+    "dex": [
+      146
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 220,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/229.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/229_hires.png"
+  },
+  {
+    "id": "sv10-230",
+    "name": "Ethan's Ho-Oh ex",
+    "setId": "sv10",
+    "number": "230",
+    "numberInt": 230,
+    "rarity": "SpecialIllustrationRare",
+    "rarityRaw": "Special Illustration Rare",
+    "dex": [
+      250
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 230,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/230.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/230_hires.png"
+  },
+  {
+    "id": "sv10-231",
+    "name": "Team Rocket's Mewtwo ex",
+    "setId": "sv10",
+    "number": "231",
+    "numberInt": 231,
+    "rarity": "SpecialIllustrationRare",
+    "rarityRaw": "Special Illustration Rare",
+    "dex": [
+      150
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 280,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/231.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/231_hires.png"
+  },
+  {
+    "id": "sv10-232",
+    "name": "Cynthia's Garchomp ex",
+    "setId": "sv10",
+    "number": "232",
+    "numberInt": 232,
+    "rarity": "SpecialIllustrationRare",
+    "rarityRaw": "Special Illustration Rare",
+    "dex": [
+      445
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 330,
+    "subtypes": [
+      "Stage 2",
+      "ex"
+    ],
+    "evolvesFrom": "Cynthia's Gabite",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/232.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/232_hires.png"
+  },
+  {
+    "id": "sv10-233",
+    "name": "Team Rocket's Nidoking ex",
+    "setId": "sv10",
+    "number": "233",
+    "numberInt": 233,
+    "rarity": "SpecialIllustrationRare",
+    "rarityRaw": "Special Illustration Rare",
+    "dex": [
+      34
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 330,
+    "subtypes": [
+      "Stage 2",
+      "ex"
+    ],
+    "evolvesFrom": "Team Rocket's Nidorino",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/233.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/233_hires.png"
+  },
+  {
+    "id": "sv10-234",
+    "name": "Team Rocket's Crobat ex",
+    "setId": "sv10",
+    "number": "234",
+    "numberInt": 234,
+    "rarity": "SpecialIllustrationRare",
+    "rarityRaw": "Special Illustration Rare",
+    "dex": [
+      169
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 310,
+    "subtypes": [
+      "Stage 2",
+      "ex"
+    ],
+    "evolvesFrom": "Team Rocket's Golbat",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/234.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/234_hires.png"
+  },
+  {
+    "id": "sv10-235",
+    "name": "Arven's Mabosstiff ex",
+    "setId": "sv10",
+    "number": "235",
+    "numberInt": 235,
+    "rarity": "SpecialIllustrationRare",
+    "rarityRaw": "Special Illustration Rare",
+    "dex": [
+      943
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 270,
+    "subtypes": [
+      "Stage 1",
+      "ex"
+    ],
+    "evolvesFrom": "Arven's Maschiff",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/235.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/235_hires.png"
+  },
+  {
+    "id": "sv10-239",
+    "name": "Ethan's Ho-Oh ex",
+    "setId": "sv10",
+    "number": "239",
+    "numberInt": 239,
+    "rarity": "HyperRare",
+    "rarityRaw": "Hyper Rare",
+    "dex": [
+      250
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 230,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/239.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/239_hires.png"
+  },
+  {
+    "id": "sv10-240",
+    "name": "Team Rocket's Mewtwo ex",
+    "setId": "sv10",
+    "number": "240",
+    "numberInt": 240,
+    "rarity": "HyperRare",
+    "rarityRaw": "Hyper Rare",
+    "dex": [
+      150
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 280,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/240.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/240_hires.png"
+  },
+  {
+    "id": "sv10-241",
+    "name": "Cynthia's Garchomp ex",
+    "setId": "sv10",
+    "number": "241",
+    "numberInt": 241,
+    "rarity": "HyperRare",
+    "rarityRaw": "Hyper Rare",
+    "dex": [
+      445
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 330,
+    "subtypes": [
+      "Stage 2",
+      "ex"
+    ],
+    "evolvesFrom": "Cynthia's Gabite",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/241.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/241_hires.png"
+  },
+  {
+    "id": "sv10-242",
+    "name": "Team Rocket's Crobat ex",
+    "setId": "sv10",
+    "number": "242",
+    "numberInt": 242,
+    "rarity": "HyperRare",
+    "rarityRaw": "Hyper Rare",
+    "dex": [
+      169
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 310,
+    "subtypes": [
+      "Stage 2",
+      "ex"
+    ],
+    "evolvesFrom": "Team Rocket's Golbat",
+    "regulationMark": "I",
+    "imageSmall": "https://images.pokemontcg.io/sv10/242.png",
+    "imageLarge": "https://images.pokemontcg.io/sv10/242_hires.png"
+  }
+]

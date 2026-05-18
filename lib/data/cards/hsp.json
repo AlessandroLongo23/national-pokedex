@@ -1,0 +1,538 @@
+[
+  {
+    "id": "hsp-HGSS01",
+    "name": "Ho-Oh",
+    "setId": "hsp",
+    "number": "HGSS01",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      250
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Takashi Yamaguchi",
+    "imageSmall": "https://images.pokemontcg.io/hsp/HGSS01.png",
+    "imageLarge": "https://images.pokemontcg.io/hsp/HGSS01_hires.png"
+  },
+  {
+    "id": "hsp-HGSS02",
+    "name": "Lugia",
+    "setId": "hsp",
+    "number": "HGSS02",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      249
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Takashi Yamaguchi",
+    "imageSmall": "https://images.pokemontcg.io/hsp/HGSS02.png",
+    "imageLarge": "https://images.pokemontcg.io/hsp/HGSS02_hires.png"
+  },
+  {
+    "id": "hsp-HGSS03",
+    "name": "Pikachu",
+    "setId": "hsp",
+    "number": "HGSS03",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      25
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kanako Eo",
+    "imageSmall": "https://images.pokemontcg.io/hsp/HGSS03.png",
+    "imageLarge": "https://images.pokemontcg.io/hsp/HGSS03_hires.png"
+  },
+  {
+    "id": "hsp-HGSS04",
+    "name": "Wobbuffet",
+    "setId": "hsp",
+    "number": "HGSS04",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      202
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "match",
+    "imageSmall": "https://images.pokemontcg.io/hsp/HGSS04.png",
+    "imageLarge": "https://images.pokemontcg.io/hsp/HGSS04_hires.png"
+  },
+  {
+    "id": "hsp-HGSS05",
+    "name": "Hoothoot",
+    "setId": "hsp",
+    "number": "HGSS05",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      163
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/hsp/HGSS05.png",
+    "imageLarge": "https://images.pokemontcg.io/hsp/HGSS05_hires.png"
+  },
+  {
+    "id": "hsp-HGSS06",
+    "name": "Noctowl",
+    "setId": "hsp",
+    "number": "HGSS06",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      164
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Hoothoot",
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/hsp/HGSS06.png",
+    "imageLarge": "https://images.pokemontcg.io/hsp/HGSS06_hires.png"
+  },
+  {
+    "id": "hsp-HGSS07",
+    "name": "Feraligatr",
+    "setId": "hsp",
+    "number": "HGSS07",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      160
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 2",
+      "Prime"
+    ],
+    "evolvesFrom": "Croconaw",
+    "artist": "Kent Kanetsuna",
+    "imageSmall": "https://images.pokemontcg.io/hsp/HGSS07.png",
+    "imageLarge": "https://images.pokemontcg.io/hsp/HGSS07_hires.png"
+  },
+  {
+    "id": "hsp-HGSS08",
+    "name": "Meganium",
+    "setId": "hsp",
+    "number": "HGSS08",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      154
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Stage 2",
+      "Prime"
+    ],
+    "evolvesFrom": "Bayleef",
+    "artist": "Noriko Hotta",
+    "imageSmall": "https://images.pokemontcg.io/hsp/HGSS08.png",
+    "imageLarge": "https://images.pokemontcg.io/hsp/HGSS08_hires.png"
+  },
+  {
+    "id": "hsp-HGSS09",
+    "name": "Typhlosion",
+    "setId": "hsp",
+    "number": "HGSS09",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      157
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 2",
+      "Prime"
+    ],
+    "evolvesFrom": "Quilava",
+    "artist": "Wataru Kawahara",
+    "imageSmall": "https://images.pokemontcg.io/hsp/HGSS09.png",
+    "imageLarge": "https://images.pokemontcg.io/hsp/HGSS09_hires.png"
+  },
+  {
+    "id": "hsp-HGSS10",
+    "name": "Latias",
+    "setId": "hsp",
+    "number": "HGSS10",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      380
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Wataru Kawahara",
+    "imageSmall": "https://images.pokemontcg.io/hsp/HGSS10.png",
+    "imageLarge": "https://images.pokemontcg.io/hsp/HGSS10_hires.png"
+  },
+  {
+    "id": "hsp-HGSS11",
+    "name": "Latios",
+    "setId": "hsp",
+    "number": "HGSS11",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      381
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Wataru Kawahara",
+    "imageSmall": "https://images.pokemontcg.io/hsp/HGSS11.png",
+    "imageLarge": "https://images.pokemontcg.io/hsp/HGSS11_hires.png"
+  },
+  {
+    "id": "hsp-HGSS12",
+    "name": "Cleffa",
+    "setId": "hsp",
+    "number": "HGSS12",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      173
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 30,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/hsp/HGSS12.png",
+    "imageLarge": "https://images.pokemontcg.io/hsp/HGSS12_hires.png"
+  },
+  {
+    "id": "hsp-HGSS13",
+    "name": "Smoochum",
+    "setId": "hsp",
+    "number": "HGSS13",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      238
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 30,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Midori Harada",
+    "imageSmall": "https://images.pokemontcg.io/hsp/HGSS13.png",
+    "imageLarge": "https://images.pokemontcg.io/hsp/HGSS13_hires.png"
+  },
+  {
+    "id": "hsp-HGSS14",
+    "name": "Lapras",
+    "setId": "hsp",
+    "number": "HGSS14",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      131
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/hsp/HGSS14.png",
+    "imageLarge": "https://images.pokemontcg.io/hsp/HGSS14_hires.png"
+  },
+  {
+    "id": "hsp-HGSS15",
+    "name": "Shuckle",
+    "setId": "hsp",
+    "number": "HGSS15",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      213
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "match",
+    "imageSmall": "https://images.pokemontcg.io/hsp/HGSS15.png",
+    "imageLarge": "https://images.pokemontcg.io/hsp/HGSS15_hires.png"
+  },
+  {
+    "id": "hsp-HGSS16",
+    "name": "Plusle",
+    "setId": "hsp",
+    "number": "HGSS16",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      311
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/hsp/HGSS16.png",
+    "imageLarge": "https://images.pokemontcg.io/hsp/HGSS16_hires.png"
+  },
+  {
+    "id": "hsp-HGSS17",
+    "name": "Minun",
+    "setId": "hsp",
+    "number": "HGSS17",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      312
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/hsp/HGSS17.png",
+    "imageLarge": "https://images.pokemontcg.io/hsp/HGSS17_hires.png"
+  },
+  {
+    "id": "hsp-HGSS19",
+    "name": "Raikou",
+    "setId": "hsp",
+    "number": "HGSS19",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      243
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Noriko Hotta",
+    "imageSmall": "https://images.pokemontcg.io/hsp/HGSS19.png",
+    "imageLarge": "https://images.pokemontcg.io/hsp/HGSS19_hires.png"
+  },
+  {
+    "id": "hsp-HGSS20",
+    "name": "Entei",
+    "setId": "hsp",
+    "number": "HGSS20",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      244
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Yuri Umemura",
+    "imageSmall": "https://images.pokemontcg.io/hsp/HGSS20.png",
+    "imageLarge": "https://images.pokemontcg.io/hsp/HGSS20_hires.png"
+  },
+  {
+    "id": "hsp-HGSS21",
+    "name": "Suicune",
+    "setId": "hsp",
+    "number": "HGSS21",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      245
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Hideaki Hakozaki",
+    "imageSmall": "https://images.pokemontcg.io/hsp/HGSS21.png",
+    "imageLarge": "https://images.pokemontcg.io/hsp/HGSS21_hires.png"
+  },
+  {
+    "id": "hsp-HGSS22",
+    "name": "Porygon",
+    "setId": "hsp",
+    "number": "HGSS22",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      137
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "TOKIYA",
+    "imageSmall": "https://images.pokemontcg.io/hsp/HGSS22.png",
+    "imageLarge": "https://images.pokemontcg.io/hsp/HGSS22_hires.png"
+  },
+  {
+    "id": "hsp-HGSS23",
+    "name": "Porygon2",
+    "setId": "hsp",
+    "number": "HGSS23",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      233
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Porygon",
+    "artist": "TOKIYA",
+    "imageSmall": "https://images.pokemontcg.io/hsp/HGSS23.png",
+    "imageLarge": "https://images.pokemontcg.io/hsp/HGSS23_hires.png"
+  },
+  {
+    "id": "hsp-HGSS24",
+    "name": "Hitmonchan",
+    "setId": "hsp",
+    "number": "HGSS24",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      107
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/hsp/HGSS24.png",
+    "imageLarge": "https://images.pokemontcg.io/hsp/HGSS24_hires.png"
+  },
+  {
+    "id": "hsp-HGSS25",
+    "name": "Hitmonlee",
+    "setId": "hsp",
+    "number": "HGSS25",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      106
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/hsp/HGSS25.png",
+    "imageLarge": "https://images.pokemontcg.io/hsp/HGSS25_hires.png"
+  }
+]

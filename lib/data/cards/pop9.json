@@ -1,0 +1,380 @@
+[
+  {
+    "id": "pop9-1",
+    "name": "Garchomp",
+    "setId": "pop9",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      445
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Gabite",
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/pop9/1.png",
+    "imageLarge": "https://images.pokemontcg.io/pop9/1_hires.png"
+  },
+  {
+    "id": "pop9-2",
+    "name": "Manaphy",
+    "setId": "pop9",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      490
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/pop9/2.png",
+    "imageLarge": "https://images.pokemontcg.io/pop9/2_hires.png"
+  },
+  {
+    "id": "pop9-3",
+    "name": "Raichu",
+    "setId": "pop9",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      26
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Pikachu",
+    "artist": "Midori Harada",
+    "imageSmall": "https://images.pokemontcg.io/pop9/3.png",
+    "imageLarge": "https://images.pokemontcg.io/pop9/3_hires.png"
+  },
+  {
+    "id": "pop9-4",
+    "name": "Regigigas",
+    "setId": "pop9",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      486
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kent Kanetsuna",
+    "imageSmall": "https://images.pokemontcg.io/pop9/4.png",
+    "imageLarge": "https://images.pokemontcg.io/pop9/4_hires.png"
+  },
+  {
+    "id": "pop9-5",
+    "name": "Rotom",
+    "setId": "pop9",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      479
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/pop9/5.png",
+    "imageLarge": "https://images.pokemontcg.io/pop9/5_hires.png"
+  },
+  {
+    "id": "pop9-6",
+    "name": "Buizel",
+    "setId": "pop9",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      418
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Midori Harada",
+    "imageSmall": "https://images.pokemontcg.io/pop9/6.png",
+    "imageLarge": "https://images.pokemontcg.io/pop9/6_hires.png"
+  },
+  {
+    "id": "pop9-7",
+    "name": "Croagunk",
+    "setId": "pop9",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      453
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Midori Harada",
+    "imageSmall": "https://images.pokemontcg.io/pop9/7.png",
+    "imageLarge": "https://images.pokemontcg.io/pop9/7_hires.png"
+  },
+  {
+    "id": "pop9-8",
+    "name": "Gabite",
+    "setId": "pop9",
+    "number": "8",
+    "numberInt": 8,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      444
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Gible",
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/pop9/8.png",
+    "imageLarge": "https://images.pokemontcg.io/pop9/8_hires.png"
+  },
+  {
+    "id": "pop9-9",
+    "name": "Lopunny",
+    "setId": "pop9",
+    "number": "9",
+    "numberInt": 9,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      428
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Buneary",
+    "artist": "Midori Harada",
+    "imageSmall": "https://images.pokemontcg.io/pop9/9.png",
+    "imageLarge": "https://images.pokemontcg.io/pop9/9_hires.png"
+  },
+  {
+    "id": "pop9-10",
+    "name": "Pachirisu",
+    "setId": "pop9",
+    "number": "10",
+    "numberInt": 10,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      417
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Midori Harada",
+    "imageSmall": "https://images.pokemontcg.io/pop9/10.png",
+    "imageLarge": "https://images.pokemontcg.io/pop9/10_hires.png"
+  },
+  {
+    "id": "pop9-11",
+    "name": "Pichu",
+    "setId": "pop9",
+    "number": "11",
+    "numberInt": 11,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      172
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Midori Harada",
+    "imageSmall": "https://images.pokemontcg.io/pop9/11.png",
+    "imageLarge": "https://images.pokemontcg.io/pop9/11_hires.png"
+  },
+  {
+    "id": "pop9-12",
+    "name": "Buneary",
+    "setId": "pop9",
+    "number": "12",
+    "numberInt": 12,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      427
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Midori Harada",
+    "imageSmall": "https://images.pokemontcg.io/pop9/12.png",
+    "imageLarge": "https://images.pokemontcg.io/pop9/12_hires.png"
+  },
+  {
+    "id": "pop9-13",
+    "name": "Chimchar",
+    "setId": "pop9",
+    "number": "13",
+    "numberInt": 13,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      390
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Midori Harada",
+    "imageSmall": "https://images.pokemontcg.io/pop9/13.png",
+    "imageLarge": "https://images.pokemontcg.io/pop9/13_hires.png"
+  },
+  {
+    "id": "pop9-14",
+    "name": "Gible",
+    "setId": "pop9",
+    "number": "14",
+    "numberInt": 14,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      443
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Hiroki Fuchino",
+    "imageSmall": "https://images.pokemontcg.io/pop9/14.png",
+    "imageLarge": "https://images.pokemontcg.io/pop9/14_hires.png"
+  },
+  {
+    "id": "pop9-15",
+    "name": "Pikachu",
+    "setId": "pop9",
+    "number": "15",
+    "numberInt": 15,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      25
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Midori Harada",
+    "imageSmall": "https://images.pokemontcg.io/pop9/15.png",
+    "imageLarge": "https://images.pokemontcg.io/pop9/15_hires.png"
+  },
+  {
+    "id": "pop9-16",
+    "name": "Piplup",
+    "setId": "pop9",
+    "number": "16",
+    "numberInt": 16,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      393
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Midori Harada",
+    "imageSmall": "https://images.pokemontcg.io/pop9/16.png",
+    "imageLarge": "https://images.pokemontcg.io/pop9/16_hires.png"
+  },
+  {
+    "id": "pop9-17",
+    "name": "Turtwig",
+    "setId": "pop9",
+    "number": "17",
+    "numberInt": 17,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      387
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Midori Harada",
+    "imageSmall": "https://images.pokemontcg.io/pop9/17.png",
+    "imageLarge": "https://images.pokemontcg.io/pop9/17_hires.png"
+  }
+]

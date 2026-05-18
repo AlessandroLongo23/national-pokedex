@@ -1,0 +1,1159 @@
+[
+  {
+    "id": "dpp-DP01",
+    "name": "Turtwig",
+    "setId": "dpp",
+    "number": "DP01",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      387
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP01.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP01_hires.png"
+  },
+  {
+    "id": "dpp-DP02",
+    "name": "Chimchar",
+    "setId": "dpp",
+    "number": "DP02",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      390
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP02.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP02_hires.png"
+  },
+  {
+    "id": "dpp-DP03",
+    "name": "Piplup",
+    "setId": "dpp",
+    "number": "DP03",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      393
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP03.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP03_hires.png"
+  },
+  {
+    "id": "dpp-DP04",
+    "name": "Pachirisu",
+    "setId": "dpp",
+    "number": "DP04",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      417
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP04.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP04_hires.png"
+  },
+  {
+    "id": "dpp-DP06",
+    "name": "Buneary",
+    "setId": "dpp",
+    "number": "DP06",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      427
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP06.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP06_hires.png"
+  },
+  {
+    "id": "dpp-DP07",
+    "name": "Cranidos",
+    "setId": "dpp",
+    "number": "DP07",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      408
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Skull Fossil",
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP07.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP07_hires.png"
+  },
+  {
+    "id": "dpp-DP08",
+    "name": "Shieldon",
+    "setId": "dpp",
+    "number": "DP08",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      410
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Armor Fossil",
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP08.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP08_hires.png"
+  },
+  {
+    "id": "dpp-DP09",
+    "name": "Torterra LV.X",
+    "setId": "dpp",
+    "number": "DP09",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      389
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 160,
+    "subtypes": [
+      "Level-Up"
+    ],
+    "evolvesFrom": "Torterra",
+    "artist": "Shizurow",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP09.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP09_hires.png"
+  },
+  {
+    "id": "dpp-DP10",
+    "name": "Infernape LV.X",
+    "setId": "dpp",
+    "number": "DP10",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      392
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Level-Up"
+    ],
+    "evolvesFrom": "Infernape",
+    "artist": "Shizurow",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP10.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP10_hires.png"
+  },
+  {
+    "id": "dpp-DP11",
+    "name": "Empoleon LV.X",
+    "setId": "dpp",
+    "number": "DP11",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      395
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Level-Up"
+    ],
+    "evolvesFrom": "Empoleon",
+    "artist": "Shizurow",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP11.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP11_hires.png"
+  },
+  {
+    "id": "dpp-DP12",
+    "name": "Lucario LV.X",
+    "setId": "dpp",
+    "number": "DP12",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      448
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Level-Up"
+    ],
+    "evolvesFrom": "Lucario",
+    "artist": "Ryo Ueda",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP12.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP12_hires.png"
+  },
+  {
+    "id": "dpp-DP13",
+    "name": "Buizel",
+    "setId": "dpp",
+    "number": "DP13",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      418
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP13.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP13_hires.png"
+  },
+  {
+    "id": "dpp-DP14",
+    "name": "Chatot",
+    "setId": "dpp",
+    "number": "DP14",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      441
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP14.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP14_hires.png"
+  },
+  {
+    "id": "dpp-DP15",
+    "name": "Shinx",
+    "setId": "dpp",
+    "number": "DP15",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      403
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP15.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP15_hires.png"
+  },
+  {
+    "id": "dpp-DP16",
+    "name": "Pikachu",
+    "setId": "dpp",
+    "number": "DP16",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      25
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Sumiyoshi Kizuki",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP16.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP16_hires.png"
+  },
+  {
+    "id": "dpp-DP17",
+    "name": "Dialga LV.X",
+    "setId": "dpp",
+    "number": "DP17",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      483
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Level-Up"
+    ],
+    "evolvesFrom": "Dialga",
+    "artist": "Ryo Ueda",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP17.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP17_hires.png"
+  },
+  {
+    "id": "dpp-DP18",
+    "name": "Palkia LV.X",
+    "setId": "dpp",
+    "number": "DP18",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      484
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Level-Up"
+    ],
+    "evolvesFrom": "Palkia",
+    "artist": "Ryo Ueda",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP18.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP18_hires.png"
+  },
+  {
+    "id": "dpp-DP19",
+    "name": "Darkrai LV.X",
+    "setId": "dpp",
+    "number": "DP19",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      491
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Level-Up"
+    ],
+    "evolvesFrom": "Darkrai",
+    "artist": "Shizurow",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP19.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP19_hires.png"
+  },
+  {
+    "id": "dpp-DP20",
+    "name": "Magmortar",
+    "setId": "dpp",
+    "number": "DP20",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      467
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Magmar",
+    "artist": "Daisuke Ito",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP20.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP20_hires.png"
+  },
+  {
+    "id": "dpp-DP21",
+    "name": "Raichu",
+    "setId": "dpp",
+    "number": "DP21",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      26
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Pikachu",
+    "artist": "Daisuke Ito",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP21.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP21_hires.png"
+  },
+  {
+    "id": "dpp-DP22",
+    "name": "Mime Jr.",
+    "setId": "dpp",
+    "number": "DP22",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      439
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP22.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP22_hires.png"
+  },
+  {
+    "id": "dpp-DP23",
+    "name": "Glameow",
+    "setId": "dpp",
+    "number": "DP23",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      431
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP23.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP23_hires.png"
+  },
+  {
+    "id": "dpp-DP24",
+    "name": "Darkrai",
+    "setId": "dpp",
+    "number": "DP24",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      491
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP24.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP24_hires.png"
+  },
+  {
+    "id": "dpp-DP26",
+    "name": "Dialga",
+    "setId": "dpp",
+    "number": "DP26",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      483
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kazuyuki Kano",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP26.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP26_hires.png"
+  },
+  {
+    "id": "dpp-DP27",
+    "name": "Palkia",
+    "setId": "dpp",
+    "number": "DP27",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      484
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Daisuke Ito",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP27.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP27_hires.png"
+  },
+  {
+    "id": "dpp-DP28",
+    "name": "Mewtwo LV.X",
+    "setId": "dpp",
+    "number": "DP28",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      150
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Level-Up"
+    ],
+    "evolvesFrom": "Mewtwo",
+    "artist": "Shizurow",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP28.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP28_hires.png"
+  },
+  {
+    "id": "dpp-DP29",
+    "name": "Rhyperior LV.X",
+    "setId": "dpp",
+    "number": "DP29",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      464
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 170,
+    "subtypes": [
+      "Level-Up"
+    ],
+    "evolvesFrom": "Rhyperior",
+    "artist": "Ryo Ueda",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP29.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP29_hires.png"
+  },
+  {
+    "id": "dpp-DP30",
+    "name": "Regigigas LV.X",
+    "setId": "dpp",
+    "number": "DP30",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      486
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Level-Up"
+    ],
+    "evolvesFrom": "Regigigas",
+    "artist": "Shizurow",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP30.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP30_hires.png"
+  },
+  {
+    "id": "dpp-DP31",
+    "name": "Heatran LV.X",
+    "setId": "dpp",
+    "number": "DP31",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      485
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Level-Up"
+    ],
+    "evolvesFrom": "Heatran",
+    "artist": "Shizurow",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP31.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP31_hires.png"
+  },
+  {
+    "id": "dpp-DP32",
+    "name": "Magnezone",
+    "setId": "dpp",
+    "number": "DP32",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      462
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Magneton",
+    "artist": "Kent Kanetsuna",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP32.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP32_hires.png"
+  },
+  {
+    "id": "dpp-DP33",
+    "name": "Dusknoir",
+    "setId": "dpp",
+    "number": "DP33",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      477
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Dusclops",
+    "artist": "Kent Kanetsuna",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP33.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP33_hires.png"
+  },
+  {
+    "id": "dpp-DP34",
+    "name": "Drifblim",
+    "setId": "dpp",
+    "number": "DP34",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      426
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Drifloon",
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP34.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP34_hires.png"
+  },
+  {
+    "id": "dpp-DP35",
+    "name": "Porygon-Z",
+    "setId": "dpp",
+    "number": "DP35",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      474
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Porygon2",
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP35.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP35_hires.png"
+  },
+  {
+    "id": "dpp-DP36",
+    "name": "Gliscor",
+    "setId": "dpp",
+    "number": "DP36",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      472
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Gligar",
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP36.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP36_hires.png"
+  },
+  {
+    "id": "dpp-DP37",
+    "name": "Dialga LV.X",
+    "setId": "dpp",
+    "number": "DP37",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      483
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Level-Up"
+    ],
+    "evolvesFrom": "Dialga",
+    "artist": "Ryo Ueda",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP37.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP37_hires.png"
+  },
+  {
+    "id": "dpp-DP38",
+    "name": "Giratina LV.X",
+    "setId": "dpp",
+    "number": "DP38",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      487
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Level-Up"
+    ],
+    "evolvesFrom": "Giratina",
+    "artist": "Shizurow",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP38.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP38_hires.png"
+  },
+  {
+    "id": "dpp-DP39",
+    "name": "Shaymin LV.X",
+    "setId": "dpp",
+    "number": "DP39",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      492
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Level-Up"
+    ],
+    "evolvesFrom": "Shaymin",
+    "artist": "Shizurow",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP39.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP39_hires.png"
+  },
+  {
+    "id": "dpp-DP40",
+    "name": "Regigigas",
+    "setId": "dpp",
+    "number": "DP40",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      486
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP40.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP40_hires.png"
+  },
+  {
+    "id": "dpp-DP41",
+    "name": "Toxicroak G",
+    "setId": "dpp",
+    "number": "DP41",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      454
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic",
+      "SP"
+    ],
+    "artist": "Ryota Saito",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP41.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP41_hires.png"
+  },
+  {
+    "id": "dpp-DP42",
+    "name": "Carnivine G",
+    "setId": "dpp",
+    "number": "DP42",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      455
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic",
+      "SP"
+    ],
+    "artist": "Makoto Imai",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP42.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP42_hires.png"
+  },
+  {
+    "id": "dpp-DP43",
+    "name": "Probopass G",
+    "setId": "dpp",
+    "number": "DP43",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      476
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic",
+      "SP"
+    ],
+    "artist": "Ryota Saito",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP43.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP43_hires.png"
+  },
+  {
+    "id": "dpp-DP44",
+    "name": "Magnezone",
+    "setId": "dpp",
+    "number": "DP44",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      462
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Magneton",
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP44.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP44_hires.png"
+  },
+  {
+    "id": "dpp-DP45",
+    "name": "Charizard G LV.X",
+    "setId": "dpp",
+    "number": "DP45",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      6
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Level-Up",
+      "SP"
+    ],
+    "evolvesFrom": "Charizard G",
+    "artist": "Wataru Kawahara",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP45.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP45_hires.png"
+  },
+  {
+    "id": "dpp-DP46",
+    "name": "Garchomp C LV.X",
+    "setId": "dpp",
+    "number": "DP46",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      445
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Level-Up",
+      "SP"
+    ],
+    "evolvesFrom": "Garchomp C",
+    "artist": "Shizurow",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP46.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP46_hires.png"
+  },
+  {
+    "id": "dpp-DP47",
+    "name": "Rayquaza C LV.X",
+    "setId": "dpp",
+    "number": "DP47",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      384
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Level-Up",
+      "SP"
+    ],
+    "evolvesFrom": "Rayquaza C",
+    "artist": "Shizurow",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP47.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP47_hires.png"
+  },
+  {
+    "id": "dpp-DP49",
+    "name": "Dialga",
+    "setId": "dpp",
+    "number": "DP49",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      483
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP49.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP49_hires.png"
+  },
+  {
+    "id": "dpp-DP50",
+    "name": "Arceus",
+    "setId": "dpp",
+    "number": "DP50",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      493
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kunihiko Yuyama",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP50.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP50_hires.png"
+  },
+  {
+    "id": "dpp-DP51",
+    "name": "Cresselia",
+    "setId": "dpp",
+    "number": "DP51",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      488
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Wataru Kawahara",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP51.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP51_hires.png"
+  },
+  {
+    "id": "dpp-DP52",
+    "name": "Darkrai",
+    "setId": "dpp",
+    "number": "DP52",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      491
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Wataru Kawahara",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP52.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP52_hires.png"
+  },
+  {
+    "id": "dpp-DP53",
+    "name": "Arceus LV.X",
+    "setId": "dpp",
+    "number": "DP53",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      493
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Level-Up"
+    ],
+    "evolvesFrom": "Arceus",
+    "artist": "Shizurow",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP53.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP53_hires.png"
+  },
+  {
+    "id": "dpp-DP56",
+    "name": "Arceus LV.X",
+    "setId": "dpp",
+    "number": "DP56",
+    "numberInt": 9999,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      493
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Level-Up"
+    ],
+    "evolvesFrom": "Arceus",
+    "artist": "Ryo Ueda",
+    "imageSmall": "https://images.pokemontcg.io/dpp/DP56.png",
+    "imageLarge": "https://images.pokemontcg.io/dpp/DP56_hires.png"
+  }
+]

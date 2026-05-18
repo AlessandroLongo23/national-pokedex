@@ -1,0 +1,809 @@
+[
+  {
+    "id": "np-1",
+    "name": "Kyogre ex",
+    "setId": "np",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      382
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Basic",
+      "EX"
+    ],
+    "artist": "Hiromichi Sugiyama",
+    "imageSmall": "https://images.pokemontcg.io/np/1.png",
+    "imageLarge": "https://images.pokemontcg.io/np/1_hires.png"
+  },
+  {
+    "id": "np-2",
+    "name": "Groudon ex",
+    "setId": "np",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      383
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Basic",
+      "EX"
+    ],
+    "artist": "Kazuo Yazawa",
+    "imageSmall": "https://images.pokemontcg.io/np/2.png",
+    "imageLarge": "https://images.pokemontcg.io/np/2_hires.png"
+  },
+  {
+    "id": "np-3",
+    "name": "Treecko",
+    "setId": "np",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      252
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/np/3.png",
+    "imageLarge": "https://images.pokemontcg.io/np/3_hires.png"
+  },
+  {
+    "id": "np-4",
+    "name": "Grovyle",
+    "setId": "np",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      253
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Treecko",
+    "artist": "Midori Harada",
+    "imageSmall": "https://images.pokemontcg.io/np/4.png",
+    "imageLarge": "https://images.pokemontcg.io/np/4_hires.png"
+  },
+  {
+    "id": "np-5",
+    "name": "Mudkip",
+    "setId": "np",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      258
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/np/5.png",
+    "imageLarge": "https://images.pokemontcg.io/np/5_hires.png"
+  },
+  {
+    "id": "np-6",
+    "name": "Torchic",
+    "setId": "np",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      255
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/np/6.png",
+    "imageLarge": "https://images.pokemontcg.io/np/6_hires.png"
+  },
+  {
+    "id": "np-7",
+    "name": "Treecko",
+    "setId": "np",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      252
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/np/7.png",
+    "imageLarge": "https://images.pokemontcg.io/np/7_hires.png"
+  },
+  {
+    "id": "np-8",
+    "name": "Torchic",
+    "setId": "np",
+    "number": "8",
+    "numberInt": 8,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      255
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/np/8.png",
+    "imageLarge": "https://images.pokemontcg.io/np/8_hires.png"
+  },
+  {
+    "id": "np-9",
+    "name": "Combusken",
+    "setId": "np",
+    "number": "9",
+    "numberInt": 9,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      256
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Torchic",
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/np/9.png",
+    "imageLarge": "https://images.pokemontcg.io/np/9_hires.png"
+  },
+  {
+    "id": "np-10",
+    "name": "Mudkip",
+    "setId": "np",
+    "number": "10",
+    "numberInt": 10,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      258
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/np/10.png",
+    "imageLarge": "https://images.pokemontcg.io/np/10_hires.png"
+  },
+  {
+    "id": "np-11",
+    "name": "Marshtomp",
+    "setId": "np",
+    "number": "11",
+    "numberInt": 11,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      259
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Mudkip",
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/np/11.png",
+    "imageLarge": "https://images.pokemontcg.io/np/11_hires.png"
+  },
+  {
+    "id": "np-12",
+    "name": "Pikachu",
+    "setId": "np",
+    "number": "12",
+    "numberInt": 12,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      25
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/np/12.png",
+    "imageLarge": "https://images.pokemontcg.io/np/12_hires.png"
+  },
+  {
+    "id": "np-13",
+    "name": "Meowth",
+    "setId": "np",
+    "number": "13",
+    "numberInt": 13,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      52
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/np/13.png",
+    "imageLarge": "https://images.pokemontcg.io/np/13_hires.png"
+  },
+  {
+    "id": "np-14",
+    "name": "Latias",
+    "setId": "np",
+    "number": "14",
+    "numberInt": 14,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      380
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/np/14.png",
+    "imageLarge": "https://images.pokemontcg.io/np/14_hires.png"
+  },
+  {
+    "id": "np-15",
+    "name": "Latios",
+    "setId": "np",
+    "number": "15",
+    "numberInt": 15,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      381
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/np/15.png",
+    "imageLarge": "https://images.pokemontcg.io/np/15_hires.png"
+  },
+  {
+    "id": "np-16",
+    "name": "Treecko",
+    "setId": "np",
+    "number": "16",
+    "numberInt": 16,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      252
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/np/16.png",
+    "imageLarge": "https://images.pokemontcg.io/np/16_hires.png"
+  },
+  {
+    "id": "np-17",
+    "name": "Torchic",
+    "setId": "np",
+    "number": "17",
+    "numberInt": 17,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      255
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/np/17.png",
+    "imageLarge": "https://images.pokemontcg.io/np/17_hires.png"
+  },
+  {
+    "id": "np-18",
+    "name": "Mudkip",
+    "setId": "np",
+    "number": "18",
+    "numberInt": 18,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      258
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/np/18.png",
+    "imageLarge": "https://images.pokemontcg.io/np/18_hires.png"
+  },
+  {
+    "id": "np-19",
+    "name": "Whismur",
+    "setId": "np",
+    "number": "19",
+    "numberInt": 19,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      293
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/np/19.png",
+    "imageLarge": "https://images.pokemontcg.io/np/19_hires.png"
+  },
+  {
+    "id": "np-20",
+    "name": "Ludicolo",
+    "setId": "np",
+    "number": "20",
+    "numberInt": 20,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      272
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Lombre",
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/np/20.png",
+    "imageLarge": "https://images.pokemontcg.io/np/20_hires.png"
+  },
+  {
+    "id": "np-21",
+    "name": "Jirachi",
+    "setId": "np",
+    "number": "21",
+    "numberInt": 21,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      385
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/np/21.png",
+    "imageLarge": "https://images.pokemontcg.io/np/21_hires.png"
+  },
+  {
+    "id": "np-22",
+    "name": "Beldum",
+    "setId": "np",
+    "number": "22",
+    "numberInt": 22,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      374
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/np/22.png",
+    "imageLarge": "https://images.pokemontcg.io/np/22_hires.png"
+  },
+  {
+    "id": "np-23",
+    "name": "Metang",
+    "setId": "np",
+    "number": "23",
+    "numberInt": 23,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      375
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Beldum",
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/np/23.png",
+    "imageLarge": "https://images.pokemontcg.io/np/23_hires.png"
+  },
+  {
+    "id": "np-24",
+    "name": "Chimecho",
+    "setId": "np",
+    "number": "24",
+    "numberInt": 24,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      358
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/np/24.png",
+    "imageLarge": "https://images.pokemontcg.io/np/24_hires.png"
+  },
+  {
+    "id": "np-25",
+    "name": "Flygon",
+    "setId": "np",
+    "number": "25",
+    "numberInt": 25,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      330
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Vibrava",
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/np/25.png",
+    "imageLarge": "https://images.pokemontcg.io/np/25_hires.png"
+  },
+  {
+    "id": "np-29",
+    "name": "Celebi",
+    "setId": "np",
+    "number": "29",
+    "numberInt": 29,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      251
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Hajime Kusajima",
+    "imageSmall": "https://images.pokemontcg.io/np/29.png",
+    "imageLarge": "https://images.pokemontcg.io/np/29_hires.png"
+  },
+  {
+    "id": "np-30",
+    "name": "Suicune",
+    "setId": "np",
+    "number": "30",
+    "numberInt": 30,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      245
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/np/30.png",
+    "imageLarge": "https://images.pokemontcg.io/np/30_hires.png"
+  },
+  {
+    "id": "np-31",
+    "name": "Moltres ex",
+    "setId": "np",
+    "number": "31",
+    "numberInt": 31,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      146
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic",
+      "EX"
+    ],
+    "artist": "Ken Ikuji",
+    "imageSmall": "https://images.pokemontcg.io/np/31.png",
+    "imageLarge": "https://images.pokemontcg.io/np/31_hires.png"
+  },
+  {
+    "id": "np-32",
+    "name": "Articuno ex",
+    "setId": "np",
+    "number": "32",
+    "numberInt": 32,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      144
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic",
+      "EX"
+    ],
+    "artist": "Nakaoka",
+    "imageSmall": "https://images.pokemontcg.io/np/32.png",
+    "imageLarge": "https://images.pokemontcg.io/np/32_hires.png"
+  },
+  {
+    "id": "np-33",
+    "name": "Zapdos ex",
+    "setId": "np",
+    "number": "33",
+    "numberInt": 33,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      145
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic",
+      "EX"
+    ],
+    "artist": "K. Hoshiba",
+    "imageSmall": "https://images.pokemontcg.io/np/33.png",
+    "imageLarge": "https://images.pokemontcg.io/np/33_hires.png"
+  },
+  {
+    "id": "np-34",
+    "name": "Typhlosion",
+    "setId": "np",
+    "number": "34",
+    "numberInt": 34,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      157
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Quilava",
+    "artist": "Hajime Kusajima",
+    "imageSmall": "https://images.pokemontcg.io/np/34.png",
+    "imageLarge": "https://images.pokemontcg.io/np/34_hires.png"
+  },
+  {
+    "id": "np-35",
+    "name": "Pikachu δ",
+    "setId": "np",
+    "number": "35",
+    "numberInt": 35,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      25
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ryo Ueda",
+    "imageSmall": "https://images.pokemontcg.io/np/35.png",
+    "imageLarge": "https://images.pokemontcg.io/np/35_hires.png"
+  },
+  {
+    "id": "np-37",
+    "name": "Kyogre ex",
+    "setId": "np",
+    "number": "37",
+    "numberInt": 37,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      382
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic",
+      "EX"
+    ],
+    "artist": "Ryo Ueda",
+    "imageSmall": "https://images.pokemontcg.io/np/37.png",
+    "imageLarge": "https://images.pokemontcg.io/np/37_hires.png"
+  },
+  {
+    "id": "np-38",
+    "name": "Groudon ex",
+    "setId": "np",
+    "number": "38",
+    "numberInt": 38,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      383
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic",
+      "EX"
+    ],
+    "artist": "Ryo Ueda",
+    "imageSmall": "https://images.pokemontcg.io/np/38.png",
+    "imageLarge": "https://images.pokemontcg.io/np/38_hires.png"
+  },
+  {
+    "id": "np-39",
+    "name": "Rayquaza ex",
+    "setId": "np",
+    "number": "39",
+    "numberInt": 39,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      384
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic",
+      "EX"
+    ],
+    "artist": "Ryo Ueda",
+    "imageSmall": "https://images.pokemontcg.io/np/39.png",
+    "imageLarge": "https://images.pokemontcg.io/np/39_hires.png"
+  },
+  {
+    "id": "np-40",
+    "name": "Mew",
+    "setId": "np",
+    "number": "40",
+    "numberInt": 40,
+    "rarity": "Promo",
+    "rarityRaw": "Promo",
+    "dex": [
+      151
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/np/40.png",
+    "imageLarge": "https://images.pokemontcg.io/np/40_hires.png"
+  }
+]

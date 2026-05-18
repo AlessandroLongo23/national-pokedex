@@ -1,0 +1,316 @@
+[
+  {
+    "id": "pop8-1",
+    "name": "Heatran",
+    "setId": "pop8",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      485
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/pop8/1.png",
+    "imageLarge": "https://images.pokemontcg.io/pop8/1_hires.png"
+  },
+  {
+    "id": "pop8-2",
+    "name": "Lucario",
+    "setId": "pop8",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      448
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Riolu",
+    "artist": "Kent Kanetsuna",
+    "imageSmall": "https://images.pokemontcg.io/pop8/2.png",
+    "imageLarge": "https://images.pokemontcg.io/pop8/2_hires.png"
+  },
+  {
+    "id": "pop8-3",
+    "name": "Luxray",
+    "setId": "pop8",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      405
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Luxio",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/pop8/3.png",
+    "imageLarge": "https://images.pokemontcg.io/pop8/3_hires.png"
+  },
+  {
+    "id": "pop8-4",
+    "name": "Probopass",
+    "setId": "pop8",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      476
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Nosepass",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/pop8/4.png",
+    "imageLarge": "https://images.pokemontcg.io/pop8/4_hires.png"
+  },
+  {
+    "id": "pop8-5",
+    "name": "Yanmega",
+    "setId": "pop8",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      469
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Yanma",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/pop8/5.png",
+    "imageLarge": "https://images.pokemontcg.io/pop8/5_hires.png"
+  },
+  {
+    "id": "pop8-6",
+    "name": "Cherrim",
+    "setId": "pop8",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      421
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Cherubi",
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/pop8/6.png",
+    "imageLarge": "https://images.pokemontcg.io/pop8/6_hires.png"
+  },
+  {
+    "id": "pop8-7",
+    "name": "Carnivine",
+    "setId": "pop8",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      455
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/pop8/7.png",
+    "imageLarge": "https://images.pokemontcg.io/pop8/7_hires.png"
+  },
+  {
+    "id": "pop8-8",
+    "name": "Luxio",
+    "setId": "pop8",
+    "number": "8",
+    "numberInt": 8,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      404
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Shinx",
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/pop8/8.png",
+    "imageLarge": "https://images.pokemontcg.io/pop8/8_hires.png"
+  },
+  {
+    "id": "pop8-12",
+    "name": "Chimchar",
+    "setId": "pop8",
+    "number": "12",
+    "numberInt": 12,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      390
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/pop8/12.png",
+    "imageLarge": "https://images.pokemontcg.io/pop8/12_hires.png"
+  },
+  {
+    "id": "pop8-13",
+    "name": "Croagunk",
+    "setId": "pop8",
+    "number": "13",
+    "numberInt": 13,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      453
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kouki Saitou",
+    "imageSmall": "https://images.pokemontcg.io/pop8/13.png",
+    "imageLarge": "https://images.pokemontcg.io/pop8/13_hires.png"
+  },
+  {
+    "id": "pop8-14",
+    "name": "Happiny",
+    "setId": "pop8",
+    "number": "14",
+    "numberInt": 14,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      440
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Yuka Morii",
+    "imageSmall": "https://images.pokemontcg.io/pop8/14.png",
+    "imageLarge": "https://images.pokemontcg.io/pop8/14_hires.png"
+  },
+  {
+    "id": "pop8-15",
+    "name": "Piplup",
+    "setId": "pop8",
+    "number": "15",
+    "numberInt": 15,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      393
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Nishida",
+    "imageSmall": "https://images.pokemontcg.io/pop8/15.png",
+    "imageLarge": "https://images.pokemontcg.io/pop8/15_hires.png"
+  },
+  {
+    "id": "pop8-16",
+    "name": "Riolu",
+    "setId": "pop8",
+    "number": "16",
+    "numberInt": 16,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      447
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/pop8/16.png",
+    "imageLarge": "https://images.pokemontcg.io/pop8/16_hires.png"
+  },
+  {
+    "id": "pop8-17",
+    "name": "Turtwig",
+    "setId": "pop8",
+    "number": "17",
+    "numberInt": 17,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      387
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/pop8/17.png",
+    "imageLarge": "https://images.pokemontcg.io/pop8/17_hires.png"
+  }
+]

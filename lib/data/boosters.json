@@ -1,0 +1,532 @@
+{
+  "sv1": [
+    {
+      "title": "File:SV1 pack Gyarados.png",
+      "name": "Gyarados",
+      "url": "https://archives.bulbagarden.net/media/upload/d/d1/SV1_pack_Gyarados.png",
+      "width": 780,
+      "height": 1429
+    },
+    {
+      "title": "File:SV1 pack Koraidon.png",
+      "name": "Koraidon",
+      "url": "https://archives.bulbagarden.net/media/upload/e/e8/SV1_pack_Koraidon.png",
+      "width": 780,
+      "height": 1429
+    },
+    {
+      "title": "File:SV1 pack Miraidon.png",
+      "name": "Miraidon",
+      "url": "https://archives.bulbagarden.net/media/upload/0/06/SV1_pack_Miraidon.png",
+      "width": 780,
+      "height": 1429
+    },
+    {
+      "title": "File:SV1 pack Partners.png",
+      "name": "Partners",
+      "url": "https://archives.bulbagarden.net/media/upload/6/64/SV1_pack_Partners.png",
+      "width": 780,
+      "height": 1429
+    }
+  ],
+  "sv2": [
+    {
+      "title": "File:SV2 Booster Chien-Pao.png",
+      "name": "Chien-Pao",
+      "url": "https://archives.bulbagarden.net/media/upload/c/c0/SV2_Booster_Chien-Pao.png",
+      "width": 780,
+      "height": 1429
+    },
+    {
+      "title": "File:SV2 Booster Meowscarada.png",
+      "name": "Meowscarada",
+      "url": "https://archives.bulbagarden.net/media/upload/0/0b/SV2_Booster_Meowscarada.png",
+      "width": 780,
+      "height": 1429
+    },
+    {
+      "title": "File:SV2 Booster Quaquaval.png",
+      "name": "Quaquaval",
+      "url": "https://archives.bulbagarden.net/media/upload/f/f2/SV2_Booster_Quaquaval.png",
+      "width": 780,
+      "height": 1429
+    },
+    {
+      "title": "File:SV2 Booster Skeledirge.png",
+      "name": "Skeledirge",
+      "url": "https://archives.bulbagarden.net/media/upload/e/ed/SV2_Booster_Skeledirge.png",
+      "width": 780,
+      "height": 1429
+    },
+    {
+      "title": "File:SV2 Booster Ting-Lu.png",
+      "name": "Ting-Lu",
+      "url": "https://archives.bulbagarden.net/media/upload/7/72/SV2_Booster_Ting-Lu.png",
+      "width": 780,
+      "height": 1429
+    }
+  ],
+  "sv3": [
+    {
+      "title": "File:SV3 Booster Charizard.png",
+      "name": "Charizard",
+      "url": "https://archives.bulbagarden.net/media/upload/5/52/SV3_Booster_Charizard.png",
+      "width": 780,
+      "height": 1429
+    },
+    {
+      "title": "File:SV3 Booster Dragonite.png",
+      "name": "Dragonite",
+      "url": "https://archives.bulbagarden.net/media/upload/2/20/SV3_Booster_Dragonite.png",
+      "width": 780,
+      "height": 1429
+    },
+    {
+      "title": "File:SV3 Booster Revavroom.png",
+      "name": "Revavroom",
+      "url": "https://archives.bulbagarden.net/media/upload/a/ac/SV3_Booster_Revavroom.png",
+      "width": 780,
+      "height": 1429
+    },
+    {
+      "title": "File:SV3 Booster Tyranitar.png",
+      "name": "Tyranitar",
+      "url": "https://archives.bulbagarden.net/media/upload/a/a9/SV3_Booster_Tyranitar.png",
+      "width": 780,
+      "height": 1429
+    }
+  ],
+  "sv3pt5": [
+    {
+      "title": "File:151 Booster.png",
+      "name": "151 Booster",
+      "url": "https://archives.bulbagarden.net/media/upload/2/24/151_Booster.png",
+      "width": 780,
+      "height": 1429
+    }
+  ],
+  "sv4": [
+    {
+      "title": "File:SV4 Booster Armarouge.png",
+      "name": "Armarouge",
+      "url": "https://archives.bulbagarden.net/media/upload/5/51/SV4_Booster_Armarouge.png",
+      "width": 780,
+      "height": 1429
+    },
+    {
+      "title": "File:SV4 Booster Garchomp.png",
+      "name": "Garchomp",
+      "url": "https://archives.bulbagarden.net/media/upload/8/8e/SV4_Booster_Garchomp.png",
+      "width": 780,
+      "height": 1429
+    },
+    {
+      "title": "File:SV4 Booster Iron Valiant.png",
+      "name": "Iron Valiant",
+      "url": "https://archives.bulbagarden.net/media/upload/3/3d/SV4_Booster_Iron_Valiant.png",
+      "width": 780,
+      "height": 1429
+    },
+    {
+      "title": "File:SV4 Booster Roaring Moon.png",
+      "name": "Roaring Moon",
+      "url": "https://archives.bulbagarden.net/media/upload/9/95/SV4_Booster_Roaring_Moon.png",
+      "width": 780,
+      "height": 1429
+    }
+  ],
+  "sv4pt5": [
+    {
+      "title": "File:Paldean Fates Booster Ceruledge.png",
+      "name": "Paldean Fates Booster Ceruledge",
+      "url": "https://archives.bulbagarden.net/media/upload/0/08/Paldean_Fates_Booster_Ceruledge.png",
+      "width": 780,
+      "height": 1429
+    },
+    {
+      "title": "File:Paldean Fates Booster Dondozo.png",
+      "name": "Paldean Fates Booster Dondozo",
+      "url": "https://archives.bulbagarden.net/media/upload/7/7b/Paldean_Fates_Booster_Dondozo.png",
+      "width": 780,
+      "height": 1429
+    },
+    {
+      "title": "File:Paldean Fates Booster Pikachu.png",
+      "name": "Paldean Fates Booster Pikachu",
+      "url": "https://archives.bulbagarden.net/media/upload/2/2e/Paldean_Fates_Booster_Pikachu.png",
+      "width": 780,
+      "height": 1429
+    },
+    {
+      "title": "File:Paldean Fates Booster Tinkaton.png",
+      "name": "Paldean Fates Booster Tinkaton",
+      "url": "https://archives.bulbagarden.net/media/upload/c/c6/Paldean_Fates_Booster_Tinkaton.png",
+      "width": 780,
+      "height": 1429
+    }
+  ],
+  "sv5": [
+    {
+      "title": "File:SV5 Booster Iron Crown.png",
+      "name": "Iron Crown",
+      "url": "https://archives.bulbagarden.net/media/upload/3/3e/SV5_Booster_Iron_Crown.png",
+      "width": 779,
+      "height": 1427
+    },
+    {
+      "title": "File:SV5 Booster Iron Leaves.png",
+      "name": "Iron Leaves",
+      "url": "https://archives.bulbagarden.net/media/upload/8/88/SV5_Booster_Iron_Leaves.png",
+      "width": 779,
+      "height": 1427
+    },
+    {
+      "title": "File:SV5 Booster Raging Bolt.png",
+      "name": "Raging Bolt",
+      "url": "https://archives.bulbagarden.net/media/upload/3/37/SV5_Booster_Raging_Bolt.png",
+      "width": 779,
+      "height": 1427
+    },
+    {
+      "title": "File:SV5 Booster Walking Wake.png",
+      "name": "Walking Wake",
+      "url": "https://archives.bulbagarden.net/media/upload/d/d7/SV5_Booster_Walking_Wake.png",
+      "width": 779,
+      "height": 1427
+    }
+  ],
+  "sv6": [
+    {
+      "title": "File:SV6 Booster Dragapult.png",
+      "name": "Dragapult",
+      "url": "https://archives.bulbagarden.net/media/upload/f/f4/SV6_Booster_Dragapult.png",
+      "width": 779,
+      "height": 1427
+    },
+    {
+      "title": "File:SV6 Booster Ogerpon.png",
+      "name": "Ogerpon",
+      "url": "https://archives.bulbagarden.net/media/upload/a/a0/SV6_Booster_Ogerpon.png",
+      "width": 779,
+      "height": 1427
+    },
+    {
+      "title": "File:SV6 Booster Sinistcha.png",
+      "name": "Sinistcha",
+      "url": "https://archives.bulbagarden.net/media/upload/8/83/SV6_Booster_Sinistcha.png",
+      "width": 779,
+      "height": 1427
+    },
+    {
+      "title": "File:SV6 Booster Ursaluna.png",
+      "name": "Ursaluna",
+      "url": "https://archives.bulbagarden.net/media/upload/c/c6/SV6_Booster_Ursaluna.png",
+      "width": 779,
+      "height": 1427
+    }
+  ],
+  "sv6pt5": [
+    {
+      "title": "File:Shrouded Fable Booster Fezandipiti.png",
+      "name": "Shrouded Fable Booster Fezandipiti",
+      "url": "https://archives.bulbagarden.net/media/upload/b/b6/Shrouded_Fable_Booster_Fezandipiti.png",
+      "width": 779,
+      "height": 1427
+    },
+    {
+      "title": "File:Shrouded Fable Booster Munkidori.png",
+      "name": "Shrouded Fable Booster Munkidori",
+      "url": "https://archives.bulbagarden.net/media/upload/0/0c/Shrouded_Fable_Booster_Munkidori.png",
+      "width": 779,
+      "height": 1427
+    },
+    {
+      "title": "File:Shrouded Fable Booster Okidogi.png",
+      "name": "Shrouded Fable Booster Okidogi",
+      "url": "https://archives.bulbagarden.net/media/upload/3/31/Shrouded_Fable_Booster_Okidogi.png",
+      "width": 779,
+      "height": 1427
+    },
+    {
+      "title": "File:Shrouded Fable Booster Pecharunt.png",
+      "name": "Shrouded Fable Booster Pecharunt",
+      "url": "https://archives.bulbagarden.net/media/upload/7/7b/Shrouded_Fable_Booster_Pecharunt.png",
+      "width": 779,
+      "height": 1427
+    },
+    {
+      "title": "File:Shrouded Fable Three-Booster Pack and Promo Card Blister.jpg",
+      "name": "Shrouded Fable Three-Booster Pack and Promo Card Blister",
+      "url": "https://archives.bulbagarden.net/media/upload/a/a6/Shrouded_Fable_Three-Booster_Pack_and_Promo_Card_Blister.jpg",
+      "width": 2292,
+      "height": 2104
+    }
+  ],
+  "sv7": [
+    {
+      "title": "File:SV7 Booster Cinderace.png",
+      "name": "Cinderace",
+      "url": "https://archives.bulbagarden.net/media/upload/a/ac/SV7_Booster_Cinderace.png",
+      "width": 779,
+      "height": 1427
+    },
+    {
+      "title": "File:SV7 Booster Galvantula.png",
+      "name": "Galvantula",
+      "url": "https://archives.bulbagarden.net/media/upload/d/d2/SV7_Booster_Galvantula.png",
+      "width": 779,
+      "height": 1427
+    },
+    {
+      "title": "File:SV7 Booster Lapras.png",
+      "name": "Lapras",
+      "url": "https://archives.bulbagarden.net/media/upload/4/46/SV7_Booster_Lapras.png",
+      "width": 779,
+      "height": 1427
+    },
+    {
+      "title": "File:SV7 Booster Terapagos.png",
+      "name": "Terapagos",
+      "url": "https://archives.bulbagarden.net/media/upload/8/8e/SV7_Booster_Terapagos.png",
+      "width": 779,
+      "height": 1427
+    }
+  ],
+  "sv8": [
+    {
+      "title": "File:SV8 Booster Alolan Exeggutor.png",
+      "name": "Alolan Exeggutor",
+      "url": "https://archives.bulbagarden.net/media/upload/9/96/SV8_Booster_Alolan_Exeggutor.png",
+      "width": 779,
+      "height": 1427
+    },
+    {
+      "title": "File:SV8 Booster Archaludon.png",
+      "name": "Archaludon",
+      "url": "https://archives.bulbagarden.net/media/upload/4/4b/SV8_Booster_Archaludon.png",
+      "width": 779,
+      "height": 1427
+    },
+    {
+      "title": "File:SV8 Booster Latias.png",
+      "name": "Latias",
+      "url": "https://archives.bulbagarden.net/media/upload/0/08/SV8_Booster_Latias.png",
+      "width": 779,
+      "height": 1427
+    },
+    {
+      "title": "File:SV8 Booster Pikachu.png",
+      "name": "Pikachu",
+      "url": "https://archives.bulbagarden.net/media/upload/8/8b/SV8_Booster_Pikachu.png",
+      "width": 779,
+      "height": 1427
+    }
+  ],
+  "sv8pt5": [
+    {
+      "title": "File:Prismatic Evolutions Booster Eevee Sylveon.png",
+      "name": "Prismatic Evolutions Booster Eevee Sylveon",
+      "url": "https://archives.bulbagarden.net/media/upload/5/53/Prismatic_Evolutions_Booster_Eevee_Sylveon.png",
+      "width": 779,
+      "height": 1427
+    },
+    {
+      "title": "File:Prismatic Evolutions Booster Espeon Umbreon.png",
+      "name": "Prismatic Evolutions Booster Espeon Umbreon",
+      "url": "https://archives.bulbagarden.net/media/upload/8/8c/Prismatic_Evolutions_Booster_Espeon_Umbreon.png",
+      "width": 779,
+      "height": 1427
+    },
+    {
+      "title": "File:Prismatic Evolutions Booster Leafeon Glaceon.png",
+      "name": "Prismatic Evolutions Booster Leafeon Glaceon",
+      "url": "https://archives.bulbagarden.net/media/upload/f/f1/Prismatic_Evolutions_Booster_Leafeon_Glaceon.png",
+      "width": 779,
+      "height": 1427
+    },
+    {
+      "title": "File:Prismatic Evolutions Booster Vaporeon Jolteon Flareon.png",
+      "name": "Prismatic Evolutions Booster Vaporeon Jolteon Flareon",
+      "url": "https://archives.bulbagarden.net/media/upload/8/80/Prismatic_Evolutions_Booster_Vaporeon_Jolteon_Flareon.png",
+      "width": 779,
+      "height": 1427
+    }
+  ],
+  "sv9": [
+    {
+      "title": "File:SV9 Booster Hop Zacian.png",
+      "name": "Hop Zacian",
+      "url": "https://archives.bulbagarden.net/media/upload/4/40/SV9_Booster_Hop_Zacian.png",
+      "width": 779,
+      "height": 1427
+    },
+    {
+      "title": "File:SV9 Booster Iono Bellibolt.png",
+      "name": "Iono Bellibolt",
+      "url": "https://archives.bulbagarden.net/media/upload/b/b3/SV9_Booster_Iono_Bellibolt.png",
+      "width": 779,
+      "height": 1427
+    },
+    {
+      "title": "File:SV9 Booster Lillie Clefairy.png",
+      "name": "Lillie Clefairy",
+      "url": "https://archives.bulbagarden.net/media/upload/1/16/SV9_Booster_Lillie_Clefairy.png",
+      "width": 779,
+      "height": 1427
+    },
+    {
+      "title": "File:SV9 Booster N Zoroark.png",
+      "name": "N Zoroark",
+      "url": "https://archives.bulbagarden.net/media/upload/e/e0/SV9_Booster_N_Zoroark.png",
+      "width": 779,
+      "height": 1427
+    }
+  ],
+  "sv10": [
+    {
+      "title": "File:SV10 Booster Cynthia Garchomp.png",
+      "name": "Cynthia Garchomp",
+      "url": "https://archives.bulbagarden.net/media/upload/e/e2/SV10_Booster_Cynthia_Garchomp.png",
+      "width": 779,
+      "height": 1427
+    },
+    {
+      "title": "File:SV10 Booster Ethan Ho-Oh.png",
+      "name": "Ethan Ho-Oh",
+      "url": "https://archives.bulbagarden.net/media/upload/3/3b/SV10_Booster_Ethan_Ho-Oh.png",
+      "width": 779,
+      "height": 1427
+    },
+    {
+      "title": "File:SV10 Booster Giovanni Mewtwo.png",
+      "name": "Giovanni Mewtwo",
+      "url": "https://archives.bulbagarden.net/media/upload/f/f1/SV10_Booster_Giovanni_Mewtwo.png",
+      "width": 779,
+      "height": 1427
+    },
+    {
+      "title": "File:SV10 Booster Team Rocket.png",
+      "name": "Team Rocket",
+      "url": "https://archives.bulbagarden.net/media/upload/2/24/SV10_Booster_Team_Rocket.png",
+      "width": 779,
+      "height": 1427
+    }
+  ],
+  "zsv10pt5": [
+    {
+      "title": "File:SV10.5 BLK Booster EN.png",
+      "name": "Black Bolt",
+      "url": "https://archives.bulbagarden.net/media/upload/3/3f/SV10.5_BLK_Booster_EN.png",
+      "width": 778,
+      "height": 1427
+    }
+  ],
+  "rsv10pt5": [
+    {
+      "title": "File:SV10.5 WHT Booster EN.png",
+      "name": "White Flare",
+      "url": "https://archives.bulbagarden.net/media/upload/3/32/SV10.5_WHT_Booster_EN.png",
+      "width": 778,
+      "height": 1427
+    }
+  ],
+  "me1": [
+    {
+      "title": "File:ME1 Booster Mega Gardevoir.png",
+      "name": "Mega Gardevoir",
+      "url": "https://archives.bulbagarden.net/media/upload/c/c4/ME1_Booster_Mega_Gardevoir.png",
+      "width": 780,
+      "height": 1426
+    },
+    {
+      "title": "File:ME1 Booster Mega Kangaskhan.png",
+      "name": "Mega Kangaskhan",
+      "url": "https://archives.bulbagarden.net/media/upload/b/b6/ME1_Booster_Mega_Kangaskhan.png",
+      "width": 780,
+      "height": 1426
+    },
+    {
+      "title": "File:ME1 Booster Mega Lucario.png",
+      "name": "Mega Lucario",
+      "url": "https://archives.bulbagarden.net/media/upload/1/12/ME1_Booster_Mega_Lucario.png",
+      "width": 780,
+      "height": 1426
+    },
+    {
+      "title": "File:ME1 Booster Mega Venusaur.png",
+      "name": "Mega Venusaur",
+      "url": "https://archives.bulbagarden.net/media/upload/f/fd/ME1_Booster_Mega_Venusaur.png",
+      "width": 780,
+      "height": 1426
+    }
+  ],
+  "me2": [
+    {
+      "title": "File:ME2 Booster Mega Charizard X.png",
+      "name": "Mega Charizard X",
+      "url": "https://archives.bulbagarden.net/media/upload/9/99/ME2_Booster_Mega_Charizard_X.png",
+      "width": 780,
+      "height": 1426
+    },
+    {
+      "title": "File:ME2 Booster Mega Gengar.png",
+      "name": "Mega Gengar",
+      "url": "https://archives.bulbagarden.net/media/upload/b/b9/ME2_Booster_Mega_Gengar.png",
+      "width": 780,
+      "height": 1426
+    },
+    {
+      "title": "File:ME2 Booster Mega Heracross.png",
+      "name": "Mega Heracross",
+      "url": "https://archives.bulbagarden.net/media/upload/8/85/ME2_Booster_Mega_Heracross.png",
+      "width": 780,
+      "height": 1426
+    },
+    {
+      "title": "File:ME2 Booster Mega Lopunny.png",
+      "name": "Mega Lopunny",
+      "url": "https://archives.bulbagarden.net/media/upload/c/c7/ME2_Booster_Mega_Lopunny.png",
+      "width": 780,
+      "height": 1426
+    }
+  ],
+  "me2pt5": [
+    {
+      "title": "File:Ascended Heroes Booster.png",
+      "name": "Ascended Heroes Booster",
+      "url": "https://archives.bulbagarden.net/media/upload/1/1b/Ascended_Heroes_Booster.png",
+      "width": 780,
+      "height": 1426
+    }
+  ],
+  "me3": [
+    {
+      "title": "File:ME3 Booster Mega Clefable.png",
+      "name": "Mega Clefable",
+      "url": "https://archives.bulbagarden.net/media/upload/9/94/ME3_Booster_Mega_Clefable.png",
+      "width": 780,
+      "height": 1426
+    },
+    {
+      "title": "File:ME3 Booster Mega Starmie.png",
+      "name": "Mega Starmie",
+      "url": "https://archives.bulbagarden.net/media/upload/c/c6/ME3_Booster_Mega_Starmie.png",
+      "width": 780,
+      "height": 1426
+    },
+    {
+      "title": "File:ME3 Booster Mega Zygarde.png",
+      "name": "Mega Zygarde",
+      "url": "https://archives.bulbagarden.net/media/upload/3/34/ME3_Booster_Mega_Zygarde.png",
+      "width": 780,
+      "height": 1426
+    },
+    {
+      "title": "File:ME3 Booster Meowth.png",
+      "name": "Meowth",
+      "url": "https://archives.bulbagarden.net/media/upload/0/03/ME3_Booster_Meowth.png",
+      "width": 780,
+      "height": 1426
+    }
+  ]
+}

@@ -1,0 +1,266 @@
+[
+  {
+    "id": "mcd15-1",
+    "name": "Treecko",
+    "setId": "mcd15",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      252
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Akira Komayama",
+    "imageSmall": "https://images.pokemontcg.io/mcd15/1.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd15/1_hires.png"
+  },
+  {
+    "id": "mcd15-2",
+    "name": "Lotad",
+    "setId": "mcd15",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      270
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kanako Eo",
+    "imageSmall": "https://images.pokemontcg.io/mcd15/2.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd15/2_hires.png"
+  },
+  {
+    "id": "mcd15-3",
+    "name": "Torchic",
+    "setId": "mcd15",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      255
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "sui",
+    "imageSmall": "https://images.pokemontcg.io/mcd15/3.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd15/3_hires.png"
+  },
+  {
+    "id": "mcd15-4",
+    "name": "Staryu",
+    "setId": "mcd15",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      120
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Tomokazu Komiya",
+    "imageSmall": "https://images.pokemontcg.io/mcd15/4.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd15/4_hires.png"
+  },
+  {
+    "id": "mcd15-5",
+    "name": "Mudkip",
+    "setId": "mcd15",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      258
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Aya Kusube",
+    "imageSmall": "https://images.pokemontcg.io/mcd15/5.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd15/5_hires.png"
+  },
+  {
+    "id": "mcd15-6",
+    "name": "Pikachu",
+    "setId": "mcd15",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      25
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Naoki Saito",
+    "imageSmall": "https://images.pokemontcg.io/mcd15/6.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd15/6_hires.png"
+  },
+  {
+    "id": "mcd15-7",
+    "name": "Electrike",
+    "setId": "mcd15",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      309
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Sumiyoshi Kizuki",
+    "imageSmall": "https://images.pokemontcg.io/mcd15/7.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd15/7_hires.png"
+  },
+  {
+    "id": "mcd15-8",
+    "name": "Rhyhorn",
+    "setId": "mcd15",
+    "number": "8",
+    "numberInt": 8,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      111
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Midori Harada",
+    "imageSmall": "https://images.pokemontcg.io/mcd15/8.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd15/8_hires.png"
+  },
+  {
+    "id": "mcd15-9",
+    "name": "Meditite",
+    "setId": "mcd15",
+    "number": "9",
+    "numberInt": 9,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      307
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "sui",
+    "imageSmall": "https://images.pokemontcg.io/mcd15/9.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd15/9_hires.png"
+  },
+  {
+    "id": "mcd15-10",
+    "name": "Marill",
+    "setId": "mcd15",
+    "number": "10",
+    "numberInt": 10,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      183
+    ],
+    "types": [
+      "Fairy"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Shigenori Negishi",
+    "imageSmall": "https://images.pokemontcg.io/mcd15/10.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd15/10_hires.png"
+  },
+  {
+    "id": "mcd15-11",
+    "name": "Zigzagoon",
+    "setId": "mcd15",
+    "number": "11",
+    "numberInt": 11,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      263
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Sumiyoshi Kizuki",
+    "imageSmall": "https://images.pokemontcg.io/mcd15/11.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd15/11_hires.png"
+  },
+  {
+    "id": "mcd15-12",
+    "name": "Skitty",
+    "setId": "mcd15",
+    "number": "12",
+    "numberInt": 12,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [
+      300
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Yuka Morii",
+    "imageSmall": "https://images.pokemontcg.io/mcd15/12.png",
+    "imageLarge": "https://images.pokemontcg.io/mcd15/12_hires.png"
+  }
+]

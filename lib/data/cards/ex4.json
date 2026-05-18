@@ -1,0 +1,1746 @@
+[
+  {
+    "id": "ex4-1",
+    "name": "Team Aqua's Cacturne",
+    "setId": "ex4",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      332
+    ],
+    "types": [
+      "Grass",
+      "Darkness"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Aqua's Cacnea",
+    "artist": "K. Utsunomiya",
+    "imageSmall": "https://images.pokemontcg.io/ex4/1.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/1_hires.png"
+  },
+  {
+    "id": "ex4-2",
+    "name": "Team Aqua's Crawdaunt",
+    "setId": "ex4",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      342
+    ],
+    "types": [
+      "Water",
+      "Darkness"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Aqua's Corphish",
+    "artist": "Nakaoka",
+    "imageSmall": "https://images.pokemontcg.io/ex4/2.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/2_hires.png"
+  },
+  {
+    "id": "ex4-3",
+    "name": "Team Aqua's Kyogre",
+    "setId": "ex4",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      382
+    ],
+    "types": [
+      "Water",
+      "Darkness"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "K. Hoshiba",
+    "imageSmall": "https://images.pokemontcg.io/ex4/3.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/3_hires.png"
+  },
+  {
+    "id": "ex4-4",
+    "name": "Team Aqua's Manectric",
+    "setId": "ex4",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      310
+    ],
+    "types": [
+      "Lightning",
+      "Darkness"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Aqua's Electrike",
+    "artist": "K. Utsunomiya",
+    "imageSmall": "https://images.pokemontcg.io/ex4/4.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/4_hires.png"
+  },
+  {
+    "id": "ex4-5",
+    "name": "Team Aqua's Sharpedo",
+    "setId": "ex4",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      319
+    ],
+    "types": [
+      "Water",
+      "Darkness"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Aqua's Carvanha",
+    "artist": "Katsura Tabata",
+    "imageSmall": "https://images.pokemontcg.io/ex4/5.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/5_hires.png"
+  },
+  {
+    "id": "ex4-6",
+    "name": "Team Aqua's Walrein",
+    "setId": "ex4",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      365
+    ],
+    "types": [
+      "Water",
+      "Darkness"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Team Aqua's Sealeo",
+    "artist": "Ken Ikuji",
+    "imageSmall": "https://images.pokemontcg.io/ex4/6.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/6_hires.png"
+  },
+  {
+    "id": "ex4-7",
+    "name": "Team Magma's Aggron",
+    "setId": "ex4",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      306
+    ],
+    "types": [
+      "Fighting",
+      "Darkness"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Team Magma's Lairon",
+    "artist": "Hiromichi Sugiyama",
+    "imageSmall": "https://images.pokemontcg.io/ex4/7.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/7_hires.png"
+  },
+  {
+    "id": "ex4-8",
+    "name": "Team Magma's Claydol",
+    "setId": "ex4",
+    "number": "8",
+    "numberInt": 8,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      344
+    ],
+    "types": [
+      "Psychic",
+      "Darkness"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Magma's Baltoy",
+    "artist": "Zu-Ka",
+    "imageSmall": "https://images.pokemontcg.io/ex4/8.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/8_hires.png"
+  },
+  {
+    "id": "ex4-9",
+    "name": "Team Magma's Groudon",
+    "setId": "ex4",
+    "number": "9",
+    "numberInt": 9,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      383
+    ],
+    "types": [
+      "Fighting",
+      "Darkness"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kazuo Yazawa",
+    "imageSmall": "https://images.pokemontcg.io/ex4/9.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/9_hires.png"
+  },
+  {
+    "id": "ex4-10",
+    "name": "Team Magma's Houndoom",
+    "setId": "ex4",
+    "number": "10",
+    "numberInt": 10,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      229
+    ],
+    "types": [
+      "Fire",
+      "Darkness"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Magma's Houndour",
+    "artist": "Ken Ikuji",
+    "imageSmall": "https://images.pokemontcg.io/ex4/10.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/10_hires.png"
+  },
+  {
+    "id": "ex4-11",
+    "name": "Team Magma's Rhydon",
+    "setId": "ex4",
+    "number": "11",
+    "numberInt": 11,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      112
+    ],
+    "types": [
+      "Fighting",
+      "Darkness"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Magma's Rhyhorn",
+    "artist": "T. Honda",
+    "imageSmall": "https://images.pokemontcg.io/ex4/11.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/11_hires.png"
+  },
+  {
+    "id": "ex4-12",
+    "name": "Team Magma's Torkoal",
+    "setId": "ex4",
+    "number": "12",
+    "numberInt": 12,
+    "rarity": "Rare",
+    "rarityRaw": "Rare Holo",
+    "dex": [
+      324
+    ],
+    "types": [
+      "Fire",
+      "Darkness"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "K. Hoshiba",
+    "imageSmall": "https://images.pokemontcg.io/ex4/12.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/12_hires.png"
+  },
+  {
+    "id": "ex4-13",
+    "name": "Raichu",
+    "setId": "ex4",
+    "number": "13",
+    "numberInt": 13,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      26
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Pikachu",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/ex4/13.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/13_hires.png"
+  },
+  {
+    "id": "ex4-14",
+    "name": "Team Aqua's Crawdaunt",
+    "setId": "ex4",
+    "number": "14",
+    "numberInt": 14,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      342
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Aqua's Corphish",
+    "artist": "Nakaoka",
+    "imageSmall": "https://images.pokemontcg.io/ex4/14.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/14_hires.png"
+  },
+  {
+    "id": "ex4-15",
+    "name": "Team Aqua's Mightyena",
+    "setId": "ex4",
+    "number": "15",
+    "numberInt": 15,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      262
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Aqua's Poochyena",
+    "artist": "Shin-ichi Yoshikawa",
+    "imageSmall": "https://images.pokemontcg.io/ex4/15.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/15_hires.png"
+  },
+  {
+    "id": "ex4-16",
+    "name": "Team Aqua's Sealeo",
+    "setId": "ex4",
+    "number": "16",
+    "numberInt": 16,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      364
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Aqua's Spheal",
+    "artist": "T. Honda",
+    "imageSmall": "https://images.pokemontcg.io/ex4/16.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/16_hires.png"
+  },
+  {
+    "id": "ex4-17",
+    "name": "Team Aqua's Seviper",
+    "setId": "ex4",
+    "number": "17",
+    "numberInt": 17,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      336
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Jungo Suzuki",
+    "imageSmall": "https://images.pokemontcg.io/ex4/17.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/17_hires.png"
+  },
+  {
+    "id": "ex4-18",
+    "name": "Team Aqua's Sharpedo",
+    "setId": "ex4",
+    "number": "18",
+    "numberInt": 18,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      319
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Aqua's Carvanha",
+    "artist": "Katsura Tabata",
+    "imageSmall": "https://images.pokemontcg.io/ex4/18.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/18_hires.png"
+  },
+  {
+    "id": "ex4-19",
+    "name": "Team Magma's Camerupt",
+    "setId": "ex4",
+    "number": "19",
+    "numberInt": 19,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      323
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Magma's Numel",
+    "artist": "Katsura Tabata",
+    "imageSmall": "https://images.pokemontcg.io/ex4/19.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/19_hires.png"
+  },
+  {
+    "id": "ex4-20",
+    "name": "Team Magma's Lairon",
+    "setId": "ex4",
+    "number": "20",
+    "numberInt": 20,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      305
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Magma's Aron",
+    "artist": "Hiromichi Sugiyama",
+    "imageSmall": "https://images.pokemontcg.io/ex4/20.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/20_hires.png"
+  },
+  {
+    "id": "ex4-21",
+    "name": "Team Magma's Mightyena",
+    "setId": "ex4",
+    "number": "21",
+    "numberInt": 21,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      262
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Magma's Poochyena",
+    "artist": "Shin-ichi Yoshikawa",
+    "imageSmall": "https://images.pokemontcg.io/ex4/21.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/21_hires.png"
+  },
+  {
+    "id": "ex4-22",
+    "name": "Team Magma's Rhydon",
+    "setId": "ex4",
+    "number": "22",
+    "numberInt": 22,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      112
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Magma's Rhyhorn",
+    "artist": "T. Honda",
+    "imageSmall": "https://images.pokemontcg.io/ex4/22.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/22_hires.png"
+  },
+  {
+    "id": "ex4-23",
+    "name": "Team Magma's Zangoose",
+    "setId": "ex4",
+    "number": "23",
+    "numberInt": 23,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      335
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Zu-Ka",
+    "imageSmall": "https://images.pokemontcg.io/ex4/23.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/23_hires.png"
+  },
+  {
+    "id": "ex4-24",
+    "name": "Team Aqua's Cacnea",
+    "setId": "ex4",
+    "number": "24",
+    "numberInt": 24,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      331
+    ],
+    "types": [
+      "Grass",
+      "Darkness"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "K. Utsunomiya",
+    "imageSmall": "https://images.pokemontcg.io/ex4/24.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/24_hires.png"
+  },
+  {
+    "id": "ex4-25",
+    "name": "Team Aqua's Carvanha",
+    "setId": "ex4",
+    "number": "25",
+    "numberInt": 25,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      318
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mt. TBT",
+    "imageSmall": "https://images.pokemontcg.io/ex4/25.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/25_hires.png"
+  },
+  {
+    "id": "ex4-26",
+    "name": "Team Aqua's Corphish",
+    "setId": "ex4",
+    "number": "26",
+    "numberInt": 26,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      341
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Jungo Suzuki",
+    "imageSmall": "https://images.pokemontcg.io/ex4/26.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/26_hires.png"
+  },
+  {
+    "id": "ex4-27",
+    "name": "Team Aqua's Electrike",
+    "setId": "ex4",
+    "number": "27",
+    "numberInt": 27,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      309
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "M. Akiyama",
+    "imageSmall": "https://images.pokemontcg.io/ex4/27.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/27_hires.png"
+  },
+  {
+    "id": "ex4-28",
+    "name": "Team Aqua's Lanturn",
+    "setId": "ex4",
+    "number": "28",
+    "numberInt": 28,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      171
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Aqua's Chinchou",
+    "artist": "Jungo Suzuki",
+    "imageSmall": "https://images.pokemontcg.io/ex4/28.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/28_hires.png"
+  },
+  {
+    "id": "ex4-29",
+    "name": "Team Aqua's Manectric",
+    "setId": "ex4",
+    "number": "29",
+    "numberInt": 29,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      310
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Aqua's Electrike",
+    "artist": "K. Utsunomiya",
+    "imageSmall": "https://images.pokemontcg.io/ex4/29.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/29_hires.png"
+  },
+  {
+    "id": "ex4-30",
+    "name": "Team Aqua's Mightyena",
+    "setId": "ex4",
+    "number": "30",
+    "numberInt": 30,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      262
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Aqua's Poochyena",
+    "artist": "Shin-ichi Yoshikawa",
+    "imageSmall": "https://images.pokemontcg.io/ex4/30.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/30_hires.png"
+  },
+  {
+    "id": "ex4-31",
+    "name": "Team Aqua's Sealeo",
+    "setId": "ex4",
+    "number": "31",
+    "numberInt": 31,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      364
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Aqua's Spheal",
+    "artist": "T. Honda",
+    "imageSmall": "https://images.pokemontcg.io/ex4/31.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/31_hires.png"
+  },
+  {
+    "id": "ex4-32",
+    "name": "Team Magma's Baltoy",
+    "setId": "ex4",
+    "number": "32",
+    "numberInt": 32,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      343
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Ujiie",
+    "imageSmall": "https://images.pokemontcg.io/ex4/32.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/32_hires.png"
+  },
+  {
+    "id": "ex4-33",
+    "name": "Team Magma's Claydol",
+    "setId": "ex4",
+    "number": "33",
+    "numberInt": 33,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      344
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Magma's Baltoy",
+    "artist": "Zu-Ka",
+    "imageSmall": "https://images.pokemontcg.io/ex4/33.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/33_hires.png"
+  },
+  {
+    "id": "ex4-34",
+    "name": "Team Magma's Houndoom",
+    "setId": "ex4",
+    "number": "34",
+    "numberInt": 34,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      229
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Magma's Houndour",
+    "artist": "Ken Ikuji",
+    "imageSmall": "https://images.pokemontcg.io/ex4/34.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/34_hires.png"
+  },
+  {
+    "id": "ex4-35",
+    "name": "Team Magma's Houndour",
+    "setId": "ex4",
+    "number": "35",
+    "numberInt": 35,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      228
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Ujiie",
+    "imageSmall": "https://images.pokemontcg.io/ex4/35.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/35_hires.png"
+  },
+  {
+    "id": "ex4-36",
+    "name": "Team Magma's Lairon",
+    "setId": "ex4",
+    "number": "36",
+    "numberInt": 36,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      305
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Magma's Aron",
+    "artist": "Hiromichi Sugiyama",
+    "imageSmall": "https://images.pokemontcg.io/ex4/36.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/36_hires.png"
+  },
+  {
+    "id": "ex4-37",
+    "name": "Team Magma's Mightyena",
+    "setId": "ex4",
+    "number": "37",
+    "numberInt": 37,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      262
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Team Magma's Poochyena",
+    "artist": "Shin-ichi Yoshikawa",
+    "imageSmall": "https://images.pokemontcg.io/ex4/37.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/37_hires.png"
+  },
+  {
+    "id": "ex4-38",
+    "name": "Team Magma's Rhyhorn",
+    "setId": "ex4",
+    "number": "38",
+    "numberInt": 38,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      111
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mt. TBT",
+    "imageSmall": "https://images.pokemontcg.io/ex4/38.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/38_hires.png"
+  },
+  {
+    "id": "ex4-39",
+    "name": "Bulbasaur",
+    "setId": "ex4",
+    "number": "39",
+    "numberInt": 39,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      1
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/ex4/39.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/39_hires.png"
+  },
+  {
+    "id": "ex4-40",
+    "name": "Cubone",
+    "setId": "ex4",
+    "number": "40",
+    "numberInt": 40,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      104
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/ex4/40.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/40_hires.png"
+  },
+  {
+    "id": "ex4-41",
+    "name": "Jigglypuff",
+    "setId": "ex4",
+    "number": "41",
+    "numberInt": 41,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      39
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/ex4/41.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/41_hires.png"
+  },
+  {
+    "id": "ex4-42",
+    "name": "Meowth",
+    "setId": "ex4",
+    "number": "42",
+    "numberInt": 42,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      52
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/ex4/42.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/42_hires.png"
+  },
+  {
+    "id": "ex4-43",
+    "name": "Pikachu",
+    "setId": "ex4",
+    "number": "43",
+    "numberInt": 43,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      25
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/ex4/43.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/43_hires.png"
+  },
+  {
+    "id": "ex4-44",
+    "name": "Psyduck",
+    "setId": "ex4",
+    "number": "44",
+    "numberInt": 44,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      54
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/ex4/44.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/44_hires.png"
+  },
+  {
+    "id": "ex4-45",
+    "name": "Slowpoke",
+    "setId": "ex4",
+    "number": "45",
+    "numberInt": 45,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      79
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/ex4/45.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/45_hires.png"
+  },
+  {
+    "id": "ex4-46",
+    "name": "Squirtle",
+    "setId": "ex4",
+    "number": "46",
+    "numberInt": 46,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      7
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/ex4/46.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/46_hires.png"
+  },
+  {
+    "id": "ex4-47",
+    "name": "Team Aqua's Carvanha",
+    "setId": "ex4",
+    "number": "47",
+    "numberInt": 47,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      318
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Yosuke Da Silva",
+    "imageSmall": "https://images.pokemontcg.io/ex4/47.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/47_hires.png"
+  },
+  {
+    "id": "ex4-48",
+    "name": "Team Aqua's Carvanha",
+    "setId": "ex4",
+    "number": "48",
+    "numberInt": 48,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      318
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Hiromichi Sugiyama",
+    "imageSmall": "https://images.pokemontcg.io/ex4/48.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/48_hires.png"
+  },
+  {
+    "id": "ex4-49",
+    "name": "Team Aqua's Chinchou",
+    "setId": "ex4",
+    "number": "49",
+    "numberInt": 49,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      170
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kazuo Yazawa",
+    "imageSmall": "https://images.pokemontcg.io/ex4/49.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/49_hires.png"
+  },
+  {
+    "id": "ex4-50",
+    "name": "Team Aqua's Corphish",
+    "setId": "ex4",
+    "number": "50",
+    "numberInt": 50,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      341
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Jungo Suzuki",
+    "imageSmall": "https://images.pokemontcg.io/ex4/50.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/50_hires.png"
+  },
+  {
+    "id": "ex4-51",
+    "name": "Team Aqua's Corphish",
+    "setId": "ex4",
+    "number": "51",
+    "numberInt": 51,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      341
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Jungo Suzuki",
+    "imageSmall": "https://images.pokemontcg.io/ex4/51.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/51_hires.png"
+  },
+  {
+    "id": "ex4-52",
+    "name": "Team Aqua's Electrike",
+    "setId": "ex4",
+    "number": "52",
+    "numberInt": 52,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      309
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "M. Akiyama",
+    "imageSmall": "https://images.pokemontcg.io/ex4/52.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/52_hires.png"
+  },
+  {
+    "id": "ex4-53",
+    "name": "Team Aqua's Electrike",
+    "setId": "ex4",
+    "number": "53",
+    "numberInt": 53,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      309
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "M. Akiyama",
+    "imageSmall": "https://images.pokemontcg.io/ex4/53.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/53_hires.png"
+  },
+  {
+    "id": "ex4-54",
+    "name": "Team Aqua's Poochyena",
+    "setId": "ex4",
+    "number": "54",
+    "numberInt": 54,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      261
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Shin-ichi Yoshikawa",
+    "imageSmall": "https://images.pokemontcg.io/ex4/54.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/54_hires.png"
+  },
+  {
+    "id": "ex4-55",
+    "name": "Team Aqua's Poochyena",
+    "setId": "ex4",
+    "number": "55",
+    "numberInt": 55,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      261
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Shin-ichi Yoshikawa",
+    "imageSmall": "https://images.pokemontcg.io/ex4/55.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/55_hires.png"
+  },
+  {
+    "id": "ex4-56",
+    "name": "Team Aqua's Spheal",
+    "setId": "ex4",
+    "number": "56",
+    "numberInt": 56,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      363
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Nakaoka",
+    "imageSmall": "https://images.pokemontcg.io/ex4/56.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/56_hires.png"
+  },
+  {
+    "id": "ex4-57",
+    "name": "Team Aqua's Spheal",
+    "setId": "ex4",
+    "number": "57",
+    "numberInt": 57,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      363
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Nakaoka",
+    "imageSmall": "https://images.pokemontcg.io/ex4/57.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/57_hires.png"
+  },
+  {
+    "id": "ex4-58",
+    "name": "Team Magma's Aron",
+    "setId": "ex4",
+    "number": "58",
+    "numberInt": 58,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      304
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Katsura Tabata",
+    "imageSmall": "https://images.pokemontcg.io/ex4/58.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/58_hires.png"
+  },
+  {
+    "id": "ex4-59",
+    "name": "Team Magma's Aron",
+    "setId": "ex4",
+    "number": "59",
+    "numberInt": 59,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      304
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Katsura Tabata",
+    "imageSmall": "https://images.pokemontcg.io/ex4/59.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/59_hires.png"
+  },
+  {
+    "id": "ex4-60",
+    "name": "Team Magma's Baltoy",
+    "setId": "ex4",
+    "number": "60",
+    "numberInt": 60,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      343
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Ujiie",
+    "imageSmall": "https://images.pokemontcg.io/ex4/60.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/60_hires.png"
+  },
+  {
+    "id": "ex4-61",
+    "name": "Team Magma's Baltoy",
+    "setId": "ex4",
+    "number": "61",
+    "numberInt": 61,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      343
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Ujiie",
+    "imageSmall": "https://images.pokemontcg.io/ex4/61.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/61_hires.png"
+  },
+  {
+    "id": "ex4-62",
+    "name": "Team Magma's Houndour",
+    "setId": "ex4",
+    "number": "62",
+    "numberInt": 62,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      228
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Ujiie",
+    "imageSmall": "https://images.pokemontcg.io/ex4/62.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/62_hires.png"
+  },
+  {
+    "id": "ex4-63",
+    "name": "Team Magma's Houndour",
+    "setId": "ex4",
+    "number": "63",
+    "numberInt": 63,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      228
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsuko Ujiie",
+    "imageSmall": "https://images.pokemontcg.io/ex4/63.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/63_hires.png"
+  },
+  {
+    "id": "ex4-64",
+    "name": "Team Magma's Numel",
+    "setId": "ex4",
+    "number": "64",
+    "numberInt": 64,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      322
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Katsura Tabata",
+    "imageSmall": "https://images.pokemontcg.io/ex4/64.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/64_hires.png"
+  },
+  {
+    "id": "ex4-65",
+    "name": "Team Magma's Poochyena",
+    "setId": "ex4",
+    "number": "65",
+    "numberInt": 65,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      261
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Shin-ichi Yoshikawa",
+    "imageSmall": "https://images.pokemontcg.io/ex4/65.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/65_hires.png"
+  },
+  {
+    "id": "ex4-66",
+    "name": "Team Magma's Poochyena",
+    "setId": "ex4",
+    "number": "66",
+    "numberInt": 66,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      261
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Shin-ichi Yoshikawa",
+    "imageSmall": "https://images.pokemontcg.io/ex4/66.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/66_hires.png"
+  },
+  {
+    "id": "ex4-67",
+    "name": "Team Magma's Rhyhorn",
+    "setId": "ex4",
+    "number": "67",
+    "numberInt": 67,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      111
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Yosuke Da Silva",
+    "imageSmall": "https://images.pokemontcg.io/ex4/67.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/67_hires.png"
+  },
+  {
+    "id": "ex4-68",
+    "name": "Team Magma's Rhyhorn",
+    "setId": "ex4",
+    "number": "68",
+    "numberInt": 68,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      111
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Yosuke Da Silva",
+    "imageSmall": "https://images.pokemontcg.io/ex4/68.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/68_hires.png"
+  },
+  {
+    "id": "ex4-89",
+    "name": "Blaziken ex",
+    "setId": "ex4",
+    "number": "89",
+    "numberInt": 89,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo EX",
+    "dex": [
+      257
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Stage 2",
+      "ex"
+    ],
+    "evolvesFrom": "Combusken",
+    "artist": "Hikaru Koike",
+    "imageSmall": "https://images.pokemontcg.io/ex4/89.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/89_hires.png"
+  },
+  {
+    "id": "ex4-90",
+    "name": "Cradily ex",
+    "setId": "ex4",
+    "number": "90",
+    "numberInt": 90,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo EX",
+    "dex": [
+      346
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Stage 2",
+      "ex"
+    ],
+    "evolvesFrom": "Lileep",
+    "artist": "Ryo Ueda",
+    "imageSmall": "https://images.pokemontcg.io/ex4/90.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/90_hires.png"
+  },
+  {
+    "id": "ex4-91",
+    "name": "Entei ex",
+    "setId": "ex4",
+    "number": "91",
+    "numberInt": 91,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo EX",
+    "dex": [
+      244
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "artist": "Ryo Ueda",
+    "imageSmall": "https://images.pokemontcg.io/ex4/91.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/91_hires.png"
+  },
+  {
+    "id": "ex4-92",
+    "name": "Raikou ex",
+    "setId": "ex4",
+    "number": "92",
+    "numberInt": 92,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo EX",
+    "dex": [
+      243
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "artist": "Ryo Ueda",
+    "imageSmall": "https://images.pokemontcg.io/ex4/92.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/92_hires.png"
+  },
+  {
+    "id": "ex4-93",
+    "name": "Sceptile ex",
+    "setId": "ex4",
+    "number": "93",
+    "numberInt": 93,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo EX",
+    "dex": [
+      254
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Stage 2",
+      "ex"
+    ],
+    "evolvesFrom": "Grovyle",
+    "artist": "Hikaru Koike",
+    "imageSmall": "https://images.pokemontcg.io/ex4/93.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/93_hires.png"
+  },
+  {
+    "id": "ex4-94",
+    "name": "Suicune ex",
+    "setId": "ex4",
+    "number": "94",
+    "numberInt": 94,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo EX",
+    "dex": [
+      245
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "artist": "Ryo Ueda",
+    "imageSmall": "https://images.pokemontcg.io/ex4/94.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/94_hires.png"
+  },
+  {
+    "id": "ex4-95",
+    "name": "Swampert ex",
+    "setId": "ex4",
+    "number": "95",
+    "numberInt": 95,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo EX",
+    "dex": [
+      260
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Stage 2",
+      "ex"
+    ],
+    "evolvesFrom": "Marshtomp",
+    "artist": "Hikaru Koike",
+    "imageSmall": "https://images.pokemontcg.io/ex4/95.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/95_hires.png"
+  },
+  {
+    "id": "ex4-96",
+    "name": "Absol",
+    "setId": "ex4",
+    "number": "96",
+    "numberInt": 96,
+    "rarity": "HyperRare",
+    "rarityRaw": "Rare Secret",
+    "dex": [
+      359
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/ex4/96.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/96_hires.png"
+  },
+  {
+    "id": "ex4-97",
+    "name": "Jirachi",
+    "setId": "ex4",
+    "number": "97",
+    "numberInt": 97,
+    "rarity": "HyperRare",
+    "rarityRaw": "Rare Secret",
+    "dex": [
+      385
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/ex4/97.png",
+    "imageLarge": "https://images.pokemontcg.io/ex4/97_hires.png"
+  }
+]

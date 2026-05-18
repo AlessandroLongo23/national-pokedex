@@ -1,0 +1,507 @@
+[
+  {
+    "id": "cel25c-2_A",
+    "name": "Blastoise",
+    "setId": "cel25c",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Unknown",
+    "rarityRaw": "Classic Collection",
+    "dex": [
+      9
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Wartortle",
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/cel25c/2_A.png",
+    "imageLarge": "https://images.pokemontcg.io/cel25c/2_A_hires.png"
+  },
+  {
+    "id": "cel25c-4_A",
+    "name": "Charizard",
+    "setId": "cel25c",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Unknown",
+    "rarityRaw": "Classic Collection",
+    "dex": [
+      6
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Charmeleon",
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/cel25c/4_A.png",
+    "imageLarge": "https://images.pokemontcg.io/cel25c/4_A_hires.png"
+  },
+  {
+    "id": "cel25c-8_A",
+    "name": "Dark Gyarados",
+    "setId": "cel25c",
+    "number": "8",
+    "numberInt": 8,
+    "rarity": "Unknown",
+    "rarityRaw": "Classic Collection",
+    "dex": [
+      130
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Magikarp",
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/cel25c/8_A.png",
+    "imageLarge": "https://images.pokemontcg.io/cel25c/8_A_hires.png"
+  },
+  {
+    "id": "cel25c-9_A",
+    "name": "Team Magma's Groudon",
+    "setId": "cel25c",
+    "number": "9",
+    "numberInt": 9,
+    "rarity": "Unknown",
+    "rarityRaw": "Classic Collection",
+    "dex": [
+      383
+    ],
+    "types": [
+      "Fighting",
+      "Darkness"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kazuo Yazawa",
+    "imageSmall": "https://images.pokemontcg.io/cel25c/9_A.png",
+    "imageLarge": "https://images.pokemontcg.io/cel25c/9_A_hires.png"
+  },
+  {
+    "id": "cel25c-15_A1",
+    "name": "Venusaur",
+    "setId": "cel25c",
+    "number": "15",
+    "numberInt": 15,
+    "rarity": "Unknown",
+    "rarityRaw": "Classic Collection",
+    "dex": [
+      3
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Ivysaur",
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/cel25c/15_A.png",
+    "imageLarge": "https://images.pokemontcg.io/cel25c/15_A_hires.png"
+  },
+  {
+    "id": "cel25c-15_A3",
+    "name": "Rocket's Zapdos",
+    "setId": "cel25c",
+    "number": "15",
+    "numberInt": 15,
+    "rarity": "Unknown",
+    "rarityRaw": "Classic Collection",
+    "dex": [
+      145
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Shin-ichi Yoshida",
+    "imageSmall": "https://images.pokemontcg.io/cel25c/15_C.png",
+    "imageLarge": "https://images.pokemontcg.io/cel25c/15_C_hires.png"
+  },
+  {
+    "id": "cel25c-15_A4",
+    "name": "Claydol",
+    "setId": "cel25c",
+    "number": "15",
+    "numberInt": 15,
+    "rarity": "Unknown",
+    "rarityRaw": "Classic Collection",
+    "dex": [
+      344
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Baltoy",
+    "artist": "Midori Harada",
+    "imageSmall": "https://images.pokemontcg.io/cel25c/15_D.png",
+    "imageLarge": "https://images.pokemontcg.io/cel25c/15_D_hires.png"
+  },
+  {
+    "id": "cel25c-17_A",
+    "name": "Umbreon ★",
+    "setId": "cel25c",
+    "number": "17",
+    "numberInt": 17,
+    "rarity": "Unknown",
+    "rarityRaw": "Classic Collection",
+    "dex": [
+      197
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic",
+      "Star"
+    ],
+    "artist": "Masakazu Fukuda",
+    "imageSmall": "https://images.pokemontcg.io/cel25c/17_A.png",
+    "imageLarge": "https://images.pokemontcg.io/cel25c/17_A_hires.png"
+  },
+  {
+    "id": "cel25c-20_A",
+    "name": "Cleffa",
+    "setId": "cel25c",
+    "number": "20",
+    "numberInt": 20,
+    "rarity": "Unknown",
+    "rarityRaw": "Classic Collection",
+    "dex": [
+      173
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 30,
+    "subtypes": [
+      "Baby"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/cel25c/20_A.png",
+    "imageLarge": "https://images.pokemontcg.io/cel25c/20_A_hires.png"
+  },
+  {
+    "id": "cel25c-24_A",
+    "name": "_____'s Pikachu",
+    "setId": "cel25c",
+    "number": "24",
+    "numberInt": 24,
+    "rarity": "Unknown",
+    "rarityRaw": "Classic Collection",
+    "dex": [
+      25
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kagemaru Himeno",
+    "imageSmall": "https://images.pokemontcg.io/cel25c/24_A.png",
+    "imageLarge": "https://images.pokemontcg.io/cel25c/24_A_hires.png"
+  },
+  {
+    "id": "cel25c-54_A",
+    "name": "Mewtwo-EX",
+    "setId": "cel25c",
+    "number": "54",
+    "numberInt": 54,
+    "rarity": "Unknown",
+    "rarityRaw": "Classic Collection",
+    "dex": [
+      150
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 170,
+    "subtypes": [
+      "Basic",
+      "EX"
+    ],
+    "artist": "Shizurow",
+    "imageSmall": "https://images.pokemontcg.io/cel25c/54_A.png",
+    "imageLarge": "https://images.pokemontcg.io/cel25c/54_A_hires.png"
+  },
+  {
+    "id": "cel25c-60_A",
+    "name": "Tapu Lele-GX",
+    "setId": "cel25c",
+    "number": "60",
+    "numberInt": 60,
+    "rarity": "Unknown",
+    "rarityRaw": "Classic Collection",
+    "dex": [
+      786
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 170,
+    "subtypes": [
+      "Basic",
+      "GX"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/cel25c/60_A.png",
+    "imageLarge": "https://images.pokemontcg.io/cel25c/60_A_hires.png"
+  },
+  {
+    "id": "cel25c-66_A",
+    "name": "Shining Magikarp",
+    "setId": "cel25c",
+    "number": "66",
+    "numberInt": 66,
+    "rarity": "Unknown",
+    "rarityRaw": "Classic Collection",
+    "dex": [
+      129
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 30,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/cel25c/66_A.png",
+    "imageLarge": "https://images.pokemontcg.io/cel25c/66_A_hires.png"
+  },
+  {
+    "id": "cel25c-76_A",
+    "name": "M Rayquaza-EX",
+    "setId": "cel25c",
+    "number": "76",
+    "numberInt": 76,
+    "rarity": "Unknown",
+    "rarityRaw": "Classic Collection",
+    "dex": [
+      384
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 220,
+    "subtypes": [
+      "MEGA",
+      "EX"
+    ],
+    "evolvesFrom": "Rayquaza-EX",
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/cel25c/76_A.png",
+    "imageLarge": "https://images.pokemontcg.io/cel25c/76_A_hires.png"
+  },
+  {
+    "id": "cel25c-88_A",
+    "name": "Mew ex",
+    "setId": "cel25c",
+    "number": "88",
+    "numberInt": 88,
+    "rarity": "Unknown",
+    "rarityRaw": "Classic Collection",
+    "dex": [
+      151
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "artist": "Ryo Ueda",
+    "imageSmall": "https://images.pokemontcg.io/cel25c/88_A.png",
+    "imageLarge": "https://images.pokemontcg.io/cel25c/88_A_hires.png"
+  },
+  {
+    "id": "cel25c-93_A",
+    "name": "Gardevoir ex δ",
+    "setId": "cel25c",
+    "number": "93",
+    "numberInt": 93,
+    "rarity": "Unknown",
+    "rarityRaw": "Classic Collection",
+    "dex": [
+      282
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Stage 2",
+      "ex"
+    ],
+    "evolvesFrom": "Kirlia",
+    "artist": "Masahiko Ishii",
+    "imageSmall": "https://images.pokemontcg.io/cel25c/93_A.png",
+    "imageLarge": "https://images.pokemontcg.io/cel25c/93_A_hires.png"
+  },
+  {
+    "id": "cel25c-97_A",
+    "name": "Xerneas-EX",
+    "setId": "cel25c",
+    "number": "97",
+    "numberInt": 97,
+    "rarity": "Unknown",
+    "rarityRaw": "Classic Collection",
+    "dex": [
+      716
+    ],
+    "types": [
+      "Fairy"
+    ],
+    "hp": 170,
+    "subtypes": [
+      "Basic",
+      "EX"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/cel25c/97_A.png",
+    "imageLarge": "https://images.pokemontcg.io/cel25c/97_A_hires.png"
+  },
+  {
+    "id": "cel25c-107_A",
+    "name": "Donphan",
+    "setId": "cel25c",
+    "number": "107",
+    "numberInt": 107,
+    "rarity": "Unknown",
+    "rarityRaw": "Classic Collection",
+    "dex": [
+      232
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1",
+      "Prime"
+    ],
+    "evolvesFrom": "Phanpy",
+    "artist": "Kent Kanetsuna",
+    "imageSmall": "https://images.pokemontcg.io/cel25c/107_A.png",
+    "imageLarge": "https://images.pokemontcg.io/cel25c/107_A_hires.png"
+  },
+  {
+    "id": "cel25c-109_A",
+    "name": "Luxray GL LV.X",
+    "setId": "cel25c",
+    "number": "109",
+    "numberInt": 109,
+    "rarity": "Unknown",
+    "rarityRaw": "Classic Collection",
+    "dex": [
+      405
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Level-Up",
+      "SP"
+    ],
+    "evolvesFrom": "Luxray GL",
+    "artist": "Mitsuhiro Arita",
+    "imageSmall": "https://images.pokemontcg.io/cel25c/109_A.png",
+    "imageLarge": "https://images.pokemontcg.io/cel25c/109_A_hires.png"
+  },
+  {
+    "id": "cel25c-113_A",
+    "name": "Reshiram",
+    "setId": "cel25c",
+    "number": "113",
+    "numberInt": 113,
+    "rarity": "Unknown",
+    "rarityRaw": "Classic Collection",
+    "dex": [
+      643
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/cel25c/113_A.png",
+    "imageLarge": "https://images.pokemontcg.io/cel25c/113_A_hires.png"
+  },
+  {
+    "id": "cel25c-114_A",
+    "name": "Zekrom",
+    "setId": "cel25c",
+    "number": "114",
+    "numberInt": 114,
+    "rarity": "Unknown",
+    "rarityRaw": "Classic Collection",
+    "dex": [
+      644
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "5ban Graphics",
+    "imageSmall": "https://images.pokemontcg.io/cel25c/114_A.png",
+    "imageLarge": "https://images.pokemontcg.io/cel25c/114_A_hires.png"
+  },
+  {
+    "id": "cel25c-145_A",
+    "name": "Garchomp C LV.X",
+    "setId": "cel25c",
+    "number": "145",
+    "numberInt": 145,
+    "rarity": "Unknown",
+    "rarityRaw": "Classic Collection",
+    "dex": [
+      445
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Level-Up",
+      "SP"
+    ],
+    "evolvesFrom": "Garchomp C",
+    "artist": "Shizurow",
+    "imageSmall": "https://images.pokemontcg.io/cel25c/145_A.png",
+    "imageLarge": "https://images.pokemontcg.io/cel25c/145_A_hires.png"
+  }
+]

@@ -1,0 +1,610 @@
+[
+  {
+    "id": "swsh9tg-TG01",
+    "name": "Flareon",
+    "setId": "swsh9tg",
+    "number": "TG01",
+    "numberInt": 1001,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Trainer Gallery Rare Holo",
+    "dex": [
+      136
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Eevee",
+    "artist": "You Iribi",
+    "regulationMark": "D",
+    "imageSmall": "https://images.pokemontcg.io/swsh9tg/TG01.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh9tg/TG01_hires.png"
+  },
+  {
+    "id": "swsh9tg-TG02",
+    "name": "Vaporeon",
+    "setId": "swsh9tg",
+    "number": "TG02",
+    "numberInt": 1002,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Trainer Gallery Rare Holo",
+    "dex": [
+      134
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Eevee",
+    "artist": "Jiro Sasumo",
+    "regulationMark": "D",
+    "imageSmall": "https://images.pokemontcg.io/swsh9tg/TG02.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh9tg/TG02_hires.png"
+  },
+  {
+    "id": "swsh9tg-TG03",
+    "name": "Octillery",
+    "setId": "swsh9tg",
+    "number": "TG03",
+    "numberInt": 1003,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Trainer Gallery Rare Holo",
+    "dex": [
+      224
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 1",
+      "Rapid Strike"
+    ],
+    "evolvesFrom": "Remoraid",
+    "artist": "Shinya Komatsu",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/swsh9tg/TG03.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh9tg/TG03_hires.png"
+  },
+  {
+    "id": "swsh9tg-TG04",
+    "name": "Jolteon",
+    "setId": "swsh9tg",
+    "number": "TG04",
+    "numberInt": 1004,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Trainer Gallery Rare Holo",
+    "dex": [
+      135
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Eevee",
+    "artist": "DOM",
+    "regulationMark": "D",
+    "imageSmall": "https://images.pokemontcg.io/swsh9tg/TG04.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh9tg/TG04_hires.png"
+  },
+  {
+    "id": "swsh9tg-TG05",
+    "name": "Zekrom",
+    "setId": "swsh9tg",
+    "number": "TG05",
+    "numberInt": 1005,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Trainer Gallery Rare Holo",
+    "dex": [
+      644
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "AKIRA EGAWA",
+    "regulationMark": "D",
+    "imageSmall": "https://images.pokemontcg.io/swsh9tg/TG05.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh9tg/TG05_hires.png"
+  },
+  {
+    "id": "swsh9tg-TG06",
+    "name": "Dusknoir",
+    "setId": "swsh9tg",
+    "number": "TG06",
+    "numberInt": 1006,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Trainer Gallery Rare Holo",
+    "dex": [
+      477
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Dusclops",
+    "artist": "Megumi Higuchi",
+    "regulationMark": "D",
+    "imageSmall": "https://images.pokemontcg.io/swsh9tg/TG06.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh9tg/TG06_hires.png"
+  },
+  {
+    "id": "swsh9tg-TG07",
+    "name": "Dedenne",
+    "setId": "swsh9tg",
+    "number": "TG07",
+    "numberInt": 1007,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Trainer Gallery Rare Holo",
+    "dex": [
+      702
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "kurumitsu",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/swsh9tg/TG07.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh9tg/TG07_hires.png"
+  },
+  {
+    "id": "swsh9tg-TG08",
+    "name": "Alcremie",
+    "setId": "swsh9tg",
+    "number": "TG08",
+    "numberInt": 1008,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Trainer Gallery Rare Holo",
+    "dex": [
+      869
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Milcery",
+    "artist": "OKACHEKE",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/swsh9tg/TG08.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh9tg/TG08_hires.png"
+  },
+  {
+    "id": "swsh9tg-TG09",
+    "name": "Ariados",
+    "setId": "swsh9tg",
+    "number": "TG09",
+    "numberInt": 1009,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Trainer Gallery Rare Holo",
+    "dex": [
+      168
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Spinarak",
+    "artist": "Shiburingaru",
+    "regulationMark": "D",
+    "imageSmall": "https://images.pokemontcg.io/swsh9tg/TG09.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh9tg/TG09_hires.png"
+  },
+  {
+    "id": "swsh9tg-TG10",
+    "name": "Houndoom",
+    "setId": "swsh9tg",
+    "number": "TG10",
+    "numberInt": 1010,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Trainer Gallery Rare Holo",
+    "dex": [
+      229
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1",
+      "Single Strike"
+    ],
+    "evolvesFrom": "Houndour",
+    "artist": "NC Empire",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/swsh9tg/TG10.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh9tg/TG10_hires.png"
+  },
+  {
+    "id": "swsh9tg-TG11",
+    "name": "Eevee",
+    "setId": "swsh9tg",
+    "number": "TG11",
+    "numberInt": 1011,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Trainer Gallery Rare Holo",
+    "dex": [
+      133
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Souichirou Gunjima",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/swsh9tg/TG11.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh9tg/TG11_hires.png"
+  },
+  {
+    "id": "swsh9tg-TG12",
+    "name": "Oranguru",
+    "setId": "swsh9tg",
+    "number": "TG12",
+    "numberInt": 1012,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Trainer Gallery Rare Holo",
+    "dex": [
+      765
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Akira Komayama",
+    "regulationMark": "D",
+    "imageSmall": "https://images.pokemontcg.io/swsh9tg/TG12.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh9tg/TG12_hires.png"
+  },
+  {
+    "id": "swsh9tg-TG13",
+    "name": "Boltund V",
+    "setId": "swsh9tg",
+    "number": "TG13",
+    "numberInt": 1013,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo V",
+    "dex": [
+      836
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 200,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "GIDORA",
+    "regulationMark": "D",
+    "imageSmall": "https://images.pokemontcg.io/swsh9tg/TG13.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh9tg/TG13_hires.png"
+  },
+  {
+    "id": "swsh9tg-TG14",
+    "name": "Sylveon V",
+    "setId": "swsh9tg",
+    "number": "TG14",
+    "numberInt": 1014,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo V",
+    "dex": [
+      700
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 200,
+    "subtypes": [
+      "Basic",
+      "V",
+      "Rapid Strike"
+    ],
+    "artist": "Megumi Mizutani",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/swsh9tg/TG14.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh9tg/TG14_hires.png"
+  },
+  {
+    "id": "swsh9tg-TG15",
+    "name": "Sylveon VMAX",
+    "setId": "swsh9tg",
+    "number": "TG15",
+    "numberInt": 1015,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Holo VMAX",
+    "dex": [
+      700
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 310,
+    "subtypes": [
+      "VMAX",
+      "Rapid Strike"
+    ],
+    "evolvesFrom": "Sylveon V",
+    "artist": "sui",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/swsh9tg/TG15.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh9tg/TG15_hires.png"
+  },
+  {
+    "id": "swsh9tg-TG16",
+    "name": "Mimikyu V",
+    "setId": "swsh9tg",
+    "number": "TG16",
+    "numberInt": 1016,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo V",
+    "dex": [
+      778
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 160,
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "artist": "saino misaki",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/swsh9tg/TG16.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh9tg/TG16_hires.png"
+  },
+  {
+    "id": "swsh9tg-TG17",
+    "name": "Mimikyu VMAX",
+    "setId": "swsh9tg",
+    "number": "TG17",
+    "numberInt": 1017,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Holo VMAX",
+    "dex": [
+      778
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 300,
+    "subtypes": [
+      "VMAX"
+    ],
+    "evolvesFrom": "Mimikyu V",
+    "artist": "Naoki Saito",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/swsh9tg/TG17.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh9tg/TG17_hires.png"
+  },
+  {
+    "id": "swsh9tg-TG18",
+    "name": "Single Strike Urshifu V",
+    "setId": "swsh9tg",
+    "number": "TG18",
+    "numberInt": 1018,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo V",
+    "dex": [
+      892
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 220,
+    "subtypes": [
+      "Basic",
+      "V",
+      "Single Strike"
+    ],
+    "artist": "Yuu Nishida",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/swsh9tg/TG18.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh9tg/TG18_hires.png"
+  },
+  {
+    "id": "swsh9tg-TG19",
+    "name": "Single Strike Urshifu VMAX",
+    "setId": "swsh9tg",
+    "number": "TG19",
+    "numberInt": 1019,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Holo VMAX",
+    "dex": [
+      892
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 330,
+    "subtypes": [
+      "VMAX",
+      "Single Strike"
+    ],
+    "evolvesFrom": "Single Strike Urshifu V",
+    "artist": "kodama",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/swsh9tg/TG19.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh9tg/TG19_hires.png"
+  },
+  {
+    "id": "swsh9tg-TG20",
+    "name": "Rapid Strike Urshifu V",
+    "setId": "swsh9tg",
+    "number": "TG20",
+    "numberInt": 1020,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo V",
+    "dex": [
+      892
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 220,
+    "subtypes": [
+      "Basic",
+      "V",
+      "Rapid Strike"
+    ],
+    "artist": "takuyoa",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/swsh9tg/TG20.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh9tg/TG20_hires.png"
+  },
+  {
+    "id": "swsh9tg-TG21",
+    "name": "Rapid Strike Urshifu VMAX",
+    "setId": "swsh9tg",
+    "number": "TG21",
+    "numberInt": 1021,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Holo VMAX",
+    "dex": [
+      892
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 330,
+    "subtypes": [
+      "VMAX",
+      "Rapid Strike"
+    ],
+    "evolvesFrom": "Rapid Strike Urshifu V",
+    "artist": "Scav",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/swsh9tg/TG21.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh9tg/TG21_hires.png"
+  },
+  {
+    "id": "swsh9tg-TG22",
+    "name": "Umbreon V",
+    "setId": "swsh9tg",
+    "number": "TG22",
+    "numberInt": 1022,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Rare Holo V",
+    "dex": [
+      197
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 200,
+    "subtypes": [
+      "Basic",
+      "V",
+      "Single Strike"
+    ],
+    "artist": "Ligton",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/swsh9tg/TG22.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh9tg/TG22_hires.png"
+  },
+  {
+    "id": "swsh9tg-TG23",
+    "name": "Umbreon VMAX",
+    "setId": "swsh9tg",
+    "number": "TG23",
+    "numberInt": 1023,
+    "rarity": "UltraRare",
+    "rarityRaw": "Rare Holo VMAX",
+    "dex": [
+      197
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 310,
+    "subtypes": [
+      "VMAX",
+      "Single Strike"
+    ],
+    "evolvesFrom": "Umbreon V",
+    "artist": "kawayoo",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/swsh9tg/TG23.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh9tg/TG23_hires.png"
+  },
+  {
+    "id": "swsh9tg-TG29",
+    "name": "Single Strike Urshifu VMAX",
+    "setId": "swsh9tg",
+    "number": "TG29",
+    "numberInt": 1029,
+    "rarity": "HyperRare",
+    "rarityRaw": "Rare Secret",
+    "dex": [
+      892
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 330,
+    "subtypes": [
+      "VMAX",
+      "Single Strike"
+    ],
+    "evolvesFrom": "Single Strike Urshifu V",
+    "artist": "PLANETA Tsuji",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/swsh9tg/TG29.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh9tg/TG29_hires.png"
+  },
+  {
+    "id": "swsh9tg-TG30",
+    "name": "Rapid Strike Urshifu VMAX",
+    "setId": "swsh9tg",
+    "number": "TG30",
+    "numberInt": 1030,
+    "rarity": "HyperRare",
+    "rarityRaw": "Rare Secret",
+    "dex": [
+      892
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 330,
+    "subtypes": [
+      "VMAX",
+      "Rapid Strike"
+    ],
+    "evolvesFrom": "Rapid Strike Urshifu V",
+    "artist": "PLANETA Tsuji",
+    "regulationMark": "E",
+    "imageSmall": "https://images.pokemontcg.io/swsh9tg/TG30.png",
+    "imageLarge": "https://images.pokemontcg.io/swsh9tg/TG30_hires.png"
+  }
+]
