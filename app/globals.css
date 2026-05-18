@@ -1,21 +1,32 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #0f1115;
-  --color-panel: #181b22;
-  --color-panel-2: #1f232c;
-  --color-text: #e7ecf3;
-  --color-muted: #8b95a7;
-  --color-accent: #f0b429;
-  --color-covered: #3ddc84;
-  --color-covered-dark: #1f9959;
-  --color-missing: #e35b5b;
-  --color-missing-dark: #8c2a2a;
-  --color-owned: #f0b429;
-  --color-owned-dark: #a87800;
+  /* Surfaces — deep neutral, no warm cast */
+  --color-bg: #0b0d10;
+  --color-panel: #13171c;
+  --color-panel-2: #1a1f26;
+  --color-panel-3: #232932;
+  --color-text: #e8edf4;
+  --color-muted: #8a93a3;
+  --color-border: #262c36;
+  --color-border-strong: #353c48;
+
+  /* Accent — cool blue. Used for active nav, primary buttons, focus rings.
+     Distinct from the "owned" amber so each color has one job. */
+  --color-accent: #60a5fa;
+  --color-accent-dark: #2563eb;
+
+  /* Status semantics — used everywhere consistently */
+  --color-owned: #fbbf24;        /* warm amber */
+  --color-owned-dark: #b45309;
+  --color-covered: #34d399;      /* cool emerald */
+  --color-covered-dark: #047857;
+  --color-missing: #f87171;      /* soft red */
+  --color-missing-dark: #991b1b;
+
+  /* Series tints (badge use only) */
   --color-me-tint: #a78bff;
   --color-sv-tint: #5db8ff;
-  --color-border: #2a2f3a;
 
   --font-sans:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
@@ -27,4 +38,69 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv11";
+}
+
+/* Tabular numerals utility — keeps percentages and counters from jittering */
+.nums {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* Subtle scrollbar so long lists don't shout */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border-strong) transparent;
+}
+
+/* Pokédex cell hover: warm glow keyed to elemental type. The CSS variable
+   --type-glow is set inline by PokemonCell. Kept here so the easing curve
+   is reusable and not duplicated across instances. */
+.pokemon-cell:hover {
+  box-shadow:
+    0 0 0 1px rgb(255 255 255 / 0.08),
+    0 8px 24px -6px var(--type-glow, rgb(0 0 0 / 0.5)),
+    0 2px 6px -2px rgb(0 0 0 / 0.6);
+}
+
+/* Stylized range slider used by the grid density control. Native styling
+   on dark backgrounds clashes with the rest of the toolbar vocabulary. */
+.range-density {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  height: 16px;
+  cursor: pointer;
+}
+.range-density::-webkit-slider-runnable-track {
+  height: 2px;
+  border-radius: 999px;
+  background: var(--color-border-strong);
+}
+.range-density::-moz-range-track {
+  height: 2px;
+  border-radius: 999px;
+  background: var(--color-border-strong);
+}
+.range-density::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  margin-top: -5px;
+  border-radius: 999px;
+  background: var(--color-text);
+  box-shadow: 0 0 0 3px var(--color-bg), 0 0 0 4px var(--color-border-strong);
+  transition: transform 120ms ease-out;
+}
+.range-density::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+.range-density::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--color-text);
+  box-shadow: 0 0 0 3px var(--color-bg), 0 0 0 4px var(--color-border-strong);
 }
