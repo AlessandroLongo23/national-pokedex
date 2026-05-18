@@ -1,0 +1,82 @@
+"use client";
+
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import type { CardEntry } from "@/lib/data/types";
+import {
+  formatPriceCompact,
+  pickPrice,
+  type CardPrice,
+  type PriceSource,
+} from "@/lib/pricing/pokemontcg";
+import { useCardPreview } from "../../_lib/CardPreviewContext";
+
+interface Props {
+  cards: CardEntry[];
+  prices: Record<string, CardPrice>;
+  priceSource: PriceSource;
+}
+
+// Compact, scannable strip — narrower tiles than CardRail (w-24 vs w-32)
+// so more pulls fit above the fold, with each tile annotated by price
+// and set code. Clicking opens the same fullscreen preview the rest of
+// the app uses, so we don't ship a redundant action surface here.
+export function RecentPullsStrip({ cards, prices, priceSource }: Props) {
+  const { open } = useCardPreview();
+
+  return (
+    <section className="space-y-3" data-rail="recent-pack-pulls">
+      <header className="flex items-baseline justify-between gap-3">
+        <h2 className="text-sm font-semibold tracking-tight">Latest pulls</h2>
+        <Link
+          href="/packs"
+          className="inline-flex items-center gap-1 text-xs text-accent hover:underline"
+        >
+          All packs
+          <ArrowRight className="h-3 w-3" aria-hidden />
+        </Link>
+      </header>
+      {cards.length === 0 ? (
+        <p className="rounded-md border border-dashed border-border px-4 py-6 text-xs text-muted">
+          Log a pack to see your latest pulls here.
+        </p>
+      ) : (
+        <div className="flex snap-x gap-2 overflow-x-auto pb-2">
+          {cards.map((card) => {
+            const price = pickPrice(prices[card.id], priceSource);
+            return (
+              <button
+                key={card.id}
+                type="button"
+                onClick={(e) => open(card, e.currentTarget.getBoundingClientRect())}
+                className="group w-24 shrink-0 snap-start text-left focus-visible:outline-none"
+                aria-label={`Preview ${card.name}`}
+              >
+                <div
+                  className="overflow-hidden rounded-[5px] border border-transparent bg-panel-2 transition group-hover:border-border-strong group-focus-visible:border-accent"
+                  style={{ aspectRatio: "245 / 342" }}
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={card.imageSmall}
+                    alt=""
+                    loading="lazy"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <div className="mt-1 flex items-baseline justify-between gap-1.5 text-[10px] tabular-nums leading-tight">
+                  <span className="truncate text-muted" title={card.setId}>
+                    {card.setId}
+                  </span>
+                  <span className={price != null ? "font-medium text-text" : "text-muted"}>
+                    {price != null ? formatPriceCompact(price, priceSource) : "—"}
+                  </span>
+                </div>
+              </button>
+            );
+          })}
+        </div>
+      )}
+    </section>
+  );
+}

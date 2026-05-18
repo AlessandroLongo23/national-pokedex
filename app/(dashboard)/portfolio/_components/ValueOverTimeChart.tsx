@@ -1,20 +1,26 @@
 "use client";
 
-import type { CumulativePoint } from "@/lib/data/cumulative-acquisitions";
+import type { PriceSource } from "@/lib/pricing/pokemontcg";
+
+export interface ValuePoint {
+  date: string;
+  value: number;
+}
 
 interface Props {
-  points: CumulativePoint[];
+  points: ValuePoint[];
+  // Source kept on the API for parity with CardsOverTimeChart and so
+  // callers can later expose a tooltip — currently unused in the visual.
+  source: PriceSource;
   height?: number;
 }
 
-// Slim, label-led trend line. Renders nothing when there isn't enough
-// data — the parent decides whether to show a contextual one-liner in
-// its place. Keeping empty states out of here prevents the dashed-box
-// real estate hog the old version produced.
-export function CardsOverTimeChart({ points, height = 96 }: Props) {
+// Twin of CardsOverTimeChart, in the owned/amber palette. Same "render
+// nothing on empty" contract — the parent owns the messaging.
+export function ValueOverTimeChart({ points, source: _source, height = 96 }: Props) {
   if (points.length < 2) return null;
 
-  const maxY = points[points.length - 1]!.count;
+  const maxY = points[points.length - 1]!.value;
   const W = 800;
   const H = height;
   const PAD_X = 0;
@@ -26,7 +32,7 @@ export function CardsOverTimeChart({ points, height = 96 }: Props) {
   const yScale = (n: number) => PAD_TOP + drawH - (drawH * n) / Math.max(maxY, 1);
 
   const pathD = points
-    .map((p, i) => `${i === 0 ? "M" : "L"} ${PAD_X + i * xStep} ${yScale(p.count)}`)
+    .map((p, i) => `${i === 0 ? "M" : "L"} ${PAD_X + i * xStep} ${yScale(p.value)}`)
     .join(" ");
   const areaD = `${pathD} L ${PAD_X + (points.length - 1) * xStep} ${H} L ${PAD_X} ${H} Z`;
 
@@ -36,12 +42,12 @@ export function CardsOverTimeChart({ points, height = 96 }: Props) {
       preserveAspectRatio="none"
       className="h-24 w-full"
       role="img"
-      aria-label={`Cards owned over time: ${maxY.toLocaleString()} cards as of ${points[points.length - 1]!.date}`}
+      aria-label="Collection value over time"
     >
-      <path d={areaD} className="fill-accent/10" />
+      <path d={areaD} className="fill-owned/10" />
       <path
         d={pathD}
-        className="stroke-accent"
+        className="stroke-owned"
         strokeWidth="1.5"
         fill="none"
         vectorEffect="non-scaling-stroke"
