@@ -45,8 +45,10 @@ export type RarityBucket =
 
 export type Rarity = RarityBucket | "Promo" | "Unknown";
 
+export type Supertype = "Pokémon" | "Trainer" | "Energy";
+
 export interface RarityPoolCard {
-  supertype: "Pokémon" | "Trainer" | "Energy";
+  supertype: Supertype;
   dex: number[];
 }
 
@@ -68,6 +70,7 @@ export interface CardEntry {
   id: string;
   name: string;
   setId: string;
+  supertype: Supertype;
   number: string;
   numberInt: number;
   rarity: Rarity;

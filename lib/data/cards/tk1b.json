@@ -3,6 +3,7 @@
     "id": "tk1b-1",
     "name": "Electrike",
     "setId": "tk1b",
+    "supertype": "Pokémon",
     "number": "1",
     "numberInt": 1,
     "rarity": "Unknown",
@@ -25,6 +26,7 @@
     "id": "tk1b-2",
     "name": "Latios",
     "setId": "tk1b",
+    "supertype": "Pokémon",
     "number": "2",
     "numberInt": 2,
     "rarity": "Unknown",
@@ -47,6 +49,7 @@
     "id": "tk1b-3",
     "name": "Linoone",
     "setId": "tk1b",
+    "supertype": "Pokémon",
     "number": "3",
     "numberInt": 3,
     "rarity": "Unknown",
@@ -70,6 +73,7 @@
     "id": "tk1b-4",
     "name": "Magnemite",
     "setId": "tk1b",
+    "supertype": "Pokémon",
     "number": "4",
     "numberInt": 4,
     "rarity": "Unknown",
@@ -92,6 +96,7 @@
     "id": "tk1b-5",
     "name": "Magneton",
     "setId": "tk1b",
+    "supertype": "Pokémon",
     "number": "5",
     "numberInt": 5,
     "rarity": "Unknown",
@@ -115,6 +120,7 @@
     "id": "tk1b-6",
     "name": "Pikachu",
     "setId": "tk1b",
+    "supertype": "Pokémon",
     "number": "6",
     "numberInt": 6,
     "rarity": "Unknown",
@@ -137,6 +143,7 @@
     "id": "tk1b-7",
     "name": "Zigzagoon",
     "setId": "tk1b",
+    "supertype": "Pokémon",
     "number": "7",
     "numberInt": 7,
     "rarity": "Unknown",
@@ -154,5 +161,58 @@
     "artist": "Atsuko Nishida",
     "imageSmall": "https://images.pokemontcg.io/tk1b/7.png",
     "imageLarge": "https://images.pokemontcg.io/tk1b/7_hires.png"
+  },
+  {
+    "id": "tk1b-8",
+    "name": "Potion",
+    "setId": "tk1b",
+    "supertype": "Trainer",
+    "number": "8",
+    "numberInt": 8,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Item"
+    ],
+    "artist": "Keiji Kinebuchi",
+    "imageSmall": "https://images.pokemontcg.io/tk1b/8.png",
+    "imageLarge": "https://images.pokemontcg.io/tk1b/8_hires.png"
+  },
+  {
+    "id": "tk1b-9",
+    "name": "Energy Search",
+    "setId": "tk1b",
+    "supertype": "Trainer",
+    "number": "9",
+    "numberInt": 9,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Item"
+    ],
+    "artist": "Kai Ishikawa",
+    "imageSmall": "https://images.pokemontcg.io/tk1b/9.png",
+    "imageLarge": "https://images.pokemontcg.io/tk1b/9_hires.png"
+  },
+  {
+    "id": "tk1b-10",
+    "name": "Lightning Energy",
+    "setId": "tk1b",
+    "supertype": "Energy",
+    "number": "10",
+    "numberInt": 10,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Basic"
+    ],
+    "imageSmall": "https://images.pokemontcg.io/tk1b/10.png",
+    "imageLarge": "https://images.pokemontcg.io/tk1b/10_hires.png"
   }
 ]

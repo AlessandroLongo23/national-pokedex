@@ -2,8 +2,8 @@ import type {
   CardEntry,
   Rarity,
   RarityBucket,
-  RarityPoolCard,
   SetRarityPool,
+  Supertype,
 } from "@/lib/data/types";
 
 export interface RawCard {
@@ -78,7 +78,7 @@ function emptyPool(): SetRarityPool {
   };
 }
 
-function normaliseSupertype(s: string): RarityPoolCard["supertype"] {
+function normaliseSupertype(s: string): Supertype {
   if (s === "Pokémon" || s === "Trainer" || s === "Energy") return s;
   return "Trainer";
 }
@@ -111,29 +111,31 @@ export function parseSetCards(setId: string, cards: RawCard[]): SetCardSummary {
     const rarityRaw = card.rarity ?? "";
     const bucket = card.rarity ? RARITY_MAP[card.rarity] : undefined;
 
-    if (supertype === "Pokémon" && dex.length > 0) {
+    if (supertype === "Pokémon") {
       for (const n of dex) dexSet.add(n);
-      out.push({
-        id: card.id,
-        name: card.name,
-        setId,
-        number: card.number,
-        numberInt: parseNumberInt(card.number),
-        rarity: resolveRarity(card.rarity, bucket),
-        rarityRaw,
-        dex,
-        types: card.types ?? [],
-        hp: card.hp ? Number(card.hp) || undefined : undefined,
-        subtypes: card.subtypes ?? [],
-        evolvesFrom: card.evolvesFrom,
-        artist: card.artist,
-        regulationMark: card.regulationMark,
-        imageSmall:
-          card.images?.small ?? `https://images.pokemontcg.io/${setId}/${card.number}.png`,
-        imageLarge:
-          card.images?.large ?? `https://images.pokemontcg.io/${setId}/${card.number}_hires.png`,
-      });
     }
+
+    out.push({
+      id: card.id,
+      name: card.name,
+      setId,
+      supertype,
+      number: card.number,
+      numberInt: parseNumberInt(card.number),
+      rarity: resolveRarity(card.rarity, bucket),
+      rarityRaw,
+      dex,
+      types: card.types ?? [],
+      hp: card.hp ? Number(card.hp) || undefined : undefined,
+      subtypes: card.subtypes ?? [],
+      evolvesFrom: card.evolvesFrom,
+      artist: card.artist,
+      regulationMark: card.regulationMark,
+      imageSmall:
+        card.images?.small ?? `https://images.pokemontcg.io/${setId}/${card.number}.png`,
+      imageLarge:
+        card.images?.large ?? `https://images.pokemontcg.io/${setId}/${card.number}_hires.png`,
+    });
 
     if (!bucket) continue;
     pool[bucket].push({ supertype, dex });

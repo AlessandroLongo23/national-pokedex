@@ -8,6 +8,11 @@ import { computeGreedyOrder } from "./greedy";
 import { fetchSpecies } from "./fetchSpecies";
 import { fetchBoosters } from "./fetchBoosters";
 import type { CardEntry, CardIndex, SetInfo, SetPools } from "@/lib/data/types";
+import {
+  OTHER_SUBTYPES,
+  OTHER_SUBTYPE_PREDICATES,
+  type OtherCardsBySubtype,
+} from "@/lib/data/other-subtypes";
 
 // Promo-only / utility files we never want surfaced as openable sets.
 const SKIPPED_SETS = new Set<string>(["sve"]);
@@ -121,6 +126,30 @@ async function main() {
     `[ingest] boosters: ${wrapperCount} wrappers across ${Object.keys(boosters).length} sets`,
   );
 
+  const otherCardsBySubtype: OtherCardsBySubtype = {
+    items: [],
+    supporters: [],
+    stadiums: [],
+    tools: [],
+    energies: [],
+  };
+  for (const set of sets) {
+    const setCards = cardsBySet[set.id];
+    if (!setCards) continue;
+    for (const card of setCards) {
+      for (const subtype of OTHER_SUBTYPES) {
+        if (OTHER_SUBTYPE_PREDICATES[subtype](card)) {
+          otherCardsBySubtype[subtype].push(card);
+        }
+      }
+    }
+  }
+  console.log(
+    `[ingest] other cards: ${OTHER_SUBTYPES.map(
+      (s) => `${s}=${otherCardsBySubtype[s].length}`,
+    ).join(" ")}`,
+  );
+
   const dataDir = path.resolve(process.cwd(), "lib", "data");
   const cardsDir = path.join(dataDir, "cards");
   if (existsSync(cardsDir)) {
@@ -140,6 +169,7 @@ async function main() {
   writeJson(path.join(dataDir, "cardIndex.json"), cardIndex);
   writeJson(path.join(dataDir, "species.json"), species);
   writeJson(path.join(dataDir, "boosters.json"), boosters);
+  writeJson(path.join(dataDir, "otherCardsBySubtype.json"), otherCardsBySubtype);
 
   console.log(`[ingest] wrote ${Object.keys(cardsBySet).length} per-set card files`);
   console.log("[ingest] done.");

@@ -3,6 +3,7 @@
     "id": "tk2a-1",
     "name": "Beldum",
     "setId": "tk2a",
+    "supertype": "Pokémon",
     "number": "1",
     "numberInt": 1,
     "rarity": "Unknown",
@@ -25,6 +26,7 @@
     "id": "tk2a-2",
     "name": "Electrike",
     "setId": "tk2a",
+    "supertype": "Pokémon",
     "number": "2",
     "numberInt": 2,
     "rarity": "Unknown",
@@ -47,6 +49,7 @@
     "id": "tk2a-3",
     "name": "Grumpig",
     "setId": "tk2a",
+    "supertype": "Pokémon",
     "number": "3",
     "numberInt": 3,
     "rarity": "Unknown",
@@ -70,6 +73,7 @@
     "id": "tk2a-4",
     "name": "Meowth",
     "setId": "tk2a",
+    "supertype": "Pokémon",
     "number": "4",
     "numberInt": 4,
     "rarity": "Unknown",
@@ -92,6 +96,7 @@
     "id": "tk2a-5",
     "name": "Metang",
     "setId": "tk2a",
+    "supertype": "Pokémon",
     "number": "5",
     "numberInt": 5,
     "rarity": "Unknown",
@@ -115,6 +120,7 @@
     "id": "tk2a-6",
     "name": "Plusle",
     "setId": "tk2a",
+    "supertype": "Pokémon",
     "number": "6",
     "numberInt": 6,
     "rarity": "Unknown",
@@ -137,6 +143,7 @@
     "id": "tk2a-7",
     "name": "Spoink",
     "setId": "tk2a",
+    "supertype": "Pokémon",
     "number": "7",
     "numberInt": 7,
     "rarity": "Unknown",
@@ -154,5 +161,93 @@
     "artist": "Kagemaru Himeno",
     "imageSmall": "https://images.pokemontcg.io/tk2a/7.png",
     "imageLarge": "https://images.pokemontcg.io/tk2a/7_hires.png"
+  },
+  {
+    "id": "tk2a-8",
+    "name": "Energy Search",
+    "setId": "tk2a",
+    "supertype": "Trainer",
+    "number": "8",
+    "numberInt": 8,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Item"
+    ],
+    "artist": "Kai Ishikawa",
+    "imageSmall": "https://images.pokemontcg.io/tk2a/8.png",
+    "imageLarge": "https://images.pokemontcg.io/tk2a/8_hires.png"
+  },
+  {
+    "id": "tk2a-9",
+    "name": "Potion",
+    "setId": "tk2a",
+    "supertype": "Trainer",
+    "number": "9",
+    "numberInt": 9,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Item"
+    ],
+    "artist": "Keiji Kinebuchi",
+    "imageSmall": "https://images.pokemontcg.io/tk2a/9.png",
+    "imageLarge": "https://images.pokemontcg.io/tk2a/9_hires.png"
+  },
+  {
+    "id": "tk2a-10",
+    "name": "Professor Cozmo's Discovery",
+    "setId": "tk2a",
+    "supertype": "Trainer",
+    "number": "10",
+    "numberInt": 10,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Supporter"
+    ],
+    "artist": "Ken Sugimori",
+    "imageSmall": "https://images.pokemontcg.io/tk2a/10.png",
+    "imageLarge": "https://images.pokemontcg.io/tk2a/10_hires.png"
+  },
+  {
+    "id": "tk2a-11",
+    "name": "Lightning Energy",
+    "setId": "tk2a",
+    "supertype": "Energy",
+    "number": "11",
+    "numberInt": 11,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Basic"
+    ],
+    "imageSmall": "https://images.pokemontcg.io/tk2a/11.png",
+    "imageLarge": "https://images.pokemontcg.io/tk2a/11_hires.png"
+  },
+  {
+    "id": "tk2a-12",
+    "name": "Psychic Energy",
+    "setId": "tk2a",
+    "supertype": "Energy",
+    "number": "12",
+    "numberInt": 12,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Basic"
+    ],
+    "imageSmall": "https://images.pokemontcg.io/tk2a/12.png",
+    "imageLarge": "https://images.pokemontcg.io/tk2a/12_hires.png"
   }
 ]

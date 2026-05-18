@@ -77,7 +77,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 69,
-    "cardCount": 69
+    "cardCount": 102
   },
   {
     "id": "base2",
@@ -135,7 +135,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 47,
-    "cardCount": 63
+    "cardCount": 64
   },
   {
     "id": "basep",
@@ -182,7 +182,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 36,
-    "cardCount": 49
+    "cardCount": 53
   },
   {
     "id": "base3",
@@ -235,7 +235,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 42,
-    "cardCount": 57
+    "cardCount": 62
   },
   {
     "id": "base4",
@@ -346,7 +346,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 100,
-    "cardCount": 100
+    "cardCount": 130
   },
   {
     "id": "base5",
@@ -411,7 +411,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 54,
-    "cardCount": 68
+    "cardCount": 83
   },
   {
     "id": "gym1",
@@ -494,7 +494,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 72,
-    "cardCount": 91
+    "cardCount": 132
   },
   {
     "id": "gym2",
@@ -589,7 +589,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 84,
-    "cardCount": 95
+    "cardCount": 132
   },
   {
     "id": "neo1",
@@ -672,7 +672,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 72,
-    "cardCount": 81
+    "cardCount": 111
   },
   {
     "id": "neo2",
@@ -728,7 +728,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 45,
-    "cardCount": 71
+    "cardCount": 75
   },
   {
     "id": "si1",
@@ -822,7 +822,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 54,
-    "cardCount": 61
+    "cardCount": 66
   },
   {
     "id": "neo4",
@@ -918,7 +918,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 85,
-    "cardCount": 98
+    "cardCount": 113
   },
   {
     "id": "base6",
@@ -1028,7 +1028,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 99,
-    "cardCount": 99
+    "cardCount": 110
   },
   {
     "id": "ecard1",
@@ -1131,7 +1131,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 92,
-    "cardCount": 136
+    "cardCount": 165
   },
   {
     "id": "bp",
@@ -1149,7 +1149,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 7,
-    "cardCount": 8
+    "cardCount": 9
   },
   {
     "id": "ecard2",
@@ -1264,7 +1264,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 104,
-    "cardCount": 152
+    "cardCount": 182
   },
   {
     "id": "ecard3",
@@ -1382,7 +1382,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 107,
-    "cardCount": 155
+    "cardCount": 182
   },
   {
     "id": "ex1",
@@ -1453,7 +1453,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 60,
-    "cardCount": 87
+    "cardCount": 109
   },
   {
     "id": "ex2",
@@ -1547,7 +1547,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 83,
-    "cardCount": 92
+    "cardCount": 100
   },
   {
     "id": "np",
@@ -1585,7 +1585,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 27,
-    "cardCount": 36
+    "cardCount": 40
   },
   {
     "id": "ex3",
@@ -1664,7 +1664,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 68,
-    "cardCount": 93
+    "cardCount": 100
   },
   {
     "id": "ex4",
@@ -1724,7 +1724,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 49,
-    "cardCount": 77
+    "cardCount": 97
   },
   {
     "id": "tk1a",
@@ -1742,7 +1742,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 7,
-    "cardCount": 7
+    "cardCount": 10
   },
   {
     "id": "tk1b",
@@ -1760,7 +1760,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 7,
-    "cardCount": 7
+    "cardCount": 10
   },
   {
     "id": "ex5",
@@ -1849,7 +1849,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 78,
-    "cardCount": 93
+    "cardCount": 102
   },
   {
     "id": "ex6",
@@ -1954,7 +1954,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 94,
-    "cardCount": 99
+    "cardCount": 116
   },
   {
     "id": "pop1",
@@ -2082,7 +2082,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 89,
-    "cardCount": 97
+    "cardCount": 111
   },
   {
     "id": "ex8",
@@ -2175,7 +2175,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 82,
-    "cardCount": 96
+    "cardCount": 108
   },
   {
     "id": "ex9",
@@ -2261,7 +2261,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 75,
-    "cardCount": 86
+    "cardCount": 107
   },
   {
     "id": "ex10",
@@ -2364,7 +2364,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 92,
-    "cardCount": 124
+    "cardCount": 145
   },
   {
     "id": "pop2",
@@ -2388,7 +2388,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 13,
-    "cardCount": 13
+    "cardCount": 17
   },
   {
     "id": "ex11",
@@ -2468,7 +2468,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 69,
-    "cardCount": 95
+    "cardCount": 114
   },
   {
     "id": "ex12",
@@ -2560,7 +2560,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 81,
-    "cardCount": 82
+    "cardCount": 93
   },
   {
     "id": "tk2a",
@@ -2578,7 +2578,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 7,
-    "cardCount": 7
+    "cardCount": 12
   },
   {
     "id": "tk2b",
@@ -2596,7 +2596,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 7,
-    "cardCount": 7
+    "cardCount": 12
   },
   {
     "id": "pop3",
@@ -2622,7 +2622,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 15,
-    "cardCount": 15
+    "cardCount": 17
   },
   {
     "id": "ex13",
@@ -2711,7 +2711,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 78,
-    "cardCount": 91
+    "cardCount": 111
   },
   {
     "id": "ex14",
@@ -2790,7 +2790,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 68,
-    "cardCount": 82
+    "cardCount": 100
   },
   {
     "id": "pop4",
@@ -2814,7 +2814,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 13,
-    "cardCount": 14
+    "cardCount": 17
   },
   {
     "id": "ex15",
@@ -2900,7 +2900,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 75,
-    "cardCount": 83
+    "cardCount": 101
   },
   {
     "id": "ex16",
@@ -2992,7 +2992,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 81,
-    "cardCount": 81
+    "cardCount": 108
   },
   {
     "id": "pop5",
@@ -3014,7 +3014,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 11,
-    "cardCount": 12
+    "cardCount": 17
   },
   {
     "id": "dp1",
@@ -3126,7 +3126,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 101,
-    "cardCount": 107
+    "cardCount": 130
   },
   {
     "id": "dpp",
@@ -3178,7 +3178,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 41,
-    "cardCount": 51
+    "cardCount": 56
   },
   {
     "id": "dp2",
@@ -3296,7 +3296,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 107,
-    "cardCount": 111
+    "cardCount": 124
   },
   {
     "id": "pop6",
@@ -3443,7 +3443,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 108,
-    "cardCount": 120
+    "cardCount": 132
   },
   {
     "id": "dp4",
@@ -3546,7 +3546,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 92,
-    "cardCount": 100
+    "cardCount": 106
   },
   {
     "id": "pop7",
@@ -3655,7 +3655,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 71,
-    "cardCount": 82
+    "cardCount": 100
   },
   {
     "id": "dp6",
@@ -3773,7 +3773,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 107,
-    "cardCount": 135
+    "cardCount": 146
   },
   {
     "id": "pop8",
@@ -3798,7 +3798,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 14,
-    "cardCount": 14
+    "cardCount": 17
   },
   {
     "id": "dp7",
@@ -3886,7 +3886,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 77,
-    "cardCount": 92
+    "cardCount": 106
   },
   {
     "id": "pl1",
@@ -3994,7 +3994,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 97,
-    "cardCount": 115
+    "cardCount": 133
   },
   {
     "id": "pop9",
@@ -4116,7 +4116,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 83,
-    "cardCount": 104
+    "cardCount": 120
   },
   {
     "id": "pl3",
@@ -4253,7 +4253,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 126,
-    "cardCount": 146
+    "cardCount": 153
   },
   {
     "id": "pl4",
@@ -4326,7 +4326,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 62,
-    "cardCount": 99
+    "cardCount": 111
   },
   {
     "id": "ru1",
@@ -4453,7 +4453,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 89,
-    "cardCount": 99
+    "cardCount": 124
   },
   {
     "id": "hsp",
@@ -4488,7 +4488,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 24,
-    "cardCount": 24
+    "cardCount": 25
   },
   {
     "id": "hgss2",
@@ -4569,7 +4569,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 70,
-    "cardCount": 82
+    "cardCount": 96
   },
   {
     "id": "hgss3",
@@ -4648,7 +4648,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 68,
-    "cardCount": 80
+    "cardCount": 91
   },
   {
     "id": "hgss4",
@@ -4751,7 +4751,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 92,
-    "cardCount": 96
+    "cardCount": 103
   },
   {
     "id": "col1",
@@ -4840,7 +4840,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 78,
-    "cardCount": 86
+    "cardCount": 106
   },
   {
     "id": "bwp",
@@ -4918,7 +4918,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 67,
-    "cardCount": 93
+    "cardCount": 101
   },
   {
     "id": "bw1",
@@ -5002,7 +5002,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 73,
-    "cardCount": 94
+    "cardCount": 115
   },
   {
     "id": "mcd11",
@@ -5106,7 +5106,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 70,
-    "cardCount": 91
+    "cardCount": 98
   },
   {
     "id": "bw3",
@@ -5193,7 +5193,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 76,
-    "cardCount": 94
+    "cardCount": 102
   },
   {
     "id": "bw4",
@@ -5285,7 +5285,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 81,
-    "cardCount": 95
+    "cardCount": 103
   },
   {
     "id": "bw5",
@@ -5378,7 +5378,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 82,
-    "cardCount": 98
+    "cardCount": 111
   },
   {
     "id": "mcd12",
@@ -5515,7 +5515,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 103,
-    "cardCount": 122
+    "cardCount": 128
   },
   {
     "id": "dv1",
@@ -5540,7 +5540,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 14,
-    "cardCount": 18
+    "cardCount": 21
   },
   {
     "id": "bw7",
@@ -5670,7 +5670,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 119,
-    "cardCount": 135
+    "cardCount": 153
   },
   {
     "id": "bw8",
@@ -5783,7 +5783,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 102,
-    "cardCount": 122
+    "cardCount": 138
   },
   {
     "id": "bw9",
@@ -5890,7 +5890,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 96,
-    "cardCount": 108
+    "cardCount": 122
   },
   {
     "id": "bw10",
@@ -5978,7 +5978,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 77,
-    "cardCount": 85
+    "cardCount": 105
   },
   {
     "id": "xyp",
@@ -6098,7 +6098,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 109,
-    "cardCount": 194
+    "cardCount": 216
   },
   {
     "id": "bw11",
@@ -6217,7 +6217,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 108,
-    "cardCount": 134
+    "cardCount": 140
   },
   {
     "id": "xy0",
@@ -6260,7 +6260,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 32,
-    "cardCount": 33
+    "cardCount": 39
   },
   {
     "id": "xy1",
@@ -6376,7 +6376,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 105,
-    "cardCount": 120
+    "cardCount": 146
   },
   {
     "id": "xy2",
@@ -6465,7 +6465,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 78,
-    "cardCount": 94
+    "cardCount": 110
   },
   {
     "id": "mcd14",
@@ -6581,7 +6581,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 82,
-    "cardCount": 94
+    "cardCount": 114
   },
   {
     "id": "xy4",
@@ -6679,7 +6679,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 87,
-    "cardCount": 99
+    "cardCount": 124
   },
   {
     "id": "xy5",
@@ -6786,7 +6786,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 96,
-    "cardCount": 133
+    "cardCount": 164
   },
   {
     "id": "dc1",
@@ -6817,7 +6817,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 20,
-    "cardCount": 22
+    "cardCount": 34
   },
   {
     "id": "xy6",
@@ -6895,7 +6895,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 67,
-    "cardCount": 92
+    "cardCount": 112
   },
   {
     "id": "xy7",
@@ -6966,7 +6966,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 60,
-    "cardCount": 82
+    "cardCount": 101
   },
   {
     "id": "xy8",
@@ -7089,7 +7089,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 112,
-    "cardCount": 142
+    "cardCount": 165
   },
   {
     "id": "mcd15",
@@ -7210,7 +7210,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 87,
-    "cardCount": 104
+    "cardCount": 126
   },
   {
     "id": "g1",
@@ -7298,7 +7298,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 77,
-    "cardCount": 89
+    "cardCount": 117
   },
   {
     "id": "xy10",
@@ -7379,7 +7379,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 70,
-    "cardCount": 100
+    "cardCount": 129
   },
   {
     "id": "xy11",
@@ -7477,7 +7477,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 87,
-    "cardCount": 105
+    "cardCount": 116
   },
   {
     "id": "mcd16",
@@ -7573,7 +7573,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 62,
-    "cardCount": 83
+    "cardCount": 113
   },
   {
     "id": "sm1",
@@ -7694,7 +7694,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 110,
-    "cardCount": 130
+    "cardCount": 173
   },
   {
     "id": "smp",
@@ -7840,7 +7840,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 135,
-    "cardCount": 247
+    "cardCount": 251
   },
   {
     "id": "sm2",
@@ -7962,7 +7962,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 111,
-    "cardCount": 148
+    "cardCount": 180
   },
   {
     "id": "sm3",
@@ -8083,7 +8083,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 110,
-    "cardCount": 142
+    "cardCount": 177
   },
   {
     "id": "sm35",
@@ -8151,7 +8151,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 57,
-    "cardCount": 66
+    "cardCount": 81
   },
   {
     "id": "sm4",
@@ -8252,7 +8252,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 90,
-    "cardCount": 108
+    "cardCount": 126
   },
   {
     "id": "mcd17",
@@ -8392,7 +8392,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 106,
-    "cardCount": 137
+    "cardCount": 178
   },
   {
     "id": "sm6",
@@ -8497,7 +8497,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 94,
-    "cardCount": 120
+    "cardCount": 150
   },
   {
     "id": "sm7",
@@ -8618,7 +8618,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 110,
-    "cardCount": 142
+    "cardCount": 187
   },
   {
     "id": "sm75",
@@ -8682,7 +8682,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 53,
-    "cardCount": 67
+    "cardCount": 80
   },
   {
     "id": "mcd18",
@@ -8866,7 +8866,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 150,
-    "cardCount": 192
+    "cardCount": 240
   },
   {
     "id": "sm9",
@@ -9003,7 +9003,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 126,
-    "cardCount": 155
+    "cardCount": 198
   },
   {
     "id": "det1",
@@ -9196,7 +9196,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 153,
-    "cardCount": 196
+    "cardCount": 238
   },
   {
     "id": "sm11",
@@ -9381,7 +9381,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 174,
-    "cardCount": 216
+    "cardCount": 261
   },
   {
     "id": "sm115",
@@ -9440,7 +9440,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 48,
-    "cardCount": 52
+    "cardCount": 69
   },
   {
     "id": "sma",
@@ -9528,7 +9528,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 77,
-    "cardCount": 84
+    "cardCount": 94
   },
   {
     "id": "mcd19",
@@ -9742,7 +9742,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 180,
-    "cardCount": 229
+    "cardCount": 272
   },
   {
     "id": "swshp",
@@ -9904,7 +9904,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 151,
-    "cardCount": 292
+    "cardCount": 304
   },
   {
     "id": "swsh1",
@@ -10036,7 +10036,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 121,
-    "cardCount": 173
+    "cardCount": 216
   },
   {
     "id": "swsh2",
@@ -10188,7 +10188,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 141,
-    "cardCount": 176
+    "cardCount": 209
   },
   {
     "id": "swsh3",
@@ -10349,7 +10349,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 150,
-    "cardCount": 172
+    "cardCount": 201
   },
   {
     "id": "fut20",
@@ -10423,7 +10423,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 47,
-    "cardCount": 57
+    "cardCount": 80
   },
   {
     "id": "swsh4",
@@ -10577,7 +10577,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 143,
-    "cardCount": 166
+    "cardCount": 203
   },
   {
     "id": "mcd21",
@@ -10671,7 +10671,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 47,
-    "cardCount": 58
+    "cardCount": 73
   },
   {
     "id": "swsh45sv",
@@ -10913,7 +10913,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 112,
-    "cardCount": 146
+    "cardCount": 183
   },
   {
     "id": "swsh6",
@@ -11041,7 +11041,7 @@
     ],
     "uniqueCount": 1,
     "distinctPokemonCount": 117,
-    "cardCount": 168
+    "cardCount": 233
   },
   {
     "id": "swsh7",
@@ -11184,7 +11184,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 132,
-    "cardCount": 193
+    "cardCount": 237
   },
   {
     "id": "cel25",
@@ -11213,7 +11213,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 18,
-    "cardCount": 23
+    "cardCount": 25
   },
   {
     "id": "cel25c",
@@ -11246,7 +11246,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 22,
-    "cardCount": 22
+    "cardCount": 25
   },
   {
     "id": "swsh8",
@@ -11465,7 +11465,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 208,
-    "cardCount": 245
+    "cardCount": 284
   },
   {
     "id": "swsh9",
@@ -11597,7 +11597,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 121,
-    "cardCount": 151
+    "cardCount": 186
   },
   {
     "id": "swsh9tg",
@@ -11625,7 +11625,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 17,
-    "cardCount": 25
+    "cardCount": 30
   },
   {
     "id": "swsh10",
@@ -11751,7 +11751,7 @@
     ],
     "uniqueCount": 1,
     "distinctPokemonCount": 115,
-    "cardCount": 167
+    "cardCount": 216
   },
   {
     "id": "swsh10tg",
@@ -11782,7 +11782,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 20,
-    "cardCount": 25
+    "cardCount": 30
   },
   {
     "id": "pgo",
@@ -11848,7 +11848,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 55,
-    "cardCount": 74
+    "cardCount": 88
   },
   {
     "id": "mcd22",
@@ -12028,7 +12028,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 143,
-    "cardCount": 177
+    "cardCount": 217
   },
   {
     "id": "swsh11tg",
@@ -12057,7 +12057,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 18,
-    "cardCount": 24
+    "cardCount": 30
   },
   {
     "id": "swsh12",
@@ -12209,7 +12209,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 141,
-    "cardCount": 177
+    "cardCount": 215
   },
   {
     "id": "swsh12tg",
@@ -12240,7 +12240,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 20,
-    "cardCount": 24
+    "cardCount": 30
   },
   {
     "id": "svp",
@@ -12366,7 +12366,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 115,
-    "cardCount": 155
+    "cardCount": 165
   },
   {
     "id": "swsh12pt5",
@@ -12478,7 +12478,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 101,
-    "cardCount": 123
+    "cardCount": 160
   },
   {
     "id": "swsh12pt5gg",
@@ -12545,7 +12545,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 56,
-    "cardCount": 60
+    "cardCount": 70
   },
   {
     "id": "sv1",
@@ -12693,7 +12693,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 137,
-    "cardCount": 209
+    "cardCount": 258
   },
   {
     "id": "sv2",
@@ -12848,7 +12848,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 144,
-    "cardCount": 238
+    "cardCount": 279
   },
   {
     "id": "sv3",
@@ -13026,7 +13026,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 167,
-    "cardCount": 210
+    "cardCount": 230
   },
   {
     "id": "sv3pt5",
@@ -13188,7 +13188,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 151,
-    "cardCount": 185
+    "cardCount": 207
   },
   {
     "id": "sv4",
@@ -13343,7 +13343,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 144,
-    "cardCount": 222
+    "cardCount": 266
   },
   {
     "id": "sv4pt5",
@@ -13524,7 +13524,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 170,
-    "cardCount": 219
+    "cardCount": 245
   },
   {
     "id": "sv5",
@@ -13670,7 +13670,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 135,
-    "cardCount": 185
+    "cardCount": 218
   },
   {
     "id": "sv6",
@@ -13813,7 +13813,7 @@
     ],
     "uniqueCount": 2,
     "distinctPokemonCount": 132,
-    "cardCount": 185
+    "cardCount": 226
   },
   {
     "id": "sv6pt5",
@@ -13877,7 +13877,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 53,
-    "cardCount": 79
+    "cardCount": 99
   },
   {
     "id": "sv7",
@@ -14012,7 +14012,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 124,
-    "cardCount": 153
+    "cardCount": 175
   },
   {
     "id": "sv8",
@@ -14176,7 +14176,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 153,
-    "cardCount": 207
+    "cardCount": 252
   },
   {
     "id": "sv8pt5",
@@ -14262,7 +14262,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 75,
-    "cardCount": 106
+    "cardCount": 180
   },
   {
     "id": "sv9",
@@ -14412,7 +14412,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 139,
-    "cardCount": 168
+    "cardCount": 190
   },
   {
     "id": "sv10",
@@ -14576,7 +14576,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 153,
-    "cardCount": 209
+    "cardCount": 244
   },
   {
     "id": "zsv10pt5",
@@ -14664,7 +14664,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 77,
-    "cardCount": 161
+    "cardCount": 172
   },
   {
     "id": "rsv10pt5",
@@ -14754,7 +14754,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 79,
-    "cardCount": 162
+    "cardCount": 173
   },
   {
     "id": "me1",
@@ -14877,7 +14877,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 112,
-    "cardCount": 152
+    "cardCount": 188
   },
   {
     "id": "me2",
@@ -14974,7 +14974,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 86,
-    "cardCount": 110
+    "cardCount": 130
   },
   {
     "id": "me2pt5",
@@ -15159,7 +15159,7 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 174,
-    "cardCount": 242
+    "cardCount": 295
   },
   {
     "id": "me3",
@@ -15237,6 +15237,6 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 67,
-    "cardCount": 91
+    "cardCount": 124
   }
 ]

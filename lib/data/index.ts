@@ -17,6 +17,7 @@ import type {
   SetPools,
   SpeciesIndex,
 } from "./types";
+import type { OtherCardsBySubtype, OtherSubtype } from "./other-subtypes";
 
 export const POKEDEX = pokedex as PokedexEntry[];
 export const SETS = sets as SetInfo[];
@@ -49,4 +50,20 @@ export async function loadSetCards(setId: string): Promise<CardEntry[]> {
   const file = path.join(process.cwd(), "lib", "data", "cards", `${setId}.json`);
   const buf = await fs.readFile(file, "utf8");
   return JSON.parse(buf) as CardEntry[];
+}
+
+let otherCardsBySubtypeCache: OtherCardsBySubtype | null = null;
+export async function loadOtherCardsBySubtype(): Promise<OtherCardsBySubtype> {
+  if (otherCardsBySubtypeCache) return otherCardsBySubtypeCache;
+  const fs = await import("node:fs/promises");
+  const path = await import("node:path");
+  const file = path.join(process.cwd(), "lib", "data", "otherCardsBySubtype.json");
+  const buf = await fs.readFile(file, "utf8");
+  otherCardsBySubtypeCache = JSON.parse(buf) as OtherCardsBySubtype;
+  return otherCardsBySubtypeCache;
+}
+
+export async function loadOtherSubtype(subtype: OtherSubtype): Promise<CardEntry[]> {
+  const all = await loadOtherCardsBySubtype();
+  return all[subtype];
 }

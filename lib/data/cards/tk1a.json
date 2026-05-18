@@ -3,6 +3,7 @@
     "id": "tk1a-1",
     "name": "Bagon",
     "setId": "tk1a",
+    "supertype": "Pokémon",
     "number": "1",
     "numberInt": 1,
     "rarity": "Unknown",
@@ -25,6 +26,7 @@
     "id": "tk1a-2",
     "name": "Combusken",
     "setId": "tk1a",
+    "supertype": "Pokémon",
     "number": "2",
     "numberInt": 2,
     "rarity": "Unknown",
@@ -48,6 +50,7 @@
     "id": "tk1a-3",
     "name": "Delcatty",
     "setId": "tk1a",
+    "supertype": "Pokémon",
     "number": "3",
     "numberInt": 3,
     "rarity": "Unknown",
@@ -71,6 +74,7 @@
     "id": "tk1a-4",
     "name": "Latias",
     "setId": "tk1a",
+    "supertype": "Pokémon",
     "number": "4",
     "numberInt": 4,
     "rarity": "Unknown",
@@ -93,6 +97,7 @@
     "id": "tk1a-5",
     "name": "Numel",
     "setId": "tk1a",
+    "supertype": "Pokémon",
     "number": "5",
     "numberInt": 5,
     "rarity": "Unknown",
@@ -115,6 +120,7 @@
     "id": "tk1a-6",
     "name": "Skitty",
     "setId": "tk1a",
+    "supertype": "Pokémon",
     "number": "6",
     "numberInt": 6,
     "rarity": "Unknown",
@@ -137,6 +143,7 @@
     "id": "tk1a-7",
     "name": "Torchic",
     "setId": "tk1a",
+    "supertype": "Pokémon",
     "number": "7",
     "numberInt": 7,
     "rarity": "Unknown",
@@ -154,5 +161,58 @@
     "artist": "Hironobu Yoshida",
     "imageSmall": "https://images.pokemontcg.io/tk1a/7.png",
     "imageLarge": "https://images.pokemontcg.io/tk1a/7_hires.png"
+  },
+  {
+    "id": "tk1a-8",
+    "name": "Potion",
+    "setId": "tk1a",
+    "supertype": "Trainer",
+    "number": "8",
+    "numberInt": 8,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Item"
+    ],
+    "artist": "Keiji Kinebuchi",
+    "imageSmall": "https://images.pokemontcg.io/tk1a/8.png",
+    "imageLarge": "https://images.pokemontcg.io/tk1a/8_hires.png"
+  },
+  {
+    "id": "tk1a-9",
+    "name": "Energy Search",
+    "setId": "tk1a",
+    "supertype": "Trainer",
+    "number": "9",
+    "numberInt": 9,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Item"
+    ],
+    "artist": "Kai Ishikawa",
+    "imageSmall": "https://images.pokemontcg.io/tk1a/9.png",
+    "imageLarge": "https://images.pokemontcg.io/tk1a/9_hires.png"
+  },
+  {
+    "id": "tk1a-10",
+    "name": "Fire Energy",
+    "setId": "tk1a",
+    "supertype": "Energy",
+    "number": "10",
+    "numberInt": 10,
+    "rarity": "Unknown",
+    "rarityRaw": "",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Basic"
+    ],
+    "imageSmall": "https://images.pokemontcg.io/tk1a/10.png",
+    "imageLarge": "https://images.pokemontcg.io/tk1a/10_hires.png"
   }
 ]
