@@ -1,9 +1,8 @@
-import { NextResponse, type NextRequest } from "next/server";
+import type { NextRequest } from "next/server";
+import { updateSession } from "@/lib/supabase/proxy";
 
-// AUTH BYPASS: temporarily a no-op. Restore by re-adding updateSession()
-// from lib/supabase/proxy.ts when bringing authentication back.
-export function proxy(_request: NextRequest) {
-  return NextResponse.next();
+export async function proxy(request: NextRequest) {
+  return updateSession(request);
 }
 
 export const config = {

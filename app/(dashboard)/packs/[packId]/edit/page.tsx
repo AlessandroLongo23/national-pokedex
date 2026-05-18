@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getSupabaseServer } from "@/lib/supabase/server";
 import { SETS } from "@/lib/data";
-import { DEV_USER_ID } from "../../../_lib/dev";
+import { requireUserId } from "../../../_lib/current-user";
 import { PageHeader } from "../../../_components/PageHeader";
 import { LogPackFlow } from "../../../_components/LogPackFlow";
 import { SeriesBadge } from "../../../_components/SeriesBadge";
@@ -13,13 +13,14 @@ interface PageProps {
 
 export default async function EditPackPage({ params }: PageProps) {
   const { packId } = await params;
+  const userId = await requireUserId();
   const supabase = await getSupabaseServer();
 
   const { data: pack, error } = await supabase
     .from("packs_opened")
     .select("id, set_id, opened_at")
     .eq("id", packId)
-    .eq("user_id", DEV_USER_ID)
+    .eq("user_id", userId)
     .maybeSingle();
   if (error) throw new Error(error.message);
   if (!pack) notFound();

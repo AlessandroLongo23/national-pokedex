@@ -19,13 +19,34 @@ test.describe("auth", () => {
   test("unauthed visit to /dashboard redirects to /login", async ({ page }) => {
     await page.goto("/dashboard");
     await expect(page).toHaveURL(/\/login$/);
-    await expect(page.getByRole("heading")).toContainText(/Pokédex/);
+    await expect(page.getByRole("link", { name: /go to dashboard/i })).toBeVisible();
   });
 
   test("magic link signs the user in and lands on /dashboard", async ({ page }) => {
     const link = await getMagicLink();
     await page.goto(link);
     await expect(page).toHaveURL(/\/dashboard$/);
-    await expect(page.getByRole("heading", { name: /tracker/i })).toBeVisible();
+  });
+
+  test("signed-in user visiting /login is redirected to /dashboard", async ({ page }) => {
+    const link = await getMagicLink();
+    await page.goto(link);
+    await expect(page).toHaveURL(/\/dashboard$/);
+
+    await page.goto("/login");
+    await expect(page).toHaveURL(/\/dashboard$/);
+  });
+
+  test("sign-out clears the session and returns to /login", async ({ page }) => {
+    const link = await getMagicLink();
+    await page.goto(link);
+    await expect(page).toHaveURL(/\/dashboard$/);
+
+    await page.getByRole("button", { name: /sign out/i }).click();
+    await expect(page).toHaveURL(/\/login$/);
+
+    // Confirm the session was actually cleared — re-visiting /dashboard bounces back.
+    await page.goto("/dashboard");
+    await expect(page).toHaveURL(/\/login$/);
   });
 });

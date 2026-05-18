@@ -32,12 +32,34 @@ TS is strict with `noUncheckedIndexedAccess` and `noImplicitOverride` on.
 
 ## Architecture
 
-**Data flow.** `app/dashboard/page.tsx` is a server component that fetches the
-user's `owned_pokemon` rows from Supabase server-side and hands them to
-`DashboardClient.tsx`. Client-side, `OwnedContext.tsx` holds the owned set,
-subscribes to Supabase realtime for cross-tab/device sync, and exposes
-mutations that call Server Actions in `app/dashboard/actions.ts`. Mutations
-are optimistic.
+**Data flow.** [app/(dashboard)/layout.tsx](app/(dashboard)/layout.tsx) is a
+server component inside the `(dashboard)` route group that resolves the
+current user via [_lib/current-user.ts](app/(dashboard)/_lib/current-user.ts)
+(`requireUser()` / `requireUserId()`, which redirect unauthenticated visitors
+to `/login`), fetches the user's `owned_cards`, `wishlist_cards`, and
+`set_availability` rows from Supabase, and hands them to
+[_components/Shell.tsx](app/(dashboard)/_components/Shell.tsx). Shell wraps
+children in three optimistic client contexts (`OwnedCardsContext`,
+`WishlistContext`, `SetAvailabilityContext`) that each subscribe to Supabase
+realtime filtered by `userId`, plus a `UserContext` exposing `userId`/`email`
+to client components like [AccountStub.tsx](app/(dashboard)/_components/AccountStub.tsx).
+Mutations call Server Actions in
+[_lib/card-actions.ts](app/(dashboard)/_lib/card-actions.ts),
+[_lib/pack-actions.ts](app/(dashboard)/_lib/pack-actions.ts), and
+[_lib/availability-actions.ts](app/(dashboard)/_lib/availability-actions.ts);
+every action calls `requireUserId()` and scopes its queries by that ID.
+
+**Auth.** Sessions are managed by `@supabase/ssr` cookies, refreshed on every
+request by [proxy.ts](proxy.ts) (Next.js 16's successor to `middleware.ts`)
+→ `updateSession()` in [lib/supabase/proxy.ts](lib/supabase/proxy.ts). The middleware also redirects
+unauthenticated visitors from `/dashboard/**` to `/login` and authenticated
+visitors from `/login` to `/dashboard`. Login is email magic-link only:
+[app/login/page.tsx](app/login/page.tsx) submits to
+[app/login/actions.ts](app/login/actions.ts) (`signInWithOtp`); the email
+link lands on [app/auth/callback/route.ts](app/auth/callback/route.ts) which
+exchanges the code for a session. For dev convenience,
+[scripts/dev/magic-link.ts](scripts/dev/magic-link.ts) generates a one-shot
+magic link via the admin API to bypass Supabase's email rate limit.
 
 **Reference data is static, not queried.** [lib/data/](lib/data/) contains
 `pokedex.json` (all 1,025 Pokémon), `sets.json` (TCG catalog filtered to
@@ -49,32 +71,17 @@ by `series`, extract `nationalPokedexNumbers`, recompute coverage + greedy
 buying order. **Use the `series` field as the canonical era grouping — do not
 parse era from set ID or name** (per README).
 
-**Three Supabase clients.** `lib/supabase/client.ts` (browser),
-`server.ts` (RSC, reads cookies), and `proxy.ts` (middleware/edge cookie
-refresh). Pick the one matching your execution context.
+**Three Supabase clients.** [lib/supabase/client.ts](lib/supabase/client.ts)
+(browser), [server.ts](lib/supabase/server.ts) (RSC, reads cookies), and
+[proxy.ts](lib/supabase/proxy.ts) (middleware/edge cookie refresh). Pick the
+one matching your execution context.
 
-**Routing** is Next.js App Router under [app/](app/): `auth/`, `login/`,
-`dashboard/` (with `sections/` for grid/table/list pieces and `import/` for
-bulk import). `app/page.tsx` is the root.
-
-## Auth is currently bypassed (revert before production)
-
-Commit `e22cce2` disabled auth for local development:
-
-- [app/dashboard/dev.ts](app/dashboard/dev.ts) exports a fixed
-  `DEV_USER_ID = "00000000-0000-0000-0000-000000000001"` that every read/write
-  uses instead of `supabase.auth.getUser()`.
-- Migration
-  [supabase/migrations/20260517130000_dev_open_access.sql](supabase/migrations/20260517130000_dev_open_access.sql)
-  disables RLS on `owned_pokemon` and drops the FK to `auth.users`. The
-  exact SQL to restore RLS + FK + owner policy is in the comment block at
-  the top of that file.
-
-To restore auth: delete `dev.ts`, swap `DEV_USER_ID` call sites back to
-`supabase.auth.getUser()`, and run the SQL from the migration's header
-comment. The magic-link infrastructure (`scripts/dev/magic-link.ts`, the
-`auth/` and `login/` routes) is already in place; the dev script bypasses
-Supabase's email rate limit for repeated local sign-ins.
+**Routing** is Next.js App Router under [app/](app/). The
+[`(dashboard)/`](app/(dashboard)/) route group holds every authenticated
+page (Pokédex, Sets, Cards, Binders, Collection, Packs, Wishlist, Settings)
+behind the shared layout described above. [`auth/`](app/auth/) and
+[`login/`](app/login/) sit outside the group so they're reachable while
+signed out. [`app/page.tsx`](app/page.tsx) is the root.
 
 ## MCP
 

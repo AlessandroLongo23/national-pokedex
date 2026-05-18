@@ -12,7 +12,6 @@ import {
 } from "react";
 import { CARD_INDEX } from "@/lib/data";
 import { getSupabaseBrowser } from "@/lib/supabase/client";
-import { DEV_USER_ID } from "./dev";
 import { toggleOwnedCard as toggleAction } from "./card-actions";
 
 interface OwnedCardsCtx {
@@ -51,9 +50,11 @@ function deriveSpecies(owned: Set<string>): Set<number> {
 }
 
 export function OwnedCardsProvider({
+  userId,
   initial,
   children,
 }: {
+  userId: string;
   initial: string[];
   children: React.ReactNode;
 }) {
@@ -79,7 +80,7 @@ export function OwnedCardsProvider({
           event: "INSERT",
           schema: "public",
           table: "owned_cards",
-          filter: `user_id=eq.${DEV_USER_ID}`,
+          filter: `user_id=eq.${userId}`,
         },
         (payload) => {
           const id = (payload.new as { card_id: string }).card_id;
@@ -97,7 +98,7 @@ export function OwnedCardsProvider({
           event: "DELETE",
           schema: "public",
           table: "owned_cards",
-          filter: `user_id=eq.${DEV_USER_ID}`,
+          filter: `user_id=eq.${userId}`,
         },
         (payload) => {
           const id = (payload.old as { card_id: string }).card_id;
@@ -114,7 +115,7 @@ export function OwnedCardsProvider({
     return () => {
       supabase.removeChannel(channel);
     };
-  }, []);
+  }, [userId]);
 
   const ownedSpecies = useMemo(() => deriveSpecies(optimistic), [optimistic]);
 

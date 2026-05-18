@@ -1,7 +1,7 @@
 import { getSupabaseServer } from "@/lib/supabase/server";
 import { loadSetCards } from "@/lib/data";
 import type { CardEntry } from "@/lib/data/types";
-import { DEV_USER_ID } from "../_lib/dev";
+import { requireUserId } from "../_lib/current-user";
 import { PageHeader } from "../_components/PageHeader";
 import { WishlistClient } from "./WishlistClient";
 
@@ -22,11 +22,12 @@ async function loadCardsByIds(ids: string[]): Promise<CardEntry[]> {
 }
 
 export default async function WishlistPage() {
+  const userId = await requireUserId();
   const supabase = await getSupabaseServer();
   const { data, error } = await supabase
     .from("wishlist_cards")
     .select("card_id, added_at")
-    .eq("user_id", DEV_USER_ID)
+    .eq("user_id", userId)
     .order("added_at", { ascending: false });
 
   if (error) throw new Error(`Failed to load wishlist: ${error.message}`);

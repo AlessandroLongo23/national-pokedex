@@ -11,7 +11,6 @@ import {
 } from "react";
 import { SETS } from "@/lib/data";
 import { getSupabaseBrowser } from "@/lib/supabase/client";
-import { DEV_USER_ID } from "./dev";
 import { setSetAvailability } from "./availability-actions";
 
 // Sets released within this window are auto-flagged as buyable locally.
@@ -47,9 +46,11 @@ function defaultAvailable(setId: string): boolean {
 }
 
 export function SetAvailabilityProvider({
+  userId,
   initial,
   children,
 }: {
+  userId: string;
   initial: { setId: string; available: boolean }[];
   children: React.ReactNode;
 }) {
@@ -68,7 +69,7 @@ export function SetAvailabilityProvider({
           event: "*",
           schema: "public",
           table: "set_availability",
-          filter: `user_id=eq.${DEV_USER_ID}`,
+          filter: `user_id=eq.${userId}`,
         },
         (payload) => {
           setOverrides((prev) => {
@@ -89,7 +90,7 @@ export function SetAvailabilityProvider({
     return () => {
       supabase.removeChannel(channel);
     };
-  }, []);
+  }, [userId]);
 
   const isAvailable = useCallback(
     (setId: string) => {

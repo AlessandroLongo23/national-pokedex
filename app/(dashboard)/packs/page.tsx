@@ -1,7 +1,7 @@
 import { getSupabaseServer } from "@/lib/supabase/server";
 import { CARD_INDEX, loadSetCards } from "@/lib/data";
 import type { CardEntry } from "@/lib/data/types";
-import { DEV_USER_ID } from "../_lib/dev";
+import { requireUserId } from "../_lib/current-user";
 import { PageHeader } from "../_components/PageHeader";
 import { PacksClient } from "./PacksClient";
 import type { PackHistoryCard, PackHistoryItem } from "../_components/PackHistory";
@@ -13,11 +13,12 @@ interface PackRow {
 }
 
 async function loadHistory(): Promise<PackHistoryItem[]> {
+  const userId = await requireUserId();
   const supabase = await getSupabaseServer();
   const { data: packs, error } = await supabase
     .from("packs_opened")
     .select("id, set_id, opened_at")
-    .eq("user_id", DEV_USER_ID)
+    .eq("user_id", userId)
     .order("opened_at", { ascending: false })
     .limit(50);
   if (error) throw new Error(`Failed to load pack history: ${error.message}`);

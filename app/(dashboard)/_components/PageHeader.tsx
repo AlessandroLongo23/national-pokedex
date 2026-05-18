@@ -1,14 +1,23 @@
+"use client";
+
+import { useSetPageTitle } from "../_lib/PageTitleContext";
+
 export function PageHeader({
   eyebrow,
   title,
   subtitle,
   right,
+  mobileTitle,
 }: {
   eyebrow?: React.ReactNode;
   title: React.ReactNode;
   subtitle?: React.ReactNode;
   right?: React.ReactNode;
+  mobileTitle?: string;
 }) {
+  const resolved = mobileTitle ?? (typeof title === "string" ? title : "");
+  useSetPageTitle(resolved);
+
   return (
     <header className="mb-6 flex flex-wrap items-end justify-between gap-4 md:mb-8">
       <div>

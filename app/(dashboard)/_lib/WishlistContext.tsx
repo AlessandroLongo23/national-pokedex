@@ -10,7 +10,6 @@ import {
   useTransition,
 } from "react";
 import { getSupabaseBrowser } from "@/lib/supabase/client";
-import { DEV_USER_ID } from "./dev";
 import { toggleWishlistCard as toggleAction } from "./card-actions";
 
 interface WishlistCtx {
@@ -23,9 +22,11 @@ interface WishlistCtx {
 const Ctx = createContext<WishlistCtx | null>(null);
 
 export function WishlistProvider({
+  userId,
   initial,
   children,
 }: {
+  userId: string;
   initial: string[];
   children: React.ReactNode;
 }) {
@@ -51,7 +52,7 @@ export function WishlistProvider({
           event: "INSERT",
           schema: "public",
           table: "wishlist_cards",
-          filter: `user_id=eq.${DEV_USER_ID}`,
+          filter: `user_id=eq.${userId}`,
         },
         (payload) => {
           const id = (payload.new as { card_id: string }).card_id;
@@ -69,7 +70,7 @@ export function WishlistProvider({
           event: "DELETE",
           schema: "public",
           table: "wishlist_cards",
-          filter: `user_id=eq.${DEV_USER_ID}`,
+          filter: `user_id=eq.${userId}`,
         },
         (payload) => {
           const id = (payload.old as { card_id: string }).card_id;
@@ -86,7 +87,7 @@ export function WishlistProvider({
     return () => {
       supabase.removeChannel(channel);
     };
-  }, []);
+  }, [userId]);
 
   const toggle = useCallback(
     (cardId: string) => {
