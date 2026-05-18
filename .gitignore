@@ -15,6 +15,12 @@ irs_and_sirs.pdf
 out/
 next-env.d.ts
 
+# TypeScript incremental build
+tsconfig.tsbuildinfo
+
+# Personal Claude config (skills, agents, local settings)
+.claude/
+
 # Node
 node_modules/
 
