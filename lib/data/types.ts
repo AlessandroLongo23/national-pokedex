@@ -9,18 +9,18 @@ export interface PokedexEntry {
 export interface SetInfo {
   id: string;
   name: string;
-  series: "Scarlet & Violet" | "Mega Evolution";
+  series: string;
   releaseDate: string;
   dexNumbers: number[];
   uniqueCount: number;
   distinctPokemonCount: number;
+  cardCount: number;
 }
 
 export interface Coverage {
   totalCovered: number;
   totalMissing: number;
   byGen: Record<Generation, { covered: number; total: number }>;
-  meAdded: number[];
   missingDex: number[];
 }
 
@@ -32,6 +32,100 @@ export interface GreedyEntry {
   cumulative: number;
   releaseDate: string;
 }
+
+export type RarityBucket =
+  | "Common"
+  | "Uncommon"
+  | "Rare"
+  | "DoubleRare"
+  | "UltraRare"
+  | "IllustrationRare"
+  | "SpecialIllustrationRare"
+  | "HyperRare";
+
+export type Rarity = RarityBucket | "Promo" | "Unknown";
+
+export interface RarityPoolCard {
+  supertype: "Pokémon" | "Trainer" | "Energy";
+  dex: number[];
+}
+
+export type SetRarityPool = Record<RarityBucket, RarityPoolCard[]>;
+
+export type SetPools = Record<string, SetRarityPool>;
+
+export interface BoosterWrapper {
+  title: string;
+  name: string;
+  url: string;
+  width: number;
+  height: number;
+}
+
+export type BoosterManifest = Record<string, BoosterWrapper[]>;
+
+export interface CardEntry {
+  id: string;
+  name: string;
+  setId: string;
+  number: string;
+  numberInt: number;
+  rarity: Rarity;
+  rarityRaw: string;
+  dex: number[];
+  types: string[];
+  hp?: number;
+  subtypes: string[];
+  evolvesFrom?: string;
+  artist?: string;
+  regulationMark?: string;
+  imageSmall: string;
+  imageLarge: string;
+}
+
+export type CardIndex = Record<number, string[]>;
+
+export interface SpeciesEntry {
+  dex: number;
+  name: string;
+  genus: string;
+  heightDm: number;
+  weightHg: number;
+  types: string[];
+  abilities: { name: string; hidden: boolean }[];
+  evolutionChain: number[][];
+  flavorText: string;
+  generation: number;
+  artworkUrl: string;
+}
+
+export type SpeciesIndex = Record<number, SpeciesEntry>;
+
+export const RARITY_ORDER: Rarity[] = [
+  "Common",
+  "Uncommon",
+  "Rare",
+  "DoubleRare",
+  "UltraRare",
+  "IllustrationRare",
+  "SpecialIllustrationRare",
+  "HyperRare",
+  "Promo",
+  "Unknown",
+];
+
+export const RARITY_LABEL: Record<Rarity, string> = {
+  Common: "Common",
+  Uncommon: "Uncommon",
+  Rare: "Rare",
+  DoubleRare: "Double Rare",
+  UltraRare: "Ultra Rare",
+  IllustrationRare: "Illustration Rare",
+  SpecialIllustrationRare: "Special Illustration Rare",
+  HyperRare: "Hyper Rare",
+  Promo: "Promo",
+  Unknown: "Other",
+};
 
 export function genOf(dex: number): Generation {
   if (dex <= 151) return 1;
@@ -45,3 +139,27 @@ export function genOf(dex: number): Generation {
   if (dex <= 1025) return 9;
   throw new Error(`Dex number out of range: ${dex}`);
 }
+
+export const GEN_NAMES: Record<Generation, string> = {
+  1: "Kanto",
+  2: "Johto",
+  3: "Hoenn",
+  4: "Sinnoh",
+  5: "Unova",
+  6: "Kalos",
+  7: "Alola",
+  8: "Galar",
+  9: "Paldea",
+};
+
+export const GEN_RANGES: Record<Generation, [number, number]> = {
+  1: [1, 151],
+  2: [152, 251],
+  3: [252, 386],
+  4: [387, 493],
+  5: [494, 649],
+  6: [650, 721],
+  7: [722, 809],
+  8: [810, 905],
+  9: [906, 1025],
+};

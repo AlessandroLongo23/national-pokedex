@@ -2,15 +2,8 @@ import type { Coverage, Generation, PokedexEntry, SetInfo } from "@/lib/data/typ
 
 export function computeCoverage(pokedex: PokedexEntry[], sets: SetInfo[]): Coverage {
   const all = new Set<number>();
-  const svUnion = new Set<number>();
-  const meUnion = new Set<number>();
-
   for (const s of sets) {
-    for (const n of s.dexNumbers) {
-      all.add(n);
-      if (s.series === "Scarlet & Violet") svUnion.add(n);
-      else if (s.series === "Mega Evolution") meUnion.add(n);
-    }
+    for (const n of s.dexNumbers) all.add(n);
   }
 
   const byGen = {} as Record<Generation, { covered: number; total: number }>;
@@ -22,7 +15,6 @@ export function computeCoverage(pokedex: PokedexEntry[], sets: SetInfo[]): Cover
     if (all.has(p.dex)) byGen[p.gen].covered++;
   }
 
-  const meAdded = [...meUnion].filter((n) => !svUnion.has(n)).sort((a, b) => a - b);
   const missingDex = pokedex
     .filter((p) => !all.has(p.dex))
     .map((p) => p.dex)
@@ -32,7 +24,6 @@ export function computeCoverage(pokedex: PokedexEntry[], sets: SetInfo[]): Cover
     totalCovered: all.size,
     totalMissing: pokedex.length - all.size,
     byGen,
-    meAdded,
     missingDex,
   };
 }

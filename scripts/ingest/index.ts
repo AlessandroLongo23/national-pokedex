@@ -1,14 +1,16 @@
-import { readFileSync, readdirSync, writeFileSync, mkdirSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync, rmSync } from "node:fs";
 import path from "node:path";
 import { fetchSources } from "./fetch";
 import { parsePokedex } from "./parsePokedex";
 import { parseSetCards, type RawCard } from "./parseCards";
 import { computeCoverage } from "./coverage";
 import { computeGreedyOrder } from "./greedy";
-import type { SetInfo } from "@/lib/data/types";
+import { fetchSpecies } from "./fetchSpecies";
+import { fetchBoosters } from "./fetchBoosters";
+import type { CardEntry, CardIndex, SetInfo, SetPools } from "@/lib/data/types";
 
-const ACCEPTED_SERIES = new Set(["Scarlet & Violet", "Mega Evolution"]);
-const SKIPPED_SETS = new Set(["sve"]);
+// Promo-only / utility files we never want surfaced as openable sets.
+const SKIPPED_SETS = new Set<string>(["sve"]);
 
 interface RawSet {
   id: string;
@@ -27,29 +29,51 @@ function loadShowdownPokedex(showdownDir: string) {
   return obj as Record<string, { num: number; name: string; baseSpecies?: string }>;
 }
 
-function loadAllSets(tcgDataDir: string): SetInfo[] {
+interface AllSetsResult {
+  sets: SetInfo[];
+  pools: SetPools;
+  cardsBySet: Record<string, CardEntry[]>;
+  cardIndex: CardIndex;
+}
+
+function loadAllSets(tcgDataDir: string): AllSetsResult {
   const setsFile = path.join(tcgDataDir, "sets", "en.json");
   const rawSets = JSON.parse(readFileSync(setsFile, "utf8")) as RawSet[];
   const cardsDir = path.join(tcgDataDir, "cards", "en");
   const out: SetInfo[] = [];
+  const pools: SetPools = {};
+  const cardsBySet: Record<string, CardEntry[]> = {};
+  const cardIndex: CardIndex = {};
 
   for (const s of rawSets) {
-    if (!ACCEPTED_SERIES.has(s.series)) continue;
     if (SKIPPED_SETS.has(s.id)) continue;
-
     const cardsFile = path.join(cardsDir, `${s.id}.json`);
+    if (!existsSync(cardsFile)) {
+      console.warn(`[ingest] no cards file for set ${s.id} (${s.name}) — skipping`);
+      continue;
+    }
+
     const cards = JSON.parse(readFileSync(cardsFile, "utf8")) as RawCard[];
-    const summary = parseSetCards(cards);
+    const summary = parseSetCards(s.id, cards);
 
     out.push({
       id: s.id,
       name: s.name,
-      series: s.series as SetInfo["series"],
+      series: s.series,
       releaseDate: s.releaseDate,
       dexNumbers: summary.dexNumbers.sort((a, b) => a - b),
       uniqueCount: 0,
       distinctPokemonCount: summary.distinctPokemonCount,
+      cardCount: summary.cardCount,
     });
+    pools[s.id] = summary.rarityPool;
+    cardsBySet[s.id] = summary.cards;
+    for (const card of summary.cards) {
+      for (const dex of card.dex) {
+        if (!cardIndex[dex]) cardIndex[dex] = [];
+        cardIndex[dex].push(card.id);
+      }
+    }
   }
 
   for (const s of out) {
@@ -62,40 +86,66 @@ function loadAllSets(tcgDataDir: string): SetInfo[] {
   }
 
   out.sort((a, b) => a.releaseDate.localeCompare(b.releaseDate));
-  return out;
+  return { sets: out, pools, cardsBySet, cardIndex };
 }
 
 function writeJson(file: string, data: unknown) {
   mkdirSync(path.dirname(file), { recursive: true });
   writeFileSync(file, JSON.stringify(data, null, 2) + "\n");
-  console.log(`[write] ${file}`);
 }
 
-function main() {
+async function main() {
   const { tcgDataDir, showdownDir } = fetchSources();
 
   const showdownPokedex = loadShowdownPokedex(showdownDir);
   const pokedex = parsePokedex(showdownPokedex);
   console.log(`[ingest] pokedex: ${pokedex.length} entries`);
 
-  const sets = loadAllSets(tcgDataDir);
-  console.log(`[ingest] sets: ${sets.length} (SV + ME, excluding sve)`);
+  const { sets, pools, cardsBySet, cardIndex } = loadAllSets(tcgDataDir);
+  console.log(`[ingest] sets: ${sets.length} across ${new Set(sets.map((s) => s.series)).size} series`);
 
   const coverage = computeCoverage(pokedex, sets);
   console.log(
-    `[ingest] coverage: ${coverage.totalCovered}/${pokedex.length} (${coverage.totalMissing} missing, ME added ${coverage.meAdded.length})`,
+    `[ingest] coverage: ${coverage.totalCovered}/${pokedex.length} (${coverage.totalMissing} missing)`,
   );
 
   const greedy = computeGreedyOrder(sets);
   console.log(`[ingest] greedy top: ${greedy[0]?.setName} (+${greedy[0]?.newCount})`);
 
+  const species = await fetchSpecies(pokedex);
+  console.log(`[ingest] species: ${Object.keys(species).length} entries`);
+
+  const boosters = await fetchBoosters();
+  const wrapperCount = Object.values(boosters).reduce((n, arr) => n + arr.length, 0);
+  console.log(
+    `[ingest] boosters: ${wrapperCount} wrappers across ${Object.keys(boosters).length} sets`,
+  );
+
   const dataDir = path.resolve(process.cwd(), "lib", "data");
+  const cardsDir = path.join(dataDir, "cards");
+  if (existsSync(cardsDir)) {
+    for (const f of readdirSync(cardsDir)) {
+      if (f.endsWith(".json")) rmSync(path.join(cardsDir, f));
+    }
+  }
+  for (const [setId, cards] of Object.entries(cardsBySet)) {
+    writeJson(path.join(cardsDir, `${setId}.json`), cards);
+  }
+
   writeJson(path.join(dataDir, "pokedex.json"), pokedex);
   writeJson(path.join(dataDir, "sets.json"), sets);
   writeJson(path.join(dataDir, "coverage.json"), coverage);
   writeJson(path.join(dataDir, "greedy.json"), greedy);
+  writeJson(path.join(dataDir, "setPools.json"), pools);
+  writeJson(path.join(dataDir, "cardIndex.json"), cardIndex);
+  writeJson(path.join(dataDir, "species.json"), species);
+  writeJson(path.join(dataDir, "boosters.json"), boosters);
 
+  console.log(`[ingest] wrote ${Object.keys(cardsBySet).length} per-set card files`);
   console.log("[ingest] done.");
 }
 
-main();
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});
