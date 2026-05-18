@@ -1,0 +1,18 @@
+import { SETS, POKEDEX } from "@/lib/data";
+import { listArtists } from "@/lib/data/binder-scope";
+import { PageHeader } from "../../_components/PageHeader";
+import { NewBinderFlow } from "../_components/NewBinderFlow";
+
+export default async function NewBinderPage() {
+  const artists = await listArtists();
+  return (
+    <div className="mx-auto max-w-[720px] space-y-6">
+      <PageHeader
+        eyebrow="Workspace"
+        title="New binder"
+        subtitle="Pick a scope. The target card list is computed live — new releases will appear automatically."
+      />
+      <NewBinderFlow sets={SETS} pokedex={POKEDEX} artists={artists} />
+    </div>
+  );
+}

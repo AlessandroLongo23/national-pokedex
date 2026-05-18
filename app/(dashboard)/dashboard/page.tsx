@@ -9,7 +9,7 @@ export default function DashboardPage() {
       <PageHeader
         eyebrow="Overview"
         title="Dashboard"
-        subtitle="National Pokédex (#1–1025) — every English TCG set, your binder progress."
+        subtitle="Your collection at a glance — National Pokédex coverage plus every binder you've built."
         right={
           <Link
             href="/packs"

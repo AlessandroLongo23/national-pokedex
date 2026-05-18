@@ -72,7 +72,7 @@ function TileBase({
   const detailsHref = card.dex.length > 0 ? `/pokedex/${card.dex[0]}` : null;
 
   return (
-    <div className="group relative">
+    <div className="group relative" data-card-id={card.id}>
       <div className="relative">
         <button
           type="button"
