@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { scopeLabel } from "../binders/_lib/scope-label";
 import type { ScopeType, ScopeParams } from "@/lib/data/binder-scope";
+import { formatPriceCompact, type PriceSource } from "@/lib/pricing/pokemontcg";
 
 interface Props {
   id: string;
@@ -9,6 +10,8 @@ interface Props {
   scopeParams: ScopeParams | Record<string, unknown>;
   ownedCount: number;
   targetCount: number;
+  value: number;
+  priceSource: PriceSource;
 }
 
 export function BinderListCard({
@@ -18,6 +21,8 @@ export function BinderListCard({
   scopeParams,
   ownedCount,
   targetCount,
+  value,
+  priceSource,
 }: Props) {
   const pct = targetCount > 0 ? (ownedCount / targetCount) * 100 : 0;
   return (
@@ -38,6 +43,14 @@ export function BinderListCard({
           {targetCount === 0 ? "Empty" : `${pct.toFixed(1)}%`}
         </span>
       </div>
+      {value > 0 && (
+        <div className="mt-1 text-xs text-muted tabular-nums">
+          Value{" "}
+          <span className="font-medium text-text">
+            {formatPriceCompact(value, priceSource)}
+          </span>
+        </div>
+      )}
       <div className="absolute right-0 bottom-0 left-0 h-1 bg-panel-2">
         <div
           className="h-full bg-owned transition-[width] duration-500"

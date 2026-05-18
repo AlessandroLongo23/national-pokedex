@@ -1,16 +1,18 @@
 import { getSupabaseServer } from "@/lib/supabase/server";
 import { requireUser } from "./_lib/current-user";
 import { Shell } from "./_components/Shell";
+import { loadUserPreferences } from "./_lib/user-preferences";
 
 export default async function DashboardLayout({ children }: { children: React.ReactNode }) {
   const user = await requireUser();
   const supabase = await getSupabaseServer();
 
-  const [ownedRes, wishlistRes, favoritesRes, availabilityRes] = await Promise.all([
+  const [ownedRes, wishlistRes, favoritesRes, availabilityRes, prefs] = await Promise.all([
     supabase.from("owned_cards").select("card_id").eq("user_id", user.id),
     supabase.from("wishlist_cards").select("card_id").eq("user_id", user.id),
     supabase.from("user_favorites").select("card_id").eq("user_id", user.id),
     supabase.from("set_availability").select("set_id, available").eq("user_id", user.id),
+    loadUserPreferences(user.id),
   ]);
 
   if (ownedRes.error) throw new Error(`Failed to load owned: ${ownedRes.error.message}`);
@@ -31,6 +33,7 @@ export default async function DashboardLayout({ children }: { children: React.Re
     <Shell
       userId={user.id}
       email={user.email ?? ""}
+      priceSource={prefs.priceSource}
       initialOwned={initialOwned}
       initialWishlist={initialWishlist}
       initialFavorites={initialFavorites}

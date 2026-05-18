@@ -8,7 +8,10 @@ import {
   type ScopeType,
   type ScopeParams,
 } from "@/lib/data/binder-scope";
+import { loadUserPreferences } from "../../_lib/user-preferences";
+import { fetchPricesForCards, sumPrices } from "@/lib/pricing/pokemontcg";
 import { BinderDetailClient } from "./_components/BinderDetailClient";
+import type { CardPriceRecord } from "../../_lib/CardPricesContext";
 
 export default async function BinderDetailPage({
   params,
@@ -18,6 +21,7 @@ export default async function BinderDetailPage({
   const { id } = await params;
   const userId = await requireUserId();
   const supabase = await getSupabaseServer();
+  const prefs = await loadUserPreferences(userId);
   const { data: binder } = await supabase
     .from("binders")
     .select("id, name, scope_type, scope_params")
@@ -71,6 +75,25 @@ export default async function BinderDetailPage({
     }
   }
 
+  // One fetch covers prices for every card on this page — both the grid
+  // tiles and the binder-value stat.
+  const priceMap = await fetchPricesForCards(targetIds);
+  const ownedIdsInBinder: string[] = [];
+  for (const c of cards) {
+    if ((ownedRows ?? []).some((r) => r.card_id === c.id)) ownedIdsInBinder.push(c.id);
+  }
+  const { total: binderValue, coveredCount: pricedCount } = sumPrices(
+    priceMap,
+    ownedIdsInBinder,
+    prefs.priceSource,
+  );
+
+  const priceRecord: CardPriceRecord = {};
+  for (const id of targetIds) {
+    const p = priceMap.get(id);
+    if (p) priceRecord[id] = p;
+  }
+
   return (
     <BinderDetailClient
       binder={{
@@ -83,6 +106,11 @@ export default async function BinderDetailPage({
       customCardIds={customCardIds}
       recentAdditions={recentAdditions}
       cellOverrides={cellOverrides}
+      value={binderValue}
+      pricedCount={pricedCount}
+      ownedPricedTotal={ownedIdsInBinder.length}
+      priceSource={prefs.priceSource}
+      prices={priceRecord}
     />
   );
 }

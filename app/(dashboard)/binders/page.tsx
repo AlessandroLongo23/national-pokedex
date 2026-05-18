@@ -2,6 +2,7 @@ import Link from "next/link";
 import { PageHeader } from "../_components/PageHeader";
 import { BinderListCard } from "../_components/BinderListCard";
 import { requireUserId } from "../_lib/current-user";
+import { loadUserPreferences } from "../_lib/user-preferences";
 import { getSupabaseServer } from "@/lib/supabase/server";
 import {
   filterByScope,
@@ -11,6 +12,7 @@ import {
   type ScopeType,
   type ScopeParams,
 } from "@/lib/data/binder-scope";
+import { fetchPricesForCards, sumPrices } from "@/lib/pricing/pokemontcg";
 
 interface BinderRow {
   id: string;
@@ -22,6 +24,7 @@ interface BinderRow {
 export default async function BindersPage() {
   const userId = await requireUserId();
   const supabase = await getSupabaseServer();
+  const prefs = await loadUserPreferences(userId);
 
   const [bindersResult, ownedResult] = await Promise.all([
     supabase
@@ -54,22 +57,46 @@ export default async function BindersPage() {
 
   const allCards = binders.length > 0 ? await getAllCards() : [];
 
-  const cards = binders.map((b) => {
+  // First pass: compute each binder's owned card IDs (scoped). We'll
+  // fetch prices once for the union and then resolve per-binder sums.
+  interface BinderCompute {
+    id: string;
+    name: string;
+    scopeType: ScopeType;
+    scopeParams: ScopeParams | Record<string, unknown>;
+    targetCount: number;
+    ownedCount: number;
+    ownedCardIds: string[];
+  }
+
+  const computed: BinderCompute[] = binders.map((b) => {
     let targetCount: number;
     let ownedCount: number;
+    const ownedIdsInBinder: string[] = [];
     if (b.scope_type === "pokedex") {
       const params = b.scope_params as { dexFrom: number; dexTo: number };
       const inRange = filterByScope(allCards, "pokedex", params);
       const cov = pokedexCoverage(params, ownedIds, inRange);
       targetCount = cov.dexNumbers.length;
       ownedCount = cov.covered.size;
+      // Sum prices over every owned card whose dex# falls in range —
+      // each owned card counts once even if it represents one dex slot.
+      for (const c of inRange) {
+        if (ownedIds.has(c.id)) ownedIdsInBinder.push(c.id);
+      }
     } else {
       const target =
         b.scope_type === "custom"
           ? filterCardsByIds(allCards, customCardsByBinder.get(b.id) ?? [])
           : filterByScope(allCards, b.scope_type, b.scope_params as ScopeParams);
       targetCount = target.length;
-      ownedCount = target.reduce((acc, c) => acc + (ownedIds.has(c.id) ? 1 : 0), 0);
+      ownedCount = 0;
+      for (const c of target) {
+        if (ownedIds.has(c.id)) {
+          ownedCount += 1;
+          ownedIdsInBinder.push(c.id);
+        }
+      }
     }
     return {
       id: b.id,
@@ -78,6 +105,25 @@ export default async function BindersPage() {
       scopeParams: b.scope_params,
       targetCount,
       ownedCount,
+      ownedCardIds: ownedIdsInBinder,
+    };
+  });
+
+  const allOwnedForPricing = new Set<string>();
+  for (const c of computed) for (const id of c.ownedCardIds) allOwnedForPricing.add(id);
+  const priceMap = await fetchPricesForCards(allOwnedForPricing);
+
+  const cards = computed.map((c) => {
+    const { total } = sumPrices(priceMap, c.ownedCardIds, prefs.priceSource);
+    return {
+      id: c.id,
+      name: c.name,
+      scopeType: c.scopeType,
+      scopeParams: c.scopeParams,
+      targetCount: c.targetCount,
+      ownedCount: c.ownedCount,
+      value: total,
+      priceSource: prefs.priceSource,
     };
   });
 

@@ -81,8 +81,8 @@ Today the data layer is narrowed twice: Pokémon-only (1,025 dex slots) *and* SV
 
 ## 7. Card prices & valuation
 
-- [ ] **Find a free pricing API** for TCG cards. Constraint from [CLAUDE.md](CLAUDE.md): never call paid Scrydex endpoints. Only free `pokemontcg.io` API or the static `pokemon-tcg-data` GitHub repo are allowed.
-- [ ] **Show "how much your binders are worth"** using those prices, both per-binder and as a portfolio total.
+- [x] **Find a free pricing API** for TCG cards. Using [pokemontcg.io](https://pokemontcg.io)'s `/v2/cards` endpoint — both `tcgplayer.prices` (USD) and `cardmarket.prices` (EUR) are returned per card. Fetched per-set on demand from [lib/pricing/pokemontcg.ts](lib/pricing/pokemontcg.ts) and cached by Next's fetch layer (24h revalidate). Source picker lives in Settings, backed by a new `user_preferences.price_source` row.
+- [x] **Show "how much your binders are worth"** using those prices, both per-binder and as a portfolio total. Surfaced as a Portfolio Value KPI on `/portfolio`, a Value row on each binder detail, a value line on each `BinderListCard`, a price line on every `CardTile` rendered under a `CardPricesProvider`, and a "Collection value over time" chart (today's prices applied retroactively, since historical-price data isn't free — full historical MTM needs §9 pack-cost tracking too).
 
 ---
 

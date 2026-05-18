@@ -23,6 +23,11 @@ import {
 } from "../../../_lib/binder-actions";
 import { CustomBinderEditor } from "./CustomBinderEditor";
 import { BinderCellPicker } from "./BinderCellPicker";
+import {
+  CardPricesProvider,
+  type CardPriceRecord,
+} from "../../../_lib/CardPricesContext";
+import { formatPriceCompact, type PriceSource } from "@/lib/pricing/pokemontcg";
 
 interface BinderSummary {
   id: string;
@@ -37,6 +42,11 @@ interface Props {
   customCardIds: string[];
   recentAdditions: CardEntry[];
   cellOverrides: Record<number, string>;
+  value: number;
+  pricedCount: number;
+  ownedPricedTotal: number;
+  priceSource: PriceSource;
+  prices: CardPriceRecord;
 }
 
 export function BinderDetailClient({
@@ -45,6 +55,11 @@ export function BinderDetailClient({
   customCardIds,
   recentAdditions,
   cellOverrides,
+  value,
+  pricedCount,
+  ownedPricedTotal,
+  priceSource,
+  prices,
 }: Props) {
   const router = useRouter();
   const { ownedCards, ownedSpecies } = useOwnedCards();
@@ -242,6 +257,24 @@ export function BinderDetailClient({
                 style={{ width: `${pct}%` }}
               />
             </div>
+            {ownedPricedTotal > 0 && (
+              <div className="mt-1 flex items-baseline justify-between text-[11px]">
+                <span className="uppercase tracking-wider text-muted">Value</span>
+                <span
+                  className="tabular-nums"
+                  title={`${pricedCount.toLocaleString()} of ${ownedPricedTotal.toLocaleString()} owned cards priced`}
+                >
+                  <span className="font-semibold text-text">
+                    {formatPriceCompact(value, priceSource)}
+                  </span>
+                  {pricedCount < ownedPricedTotal && (
+                    <span className="ml-1 text-muted">
+                      ({pricedCount}/{ownedPricedTotal})
+                    </span>
+                  )}
+                </span>
+              </div>
+            )}
             <div className="mt-1 flex justify-end gap-2 text-xs">
               {isCustom && (
                 <button
@@ -278,59 +311,61 @@ export function BinderDetailClient({
         </div>
       )}
 
-      {isCustom && editing && (
-        <CustomBinderEditor
-          binderId={binder.id}
-          initialIds={customCardIds}
-          onChange={() => router.refresh()}
-        />
-      )}
-
-      {!isPokedex && (
-        <CardRail
-          title="Recent additions"
-          subtitle="Your latest acquisitions in this binder"
-          cards={recentAdditions}
-          emptyMessage="No cards in this binder owned yet — they'll appear here as you acquire them."
-          rail="recent-additions"
-        />
-      )}
-
-      {isPokedex && dexRange ? (
-        <>
-          <PokedexGrid
-            dexNumbers={dexRange.nums}
-            groupByGenDefault={dexRange.to - dexRange.from + 1 > 200}
-            storageKey={`binder-${binder.id}`}
-            displayCardByDex={displayCardByDex}
-            onCellClick={(dex) => setPickerDex(dex)}
-          />
-          <BinderCellPicker
+      <CardPricesProvider prices={prices}>
+        {isCustom && editing && (
+          <CustomBinderEditor
             binderId={binder.id}
-            dex={pickerDex}
-            variants={pickerDex != null ? (variantsByDex.get(pickerDex) ?? []) : []}
-            currentOverride={pickerDex != null ? overrides[pickerDex] : undefined}
-            displayedCardId={
-              pickerDex != null ? (displayCardByDex.get(pickerDex)?.id ?? null) : null
-            }
-            onSetOverride={onPickCard}
-            onClearOverride={onClearPick}
-            onClose={() => setPickerDex(null)}
+            initialIds={customCardIds}
+            onChange={() => router.refresh()}
           />
-        </>
-      ) : cards.length === 0 && !scopeBroken ? (
-        <div className="rounded-lg border border-border bg-panel p-8 text-sm text-muted">
-          {isCustom
-            ? "No cards yet. Click \"Add cards\" above to start filling this binder."
-            : "No cards match this scope."}
-        </div>
-      ) : (
-        <CardGrid
-          cards={cards}
-          storageKey={`binder-${binder.id}`}
-          initialSort="number"
-        />
-      )}
+        )}
+
+        {!isPokedex && (
+          <CardRail
+            title="Recent additions"
+            subtitle="Your latest acquisitions in this binder"
+            cards={recentAdditions}
+            emptyMessage="No cards in this binder owned yet — they'll appear here as you acquire them."
+            rail="recent-additions"
+          />
+        )}
+
+        {isPokedex && dexRange ? (
+          <>
+            <PokedexGrid
+              dexNumbers={dexRange.nums}
+              groupByGenDefault={dexRange.to - dexRange.from + 1 > 200}
+              storageKey={`binder-${binder.id}`}
+              displayCardByDex={displayCardByDex}
+              onCellClick={(dex) => setPickerDex(dex)}
+            />
+            <BinderCellPicker
+              binderId={binder.id}
+              dex={pickerDex}
+              variants={pickerDex != null ? (variantsByDex.get(pickerDex) ?? []) : []}
+              currentOverride={pickerDex != null ? overrides[pickerDex] : undefined}
+              displayedCardId={
+                pickerDex != null ? (displayCardByDex.get(pickerDex)?.id ?? null) : null
+              }
+              onSetOverride={onPickCard}
+              onClearOverride={onClearPick}
+              onClose={() => setPickerDex(null)}
+            />
+          </>
+        ) : cards.length === 0 && !scopeBroken ? (
+          <div className="rounded-lg border border-border bg-panel p-8 text-sm text-muted">
+            {isCustom
+              ? "No cards yet. Click \"Add cards\" above to start filling this binder."
+              : "No cards match this scope."}
+          </div>
+        ) : (
+          <CardGrid
+            cards={cards}
+            storageKey={`binder-${binder.id}`}
+            initialSort="number"
+          />
+        )}
+      </CardPricesProvider>
     </div>
   );
 }

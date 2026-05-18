@@ -1,13 +1,20 @@
 import { PageHeader } from "../_components/PageHeader";
+import { requireUserId } from "../_lib/current-user";
+import { loadUserPreferences } from "../_lib/user-preferences";
+import { PriceSourceSetting } from "./_components/PriceSourceSetting";
 
-export default function SettingsPage() {
+export default async function SettingsPage() {
+  const userId = await requireUserId();
+  const prefs = await loadUserPreferences(userId);
+
   return (
-    <>
-      <PageHeader eyebrow="Account" title="Settings" subtitle="Coming soon" />
-      <div className="rounded-lg border border-border bg-panel p-6 text-sm text-muted">
-        Nothing to configure yet. Real settings land alongside accounts and
-        multi-binder support.
-      </div>
-    </>
+    <div className="mx-auto max-w-[640px] space-y-6">
+      <PageHeader
+        eyebrow="Account"
+        title="Settings"
+        subtitle="Per-account preferences. More options land as features grow."
+      />
+      <PriceSourceSetting initial={prefs.priceSource} />
+    </div>
   );
 }

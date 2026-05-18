@@ -13,10 +13,12 @@ import { MobileHeader } from "./MobileHeader";
 import { LogPackFab } from "./LogPackFab";
 import { Tooltip } from "./Tooltip";
 import { CardPreviewOverlay } from "./CardPreviewOverlay";
+import type { PriceSource } from "@/lib/pricing/pokemontcg";
 
 export function Shell({
   userId,
   email,
+  priceSource,
   initialOwned,
   initialWishlist,
   initialFavorites,
@@ -25,6 +27,7 @@ export function Shell({
 }: {
   userId: string;
   email: string;
+  priceSource: PriceSource;
   initialOwned: string[];
   initialWishlist: string[];
   initialFavorites: string[];
@@ -32,7 +35,7 @@ export function Shell({
   children: React.ReactNode;
 }) {
   return (
-    <UserProvider userId={userId} email={email}>
+    <UserProvider userId={userId} email={email} priceSource={priceSource}>
       <OwnedCardsProvider userId={userId} initial={initialOwned}>
         <WishlistProvider userId={userId} initial={initialWishlist}>
           <FavoritesProvider userId={userId} initial={initialFavorites}>
