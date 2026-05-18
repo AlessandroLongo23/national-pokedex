@@ -6,11 +6,6 @@ import { officialArtworkUrl } from "@/lib/pokeapi";
 import { useTooltip } from "../_lib/TooltipContext";
 import { typeBackground, typeRgb } from "./pokemonTypeColors";
 
-// Series the binder project actively tracks. Anything outside this is
-// listed under "All prints" as a secondary line so users still see total
-// coverage without confusing it with what's pullable from current boosters.
-const IN_SCOPE_SERIES = new Set(["Scarlet & Violet", "Mega Evolution"]);
-
 export function Tooltip() {
   const { state, hide } = useTooltip();
   if (!state) return null;
@@ -22,7 +17,6 @@ export function Tooltip() {
   const types = species?.types ?? [];
 
   const containingSets = SETS.filter((s) => s.dexNumbers.includes(state.dex));
-  const inScopeSets = containingSets.filter((s) => IN_SCOPE_SERIES.has(s.series));
 
   const top = Math.min(state.anchor.bottom + 8, window.innerHeight - 240);
   const left = Math.min(state.anchor.left, window.innerWidth - 300);
@@ -83,29 +77,22 @@ export function Tooltip() {
       </div>
 
       <div className="border-t border-border bg-panel px-3 py-2.5 text-[11px]">
-        {inScopeSets.length > 0 ? (
+        {containingSets.length > 0 ? (
           <div className="flex items-baseline gap-1.5">
-            <span className="text-covered nums tabular-nums">{inScopeSets.length}</span>
+            <span className="text-covered nums tabular-nums">{containingSets.length}</span>
             <span className="text-muted">
-              SV/ME set{inScopeSets.length === 1 ? "" : "s"} ·{" "}
+              set{containingSets.length === 1 ? "" : "s"} ·{" "}
               <span className="text-text/85">
-                {inScopeSets
+                {containingSets
                   .slice(0, 2)
                   .map((s) => s.name)
                   .join(", ")}
-                {inScopeSets.length > 2 ? ` +${inScopeSets.length - 2}` : ""}
+                {containingSets.length > 2 ? ` +${containingSets.length - 2}` : ""}
               </span>
             </span>
           </div>
         ) : (
-          <div className="font-medium text-missing">
-            Not in any SV / ME booster — singles only
-          </div>
-        )}
-        {containingSets.length > inScopeSets.length && (
-          <div className="mt-0.5 text-[10px] text-muted">
-            All-time prints: {containingSets.length}
-          </div>
+          <div className="font-medium text-missing">Not in any tracked set</div>
         )}
       </div>
     </div>

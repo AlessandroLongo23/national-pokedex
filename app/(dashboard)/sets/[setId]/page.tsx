@@ -29,7 +29,7 @@ export default async function SetDetailPage({ params }: PageProps) {
         title={set.name}
         subtitle={
           <>
-            Released {set.releaseDate} · {set.cardCount} Pokémon cards · {set.distinctPokemonCount}{" "}
+            Released {set.releaseDate} · {set.cardCount} cards · {set.distinctPokemonCount}{" "}
             distinct Pokémon · {set.uniqueCount} unique to this set
           </>
         }

@@ -54,11 +54,11 @@ export default async function PokemonDetailPage({ params }: PageProps) {
           emptyMessage={
             <>
               No <span className="font-semibold text-text">{species.name}</span> cards exist in the
-              tracked sets (Scarlet &amp; Violet · Mega Evolution).
+              tracked sets.
               <br />
               <span className="text-xs">
-                This Pokémon hasn’t been printed in this era yet — the binder slot will fill once a
-                set includes it.
+                This Pokémon hasn’t been printed in any tracked set — the binder slot will fill once
+                one does.
               </span>
             </>
           }

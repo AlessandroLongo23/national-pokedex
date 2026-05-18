@@ -10,8 +10,7 @@ export default function SetsPage() {
         title="Sets"
         subtitle={
           <>
-            {SETS.length} sets in Scarlet & Violet + Mega Evolution · click a set to view its
-            Pokémon and log a pack
+            {SETS.length} sets in the catalog · click a set to view its cards and log a pack
           </>
         }
       />

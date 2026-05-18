@@ -11,21 +11,20 @@ import { SetAvailabilityToggle } from "./SetAvailabilityToggle";
 type SortKey = "releaseDate" | "name" | "cardCount" | "ownedCards" | "distinctPokemonCount";
 type ViewMode = "list" | "grid";
 
-const SERIES_GROUPS = [
-  { label: "All", value: null as string | null },
-  { label: "Scarlet & Violet", value: "Scarlet & Violet" },
-  { label: "Mega Evolution", value: "Mega Evolution" },
-  { label: "Sword & Shield", value: "Sword & Shield" },
-  { label: "Sun & Moon", value: "Sun & Moon" },
-  { label: "Older", value: "__older__" },
-];
-
-const MODERN_SERIES = new Set([
-  "Scarlet & Violet",
-  "Mega Evolution",
-  "Sword & Shield",
-  "Sun & Moon",
-]);
+// Series chips are derived from the data — most recently active series first
+// (by latest release date in that series). Keeping the list dynamic means new
+// series get picked up automatically as the catalog grows.
+const SERIES_GROUPS: { label: string; value: string | null }[] = (() => {
+  const latestBySeries = new Map<string, string>();
+  for (const s of SETS) {
+    const prev = latestBySeries.get(s.series);
+    if (!prev || s.releaseDate > prev) latestBySeries.set(s.series, s.releaseDate);
+  }
+  const ordered = [...latestBySeries.entries()]
+    .sort((a, b) => b[1].localeCompare(a[1]))
+    .map(([series]) => ({ label: series, value: series }));
+  return [{ label: "All", value: null }, ...ordered];
+})();
 
 const VIEW_STORAGE_KEY = "sets-view";
 
@@ -74,7 +73,6 @@ export function SetsTable() {
     return enriched.filter((s) => {
       if (availableOnly && !isAvailable(s.id)) return false;
       if (!seriesFilter) return true;
-      if (seriesFilter === "__older__") return !MODERN_SERIES.has(s.series);
       return s.series === seriesFilter;
     });
   }, [enriched, seriesFilter, availableOnly, isAvailable]);
