@@ -24,9 +24,9 @@ The items in this backlog pivot the product from a single-collector tool into a 
 
 Sidebar lives in [app/(dashboard)/_components/Sidebar.tsx](app/(dashboard)/_components/Sidebar.tsx). Today: top nav = Dashboard / Pokédex / Sets / Packs / Wishlist; footer = an "Owned stats" card.
 
-- [ ] **Put the logo at the top of the sidebar** as the product mark / name.
-- [ ] **Reorganize pages**, moving more entries to the footer.
-- [ ] **Footer should host Settings + the user's account**, replacing the current "Owned stats" card.
+- [x] **Put the logo at the top of the sidebar** as the product mark / name.
+- [x] **Reorganize pages**, moving more entries to the footer.
+- [x] **Footer should host Settings + the user's account**, replacing the current "Owned stats" card.
 
 ---
 
@@ -34,9 +34,9 @@ Sidebar lives in [app/(dashboard)/_components/Sidebar.tsx](app/(dashboard)/_comp
 
 Auth is currently bypassed for local dev — see [CLAUDE.md](CLAUDE.md) and [app/dashboard/dev.ts](app/dashboard/dev.ts), and the RLS-disabling migration referenced there.
 
-- [ ] **Real authentication on Supabase**, so anyone can create their own account and have their own binders.
-- [ ] **Per-user data isolation** — restore RLS + the FK to `auth.users` (the exact SQL to do this is already in the header comment of the dev-open-access migration).
-- [ ] Magic-link infra already exists ([scripts/dev/magic-link.ts](scripts/dev/magic-link.ts), `auth/`, `login/`) — confirm it's the path forward when restoring real auth.
+- [x] **Real authentication on Supabase**, so anyone can create their own account and have their own binders.
+- [x] **Per-user data isolation** — restore RLS + the FK to `auth.users` (the exact SQL to do this is already in the header comment of the dev-open-access migration).
+- [x] Magic-link infra already exists ([scripts/dev/magic-link.ts](scripts/dev/magic-link.ts), `auth/`, `login/`) — confirm it's the path forward when restoring real auth.
 
 ---
 
@@ -44,8 +44,8 @@ Auth is currently bypassed for local dev — see [CLAUDE.md](CLAUDE.md) and [app
 
 Today the app assumes one implicit binder: "one card per dex# in the National Pokédex." That's the most restrictive shape of a binder. The real product is **N binders per user**, each with its own scope. People are very creative with this.
 
-- [ ] **Users can create more than one binder.** Each binder has its own page, its own progress, its own target card list.
-- [ ] **Binder scope types** (this list is non-exhaustive — collectors invent new ones):
+- [x] **Users can create more than one binder.** Each binder has its own page, its own progress, its own target card list.
+- [x] **Binder scope types** (this list is non-exhaustive — collectors invent new ones):
   - Master set of a specific TCG set
   - All cards of a specific Pokémon
   - All cards by a specific illustrator/artist
@@ -64,9 +64,9 @@ Today the app assumes one implicit binder: "one card per dex# in the National Po
 
 ## 5. Per-binder & portfolio views
 
-- [ ] **A page per binder** showing how that specific binder is going (progress, missing cards, recent additions).
-- [ ] **A portfolio page** for the whole collection — how it's doing overall, including **collection value over time**, driven by the pack-purchase log.
-- [ ] **A collection browse page** for looking through everything you own, with highlight rails surfacing the top-N cards by personal favorites (user-tagged), rarity, price, and similar dimensions.
+- [x] **A page per binder** showing how that specific binder is going (progress, missing cards, recent additions).
+- [x] **A portfolio page** for the whole collection — how it's doing overall, including **collection value over time**, driven by the pack-purchase log.
+- [x] **A collection browse page** for looking through everything you own, with highlight rails surfacing the top-N cards by personal favorites (user-tagged), rarity, price, and similar dimensions.
 
 ---
 
