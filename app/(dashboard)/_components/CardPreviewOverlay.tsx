@@ -7,7 +7,10 @@ import {
   useRef,
   useState,
 } from "react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { SETS } from "@/lib/data";
 import type { CardEntry } from "@/lib/data/types";
+import { RARITY_LABEL } from "@/lib/data/types";
 import { useCardPreview } from "../_lib/CardPreviewContext";
 
 const ENTER_MS = 280;
@@ -24,7 +27,7 @@ function prefersReducedMotion(): boolean {
 }
 
 export function CardPreviewOverlay() {
-  const { activeCard, originRect, loading, close } = useCardPreview();
+  const { activeCard, originRect, loading, open, close } = useCardPreview();
 
   // Mirror the context state into local state so we can keep rendering the
   // card during the exit animation (after activeCard has gone null in the
@@ -32,6 +35,13 @@ export function CardPreviewOverlay() {
   const [card, setCard] = useState<CardEntry | null>(null);
   const [origin, setOrigin] = useState<DOMRect | null>(null);
   const [phase, setPhase] = useState<Phase>("closed");
+  // The current card's index among the on-page preview triggers, plus the
+  // total count. Drives the prev/next chevrons and the "X / N" counter.
+  // Computed once per card change, not per render.
+  const [position, setPosition] = useState<{ index: number; total: number }>({
+    index: -1,
+    total: 0,
+  });
 
   const rootRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
@@ -198,16 +208,68 @@ export function CardPreviewOverlay() {
     return () => root.removeEventListener("transitionend", onEnd);
   }, [phase]);
 
-  // Esc to close.
   const closeStable = useCallback(() => close(), [close]);
+
+  // Walk the on-page preview triggers in DOM order and open the prev/next
+  // one. Uses [data-preview-trigger] attributes set by CardTile and
+  // PackHistory — so navigation naturally follows whichever grid the user
+  // opened from. Falls back to a no-op at the ends (no wraparound — the
+  // arrow buttons are hidden there anyway).
+  const navigate = useCallback(
+    (direction: 1 | -1) => {
+      if (!card) return;
+      const triggers = Array.from(
+        document.querySelectorAll<HTMLElement>("[data-preview-trigger]"),
+      );
+      const idx = triggers.findIndex(
+        (el) => el.dataset.previewTrigger === card.id,
+      );
+      if (idx < 0) return;
+      const target = triggers[idx + direction];
+      if (!target) return;
+      const targetId = target.dataset.previewTrigger;
+      if (!targetId) return;
+      void open(targetId, target.getBoundingClientRect());
+    },
+    [card, open],
+  );
+
+  // Refresh position whenever the active card changes. Querying the DOM
+  // each render would work too, but doing it once per card keeps the
+  // render cheap and avoids layout reads during animation frames.
+  useEffect(() => {
+    if (!card) {
+      setPosition({ index: -1, total: 0 });
+      return;
+    }
+    const triggers = document.querySelectorAll<HTMLElement>(
+      "[data-preview-trigger]",
+    );
+    let idx = -1;
+    for (let i = 0; i < triggers.length; i++) {
+      const el = triggers[i];
+      if (el && el.dataset.previewTrigger === card.id) {
+        idx = i;
+        break;
+      }
+    }
+    setPosition({ index: idx, total: triggers.length });
+  }, [card]);
+
+  const hasPrev = position.index > 0;
+  const hasNext = position.index >= 0 && position.index < position.total - 1;
+
+  // Keyboard: Esc closes, ← / → navigate.
   useEffect(() => {
     if (phase === "closed") return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") closeStable();
+      else if (e.key === "ArrowLeft") navigate(-1);
+      else if (e.key === "ArrowRight") navigate(1);
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [phase, closeStable]);
+  }, [phase, closeStable, navigate]);
 
   // Focus management.
   useEffect(() => {
@@ -237,6 +299,8 @@ export function CardPreviewOverlay() {
 
   if (phase === "closed" || !card) return null;
 
+  const set = SETS.find((s) => s.id === card.setId);
+
   return (
     <div
       ref={rootRef}
@@ -255,10 +319,64 @@ export function CardPreviewOverlay() {
           closeStable();
         }}
         aria-label="Close preview"
-        className="absolute top-4 right-4 flex h-9 w-9 items-center justify-center rounded-full border border-border bg-bg/70 text-lg text-muted backdrop-blur-sm transition hover:border-accent hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+        className="absolute top-4 right-4 flex h-9 w-9 items-center justify-center rounded-full border border-border bg-bg/70 text-muted backdrop-blur-sm transition hover:border-accent hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
       >
-        ×
+        <X className="h-4 w-4" aria-hidden />
       </button>
+
+      {position.total > 1 && position.index >= 0 && (
+        <div
+          aria-live="polite"
+          className="absolute top-4 left-4 rounded-full border border-border bg-bg/70 px-3 py-1.5 text-xs text-muted nums backdrop-blur-sm"
+        >
+          {position.index + 1} / {position.total}
+        </div>
+      )}
+
+      {hasPrev && (
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            navigate(-1);
+          }}
+          aria-label="Previous card"
+          className="absolute top-1/2 left-4 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-bg/70 text-muted backdrop-blur-sm transition hover:border-accent hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+        >
+          <ChevronLeft className="h-5 w-5" aria-hidden />
+        </button>
+      )}
+
+      {hasNext && (
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            navigate(1);
+          }}
+          aria-label="Next card"
+          className="absolute top-1/2 right-4 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-bg/70 text-muted backdrop-blur-sm transition hover:border-accent hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+        >
+          <ChevronRight className="h-5 w-5" aria-hidden />
+        </button>
+      )}
+
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="absolute bottom-5 left-1/2 max-w-[92vw] -translate-x-1/2 rounded-full border border-border bg-bg/70 px-5 py-2 text-sm whitespace-nowrap text-text backdrop-blur-sm"
+      >
+        <span className="font-medium">{card.name}</span>
+        {set && (
+          <>
+            <span aria-hidden className="mx-2.5 text-border-strong">·</span>
+            <span className="text-muted">{set.name}</span>
+          </>
+        )}
+        <span aria-hidden className="mx-2.5 text-border-strong">·</span>
+        <span className="nums text-muted">#{card.number}</span>
+        <span aria-hidden className="mx-2.5 text-border-strong">·</span>
+        <span className="text-muted">{RARITY_LABEL[card.rarity]}</span>
+      </div>
 
       {loading && (
         <div className="pointer-events-none absolute inset-x-0 top-4 text-center text-xs text-muted">
@@ -278,9 +396,11 @@ export function CardPreviewOverlay() {
         // independent of the image's natural dimensions. The context awaits
         // .decode() before flipping activeCard, so the file is in cache by
         // the time we mount and getBoundingClientRect returns the right rect.
+        // 87vw/87vh leaves room above and below for the counter + metadata
+        // pill without overlapping the card.
         style={{
-          width: "min(92vw, calc(92vh * 245 / 342))",
-          height: "min(92vh, calc(92vw * 342 / 245))",
+          width: "min(87vw, calc(87vh * 245 / 342))",
+          height: "min(87vh, calc(87vw * 342 / 245))",
           willChange: "transform",
         }}
       />
