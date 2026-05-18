@@ -1,11 +1,12 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { POKEDEX } from "@/lib/data";
+import { ChevronRight } from "lucide-react";
+import { POKEDEX, getSet } from "@/lib/data";
 import { RARITY_LABEL, RARITY_ORDER, type CardEntry, type Rarity } from "@/lib/data/types";
 import { CardTile } from "./CardTile";
 
-export type CardSort = "number" | "rarity" | "pokemon";
+export type CardSort = "number" | "rarity" | "pokemon" | "set";
 
 interface Props {
   cards: CardEntry[];
@@ -15,6 +16,7 @@ interface Props {
   selected?: Set<string>;
   onSelect?: (cardId: string) => void;
   hideActions?: boolean;
+  hideDetailsLink?: boolean;
   emptyMessage?: React.ReactNode;
 }
 
@@ -45,6 +47,7 @@ export function CardGrid({
   selected,
   onSelect,
   hideActions,
+  hideDetailsLink,
   emptyMessage = "No cards to show.",
 }: Props) {
   const [sort, setSort] = useState<CardSort>(initialSort);
@@ -85,6 +88,21 @@ export function CardGrid({
         );
         break;
       }
+      case "set": {
+        copy.sort((a, b) => {
+          const sa = getSet(a.setId);
+          const sb = getSet(b.setId);
+          if (!sa && !sb) return a.numberInt - b.numberInt;
+          if (!sa) return 1;
+          if (!sb) return -1;
+          return (
+            sa.series.localeCompare(sb.series) ||
+            sa.id.localeCompare(sb.id) ||
+            a.numberInt - b.numberInt
+          );
+        });
+        break;
+      }
     }
     return copy;
   }, [cards, sort]);
@@ -93,12 +111,15 @@ export function CardGrid({
     if (sort === "number") return null;
     const m = new Map<string, CardEntry[]>();
     for (const c of sorted) {
-      const key =
-        sort === "rarity"
-          ? RARITY_LABEL[c.rarity]
-          : c.dex[0] != null
-            ? `${c.dex[0]}`
-            : "other";
+      let key: string;
+      if (sort === "rarity") {
+        key = RARITY_LABEL[c.rarity];
+      } else if (sort === "set") {
+        const s = getSet(c.setId);
+        key = s ? s.name : "Other";
+      } else {
+        key = c.dex[0] != null ? `${c.dex[0]}` : "other";
+      }
       const arr = m.get(key);
       if (arr) arr.push(c);
       else m.set(key, [c]);
@@ -119,6 +140,7 @@ export function CardGrid({
           selected={selected?.has(c.id)}
           onSelect={onSelect}
           hideActions={hideActions}
+          hideDetailsLink={hideDetailsLink}
         />
       ))}
     </div>
@@ -128,7 +150,7 @@ export function CardGrid({
     <div className="space-y-3">
       <div className="sticky top-2 z-10 flex flex-wrap items-center gap-3 rounded-lg border border-border bg-panel/90 backdrop-blur p-3 shadow-[0_4px_16px_-8px_rgb(0_0_0/0.6)]">
         <div className="flex gap-1.5">
-          {(["number", "rarity", "pokemon"] as CardSort[]).map((s) => (
+          {(["number", "rarity", "pokemon", "set"] as CardSort[]).map((s) => (
             <button
               key={s}
               type="button"
@@ -140,7 +162,13 @@ export function CardGrid({
                   : "text-muted hover:bg-panel-2 hover:text-text",
               ].join(" ")}
             >
-              {s === "number" ? "By #" : s === "rarity" ? "By rarity" : "By Pokémon"}
+              {s === "number"
+                ? "By #"
+                : s === "rarity"
+                  ? "By rarity"
+                  : s === "pokemon"
+                    ? "By Pokémon"
+                    : "By set"}
             </button>
           ))}
         </div>
@@ -176,12 +204,10 @@ export function CardGrid({
               <details key={key} open className="group/details">
                 <summary className="-mx-1 flex cursor-pointer list-none items-baseline justify-between gap-3 rounded-md px-1 py-1.5 hover:bg-panel-2 [&::-webkit-details-marker]:hidden">
                   <span className="flex items-baseline gap-2">
-                    <span
+                    <ChevronRight
                       aria-hidden
-                      className="inline-block w-2 text-[10px] text-muted transition-transform group-open/details:rotate-90"
-                    >
-                      ▸
-                    </span>
+                      className="h-3 w-3 text-muted transition-transform group-open/details:rotate-90"
+                    />
                     <span className="text-sm font-semibold">{title}</span>
                   </span>
                   <span className="text-xs text-muted nums">{items.length}</span>
