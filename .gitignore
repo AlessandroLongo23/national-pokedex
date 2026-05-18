@@ -1,9 +1,6 @@
-# Legacy Python tool
-legacy/cache/
-
-# IRS/SIR PDF tool
-cache/
-irs_and_sirs.pdf
+# Pre-Next.js Python tools and their generated PDFs/caches (kept locally on
+# the maintainer's machine; not part of the deployed app)
+legacy/
 
 # Editor
 .DS_Store

@@ -86,9 +86,10 @@ GitHub repo are allowed for card data.**
 
 ## Things to ignore / not "fix"
 
-- `legacy/` (Python `build_pdf.py`, `fetch_data.py`) is the pre-Next.js
-  workflow that produced the printable placeholder PDF — kept for reference,
-  not active.
+- `legacy/` is gitignored and holds the pre-Next.js Python tools
+  (`build_pdf.py`, `fetch_data.py`, `irsandsirs.py`, their CSVs and
+  generated PDFs) on the maintainer's machine only — not part of the
+  deployed app and not present in fresh clones.
 - The 3×3 layout of the placeholder PDF deliberately does NOT match the
   4×4 binder layout (see README) — do not "fix" this.
 - `SV_ME_Coverage_Dashboard.html` at the repo root is the standalone
