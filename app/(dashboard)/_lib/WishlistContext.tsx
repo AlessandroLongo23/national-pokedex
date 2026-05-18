@@ -94,7 +94,14 @@ export function WishlistProvider({
       startTransition(async () => {
         applyOptimistic(cardId);
         try {
-          await toggleAction(cardId);
+          const { wishlisted } = await toggleAction(cardId);
+          setBase((prev) => {
+            if (wishlisted === prev.has(cardId)) return prev;
+            const next = new Set(prev);
+            if (wishlisted) next.add(cardId);
+            else next.delete(cardId);
+            return next;
+          });
         } catch (err) {
           console.error("toggleWishlistCard failed", err);
         }

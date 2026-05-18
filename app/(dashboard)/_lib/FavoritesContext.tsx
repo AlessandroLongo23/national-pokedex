@@ -94,7 +94,18 @@ export function FavoritesProvider({
       startTransition(async () => {
         applyOptimistic(cardId);
         try {
-          await toggleAction(cardId);
+          const { favorited } = await toggleAction(cardId);
+          // Feed the authoritative result back into `base` so when the
+          // transition ends `useOptimistic` resets to the new value instead
+          // of the pre-click value (and we don't have to wait on the
+          // realtime echo to avoid a flicker).
+          setBase((prev) => {
+            if (favorited === prev.has(cardId)) return prev;
+            const next = new Set(prev);
+            if (favorited) next.add(cardId);
+            else next.delete(cardId);
+            return next;
+          });
         } catch (err) {
           console.error("toggleFavoriteCard failed", err);
         }
