@@ -66,6 +66,7 @@ Today the app assumes one implicit binder: "one card per dex# in the National Po
 
 - [ ] **A page per binder** showing how that specific binder is going (progress, missing cards, recent additions).
 - [ ] **A portfolio page** for the whole collection — how it's doing overall, including **collection value over time**, driven by the pack-purchase log.
+- [ ] **A collection browse page** for looking through everything you own, with highlight rails surfacing the top-N cards by personal favorites (user-tagged), rarity, price, and similar dimensions.
 
 ---
 
