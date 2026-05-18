@@ -72,9 +72,10 @@ Today the app assumes one implicit binder: "one card per dex# in the National Po
 
 ## 6. Card scope expansion
 
-Today the data layer is Pokémon-centric (1,025 dex slots). For a generalized binder tracker, we need everything else too.
+Today the data layer is narrowed twice: Pokémon-only (1,025 dex slots) *and* SV + Mega Evolution-only (the eras the original collector cared about). For a generalized binder tracker, neither restriction should leak into the UI.
 
 - [ ] **Track Trainers, Items, Energies** — the entire card universe, not just Pokémon — so any binder scope is buildable.
+- [ ] **Remove SV/ME-only framing from the UI.** Several components hard-code the original SV + Mega Evolution scope in user-facing copy — e.g. [Tooltip.tsx](app/(dashboard)/_components/Tooltip.tsx) ("SV/ME set", "Not in any SV/ME booster — singles only"), [pokedex/\[dex\]/page.tsx](app/(dashboard)/pokedex/[dex]/page.tsx) ("tracked sets (Scarlet & Violet · Mega Evolution)"), and [sets/page.tsx](app/(dashboard)/sets/page.tsx) ("X sets in Scarlet & Violet + Mega Evolution"). Generalize to whatever sets the user/binder cares about.
 
 ---
 
