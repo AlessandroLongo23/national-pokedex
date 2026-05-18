@@ -3,80 +3,35 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { LogoBlock } from "./Logo";
+import {
+  ChevronRight,
+  CreditCard,
+  FolderOpen,
+  Layers,
+  LineChart,
+  MoreHorizontal,
+  Notebook,
+  Settings,
+  type LucideIcon,
+} from "lucide-react";
+import { LogoBlock, PokeballIcon } from "./Logo";
 import { AccountStub } from "./AccountStub";
-
-type IconProps = { className?: string };
-
-const I = {
-  Pokedex: ({ className }: IconProps) => (
-    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
-      <circle cx="10" cy="10" r="7.25" />
-      <path d="M2.75 10h14.5" />
-      <circle cx="10" cy="10" r="2.25" fill="currentColor" stroke="none" />
-      <circle cx="10" cy="10" r="1" fill="var(--color-bg)" stroke="none" />
-    </svg>
-  ),
-  Sets: ({ className }: IconProps) => (
-    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
-      <rect x="5.25" y="2.75" width="9.5" height="13" rx="1.25" />
-      <path d="M3.5 5.5v11A1.25 1.25 0 0 0 4.75 17.75h9.5" />
-    </svg>
-  ),
-  Cards: ({ className }: IconProps) => (
-    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
-      <rect x="3.25" y="5.25" width="9" height="12" rx="1.25" />
-      <path d="M6.5 3.25h8a1.25 1.25 0 0 1 1.25 1.25v11" />
-    </svg>
-  ),
-  Binders: ({ className }: IconProps) => (
-    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
-      <rect x="3.25" y="2.75" width="13.5" height="14.5" rx="1.25" />
-      <path d="M3.25 6.25h13.5M3.25 10h13.5M3.25 13.75h13.5" />
-    </svg>
-  ),
-  Collection: ({ className }: IconProps) => (
-    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
-      <path d="M3 6.5a1.5 1.5 0 0 1 1.5-1.5h3l1.25 1.5h6.75a1.5 1.5 0 0 1 1.5 1.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 3 15z" />
-    </svg>
-  ),
-  Portfolio: ({ className }: IconProps) => (
-    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
-      <path d="M3 16h14" />
-      <path d="M4 13l4-4 3 3 5-6" />
-      <path d="M16 6h-3M16 6v3" />
-    </svg>
-  ),
-  Other: ({ className }: IconProps) => (
-    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
-      <circle cx="5" cy="10" r="1.25" />
-      <circle cx="10" cy="10" r="1.25" />
-      <circle cx="15" cy="10" r="1.25" />
-    </svg>
-  ),
-  Settings: ({ className }: IconProps) => (
-    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
-      <circle cx="10" cy="10" r="2.5" />
-      <path d="M10 2.5v2M10 15.5v2M2.5 10h2M15.5 10h2M4.7 4.7l1.4 1.4M13.9 13.9l1.4 1.4M4.7 15.3l1.4-1.4M13.9 6.1l1.4-1.4" />
-    </svg>
-  ),
-};
 
 interface NavItem {
   href: string;
   label: string;
-  Icon: (p: IconProps) => React.ReactElement;
+  Icon: LucideIcon | ((p: { className?: string }) => React.ReactElement);
   children?: { href: string; label: string }[];
 }
 
 const NAV: NavItem[] = [
-  { href: "/pokedex", label: "Pokédex", Icon: I.Pokedex },
-  { href: "/sets", label: "Sets", Icon: I.Sets },
-  { href: "/cards", label: "Cards", Icon: I.Cards },
+  { href: "/pokedex", label: "Pokédex", Icon: PokeballIcon },
+  { href: "/sets", label: "Sets", Icon: Layers },
+  { href: "/cards", label: "Cards", Icon: CreditCard },
   {
     href: "/other",
     label: "Other cards",
-    Icon: I.Other,
+    Icon: MoreHorizontal,
     children: [
       { href: "/other/items", label: "Items" },
       { href: "/other/supporters", label: "Supporters" },
@@ -85,9 +40,9 @@ const NAV: NavItem[] = [
       { href: "/other/energies", label: "Energies" },
     ],
   },
-  { href: "/binders", label: "Binders", Icon: I.Binders },
-  { href: "/collection", label: "Collection", Icon: I.Collection },
-  { href: "/portfolio", label: "Portfolio", Icon: I.Portfolio },
+  { href: "/binders", label: "Binders", Icon: Notebook },
+  { href: "/collection", label: "Collection", Icon: FolderOpen },
+  { href: "/portfolio", label: "Portfolio", Icon: LineChart },
 ];
 
 function isActive(pathname: string, href: string) {
@@ -133,12 +88,10 @@ function NavRow({ item, pathname }: { item: NavItem; pathname: string }) {
           aria-expanded={showChildren}
           className="ml-1 inline-flex h-9 w-7 shrink-0 items-center justify-center rounded-md text-muted transition hover:bg-panel-2 hover:text-text"
         >
-          <span
+          <ChevronRight
             aria-hidden
-            className={`text-[10px] transition-transform ${showChildren ? "rotate-90" : ""}`}
-          >
-            ▸
-          </span>
+            className={`h-3 w-3 transition-transform ${showChildren ? "rotate-90" : ""}`}
+          />
         </button>
       </div>
       {showChildren && (
@@ -194,7 +147,7 @@ export function Sidebar() {
               : "border-transparent text-muted hover:bg-panel-2 hover:text-text",
           ].join(" ")}
         >
-          <I.Settings className="h-[18px] w-[18px] shrink-0" />
+          <Settings className="h-[18px] w-[18px] shrink-0" />
           <span>Settings</span>
         </Link>
         <div className="mt-1">

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { ArrowRight, Check, Heart, Plus, X } from "lucide-react";
 import { officialArtworkUrl } from "@/lib/pokeapi";
 import { CARD_INDEX, SETS, SPECIES } from "@/lib/data";
 import type { CardEntry, Rarity } from "@/lib/data/types";
@@ -91,9 +92,10 @@ export function CardVariantPicker({ dex, onClose }: Props) {
           <Link
             href={`/pokedex/${dex}`}
             onClick={onClose}
-            className="rounded-md border border-border bg-panel-2 px-3 py-1.5 text-xs text-muted transition hover:border-accent hover:text-accent"
+            className="inline-flex items-center gap-1 rounded-md border border-border bg-panel-2 px-3 py-1.5 text-xs text-muted transition hover:border-accent hover:text-accent"
           >
-            Full details →
+            Full details
+            <ArrowRight className="h-3 w-3" aria-hidden />
           </Link>
           <button
             type="button"
@@ -101,7 +103,7 @@ export function CardVariantPicker({ dex, onClose }: Props) {
             className="rounded-md p-1.5 text-muted transition hover:bg-panel-2 hover:text-text"
             aria-label="Close"
           >
-            ✕
+            <X className="h-4 w-4" aria-hidden />
           </button>
         </header>
 
@@ -160,28 +162,39 @@ function VariantRow({ card }: { card: CardEntry }) {
         type="button"
         onClick={() => toggleWishlist(card.id)}
         className={[
-          "shrink-0 rounded-md border px-2 py-1.5 text-xs transition",
+          "inline-flex shrink-0 items-center justify-center rounded-md border px-2 py-1.5 transition",
           wishlisted
             ? "border-accent bg-accent/15 text-accent"
             : "border-border text-muted hover:border-accent hover:text-accent",
         ].join(" ")}
         title={wishlisted ? "Wishlisted" : "Add to wishlist"}
         aria-pressed={wishlisted}
+        aria-label="Toggle wishlist"
       >
-        ♥
+        <Heart
+          className="h-3.5 w-3.5"
+          fill={wishlisted ? "currentColor" : "none"}
+          strokeWidth={2}
+          aria-hidden
+        />
       </button>
       <button
         type="button"
         onClick={() => toggleOwn(card.id)}
         className={[
-          "shrink-0 rounded-md border px-3 py-1.5 text-xs font-semibold transition",
+          "inline-flex shrink-0 items-center gap-1 rounded-md border px-3 py-1.5 text-xs font-semibold transition",
           owned
             ? "border-owned bg-owned/15 text-owned"
             : "border-border text-text hover:border-owned hover:text-owned",
         ].join(" ")}
         aria-pressed={owned}
       >
-        {owned ? "✓ Owned" : "+ Own"}
+        {owned ? (
+          <Check className="h-3.5 w-3.5" strokeWidth={3} aria-hidden />
+        ) : (
+          <Plus className="h-3.5 w-3.5" strokeWidth={2.5} aria-hidden />
+        )}
+        {owned ? "Owned" : "Own"}
       </button>
     </li>
   );

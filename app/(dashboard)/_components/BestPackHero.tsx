@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { ArrowRight } from "lucide-react";
 import { BOOSTERS } from "@/lib/data";
 import { rankSets } from "@/lib/packs/rank";
 import type { BoosterWrapper } from "@/lib/data/types";
@@ -121,9 +122,10 @@ export function BestPackHero({ filterAvailable }: Props) {
             </span>
             <Link
               href={`/packs/new?set=${best.set.id}`}
-              className="text-[11px] text-muted transition hover:text-accent"
+              className="inline-flex items-center gap-1 text-[11px] text-muted transition hover:text-accent"
             >
-              Log a pack →
+              Log a pack
+              <ArrowRight className="h-3 w-3" aria-hidden />
             </Link>
           </div>
           <WrapperRow wrappers={wrappers} setName={best.set.name} />

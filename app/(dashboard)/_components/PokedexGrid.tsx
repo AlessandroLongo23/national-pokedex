@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { ChevronRight } from "lucide-react";
 import { COVERAGE, POKEDEX } from "@/lib/data";
 import { GEN_NAMES, GEN_RANGES, type CardEntry, type Generation } from "@/lib/data/types";
 import { useOwnedCards } from "../_lib/OwnedCardsContext";
@@ -249,12 +250,10 @@ export function PokedexGrid({
                       <span className="font-semibold text-owned">{ownedInGen}</span>
                       <span className="text-muted"> / {inRange}</span>
                     </span>
-                    <span
+                    <ChevronRight
                       aria-hidden
-                      className="ml-1 text-muted transition-transform group-open:rotate-90"
-                    >
-                      ›
-                    </span>
+                      className="ml-1 h-3.5 w-3.5 text-muted transition-transform group-open:rotate-90"
+                    />
                   </div>
                 </summary>
                 <div>{renderGrid(items)}</div>

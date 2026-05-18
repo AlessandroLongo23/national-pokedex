@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { Check, Plus, X } from "lucide-react";
 import { officialArtworkUrl } from "@/lib/pokeapi";
 import { SETS, SPECIES } from "@/lib/data";
 import type { CardEntry } from "@/lib/data/types";
@@ -83,7 +84,7 @@ export function BinderCellPicker({
             className="rounded-md p-1.5 text-muted transition hover:bg-panel-2 hover:text-text"
             aria-label="Close"
           >
-            ✕
+            <X className="h-4 w-4" aria-hidden />
           </button>
         </header>
 
@@ -183,7 +184,17 @@ function VariantRow({
         aria-pressed={owned}
         title={owned ? "Owned — click to remove" : "Mark as owned"}
       >
-        {owned ? "✓ Owned" : "+ Own"}
+        {owned ? (
+          <span className="inline-flex items-center gap-1">
+            <Check className="h-3.5 w-3.5" strokeWidth={3} aria-hidden />
+            Owned
+          </span>
+        ) : (
+          <span className="inline-flex items-center gap-1">
+            <Plus className="h-3.5 w-3.5" strokeWidth={2.5} aria-hidden />
+            Own
+          </span>
+        )}
       </button>
       <button
         type="button"
@@ -206,7 +217,16 @@ function VariantRow({
           !owned ? "cursor-not-allowed opacity-40" : "",
         ].join(" ")}
       >
-        {isCurrentOverride ? "✓ Chosen" : isDisplayed ? "Showing" : "Show this"}
+        {isCurrentOverride ? (
+          <span className="inline-flex items-center gap-1">
+            <Check className="h-3.5 w-3.5" strokeWidth={3} aria-hidden />
+            Chosen
+          </span>
+        ) : isDisplayed ? (
+          "Showing"
+        ) : (
+          "Show this"
+        )}
       </button>
     </li>
   );

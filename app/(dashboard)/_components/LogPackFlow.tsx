@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState, useTransition } from "react";
+import { X } from "lucide-react";
 import { SETS } from "@/lib/data";
 import type { CardEntry } from "@/lib/data/types";
 import { logPack, updatePack } from "../_lib/pack-actions";
@@ -241,7 +242,7 @@ function PickedTray({
           />
           <span>{c.name}</span>
           <span className="text-muted nums">#{c.number}</span>
-          <span className="text-muted group-hover:text-missing">×</span>
+          <X className="h-3 w-3 text-muted group-hover:text-missing" aria-hidden />
         </button>
       ))}
     </div>

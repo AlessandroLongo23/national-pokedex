@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import { ChevronDown, ChevronUp, LayoutGrid, List } from "lucide-react";
 import { SETS } from "@/lib/data";
 import { useOwnedCards } from "../_lib/OwnedCardsContext";
 import { useSetAvailability } from "../_lib/SetAvailabilityContext";
@@ -114,7 +115,13 @@ export function SetsTable() {
     >
       <span className="inline-flex items-center gap-1">
         {children}
-        <span className="text-[8px] opacity-70">{sortKey === k ? (asc ? "▲" : "▼") : ""}</span>
+        {sortKey === k ? (
+          asc ? (
+            <ChevronUp className="h-3 w-3 opacity-70" aria-hidden />
+          ) : (
+            <ChevronDown className="h-3 w-3 opacity-70" aria-hidden />
+          )
+        ) : null}
       </span>
     </th>
   );
@@ -269,10 +276,10 @@ function ViewToggle({ view, onChange }: { view: ViewMode; onChange: (v: ViewMode
       className="inline-flex rounded-md border border-border bg-panel-2 p-0.5"
     >
       <ToggleButton active={view === "list"} onClick={() => onChange("list")} label="List view">
-        <ListIcon />
+        <List className="h-3.5 w-3.5" aria-hidden />
       </ToggleButton>
       <ToggleButton active={view === "grid"} onClick={() => onChange("grid")} label="Grid view">
-        <GridIcon />
+        <LayoutGrid className="h-3.5 w-3.5" aria-hidden />
       </ToggleButton>
     </div>
   );
@@ -306,34 +313,6 @@ function ToggleButton({
     >
       {children}
     </button>
-  );
-}
-
-function ListIcon() {
-  return (
-    <svg
-      width="14"
-      height="14"
-      viewBox="0 0 14 14"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.6"
-      strokeLinecap="round"
-      aria-hidden
-    >
-      <path d="M3 4h8M3 7h8M3 10h8" />
-    </svg>
-  );
-}
-
-function GridIcon() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden>
-      <rect x="2" y="2" width="4" height="4" rx="0.8" />
-      <rect x="8" y="2" width="4" height="4" rx="0.8" />
-      <rect x="2" y="8" width="4" height="4" rx="0.8" />
-      <rect x="8" y="8" width="4" height="4" rx="0.8" />
-    </svg>
   );
 }
 

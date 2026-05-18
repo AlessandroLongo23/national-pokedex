@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import type { CardEntry } from "@/lib/data/types";
 import { CardTile } from "./CardTile";
 
@@ -29,8 +30,12 @@ export function CardRail({
           {subtitle && <p className="text-xs text-muted">{subtitle}</p>}
         </div>
         {href && (
-          <Link href={href} className="text-xs text-accent hover:underline">
-            View all →
+          <Link
+            href={href}
+            className="inline-flex items-center gap-1 text-xs text-accent hover:underline"
+          >
+            View all
+            <ArrowRight className="h-3 w-3" aria-hidden />
           </Link>
         )}
       </header>

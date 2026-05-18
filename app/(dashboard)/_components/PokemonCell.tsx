@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { memo, useRef } from "react";
+import { Check } from "lucide-react";
 import { officialArtworkUrl } from "@/lib/pokeapi";
 import { CARD_INDEX, SPECIES } from "@/lib/data";
 import type { CardEntry } from "@/lib/data/types";
@@ -145,9 +146,9 @@ function CellBase({ dex, isCovered, hidden, onClick, selected, displayCard }: Pr
       {selected && (
         <span
           aria-hidden
-          className="pointer-events-none absolute top-1.5 right-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-accent text-[10px] font-bold text-bg shadow-[0_0_0_1.5px_var(--color-bg)]"
+          className="pointer-events-none absolute top-1.5 right-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-accent text-bg shadow-[0_0_0_1.5px_var(--color-bg)]"
         >
-          ✓
+          <Check className="h-2.5 w-2.5" strokeWidth={3.5} aria-hidden />
         </span>
       )}
     </button>
