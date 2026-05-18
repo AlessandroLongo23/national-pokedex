@@ -47,6 +47,20 @@ body {
   font-feature-settings: "tnum";
 }
 
+/* Single canonical micro-label. Anywhere a small uppercase eyebrow,
+   section-tag, or meta-label appears, use this — never roll one inline
+   with bespoke tracking/size. Declared via @utility so Tailwind v4 keeps
+   it in the build alongside framework-generated utilities. */
+@utility eyebrow {
+  font-size: 11px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-muted);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
 /* Subtle scrollbar so long lists don't shout */
 * {
   scrollbar-width: thin;

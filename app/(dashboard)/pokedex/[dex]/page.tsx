@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { CARD_INDEX, SPECIES, loadSetCards } from "@/lib/data";
 import type { CardEntry } from "@/lib/data/types";
 import { SpeciesHero } from "../../_components/SpeciesHero";
+import { SpeciesPagination } from "../../_components/SpeciesPagination";
 import { CardGrid } from "../../_components/CardGrid";
 
 interface PageProps {
@@ -39,10 +40,14 @@ export default async function PokemonDetailPage({ params }: PageProps) {
 
   return (
     <div className="mx-auto max-w-[1280px] space-y-6">
+      <SpeciesPagination dex={n} />
       <SpeciesHero dex={n} />
       <div>
-        <div className="mb-3 flex items-baseline justify-between">
-          <h2 className="text-lg font-semibold">All cards</h2>
+        <div className="mb-3 flex items-end justify-between gap-4">
+          <div className="space-y-1">
+            <div className="eyebrow">Catalog</div>
+            <h2 className="text-xl font-semibold tracking-tight">All cards</h2>
+          </div>
           <p className="text-xs text-muted nums">
             {cards.length} card{cards.length === 1 ? "" : "s"} across all sets
           </p>
@@ -51,6 +56,7 @@ export default async function PokemonDetailPage({ params }: PageProps) {
           cards={cards}
           storageKey={`pokedex-${n}`}
           initialSort="number"
+          hideDetailsLink
           emptyMessage={
             <>
               No <span className="font-semibold text-text">{species.name}</span> cards exist in the

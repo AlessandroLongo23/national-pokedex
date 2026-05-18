@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { POKEDEX } from "@/lib/data";
 import { officialArtworkUrl } from "@/lib/pokeapi";
 
@@ -42,17 +43,14 @@ export function SpeciesPagination({ dex }: Props) {
   return (
     <nav
       aria-label="Pokédex navigation"
-      className="relative flex items-center justify-between border-b border-border px-4 py-2 text-xs md:px-5"
+      aria-keyshortcuts="ArrowLeft ArrowRight"
+      className="relative flex items-center justify-between px-4 py-1 text-xs md:px-5"
     >
       {prevDex ? (
         <PagerLink dex={prevDex} name={NAME_BY_DEX[prevDex] ?? `#${prevDex}`} direction="prev" />
       ) : (
         <span aria-hidden className="w-32" />
       )}
-
-      <span className="hidden text-[10px] uppercase tracking-[0.18em] text-muted/60 sm:inline nums">
-        ← / → to navigate
-      </span>
 
       {nextDex ? (
         <PagerLink dex={nextDex} name={NAME_BY_DEX[nextDex] ?? `#${nextDex}`} direction="next" />
@@ -76,13 +74,14 @@ function PagerLink({
   return (
     <Link
       href={`/pokedex/${dex}`}
-      className="group/pager flex items-center gap-2 rounded-md px-2 py-1 text-muted transition hover:bg-panel-2 hover:text-text"
+      className="group/pager flex min-h-9 items-center gap-2 rounded-md px-2 py-1 text-muted transition hover:bg-panel-2 hover:text-text active:bg-panel-3 active:text-text"
       aria-label={`${isPrev ? "Previous" : "Next"}: ${name}`}
     >
       {isPrev && (
-        <span aria-hidden className="text-base leading-none transition-transform group-hover/pager:-translate-x-0.5">
-          ←
-        </span>
+        <ArrowLeft
+          aria-hidden
+          className="h-4 w-4 transition-transform group-hover/pager:-translate-x-0.5"
+        />
       )}
       {isPrev && (
         <Image
@@ -95,9 +94,7 @@ function PagerLink({
         />
       )}
       <span className="flex flex-col items-start leading-tight">
-        <span className="text-[10px] uppercase tracking-wider text-muted/70 nums">
-          #{dex}
-        </span>
+        <span className="eyebrow text-[10px] text-muted/70">#{dex}</span>
         <span className="text-xs font-medium">{name}</span>
       </span>
       {!isPrev && (
@@ -111,9 +108,10 @@ function PagerLink({
         />
       )}
       {!isPrev && (
-        <span aria-hidden className="text-base leading-none transition-transform group-hover/pager:translate-x-0.5">
-          →
-        </span>
+        <ArrowRight
+          aria-hidden
+          className="h-4 w-4 transition-transform group-hover/pager:translate-x-0.5"
+        />
       )}
     </Link>
   );

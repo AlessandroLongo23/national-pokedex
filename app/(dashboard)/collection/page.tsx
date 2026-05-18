@@ -85,7 +85,7 @@ export default async function CollectionPage() {
         title="Favorites"
         subtitle="Cards you've starred"
         cards={byFavorite}
-        emptyMessage="Tap the ★ on any card to favorite it."
+        emptyMessage="Star a card from any tile to add it here."
         rail="favorites"
         href="/collection"
       />
