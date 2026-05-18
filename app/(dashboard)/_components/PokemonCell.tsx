@@ -4,6 +4,7 @@ import Image from "next/image";
 import { memo, useRef } from "react";
 import { officialArtworkUrl } from "@/lib/pokeapi";
 import { CARD_INDEX, SPECIES } from "@/lib/data";
+import type { CardEntry } from "@/lib/data/types";
 import { useOwnedCards } from "../_lib/OwnedCardsContext";
 import { useTooltip } from "../_lib/TooltipContext";
 import { typeColor, typeRgb } from "./pokemonTypeColors";
@@ -14,6 +15,9 @@ interface Props {
   hidden?: boolean;
   onClick?: (dex: number) => void;
   selected?: boolean;
+  /** When set, the cell shows this card's art (letterboxed) instead of the
+   * official artwork. Used by pokedex-scope binders. */
+  displayCard?: CardEntry | null;
 }
 
 // Neutral panel surface; ownership encoded by amber border + corner dot,
@@ -21,7 +25,7 @@ interface Props {
 // corner. The sprite fills the card so the grid reads as a wall of
 // Pokémon rather than a wall of frames.
 
-function CellBase({ dex, isCovered, hidden, onClick, selected }: Props) {
+function CellBase({ dex, isCovered, hidden, onClick, selected, displayCard }: Props) {
   const { isSpeciesOwned, ownedCountForSpecies } = useOwnedCards();
   const { show, hide } = useTooltip();
   const owned = isSpeciesOwned(dex);
@@ -31,10 +35,14 @@ function CellBase({ dex, isCovered, hidden, onClick, selected }: Props) {
   const types = SPECIES[dex]?.types ?? [];
   const ref = useRef<HTMLButtonElement>(null);
 
+  const showCardArt = Boolean(displayCard);
+
   const stateClass = selected
     ? "border-accent ring-2 ring-accent bg-panel-2"
     : owned
-      ? "border-owned/55 bg-panel-2"
+      ? showCardArt
+        ? "border-owned/40 bg-bg"
+        : "border-owned/55 bg-panel-2"
       : isCovered
         ? "border-border bg-panel-2 hover:border-border-strong"
         : "border-border/40 bg-panel/60 hover:border-border";
@@ -69,27 +77,39 @@ function CellBase({ dex, isCovered, hidden, onClick, selected }: Props) {
       }
       aria-label={`#${dex}${owned ? " owned" : isCovered ? "" : " missing"}`}
     >
-      {/* Sprite fills the cell */}
-      <Image
-        src={officialArtworkUrl(dex)}
-        alt=""
-        width={112}
-        height={112}
-        unoptimized
-        loading="lazy"
-        className={[
-          "pointer-events-none absolute inset-[6%] h-[88%] w-[88%] object-contain transition-[filter,opacity] duration-150",
-          imgClass,
-        ].join(" ")}
-        style={{
-          filter: owned || selected
-            ? "drop-shadow(0 2px 3px rgb(0 0 0 / 0.35))"
-            : "drop-shadow(0 1px 2px rgb(0 0 0 / 0.25))",
-        }}
-      />
+      {/* Sprite fills the cell — or the chosen card art, letterboxed */}
+      {showCardArt && displayCard ? (
+        /* eslint-disable-next-line @next/next/no-img-element */
+        <img
+          src={displayCard.imageSmall}
+          alt={displayCard.name}
+          loading="lazy"
+          className="pointer-events-none absolute inset-0 h-full w-full object-contain p-[3%]"
+          style={{ filter: "drop-shadow(0 2px 3px rgb(0 0 0 / 0.45))" }}
+        />
+      ) : (
+        <Image
+          src={officialArtworkUrl(dex)}
+          alt=""
+          width={112}
+          height={112}
+          unoptimized
+          loading="lazy"
+          className={[
+            "pointer-events-none absolute inset-[6%] h-[88%] w-[88%] object-contain transition-[filter,opacity] duration-150",
+            imgClass,
+          ].join(" ")}
+          style={{
+            filter: owned || selected
+              ? "drop-shadow(0 2px 3px rgb(0 0 0 / 0.35))"
+              : "drop-shadow(0 1px 2px rgb(0 0 0 / 0.25))",
+          }}
+        />
+      )}
 
-      {/* Owned indicator — top-right amber dot */}
-      {owned && !selected && (
+      {/* Owned indicator — top-right amber dot. Suppressed when card art is shown:
+           the card itself is the ownership signal. */}
+      {owned && !selected && !showCardArt && (
         <span
           aria-hidden
           className="pointer-events-none absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-owned shadow-[0_0_0_1.5px_var(--color-panel-2),0_0_6px_rgb(251_191_36/0.5)]"

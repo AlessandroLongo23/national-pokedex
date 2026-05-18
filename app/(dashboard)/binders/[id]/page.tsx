@@ -44,6 +44,18 @@ export default async function BinderDetailPage({
     cards = filterByScope(allCards, scopeType, scopeParams);
   }
 
+  // Cell overrides only apply to pokedex-scope binders.
+  let cellOverrides: Record<number, string> = {};
+  if (scopeType === "pokedex") {
+    const { data: rows } = await supabase
+      .from("binder_cell_overrides")
+      .select("dex, card_id")
+      .eq("binder_id", id);
+    for (const r of rows ?? []) {
+      cellOverrides[r.dex as number] = r.card_id as string;
+    }
+  }
+
   return (
     <BinderDetailClient
       binder={{
@@ -54,6 +66,7 @@ export default async function BinderDetailPage({
       }}
       cards={cards}
       customCardIds={customCardIds}
+      cellOverrides={cellOverrides}
     />
   );
 }

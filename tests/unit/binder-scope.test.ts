@@ -4,6 +4,8 @@ import {
   filterCardsByIds,
   distinctArtists,
   pokedexCoverage,
+  pickDisplayCardId,
+  ownedCardsByDex,
 } from "@/lib/data/binder-scope";
 import type { CardEntry } from "@/lib/data/types";
 
@@ -123,6 +125,56 @@ describe("pokedexCoverage", () => {
     const cov = pokedexCoverage({ dexFrom: 30, dexTo: 1 }, owned, cards);
     expect(cov.dexNumbers.length).toBe(30);
     expect([...cov.covered].sort()).toEqual([25]);
+  });
+});
+
+describe("pickDisplayCardId", () => {
+  const common = card({ id: "x-1", rarity: "Common" });
+  const uncommon = card({ id: "x-2", rarity: "Uncommon" });
+  const rare = card({ id: "x-3", rarity: "Rare" });
+  const ultra = card({ id: "x-4", rarity: "UltraRare" });
+
+  it("returns null when nothing is owned", () => {
+    expect(pickDisplayCardId(undefined, [])).toBeNull();
+  });
+
+  it("returns the only card when one is owned", () => {
+    expect(pickDisplayCardId(undefined, [common])).toBe("x-1");
+  });
+
+  it("returns the highest-rarity card by default", () => {
+    expect(pickDisplayCardId(undefined, [common, uncommon, rare])).toBe("x-3");
+    expect(pickDisplayCardId(undefined, [ultra, rare, common])).toBe("x-4");
+  });
+
+  it("respects override when the chosen card is still owned", () => {
+    expect(pickDisplayCardId("x-1", [common, ultra])).toBe("x-1");
+  });
+
+  it("ignores override when the chosen card is no longer owned", () => {
+    // ghost card-id not present in ownedCardsForDex — fall back to default.
+    expect(pickDisplayCardId("ghost-99", [common, ultra])).toBe("x-4");
+  });
+
+  it("breaks rarity ties by lexical id (lower id wins)", () => {
+    const a = card({ id: "a-1", rarity: "Rare" });
+    const b = card({ id: "b-1", rarity: "Rare" });
+    expect(pickDisplayCardId(undefined, [b, a])).toBe("a-1");
+  });
+});
+
+describe("ownedCardsByDex", () => {
+  it("groups owned cards by every dex# they belong to", () => {
+    const owned = new Set(["a-1", "a-1a", "b-3"]);
+    const m = ownedCardsByDex(cards, owned);
+    expect(m.get(25)?.map((c) => c.id).sort()).toEqual(["a-1", "a-1a"]);
+    expect(m.get(26)?.map((c) => c.id)).toEqual(["a-1a"]);
+    expect(m.get(382)?.map((c) => c.id)).toEqual(["b-3"]);
+    expect(m.has(4)).toBe(false); // c3 (dex 4) is not owned
+  });
+
+  it("returns an empty map when nothing is owned", () => {
+    expect(ownedCardsByDex(cards, new Set()).size).toBe(0);
   });
 });
 

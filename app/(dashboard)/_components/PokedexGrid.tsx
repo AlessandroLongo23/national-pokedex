@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { COVERAGE, POKEDEX } from "@/lib/data";
-import { GEN_NAMES, GEN_RANGES, type Generation } from "@/lib/data/types";
+import { GEN_NAMES, GEN_RANGES, type CardEntry, type Generation } from "@/lib/data/types";
 import { useOwnedCards } from "../_lib/OwnedCardsContext";
 import { FilterBar, type GridFilter } from "./FilterBar";
 import { PokemonCell } from "./PokemonCell";
@@ -18,6 +18,10 @@ interface Props {
   onCellClick?: (dex: number) => void;
   /** Set of dex numbers visually selected (only used with onCellClick) */
   selectedDex?: Set<number>;
+  /** Per-dex card art to show in the cell (letterboxed). Used by
+   * pokedex-scope binders. Cells without an entry fall back to the official
+   * artwork + amber-dot treatment. */
+  displayCardByDex?: Map<number, CardEntry>;
 }
 
 const COLS_KEY_PREFIX = "pokedex.cols";
@@ -51,6 +55,7 @@ export function PokedexGrid({
   storageKey = "main",
   onCellClick,
   selectedDex,
+  displayCardByDex,
 }: Props) {
   const { ownedSpecies } = useOwnedCards();
   const [filter, setFilter] = useState<GridFilter>("all");
@@ -138,6 +143,7 @@ export function PokedexGrid({
           isCovered={!missingSet.has(p.dex)}
           onClick={onCellClick}
           selected={selectedDex?.has(p.dex)}
+          displayCard={displayCardByDex?.get(p.dex)}
         />
       ))}
     </div>

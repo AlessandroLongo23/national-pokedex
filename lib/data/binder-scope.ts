@@ -1,5 +1,5 @@
 import { SETS, loadSetCards } from ".";
-import type { CardEntry } from "./types";
+import { RARITY_ORDER, type CardEntry } from "./types";
 
 export type ScopeType =
   | "master_set"
@@ -56,6 +56,52 @@ export function filterByScope(
       return cards.filter((c) => c.dex.some((d) => d >= lo && d <= hi));
     }
   }
+}
+
+/** For a pokedex-scope binder cell: pick which owned card's art to show.
+ * Returns the override if it's still owned, otherwise the highest-rarity
+ * owned card (tie-broken by id), otherwise null when nothing is owned.
+ * `ownedCardsForDex` is the pre-filtered list of cards the user owns that
+ * include this dex# in their `dex` array.
+ */
+export function pickDisplayCardId(
+  overrideCardId: string | undefined,
+  ownedCardsForDex: CardEntry[],
+): string | null {
+  if (overrideCardId && ownedCardsForDex.some((c) => c.id === overrideCardId)) {
+    return overrideCardId;
+  }
+  if (ownedCardsForDex.length === 0) return null;
+  let best = ownedCardsForDex[0]!;
+  for (let i = 1; i < ownedCardsForDex.length; i++) {
+    const cand = ownedCardsForDex[i]!;
+    const candRank = RARITY_ORDER.indexOf(cand.rarity);
+    const bestRank = RARITY_ORDER.indexOf(best.rarity);
+    // Lower index in RARITY_ORDER = lower rarity, so HIGHER index wins.
+    // Promo/Unknown are last in the order, so they're treated as low-rarity
+    // — fine as a tiebreaker default.
+    if (candRank > bestRank || (candRank === bestRank && cand.id < best.id)) {
+      best = cand;
+    }
+  }
+  return best.id;
+}
+
+/** Group cards in a range by dex#, filtered to those the user owns. */
+export function ownedCardsByDex(
+  cards: CardEntry[],
+  ownedCardIds: Set<string>,
+): Map<number, CardEntry[]> {
+  const m = new Map<number, CardEntry[]>();
+  for (const c of cards) {
+    if (!ownedCardIds.has(c.id)) continue;
+    for (const d of c.dex) {
+      const arr = m.get(d);
+      if (arr) arr.push(c);
+      else m.set(d, [c]);
+    }
+  }
+  return m;
 }
 
 /** Build the species-coverage view for a pokedex-scope binder.

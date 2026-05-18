@@ -1,16 +1,27 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useMemo, useState, useTransition } from "react";
+import { useEffect, useMemo, useState, useTransition } from "react";
 import type { CardEntry } from "@/lib/data/types";
-import type { ScopeType, ScopeParams } from "@/lib/data/binder-scope";
+import {
+  ownedCardsByDex,
+  pickDisplayCardId,
+  type ScopeType,
+  type ScopeParams,
+} from "@/lib/data/binder-scope";
 import { PageHeader } from "../../../_components/PageHeader";
 import { CardGrid } from "../../../_components/CardGrid";
 import { PokedexGrid } from "../../../_components/PokedexGrid";
 import { useOwnedCards } from "../../../_lib/OwnedCardsContext";
 import { scopeLabel } from "../../_lib/scope-label";
-import { deleteBinder, renameBinder } from "../../../_lib/binder-actions";
+import {
+  clearBinderCellOverride,
+  deleteBinder,
+  renameBinder,
+  setBinderCellOverride,
+} from "../../../_lib/binder-actions";
 import { CustomBinderEditor } from "./CustomBinderEditor";
+import { BinderCellPicker } from "./BinderCellPicker";
 
 interface BinderSummary {
   id: string;
@@ -23,9 +34,15 @@ interface Props {
   binder: BinderSummary;
   cards: CardEntry[];
   customCardIds: string[];
+  cellOverrides: Record<number, string>;
 }
 
-export function BinderDetailClient({ binder, cards, customCardIds }: Props) {
+export function BinderDetailClient({
+  binder,
+  cards,
+  customCardIds,
+  cellOverrides,
+}: Props) {
   const router = useRouter();
   const { ownedCards, ownedSpecies } = useOwnedCards();
   const [editing, setEditing] = useState(false);
@@ -91,6 +108,89 @@ export function BinderDetailClient({ binder, cards, customCardIds }: Props) {
 
   const isCustom = binder.scopeType === "custom";
   const scopeBroken = !isCustom && !isPokedex && total === 0;
+
+  // Optimistic override state — initialized from server, updated locally.
+  const [overrides, setOverrides] = useState<Record<number, string>>(cellOverrides);
+  useEffect(() => {
+    setOverrides(cellOverrides);
+  }, [cellOverrides]);
+
+  const [pickerDex, setPickerDex] = useState<number | null>(null);
+
+  // Map: dex# -> all cards in this binder that include that dex (for the picker modal).
+  const variantsByDex = useMemo<Map<number, CardEntry[]>>(() => {
+    if (!isPokedex || !dexRange) return new Map();
+    const m = new Map<number, CardEntry[]>();
+    for (const c of cards) {
+      for (const d of c.dex) {
+        if (d < dexRange.from || d > dexRange.to) continue;
+        const arr = m.get(d);
+        if (arr) arr.push(c);
+        else m.set(d, [c]);
+      }
+    }
+    return m;
+  }, [isPokedex, dexRange, cards]);
+
+  const ownedByDex = useMemo<Map<number, CardEntry[]>>(() => {
+    if (!isPokedex) return new Map();
+    return ownedCardsByDex(cards, ownedCards);
+  }, [isPokedex, cards, ownedCards]);
+
+  const displayCardByDex = useMemo<Map<number, CardEntry>>(() => {
+    if (!isPokedex || !dexRange) return new Map();
+    const byId = new Map(cards.map((c) => [c.id, c]));
+    const out = new Map<number, CardEntry>();
+    for (const d of dexRange.nums) {
+      const ownedForDex = ownedByDex.get(d) ?? [];
+      const cardId = pickDisplayCardId(overrides[d], ownedForDex);
+      if (cardId) {
+        const card = byId.get(cardId);
+        if (card) out.set(d, card);
+      }
+    }
+    return out;
+  }, [isPokedex, dexRange, cards, ownedByDex, overrides]);
+
+  function onPickCard(cardId: string) {
+    if (pickerDex == null) return;
+    const dex = pickerDex;
+    const prev = overrides[dex];
+    setOverrides((o) => ({ ...o, [dex]: cardId }));
+    start(async () => {
+      try {
+        await setBinderCellOverride(binder.id, dex, cardId);
+      } catch (err) {
+        setOverrides((o) => {
+          const next = { ...o };
+          if (prev == null) delete next[dex];
+          else next[dex] = prev;
+          return next;
+        });
+        setError(err instanceof Error ? err.message : "Failed to set display card");
+      }
+    });
+  }
+
+  function onClearPick() {
+    if (pickerDex == null) return;
+    const dex = pickerDex;
+    const prev = overrides[dex];
+    if (prev == null) return;
+    setOverrides((o) => {
+      const next = { ...o };
+      delete next[dex];
+      return next;
+    });
+    start(async () => {
+      try {
+        await clearBinderCellOverride(binder.id, dex);
+      } catch (err) {
+        setOverrides((o) => ({ ...o, [dex]: prev }));
+        setError(err instanceof Error ? err.message : "Failed to clear choice");
+      }
+    });
+  }
 
   return (
     <div className="mx-auto max-w-[1280px] space-y-6">
@@ -184,11 +284,27 @@ export function BinderDetailClient({ binder, cards, customCardIds }: Props) {
       )}
 
       {isPokedex && dexRange ? (
-        <PokedexGrid
-          dexNumbers={dexRange.nums}
-          groupByGenDefault={dexRange.to - dexRange.from + 1 > 200}
-          storageKey={`binder-${binder.id}`}
-        />
+        <>
+          <PokedexGrid
+            dexNumbers={dexRange.nums}
+            groupByGenDefault={dexRange.to - dexRange.from + 1 > 200}
+            storageKey={`binder-${binder.id}`}
+            displayCardByDex={displayCardByDex}
+            onCellClick={(dex) => setPickerDex(dex)}
+          />
+          <BinderCellPicker
+            binderId={binder.id}
+            dex={pickerDex}
+            variants={pickerDex != null ? (variantsByDex.get(pickerDex) ?? []) : []}
+            currentOverride={pickerDex != null ? overrides[pickerDex] : undefined}
+            displayedCardId={
+              pickerDex != null ? (displayCardByDex.get(pickerDex)?.id ?? null) : null
+            }
+            onSetOverride={onPickCard}
+            onClearOverride={onClearPick}
+            onClose={() => setPickerDex(null)}
+          />
+        </>
       ) : cards.length === 0 && !scopeBroken ? (
         <div className="rounded-lg border border-border bg-panel p-8 text-sm text-muted">
           {isCustom

@@ -139,6 +139,63 @@ export async function removeCardFromCustomBinder(
   revalidatePath(`/binders/${id}`);
 }
 
+async function assertPokedexBinderOwner(binderId: string): Promise<void> {
+  const userId = await requireUserId();
+  const supabase = await getSupabaseServer();
+  const { data, error } = await supabase
+    .from("binders")
+    .select("scope_type")
+    .eq("id", binderId)
+    .eq("user_id", userId)
+    .maybeSingle();
+  if (error) throw new Error(error.message);
+  if (!data) throw new Error("Binder not found");
+  if (data.scope_type !== "pokedex") {
+    throw new Error("Cell overrides are only allowed on Pokédex-scope binders");
+  }
+}
+
+const dexSchema = z.number().int().min(1).max(1025);
+
+export async function setBinderCellOverride(
+  binderId: string,
+  dex: number,
+  cardId: string,
+): Promise<void> {
+  const id = binderIdSchema.parse(binderId);
+  const d = dexSchema.parse(dex);
+  const cid = cardIdSchema.parse(cardId);
+  await assertPokedexBinderOwner(id);
+
+  const supabase = await getSupabaseServer();
+  const { error } = await supabase
+    .from("binder_cell_overrides")
+    .upsert(
+      { binder_id: id, dex: d, card_id: cid, set_at: new Date().toISOString() },
+      { onConflict: "binder_id,dex" },
+    );
+  if (error) throw new Error(error.message);
+  revalidatePath(`/binders/${id}`);
+}
+
+export async function clearBinderCellOverride(
+  binderId: string,
+  dex: number,
+): Promise<void> {
+  const id = binderIdSchema.parse(binderId);
+  const d = dexSchema.parse(dex);
+  await assertPokedexBinderOwner(id);
+
+  const supabase = await getSupabaseServer();
+  const { error } = await supabase
+    .from("binder_cell_overrides")
+    .delete()
+    .eq("binder_id", id)
+    .eq("dex", d);
+  if (error) throw new Error(error.message);
+  revalidatePath(`/binders/${id}`);
+}
+
 export async function bulkSetCustomBinderCards(
   binderId: string,
   cardIds: string[],
