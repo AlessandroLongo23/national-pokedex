@@ -6,6 +6,7 @@ import type { CardEntry, Rarity } from "@/lib/data/types";
 import { useOwnedCards } from "../_lib/OwnedCardsContext";
 import { useWishlist } from "../_lib/WishlistContext";
 import { useFavorites } from "../_lib/FavoritesContext";
+import { useCardPreview } from "../_lib/CardPreviewContext";
 
 interface Props {
   card: CardEntry;
@@ -56,12 +57,14 @@ function TileBase({
   const { isOwned, toggle: toggleOwned } = useOwnedCards();
   const { isWishlisted, toggle: toggleWishlist } = useWishlist();
   const { isFavorited, toggle: toggleFavorite } = useFavorites();
+  const { open: openPreview } = useCardPreview();
   const owned = isOwned(card.id);
   const wishlisted = isWishlisted(card.id);
   const favorited = isFavorited(card.id);
 
-  const handleCardClick = () => {
+  const handleCardClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     if (selectMode && onSelect) onSelect(card.id);
+    else if (!selectMode) openPreview(card, e.currentTarget.getBoundingClientRect());
   };
 
   const imageBorder = selected
@@ -88,14 +91,15 @@ function TileBase({
         <button
           type="button"
           onClick={handleCardClick}
+          data-preview-trigger={selectMode ? undefined : card.id}
           className={[
             "relative block w-full overflow-hidden rounded-[6px] border transition",
             imageBorder,
-            selectMode ? "cursor-pointer" : "cursor-default",
+            selectMode ? "cursor-pointer" : "cursor-zoom-in",
           ].join(" ")}
           style={{ aspectRatio: "245 / 342" }}
-          aria-label={selectMode ? `Toggle ${card.name}` : card.name}
-          tabIndex={selectMode ? 0 : -1}
+          aria-label={selectMode ? `Toggle ${card.name}` : `Preview ${card.name}`}
+          tabIndex={0}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img

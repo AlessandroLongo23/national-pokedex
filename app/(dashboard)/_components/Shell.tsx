@@ -7,10 +7,12 @@ import { SetAvailabilityProvider } from "../_lib/SetAvailabilityContext";
 import { TooltipProvider } from "../_lib/TooltipContext";
 import { PageTitleProvider } from "../_lib/PageTitleContext";
 import { UserProvider } from "../_lib/UserContext";
+import { CardPreviewProvider } from "../_lib/CardPreviewContext";
 import { MobileNav, Sidebar } from "./Sidebar";
 import { MobileHeader } from "./MobileHeader";
 import { LogPackFab } from "./LogPackFab";
 import { Tooltip } from "./Tooltip";
+import { CardPreviewOverlay } from "./CardPreviewOverlay";
 
 export function Shell({
   userId,
@@ -37,16 +39,19 @@ export function Shell({
             <SetAvailabilityProvider userId={userId} initial={initialAvailability}>
               <PageTitleProvider>
                 <TooltipProvider>
-                  <div className="flex min-h-screen">
-                    <Sidebar />
-                    <div className="flex min-w-0 flex-1 flex-col">
-                      <MobileHeader />
-                      <main className="flex-1 px-4 py-6 md:px-8 md:py-8">{children}</main>
-                      <MobileNav />
+                  <CardPreviewProvider>
+                    <div className="flex min-h-screen">
+                      <Sidebar />
+                      <div className="flex min-w-0 flex-1 flex-col">
+                        <MobileHeader />
+                        <main className="flex-1 px-4 py-6 md:px-8 md:py-8">{children}</main>
+                        <MobileNav />
+                      </div>
                     </div>
-                  </div>
-                  <LogPackFab />
-                  <Tooltip />
+                    <LogPackFab />
+                    <Tooltip />
+                    <CardPreviewOverlay />
+                  </CardPreviewProvider>
                 </TooltipProvider>
               </PageTitleProvider>
             </SetAvailabilityProvider>
