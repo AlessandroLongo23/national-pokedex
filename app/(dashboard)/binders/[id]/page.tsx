@@ -44,6 +44,21 @@ export default async function BinderDetailPage({
     cards = filterByScope(allCards, scopeType, scopeParams);
   }
 
+  const targetIds = new Set(cards.map((c) => c.id));
+  const cardsById = new Map(cards.map((c) => [c.id, c]));
+  const { data: ownedRows } = await supabase
+    .from("owned_cards")
+    .select("card_id, acquired_at")
+    .eq("user_id", userId)
+    .order("acquired_at", { ascending: false })
+    .limit(500);
+
+  const recentAdditions = (ownedRows ?? [])
+    .filter((r) => targetIds.has(r.card_id as string))
+    .slice(0, 10)
+    .map((r) => cardsById.get(r.card_id as string))
+    .filter((c): c is (typeof cards)[number] => Boolean(c));
+
   // Cell overrides only apply to pokedex-scope binders.
   let cellOverrides: Record<number, string> = {};
   if (scopeType === "pokedex") {
@@ -66,6 +81,7 @@ export default async function BinderDetailPage({
       }}
       cards={cards}
       customCardIds={customCardIds}
+      recentAdditions={recentAdditions}
       cellOverrides={cellOverrides}
     />
   );

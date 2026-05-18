@@ -39,6 +39,13 @@ const I = {
       <path d="M3 6.5a1.5 1.5 0 0 1 1.5-1.5h3l1.25 1.5h6.75a1.5 1.5 0 0 1 1.5 1.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 3 15z" />
     </svg>
   ),
+  Portfolio: ({ className }: IconProps) => (
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <path d="M3 16h14" />
+      <path d="M4 13l4-4 3 3 5-6" />
+      <path d="M16 6h-3M16 6v3" />
+    </svg>
+  ),
   Settings: ({ className }: IconProps) => (
     <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
       <circle cx="10" cy="10" r="2.5" />
@@ -53,6 +60,7 @@ const NAV = [
   { href: "/cards", label: "Cards", Icon: I.Cards },
   { href: "/binders", label: "Binders", Icon: I.Binders },
   { href: "/collection", label: "Collection", Icon: I.Collection },
+  { href: "/portfolio", label: "Portfolio", Icon: I.Portfolio },
 ];
 
 function isActive(pathname: string, href: string) {

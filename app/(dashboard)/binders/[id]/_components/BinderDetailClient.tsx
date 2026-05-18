@@ -11,6 +11,7 @@ import {
 } from "@/lib/data/binder-scope";
 import { PageHeader } from "../../../_components/PageHeader";
 import { CardGrid } from "../../../_components/CardGrid";
+import { CardRail } from "../../../_components/CardRail";
 import { PokedexGrid } from "../../../_components/PokedexGrid";
 import { useOwnedCards } from "../../../_lib/OwnedCardsContext";
 import { scopeLabel } from "../../_lib/scope-label";
@@ -34,6 +35,7 @@ interface Props {
   binder: BinderSummary;
   cards: CardEntry[];
   customCardIds: string[];
+  recentAdditions: CardEntry[];
   cellOverrides: Record<number, string>;
 }
 
@@ -41,6 +43,7 @@ export function BinderDetailClient({
   binder,
   cards,
   customCardIds,
+  recentAdditions,
   cellOverrides,
 }: Props) {
   const router = useRouter();
@@ -280,6 +283,16 @@ export function BinderDetailClient({
           binderId={binder.id}
           initialIds={customCardIds}
           onChange={() => router.refresh()}
+        />
+      )}
+
+      {!isPokedex && (
+        <CardRail
+          title="Recent additions"
+          subtitle="Your latest acquisitions in this binder"
+          cards={recentAdditions}
+          emptyMessage="No cards in this binder owned yet — they'll appear here as you acquire them."
+          rail="recent-additions"
         />
       )}
 

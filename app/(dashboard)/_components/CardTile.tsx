@@ -5,6 +5,7 @@ import { memo } from "react";
 import type { CardEntry, Rarity } from "@/lib/data/types";
 import { useOwnedCards } from "../_lib/OwnedCardsContext";
 import { useWishlist } from "../_lib/WishlistContext";
+import { useFavorites } from "../_lib/FavoritesContext";
 
 interface Props {
   card: CardEntry;
@@ -54,8 +55,10 @@ function TileBase({
 }: Props) {
   const { isOwned, toggle: toggleOwned } = useOwnedCards();
   const { isWishlisted, toggle: toggleWishlist } = useWishlist();
+  const { isFavorited, toggle: toggleFavorite } = useFavorites();
   const owned = isOwned(card.id);
   const wishlisted = isWishlisted(card.id);
+  const favorited = isFavorited(card.id);
 
   const handleCardClick = () => {
     if (selectMode && onSelect) onSelect(card.id);
@@ -72,7 +75,15 @@ function TileBase({
   const detailsHref = card.dex.length > 0 ? `/pokedex/${card.dex[0]}` : null;
 
   return (
-    <div className="group relative" data-card-id={card.id}>
+    <div
+      className={[
+        "group relative transition-opacity",
+        owned || selected || selectMode ? "opacity-100" : "opacity-55 hover:opacity-95",
+      ].join(" ")}
+      data-card-id={card.id}
+      data-owned={owned ? "true" : "false"}
+      data-favorited={favorited ? "true" : "false"}
+    >
       <div className="relative">
         <button
           type="button"
@@ -91,10 +102,7 @@ function TileBase({
             src={card.imageSmall}
             alt={card.name}
             loading="lazy"
-            className={[
-              "h-full w-full object-cover transition",
-              !owned && !selected && !selectMode ? "opacity-90" : "",
-            ].join(" ")}
+            className="h-full w-full object-cover"
           />
           {selected && (
             <span className="pointer-events-none absolute top-1 right-1 flex h-7 w-7 items-center justify-center rounded-full bg-accent text-xs font-bold text-bg">
@@ -131,8 +139,28 @@ function TileBase({
               type="button"
               onClick={(e) => {
                 e.stopPropagation();
+                toggleFavorite(card.id);
+              }}
+              data-action="favorite"
+              className={[
+                "inline-flex h-8 min-w-8 items-center justify-center rounded-md border px-2 text-xs backdrop-blur-sm transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
+                favorited
+                  ? "border-[#fcd34d]/70 bg-bg/85 text-[#fcd34d]"
+                  : "border-border bg-bg/85 text-muted hover:border-[#fcd34d] hover:text-[#fcd34d]",
+              ].join(" ")}
+              aria-pressed={favorited}
+              aria-label="Toggle favorite"
+              title={favorited ? "Favorited, click to remove" : "Mark as favorite"}
+            >
+              ★
+            </button>
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
                 toggleWishlist(card.id);
               }}
+              data-action="wishlist"
               className={[
                 "inline-flex h-8 min-w-8 items-center justify-center rounded-md border px-2 text-xs backdrop-blur-sm transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
                 wishlisted
