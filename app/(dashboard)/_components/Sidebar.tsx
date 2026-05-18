@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 import { LogoBlock } from "./Logo";
 import { AccountStub } from "./AccountStub";
 
@@ -46,6 +47,13 @@ const I = {
       <path d="M16 6h-3M16 6v3" />
     </svg>
   ),
+  Other: ({ className }: IconProps) => (
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <circle cx="5" cy="10" r="1.25" />
+      <circle cx="10" cy="10" r="1.25" />
+      <circle cx="15" cy="10" r="1.25" />
+    </svg>
+  ),
   Settings: ({ className }: IconProps) => (
     <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
       <circle cx="10" cy="10" r="2.5" />
@@ -54,10 +62,29 @@ const I = {
   ),
 };
 
-const NAV = [
+interface NavItem {
+  href: string;
+  label: string;
+  Icon: (p: IconProps) => React.ReactElement;
+  children?: { href: string; label: string }[];
+}
+
+const NAV: NavItem[] = [
   { href: "/pokedex", label: "Pokédex", Icon: I.Pokedex },
   { href: "/sets", label: "Sets", Icon: I.Sets },
   { href: "/cards", label: "Cards", Icon: I.Cards },
+  {
+    href: "/other",
+    label: "Other cards",
+    Icon: I.Other,
+    children: [
+      { href: "/other/items", label: "Items" },
+      { href: "/other/supporters", label: "Supporters" },
+      { href: "/other/stadiums", label: "Stadiums" },
+      { href: "/other/tools", label: "Pokémon Tools" },
+      { href: "/other/energies", label: "Energies" },
+    ],
+  },
   { href: "/binders", label: "Binders", Icon: I.Binders },
   { href: "/collection", label: "Collection", Icon: I.Collection },
   { href: "/portfolio", label: "Portfolio", Icon: I.Portfolio },
@@ -65,6 +92,79 @@ const NAV = [
 
 function isActive(pathname: string, href: string) {
   return pathname === href || pathname.startsWith(`${href}/`);
+}
+
+function NavRow({ item, pathname }: { item: NavItem; pathname: string }) {
+  const active = isActive(pathname, item.href);
+  const Icon = item.Icon;
+  const hasChildren = !!item.children?.length;
+  const [open, setOpen] = useState(active);
+  const showChildren = hasChildren && (active || open);
+
+  const baseClasses = [
+    "flex items-center gap-3 rounded-md border-l-2 px-3 py-2 text-sm transition",
+    active
+      ? "border-accent bg-accent/10 font-semibold text-text"
+      : "border-transparent text-muted hover:bg-panel-2 hover:text-text",
+  ].join(" ");
+
+  if (!hasChildren) {
+    return (
+      <li>
+        <Link href={item.href} className={baseClasses}>
+          <Icon className="h-[18px] w-[18px] shrink-0" />
+          <span>{item.label}</span>
+        </Link>
+      </li>
+    );
+  }
+
+  return (
+    <li>
+      <div className="flex items-stretch">
+        <Link href={item.href} className={`${baseClasses} flex-1`}>
+          <Icon className="h-[18px] w-[18px] shrink-0" />
+          <span>{item.label}</span>
+        </Link>
+        <button
+          type="button"
+          onClick={() => setOpen((o) => !o)}
+          aria-label={showChildren ? `Collapse ${item.label}` : `Expand ${item.label}`}
+          aria-expanded={showChildren}
+          className="ml-1 inline-flex h-9 w-7 shrink-0 items-center justify-center rounded-md text-muted transition hover:bg-panel-2 hover:text-text"
+        >
+          <span
+            aria-hidden
+            className={`text-[10px] transition-transform ${showChildren ? "rotate-90" : ""}`}
+          >
+            ▸
+          </span>
+        </button>
+      </div>
+      {showChildren && (
+        <ul className="mt-0.5 space-y-0.5 pl-9">
+          {item.children!.map((child) => {
+            const childActive = isActive(pathname, child.href);
+            return (
+              <li key={child.href}>
+                <Link
+                  href={child.href}
+                  className={[
+                    "block rounded-md border-l-2 px-3 py-1.5 text-[13px] transition",
+                    childActive
+                      ? "border-accent bg-accent/10 font-medium text-text"
+                      : "border-transparent text-muted hover:bg-panel-2 hover:text-text",
+                  ].join(" ")}
+                >
+                  {child.label}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </li>
+  );
 }
 
 export function Sidebar() {
@@ -78,26 +178,9 @@ export function Sidebar() {
 
       <nav className="flex-1 px-3">
         <ul className="space-y-0.5">
-          {NAV.map((item) => {
-            const active = isActive(pathname, item.href);
-            const Icon = item.Icon;
-            return (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className={[
-                    "flex items-center gap-3 rounded-md border-l-2 px-3 py-2 text-sm transition",
-                    active
-                      ? "border-accent bg-accent/10 font-semibold text-text"
-                      : "border-transparent text-muted hover:bg-panel-2 hover:text-text",
-                  ].join(" ")}
-                >
-                  <Icon className="h-[18px] w-[18px] shrink-0" />
-                  <span>{item.label}</span>
-                </Link>
-              </li>
-            );
-          })}
+          {NAV.map((item) => (
+            <NavRow key={item.href} item={item} pathname={pathname} />
+          ))}
         </ul>
       </nav>
 
