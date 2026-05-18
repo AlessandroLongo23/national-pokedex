@@ -1,4 +1,5 @@
 import { SETS, loadSetCards } from ".";
+import { OTHER_SUBTYPE_PREDICATES } from "./other-subtypes";
 import { RARITY_ORDER, type CardEntry } from "./types";
 
 export type ScopeType =
@@ -8,7 +9,35 @@ export type ScopeType =
   | "type"
   | "position"
   | "custom"
-  | "pokedex";
+  | "pokedex"
+  | "subtype"
+  | "named_card";
+
+export type SubtypeScopeValue =
+  | "trainers"
+  | "items"
+  | "supporters"
+  | "stadiums"
+  | "tools"
+  | "energies";
+
+export const SUBTYPE_SCOPE_VALUES: readonly SubtypeScopeValue[] = [
+  "trainers",
+  "items",
+  "supporters",
+  "stadiums",
+  "tools",
+  "energies",
+] as const;
+
+export const SUBTYPE_SCOPE_LABEL: Record<SubtypeScopeValue, string> = {
+  trainers: "All Trainers",
+  items: "Items",
+  supporters: "Supporters",
+  stadiums: "Stadiums",
+  tools: "Pokémon Tools",
+  energies: "Energies",
+};
 
 export type ScopeParams =
   | { setId: string }
@@ -17,6 +46,8 @@ export type ScopeParams =
   | { type: string }
   | { number: string }
   | { dexFrom: number; dexTo: number }
+  | { subtype: SubtypeScopeValue }
+  | { name: string }
   | Record<string, never>;
 
 // Pure filter — exported for unit tests and for callers that already have the
@@ -54,6 +85,16 @@ export function filterByScope(
       const lo = Math.min(dexFrom, dexTo);
       const hi = Math.max(dexFrom, dexTo);
       return cards.filter((c) => c.dex.some((d) => d >= lo && d <= hi));
+    }
+    case "subtype": {
+      const { subtype } = scopeParams as { subtype: SubtypeScopeValue };
+      if (subtype === "trainers") return cards.filter((c) => c.supertype === "Trainer");
+      const predicate = OTHER_SUBTYPE_PREDICATES[subtype];
+      return cards.filter(predicate);
+    }
+    case "named_card": {
+      const { name } = scopeParams as { name: string };
+      return cards.filter((c) => c.name === name);
     }
   }
 }
@@ -145,6 +186,17 @@ export function distinctArtists(cards: CardEntry[]): string[] {
   return [...seen].sort((a, b) => a.localeCompare(b));
 }
 
+// Trainer/Energy card names for the named_card scope picker. Pokémon names
+// belong to the existing `pokemon` (by dex) scope so they're excluded here.
+export function distinctNonPokemonNames(cards: CardEntry[]): string[] {
+  const seen = new Set<string>();
+  for (const c of cards) {
+    if (c.supertype === "Pokémon") continue;
+    if (c.name.length > 0) seen.add(c.name);
+  }
+  return [...seen].sort((a, b) => a.localeCompare(b));
+}
+
 // I/O wrappers. Lazily load every set's cards once per server process; ~171
 // JSON files / ~8MB total. Concurrent callers share one in-flight promise.
 let _allCards: CardEntry[] | null = null;
@@ -179,4 +231,8 @@ export async function resolveCustom(cardIds: string[]): Promise<CardEntry[]> {
 
 export async function listArtists(): Promise<string[]> {
   return distinctArtists(await getAllCards());
+}
+
+export async function listNonPokemonNames(): Promise<string[]> {
+  return distinctNonPokemonNames(await getAllCards());
 }

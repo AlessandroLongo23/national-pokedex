@@ -1,6 +1,11 @@
 import { POKEDEX, getSet } from "@/lib/data";
 import { GEN_NAMES, GEN_RANGES, type Generation } from "@/lib/data/types";
-import type { ScopeType, ScopeParams } from "@/lib/data/binder-scope";
+import {
+  SUBTYPE_SCOPE_LABEL,
+  type ScopeType,
+  type ScopeParams,
+  type SubtypeScopeValue,
+} from "@/lib/data/binder-scope";
 
 const POKEMON_BY_DEX = new Map(POKEDEX.map((p) => [p.dex, p.name]));
 
@@ -53,6 +58,14 @@ export function scopeLabel(
       return region
         ? `Pokédex · ${region} (#${from}–${to})`
         : `Pokédex · #${from}–${to}`;
+    }
+    case "subtype": {
+      const subtype = (scopeParams as { subtype?: SubtypeScopeValue }).subtype;
+      return subtype ? SUBTYPE_SCOPE_LABEL[subtype] : "Category";
+    }
+    case "named_card": {
+      const name = (scopeParams as { name?: string }).name ?? "";
+      return name ? `Card · ${name}` : "Card";
     }
     default: {
       const _exhaustive: never = scopeType;

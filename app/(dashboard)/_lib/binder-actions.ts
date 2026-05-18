@@ -23,6 +23,11 @@ const scopeInputSchema = z
       dexFrom: z.number().int().min(1).max(1025),
       dexTo: z.number().int().min(1).max(1025),
     }),
+    z.object({
+      scopeType: z.literal("subtype"),
+      subtype: z.enum(["trainers", "items", "supporters", "stadiums", "tools", "energies"]),
+    }),
+    z.object({ scopeType: z.literal("named_card"), name: z.string().min(1).max(120) }),
   ])
   .superRefine((val, ctx) => {
     if (val.scopeType === "pokedex" && val.dexFrom > val.dexTo) {

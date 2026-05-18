@@ -3,12 +3,15 @@
 import { useRouter } from "next/navigation";
 import { useMemo, useState, useTransition } from "react";
 import { GEN_NAMES, GEN_RANGES, type Generation, type PokedexEntry, type SetInfo } from "@/lib/data/types";
-import type { ScopeType } from "@/lib/data/binder-scope";
+import {
+  SUBTYPE_SCOPE_VALUES,
+  SUBTYPE_SCOPE_LABEL,
+  type ScopeType,
+  type SubtypeScopeValue,
+} from "@/lib/data/binder-scope";
 import { createBinder } from "../../_lib/binder-actions";
 import { typeBackground } from "../../_components/pokemonTypeColors";
 
-// TCG types present in the current dataset (SV + ME). When card scope
-// expands beyond these eras (BACKLOG §6), add the older types here.
 const TCG_TYPES = [
   "Grass",
   "Fire",
@@ -20,6 +23,7 @@ const TCG_TYPES = [
   "Metal",
   "Dragon",
   "Colorless",
+  "Fairy",
 ] as const;
 
 // TCG type name → closest video-game-type palette key in pokemonTypeColors.
@@ -40,6 +44,8 @@ const SCOPE_OPTIONS: { value: ScopeType; label: string; blurb: string }[] = [
   { value: "pokedex", label: "Pokédex", blurb: "One card per species across a dex range or region." },
   { value: "master_set", label: "Master set", blurb: "Every card in one TCG set." },
   { value: "pokemon", label: "By Pokémon", blurb: "Every card for one Pokémon." },
+  { value: "subtype", label: "By category", blurb: "All Trainers, Items, Stadiums, Energies, etc." },
+  { value: "named_card", label: "By card name", blurb: "Every printing of one Trainer or Energy card." },
   { value: "artist", label: "By artist", blurb: "Every card by one illustrator." },
   { value: "type", label: "By type", blurb: "Every card of a TCG type." },
   { value: "position", label: "By position", blurb: 'Every card matching a number, e.g. "1" across sets.' },
@@ -58,9 +64,10 @@ interface Props {
   sets: SetInfo[];
   pokedex: PokedexEntry[];
   artists: string[];
+  cardNames: string[];
 }
 
-export function NewBinderFlow({ sets, pokedex, artists }: Props) {
+export function NewBinderFlow({ sets, pokedex, artists, cardNames }: Props) {
   const router = useRouter();
   const [pending, start] = useTransition();
   const [error, setError] = useState<string | null>(null);
@@ -71,6 +78,8 @@ export function NewBinderFlow({ sets, pokedex, artists }: Props) {
   const [artist, setArtist] = useState<string>("");
   const [typeName, setTypeName] = useState<string>("");
   const [position, setPosition] = useState<string>("");
+  const [subtypeValue, setSubtypeValue] = useState<SubtypeScopeValue | "">("");
+  const [cardName, setCardName] = useState<string>("");
   const [name, setName] = useState<string>("");
   const [nameTouched, setNameTouched] = useState(false);
   const [dexRangePreset, setDexRangePreset] = useState<string>("national");
@@ -133,8 +142,12 @@ export function NewBinderFlow({ sets, pokedex, artists }: Props) {
           ? `Pokédex · ${preset.label.replace(/\s*\([^)]*\)\s*$/, "")}`
           : `Pokédex · #${dexFrom}–${dexTo}`;
       }
+      case "subtype":
+        return subtypeValue ? SUBTYPE_SCOPE_LABEL[subtypeValue] : "";
+      case "named_card":
+        return cardName ? `Card · ${cardName}` : "";
     }
-  }, [scopeType, setId, sets, matchedDex, artist, typeName, position, dexFrom, dexTo]);
+  }, [scopeType, setId, sets, matchedDex, artist, typeName, position, dexFrom, dexTo, subtypeValue, cardName]);
 
   const effectiveName = nameTouched || !suggestedName ? name : suggestedName;
 
@@ -163,8 +176,12 @@ export function NewBinderFlow({ sets, pokedex, artists }: Props) {
           dexTo <= 1025 &&
           dexFrom <= dexTo
         );
+      case "subtype":
+        return (SUBTYPE_SCOPE_VALUES as readonly string[]).includes(subtypeValue);
+      case "named_card":
+        return cardNames.includes(cardName);
     }
-  }, [scopeType, effectiveName, setId, sets, matchedDex, artist, artists, typeName, position, dexFrom, dexTo]);
+  }, [scopeType, effectiveName, setId, sets, matchedDex, artist, artists, typeName, position, dexFrom, dexTo, subtypeValue, cardName, cardNames]);
 
   function onSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -191,6 +208,8 @@ export function NewBinderFlow({ sets, pokedex, artists }: Props) {
     | { scopeType: "position"; number: string }
     | { scopeType: "custom" }
     | { scopeType: "pokedex"; dexFrom: number; dexTo: number }
+    | { scopeType: "subtype"; subtype: SubtypeScopeValue }
+    | { scopeType: "named_card"; name: string }
     | null {
     switch (scopeType) {
       case "master_set":
@@ -207,6 +226,10 @@ export function NewBinderFlow({ sets, pokedex, artists }: Props) {
         return { scopeType };
       case "pokedex":
         return { scopeType, dexFrom, dexTo };
+      case "subtype":
+        return subtypeValue ? { scopeType, subtype: subtypeValue } : null;
+      case "named_card":
+        return cardName ? { scopeType, name: cardName } : null;
     }
   }
 
@@ -355,6 +378,62 @@ export function NewBinderFlow({ sets, pokedex, artists }: Props) {
           <p className="text-sm text-muted">
             A custom binder starts empty. After creating it, use the binder page to add cards.
           </p>
+        )}
+
+        {scopeType === "subtype" && (
+          <div className="space-y-2">
+            <div className="text-[11px] uppercase tracking-wider text-muted">Category</div>
+            <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+              {SUBTYPE_SCOPE_VALUES.map((v) => {
+                const active = v === subtypeValue;
+                return (
+                  <button
+                    key={v}
+                    type="button"
+                    onClick={() => setSubtypeValue(v)}
+                    className={[
+                      "rounded-md border px-3 py-2 text-sm font-medium transition",
+                      active
+                        ? "border-accent bg-panel-2"
+                        : "border-border bg-panel hover:border-border-strong",
+                    ].join(" ")}
+                  >
+                    {SUBTYPE_SCOPE_LABEL[v]}
+                  </button>
+                );
+              })}
+            </div>
+            <p className="text-xs text-muted">
+              Filters every card of the chosen category across every set.
+            </p>
+          </div>
+        )}
+
+        {scopeType === "named_card" && (
+          <label className="block space-y-2 text-sm">
+            <span className="text-[11px] uppercase tracking-wider text-muted">
+              Card name (Trainer or Energy)
+            </span>
+            <input
+              list="card-name-list"
+              value={cardName}
+              onChange={(e) => setCardName(e.target.value)}
+              placeholder="e.g. Professor's Research"
+              className="w-full rounded-md border border-border bg-panel-2 px-2 py-1.5"
+            />
+            <datalist id="card-name-list">
+              {cardNames.map((n) => (
+                <option key={n} value={n} />
+              ))}
+            </datalist>
+            {cardName && !cardNames.includes(cardName) && (
+              <p className="text-xs text-missing">No match. Pick a Trainer or Energy name from the list.</p>
+            )}
+            <p className="text-xs text-muted">
+              Matches every printing of this card by exact name. For Pokémon, use the
+              {" "}<em>By Pokémon</em> scope instead.
+            </p>
+          </label>
         )}
 
         {scopeType === "pokedex" && (

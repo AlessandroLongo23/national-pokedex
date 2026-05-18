@@ -14,6 +14,7 @@ function card(overrides: Partial<CardEntry>): CardEntry {
     id: "x-1",
     name: "Card",
     setId: "x",
+    supertype: "Pokémon",
     number: "1",
     numberInt: 1,
     rarity: "Common",
@@ -95,6 +96,39 @@ describe("filterByScope", () => {
   it("pokedex tolerates dexFrom > dexTo by treating it as a range", () => {
     const r = filterByScope(cards, "pokedex", { dexFrom: 30, dexTo: 1 });
     expect(r.map((c) => c.id).sort()).toEqual(["a-1", "a-1a", "a-2", "b-1"]);
+  });
+
+  it("subtype 'trainers' returns every Trainer-supertype card", () => {
+    const t1 = card({ id: "t-1", supertype: "Trainer", subtypes: ["Item"], dex: [] });
+    const t2 = card({ id: "t-2", supertype: "Trainer", subtypes: ["Stadium"], dex: [] });
+    const e1 = card({ id: "e-1", supertype: "Energy", subtypes: ["Basic"], dex: [] });
+    const all = [...cards, t1, t2, e1];
+    const r = filterByScope(all, "subtype", { subtype: "trainers" });
+    expect(r.map((c) => c.id).sort()).toEqual(["t-1", "t-2"]);
+  });
+
+  it("subtype 'stadiums' returns only Stadium-subtype Trainer cards", () => {
+    const item = card({ id: "i-1", supertype: "Trainer", subtypes: ["Item"], dex: [] });
+    const stadium = card({ id: "s-1", supertype: "Trainer", subtypes: ["Stadium"], dex: [] });
+    const all = [...cards, item, stadium];
+    const r = filterByScope(all, "subtype", { subtype: "stadiums" });
+    expect(r.map((c) => c.id)).toEqual(["s-1"]);
+  });
+
+  it("subtype 'energies' returns only Energy-supertype cards", () => {
+    const e = card({ id: "e-1", supertype: "Energy", subtypes: ["Special"], dex: [] });
+    const all = [...cards, e];
+    const r = filterByScope(all, "subtype", { subtype: "energies" });
+    expect(r.map((c) => c.id)).toEqual(["e-1"]);
+  });
+
+  it("named_card matches by exact name across reprints", () => {
+    const pr1 = card({ id: "x-1", name: "Professor's Research", supertype: "Trainer", dex: [] });
+    const pr2 = card({ id: "y-1", name: "Professor's Research", supertype: "Trainer", dex: [] });
+    const other = card({ id: "z-1", name: "Boss's Orders", supertype: "Trainer", dex: [] });
+    const all = [pr1, pr2, other];
+    const r = filterByScope(all, "named_card", { name: "Professor's Research" });
+    expect(r.map((c) => c.id).sort()).toEqual(["x-1", "y-1"]);
   });
 });
 
