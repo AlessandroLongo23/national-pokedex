@@ -27,7 +27,7 @@ export function RecentPullsStrip({ cards, prices, priceSource }: Props) {
   return (
     <section className="space-y-3" data-rail="recent-pack-pulls">
       <header className="flex items-baseline justify-between gap-3">
-        <h2 className="text-sm font-semibold tracking-tight">Latest pulls</h2>
+        <h2 className="eyebrow">Latest pulls</h2>
         <Link
           href="/packs"
           className="inline-flex items-center gap-1 text-xs text-accent hover:underline"
@@ -41,7 +41,15 @@ export function RecentPullsStrip({ cards, prices, priceSource }: Props) {
           Log a pack to see your latest pulls here.
         </p>
       ) : (
-        <div className="flex snap-x gap-2 overflow-x-auto pb-2">
+        <div
+          className="-mr-4 flex snap-x gap-2 overflow-x-auto pb-2 pr-4"
+          style={{
+            WebkitMaskImage:
+              "linear-gradient(to right, black 0, black calc(100% - 32px), transparent 100%)",
+            maskImage:
+              "linear-gradient(to right, black 0, black calc(100% - 32px), transparent 100%)",
+          }}
+        >
           {cards.map((card) => {
             const price = pickPrice(prices[card.id], priceSource);
             return (

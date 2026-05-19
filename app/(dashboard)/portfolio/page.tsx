@@ -2,7 +2,7 @@ import { requireUserId } from "../_lib/current-user";
 import { getSupabaseServer } from "@/lib/supabase/server";
 import { PageHeader } from "../_components/PageHeader";
 import { TrendsSection } from "./_components/TrendsSection";
-import { PortfolioHero } from "./_components/PortfolioHero";
+import { PortfolioHero, type UnpricedCard } from "./_components/PortfolioHero";
 import { BinderRollup, type BinderRollupRow } from "./_components/BinderRollup";
 import { RecentPullsStrip } from "./_components/RecentPullsStrip";
 import { cumulativeByDay } from "@/lib/data/cumulative-acquisitions";
@@ -18,7 +18,9 @@ import {
 import { loadUserPreferences } from "../_lib/user-preferences";
 import {
   fetchPricesForCards,
+  pickPrice,
   sumPrices,
+  sumPricesByQuantity,
   type CardPrice,
 } from "@/lib/pricing/pokemontcg";
 
@@ -36,10 +38,10 @@ export default async function PortfolioPage() {
   const supabase = await getSupabaseServer();
   const prefs = await loadUserPreferences(userId);
 
-  const [ownedRes, packsRes, favRes, bindersRes, allCards] = await Promise.all([
+  const [ownedRes, packsRes, bindersRes, allCards] = await Promise.all([
     supabase
       .from("owned_cards")
-      .select("card_id, acquired_at")
+      .select("card_id, acquired_at, quantity")
       .eq("user_id", userId)
       .order("acquired_at", { ascending: true }),
     supabase
@@ -48,7 +50,6 @@ export default async function PortfolioPage() {
       .eq("user_id", userId)
       .order("opened_at", { ascending: false })
       .limit(RECENT_PACK_LIMIT),
-    supabase.from("user_favorites").select("card_id").eq("user_id", userId),
     supabase
       .from("binders")
       .select("id, name, scope_type, scope_params")
@@ -59,6 +60,12 @@ export default async function PortfolioPage() {
 
   const owned = ownedRes.data ?? [];
   const ownedIds = new Set(owned.map((r) => r.card_id as string));
+  const ownedQuantities = new Map<string, number>();
+  for (const r of owned) {
+    ownedQuantities.set(r.card_id as string, (r.quantity as number | null) ?? 1);
+  }
+  let totalCopies = 0;
+  for (const q of ownedQuantities.values()) totalCopies += q;
   const binders = (bindersRes.data ?? []) as BinderRow[];
 
   // Per-binder owned card lists (shared with the global value query so we
@@ -155,14 +162,43 @@ export default async function PortfolioPage() {
   for (const c of recentPackCards) allIdsForPricing.add(c.id);
   const priceMap = await fetchPricesForCards(allIdsForPricing);
 
-  const { total: portfolioValue, coveredCount: pricedCount } = sumPrices(
+  const { total: portfolioValue, coveredCount: pricedCount } = sumPricesByQuantity(
     priceMap,
-    ownedIds,
+    ownedQuantities,
     prefs.priceSource,
   );
 
+  // List of cards the user owns that have no price at the active source.
+  // Surfaced under the hero so the headline value is honest about its
+  // gap. Sorted by setId then number so collectors recognise the layout
+  // (most pricing gaps cluster by set).
+  const cardsById = new Map(allCards.map((c) => [c.id, c]));
+  const unpricedCards: UnpricedCard[] = [];
+  for (const id of ownedIds) {
+    if (pickPrice(priceMap.get(id), prefs.priceSource) != null) continue;
+    const c = cardsById.get(id);
+    if (!c) continue;
+    unpricedCards.push({
+      id: c.id,
+      name: c.name,
+      setId: c.setId,
+      number: c.number,
+    });
+  }
+  unpricedCards.sort((a, b) => {
+    if (a.setId !== b.setId) return a.setId.localeCompare(b.setId);
+    const an = parseInt(a.number, 10);
+    const bn = parseInt(b.number, 10);
+    if (!Number.isNaN(an) && !Number.isNaN(bn) && an !== bn) return an - bn;
+    return a.number.localeCompare(b.number);
+  });
+
   const binderRows: BinderRollupRow[] = computed.map((c) => {
-    const { total } = sumPrices(priceMap, c.ownedCardIds, prefs.priceSource);
+    const qtyPairs: [string, number][] = c.ownedCardIds.map((id) => [
+      id,
+      ownedQuantities.get(id) ?? 1,
+    ]);
+    const { total } = sumPricesByQuantity(priceMap, qtyPairs, prefs.priceSource);
     return {
       id: c.id,
       name: c.name,
@@ -175,12 +211,16 @@ export default async function PortfolioPage() {
   });
 
   const countPoints = cumulativeByDay(
-    owned.map((r) => ({ acquired_at: r.acquired_at as string })),
+    owned.map((r) => ({
+      acquired_at: r.acquired_at as string,
+      quantity: (r.quantity as number | null) ?? 1,
+    })),
   );
   const valuePoints = cumulativeValueByDay(
     owned.map((r) => ({
       card_id: r.card_id as string,
       acquired_at: r.acquired_at as string,
+      quantity: (r.quantity as number | null) ?? 1,
     })),
     priceMap,
     prefs.priceSource,
@@ -206,10 +246,11 @@ export default async function PortfolioPage() {
         portfolioValue={portfolioValue}
         pricedCount={pricedCount}
         totalCards={owned.length}
+        totalCopies={totalCopies}
         distinctSpecies={distinctSpecies.size}
         packsOpened={packsRes.data?.length ?? 0}
-        favoritesCount={favRes.data?.length ?? 0}
         priceSource={prefs.priceSource}
+        unpricedCards={unpricedCards}
       />
 
       <div className="mt-10 space-y-10">
