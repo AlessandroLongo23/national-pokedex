@@ -12,7 +12,7 @@ import {
   type ScopeType,
   type ScopeParams,
 } from "@/lib/data/binder-scope";
-import { fetchPricesForCards, sumPrices } from "@/lib/pricing/pokemontcg";
+import { fetchPricesForCards, sumPricesByQuantity } from "@/lib/pricing/pokemontcg";
 
 interface BinderRow {
   id: string;
@@ -32,11 +32,15 @@ export default async function BindersPage() {
       .select("id, name, scope_type, scope_params")
       .eq("user_id", userId)
       .order("created_at", { ascending: false }),
-    supabase.from("owned_cards").select("card_id").eq("user_id", userId),
+    supabase.from("owned_cards").select("card_id, quantity").eq("user_id", userId),
   ]);
 
   const binders = (bindersResult.data ?? []) as BinderRow[];
-  const ownedIds = new Set((ownedResult.data ?? []).map((r) => r.card_id as string));
+  const ownedQuantities = new Map<string, number>();
+  for (const r of ownedResult.data ?? []) {
+    ownedQuantities.set(r.card_id as string, (r.quantity as number | null) ?? 1);
+  }
+  const ownedIds = new Set(ownedQuantities.keys());
 
   const customBinderIds = binders
     .filter((b) => b.scope_type === "custom")
@@ -114,7 +118,11 @@ export default async function BindersPage() {
   const priceMap = await fetchPricesForCards(allOwnedForPricing);
 
   const cards = computed.map((c) => {
-    const { total } = sumPrices(priceMap, c.ownedCardIds, prefs.priceSource);
+    const pairs: [string, number][] = c.ownedCardIds.map((id) => [
+      id,
+      ownedQuantities.get(id) ?? 1,
+    ]);
+    const { total } = sumPricesByQuantity(priceMap, pairs, prefs.priceSource);
     return {
       id: c.id,
       name: c.name,

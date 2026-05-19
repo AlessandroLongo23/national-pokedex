@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { ArrowRight, Check, Heart, Plus, X } from "lucide-react";
+import { ArrowRight, Check, Heart, Minus, Plus, X } from "lucide-react";
 import { officialArtworkUrl } from "@/lib/pokeapi";
 import { CARD_INDEX, SETS, SPECIES } from "@/lib/data";
 import type { CardEntry, Rarity } from "@/lib/data/types";
@@ -130,9 +130,10 @@ export function CardVariantPicker({ dex, onClose }: Props) {
 }
 
 function VariantRow({ card }: { card: CardEntry }) {
-  const { isOwned, toggle: toggleOwn } = useOwnedCards();
+  const { isOwned, toggle: toggleOwn, adjust: adjustOwned, quantityOf } = useOwnedCards();
   const { isWishlisted, toggle: toggleWishlist } = useWishlist();
   const owned = isOwned(card.id);
+  const quantity = quantityOf(card.id);
   const wishlisted = isWishlisted(card.id);
   const set = SETS.find((s) => s.id === card.setId);
 
@@ -178,24 +179,50 @@ function VariantRow({ card }: { card: CardEntry }) {
           aria-hidden
         />
       </button>
-      <button
-        type="button"
-        onClick={() => toggleOwn(card.id)}
-        className={[
-          "inline-flex shrink-0 items-center gap-1 rounded-md border px-3 py-1.5 text-xs font-semibold transition",
-          owned
-            ? "border-owned bg-owned/15 text-owned"
-            : "border-border text-text hover:border-owned hover:text-owned",
-        ].join(" ")}
-        aria-pressed={owned}
-      >
-        {owned ? (
-          <Check className="h-3.5 w-3.5" strokeWidth={3} aria-hidden />
-        ) : (
+      {owned ? (
+        <div
+          className="inline-flex shrink-0 items-stretch overflow-hidden rounded-md border border-owned bg-owned/15 text-owned"
+          role="group"
+          aria-label={`Owned — ${quantity} ${quantity === 1 ? "copy" : "copies"}`}
+        >
+          <button
+            type="button"
+            onClick={() => adjustOwned(card.id, -1)}
+            aria-label={
+              quantity > 1
+                ? `Decrease ${card.name} quantity`
+                : `Mark ${card.name} as not owned`
+            }
+            title={quantity > 1 ? "One fewer copy" : "Remove from collection"}
+            className="inline-flex items-center justify-center px-2 transition hover:bg-owned/25"
+          >
+            <Minus className="h-3 w-3" strokeWidth={2.5} aria-hidden />
+          </button>
+          <span className="inline-flex items-center gap-1 border-x border-owned/40 bg-owned/10 px-2 text-xs font-semibold tabular-nums">
+            <Check className="h-3.5 w-3.5" strokeWidth={3} aria-hidden />
+            <span>×{quantity}</span>
+          </span>
+          <button
+            type="button"
+            onClick={() => adjustOwned(card.id, +1)}
+            aria-label={`Add another copy of ${card.name}`}
+            title="One more copy"
+            className="inline-flex items-center justify-center px-2 transition hover:bg-owned/25"
+          >
+            <Plus className="h-3 w-3" strokeWidth={2.5} aria-hidden />
+          </button>
+        </div>
+      ) : (
+        <button
+          type="button"
+          onClick={() => toggleOwn(card.id)}
+          className="inline-flex shrink-0 items-center gap-1 rounded-md border border-border px-3 py-1.5 text-xs font-semibold text-text transition hover:border-owned hover:text-owned"
+          aria-pressed={false}
+        >
           <Plus className="h-3.5 w-3.5" strokeWidth={2.5} aria-hidden />
-        )}
-        {owned ? "Owned" : "Own"}
-      </button>
+          Own
+        </button>
+      )}
     </li>
   );
 }

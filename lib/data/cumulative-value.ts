@@ -4,6 +4,9 @@ import { pickPrice } from "@/lib/pricing/pokemontcg";
 export interface ValueAcquisitionRow {
   card_id: string;
   acquired_at: string;
+  /** Copies of this card. Defaults to 1; pass the row's `owned_cards.quantity`
+   * to value duplicates correctly. */
+  quantity?: number;
 }
 
 export interface ValuePoint {
@@ -35,8 +38,9 @@ export function cumulativeValueByDay(
   for (const r of rows) {
     const v = pickPrice(prices.get(r.card_id), source);
     if (v == null) continue;
+    const qty = r.quantity ?? 1;
     const day = toUtcDay(r.acquired_at);
-    perDay.set(day, (perDay.get(day) ?? 0) + v);
+    perDay.set(day, (perDay.get(day) ?? 0) + v * qty);
   }
   if (perDay.size === 0) return [];
 

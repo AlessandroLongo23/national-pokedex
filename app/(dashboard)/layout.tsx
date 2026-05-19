@@ -8,7 +8,7 @@ export default async function DashboardLayout({ children }: { children: React.Re
   const supabase = await getSupabaseServer();
 
   const [ownedRes, wishlistRes, favoritesRes, availabilityRes, prefs] = await Promise.all([
-    supabase.from("owned_cards").select("card_id").eq("user_id", user.id),
+    supabase.from("owned_cards").select("card_id, quantity").eq("user_id", user.id),
     supabase.from("wishlist_cards").select("card_id").eq("user_id", user.id),
     supabase.from("user_favorites").select("card_id").eq("user_id", user.id),
     supabase.from("set_availability").select("set_id, available").eq("user_id", user.id),
@@ -21,7 +21,10 @@ export default async function DashboardLayout({ children }: { children: React.Re
   if (availabilityRes.error)
     throw new Error(`Failed to load availability: ${availabilityRes.error.message}`);
 
-  const initialOwned = (ownedRes.data ?? []).map((r) => r.card_id as string);
+  const initialOwned = (ownedRes.data ?? []).map((r) => ({
+    cardId: r.card_id as string,
+    quantity: (r.quantity as number | null) ?? 1,
+  }));
   const initialWishlist = (wishlistRes.data ?? []).map((r) => r.card_id as string);
   const initialFavorites = (favoritesRes.data ?? []).map((r) => r.card_id as string);
   const initialAvailability = (availabilityRes.data ?? []).map((r) => ({

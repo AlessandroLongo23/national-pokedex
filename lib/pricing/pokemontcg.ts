@@ -219,6 +219,26 @@ export function sumPrices(
   return { total, coveredCount };
 }
 
+// Quantity-aware sum: multiplies each card's price by its qty. The
+// `coveredCount` still counts distinct priced cards (not copies) — that
+// matches the "X of Y cards priced" UX, which is about coverage gaps.
+export function sumPricesByQuantity(
+  priceMap: Map<string, CardPrice>,
+  quantities: Iterable<[string, number]>,
+  source: PriceSource,
+): { total: number; coveredCount: number } {
+  let total = 0;
+  let coveredCount = 0;
+  for (const [id, qty] of quantities) {
+    const v = pickPrice(priceMap.get(id), source);
+    if (v != null) {
+      total += v * qty;
+      coveredCount += 1;
+    }
+  }
+  return { total, coveredCount };
+}
+
 export function formatPrice(value: number | undefined, source: PriceSource): string {
   if (value == null) return "—";
   const currency = PRICE_SOURCE_CURRENCY[source];

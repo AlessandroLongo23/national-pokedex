@@ -9,7 +9,7 @@ import {
   type ScopeParams,
 } from "@/lib/data/binder-scope";
 import { loadUserPreferences } from "../../_lib/user-preferences";
-import { fetchPricesForCards, sumPrices } from "@/lib/pricing/pokemontcg";
+import { fetchPricesForCards, sumPricesByQuantity } from "@/lib/pricing/pokemontcg";
 import { BinderDetailClient } from "./_components/BinderDetailClient";
 import type { CardPriceRecord } from "../../_lib/CardPricesContext";
 
@@ -52,7 +52,7 @@ export default async function BinderDetailPage({
   const cardsById = new Map(cards.map((c) => [c.id, c]));
   const { data: ownedRows } = await supabase
     .from("owned_cards")
-    .select("card_id, acquired_at")
+    .select("card_id, acquired_at, quantity")
     .eq("user_id", userId)
     .order("acquired_at", { ascending: false })
     .limit(500);
@@ -78,13 +78,18 @@ export default async function BinderDetailPage({
   // One fetch covers prices for every card on this page — both the grid
   // tiles and the binder-value stat.
   const priceMap = await fetchPricesForCards(targetIds);
-  const ownedIdsInBinder: string[] = [];
-  for (const c of cards) {
-    if ((ownedRows ?? []).some((r) => r.card_id === c.id)) ownedIdsInBinder.push(c.id);
+  const ownedQtyByCard = new Map<string, number>();
+  for (const r of ownedRows ?? []) {
+    ownedQtyByCard.set(r.card_id as string, (r.quantity as number | null) ?? 1);
   }
-  const { total: binderValue, coveredCount: pricedCount } = sumPrices(
+  const ownedPairsInBinder: [string, number][] = [];
+  for (const c of cards) {
+    const qty = ownedQtyByCard.get(c.id);
+    if (qty && qty > 0) ownedPairsInBinder.push([c.id, qty]);
+  }
+  const { total: binderValue, coveredCount: pricedCount } = sumPricesByQuantity(
     priceMap,
-    ownedIdsInBinder,
+    ownedPairsInBinder,
     prefs.priceSource,
   );
 
@@ -108,7 +113,7 @@ export default async function BinderDetailPage({
       cellOverrides={cellOverrides}
       value={binderValue}
       pricedCount={pricedCount}
-      ownedPricedTotal={ownedIdsInBinder.length}
+      ownedPricedTotal={ownedPairsInBinder.length}
       priceSource={prefs.priceSource}
       prices={priceRecord}
     />

@@ -1,5 +1,9 @@
 export interface AcquisitionRow {
   acquired_at: string;
+  /** Per-row weight. Defaults to 1 (each row = one card). When tracking
+   * total copies (not just distinct cards) callers pass the row's
+   * `owned_cards.quantity`. */
+  quantity?: number;
 }
 
 export interface CumulativePoint {
@@ -23,7 +27,8 @@ export function cumulativeByDay(rows: AcquisitionRow[]): CumulativePoint[] {
   const perDay = new Map<string, number>();
   for (const r of rows) {
     const day = toUtcDay(r.acquired_at);
-    perDay.set(day, (perDay.get(day) ?? 0) + 1);
+    const qty = r.quantity ?? 1;
+    perDay.set(day, (perDay.get(day) ?? 0) + qty);
   }
 
   const days = [...perDay.keys()].sort();

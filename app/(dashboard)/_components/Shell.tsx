@@ -1,6 +1,6 @@
 "use client";
 
-import { OwnedCardsProvider } from "../_lib/OwnedCardsContext";
+import { OwnedCardsProvider, type InitialOwnedCard } from "../_lib/OwnedCardsContext";
 import { WishlistProvider } from "../_lib/WishlistContext";
 import { FavoritesProvider } from "../_lib/FavoritesContext";
 import { SetAvailabilityProvider } from "../_lib/SetAvailabilityContext";
@@ -28,7 +28,7 @@ export function Shell({
   userId: string;
   email: string;
   priceSource: PriceSource;
-  initialOwned: string[];
+  initialOwned: InitialOwnedCard[];
   initialWishlist: string[];
   initialFavorites: string[];
   initialAvailability: { setId: string; available: boolean }[];
