@@ -139,8 +139,8 @@ Pack logging exists today. Expand it into a full money-in / money-out / value-he
 
 Anywhere a card component appears — in a set, in a list of cards by a given artist, in a list of cards for a given Pokémon — there should be a way to preview the card full-screen.
 
-- [ ] **Full-screen card preview**, opened by tapping/clicking any card.
-- [ ] **Dark overlay around the previewed card** so the art pops.
+- [x] **Full-screen card preview**, opened by tapping/clicking any card.
+- [x] **Dark overlay around the previewed card** so the art pops.
 
 ---
 
