@@ -11,6 +11,8 @@ import {
   LineChart,
   MoreHorizontal,
   Notebook,
+  Package,
+  Receipt,
   Settings,
   type LucideIcon,
 } from "lucide-react";
@@ -24,26 +26,50 @@ interface NavItem {
   children?: { href: string; label: string }[];
 }
 
-const NAV: NavItem[] = [
-  { href: "/pokedex", label: "Pokédex", Icon: PokeballIcon },
-  { href: "/sets", label: "Sets", Icon: Layers },
-  { href: "/cards", label: "Cards", Icon: CreditCard },
+interface NavGroup {
+  label: string;
+  items: NavItem[];
+}
+
+const NAV_GROUPS: NavGroup[] = [
   {
-    href: "/other",
-    label: "Other cards",
-    Icon: MoreHorizontal,
-    children: [
-      { href: "/other/items", label: "Items" },
-      { href: "/other/supporters", label: "Supporters" },
-      { href: "/other/stadiums", label: "Stadiums" },
-      { href: "/other/tools", label: "Pokémon Tools" },
-      { href: "/other/energies", label: "Energies" },
+    label: "Browse",
+    items: [
+      { href: "/pokedex", label: "Pokédex", Icon: PokeballIcon },
+      { href: "/sets", label: "Sets", Icon: Layers },
+      { href: "/cards", label: "Cards", Icon: CreditCard },
+      {
+        href: "/other",
+        label: "Other cards",
+        Icon: MoreHorizontal,
+        children: [
+          { href: "/other/items", label: "Items" },
+          { href: "/other/supporters", label: "Supporters" },
+          { href: "/other/stadiums", label: "Stadiums" },
+          { href: "/other/tools", label: "Pokémon Tools" },
+          { href: "/other/energies", label: "Energies" },
+        ],
+      },
     ],
   },
-  { href: "/binders", label: "Binders", Icon: Notebook },
-  { href: "/collection", label: "Collection", Icon: FolderOpen },
-  { href: "/portfolio", label: "Portfolio", Icon: LineChart },
+  {
+    label: "Collection",
+    items: [
+      { href: "/binders", label: "Binders", Icon: Notebook },
+      { href: "/collection", label: "Collection", Icon: FolderOpen },
+      { href: "/portfolio", label: "Portfolio", Icon: LineChart },
+    ],
+  },
+  {
+    label: "Activity",
+    items: [
+      { href: "/packs", label: "Packs", Icon: Package },
+      { href: "/transactions", label: "Transactions", Icon: Receipt },
+    ],
+  },
 ];
+
+const NAV_FLAT: NavItem[] = NAV_GROUPS.flatMap((g) => g.items);
 
 function isActive(pathname: string, href: string) {
   return pathname === href || pathname.startsWith(`${href}/`);
@@ -130,11 +156,20 @@ export function Sidebar() {
       </div>
 
       <nav className="flex-1 px-3">
-        <ul className="space-y-0.5">
-          {NAV.map((item) => (
-            <NavRow key={item.href} item={item} pathname={pathname} />
+        <div className="space-y-4">
+          {NAV_GROUPS.map((group) => (
+            <div key={group.label}>
+              <div className="px-3 pb-1 text-[10px] font-semibold uppercase tracking-wider text-muted/60">
+                {group.label}
+              </div>
+              <ul className="space-y-0.5">
+                {group.items.map((item) => (
+                  <NavRow key={item.href} item={item} pathname={pathname} />
+                ))}
+              </ul>
+            </div>
           ))}
-        </ul>
+        </div>
       </nav>
 
       <div className="border-t border-border px-3 py-3">
@@ -162,7 +197,7 @@ export function MobileNav() {
   const pathname = usePathname();
   return (
     <nav className="sticky bottom-0 z-30 flex border-t border-border bg-panel md:hidden">
-      {NAV.map((item) => {
+      {NAV_FLAT.map((item) => {
         const active = isActive(pathname, item.href);
         const Icon = item.Icon;
         return (
