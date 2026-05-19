@@ -2,11 +2,12 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { ChevronRight } from "lucide-react";
-import { POKEDEX, getSet } from "@/lib/data";
-import { RARITY_LABEL, RARITY_ORDER, type CardEntry, type Rarity } from "@/lib/data/types";
+import { getSet } from "@/lib/data";
+import { RARITY_LABEL, type CardEntry } from "@/lib/data/types";
 import { CardTile } from "./CardTile";
+import { genByDex, pokemonNameByDex, sortCards, type CardSort } from "../_lib/card-sort";
 
-export type CardSort = "number" | "rarity" | "pokemon" | "set";
+export type { CardSort };
 
 interface Props {
   cards: CardEntry[];
@@ -34,11 +35,6 @@ function loadInt(key: string, fallback: number): number {
   return Number.isFinite(n) ? clampSize(n) : fallback;
 }
 
-const NAME_BY_DEX: Record<number, string> = Object.fromEntries(
-  POKEDEX.map((p) => [p.dex, p.name]),
-);
-const GEN_BY_DEX: Record<number, number> = Object.fromEntries(POKEDEX.map((p) => [p.dex, p.gen]));
-
 export function CardGrid({
   cards,
   storageKey,
@@ -63,49 +59,7 @@ export function CardGrid({
     if (mounted) window.localStorage.setItem(`${SIZE_KEY}.${storageKey}`, String(cols));
   }, [cols, storageKey, mounted]);
 
-  const sorted = useMemo(() => {
-    const copy = [...cards];
-    switch (sort) {
-      case "number":
-        copy.sort((a, b) => a.setId.localeCompare(b.setId) || a.numberInt - b.numberInt);
-        break;
-      case "rarity": {
-        const rank = (r: Rarity) => RARITY_ORDER.indexOf(r);
-        copy.sort(
-          (a, b) =>
-            rank(a.rarity) - rank(b.rarity) ||
-            a.setId.localeCompare(b.setId) ||
-            a.numberInt - b.numberInt,
-        );
-        break;
-      }
-      case "pokemon": {
-        copy.sort(
-          (a, b) =>
-            (a.dex[0] ?? 9999) - (b.dex[0] ?? 9999) ||
-            a.setId.localeCompare(b.setId) ||
-            a.numberInt - b.numberInt,
-        );
-        break;
-      }
-      case "set": {
-        copy.sort((a, b) => {
-          const sa = getSet(a.setId);
-          const sb = getSet(b.setId);
-          if (!sa && !sb) return a.numberInt - b.numberInt;
-          if (!sa) return 1;
-          if (!sb) return -1;
-          return (
-            sa.series.localeCompare(sb.series) ||
-            sa.id.localeCompare(sb.id) ||
-            a.numberInt - b.numberInt
-          );
-        });
-        break;
-      }
-    }
-    return copy;
-  }, [cards, sort]);
+  const sorted = useMemo(() => sortCards(cards, sort), [cards, sort]);
 
   const groups = useMemo(() => {
     if (sort === "number") return null;
@@ -198,7 +152,7 @@ export function CardGrid({
           {[...groups.entries()].map(([key, items]) => {
             const title =
               sort === "pokemon" && key !== "other"
-                ? `${NAME_BY_DEX[Number(key)] ?? "#" + key} · Gen ${GEN_BY_DEX[Number(key)] ?? "?"}`
+                ? `${pokemonNameByDex(Number(key)) ?? "#" + key} · Gen ${genByDex(Number(key)) ?? "?"}`
                 : key;
             return (
               <details key={key} open className="group/details">

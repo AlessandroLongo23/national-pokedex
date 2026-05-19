@@ -7,7 +7,8 @@ import {
   useRef,
   useState,
 } from "react";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import Link from "next/link";
+import { ArrowUpRight, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { SETS } from "@/lib/data";
 import type { CardEntry } from "@/lib/data/types";
 import { RARITY_LABEL } from "@/lib/data/types";
@@ -27,7 +28,8 @@ function prefersReducedMotion(): boolean {
 }
 
 export function CardPreviewOverlay() {
-  const { activeCard, originRect, loading, open, close } = useCardPreview();
+  const { activeCard, originRect, loading, open, close, navigationList } =
+    useCardPreview();
 
   // Mirror the context state into local state so we can keep rendering the
   // card during the exit animation (after activeCard has gone null in the
@@ -213,11 +215,23 @@ export function CardPreviewOverlay() {
   // Walk the on-page preview triggers in DOM order and open the prev/next
   // one. Uses [data-preview-trigger] attributes set by CardTile and
   // PackHistory — so navigation naturally follows whichever grid the user
-  // opened from. Falls back to a no-op at the ends (no wraparound — the
-  // arrow buttons are hidden there anyway).
+  // opened from. When a `navigationList` is registered on the context
+  // (virtualized views like /cards), step through that list instead so we
+  // can navigate across cards whose tiles aren't currently mounted.
   const navigate = useCallback(
     (direction: 1 | -1) => {
       if (!card) return;
+      if (navigationList && navigationList.length > 0) {
+        const idx = navigationList.indexOf(card.id);
+        if (idx < 0) return;
+        const targetId = navigationList[idx + direction];
+        if (!targetId) return;
+        const trigger = document.querySelector<HTMLElement>(
+          `[data-preview-trigger="${targetId}"]`,
+        );
+        void open(targetId, trigger ? trigger.getBoundingClientRect() : null);
+        return;
+      }
       const triggers = Array.from(
         document.querySelectorAll<HTMLElement>("[data-preview-trigger]"),
       );
@@ -231,7 +245,7 @@ export function CardPreviewOverlay() {
       if (!targetId) return;
       void open(targetId, target.getBoundingClientRect());
     },
-    [card, open],
+    [card, open, navigationList],
   );
 
   // Refresh position whenever the active card changes. Querying the DOM
@@ -240,6 +254,11 @@ export function CardPreviewOverlay() {
   useEffect(() => {
     if (!card) {
       setPosition({ index: -1, total: 0 });
+      return;
+    }
+    if (navigationList && navigationList.length > 0) {
+      const idx = navigationList.indexOf(card.id);
+      setPosition({ index: idx, total: navigationList.length });
       return;
     }
     const triggers = document.querySelectorAll<HTMLElement>(
@@ -254,7 +273,7 @@ export function CardPreviewOverlay() {
       }
     }
     setPosition({ index: idx, total: triggers.length });
-  }, [card]);
+  }, [card, navigationList]);
 
   const hasPrev = position.index > 0;
   const hasNext = position.index >= 0 && position.index < position.total - 1;
@@ -376,6 +395,15 @@ export function CardPreviewOverlay() {
         <span className="nums text-muted">#{card.number}</span>
         <span aria-hidden className="mx-2.5 text-border-strong">·</span>
         <span className="text-muted">{RARITY_LABEL[card.rarity]}</span>
+        <span aria-hidden className="mx-2.5 text-border-strong">·</span>
+        <Link
+          href={`/cards/${encodeURIComponent(card.id)}`}
+          onClick={closeStable}
+          className="inline-flex items-center gap-0.5 text-muted underline-offset-2 transition hover:text-text hover:underline"
+        >
+          Details
+          <ArrowUpRight className="h-3 w-3" aria-hidden />
+        </Link>
       </div>
 
       {loading && (

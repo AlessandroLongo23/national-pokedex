@@ -21,6 +21,13 @@ interface CardPreviewCtx {
   loading: boolean;
   open: (arg: CardEntry | string, originRect?: DOMRect | null) => void;
   close: () => void;
+  /** Ordered card ids the overlay should walk for prev/next when set.
+   * Used by virtualized views (e.g. /cards) where only a window of tiles
+   * is mounted, so DOM-order walking would skip across most of the list.
+   * When null, the overlay falls back to walking `[data-preview-trigger]`
+   * in DOM order. */
+  navigationList: string[] | null;
+  setNavigationList: (ids: string[] | null) => void;
 }
 
 const Ctx = createContext<CardPreviewCtx | null>(null);
@@ -44,7 +51,13 @@ export function CardPreviewProvider({ children }: { children: React.ReactNode })
   const [activeCard, setActiveCard] = useState<CardEntry | null>(null);
   const [originRect, setOriginRect] = useState<DOMRect | null>(null);
   const [loading, setLoading] = useState(false);
+  const [navigationList, setNavigationListState] = useState<string[] | null>(null);
   const cacheRef = useRef<Map<string, CardEntry>>(new Map());
+
+  // Stable setter so callers can pass it to effects without retriggering.
+  const setNavigationList = useCallback((ids: string[] | null) => {
+    setNavigationListState(ids);
+  }, []);
 
   // Mirror activeCard in a ref so callbacks and the URL effect can read it
   // without depending on it. Without this, the URL effect fires every time we
@@ -204,8 +217,16 @@ export function CardPreviewProvider({ children }: { children: React.ReactNode })
   // next phase change the overlay would capture "hidden" and never let go.
 
   const value = useMemo<CardPreviewCtx>(
-    () => ({ activeCard, originRect, loading, open, close }),
-    [activeCard, originRect, loading, open, close],
+    () => ({
+      activeCard,
+      originRect,
+      loading,
+      open,
+      close,
+      navigationList,
+      setNavigationList,
+    }),
+    [activeCard, originRect, loading, open, close, navigationList, setNavigationList],
   );
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
