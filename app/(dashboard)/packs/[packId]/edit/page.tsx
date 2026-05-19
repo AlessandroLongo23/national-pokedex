@@ -1,11 +1,11 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getSupabaseServer } from "@/lib/supabase/server";
 import { SETS } from "@/lib/data";
+import { PRICE_SOURCE_CURRENCY } from "@/lib/pricing/pokemontcg";
+import { isLedgerCurrency } from "@/lib/ledger/money";
 import { requireUserId } from "../../../_lib/current-user";
-import { PageHeader } from "../../../_components/PageHeader";
+import { loadUserPreferences } from "../../../_lib/user-preferences";
 import { LogPackFlow } from "../../../_components/LogPackFlow";
-import { SeriesBadge } from "../../../_components/SeriesBadge";
 
 interface PageProps {
   params: Promise<{ packId: string }>;
@@ -18,7 +18,7 @@ export default async function EditPackPage({ params }: PageProps) {
 
   const { data: pack, error } = await supabase
     .from("packs_opened")
-    .select("id, set_id, opened_at")
+    .select("id, set_id, opened_at, cost_cents, currency")
     .eq("id", packId)
     .eq("user_id", userId)
     .maybeSingle();
@@ -31,42 +31,25 @@ export default async function EditPackPage({ params }: PageProps) {
     .eq("pack_id", pack.id);
   if (contentsErr) throw new Error(contentsErr.message);
 
+  const prefs = await loadUserPreferences(userId);
   const setId = pack.set_id as string;
   const set = SETS.find((s) => s.id === setId);
   const initialPickedIds = (contents ?? []).map((r) => r.card_id as string);
-  const date = new Date(pack.opened_at as string);
+  const rawCurrency = pack.currency as string | null;
+  const initialCurrency = isLedgerCurrency(rawCurrency) ? rawCurrency : null;
 
   return (
-    <div className="mx-auto max-w-[1280px] space-y-6">
-      <PageHeader
-        eyebrow={
-          <span className="inline-flex items-center gap-2">
-            <span>Edit pack</span>
-            {set && <SeriesBadge series={set.series} />}
-          </span>
-        }
-        title={set?.name ?? setId}
-        subtitle={
-          <>
-            Opened {date.toLocaleDateString()}{" "}
-            {date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })} · Toggle cards
-            to add or remove them from this pack entry.
-          </>
-        }
-        right={
-          <Link
-            href="/packs"
-            className="rounded-md border border-border bg-panel-2 px-3 py-1.5 text-xs text-muted transition hover:text-text"
-          >
-            Back to history
-          </Link>
-        }
-      />
+    <div className="mx-auto max-w-[1280px]">
       <LogPackFlow
         initialSetId={setId}
+        defaultCurrency={PRICE_SOURCE_CURRENCY[prefs.priceSource]}
         editingPackId={pack.id as string}
+        editingSetName={set?.name ?? setId}
+        editingSetSeries={set?.series}
         initialPickedIds={initialPickedIds}
         initialOpenedAt={pack.opened_at as string}
+        initialCostCents={(pack.cost_cents as number | null) ?? null}
+        initialCurrency={initialCurrency}
       />
     </div>
   );
