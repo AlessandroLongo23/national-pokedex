@@ -44,6 +44,7 @@ const SET_CATEGORY: Record<string, string> = {
   me2: "Phantasmal Flames",
   me2pt5: "Ascended Heroes",
   me3: "Perfect Order",
+  me4: "Chaos Rising",
 };
 
 // Boosters yes, ancillary product no. "Booster" is the modern convention;

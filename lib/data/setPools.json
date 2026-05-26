@@ -107391,5 +107391,698 @@
       }
     ],
     "HyperRare": []
+  },
+  "me4": {
+    "Common": [
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          13
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          14
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          455
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          650
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          651
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          37
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          653
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          654
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          667
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          223
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          224
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          656
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          657
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          712
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          767
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          179
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          180
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          587
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          677
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          708
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          710
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          231
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          232
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          343
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          41
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          42
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          211
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          434
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          568
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          690
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          374
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          375
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          597
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          704
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          705
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          504
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          505
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          572
+        ]
+      }
+    ],
+    "Uncommon": [
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          38
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          225
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          713
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          768
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          386
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          386
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          386
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          386
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          678
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          185
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          344
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          435
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          569
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          376
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          598
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          128
+        ]
+      },
+      {
+        "supertype": "Trainer",
+        "dex": []
+      },
+      {
+        "supertype": "Trainer",
+        "dex": []
+      },
+      {
+        "supertype": "Trainer",
+        "dex": []
+      },
+      {
+        "supertype": "Trainer",
+        "dex": []
+      },
+      {
+        "supertype": "Trainer",
+        "dex": []
+      },
+      {
+        "supertype": "Trainer",
+        "dex": []
+      },
+      {
+        "supertype": "Trainer",
+        "dex": []
+      },
+      {
+        "supertype": "Trainer",
+        "dex": []
+      },
+      {
+        "supertype": "Trainer",
+        "dex": []
+      },
+      {
+        "supertype": "Trainer",
+        "dex": []
+      }
+    ],
+    "Rare": [
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          652
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          250
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          655
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          647
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          181
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          709
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          716
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          169
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          706
+        ]
+      },
+      {
+        "supertype": "Energy",
+        "dex": []
+      },
+      {
+        "supertype": "Energy",
+        "dex": []
+      },
+      {
+        "supertype": "Energy",
+        "dex": []
+      }
+    ],
+    "DoubleRare": [
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          15
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          668
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          658
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          670
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          711
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          475
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          553
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          638
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          691
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          573
+        ]
+      }
+    ],
+    "UltraRare": [
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          15
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          668
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          658
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          670
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          711
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          638
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          691
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          573
+        ]
+      },
+      {
+        "supertype": "Trainer",
+        "dex": []
+      },
+      {
+        "supertype": "Trainer",
+        "dex": []
+      },
+      {
+        "supertype": "Trainer",
+        "dex": []
+      },
+      {
+        "supertype": "Trainer",
+        "dex": []
+      },
+      {
+        "supertype": "Trainer",
+        "dex": []
+      },
+      {
+        "supertype": "Trainer",
+        "dex": []
+      },
+      {
+        "supertype": "Trainer",
+        "dex": []
+      },
+      {
+        "supertype": "Trainer",
+        "dex": []
+      },
+      {
+        "supertype": "Trainer",
+        "dex": []
+      },
+      {
+        "supertype": "Trainer",
+        "dex": []
+      }
+    ],
+    "IllustrationRare": [
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          650
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          656
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          657
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          181
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          716
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          344
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          169
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          375
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          705
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          128
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          505
+        ]
+      }
+    ],
+    "SpecialIllustrationRare": [
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          658
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          670
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          691
+        ]
+      },
+      {
+        "supertype": "Pokémon",
+        "dex": [
+          573
+        ]
+      },
+      {
+        "supertype": "Trainer",
+        "dex": []
+      },
+      {
+        "supertype": "Trainer",
+        "dex": []
+      }
+    ],
+    "HyperRare": []
   }
 }

@@ -15521,6 +15521,139 @@
       "regulationMark": "I",
       "imageSmall": "https://images.scrydex.com/pokemon/me3-117/small",
       "imageLarge": "https://images.scrydex.com/pokemon/me3-117/large"
+    },
+    {
+      "id": "me4-78",
+      "name": "Great Haul Net",
+      "setId": "me4",
+      "supertype": "Trainer",
+      "number": "78",
+      "numberInt": 78,
+      "rarity": "Uncommon",
+      "rarityRaw": "Uncommon",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Item"
+      ],
+      "artist": "Toyste Beach",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me4-78/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me4-78/large"
+    },
+    {
+      "id": "me4-82",
+      "name": "Special Red Card",
+      "setId": "me4",
+      "supertype": "Trainer",
+      "number": "82",
+      "numberInt": 82,
+      "rarity": "Uncommon",
+      "rarityRaw": "Uncommon",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Item"
+      ],
+      "artist": "Studio Bora Inc.",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me4-82/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me4-82/large"
+    },
+    {
+      "id": "me4-83",
+      "name": "Transformation Tome",
+      "setId": "me4",
+      "supertype": "Trainer",
+      "number": "83",
+      "numberInt": 83,
+      "rarity": "Uncommon",
+      "rarityRaw": "Uncommon",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Item"
+      ],
+      "artist": "Toyste Beach",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me4-83/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me4-83/large"
+    },
+    {
+      "id": "me4-108",
+      "name": "Energy Retrieval",
+      "setId": "me4",
+      "supertype": "Trainer",
+      "number": "108",
+      "numberInt": 108,
+      "rarity": "UltraRare",
+      "rarityRaw": "Ultra Rare",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Item"
+      ],
+      "artist": "Studio Bora Inc.",
+      "regulationMark": "I",
+      "imageSmall": "https://images.scrydex.com/pokemon/me4-108/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me4-108/large"
+    },
+    {
+      "id": "me4-109",
+      "name": "Jumbo Ice Cream",
+      "setId": "me4",
+      "supertype": "Trainer",
+      "number": "109",
+      "numberInt": 109,
+      "rarity": "UltraRare",
+      "rarityRaw": "Ultra Rare",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Item"
+      ],
+      "artist": "AYUMI ODASHIMA",
+      "regulationMark": "I",
+      "imageSmall": "https://images.scrydex.com/pokemon/me4-109/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me4-109/large"
+    },
+    {
+      "id": "me4-113",
+      "name": "Special Red Card",
+      "setId": "me4",
+      "supertype": "Trainer",
+      "number": "113",
+      "numberInt": 113,
+      "rarity": "UltraRare",
+      "rarityRaw": "Ultra Rare",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Item"
+      ],
+      "artist": "Studio Bora Inc.",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me4-113/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me4-113/large"
+    },
+    {
+      "id": "me4-115",
+      "name": "Tool Scrapper",
+      "setId": "me4",
+      "supertype": "Trainer",
+      "number": "115",
+      "numberInt": 115,
+      "rarity": "UltraRare",
+      "rarityRaw": "Ultra Rare",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Item"
+      ],
+      "artist": "Studio Bora Inc.",
+      "regulationMark": "I",
+      "imageSmall": "https://images.scrydex.com/pokemon/me4-115/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me4-115/large"
     }
   ],
   "supporters": [
@@ -36748,6 +36881,196 @@
       "regulationMark": "J",
       "imageSmall": "https://images.scrydex.com/pokemon/me3-123/small",
       "imageLarge": "https://images.scrydex.com/pokemon/me3-123/large"
+    },
+    {
+      "id": "me4-76",
+      "name": "AZ's Tranquility",
+      "setId": "me4",
+      "supertype": "Trainer",
+      "number": "76",
+      "numberInt": 76,
+      "rarity": "Uncommon",
+      "rarityRaw": "Uncommon",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Supporter"
+      ],
+      "artist": "GIDORA",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me4-76/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me4-76/large"
+    },
+    {
+      "id": "me4-77",
+      "name": "Emma",
+      "setId": "me4",
+      "supertype": "Trainer",
+      "number": "77",
+      "numberInt": 77,
+      "rarity": "Uncommon",
+      "rarityRaw": "Uncommon",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Supporter"
+      ],
+      "artist": "Akira Komayama",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me4-77/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me4-77/large"
+    },
+    {
+      "id": "me4-79",
+      "name": "Philippe",
+      "setId": "me4",
+      "supertype": "Trainer",
+      "number": "79",
+      "numberInt": 79,
+      "rarity": "Uncommon",
+      "rarityRaw": "Uncommon",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Supporter"
+      ],
+      "artist": "Souichirou Gunjima",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me4-79/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me4-79/large"
+    },
+    {
+      "id": "me4-81",
+      "name": "Roxie's Performance",
+      "setId": "me4",
+      "supertype": "Trainer",
+      "number": "81",
+      "numberInt": 81,
+      "rarity": "Uncommon",
+      "rarityRaw": "Uncommon",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Supporter"
+      ],
+      "artist": "Nobusawa/Mochipuyo",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me4-81/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me4-81/large"
+    },
+    {
+      "id": "me4-106",
+      "name": "AZ's Tranquility",
+      "setId": "me4",
+      "supertype": "Trainer",
+      "number": "106",
+      "numberInt": 106,
+      "rarity": "UltraRare",
+      "rarityRaw": "Ultra Rare",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Supporter"
+      ],
+      "artist": "GIDORA",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me4-106/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me4-106/large"
+    },
+    {
+      "id": "me4-107",
+      "name": "Emma",
+      "setId": "me4",
+      "supertype": "Trainer",
+      "number": "107",
+      "numberInt": 107,
+      "rarity": "UltraRare",
+      "rarityRaw": "Ultra Rare",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Supporter"
+      ],
+      "artist": "Akira Komayama",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me4-107/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me4-107/large"
+    },
+    {
+      "id": "me4-110",
+      "name": "Philippe",
+      "setId": "me4",
+      "supertype": "Trainer",
+      "number": "110",
+      "numberInt": 110,
+      "rarity": "UltraRare",
+      "rarityRaw": "Ultra Rare",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Supporter"
+      ],
+      "artist": "Souichirou Gunjima",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me4-110/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me4-110/large"
+    },
+    {
+      "id": "me4-112",
+      "name": "Roxie's Performance",
+      "setId": "me4",
+      "supertype": "Trainer",
+      "number": "112",
+      "numberInt": 112,
+      "rarity": "UltraRare",
+      "rarityRaw": "Ultra Rare",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Supporter"
+      ],
+      "artist": "Nobusawa/Mochipuyo",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me4-112/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me4-112/large"
+    },
+    {
+      "id": "me4-120",
+      "name": "AZ's Tranquility",
+      "setId": "me4",
+      "supertype": "Trainer",
+      "number": "120",
+      "numberInt": 120,
+      "rarity": "SpecialIllustrationRare",
+      "rarityRaw": "Special Illustration Rare",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Supporter"
+      ],
+      "artist": "OKACHEKE",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me4-120/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me4-120/large"
+    },
+    {
+      "id": "me4-121",
+      "name": "Roxie's Performance",
+      "setId": "me4",
+      "supertype": "Trainer",
+      "number": "121",
+      "numberInt": 121,
+      "rarity": "SpecialIllustrationRare",
+      "rarityRaw": "Special Illustration Rare",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Supporter"
+      ],
+      "artist": "Tomowaka",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me4-121/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me4-121/large"
     }
   ],
   "stadiums": [
@@ -41510,6 +41833,82 @@
       "regulationMark": "J",
       "imageSmall": "https://images.scrydex.com/pokemon/me3-111/small",
       "imageLarge": "https://images.scrydex.com/pokemon/me3-111/large"
+    },
+    {
+      "id": "me4-75",
+      "name": "Ange Floette",
+      "setId": "me4",
+      "supertype": "Trainer",
+      "number": "75",
+      "numberInt": 75,
+      "rarity": "Uncommon",
+      "rarityRaw": "Uncommon",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Stadium"
+      ],
+      "artist": "MARINA Chikazawa",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me4-75/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me4-75/large"
+    },
+    {
+      "id": "me4-80",
+      "name": "Prism Tower",
+      "setId": "me4",
+      "supertype": "Trainer",
+      "number": "80",
+      "numberInt": 80,
+      "rarity": "Uncommon",
+      "rarityRaw": "Uncommon",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Stadium"
+      ],
+      "artist": "MARINA Chikazawa",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me4-80/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me4-80/large"
+    },
+    {
+      "id": "me4-111",
+      "name": "Prism Tower",
+      "setId": "me4",
+      "supertype": "Trainer",
+      "number": "111",
+      "numberInt": 111,
+      "rarity": "UltraRare",
+      "rarityRaw": "Ultra Rare",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Stadium"
+      ],
+      "artist": "MARINA Chikazawa",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me4-111/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me4-111/large"
+    },
+    {
+      "id": "me4-114",
+      "name": "Surfing Beach",
+      "setId": "me4",
+      "supertype": "Trainer",
+      "number": "114",
+      "numberInt": 114,
+      "rarity": "UltraRare",
+      "rarityRaw": "Ultra Rare",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Stadium"
+      ],
+      "artist": "AYUMI ODASHIMA",
+      "regulationMark": "I",
+      "imageSmall": "https://images.scrydex.com/pokemon/me4-114/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me4-114/large"
     }
   ],
   "tools": [
@@ -47649,6 +48048,25 @@
       "regulationMark": "J",
       "imageSmall": "https://images.scrydex.com/pokemon/me3-70/small",
       "imageLarge": "https://images.scrydex.com/pokemon/me3-70/large"
+    },
+    {
+      "id": "me4-74",
+      "name": "Adversity Policy",
+      "setId": "me4",
+      "supertype": "Trainer",
+      "number": "74",
+      "numberInt": 74,
+      "rarity": "Uncommon",
+      "rarityRaw": "Uncommon",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Pokémon Tool"
+      ],
+      "artist": "Ayaka Yoshida",
+      "regulationMark": "I",
+      "imageSmall": "https://images.scrydex.com/pokemon/me4-74/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me4-74/large"
     }
   ],
   "energies": [
@@ -54227,6 +54645,60 @@
       "regulationMark": "J",
       "imageSmall": "https://images.scrydex.com/pokemon/me3-88/small",
       "imageLarge": "https://images.scrydex.com/pokemon/me3-88/large"
+    },
+    {
+      "id": "me4-84",
+      "name": "Bubbly Water Energy",
+      "setId": "me4",
+      "supertype": "Energy",
+      "number": "84",
+      "numberInt": 84,
+      "rarity": "Rare",
+      "rarityRaw": "Rare",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Special"
+      ],
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me4-84/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me4-84/large"
+    },
+    {
+      "id": "me4-85",
+      "name": "Magnetic Metal Energy",
+      "setId": "me4",
+      "supertype": "Energy",
+      "number": "85",
+      "numberInt": 85,
+      "rarity": "Rare",
+      "rarityRaw": "Rare",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Special"
+      ],
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me4-85/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me4-85/large"
+    },
+    {
+      "id": "me4-86",
+      "name": "Nitro Fire Energy",
+      "setId": "me4",
+      "supertype": "Energy",
+      "number": "86",
+      "numberInt": 86,
+      "rarity": "Rare",
+      "rarityRaw": "Rare",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Special"
+      ],
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me4-86/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me4-86/large"
     }
   ]
 }

@@ -1,0 +1,2889 @@
+[
+  {
+    "id": "me4-1",
+    "name": "Weedle",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "1",
+    "numberInt": 1,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      13
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 50,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "sowsow",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-1/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-1/large"
+  },
+  {
+    "id": "me4-2",
+    "name": "Kakuna",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "2",
+    "numberInt": 2,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      14
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Weedle",
+    "artist": "Mugi Hamada",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-2/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-2/large"
+  },
+  {
+    "id": "me4-3",
+    "name": "Beedrill ex",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "3",
+    "numberInt": 3,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      15
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 310,
+    "subtypes": [
+      "Stage 2",
+      "ex"
+    ],
+    "evolvesFrom": "Kakuna",
+    "artist": "toriyufu",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-3/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-3/large"
+  },
+  {
+    "id": "me4-4",
+    "name": "Carnivine",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "4",
+    "numberInt": 4,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      455
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Heisuke Kitazawa",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-4/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-4/large"
+  },
+  {
+    "id": "me4-5",
+    "name": "Chespin",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "5",
+    "numberInt": 5,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      650
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "HACCAN",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-5/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-5/large"
+  },
+  {
+    "id": "me4-6",
+    "name": "Quilladin",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "6",
+    "numberInt": 6,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      651
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Chespin",
+    "artist": "Hideki Ishikawa",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-6/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-6/large"
+  },
+  {
+    "id": "me4-7",
+    "name": "Chesnaught",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "7",
+    "numberInt": 7,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      652
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 180,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Quilladin",
+    "artist": "Uta",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-7/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-7/large"
+  },
+  {
+    "id": "me4-8",
+    "name": "Vulpix",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "8",
+    "numberInt": 8,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      37
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Yoshimoto Yoshimon",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-8/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-8/large"
+  },
+  {
+    "id": "me4-9",
+    "name": "Ninetales",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "9",
+    "numberInt": 9,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      38
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Vulpix",
+    "artist": "Ryuta Fuse",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-9/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-9/large"
+  },
+  {
+    "id": "me4-10",
+    "name": "Ho-Oh",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "10",
+    "numberInt": 10,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      250
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Takumi Wada",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-10/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-10/large"
+  },
+  {
+    "id": "me4-11",
+    "name": "Fennekin",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "11",
+    "numberInt": 11,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      653
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "saino misaki",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-11/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-11/large"
+  },
+  {
+    "id": "me4-12",
+    "name": "Braixen",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "12",
+    "numberInt": 12,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      654
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Fennekin",
+    "artist": "Taiga Kasai",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-12/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-12/large"
+  },
+  {
+    "id": "me4-13",
+    "name": "Delphox",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "13",
+    "numberInt": 13,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      655
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 160,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Braixen",
+    "artist": "Gemi",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-13/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-13/large"
+  },
+  {
+    "id": "me4-14",
+    "name": "Litleo",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "14",
+    "numberInt": 14,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      667
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mina Nakai",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-14/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-14/large"
+  },
+  {
+    "id": "me4-15",
+    "name": "Mega Pyroar ex",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "15",
+    "numberInt": 15,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      668
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 340,
+    "subtypes": [
+      "Stage 1",
+      "MEGA",
+      "ex"
+    ],
+    "evolvesFrom": "Litleo",
+    "artist": "Keisuke Azuma",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-15/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-15/large"
+  },
+  {
+    "id": "me4-16",
+    "name": "Remoraid",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "16",
+    "numberInt": 16,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      223
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mori You",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-16/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-16/large"
+  },
+  {
+    "id": "me4-17",
+    "name": "Octillery",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "17",
+    "numberInt": 17,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      224
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Remoraid",
+    "artist": "matazo",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-17/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-17/large"
+  },
+  {
+    "id": "me4-18",
+    "name": "Delibird",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "18",
+    "numberInt": 18,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      225
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Saboteri",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-18/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-18/large"
+  },
+  {
+    "id": "me4-19",
+    "name": "Keldeo",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "19",
+    "numberInt": 19,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      647
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mitsuhiro Arita",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-19/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-19/large"
+  },
+  {
+    "id": "me4-20",
+    "name": "Froakie",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "20",
+    "numberInt": 20,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      656
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kariya",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-20/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-20/large"
+  },
+  {
+    "id": "me4-21",
+    "name": "Frogadier",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "21",
+    "numberInt": 21,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      657
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Froakie",
+    "artist": "Nelnal",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-21/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-21/large"
+  },
+  {
+    "id": "me4-22",
+    "name": "Mega Greninja ex",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "22",
+    "numberInt": 22,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      658
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 350,
+    "subtypes": [
+      "Stage 2",
+      "MEGA",
+      "ex"
+    ],
+    "evolvesFrom": "Frogadier",
+    "artist": "takuyoa",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-22/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-22/large"
+  },
+  {
+    "id": "me4-23",
+    "name": "Bergmite",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "23",
+    "numberInt": 23,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      712
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Anesaki Dynamic",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-23/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-23/large"
+  },
+  {
+    "id": "me4-24",
+    "name": "Avalugg",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "24",
+    "numberInt": 24,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      713
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 160,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Bergmite",
+    "artist": "Tomoki Sone",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-24/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-24/large"
+  },
+  {
+    "id": "me4-25",
+    "name": "Wimpod",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "25",
+    "numberInt": 25,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      767
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "0313",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-25/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-25/large"
+  },
+  {
+    "id": "me4-26",
+    "name": "Golisopod",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "26",
+    "numberInt": 26,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      768
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Wimpod",
+    "artist": "Takeshi Nakamura",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-26/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-26/large"
+  },
+  {
+    "id": "me4-27",
+    "name": "Mareep",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "27",
+    "numberInt": 27,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      179
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "UKUMO viti",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-27/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-27/large"
+  },
+  {
+    "id": "me4-28",
+    "name": "Flaaffy",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "28",
+    "numberInt": 28,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      180
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Mareep",
+    "artist": "miki kudo",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-28/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-28/large"
+  },
+  {
+    "id": "me4-29",
+    "name": "Ampharos",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "29",
+    "numberInt": 29,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      181
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 160,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Flaaffy",
+    "artist": "CHORISO",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-29/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-29/large"
+  },
+  {
+    "id": "me4-30",
+    "name": "Emolga",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "30",
+    "numberInt": 30,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      587
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Kazumasa Yasukuni",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-30/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-30/large"
+  },
+  {
+    "id": "me4-31",
+    "name": "Deoxys",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "31",
+    "numberInt": 31,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      386
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Shiburingaru",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-31/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-31/large"
+  },
+  {
+    "id": "me4-32",
+    "name": "Deoxys",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "32",
+    "numberInt": 32,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      386
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "nagimiso",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-32/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-32/large"
+  },
+  {
+    "id": "me4-33",
+    "name": "Deoxys",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "33",
+    "numberInt": 33,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      386
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "GOSSAN",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-33/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-33/large"
+  },
+  {
+    "id": "me4-34",
+    "name": "Deoxys",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "34",
+    "numberInt": 34,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      386
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "hncl",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-34/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-34/large"
+  },
+  {
+    "id": "me4-35",
+    "name": "Mega Floette ex",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "35",
+    "numberInt": 35,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      670
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 250,
+    "subtypes": [
+      "Basic",
+      "MEGA",
+      "ex"
+    ],
+    "artist": "aky CG Works",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-35/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-35/large"
+  },
+  {
+    "id": "me4-36",
+    "name": "Espurr",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "36",
+    "numberInt": 36,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      677
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "sowsow",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-36/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-36/large"
+  },
+  {
+    "id": "me4-37",
+    "name": "Meowstic",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "37",
+    "numberInt": 37,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      678
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Espurr",
+    "artist": "mingo",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-37/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-37/large"
+  },
+  {
+    "id": "me4-38",
+    "name": "Phantump",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "38",
+    "numberInt": 38,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      708
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Taiga Kasai",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-38/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-38/large"
+  },
+  {
+    "id": "me4-39",
+    "name": "Trevenant",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "39",
+    "numberInt": 39,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      709
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Phantump",
+    "artist": "Uninori",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-39/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-39/large"
+  },
+  {
+    "id": "me4-40",
+    "name": "Pumpkaboo",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "40",
+    "numberInt": 40,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      710
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Jerky",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-40/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-40/large"
+  },
+  {
+    "id": "me4-41",
+    "name": "Gourgeist ex",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "41",
+    "numberInt": 41,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      711
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 270,
+    "subtypes": [
+      "Stage 1",
+      "ex"
+    ],
+    "evolvesFrom": "Pumpkaboo",
+    "artist": "5ban Graphics",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-41/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-41/large"
+  },
+  {
+    "id": "me4-42",
+    "name": "Xerneas",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "42",
+    "numberInt": 42,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      716
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "KEIICHIRO ITO",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-42/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-42/large"
+  },
+  {
+    "id": "me4-43",
+    "name": "Sudowoodo",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "43",
+    "numberInt": 43,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      185
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "GOTO minori",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-43/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-43/large"
+  },
+  {
+    "id": "me4-44",
+    "name": "Phanpy",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "44",
+    "numberInt": 44,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      231
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Akino Fukuji",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-44/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-44/large"
+  },
+  {
+    "id": "me4-45",
+    "name": "Donphan",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "45",
+    "numberInt": 45,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      232
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 150,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Phanpy",
+    "artist": "Julie Hang",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-45/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-45/large"
+  },
+  {
+    "id": "me4-46",
+    "name": "Baltoy",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "46",
+    "numberInt": 46,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      343
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Tomomi Ozaki",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-46/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-46/large"
+  },
+  {
+    "id": "me4-47",
+    "name": "Claydol",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "47",
+    "numberInt": 47,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      344
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Baltoy",
+    "artist": "Oswaldo KATO",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-47/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-47/large"
+  },
+  {
+    "id": "me4-48",
+    "name": "Mega Gallade ex",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "48",
+    "numberInt": 48,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      475
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 350,
+    "subtypes": [
+      "Stage 2",
+      "MEGA",
+      "ex"
+    ],
+    "evolvesFrom": "Kirlia",
+    "artist": "5ban Graphics",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-48/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-48/large"
+  },
+  {
+    "id": "me4-49",
+    "name": "Zubat",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "49",
+    "numberInt": 49,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      41
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 40,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Mékayu",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-49/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-49/large"
+  },
+  {
+    "id": "me4-50",
+    "name": "Golbat",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "50",
+    "numberInt": 50,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      42
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 80,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Zubat",
+    "artist": "Mousho",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-50/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-50/large"
+  },
+  {
+    "id": "me4-51",
+    "name": "Crobat",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "51",
+    "numberInt": 51,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      169
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Golbat",
+    "artist": "IKEDA Saki",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-51/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-51/large"
+  },
+  {
+    "id": "me4-52",
+    "name": "Qwilfish",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "52",
+    "numberInt": 52,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      211
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "nisimono",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-52/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-52/large"
+  },
+  {
+    "id": "me4-53",
+    "name": "Stunky",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "53",
+    "numberInt": 53,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      434
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Nobuhiro Imagawa",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-53/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-53/large"
+  },
+  {
+    "id": "me4-54",
+    "name": "Skuntank",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "54",
+    "numberInt": 54,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      435
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 110,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Stunky",
+    "artist": "Yuriko Akase",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-54/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-54/large"
+  },
+  {
+    "id": "me4-55",
+    "name": "Krookodile ex",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "55",
+    "numberInt": 55,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      553
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 320,
+    "subtypes": [
+      "Stage 2",
+      "ex"
+    ],
+    "evolvesFrom": "Krokorok",
+    "artist": "5ban Graphics",
+    "regulationMark": "I",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-55/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-55/large"
+  },
+  {
+    "id": "me4-56",
+    "name": "Trubbish",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "56",
+    "numberInt": 56,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      568
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Souichirou Gunjima",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-56/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-56/large"
+  },
+  {
+    "id": "me4-57",
+    "name": "Garbodor",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "57",
+    "numberInt": 57,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      569
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 140,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Trubbish",
+    "artist": "HYOGONOSUKE",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-57/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-57/large"
+  },
+  {
+    "id": "me4-58",
+    "name": "Skrelp",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "58",
+    "numberInt": 58,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      690
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Shimaris Yukichi",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-58/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-58/large"
+  },
+  {
+    "id": "me4-59",
+    "name": "Beldum",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "59",
+    "numberInt": 59,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      374
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "toi8",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-59/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-59/large"
+  },
+  {
+    "id": "me4-60",
+    "name": "Metang",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "60",
+    "numberInt": 60,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      375
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Beldum",
+    "artist": "Kazumasa Yasukuni",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-60/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-60/large"
+  },
+  {
+    "id": "me4-61",
+    "name": "Metagross",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "61",
+    "numberInt": 61,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      376
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 180,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Metang",
+    "artist": "Bun Toujo",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-61/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-61/large"
+  },
+  {
+    "id": "me4-62",
+    "name": "Ferroseed",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "62",
+    "numberInt": 62,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      597
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "OKUBO",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-62/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-62/large"
+  },
+  {
+    "id": "me4-63",
+    "name": "Ferrothorn",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "63",
+    "numberInt": 63,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      598
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Ferroseed",
+    "artist": "Haru Akasaka",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-63/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-63/large"
+  },
+  {
+    "id": "me4-64",
+    "name": "Cobalion ex",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "64",
+    "numberInt": 64,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      638
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 210,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "artist": "5ban Graphics",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-64/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-64/large"
+  },
+  {
+    "id": "me4-65",
+    "name": "Mega Dragalge ex",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "65",
+    "numberInt": 65,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      691
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 330,
+    "subtypes": [
+      "Stage 1",
+      "MEGA",
+      "ex"
+    ],
+    "evolvesFrom": "Skrelp",
+    "artist": "5ban Graphics",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-65/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-65/large"
+  },
+  {
+    "id": "me4-66",
+    "name": "Goomy",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "66",
+    "numberInt": 66,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      704
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 60,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Anesaki Dynamic",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-66/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-66/large"
+  },
+  {
+    "id": "me4-67",
+    "name": "Sliggoo",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "67",
+    "numberInt": 67,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      705
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Goomy",
+    "artist": "Yoriyuki Ikegami",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-67/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-67/large"
+  },
+  {
+    "id": "me4-68",
+    "name": "Goodra",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "68",
+    "numberInt": 68,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [
+      706
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 160,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Sliggoo",
+    "artist": "Tonji Matsuno",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-68/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-68/large"
+  },
+  {
+    "id": "me4-69",
+    "name": "Tauros",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "69",
+    "numberInt": 69,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [
+      128
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Satoshi Ito",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-69/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-69/large"
+  },
+  {
+    "id": "me4-70",
+    "name": "Patrat",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "70",
+    "numberInt": 70,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      504
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Souichirou Gunjima",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-70/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-70/large"
+  },
+  {
+    "id": "me4-71",
+    "name": "Watchog",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "71",
+    "numberInt": 71,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      505
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Patrat",
+    "artist": "Kouki Saitou",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-71/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-71/large"
+  },
+  {
+    "id": "me4-72",
+    "name": "Minccino",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "72",
+    "numberInt": 72,
+    "rarity": "Common",
+    "rarityRaw": "Common",
+    "dex": [
+      572
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "ryoma uratsuka",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-72/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-72/large"
+  },
+  {
+    "id": "me4-73",
+    "name": "Cinccino ex",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "73",
+    "numberInt": 73,
+    "rarity": "DoubleRare",
+    "rarityRaw": "Double Rare",
+    "dex": [
+      573
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 240,
+    "subtypes": [
+      "Stage 1",
+      "ex"
+    ],
+    "evolvesFrom": "Minccino",
+    "artist": "5ban Graphics",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-73/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-73/large"
+  },
+  {
+    "id": "me4-74",
+    "name": "Adversity Policy",
+    "setId": "me4",
+    "supertype": "Trainer",
+    "number": "74",
+    "numberInt": 74,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Pokémon Tool"
+    ],
+    "artist": "Ayaka Yoshida",
+    "regulationMark": "I",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-74/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-74/large"
+  },
+  {
+    "id": "me4-75",
+    "name": "Ange Floette",
+    "setId": "me4",
+    "supertype": "Trainer",
+    "number": "75",
+    "numberInt": 75,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Stadium"
+    ],
+    "artist": "MARINA Chikazawa",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-75/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-75/large"
+  },
+  {
+    "id": "me4-76",
+    "name": "AZ's Tranquility",
+    "setId": "me4",
+    "supertype": "Trainer",
+    "number": "76",
+    "numberInt": 76,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Supporter"
+    ],
+    "artist": "GIDORA",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-76/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-76/large"
+  },
+  {
+    "id": "me4-77",
+    "name": "Emma",
+    "setId": "me4",
+    "supertype": "Trainer",
+    "number": "77",
+    "numberInt": 77,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Supporter"
+    ],
+    "artist": "Akira Komayama",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-77/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-77/large"
+  },
+  {
+    "id": "me4-78",
+    "name": "Great Haul Net",
+    "setId": "me4",
+    "supertype": "Trainer",
+    "number": "78",
+    "numberInt": 78,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Item"
+    ],
+    "artist": "Toyste Beach",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-78/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-78/large"
+  },
+  {
+    "id": "me4-79",
+    "name": "Philippe",
+    "setId": "me4",
+    "supertype": "Trainer",
+    "number": "79",
+    "numberInt": 79,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Supporter"
+    ],
+    "artist": "Souichirou Gunjima",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-79/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-79/large"
+  },
+  {
+    "id": "me4-80",
+    "name": "Prism Tower",
+    "setId": "me4",
+    "supertype": "Trainer",
+    "number": "80",
+    "numberInt": 80,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Stadium"
+    ],
+    "artist": "MARINA Chikazawa",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-80/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-80/large"
+  },
+  {
+    "id": "me4-81",
+    "name": "Roxie's Performance",
+    "setId": "me4",
+    "supertype": "Trainer",
+    "number": "81",
+    "numberInt": 81,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Supporter"
+    ],
+    "artist": "Nobusawa/Mochipuyo",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-81/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-81/large"
+  },
+  {
+    "id": "me4-82",
+    "name": "Special Red Card",
+    "setId": "me4",
+    "supertype": "Trainer",
+    "number": "82",
+    "numberInt": 82,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Item"
+    ],
+    "artist": "Studio Bora Inc.",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-82/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-82/large"
+  },
+  {
+    "id": "me4-83",
+    "name": "Transformation Tome",
+    "setId": "me4",
+    "supertype": "Trainer",
+    "number": "83",
+    "numberInt": 83,
+    "rarity": "Uncommon",
+    "rarityRaw": "Uncommon",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Item"
+    ],
+    "artist": "Toyste Beach",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-83/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-83/large"
+  },
+  {
+    "id": "me4-84",
+    "name": "Bubbly Water Energy",
+    "setId": "me4",
+    "supertype": "Energy",
+    "number": "84",
+    "numberInt": 84,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Special"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-84/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-84/large"
+  },
+  {
+    "id": "me4-85",
+    "name": "Magnetic Metal Energy",
+    "setId": "me4",
+    "supertype": "Energy",
+    "number": "85",
+    "numberInt": 85,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Special"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-85/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-85/large"
+  },
+  {
+    "id": "me4-86",
+    "name": "Nitro Fire Energy",
+    "setId": "me4",
+    "supertype": "Energy",
+    "number": "86",
+    "numberInt": 86,
+    "rarity": "Rare",
+    "rarityRaw": "Rare",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Special"
+    ],
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-86/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-86/large"
+  },
+  {
+    "id": "me4-87",
+    "name": "Chespin",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "87",
+    "numberInt": 87,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      650
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Atsushi Furusawa",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-87/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-87/large"
+  },
+  {
+    "id": "me4-88",
+    "name": "Froakie",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "88",
+    "numberInt": 88,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      656
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 70,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Susumu Maeya",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-88/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-88/large"
+  },
+  {
+    "id": "me4-89",
+    "name": "Frogadier",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "89",
+    "numberInt": 89,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      657
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Froakie",
+    "artist": "Susumu Maeya",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-89/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-89/large"
+  },
+  {
+    "id": "me4-90",
+    "name": "Ampharos",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "90",
+    "numberInt": 90,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      181
+    ],
+    "types": [
+      "Lightning"
+    ],
+    "hp": 160,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Flaaffy",
+    "artist": "saino misaki",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-90/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-90/large"
+  },
+  {
+    "id": "me4-91",
+    "name": "Xerneas",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "91",
+    "numberInt": 91,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      716
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "YASHIRO Nanaco",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-91/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-91/large"
+  },
+  {
+    "id": "me4-92",
+    "name": "Claydol",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "92",
+    "numberInt": 92,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      344
+    ],
+    "types": [
+      "Fighting"
+    ],
+    "hp": 120,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Baltoy",
+    "artist": "matazo",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-92/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-92/large"
+  },
+  {
+    "id": "me4-93",
+    "name": "Crobat",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "93",
+    "numberInt": 93,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      169
+    ],
+    "types": [
+      "Darkness"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Stage 2"
+    ],
+    "evolvesFrom": "Golbat",
+    "artist": "Kazuhisa Uragami",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-93/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-93/large"
+  },
+  {
+    "id": "me4-94",
+    "name": "Metang",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "94",
+    "numberInt": 94,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      375
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Beldum",
+    "artist": "Kurata So",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-94/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-94/large"
+  },
+  {
+    "id": "me4-95",
+    "name": "Sliggoo",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "95",
+    "numberInt": 95,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      705
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 90,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Goomy",
+    "artist": "aspara",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-95/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-95/large"
+  },
+  {
+    "id": "me4-96",
+    "name": "Tauros",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "96",
+    "numberInt": 96,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      128
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 130,
+    "subtypes": [
+      "Basic"
+    ],
+    "artist": "Tsuyoshi Nagano",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-96/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-96/large"
+  },
+  {
+    "id": "me4-97",
+    "name": "Watchog",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "97",
+    "numberInt": 97,
+    "rarity": "IllustrationRare",
+    "rarityRaw": "Illustration Rare",
+    "dex": [
+      505
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 100,
+    "subtypes": [
+      "Stage 1"
+    ],
+    "evolvesFrom": "Patrat",
+    "artist": "MARINA Chikazawa",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-97/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-97/large"
+  },
+  {
+    "id": "me4-98",
+    "name": "Beedrill ex",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "98",
+    "numberInt": 98,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      15
+    ],
+    "types": [
+      "Grass"
+    ],
+    "hp": 310,
+    "subtypes": [
+      "Stage 2",
+      "ex"
+    ],
+    "evolvesFrom": "Kakuna",
+    "artist": "5ban Graphics",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-98/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-98/large"
+  },
+  {
+    "id": "me4-99",
+    "name": "Mega Pyroar ex",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "99",
+    "numberInt": 99,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      668
+    ],
+    "types": [
+      "Fire"
+    ],
+    "hp": 340,
+    "subtypes": [
+      "Stage 1",
+      "MEGA",
+      "ex"
+    ],
+    "evolvesFrom": "Litleo",
+    "artist": "Keisuke Azuma",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-99/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-99/large"
+  },
+  {
+    "id": "me4-100",
+    "name": "Mega Greninja ex",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "100",
+    "numberInt": 100,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      658
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 350,
+    "subtypes": [
+      "Stage 2",
+      "MEGA",
+      "ex"
+    ],
+    "evolvesFrom": "Frogadier",
+    "artist": "takuyoa",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-100/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-100/large"
+  },
+  {
+    "id": "me4-101",
+    "name": "Mega Floette ex",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "101",
+    "numberInt": 101,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      670
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 250,
+    "subtypes": [
+      "Basic",
+      "MEGA",
+      "ex"
+    ],
+    "artist": "aky CG Works",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-101/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-101/large"
+  },
+  {
+    "id": "me4-102",
+    "name": "Gourgeist ex",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "102",
+    "numberInt": 102,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      711
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 270,
+    "subtypes": [
+      "Stage 1",
+      "ex"
+    ],
+    "evolvesFrom": "Pumpkaboo",
+    "artist": "5ban Graphics",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-102/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-102/large"
+  },
+  {
+    "id": "me4-103",
+    "name": "Cobalion ex",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "103",
+    "numberInt": 103,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      638
+    ],
+    "types": [
+      "Metal"
+    ],
+    "hp": 210,
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "artist": "5ban Graphics",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-103/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-103/large"
+  },
+  {
+    "id": "me4-104",
+    "name": "Mega Dragalge ex",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "104",
+    "numberInt": 104,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      691
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 330,
+    "subtypes": [
+      "Stage 1",
+      "MEGA",
+      "ex"
+    ],
+    "evolvesFrom": "Skrelp",
+    "artist": "5ban Graphics",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-104/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-104/large"
+  },
+  {
+    "id": "me4-105",
+    "name": "Cinccino ex",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "105",
+    "numberInt": 105,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [
+      573
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 240,
+    "subtypes": [
+      "Stage 1",
+      "ex"
+    ],
+    "evolvesFrom": "Minccino",
+    "artist": "5ban Graphics",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-105/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-105/large"
+  },
+  {
+    "id": "me4-106",
+    "name": "AZ's Tranquility",
+    "setId": "me4",
+    "supertype": "Trainer",
+    "number": "106",
+    "numberInt": 106,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Supporter"
+    ],
+    "artist": "GIDORA",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-106/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-106/large"
+  },
+  {
+    "id": "me4-107",
+    "name": "Emma",
+    "setId": "me4",
+    "supertype": "Trainer",
+    "number": "107",
+    "numberInt": 107,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Supporter"
+    ],
+    "artist": "Akira Komayama",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-107/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-107/large"
+  },
+  {
+    "id": "me4-108",
+    "name": "Energy Retrieval",
+    "setId": "me4",
+    "supertype": "Trainer",
+    "number": "108",
+    "numberInt": 108,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Item"
+    ],
+    "artist": "Studio Bora Inc.",
+    "regulationMark": "I",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-108/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-108/large"
+  },
+  {
+    "id": "me4-109",
+    "name": "Jumbo Ice Cream",
+    "setId": "me4",
+    "supertype": "Trainer",
+    "number": "109",
+    "numberInt": 109,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Item"
+    ],
+    "artist": "AYUMI ODASHIMA",
+    "regulationMark": "I",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-109/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-109/large"
+  },
+  {
+    "id": "me4-110",
+    "name": "Philippe",
+    "setId": "me4",
+    "supertype": "Trainer",
+    "number": "110",
+    "numberInt": 110,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Supporter"
+    ],
+    "artist": "Souichirou Gunjima",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-110/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-110/large"
+  },
+  {
+    "id": "me4-111",
+    "name": "Prism Tower",
+    "setId": "me4",
+    "supertype": "Trainer",
+    "number": "111",
+    "numberInt": 111,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Stadium"
+    ],
+    "artist": "MARINA Chikazawa",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-111/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-111/large"
+  },
+  {
+    "id": "me4-112",
+    "name": "Roxie's Performance",
+    "setId": "me4",
+    "supertype": "Trainer",
+    "number": "112",
+    "numberInt": 112,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Supporter"
+    ],
+    "artist": "Nobusawa/Mochipuyo",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-112/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-112/large"
+  },
+  {
+    "id": "me4-113",
+    "name": "Special Red Card",
+    "setId": "me4",
+    "supertype": "Trainer",
+    "number": "113",
+    "numberInt": 113,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Item"
+    ],
+    "artist": "Studio Bora Inc.",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-113/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-113/large"
+  },
+  {
+    "id": "me4-114",
+    "name": "Surfing Beach",
+    "setId": "me4",
+    "supertype": "Trainer",
+    "number": "114",
+    "numberInt": 114,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Stadium"
+    ],
+    "artist": "AYUMI ODASHIMA",
+    "regulationMark": "I",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-114/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-114/large"
+  },
+  {
+    "id": "me4-115",
+    "name": "Tool Scrapper",
+    "setId": "me4",
+    "supertype": "Trainer",
+    "number": "115",
+    "numberInt": 115,
+    "rarity": "UltraRare",
+    "rarityRaw": "Ultra Rare",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Item"
+    ],
+    "artist": "Studio Bora Inc.",
+    "regulationMark": "I",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-115/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-115/large"
+  },
+  {
+    "id": "me4-116",
+    "name": "Mega Greninja ex",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "116",
+    "numberInt": 116,
+    "rarity": "SpecialIllustrationRare",
+    "rarityRaw": "Special Illustration Rare",
+    "dex": [
+      658
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 350,
+    "subtypes": [
+      "Stage 2",
+      "MEGA",
+      "ex"
+    ],
+    "evolvesFrom": "Frogadier",
+    "artist": "Susumu Maeya",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-116/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-116/large"
+  },
+  {
+    "id": "me4-117",
+    "name": "Mega Floette ex",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "117",
+    "numberInt": 117,
+    "rarity": "SpecialIllustrationRare",
+    "rarityRaw": "Special Illustration Rare",
+    "dex": [
+      670
+    ],
+    "types": [
+      "Psychic"
+    ],
+    "hp": 250,
+    "subtypes": [
+      "Basic",
+      "MEGA",
+      "ex"
+    ],
+    "artist": "Teeziro",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-117/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-117/large"
+  },
+  {
+    "id": "me4-118",
+    "name": "Mega Dragalge ex",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "118",
+    "numberInt": 118,
+    "rarity": "SpecialIllustrationRare",
+    "rarityRaw": "Special Illustration Rare",
+    "dex": [
+      691
+    ],
+    "types": [
+      "Dragon"
+    ],
+    "hp": 330,
+    "subtypes": [
+      "Stage 1",
+      "MEGA",
+      "ex"
+    ],
+    "evolvesFrom": "Skrelp",
+    "artist": "Kazumasa Yasukunio",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-118/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-118/large"
+  },
+  {
+    "id": "me4-119",
+    "name": "Cinccino ex",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "119",
+    "numberInt": 119,
+    "rarity": "SpecialIllustrationRare",
+    "rarityRaw": "Special Illustration Rare",
+    "dex": [
+      573
+    ],
+    "types": [
+      "Colorless"
+    ],
+    "hp": 240,
+    "subtypes": [
+      "Stage 1",
+      "ex"
+    ],
+    "evolvesFrom": "Minccino",
+    "artist": "Keisin",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-119/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-119/large"
+  },
+  {
+    "id": "me4-120",
+    "name": "AZ's Tranquility",
+    "setId": "me4",
+    "supertype": "Trainer",
+    "number": "120",
+    "numberInt": 120,
+    "rarity": "SpecialIllustrationRare",
+    "rarityRaw": "Special Illustration Rare",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Supporter"
+    ],
+    "artist": "OKACHEKE",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-120/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-120/large"
+  },
+  {
+    "id": "me4-121",
+    "name": "Roxie's Performance",
+    "setId": "me4",
+    "supertype": "Trainer",
+    "number": "121",
+    "numberInt": 121,
+    "rarity": "SpecialIllustrationRare",
+    "rarityRaw": "Special Illustration Rare",
+    "dex": [],
+    "types": [],
+    "subtypes": [
+      "Supporter"
+    ],
+    "artist": "Tomowaka",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-121/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-121/large"
+  },
+  {
+    "id": "me4-122",
+    "name": "Mega Greninja ex",
+    "setId": "me4",
+    "supertype": "Pokémon",
+    "number": "122",
+    "numberInt": 122,
+    "rarity": "Unknown",
+    "rarityRaw": "Mega Hyper Rare",
+    "dex": [
+      658
+    ],
+    "types": [
+      "Water"
+    ],
+    "hp": 350,
+    "subtypes": [
+      "Stage 2",
+      "MEGA",
+      "ex"
+    ],
+    "evolvesFrom": "Frogadier",
+    "artist": "takuyoa",
+    "regulationMark": "J",
+    "imageSmall": "https://images.scrydex.com/pokemon/me4-122/small",
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-122/large"
+  }
+]
