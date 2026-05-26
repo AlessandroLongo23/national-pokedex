@@ -5,10 +5,10 @@ import type { CardEntry } from "@/lib/data/types";
 import { sortCards, type CardSort } from "../../_lib/card-sort";
 import { VirtualizedCardGrid } from "./VirtualizedCardGrid";
 import {
-  CardsFiltersToolbar,
+  CardFiltersToolbar,
   emptyFilters,
   type CardsFilterState,
-} from "./CardsFiltersToolbar";
+} from "../../_components/CardFiltersToolbar";
 
 const SIZE_STORAGE_KEY = "cardgrid.size.cards-catalog";
 
@@ -102,7 +102,7 @@ export function CardsBrowser({ cards, artists, types }: Props) {
 
   return (
     <div className="space-y-3">
-      <CardsFiltersToolbar
+      <CardFiltersToolbar
         filters={filters}
         onFiltersChange={setFilters}
         sort={sort}

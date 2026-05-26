@@ -6,11 +6,23 @@ import { SETS } from "@/lib/data";
 import {
   RARITY_LABEL,
   RARITY_ORDER,
+  type Generation,
   type Rarity,
   type SetInfo,
   type Supertype,
 } from "@/lib/data/types";
-import type { CardSort } from "../../_lib/card-sort";
+import { PRICE_SOURCE_CURRENCY } from "@/lib/pricing/pokemontcg";
+import type { CardSort } from "../_lib/card-sort";
+import {
+  GENERATIONS,
+  GENERATION_LABEL,
+  PRICE_BUCKETS,
+  REGIONAL_FORMS,
+  priceBucketLabel,
+  type PriceBucket,
+  type RegionalForm,
+} from "../_lib/card-filters";
+import { useUser } from "../_lib/UserContext";
 
 export type SupertypeFilter = "all" | Supertype;
 
@@ -23,6 +35,17 @@ export interface CardsFilterState {
   artist: string | null;
   dexFrom: number | null;
   dexTo: number | null;
+  // New dimensions — only surfaced when the corresponding feature flag is on.
+  // Always present on the state object so consumers don't have to null-check.
+  priceBuckets: Set<PriceBucket>;
+  generations: Set<Generation>;
+  regionalForms: Set<RegionalForm>;
+}
+
+export interface CardFiltersFeatures {
+  showPrice?: boolean;
+  showGeneration?: boolean;
+  showRegionalForm?: boolean;
 }
 
 interface Props {
@@ -36,6 +59,7 @@ interface Props {
   totalCount: number;
   artists: string[];
   types: string[];
+  features?: CardFiltersFeatures;
 }
 
 const SUPERTYPES: { value: SupertypeFilter; label: string }[] = [
@@ -61,7 +85,10 @@ function isFiltersDirty(f: CardsFilterState): boolean {
     f.types.size > 0 ||
     f.artist !== null ||
     f.dexFrom !== null ||
-    f.dexTo !== null
+    f.dexTo !== null ||
+    f.priceBuckets.size > 0 ||
+    f.generations.size > 0 ||
+    f.regionalForms.size > 0
   );
 }
 
@@ -79,10 +106,13 @@ export function emptyFilters(): CardsFilterState {
     artist: null,
     dexFrom: null,
     dexTo: null,
+    priceBuckets: new Set(),
+    generations: new Set(),
+    regionalForms: new Set(),
   };
 }
 
-export function CardsFiltersToolbar({
+export function CardFiltersToolbar({
   filters,
   onFiltersChange,
   sort,
@@ -93,6 +123,7 @@ export function CardsFiltersToolbar({
   totalCount,
   artists,
   types,
+  features = {},
 }: Props) {
   const update = (patch: Partial<CardsFilterState>) =>
     onFiltersChange({ ...filters, ...patch });
@@ -111,7 +142,32 @@ export function CardsFiltersToolbar({
     update({ types: next });
   };
 
+  const togglePriceBucket = (b: PriceBucket) => {
+    const next = new Set(filters.priceBuckets);
+    if (next.has(b)) next.delete(b);
+    else next.add(b);
+    update({ priceBuckets: next });
+  };
+
+  const toggleGeneration = (g: Generation) => {
+    const next = new Set(filters.generations);
+    if (next.has(g)) next.delete(g);
+    else next.add(g);
+    update({ generations: next });
+  };
+
+  const toggleRegionalForm = (f: RegionalForm) => {
+    const next = new Set(filters.regionalForms);
+    if (next.has(f)) next.delete(f);
+    else next.add(f);
+    update({ regionalForms: next });
+  };
+
   const dirty = isFiltersDirty(filters);
+  const { priceSource } = useUser();
+  const currencySymbol = PRICE_SOURCE_CURRENCY[priceSource] === "EUR" ? "€" : "$";
+  const showRow3 =
+    features.showPrice || features.showGeneration || features.showRegionalForm;
 
   return (
     <div className="sticky top-2 z-10 space-y-2 rounded-lg border border-border bg-panel/90 p-3 backdrop-blur shadow-[0_4px_16px_-8px_rgb(0_0_0/0.6)]">
@@ -262,6 +318,84 @@ export function CardsFiltersToolbar({
           )}
         </div>
       </div>
+
+      {showRow3 && (
+        <div className="flex flex-wrap items-center gap-2 border-t border-border pt-2">
+          {features.showPrice && (
+            <ChipGroup label="Price">
+              {PRICE_BUCKETS.map((b) => {
+                const active = filters.priceBuckets.has(b);
+                return (
+                  <button
+                    key={b}
+                    type="button"
+                    onClick={() => togglePriceBucket(b)}
+                    className={chipClass(active)}
+                  >
+                    {priceBucketLabel(b, currencySymbol)}
+                  </button>
+                );
+              })}
+            </ChipGroup>
+          )}
+
+          {features.showGeneration && (
+            <ChipGroup label="Region">
+              {GENERATIONS.map((g) => {
+                const active = filters.generations.has(g);
+                return (
+                  <button
+                    key={g}
+                    type="button"
+                    onClick={() => toggleGeneration(g)}
+                    className={chipClass(active)}
+                  >
+                    {GENERATION_LABEL[g]}
+                  </button>
+                );
+              })}
+            </ChipGroup>
+          )}
+
+          {features.showRegionalForm && (
+            <ChipGroup label="Form">
+              {REGIONAL_FORMS.map((f) => {
+                const active = filters.regionalForms.has(f);
+                return (
+                  <button
+                    key={f}
+                    type="button"
+                    onClick={() => toggleRegionalForm(f)}
+                    className={chipClass(active)}
+                  >
+                    {f}
+                  </button>
+                );
+              })}
+            </ChipGroup>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function chipClass(active: boolean): string {
+  return [
+    "rounded-md border px-2 py-0.5 text-[11px] font-medium transition",
+    active
+      ? "border-accent bg-accent/15 text-accent"
+      : "border-border bg-panel-2 text-muted hover:border-border-strong hover:text-text",
+  ].join(" ");
+}
+
+function ChipGroup({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <div className="flex flex-wrap items-center gap-1">
+      <span className="mr-1 text-[10px] font-semibold uppercase tracking-wider text-muted/80">
+        {label}
+      </span>
+      {children}
     </div>
   );
 }
