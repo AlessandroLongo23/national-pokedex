@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useTransition } from "react";
 import { SETS } from "@/lib/data";
 import { deletePack } from "../_lib/pack-actions";
-import { useCardPreview } from "../_lib/CardPreviewContext";
 import { SeriesBadge } from "./SeriesBadge";
 
 // One TCG card aspect ratio (~245 × 342). Bumping the thumbnail to make
@@ -74,7 +73,6 @@ function Row({
   series: string;
 }) {
   const [pending, start] = useTransition();
-  const { open: openPreview } = useCardPreview();
   const date = new Date(item.openedAt);
   return (
     <li className="rounded-lg border border-border bg-panel p-4">
@@ -120,16 +118,13 @@ function Row({
       {item.cards.length > 0 && (
         <div className="mt-3 flex flex-wrap items-end gap-2">
           {item.cards.map((c) => (
-            <button
+            <Link
               key={c.cardId}
-              type="button"
-              onClick={(e) =>
-                openPreview(c.cardId, e.currentTarget.getBoundingClientRect())
-              }
-              data-preview-trigger={c.cardId}
-              aria-label={`Preview ${c.name}`}
+              href={`/cards/${encodeURIComponent(c.cardId)}`}
+              prefetch={false}
+              aria-label={`Open ${c.name}`}
               title={c.name}
-              className="cursor-zoom-in rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              className="rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -139,7 +134,7 @@ function Row({
                 className="rounded-md bg-panel-2 object-cover"
                 style={{ width: CARD_W, height: CARD_H }}
               />
-            </button>
+            </Link>
           ))}
         </div>
       )}

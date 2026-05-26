@@ -9,7 +9,6 @@ import {
   type CardPrice,
   type PriceSource,
 } from "@/lib/pricing/pokemontcg";
-import { useCardPreview } from "../../_lib/CardPreviewContext";
 
 interface Props {
   cards: CardEntry[];
@@ -19,11 +18,8 @@ interface Props {
 
 // Compact, scannable strip — narrower tiles than CardRail (w-24 vs w-32)
 // so more pulls fit above the fold, with each tile annotated by price
-// and set code. Clicking opens the same fullscreen preview the rest of
-// the app uses, so we don't ship a redundant action surface here.
+// and set code.
 export function RecentPullsStrip({ cards, prices, priceSource }: Props) {
-  const { open } = useCardPreview();
-
   return (
     <section className="space-y-3" data-rail="recent-pack-pulls">
       <header className="flex items-baseline justify-between gap-3">
@@ -53,12 +49,12 @@ export function RecentPullsStrip({ cards, prices, priceSource }: Props) {
           {cards.map((card) => {
             const price = pickPrice(prices[card.id], priceSource);
             return (
-              <button
+              <Link
                 key={card.id}
-                type="button"
-                onClick={(e) => open(card, e.currentTarget.getBoundingClientRect())}
+                href={`/cards/${encodeURIComponent(card.id)}`}
+                prefetch={false}
                 className="group w-24 shrink-0 snap-start text-left focus-visible:outline-none"
-                aria-label={`Preview ${card.name}`}
+                aria-label={`Open ${card.name}`}
               >
                 <div
                   className="overflow-hidden rounded-[5px] border border-transparent bg-panel-2 transition group-hover:border-border-strong group-focus-visible:border-accent"
@@ -80,7 +76,7 @@ export function RecentPullsStrip({ cards, prices, priceSource }: Props) {
                     {price != null ? formatPriceCompact(price, priceSource) : "—"}
                   </span>
                 </div>
-              </button>
+              </Link>
             );
           })}
         </div>

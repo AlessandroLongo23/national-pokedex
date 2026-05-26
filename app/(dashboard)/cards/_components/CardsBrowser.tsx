@@ -3,7 +3,6 @@
 import { useEffect, useMemo, useState } from "react";
 import type { CardEntry } from "@/lib/data/types";
 import { sortCards, type CardSort } from "../../_lib/card-sort";
-import { useCardPreview } from "../../_lib/CardPreviewContext";
 import { VirtualizedCardGrid } from "./VirtualizedCardGrid";
 import {
   CardsFiltersToolbar,
@@ -100,15 +99,6 @@ export function CardsBrowser({ cards, artists, types }: Props) {
   );
 
   const sorted = useMemo(() => sortCards(filtered, sort), [filtered, sort]);
-
-  // Register the ordered list with the preview overlay so prev/next can step
-  // across cards whose tiles aren't currently mounted by the virtualizer.
-  const { setNavigationList } = useCardPreview();
-  const sortedIds = useMemo(() => sorted.map((c) => c.id), [sorted]);
-  useEffect(() => {
-    setNavigationList(sortedIds);
-    return () => setNavigationList(null);
-  }, [sortedIds, setNavigationList]);
 
   return (
     <div className="space-y-3">

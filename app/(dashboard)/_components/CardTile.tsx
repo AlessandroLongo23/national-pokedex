@@ -8,7 +8,6 @@ import type { CardEntry, Rarity } from "@/lib/data/types";
 import { useOwnedCards } from "../_lib/OwnedCardsContext";
 import { useWishlist } from "../_lib/WishlistContext";
 import { useFavorites } from "../_lib/FavoritesContext";
-import { useCardPreview } from "../_lib/CardPreviewContext";
 import { useCardPrice } from "../_lib/CardPricesContext";
 import { useUser } from "../_lib/UserContext";
 import { formatPriceCompact, pickPrice } from "@/lib/pricing/pokemontcg";
@@ -66,7 +65,6 @@ function TileBase({
   const { isOwned, toggle: toggleOwned, adjust: adjustOwned, quantityOf } = useOwnedCards();
   const { isWishlisted, toggle: toggleWishlist } = useWishlist();
   const { isFavorited, toggle: toggleFavorite } = useFavorites();
-  const { open: openPreview } = useCardPreview();
   const { priceSource } = useUser();
   const priceData = useCardPrice(card.id);
   // pickPrice returns undefined when this card has no row in the current
@@ -79,11 +77,6 @@ function TileBase({
   const favorited = isFavorited(card.id);
   const set = getSet(card.setId);
 
-  const handleCardClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    if (selectMode && onSelect) onSelect(card.id);
-    else if (!selectMode) openPreview(card, e.currentTarget.getBoundingClientRect());
-  };
-
   const imageBorder = selected
     ? "ring-2 ring-accent ring-offset-0 border-accent"
     : owned
@@ -93,6 +86,10 @@ function TileBase({
         : "border-transparent group-hover:border-border-strong/70";
 
   const detailsHref = card.dex.length > 0 ? `/pokedex/${card.dex[0]}` : null;
+  const imageClassName = [
+    "relative block w-full cursor-pointer overflow-hidden rounded-[6px] border bg-panel-2 transition",
+    imageBorder,
+  ].join(" ");
 
   return (
     <div
@@ -105,32 +102,45 @@ function TileBase({
       data-favorited={favorited ? "true" : "false"}
     >
       <div className="relative">
-        <button
-          type="button"
-          onClick={handleCardClick}
-          data-preview-trigger={selectMode ? undefined : card.id}
-          className={[
-            "relative block w-full overflow-hidden rounded-[6px] border bg-panel-2 transition",
-            imageBorder,
-            selectMode ? "cursor-pointer" : "cursor-zoom-in",
-          ].join(" ")}
-          style={{ aspectRatio: "245 / 342" }}
-          aria-label={selectMode ? `Toggle ${card.name}` : `Preview ${card.name}`}
-          tabIndex={0}
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={card.imageSmall}
-            alt={card.name}
-            loading="lazy"
-            className="h-full w-full object-cover"
-          />
-          {selected && (
-            <span className="pointer-events-none absolute top-1 right-1 flex h-7 w-7 items-center justify-center rounded-full bg-accent text-bg">
-              <Check className="h-3.5 w-3.5" strokeWidth={3} aria-hidden />
-            </span>
-          )}
-        </button>
+        {selectMode ? (
+          <button
+            type="button"
+            onClick={() => onSelect?.(card.id)}
+            className={imageClassName}
+            style={{ aspectRatio: "245 / 342" }}
+            aria-label={`Toggle ${card.name}`}
+            tabIndex={0}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={card.imageSmall}
+              alt={card.name}
+              loading="lazy"
+              className="h-full w-full object-cover"
+            />
+            {selected && (
+              <span className="pointer-events-none absolute top-1 right-1 flex h-7 w-7 items-center justify-center rounded-full bg-accent text-bg">
+                <Check className="h-3.5 w-3.5" strokeWidth={3} aria-hidden />
+              </span>
+            )}
+          </button>
+        ) : (
+          <Link
+            href={`/cards/${encodeURIComponent(card.id)}`}
+            prefetch={false}
+            className={imageClassName}
+            style={{ aspectRatio: "245 / 342" }}
+            aria-label={`Open ${card.name}`}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={card.imageSmall}
+              alt={card.name}
+              loading="lazy"
+              className="h-full w-full object-cover"
+            />
+          </Link>
+        )}
 
       </div>
 
