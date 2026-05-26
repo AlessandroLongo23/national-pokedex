@@ -6,6 +6,7 @@ import setPools from "./setPools.json";
 import cardIndex from "./cardIndex.json";
 import species from "./species.json";
 import boosters from "./boosters.json";
+import tcgcsvMap from "./tcgcsvMap.json";
 import type {
   BoosterManifest,
   CardEntry,
@@ -16,6 +17,7 @@ import type {
   SetInfo,
   SetPools,
   SpeciesIndex,
+  TcgCsvMap,
 } from "./types";
 import type { OtherCardsBySubtype, OtherSubtype } from "./other-subtypes";
 
@@ -27,6 +29,7 @@ export const SET_POOLS = setPools as SetPools;
 export const CARD_INDEX = cardIndex as CardIndex;
 export const SPECIES = species as SpeciesIndex;
 export const BOOSTERS = boosters as BoosterManifest;
+export const TCGCSV_MAP = tcgcsvMap as TcgCsvMap;
 
 export function getSet(setId: string): SetInfo | undefined {
   return SETS.find((s) => s.id === setId);

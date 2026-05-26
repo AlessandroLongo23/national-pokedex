@@ -66,6 +66,17 @@ export interface BoosterWrapper {
 
 export type BoosterManifest = Record<string, BoosterWrapper[]>;
 
+// Maps from pokemontcg.io identifiers to TCGplayer identifiers, harvested
+// from tcgcsv.com. Used at runtime as a TCGplayer-price fallback for sets
+// where pokemontcg.io's nightly price snapshot is empty (typically new
+// releases).
+export interface TcgCsvMap {
+  // pokemontcg.io setId → tcgcsv groupId
+  groups: Record<string, number>;
+  // pokemontcg.io cardId → tcgplayer productId
+  products: Record<string, number>;
+}
+
 export interface CardEntry {
   id: string;
   name: string;

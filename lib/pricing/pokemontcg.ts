@@ -4,8 +4,14 @@
 // Next.js's `fetch` cache for revalidation — no DB table, no cron, no
 // static JSON of prices to keep in sync.
 //
-// Constraint from CLAUDE.md: only free pokemontcg.io is allowed. Never
-// the paid Scrydex endpoints.
+// For TCGplayer (USD), we additionally fall back to tcgcsv.com when
+// pokemontcg.io's snapshot is missing a card (typical on new-set release
+// days). See lib/pricing/tcgcsv.ts.
+//
+// Constraint from CLAUDE.md: only free sources allowed. Never the paid
+// Scrydex endpoints.
+
+import { fetchSetTcgplayerFallback } from "./tcgcsv";
 
 const API_BASE = "https://api.pokemontcg.io/v2";
 // 24h: prices move daily but not minute-by-minute; this is well below the
@@ -133,12 +139,17 @@ async function fetchSetCardsPage(setId: string, page: number): Promise<ApiRespon
 // page crash).
 export async function fetchSetPrices(setId: string): Promise<Map<string, CardPrice>> {
   const out = new Map<string, CardPrice>();
+  // Track every card pokemontcg.io returned (even with no prices) so the
+  // fallback pass below knows whose TCGplayer slot needs filling vs which
+  // cards just aren't in the set at all.
+  const seenIds = new Set<string>();
   try {
     let page = 1;
     while (true) {
       const json = await fetchSetCardsPage(setId, page);
       const rows = json.data ?? [];
       for (const row of rows) {
+        seenIds.add(row.id);
         const price: CardPrice = {
           tcgplayer: pickTcgplayerPrice(row.tcgplayer?.prices),
           cardmarket: pickCardmarketPrice(row.cardmarket?.prices),
@@ -155,6 +166,22 @@ export async function fetchSetPrices(setId: string): Promise<Map<string, CardPri
   } catch (err) {
     console.warn(`[pricing] fetchSetPrices(${setId}) failed:`, err);
   }
+
+  // Fill in TCGplayer prices for cards pokemontcg.io didn't price (or
+  // didn't even return) using the tcgcsv mirror. We only overwrite empty
+  // slots — pokemontcg.io stays the source of truth when both have data.
+  const fallback = await fetchSetTcgplayerFallback(setId);
+  if (fallback.size > 0) {
+    for (const [cardId, tcgplayer] of fallback) {
+      const existing = out.get(cardId);
+      if (!existing) {
+        out.set(cardId, { tcgplayer });
+      } else if (existing.tcgplayer == null) {
+        out.set(cardId, { ...existing, tcgplayer });
+      }
+    }
+  }
+
   return out;
 }
 

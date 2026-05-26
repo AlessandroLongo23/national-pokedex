@@ -7,6 +7,7 @@ import { computeCoverage } from "./coverage";
 import { computeGreedyOrder } from "./greedy";
 import { fetchSpecies } from "./fetchSpecies";
 import { fetchBoosters } from "./fetchBoosters";
+import { fetchTcgCsvMap } from "./fetchTcgCsv";
 import type { CardEntry, CardIndex, SetInfo, SetPools } from "@/lib/data/types";
 import {
   OTHER_SUBTYPES,
@@ -126,6 +127,15 @@ async function main() {
     `[ingest] boosters: ${wrapperCount} wrappers across ${Object.keys(boosters).length} sets`,
   );
 
+  // tcgcsv mirror is queried for every set whose name we can match; older
+  // sets rarely trigger the runtime fallback (pokemontcg.io's snapshot is
+  // already complete for them) but having the map keeps the fallback safe
+  // for any one-off missing card too.
+  const tcgcsvMap = await fetchTcgCsvMap(sets);
+  console.log(
+    `[ingest] tcgcsv: ${Object.keys(tcgcsvMap.groups).length} sets mapped, ${Object.keys(tcgcsvMap.products).length} cards`,
+  );
+
   const otherCardsBySubtype: OtherCardsBySubtype = {
     items: [],
     supporters: [],
@@ -169,6 +179,7 @@ async function main() {
   writeJson(path.join(dataDir, "cardIndex.json"), cardIndex);
   writeJson(path.join(dataDir, "species.json"), species);
   writeJson(path.join(dataDir, "boosters.json"), boosters);
+  writeJson(path.join(dataDir, "tcgcsvMap.json"), tcgcsvMap);
   writeJson(path.join(dataDir, "otherCardsBySubtype.json"), otherCardsBySubtype);
 
   console.log(`[ingest] wrote ${Object.keys(cardsBySet).length} per-set card files`);
