@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { signIn } from "./actions";
+import { signUp } from "./actions";
 import { Logo } from "@/app/(dashboard)/_components/Logo";
 
-export default async function LoginPage({
+export default async function RegisterPage({
   searchParams,
 }: {
-  searchParams: Promise<{ error?: string }>;
+  searchParams: Promise<{ sent?: string; error?: string }>;
 }) {
   const params = await searchParams;
   return (
@@ -13,7 +13,7 @@ export default async function LoginPage({
       <h1 className="mb-8">
         <Logo />
       </h1>
-      <form action={signIn} className="space-y-3">
+      <form action={signUp} className="space-y-3">
         <label className="block">
           <span className="sr-only">Email</span>
           <input
@@ -31,8 +31,21 @@ export default async function LoginPage({
             name="password"
             type="password"
             required
-            autoComplete="current-password"
-            placeholder="Password"
+            minLength={6}
+            autoComplete="new-password"
+            placeholder="Password (min 6 characters)"
+            className="w-full rounded-md border border-border bg-panel px-3 py-2 text-text focus:border-accent focus:outline-none"
+          />
+        </label>
+        <label className="block">
+          <span className="sr-only">Confirm password</span>
+          <input
+            name="confirm"
+            type="password"
+            required
+            minLength={6}
+            autoComplete="new-password"
+            placeholder="Confirm password"
             className="w-full rounded-md border border-border bg-panel px-3 py-2 text-text focus:border-accent focus:outline-none"
           />
         </label>
@@ -40,21 +53,21 @@ export default async function LoginPage({
           type="submit"
           className="w-full rounded-md bg-accent px-3 py-2 font-semibold text-bg hover:opacity-90"
         >
-          Sign in
+          Create account
         </button>
       </form>
       <div aria-live="polite" className="mt-4 min-h-[1.25rem] text-sm">
+        {params.sent && (
+          <p className="text-covered">
+            Check your email to confirm your account.
+          </p>
+        )}
         {params.error && <p className="text-missing">Error: {params.error}</p>}
       </div>
       <p className="mt-6 text-sm text-muted">
-        <Link href="/forgot-password" className="text-accent hover:underline">
-          Forgot your password?
-        </Link>
-      </p>
-      <p className="mt-2 text-sm text-muted">
-        New here?{" "}
-        <Link href="/register" className="text-accent hover:underline">
-          Create an account
+        Already have an account?{" "}
+        <Link href="/login" className="text-accent hover:underline">
+          Sign in
         </Link>
       </p>
     </main>

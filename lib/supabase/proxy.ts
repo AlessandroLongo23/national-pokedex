@@ -29,7 +29,10 @@ export async function updateSession(request: NextRequest) {
   if (path.startsWith("/dashboard") && !user) {
     return NextResponse.redirect(new URL("/login", request.url));
   }
-  if (path === "/login" && user) {
+  if (
+    (path === "/login" || path === "/register" || path === "/forgot-password") &&
+    user
+  ) {
     return NextResponse.redirect(new URL("/dashboard", request.url));
   }
 
