@@ -7,6 +7,7 @@ interface UserCtx {
   userId: string;
   email: string;
   priceSource: PriceSource;
+  isGuest: boolean;
 }
 
 const Ctx = createContext<UserCtx | null>(null);
@@ -22,7 +23,11 @@ export function UserProvider({
   priceSource: PriceSource;
   children: React.ReactNode;
 }) {
-  return <Ctx.Provider value={{ userId, email, priceSource }}>{children}</Ctx.Provider>;
+  return (
+    <Ctx.Provider value={{ userId, email, priceSource, isGuest: !userId }}>
+      {children}
+    </Ctx.Provider>
+  );
 }
 
 export function useUser() {

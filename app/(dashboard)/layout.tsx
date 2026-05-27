@@ -1,10 +1,27 @@
 import { getSupabaseServer } from "@/lib/supabase/server";
-import { requireUser } from "./_lib/current-user";
+import { getOptionalUser } from "./_lib/current-user";
 import { Shell } from "./_components/Shell";
 import { loadUserPreferences } from "./_lib/user-preferences";
 
 export default async function DashboardLayout({ children }: { children: React.ReactNode }) {
-  const user = await requireUser();
+  const user = await getOptionalUser();
+
+  if (!user) {
+    return (
+      <Shell
+        userId=""
+        email=""
+        priceSource="tcgplayer"
+        initialOwned={[]}
+        initialWishlist={[]}
+        initialFavorites={[]}
+        initialAvailability={[]}
+      >
+        {children}
+      </Shell>
+    );
+  }
+
   const supabase = await getSupabaseServer();
 
   const [ownedRes, wishlistRes, favoritesRes, availabilityRes, prefs] = await Promise.all([
