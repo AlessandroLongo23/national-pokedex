@@ -5,6 +5,7 @@ import { ChevronRight } from "lucide-react";
 import { COVERAGE, POKEDEX } from "@/lib/data";
 import { GEN_NAMES, GEN_RANGES, type CardEntry, type Generation } from "@/lib/data/types";
 import { useOwnedCards } from "../_lib/OwnedCardsContext";
+import { useUser } from "../_lib/UserContext";
 import { FilterBar, type GridFilter } from "./FilterBar";
 import { PokemonCell } from "./PokemonCell";
 
@@ -59,6 +60,7 @@ export function PokedexGrid({
   displayCardByDex,
 }: Props) {
   const { ownedSpecies } = useOwnedCards();
+  const { isGuest } = useUser();
   const [filter, setFilter] = useState<GridFilter>("all");
   const [query, setQuery] = useState("");
   const [cols, setCols] = useState(20);
@@ -161,10 +163,20 @@ export function PokedexGrid({
           <FilterBar
             value={filter}
             onChange={setFilter}
-            counts={{
-              all: entries.length,
-              owned: totalOwnedInView,
-            }}
+            options={
+              isGuest
+                ? [
+                    { value: "all", label: "All", hint: "Every species in the National Pokédex" },
+                    { value: "covered", label: "Available", hint: "A card exists in the tracked sets" },
+                    { value: "missing", label: "No card", hint: "No card exists for this Pokémon in the tracked sets" },
+                  ]
+                : undefined
+            }
+            counts={
+              isGuest
+                ? { all: entries.length }
+                : { all: entries.length, owned: totalOwnedInView }
+            }
           />
         )}
         {showSearch && (
@@ -240,16 +252,22 @@ export function PokedexGrid({
                     </span>
                   </div>
                   <div className="flex flex-1 items-center gap-3">
-                    <div className="relative h-[3px] flex-1 overflow-hidden rounded-full bg-border">
-                      <div
-                        className="absolute inset-y-0 left-0 rounded-full bg-owned transition-[width] duration-300 ease-out"
-                        style={{ width: `${pct}%` }}
-                      />
-                    </div>
-                    <span className="shrink-0 text-[11px] nums tabular-nums">
-                      <span className="font-semibold text-owned">{ownedInGen}</span>
-                      <span className="text-muted"> / {inRange}</span>
-                    </span>
+                    {isGuest ? (
+                      <div className="flex-1" />
+                    ) : (
+                      <>
+                        <div className="relative h-[3px] flex-1 overflow-hidden rounded-full bg-border">
+                          <div
+                            className="absolute inset-y-0 left-0 rounded-full bg-owned transition-[width] duration-300 ease-out"
+                            style={{ width: `${pct}%` }}
+                          />
+                        </div>
+                        <span className="shrink-0 text-[11px] nums tabular-nums">
+                          <span className="font-semibold text-owned">{ownedInGen}</span>
+                          <span className="text-muted"> / {inRange}</span>
+                        </span>
+                      </>
+                    )}
                     <ChevronRight
                       aria-hidden
                       className="ml-1 h-3.5 w-3.5 text-muted transition-transform group-open:rotate-90"

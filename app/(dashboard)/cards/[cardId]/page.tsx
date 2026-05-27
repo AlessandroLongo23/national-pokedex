@@ -17,7 +17,7 @@ import {
 } from "@/lib/pricing/pokemontcg";
 import { getSupabaseServer } from "@/lib/supabase/server";
 import type { LedgerCurrency } from "@/lib/ledger/money";
-import { requireUserId } from "../../_lib/current-user";
+import { getOptionalUser } from "../../_lib/current-user";
 import { loadUserPreferences } from "../../_lib/user-preferences";
 import { Separator } from "../../_components/Separator";
 import { CardActionsBar } from "./_components/CardActionsBar";
@@ -77,31 +77,39 @@ export default async function CardDetailPage({ params }: PageProps) {
   }
   if (!card) notFound();
 
-  const userId = await requireUserId();
+  const user = await getOptionalUser();
   const supabase = await getSupabaseServer();
-  const prefs = await loadUserPreferences(userId);
+  const prefs = user
+    ? await loadUserPreferences(user.id)
+    : { priceSource: "tcgplayer" as const };
 
   const [ownedRes, priceMap, packRows, txRows, allCards] = await Promise.all([
-    supabase
-      .from("owned_cards")
-      .select("quantity, acquired_at")
-      .eq("user_id", userId)
-      .eq("card_id", card.id)
-      .maybeSingle(),
+    user
+      ? supabase
+          .from("owned_cards")
+          .select("quantity, acquired_at")
+          .eq("user_id", user.id)
+          .eq("card_id", card.id)
+          .maybeSingle()
+      : Promise.resolve({ data: null }),
     fetchPricesForCards([card.id]),
-    supabase
-      .from("pack_contents")
-      .select(
-        "pack_id, packs_opened!inner(id, user_id, set_id, opened_at, cost_cents, currency)",
-      )
-      .eq("card_id", card.id)
-      .eq("packs_opened.user_id", userId),
-    supabase
-      .from("transactions")
-      .select("kind, occurred_at, amount_cents, currency, quantity, note")
-      .eq("user_id", userId)
-      .eq("card_id", card.id)
-      .in("kind", ["single_purchase", "sale", "psa_fee"]),
+    user
+      ? supabase
+          .from("pack_contents")
+          .select(
+            "pack_id, packs_opened!inner(id, user_id, set_id, opened_at, cost_cents, currency)",
+          )
+          .eq("card_id", card.id)
+          .eq("packs_opened.user_id", user.id)
+      : Promise.resolve({ data: [] }),
+    user
+      ? supabase
+          .from("transactions")
+          .select("kind, occurred_at, amount_cents, currency, quantity, note")
+          .eq("user_id", user.id)
+          .eq("card_id", card.id)
+          .in("kind", ["single_purchase", "sale", "psa_fee"])
+      : Promise.resolve({ data: [] }),
     getAllCards(),
   ]);
   const ownedQty = (ownedRes.data?.quantity as number | null) ?? 0;
@@ -149,11 +157,11 @@ export default async function CardDetailPage({ params }: PageProps) {
     ]),
   ];
   let ownedSet = new Set<string>();
-  if (stripIds.length > 0) {
+  if (user && stripIds.length > 0) {
     const { data: ownedRows } = await supabase
       .from("owned_cards")
       .select("card_id")
-      .eq("user_id", userId)
+      .eq("user_id", user.id)
       .in("card_id", stripIds);
     ownedSet = new Set((ownedRows ?? []).map((r) => r.card_id as string));
   }
@@ -242,17 +250,19 @@ export default async function CardDetailPage({ params }: PageProps) {
           </div>
 
           <div className="flex flex-wrap items-baseline gap-x-8 gap-y-2 border-y border-border py-4">
-            <div>
-              <p className="eyebrow">Owned</p>
-              <p
-                className={[
-                  "text-2xl font-semibold tabular-nums",
-                  ownedQty > 0 ? "text-covered" : "text-muted",
-                ].join(" ")}
-              >
-                {ownedQty > 0 ? `× ${ownedQty}` : "—"}
-              </p>
-            </div>
+            {user && (
+              <div>
+                <p className="eyebrow">Owned</p>
+                <p
+                  className={[
+                    "text-2xl font-semibold tabular-nums",
+                    ownedQty > 0 ? "text-covered" : "text-muted",
+                  ].join(" ")}
+                >
+                  {ownedQty > 0 ? `× ${ownedQty}` : "—"}
+                </p>
+              </div>
+            )}
             <div>
               <p className="eyebrow">Market price</p>
               <p
@@ -266,29 +276,35 @@ export default async function CardDetailPage({ params }: PageProps) {
               </p>
               <p className="text-[11px] text-muted">
                 via{" "}
-                <Link
-                  href="/settings"
-                  className="underline decoration-border-strong underline-offset-2 hover:text-text"
-                >
-                  {PRICE_SOURCE_LABEL[prefs.priceSource]}
-                </Link>
+                {user ? (
+                  <Link
+                    href="/settings"
+                    className="underline decoration-border-strong underline-offset-2 hover:text-text"
+                  >
+                    {PRICE_SOURCE_LABEL[prefs.priceSource]}
+                  </Link>
+                ) : (
+                  <span>{PRICE_SOURCE_LABEL[prefs.priceSource]}</span>
+                )}
               </p>
             </div>
           </div>
 
-          <CardActionsBar
-            card={{
-              id: card.id,
-              name: card.name,
-              setId: card.setId,
-              number: card.number,
-              imageSmall: card.imageSmall,
-            }}
-            suggestedUnitProceedsCents={
-              price != null ? Math.round(price * 100) : null
-            }
-            defaultCurrency={currency}
-          />
+          {user && (
+            <CardActionsBar
+              card={{
+                id: card.id,
+                name: card.name,
+                setId: card.setId,
+                number: card.number,
+                imageSmall: card.imageSmall,
+              }}
+              suggestedUnitProceedsCents={
+                price != null ? Math.round(price * 100) : null
+              }
+              defaultCurrency={currency}
+            />
+          )}
 
           <dl className="grid grid-cols-[auto_1fr] gap-x-6 gap-y-4 text-sm">
             {(card.types.length > 0 || card.hp != null) && (

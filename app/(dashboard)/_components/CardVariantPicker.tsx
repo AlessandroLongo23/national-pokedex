@@ -10,6 +10,7 @@ import type { CardEntry, Rarity } from "@/lib/data/types";
 import { RARITY_LABEL } from "@/lib/data/types";
 import { useOwnedCards } from "../_lib/OwnedCardsContext";
 import { useWishlist } from "../_lib/WishlistContext";
+import { useUser } from "../_lib/UserContext";
 import { SeriesBadge } from "./SeriesBadge";
 
 const RARITY_TINT: Record<Rarity, string> = {
@@ -132,6 +133,7 @@ export function CardVariantPicker({ dex, onClose }: Props) {
 function VariantRow({ card }: { card: CardEntry }) {
   const { isOwned, toggle: toggleOwn, adjust: adjustOwned, quantityOf } = useOwnedCards();
   const { isWishlisted, toggle: toggleWishlist } = useWishlist();
+  const { isGuest } = useUser();
   const owned = isOwned(card.id);
   const quantity = quantityOf(card.id);
   const wishlisted = isWishlisted(card.id);
@@ -159,27 +161,29 @@ function VariantRow({ card }: { card: CardEntry }) {
           </span>
         </div>
       </div>
-      <button
-        type="button"
-        onClick={() => toggleWishlist(card.id)}
-        className={[
-          "inline-flex shrink-0 items-center justify-center rounded-md border px-2 py-1.5 transition",
-          wishlisted
-            ? "border-accent bg-accent/15 text-accent"
-            : "border-border text-muted hover:border-accent hover:text-accent",
-        ].join(" ")}
-        title={wishlisted ? "Wishlisted" : "Add to wishlist"}
-        aria-pressed={wishlisted}
-        aria-label="Toggle wishlist"
-      >
-        <Heart
-          className="h-3.5 w-3.5"
-          fill={wishlisted ? "currentColor" : "none"}
-          strokeWidth={2}
-          aria-hidden
-        />
-      </button>
-      {owned ? (
+      {!isGuest && (
+        <button
+          type="button"
+          onClick={() => toggleWishlist(card.id)}
+          className={[
+            "inline-flex shrink-0 items-center justify-center rounded-md border px-2 py-1.5 transition",
+            wishlisted
+              ? "border-accent bg-accent/15 text-accent"
+              : "border-border text-muted hover:border-accent hover:text-accent",
+          ].join(" ")}
+          title={wishlisted ? "Wishlisted" : "Add to wishlist"}
+          aria-pressed={wishlisted}
+          aria-label="Toggle wishlist"
+        >
+          <Heart
+            className="h-3.5 w-3.5"
+            fill={wishlisted ? "currentColor" : "none"}
+            strokeWidth={2}
+            aria-hidden
+          />
+        </button>
+      )}
+      {!isGuest && (owned ? (
         <div
           className="inline-flex shrink-0 items-stretch overflow-hidden rounded-md border border-owned bg-owned/15 text-owned"
           role="group"
@@ -222,7 +226,7 @@ function VariantRow({ card }: { card: CardEntry }) {
           <Plus className="h-3.5 w-3.5" strokeWidth={2.5} aria-hidden />
           Own
         </button>
-      )}
+      ))}
     </li>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useSetAvailability } from "../_lib/SetAvailabilityContext";
+import { useUser } from "../_lib/UserContext";
 
 interface Props {
   setId: string;
@@ -9,6 +10,8 @@ interface Props {
 
 export function SetAvailabilityToggle({ setId, compact }: Props) {
   const { isAvailable, hasOverride, set } = useSetAvailability();
+  const { isGuest } = useUser();
+  if (isGuest) return null;
   const available = isAvailable(setId);
   const overridden = hasOverride(setId);
 

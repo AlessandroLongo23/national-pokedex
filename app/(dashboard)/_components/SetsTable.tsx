@@ -6,6 +6,7 @@ import { ChevronDown, ChevronUp, LayoutGrid, List } from "lucide-react";
 import { SETS } from "@/lib/data";
 import { useOwnedCards } from "../_lib/OwnedCardsContext";
 import { useSetAvailability } from "../_lib/SetAvailabilityContext";
+import { useUser } from "../_lib/UserContext";
 import { SeriesBadge } from "./SeriesBadge";
 import { SetAvailabilityToggle } from "./SetAvailabilityToggle";
 
@@ -32,6 +33,7 @@ const VIEW_STORAGE_KEY = "sets-view";
 export function SetsTable() {
   const { ownedCards } = useOwnedCards();
   const { isAvailable } = useSetAvailability();
+  const { isGuest } = useUser();
   const [sortKey, setSortKey] = useState<SortKey>("releaseDate");
   const [asc, setAsc] = useState(false);
   const [seriesFilter, setSeriesFilter] = useState<string | null>(null);
@@ -149,15 +151,17 @@ export function SetsTable() {
 
         <div className="ml-auto flex items-center gap-3">
           <ViewToggle view={view} onChange={setView} />
-          <label className="flex items-center gap-1.5 text-xs text-muted">
-            <input
-              type="checkbox"
-              checked={availableOnly}
-              onChange={(e) => setAvailableOnly(e.target.checked)}
-              className="h-3.5 w-3.5 accent-[var(--color-accent)]"
-            />
-            Available locally only
-          </label>
+          {!isGuest && (
+            <label className="flex items-center gap-1.5 text-xs text-muted">
+              <input
+                type="checkbox"
+                checked={availableOnly}
+                onChange={(e) => setAvailableOnly(e.target.checked)}
+                className="h-3.5 w-3.5 accent-[var(--color-accent)]"
+              />
+              Available locally only
+            </label>
+          )}
         </div>
       </div>
 
@@ -174,10 +178,14 @@ export function SetsTable() {
                 <Th k="releaseDate" className="text-right">Released</Th>
                 <Th k="cardCount" className="text-right">Cards</Th>
                 <Th k="distinctPokemonCount" className="text-right">Pokémon</Th>
-                <Th k="ownedCards" className="text-right">Owned</Th>
-                <th className="bg-panel-2 px-4 py-3 text-center text-[10px] font-semibold uppercase tracking-[0.14em] text-muted">
-                  Local
-                </th>
+                {!isGuest && (
+                  <>
+                    <Th k="ownedCards" className="text-right">Owned</Th>
+                    <th className="bg-panel-2 px-4 py-3 text-center text-[10px] font-semibold uppercase tracking-[0.14em] text-muted">
+                      Local
+                    </th>
+                  </>
+                )}
               </tr>
             </thead>
             <tbody>
@@ -199,21 +207,25 @@ export function SetsTable() {
                     <td className="px-4 py-4 text-right text-xs text-muted nums">{s.releaseDate}</td>
                     <td className="px-4 py-4 text-right text-base nums">{s.cardCount}</td>
                     <td className="px-4 py-4 text-right text-muted nums">{s.distinctPokemonCount}</td>
-                    <td className="px-4 py-4 text-right nums">
-                      <div className="inline-flex items-center gap-2.5">
-                        <span className="text-base font-semibold text-owned">{s.ownedCards}</span>
-                        <span className="text-muted">/ {s.cardCount}</span>
-                        <span className="inline-block h-1.5 w-16 overflow-hidden rounded-full bg-panel-2">
-                          <span
-                            className="block h-full bg-owned"
-                            style={{ width: `${ownedPct * 100}%` }}
-                          />
-                        </span>
-                      </div>
-                    </td>
-                    <td className="px-4 py-4 text-center">
-                      <SetAvailabilityToggle setId={s.id} compact />
-                    </td>
+                    {!isGuest && (
+                      <>
+                        <td className="px-4 py-4 text-right nums">
+                          <div className="inline-flex items-center gap-2.5">
+                            <span className="text-base font-semibold text-owned">{s.ownedCards}</span>
+                            <span className="text-muted">/ {s.cardCount}</span>
+                            <span className="inline-block h-1.5 w-16 overflow-hidden rounded-full bg-panel-2">
+                              <span
+                                className="block h-full bg-owned"
+                                style={{ width: `${ownedPct * 100}%` }}
+                              />
+                            </span>
+                          </div>
+                        </td>
+                        <td className="px-4 py-4 text-center">
+                          <SetAvailabilityToggle setId={s.id} compact />
+                        </td>
+                      </>
+                    )}
                   </tr>
                 );
               })}
@@ -229,7 +241,7 @@ export function SetsTable() {
                 <div className="group relative flex h-full flex-col gap-3 rounded-xl border border-border bg-panel p-4 transition hover:border-border-strong">
                   <div className="flex items-start justify-between gap-2">
                     <SeriesBadge series={s.series} />
-                    <SetAvailabilityToggle setId={s.id} compact />
+                    {!isGuest && <SetAvailabilityToggle setId={s.id} compact />}
                   </div>
 
                   <Link
@@ -248,16 +260,18 @@ export function SetsTable() {
                     </span>
                   </Link>
 
-                  <div className="mt-auto flex items-center gap-2 text-xs">
-                    <span className="font-semibold text-owned nums">{s.ownedCards}</span>
-                    <span className="text-muted nums">/ {s.cardCount}</span>
-                    <span className="ml-auto h-1.5 flex-1 overflow-hidden rounded-full bg-panel-2">
-                      <span
-                        className="block h-full bg-owned"
-                        style={{ width: `${ownedPct * 100}%` }}
-                      />
-                    </span>
-                  </div>
+                  {!isGuest && (
+                    <div className="mt-auto flex items-center gap-2 text-xs">
+                      <span className="font-semibold text-owned nums">{s.ownedCards}</span>
+                      <span className="text-muted nums">/ {s.cardCount}</span>
+                      <span className="ml-auto h-1.5 flex-1 overflow-hidden rounded-full bg-panel-2">
+                        <span
+                          className="block h-full bg-owned"
+                          style={{ width: `${ownedPct * 100}%` }}
+                        />
+                      </span>
+                    </div>
+                  )}
                 </div>
               </li>
             );

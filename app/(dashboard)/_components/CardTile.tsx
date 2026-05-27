@@ -65,7 +65,7 @@ function TileBase({
   const { isOwned, toggle: toggleOwned, adjust: adjustOwned, quantityOf } = useOwnedCards();
   const { isWishlisted, toggle: toggleWishlist } = useWishlist();
   const { isFavorited, toggle: toggleFavorite } = useFavorites();
-  const { priceSource } = useUser();
+  const { priceSource, isGuest } = useUser();
   const priceData = useCardPrice(card.id);
   // pickPrice returns undefined when this card has no row in the current
   // page's price map OR when prices haven't been provided at all (no
@@ -188,7 +188,7 @@ function TileBase({
           {!hideActions && !selectMode && (
             // pointer-coarse keeps the row visible on touch where hover never fires.
             <div className="ml-auto flex shrink-0 items-center gap-1 opacity-0 transition-opacity group-hover:opacity-100 focus-within:opacity-100 pointer-coarse:opacity-100">
-              {owned ? (
+              {!isGuest && (owned ? (
                 <div
                   className="inline-flex h-7 items-stretch overflow-hidden rounded-md border border-owned/70 bg-owned/15 text-owned"
                   data-action="quantity"
@@ -238,8 +238,8 @@ function TileBase({
                 >
                   <Plus className="h-3.5 w-3.5" strokeWidth={2.5} aria-hidden />
                 </button>
-              )}
-              {owned ? (
+              ))}
+              {!isGuest && (owned ? (
                 <button
                   type="button"
                   onClick={() => toggleFavorite(card.id)}
@@ -283,7 +283,7 @@ function TileBase({
                     aria-hidden
                   />
                 </button>
-              )}
+              ))}
               {detailsHref && !hideDetailsLink && (
                 <Link
                   href={detailsHref}

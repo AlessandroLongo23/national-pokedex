@@ -5,6 +5,7 @@ import { PageHeader } from "../../_components/PageHeader";
 import { CardGrid } from "../../_components/CardGrid";
 import { SeriesBadge } from "../../_components/SeriesBadge";
 import { SetAvailabilityToggle } from "../../_components/SetAvailabilityToggle";
+import { getOptionalUser } from "../../_lib/current-user";
 
 interface PageProps {
   params: Promise<{ setId: string }>;
@@ -22,6 +23,8 @@ export default async function SetDetailPage({ params }: PageProps) {
     cards = [];
   }
 
+  const user = await getOptionalUser();
+
   return (
     <div className="mx-auto max-w-[1280px] space-y-6">
       <PageHeader
@@ -36,12 +39,14 @@ export default async function SetDetailPage({ params }: PageProps) {
         right={
           <div className="flex flex-wrap items-center gap-3">
             <SetAvailabilityToggle setId={set.id} />
-            <Link
-              href={`/packs/new?set=${set.id}`}
-              className="rounded-md bg-accent px-3.5 py-2 text-sm font-semibold text-bg transition hover:opacity-90"
-            >
-              Log a pack from this set
-            </Link>
+            {user && (
+              <Link
+                href={`/packs/new?set=${set.id}`}
+                className="rounded-md bg-accent px-3.5 py-2 text-sm font-semibold text-bg transition hover:opacity-90"
+              >
+                Log a pack from this set
+              </Link>
+            )}
           </div>
         }
       />
