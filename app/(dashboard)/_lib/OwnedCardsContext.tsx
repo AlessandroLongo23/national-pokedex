@@ -110,6 +110,7 @@ export function OwnedCardsProvider({
   const [isPending, startTransition] = useTransition();
 
   useEffect(() => {
+    if (!userId) return;
     const supabase = getSupabaseBrowser();
     const channel = supabase
       .channel("owned_cards_changes")
@@ -197,6 +198,7 @@ export function OwnedCardsProvider({
 
   const toggle = useCallback(
     (cardId: string) => {
+      if (!userId) return;
       const current = base.get(cardId) ?? 0;
       const targetQty = current > 0 ? 0 : 1;
       startTransition(async () => {
@@ -216,11 +218,12 @@ export function OwnedCardsProvider({
         }
       });
     },
-    [applyOptimistic, base],
+    [applyOptimistic, base, userId],
   );
 
   const adjust = useCallback(
     (cardId: string, delta: number) => {
+      if (!userId) return;
       if (delta === 0) return;
       startTransition(async () => {
         applyOptimistic({ kind: "delta", cardId, delta });
@@ -239,11 +242,12 @@ export function OwnedCardsProvider({
         }
       });
     },
-    [applyOptimistic],
+    [applyOptimistic, userId],
   );
 
   const setQuantity = useCallback(
     (cardId: string, qty: number) => {
+      if (!userId) return;
       const clamped = Math.max(0, Math.floor(qty));
       startTransition(async () => {
         applyOptimistic({ kind: "set", cardId, quantity: clamped });
@@ -262,7 +266,7 @@ export function OwnedCardsProvider({
         }
       });
     },
-    [applyOptimistic],
+    [applyOptimistic, userId],
   );
 
   return (

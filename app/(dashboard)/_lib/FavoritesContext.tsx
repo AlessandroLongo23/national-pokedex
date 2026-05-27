@@ -43,6 +43,7 @@ export function FavoritesProvider({
   const [isPending, startTransition] = useTransition();
 
   useEffect(() => {
+    if (!userId) return;
     const supabase = getSupabaseBrowser();
     const channel = supabase
       .channel("user_favorites_changes")
@@ -91,6 +92,7 @@ export function FavoritesProvider({
 
   const toggle = useCallback(
     (cardId: string) => {
+      if (!userId) return;
       startTransition(async () => {
         applyOptimistic(cardId);
         try {
@@ -111,7 +113,7 @@ export function FavoritesProvider({
         }
       });
     },
-    [applyOptimistic],
+    [applyOptimistic, userId],
   );
 
   return (

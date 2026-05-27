@@ -60,6 +60,7 @@ export function SetAvailabilityProvider({
   const [isPending, startTransition] = useTransition();
 
   useEffect(() => {
+    if (!userId) return;
     const supabase = getSupabaseBrowser();
     const channel = supabase
       .channel("set_availability_changes")
@@ -105,6 +106,7 @@ export function SetAvailabilityProvider({
 
   const setOverride = useCallback(
     (setId: string, available: boolean | null) => {
+      if (!userId) return;
       setOverrides((prev) => {
         const next = new Map(prev);
         if (available === null) next.delete(setId);
@@ -119,7 +121,7 @@ export function SetAvailabilityProvider({
         }
       });
     },
-    [],
+    [userId],
   );
 
   const availableSetIds = useMemo(() => {

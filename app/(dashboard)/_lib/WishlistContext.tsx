@@ -43,6 +43,7 @@ export function WishlistProvider({
   const [isPending, startTransition] = useTransition();
 
   useEffect(() => {
+    if (!userId) return;
     const supabase = getSupabaseBrowser();
     const channel = supabase
       .channel("wishlist_cards_changes")
@@ -91,6 +92,7 @@ export function WishlistProvider({
 
   const toggle = useCallback(
     (cardId: string) => {
+      if (!userId) return;
       startTransition(async () => {
         applyOptimistic(cardId);
         try {
@@ -107,7 +109,7 @@ export function WishlistProvider({
         }
       });
     },
-    [applyOptimistic],
+    [applyOptimistic, userId],
   );
 
   return (
