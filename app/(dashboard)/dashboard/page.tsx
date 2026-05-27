@@ -3,8 +3,13 @@ import { ArrowRight } from "lucide-react";
 import { PageHeader } from "../_components/PageHeader";
 import { KpiCards } from "../_components/KpiCards";
 import { CoverageByGen } from "../_components/CoverageByGen";
+import { PublicHero } from "../_components/PublicHero";
+import { getOptionalUser } from "../_lib/current-user";
 
-export default function DashboardPage() {
+export default async function DashboardPage() {
+  const user = await getOptionalUser();
+  if (!user) return <PublicHero />;
+
   return (
     <div className="mx-auto max-w-[1280px] space-y-6">
       <PageHeader
