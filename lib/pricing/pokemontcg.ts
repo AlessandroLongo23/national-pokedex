@@ -33,12 +33,14 @@ export const PRICE_SOURCE_CURRENCY: Record<PriceSource, "USD" | "EUR"> = {
   cardmarket: "EUR",
 };
 
-// What we keep for one card after extracting from the API response. Both
-// fields may be undefined — the API has uneven coverage, especially for
+// What we keep for one card after extracting from the API response. Every
+// field may be undefined — the API has uneven coverage, especially for
 // non-English releases.
 export interface CardPrice {
   tcgplayer?: number;
   cardmarket?: number;
+  tcgplayerUrl?: string;
+  cardmarketUrl?: string;
 }
 
 interface TcgplayerVariantPrice {
@@ -59,9 +61,11 @@ interface CardmarketPrices {
 interface ApiCard {
   id: string;
   tcgplayer?: {
+    url?: string | null;
     prices?: Record<string, TcgplayerVariantPrice | undefined>;
   };
   cardmarket?: {
+    url?: string | null;
     prices?: CardmarketPrices;
   };
 }
@@ -153,8 +157,15 @@ export async function fetchSetPrices(setId: string): Promise<Map<string, CardPri
         const price: CardPrice = {
           tcgplayer: pickTcgplayerPrice(row.tcgplayer?.prices),
           cardmarket: pickCardmarketPrice(row.cardmarket?.prices),
+          tcgplayerUrl: row.tcgplayer?.url ?? undefined,
+          cardmarketUrl: row.cardmarket?.url ?? undefined,
         };
-        if (price.tcgplayer != null || price.cardmarket != null) {
+        if (
+          price.tcgplayer != null ||
+          price.cardmarket != null ||
+          price.tcgplayerUrl != null ||
+          price.cardmarketUrl != null
+        ) {
           out.set(row.id, price);
         }
       }
@@ -224,6 +235,13 @@ export async function fetchPricesForCards(cardIds: Iterable<string>): Promise<Ma
 export function pickPrice(price: CardPrice | undefined, source: PriceSource): number | undefined {
   if (!price) return undefined;
   return source === "tcgplayer" ? price.tcgplayer : price.cardmarket;
+}
+
+// Resolve one card's CardPrice into the marketplace product URL for the
+// chosen source, if pokemontcg.io returned one.
+export function pickUrl(price: CardPrice | undefined, source: PriceSource): string | undefined {
+  if (!price) return undefined;
+  return source === "tcgplayer" ? price.tcgplayerUrl : price.cardmarketUrl;
 }
 
 // Sum the chosen source's price across a set of owned card IDs. Cards

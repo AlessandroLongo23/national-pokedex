@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ExternalLink } from "lucide-react";
 import { getSet, loadSetCards, SPECIES } from "@/lib/data";
 import { getAllCards } from "@/lib/data/binder-scope";
 import {
@@ -12,6 +12,7 @@ import {
   fetchPricesForCards,
   formatPrice,
   pickPrice,
+  pickUrl,
   PRICE_SOURCE_CURRENCY,
   PRICE_SOURCE_LABEL,
 } from "@/lib/pricing/pokemontcg";
@@ -115,6 +116,9 @@ export default async function CardDetailPage({ params }: PageProps) {
   const ownedQty = (ownedRes.data?.quantity as number | null) ?? 0;
   const acquiredAt = (ownedRes.data?.acquired_at as string | null) ?? null;
   const price = pickPrice(priceMap.get(card.id), prefs.priceSource);
+  const marketplaceUrl = pickUrl(priceMap.get(card.id), prefs.priceSource);
+  const marketplaceName =
+    prefs.priceSource === "tcgplayer" ? "TCGplayer" : "Cardmarket";
   const currency = PRICE_SOURCE_CURRENCY[prefs.priceSource];
 
   const dex = card.dex[0];
@@ -274,6 +278,17 @@ export default async function CardDetailPage({ params }: PageProps) {
               >
                 {price != null ? formatPrice(price, prefs.priceSource) : "—"}
               </p>
+              {marketplaceUrl && (
+                <a
+                  href={marketplaceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 inline-flex items-center gap-1 text-[11px] text-muted underline decoration-border-strong underline-offset-2 hover:text-text"
+                >
+                  View on {marketplaceName}
+                  <ExternalLink className="h-3 w-3" aria-hidden />
+                </a>
+              )}
               <p className="text-[11px] text-muted">
                 via{" "}
                 {user ? (
