@@ -11,15 +11,32 @@ import {
   type CardPriceRecord,
 } from "../_lib/CardPricesContext";
 import {
-  CardFiltersToolbar,
   emptyFilters,
   type CardsFilterState,
-} from "../_components/CardFiltersToolbar";
+} from "../_components/filters/types";
+import { ToolbarSheet } from "../_components/filters/ToolbarSheet";
+import { ToolbarInline } from "../_components/filters/ToolbarInline";
+import { ToolbarTiered } from "../_components/filters/ToolbarTiered";
 import { priceBucketOf, regionalFormOf } from "../_lib/card-filters";
 import { sortCards, type CardSort } from "../_lib/card-sort";
 import { VirtualizedCardGrid } from "../cards/_components/VirtualizedCardGrid";
 
 const SIZE_STORAGE_KEY = "cardgrid.size.wishlist";
+const VARIANT_STORAGE_KEY = "wishlist.toolbar.variant";
+
+type Variant = "sheet" | "inline" | "tiered";
+
+const VARIANT_LABEL: Record<Variant, string> = {
+  sheet: "Sheet",
+  inline: "Inline",
+  tiered: "Tiered",
+};
+
+const VARIANT_HINT: Record<Variant, string> = {
+  sheet: "One Filters entry · side panel",
+  inline: "All triggers visible · active chips below",
+  tiered: "Primary inline · expand for more",
+};
 
 function clampSize(n: number) {
   return Math.max(2, Math.min(10, Math.round(n)));
@@ -100,10 +117,6 @@ interface Props {
   artists: string[];
 }
 
-// Wishlist server-rendered data + client live state need to reconcile. The
-// server fetched the user's wishlist row IDs, then loaded the card data for
-// those IDs. The context keeps the wishlist live across realtime updates. We
-// only render cards whose IDs are still in the live wishlist set.
 export function WishlistClient({ cards, prices, types, artists }: Props) {
   const { wishlist } = useWishlist();
   const { priceSource } = useUser();
@@ -111,8 +124,8 @@ export function WishlistClient({ cards, prices, types, artists }: Props) {
   const [sort, setSort] = useState<CardSort>("pokemon");
   const [cols, setCols] = useState(5);
   const [mounted, setMounted] = useState(false);
+  const [variant, setVariant] = useState<Variant>("sheet");
 
-  // Debounce search to avoid recomputing filters on every keystroke.
   const [searchDebounced, setSearchDebounced] = useState("");
   useEffect(() => {
     const t = setTimeout(() => setSearchDebounced(filters.search), 150);
@@ -120,20 +133,34 @@ export function WishlistClient({ cards, prices, types, artists }: Props) {
   }, [filters.search]);
 
   useEffect(() => {
-    const raw = window.localStorage.getItem(SIZE_STORAGE_KEY);
-    if (raw) {
-      const n = parseInt(raw, 10);
+    const rawSize = window.localStorage.getItem(SIZE_STORAGE_KEY);
+    if (rawSize) {
+      const n = parseInt(rawSize, 10);
       if (Number.isFinite(n)) setCols(clampSize(n));
+    }
+    const url = new URL(window.location.href);
+    const qp = url.searchParams.get("toolbar") as Variant | null;
+    if (qp === "sheet" || qp === "inline" || qp === "tiered") {
+      setVariant(qp);
+    } else {
+      const stored = window.localStorage.getItem(
+        VARIANT_STORAGE_KEY,
+      ) as Variant | null;
+      if (stored === "sheet" || stored === "inline" || stored === "tiered") {
+        setVariant(stored);
+      }
     }
     setMounted(true);
   }, []);
   useEffect(() => {
     if (mounted) window.localStorage.setItem(SIZE_STORAGE_KEY, String(cols));
   }, [cols, mounted]);
+  useEffect(() => {
+    if (mounted) window.localStorage.setItem(VARIANT_STORAGE_KEY, variant);
+  }, [variant, mounted]);
 
   const priceMap = useMemo(() => new Map(Object.entries(prices)), [prices]);
 
-  // Reconcile against live wishlist set first, then run user filters.
   const visible = useMemo(
     () => cards.filter((c) => wishlist.has(c.id)),
     [cards, wishlist],
@@ -156,28 +183,79 @@ export function WishlistClient({ cards, prices, types, artists }: Props) {
     );
   }
 
+  const toolbarProps = {
+    filters,
+    onFiltersChange: setFilters,
+    sort,
+    onSortChange: setSort,
+    cols,
+    onColsChange: setCols,
+    resultCount: sorted.length,
+    totalCount: visible.length,
+    artists,
+    types,
+    features: {
+      showPrice: true,
+      showGeneration: true,
+      showRegionalForm: true,
+    },
+  };
+
   return (
     <CardPricesProvider prices={prices}>
       <div className="space-y-3">
-        <CardFiltersToolbar
-          filters={filters}
-          onFiltersChange={setFilters}
-          sort={sort}
-          onSortChange={setSort}
-          cols={cols}
-          onColsChange={setCols}
-          resultCount={sorted.length}
-          totalCount={visible.length}
-          artists={artists}
-          types={types}
-          features={{
-            showPrice: true,
-            showGeneration: true,
-            showRegionalForm: true,
-          }}
-        />
+        <VariantSwitcher value={variant} onChange={setVariant} />
+
+        {variant === "sheet" && <ToolbarSheet {...toolbarProps} />}
+        {variant === "inline" && <ToolbarInline {...toolbarProps} />}
+        {variant === "tiered" && <ToolbarTiered {...toolbarProps} />}
+
         <VirtualizedCardGrid cards={sorted} cols={cols} />
       </div>
     </CardPricesProvider>
+  );
+}
+
+function VariantSwitcher({
+  value,
+  onChange,
+}: {
+  value: Variant;
+  onChange: (next: Variant) => void;
+}) {
+  return (
+    <div className="flex flex-wrap items-center gap-3 rounded-lg border border-dashed border-border-strong/60 bg-panel/40 px-3 py-2">
+      <span className="text-[10px] uppercase tracking-[0.18em] text-muted">
+        Toolbar variant
+      </span>
+      <div
+        role="radiogroup"
+        aria-label="Toolbar variant"
+        className="inline-flex h-7 items-center rounded-md bg-panel-2 p-0.5"
+      >
+        {(["sheet", "inline", "tiered"] as const).map((v) => {
+          const active = value === v;
+          return (
+            <button
+              key={v}
+              type="button"
+              role="radio"
+              aria-checked={active}
+              onClick={() => onChange(v)}
+              className={[
+                "h-6 rounded px-2.5 text-[11px] font-medium transition outline-none",
+                "focus-visible:ring-2 focus-visible:ring-accent/60",
+                active
+                  ? "bg-panel-3 text-text shadow-[inset_0_0_0_1px_var(--color-border)]"
+                  : "text-muted hover:text-text",
+              ].join(" ")}
+            >
+              {VARIANT_LABEL[v]}
+            </button>
+          );
+        })}
+      </div>
+      <span className="text-[11px] text-muted">{VARIANT_HINT[value]}</span>
+    </div>
   );
 }
