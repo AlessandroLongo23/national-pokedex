@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import { LogoBlock, PokeballIcon } from "./Logo";
 import { AccountStub } from "./AccountStub";
+import { useUser } from "../_lib/UserContext";
 
 interface NavItem {
   href: string;
@@ -70,6 +71,8 @@ const NAV_GROUPS: NavGroup[] = [
 ];
 
 const NAV_FLAT: NavItem[] = NAV_GROUPS.flatMap((g) => g.items);
+const GUEST_GROUPS: NavGroup[] = NAV_GROUPS.filter((g) => g.label === "Browse");
+const GUEST_FLAT: NavItem[] = GUEST_GROUPS.flatMap((g) => g.items);
 
 function isActive(pathname: string, href: string) {
   return pathname === href || pathname.startsWith(`${href}/`);
@@ -148,6 +151,8 @@ function NavRow({ item, pathname }: { item: NavItem; pathname: string }) {
 
 export function Sidebar() {
   const pathname = usePathname();
+  const { isGuest } = useUser();
+  const groups = isGuest ? GUEST_GROUPS : NAV_GROUPS;
 
   return (
     <aside className="sticky top-0 hidden h-screen w-[220px] shrink-0 flex-col border-r border-border bg-panel md:flex">
@@ -157,7 +162,7 @@ export function Sidebar() {
 
       <nav className="flex-1 px-3">
         <div className="space-y-4">
-          {NAV_GROUPS.map((group) => (
+          {groups.map((group) => (
             <div key={group.label}>
               <div className="px-3 pb-1 text-[10px] font-semibold uppercase tracking-wider text-muted/60">
                 {group.label}
@@ -173,19 +178,21 @@ export function Sidebar() {
       </nav>
 
       <div className="border-t border-border px-3 py-3">
-        <Link
-          href="/settings"
-          className={[
-            "flex items-center gap-3 rounded-md border-l-2 px-3 py-2 text-sm transition",
-            isActive(pathname, "/settings")
-              ? "border-accent bg-accent/10 font-semibold text-text"
-              : "border-transparent text-muted hover:bg-panel-2 hover:text-text",
-          ].join(" ")}
-        >
-          <Settings className="h-[18px] w-[18px] shrink-0" />
-          <span>Settings</span>
-        </Link>
-        <div className="mt-1">
+        {!isGuest && (
+          <Link
+            href="/settings"
+            className={[
+              "flex items-center gap-3 rounded-md border-l-2 px-3 py-2 text-sm transition",
+              isActive(pathname, "/settings")
+                ? "border-accent bg-accent/10 font-semibold text-text"
+                : "border-transparent text-muted hover:bg-panel-2 hover:text-text",
+            ].join(" ")}
+          >
+            <Settings className="h-[18px] w-[18px] shrink-0" />
+            <span>Settings</span>
+          </Link>
+        )}
+        <div className={isGuest ? "" : "mt-1"}>
           <AccountStub variant="row" />
         </div>
       </div>
@@ -195,9 +202,11 @@ export function Sidebar() {
 
 export function MobileNav() {
   const pathname = usePathname();
+  const { isGuest } = useUser();
+  const items = isGuest ? GUEST_FLAT : NAV_FLAT;
   return (
     <nav className="sticky bottom-0 z-30 flex border-t border-border bg-panel md:hidden">
-      {NAV_FLAT.map((item) => {
+      {items.map((item) => {
         const active = isActive(pathname, item.href);
         const Icon = item.Icon;
         return (

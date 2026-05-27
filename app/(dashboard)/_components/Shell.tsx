@@ -34,6 +34,7 @@ export function Shell({
   initialAvailability: { setId: string; available: boolean }[];
   children: React.ReactNode;
 }) {
+  const isGuest = !userId;
   return (
     <UserProvider userId={userId} email={email} priceSource={priceSource}>
       <OwnedCardsProvider userId={userId} initial={initialOwned}>
@@ -51,7 +52,7 @@ export function Shell({
                         <MobileNav />
                       </div>
                     </div>
-                    <LogPackFab />
+                    {!isGuest && <LogPackFab />}
                     <Tooltip />
                     <CardPreviewOverlay />
                   </CardPreviewProvider>
