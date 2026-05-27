@@ -2,7 +2,7 @@
 // space-separated RGB channels so callers can compose `rgb(... / <alpha>)`
 // at arbitrary opacity without re-specifying the hue per state.
 //
-// Hues chosen to read against the app's deep neutral background (#0b0d10)
+// Hues chosen to read against the app's deep neutral background (zinc-950)
 // while staying recognizable as the canonical Pokémon type colors fans
 // already carry in their heads.
 

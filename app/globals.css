@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  /* Surfaces — deep neutral, no warm cast */
-  --color-bg: #0b0d10;
-  --color-panel: #13171c;
-  --color-panel-2: #1a1f26;
-  --color-panel-3: #232932;
-  --color-text: #e8edf4;
-  --color-muted: #8a93a3;
-  --color-border: #262c36;
-  --color-border-strong: #353c48;
+  /* Surfaces — Tailwind zinc scale */
+  --color-bg: #09090b;            /* zinc-950 */
+  --color-panel: #18181b;         /* zinc-900 */
+  --color-panel-2: #27272a;       /* zinc-800 */
+  --color-panel-3: #3f3f46;       /* zinc-700 */
+  --color-text: #f4f4f5;          /* zinc-100 */
+  --color-muted: #a1a1aa;         /* zinc-400 */
+  --color-border: #27272a;        /* zinc-800 */
+  --color-border-strong: #3f3f46; /* zinc-700 */
 
   /* Accent — cool blue. Used for active nav, primary buttons, focus rings.
      Distinct from the "owned" amber so each color has one job. */
@@ -117,4 +117,36 @@ body {
   border-radius: 999px;
   background: var(--color-text);
   box-shadow: 0 0 0 3px var(--color-bg), 0 0 0 4px var(--color-border-strong);
+}
+
+/* Filter toolbar — popover open + sheet open animations.
+   Live in globals so the keyframe names resolve in components that
+   reference them via Tailwind's arbitrary-animation utility. */
+@keyframes popover-in {
+  from {
+    opacity: 0;
+    transform: translateY(-2px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes sheet-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes sheet-slide {
+  from {
+    transform: translateX(8%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
