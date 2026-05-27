@@ -28,6 +28,11 @@
   --color-me-tint: #a78bff;
   --color-sv-tint: #5db8ff;
 
+  /* Mega Evolution accent — slate violet, distinct from accent + owned so a
+     Mega slot reads as "different kind of Pokémon" without competing with
+     ownership or selection signals. */
+  --color-mega: #a78bff;
+
   --font-sans:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
     "Helvetica Neue", sans-serif;

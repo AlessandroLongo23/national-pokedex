@@ -611,7 +611,8 @@
     "evolvesFrom": "Alakazam-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy10/26.png",
-    "imageLarge": "https://images.pokemontcg.io/xy10/26_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy10/26_hires.png",
+    "megaFormKey": "mega-alakazam"
   },
   {
     "id": "xy10-27",
@@ -1624,7 +1625,8 @@
     "evolvesFrom": "Altaria-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy10/69.png",
-    "imageLarge": "https://images.pokemontcg.io/xy10/69_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy10/69_hires.png",
+    "megaFormKey": "mega-altaria"
   },
   {
     "id": "xy10-70",
@@ -2003,7 +2005,8 @@
     "evolvesFrom": "Audino-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy10/85.png",
-    "imageLarge": "https://images.pokemontcg.io/xy10/85_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy10/85_hires.png",
+    "megaFormKey": "mega-audino"
   },
   {
     "id": "xy10-86",
@@ -2638,7 +2641,8 @@
     "evolvesFrom": "Alakazam-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy10/118.png",
-    "imageLarge": "https://images.pokemontcg.io/xy10/118_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy10/118_hires.png",
+    "megaFormKey": "mega-alakazam"
   },
   {
     "id": "xy10-119",
@@ -2711,7 +2715,8 @@
     "evolvesFrom": "Altaria-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy10/121.png",
-    "imageLarge": "https://images.pokemontcg.io/xy10/121_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy10/121_hires.png",
+    "megaFormKey": "mega-altaria"
   },
   {
     "id": "xy10-122",

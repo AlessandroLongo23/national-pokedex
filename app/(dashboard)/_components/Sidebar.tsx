@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import {
   ChevronRight,
   CreditCard,
@@ -32,47 +32,53 @@ interface NavGroup {
   items: NavItem[];
 }
 
-const NAV_GROUPS: NavGroup[] = [
-  {
-    label: "Browse",
-    items: [
-      { href: "/pokedex", label: "Pokédex", Icon: PokeballIcon },
-      { href: "/sets", label: "Sets", Icon: Layers },
-      { href: "/cards", label: "Cards", Icon: CreditCard },
-      {
-        href: "/other",
-        label: "Other cards",
-        Icon: MoreHorizontal,
-        children: [
-          { href: "/other/items", label: "Items" },
-          { href: "/other/supporters", label: "Supporters" },
-          { href: "/other/stadiums", label: "Stadiums" },
-          { href: "/other/tools", label: "Pokémon Tools" },
-          { href: "/other/energies", label: "Energies" },
-        ],
-      },
-    ],
-  },
-  {
-    label: "Collection",
-    items: [
-      { href: "/binders", label: "Binders", Icon: Notebook },
-      { href: "/collection", label: "Collection", Icon: FolderOpen },
-      { href: "/portfolio", label: "Portfolio", Icon: LineChart },
-    ],
-  },
-  {
-    label: "Activity",
-    items: [
-      { href: "/packs", label: "Packs", Icon: Package },
-      { href: "/transactions", label: "Transactions", Icon: Receipt },
-    ],
-  },
-];
-
-const NAV_FLAT: NavItem[] = NAV_GROUPS.flatMap((g) => g.items);
-const GUEST_GROUPS: NavGroup[] = NAV_GROUPS.filter((g) => g.label === "Browse");
-const GUEST_FLAT: NavItem[] = GUEST_GROUPS.flatMap((g) => g.items);
+function buildNavGroups(showMegasNav: boolean): NavGroup[] {
+  const pokedexItem: NavItem = {
+    href: "/pokedex",
+    label: "Pokédex",
+    Icon: PokeballIcon,
+    ...(showMegasNav
+      ? { children: [{ href: "/megas", label: "Mega Evolutions" }] }
+      : {}),
+  };
+  return [
+    {
+      label: "Browse",
+      items: [
+        pokedexItem,
+        { href: "/sets", label: "Sets", Icon: Layers },
+        { href: "/cards", label: "Cards", Icon: CreditCard },
+        {
+          href: "/other",
+          label: "Other cards",
+          Icon: MoreHorizontal,
+          children: [
+            { href: "/other/items", label: "Items" },
+            { href: "/other/supporters", label: "Supporters" },
+            { href: "/other/stadiums", label: "Stadiums" },
+            { href: "/other/tools", label: "Pokémon Tools" },
+            { href: "/other/energies", label: "Energies" },
+          ],
+        },
+      ],
+    },
+    {
+      label: "Collection",
+      items: [
+        { href: "/binders", label: "Binders", Icon: Notebook },
+        { href: "/collection", label: "Collection", Icon: FolderOpen },
+        { href: "/portfolio", label: "Portfolio", Icon: LineChart },
+      ],
+    },
+    {
+      label: "Activity",
+      items: [
+        { href: "/packs", label: "Packs", Icon: Package },
+        { href: "/transactions", label: "Transactions", Icon: Receipt },
+      ],
+    },
+  ];
+}
 
 function isActive(pathname: string, href: string) {
   return pathname === href || pathname.startsWith(`${href}/`);
@@ -151,8 +157,12 @@ function NavRow({ item, pathname }: { item: NavItem; pathname: string }) {
 
 export function Sidebar() {
   const pathname = usePathname();
-  const { isGuest } = useUser();
-  const groups = isGuest ? GUEST_GROUPS : NAV_GROUPS;
+  const { isGuest, treatMegasAsSeparate, megaPlacement } = useUser();
+  const showMegasNav = !isGuest && treatMegasAsSeparate && megaPlacement === "separate";
+  const groups = useMemo(() => {
+    const all = buildNavGroups(showMegasNav);
+    return isGuest ? all.filter((g) => g.label === "Browse") : all;
+  }, [isGuest, showMegasNav]);
 
   return (
     <aside className="sticky top-0 hidden h-screen w-[220px] shrink-0 flex-col border-r border-border bg-panel md:flex">
@@ -202,8 +212,17 @@ export function Sidebar() {
 
 export function MobileNav() {
   const pathname = usePathname();
-  const { isGuest } = useUser();
-  const items = isGuest ? GUEST_FLAT : NAV_FLAT;
+  const { isGuest, treatMegasAsSeparate, megaPlacement } = useUser();
+  const showMegasNav = !isGuest && treatMegasAsSeparate && megaPlacement === "separate";
+  // Mobile nav is a flat icon row; nesting Megas as a Pokédex child wouldn't
+  // surface here. Skip the entry on mobile — settings remain reachable to
+  // toggle off, and Megas appear in `/pokedex` via the placement modes that
+  // don't require a separate route.
+  void showMegasNav;
+  const items = useMemo(() => {
+    const all = buildNavGroups(false).flatMap((g) => g.items);
+    return isGuest ? buildNavGroups(false).filter((g) => g.label === "Browse").flatMap((g) => g.items) : all;
+  }, [isGuest]);
   return (
     <nav className="sticky bottom-0 z-30 flex border-t border-border bg-panel md:hidden">
       {items.map((item) => {

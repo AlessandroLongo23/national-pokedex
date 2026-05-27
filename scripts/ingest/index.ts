@@ -3,6 +3,7 @@ import path from "node:path";
 import { fetchSources } from "./fetch";
 import { parsePokedex } from "./parsePokedex";
 import { parseSetCards, type RawCard } from "./parseCards";
+import { discoverMegas } from "./parseMegas";
 import { computeCoverage } from "./coverage";
 import { computeGreedyOrder } from "./greedy";
 import { fetchSpecies } from "./fetchSpecies";
@@ -110,6 +111,11 @@ async function main() {
   const { sets, pools, cardsBySet, cardIndex } = loadAllSets(tcgDataDir);
   console.log(`[ingest] sets: ${sets.length} across ${new Set(sets.map((s) => s.series)).size} series`);
 
+  const { megas, cardIndexByMega } = discoverMegas(cardsBySet);
+  console.log(
+    `[ingest] megas: ${megas.length} distinct forms (${megas.filter((m) => m.isPrimal).length} primal)`,
+  );
+
   const coverage = computeCoverage(pokedex, sets);
   console.log(
     `[ingest] coverage: ${coverage.totalCovered}/${pokedex.length} (${coverage.totalMissing} missing)`,
@@ -177,6 +183,8 @@ async function main() {
   writeJson(path.join(dataDir, "greedy.json"), greedy);
   writeJson(path.join(dataDir, "setPools.json"), pools);
   writeJson(path.join(dataDir, "cardIndex.json"), cardIndex);
+  writeJson(path.join(dataDir, "megas.json"), megas);
+  writeJson(path.join(dataDir, "cardIndexByMega.json"), cardIndexByMega);
   writeJson(path.join(dataDir, "species.json"), species);
   writeJson(path.join(dataDir, "boosters.json"), boosters);
   writeJson(path.join(dataDir, "tcgcsvMap.json"), tcgcsvMap);

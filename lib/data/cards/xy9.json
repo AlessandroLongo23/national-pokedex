@@ -633,7 +633,8 @@
     "evolvesFrom": "Gyarados-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy9/27.png",
-    "imageLarge": "https://images.pokemontcg.io/xy9/27_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy9/27_hires.png",
+    "megaFormKey": "mega-gyarados"
   },
   {
     "id": "xy9-28",
@@ -1814,7 +1815,8 @@
     "evolvesFrom": "Scizor-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy9/77.png",
-    "imageLarge": "https://images.pokemontcg.io/xy9/77_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy9/77_hires.png",
+    "megaFormKey": "mega-scizor"
   },
   {
     "id": "xy9-78",
@@ -2610,7 +2612,8 @@
     "evolvesFrom": "Gyarados-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy9/115.png",
-    "imageLarge": "https://images.pokemontcg.io/xy9/115_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy9/115_hires.png",
+    "megaFormKey": "mega-gyarados"
   },
   {
     "id": "xy9-116",
@@ -2731,7 +2734,8 @@
     "evolvesFrom": "Scizor-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy9/120.png",
-    "imageLarge": "https://images.pokemontcg.io/xy9/120_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy9/120_hires.png",
+    "megaFormKey": "mega-scizor"
   },
   {
     "id": "xy9-121",

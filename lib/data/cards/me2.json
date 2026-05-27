@@ -97,7 +97,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me2/4.png",
-    "imageLarge": "https://images.pokemontcg.io/me2/4_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me2/4_hires.png",
+    "megaFormKey": "mega-heracross"
   },
   {
     "id": "me2-5",
@@ -320,7 +321,8 @@
     "artist": "takuyoa",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me2/13.png",
-    "imageLarge": "https://images.pokemontcg.io/me2/13_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me2/13_hires.png",
+    "megaFormKey": "mega-charizard-x"
   },
   {
     "id": "me2-14",
@@ -1008,7 +1010,8 @@
     "artist": "aky CG Works",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me2/41.png",
-    "imageLarge": "https://images.pokemontcg.io/me2/41_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me2/41_hires.png",
+    "megaFormKey": "mega-diancie"
   },
   {
     "id": "me2-42",
@@ -1377,7 +1380,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me2/56.png",
-    "imageLarge": "https://images.pokemontcg.io/me2/56_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me2/56_hires.png",
+    "megaFormKey": "mega-gengar"
   },
   {
     "id": "me2-57",
@@ -1501,7 +1505,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me2/61.png",
-    "imageLarge": "https://images.pokemontcg.io/me2/61_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me2/61_hires.png",
+    "megaFormKey": "mega-sharpedo"
   },
   {
     "id": "me2-62",
@@ -2066,7 +2071,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me2/84.png",
-    "imageLarge": "https://images.pokemontcg.io/me2/84_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me2/84_hires.png",
+    "megaFormKey": "mega-lopunny"
   },
   {
     "id": "me2-85",
@@ -2600,7 +2606,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me2/108.png",
-    "imageLarge": "https://images.pokemontcg.io/me2/108_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me2/108_hires.png",
+    "megaFormKey": "mega-heracross"
   },
   {
     "id": "me2-109",
@@ -2627,7 +2634,8 @@
     "artist": "takuyoa",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me2/109.png",
-    "imageLarge": "https://images.pokemontcg.io/me2/109_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me2/109_hires.png",
+    "megaFormKey": "mega-charizard-x"
   },
   {
     "id": "me2-110",
@@ -2730,7 +2738,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me2/113.png",
-    "imageLarge": "https://images.pokemontcg.io/me2/113_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me2/113_hires.png",
+    "megaFormKey": "mega-sharpedo"
   },
   {
     "id": "me2-114",
@@ -2783,7 +2792,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me2/115.png",
-    "imageLarge": "https://images.pokemontcg.io/me2/115_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me2/115_hires.png",
+    "megaFormKey": "mega-lopunny"
   },
   {
     "id": "me2-116",
@@ -2980,7 +2990,8 @@
     "artist": "danciao",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me2/125.png",
-    "imageLarge": "https://images.pokemontcg.io/me2/125_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me2/125_hires.png",
+    "megaFormKey": "mega-charizard-x"
   },
   {
     "id": "me2-126",
@@ -3032,7 +3043,8 @@
     "artist": "nagimiso",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me2/127.png",
-    "imageLarge": "https://images.pokemontcg.io/me2/127_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me2/127_hires.png",
+    "megaFormKey": "mega-sharpedo"
   },
   {
     "id": "me2-128",
@@ -3059,7 +3071,8 @@
     "artist": "Kinu Nishimura",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me2/128.png",
-    "imageLarge": "https://images.pokemontcg.io/me2/128_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me2/128_hires.png",
+    "megaFormKey": "mega-lopunny"
   },
   {
     "id": "me2-129",
@@ -3105,6 +3118,7 @@
     "artist": "takuyoa",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me2/130.png",
-    "imageLarge": "https://images.pokemontcg.io/me2/130_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me2/130_hires.png",
+    "megaFormKey": "mega-charizard-x"
   }
 ]

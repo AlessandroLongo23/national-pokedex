@@ -1,0 +1,436 @@
+[
+  {
+    "formKey": "mega-venusaur",
+    "displayName": "Mega Venusaur",
+    "baseDex": 3,
+    "gen": 1,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-charizard",
+    "displayName": "Mega Charizard",
+    "baseDex": 6,
+    "gen": 1,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-charizard-x",
+    "displayName": "Mega Charizard X",
+    "baseDex": 6,
+    "gen": 1,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-charizard-y",
+    "displayName": "Mega Charizard Y",
+    "baseDex": 6,
+    "gen": 1,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-blastoise",
+    "displayName": "Mega Blastoise",
+    "baseDex": 9,
+    "gen": 1,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-beedrill",
+    "displayName": "Mega Beedrill",
+    "baseDex": 15,
+    "gen": 1,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-pidgeot",
+    "displayName": "Mega Pidgeot",
+    "baseDex": 18,
+    "gen": 1,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-clefable",
+    "displayName": "Mega Clefable",
+    "baseDex": 36,
+    "gen": 1,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-alakazam",
+    "displayName": "Mega Alakazam",
+    "baseDex": 65,
+    "gen": 1,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-slowbro",
+    "displayName": "Mega Slowbro",
+    "baseDex": 80,
+    "gen": 1,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-gengar",
+    "displayName": "Mega Gengar",
+    "baseDex": 94,
+    "gen": 1,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-kangaskhan",
+    "displayName": "Mega Kangaskhan",
+    "baseDex": 115,
+    "gen": 1,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-starmie",
+    "displayName": "Mega Starmie",
+    "baseDex": 121,
+    "gen": 1,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-gyarados",
+    "displayName": "Mega Gyarados",
+    "baseDex": 130,
+    "gen": 1,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-aerodactyl",
+    "displayName": "Mega Aerodactyl",
+    "baseDex": 142,
+    "gen": 1,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-dragonite",
+    "displayName": "Mega Dragonite",
+    "baseDex": 149,
+    "gen": 1,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-mewtwo",
+    "displayName": "Mega Mewtwo",
+    "baseDex": 150,
+    "gen": 1,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-meganium",
+    "displayName": "Mega Meganium",
+    "baseDex": 154,
+    "gen": 2,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-feraligatr",
+    "displayName": "Mega Feraligatr",
+    "baseDex": 160,
+    "gen": 2,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-ampharos",
+    "displayName": "Mega Ampharos",
+    "baseDex": 181,
+    "gen": 2,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-steelix",
+    "displayName": "Mega Steelix",
+    "baseDex": 208,
+    "gen": 2,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-scizor",
+    "displayName": "Mega Scizor",
+    "baseDex": 212,
+    "gen": 2,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-heracross",
+    "displayName": "Mega Heracross",
+    "baseDex": 214,
+    "gen": 2,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-skarmory",
+    "displayName": "Mega Skarmory",
+    "baseDex": 227,
+    "gen": 2,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-houndoom",
+    "displayName": "Mega Houndoom",
+    "baseDex": 229,
+    "gen": 2,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-tyranitar",
+    "displayName": "Mega Tyranitar",
+    "baseDex": 248,
+    "gen": 2,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-sceptile",
+    "displayName": "Mega Sceptile",
+    "baseDex": 254,
+    "gen": 3,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-blaziken",
+    "displayName": "Mega Blaziken",
+    "baseDex": 257,
+    "gen": 3,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-swampert",
+    "displayName": "Mega Swampert",
+    "baseDex": 260,
+    "gen": 3,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-gardevoir",
+    "displayName": "Mega Gardevoir",
+    "baseDex": 282,
+    "gen": 3,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-mawile",
+    "displayName": "Mega Mawile",
+    "baseDex": 303,
+    "gen": 3,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-aggron",
+    "displayName": "Mega Aggron",
+    "baseDex": 306,
+    "gen": 3,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-manectric",
+    "displayName": "Mega Manectric",
+    "baseDex": 310,
+    "gen": 3,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-sharpedo",
+    "displayName": "Mega Sharpedo",
+    "baseDex": 319,
+    "gen": 3,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-camerupt",
+    "displayName": "Mega Camerupt",
+    "baseDex": 323,
+    "gen": 3,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-altaria",
+    "displayName": "Mega Altaria",
+    "baseDex": 334,
+    "gen": 3,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-absol",
+    "displayName": "Mega Absol",
+    "baseDex": 359,
+    "gen": 3,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-glalie",
+    "displayName": "Mega Glalie",
+    "baseDex": 362,
+    "gen": 3,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-salamence",
+    "displayName": "Mega Salamence",
+    "baseDex": 373,
+    "gen": 3,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-metagross",
+    "displayName": "Mega Metagross",
+    "baseDex": 376,
+    "gen": 3,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-latias",
+    "displayName": "Mega Latias",
+    "baseDex": 380,
+    "gen": 3,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-latios",
+    "displayName": "Mega Latios",
+    "baseDex": 381,
+    "gen": 3,
+    "isPrimal": false
+  },
+  {
+    "formKey": "primal-kyogre",
+    "displayName": "Primal Kyogre",
+    "baseDex": 382,
+    "gen": 3,
+    "isPrimal": true
+  },
+  {
+    "formKey": "primal-groudon",
+    "displayName": "Primal Groudon",
+    "baseDex": 383,
+    "gen": 3,
+    "isPrimal": true
+  },
+  {
+    "formKey": "mega-rayquaza",
+    "displayName": "Mega Rayquaza",
+    "baseDex": 384,
+    "gen": 3,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-lopunny",
+    "displayName": "Mega Lopunny",
+    "baseDex": 428,
+    "gen": 4,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-garchomp",
+    "displayName": "Mega Garchomp",
+    "baseDex": 445,
+    "gen": 4,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-lucario",
+    "displayName": "Mega Lucario",
+    "baseDex": 448,
+    "gen": 4,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-abomasnow",
+    "displayName": "Mega Abomasnow",
+    "baseDex": 460,
+    "gen": 4,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-gallade",
+    "displayName": "Mega Gallade",
+    "baseDex": 475,
+    "gen": 4,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-froslass",
+    "displayName": "Mega Froslass",
+    "baseDex": 478,
+    "gen": 4,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-emboar",
+    "displayName": "Mega Emboar",
+    "baseDex": 500,
+    "gen": 5,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-audino",
+    "displayName": "Mega Audino",
+    "baseDex": 531,
+    "gen": 5,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-scrafty",
+    "displayName": "Mega Scrafty",
+    "baseDex": 560,
+    "gen": 5,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-eelektross",
+    "displayName": "Mega Eelektross",
+    "baseDex": 604,
+    "gen": 5,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-greninja",
+    "displayName": "Mega Greninja",
+    "baseDex": 658,
+    "gen": 6,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-pyroar",
+    "displayName": "Mega Pyroar",
+    "baseDex": 668,
+    "gen": 6,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-floette",
+    "displayName": "Mega Floette",
+    "baseDex": 670,
+    "gen": 6,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-dragalge",
+    "displayName": "Mega Dragalge",
+    "baseDex": 691,
+    "gen": 6,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-hawlucha",
+    "displayName": "Mega Hawlucha",
+    "baseDex": 701,
+    "gen": 6,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-zygarde",
+    "displayName": "Mega Zygarde",
+    "baseDex": 718,
+    "gen": 6,
+    "isPrimal": false
+  },
+  {
+    "formKey": "mega-diancie",
+    "displayName": "Mega Diancie",
+    "baseDex": 719,
+    "gen": 6,
+    "isPrimal": false
+  }
+]

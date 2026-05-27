@@ -5,6 +5,7 @@ import type {
   SetRarityPool,
   Supertype,
 } from "@/lib/data/types";
+import { normalizeMegaName } from "./parseMegas";
 
 export interface RawCard {
   id: string;
@@ -110,10 +111,16 @@ export function parseSetCards(setId: string, cards: RawCard[]): SetCardSummary {
     const supertype = normaliseSupertype(card.supertype);
     const rarityRaw = card.rarity ?? "";
     const bucket = card.rarity ? RARITY_MAP[card.rarity] : undefined;
+    const subtypes = card.subtypes ?? [];
 
     if (supertype === "Pokémon") {
       for (const n of dex) dexSet.add(n);
     }
+
+    const megaFormKey =
+      supertype === "Pokémon" && subtypes.includes("MEGA")
+        ? (normalizeMegaName(card.name)?.formKey ?? undefined)
+        : undefined;
 
     out.push({
       id: card.id,
@@ -127,7 +134,7 @@ export function parseSetCards(setId: string, cards: RawCard[]): SetCardSummary {
       dex,
       types: card.types ?? [],
       hp: card.hp ? Number(card.hp) || undefined : undefined,
-      subtypes: card.subtypes ?? [],
+      subtypes,
       evolvesFrom: card.evolvesFrom,
       artist: card.artist,
       regulationMark: card.regulationMark,
@@ -135,6 +142,7 @@ export function parseSetCards(setId: string, cards: RawCard[]): SetCardSummary {
         card.images?.small ?? `https://images.pokemontcg.io/${setId}/${card.number}.png`,
       imageLarge:
         card.images?.large ?? `https://images.pokemontcg.io/${setId}/${card.number}_hires.png`,
+      ...(megaFormKey ? { megaFormKey } : {}),
     });
 
     if (!bucket) continue;

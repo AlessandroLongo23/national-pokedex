@@ -1,6 +1,14 @@
 import { SETS, loadSetCards } from ".";
 import { OTHER_SUBTYPE_PREDICATES } from "./other-subtypes";
-import { RARITY_ORDER, type CardEntry } from "./types";
+import { RARITY_ORDER, type CardEntry, type MegaForm } from "./types";
+
+export type MegaPlacementForCoverage = "appended" | "inline" | "separate";
+
+export interface MegaCoverageOptions {
+  treatMegasAsSeparate: boolean;
+  megaPlacement: MegaPlacementForCoverage;
+  megas: MegaForm[];
+}
 
 export type ScopeType =
   | "master_set"
@@ -104,18 +112,27 @@ export function filterByScope(
  * owned card (tie-broken by id), otherwise null when nothing is owned.
  * `ownedCardsForDex` is the pre-filtered list of cards the user owns that
  * include this dex# in their `dex` array.
+ *
+ * When `excludeMegas` is true (the `treat_megas_as_separate` toggle is on),
+ * any owned card carrying a `megaFormKey` is filtered out — a Mega Charizard X
+ * can't represent slot #6 Charizard. An override pointing at a now-excluded
+ * Mega card is treated as stale and falls through to the rarity fallback.
  */
 export function pickDisplayCardId(
   overrideCardId: string | undefined,
   ownedCardsForDex: CardEntry[],
+  excludeMegas = false,
 ): string | null {
-  if (overrideCardId && ownedCardsForDex.some((c) => c.id === overrideCardId)) {
+  const eligible = excludeMegas
+    ? ownedCardsForDex.filter((c) => !c.megaFormKey)
+    : ownedCardsForDex;
+  if (overrideCardId && eligible.some((c) => c.id === overrideCardId)) {
     return overrideCardId;
   }
-  if (ownedCardsForDex.length === 0) return null;
-  let best = ownedCardsForDex[0]!;
-  for (let i = 1; i < ownedCardsForDex.length; i++) {
-    const cand = ownedCardsForDex[i]!;
+  if (eligible.length === 0) return null;
+  let best = eligible[0]!;
+  for (let i = 1; i < eligible.length; i++) {
+    const cand = eligible[i]!;
     const candRank = RARITY_ORDER.indexOf(cand.rarity);
     const bestRank = RARITY_ORDER.indexOf(best.rarity);
     // Lower index in RARITY_ORDER = lower rarity, so HIGHER index wins.
@@ -145,28 +162,62 @@ export function ownedCardsByDex(
   return m;
 }
 
+export interface PokedexCoverageResult {
+  dexNumbers: number[];
+  covered: Set<number>;
+  /** Mega forms whose `baseDex` falls in [dexFrom, dexTo]. Populated only
+   * when the toggle is on and placement is not "separate". */
+  megaForms: MegaForm[];
+  coveredMegaForms: Set<string>;
+}
+
 /** Build the species-coverage view for a pokedex-scope binder.
  * Returns the ordered list of dex numbers in the range plus the subset
  * covered by ownership (a species is covered if any of its cards is owned).
+ *
+ * When `mega.treatMegasAsSeparate` is on:
+ *  - Cards carrying a `megaFormKey` are excluded from dex contribution,
+ *    so a Mega Charizard X card no longer covers slot #6.
+ *  - When `mega.megaPlacement` is "inline" or "appended", Mega forms whose
+ *    baseDex falls in the range are returned alongside, with their own
+ *    coverage set. "separate" placement leaves the binder dex-only.
  */
 export function pokedexCoverage(
   range: { dexFrom: number; dexTo: number },
   ownedCardIds: Set<string>,
   cards: CardEntry[],
-): { dexNumbers: number[]; covered: Set<number> } {
+  mega?: MegaCoverageOptions,
+): PokedexCoverageResult {
   const lo = Math.min(range.dexFrom, range.dexTo);
   const hi = Math.max(range.dexFrom, range.dexTo);
   const dexNumbers: number[] = [];
   for (let d = lo; d <= hi; d++) dexNumbers.push(d);
 
+  const excludeMegasFromDex = mega?.treatMegasAsSeparate === true;
   const covered = new Set<number>();
   for (const c of cards) {
     if (!ownedCardIds.has(c.id)) continue;
+    if (excludeMegasFromDex && c.megaFormKey) continue;
     for (const d of c.dex) {
       if (d >= lo && d <= hi) covered.add(d);
     }
   }
-  return { dexNumbers, covered };
+
+  const includeMegasInBinder =
+    mega?.treatMegasAsSeparate === true && mega.megaPlacement !== "separate";
+  const megaForms = includeMegasInBinder
+    ? mega.megas.filter((f) => f.baseDex >= lo && f.baseDex <= hi)
+    : [];
+  const coveredMegaForms = new Set<string>();
+  if (includeMegasInBinder) {
+    const wantedKeys = new Set(megaForms.map((f) => f.formKey));
+    for (const c of cards) {
+      if (!c.megaFormKey || !wantedKeys.has(c.megaFormKey)) continue;
+      if (ownedCardIds.has(c.id)) coveredMegaForms.add(c.megaFormKey);
+    }
+  }
+
+  return { dexNumbers, covered, megaForms, coveredMegaForms };
 }
 
 export function filterCardsByIds(

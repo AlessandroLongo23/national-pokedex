@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { requireUserId } from "../../_lib/current-user";
 import { getSupabaseServer } from "@/lib/supabase/server";
@@ -9,9 +10,15 @@ import {
   type ScopeParams,
 } from "@/lib/data/binder-scope";
 import { loadUserPreferences } from "../../_lib/user-preferences";
-import { fetchPricesForCards, sumPricesByQuantity } from "@/lib/pricing/pokemontcg";
-import { BinderDetailClient } from "./_components/BinderDetailClient";
-import type { CardPriceRecord } from "../../_lib/CardPricesContext";
+import {
+  BinderPricedShell,
+  BinderUnpricedShell,
+} from "./_components/BinderPricedShell";
+
+// Vercel Hobby's default function timeout (10s) is below what a cold-cache
+// price fetch can take for a binder that spans many sets. Allow up to 60s
+// so the streamed price subtree has room to resolve.
+export const maxDuration = 60;
 
 export default async function BinderDetailPage({
   params,
@@ -75,47 +82,45 @@ export default async function BinderDetailPage({
     }
   }
 
-  // One fetch covers prices for every card on this page — both the grid
-  // tiles and the binder-value stat.
-  const priceMap = await fetchPricesForCards(targetIds);
   const ownedQtyByCard = new Map<string, number>();
   for (const r of ownedRows ?? []) {
     ownedQtyByCard.set(r.card_id as string, (r.quantity as number | null) ?? 1);
   }
-  const ownedPairsInBinder: [string, number][] = [];
-  for (const c of cards) {
-    const qty = ownedQtyByCard.get(c.id);
-    if (qty && qty > 0) ownedPairsInBinder.push([c.id, qty]);
-  }
-  const { total: binderValue, coveredCount: pricedCount } = sumPricesByQuantity(
-    priceMap,
-    ownedPairsInBinder,
-    prefs.priceSource,
-  );
 
-  const priceRecord: CardPriceRecord = {};
-  for (const id of targetIds) {
-    const p = priceMap.get(id);
-    if (p) priceRecord[id] = p;
-  }
+  const binderSummary = {
+    id: binder.id as string,
+    name: binder.name as string,
+    scopeType,
+    scopeParams,
+  };
 
+  // Render the page chrome + grid immediately; the priced shell streams in
+  // once the (potentially-slow) per-set price fetches resolve. The fallback
+  // is the same component with empty prices, so the layout doesn't shift
+  // when prices finally land — only the value badge and per-card price
+  // overlays light up.
   return (
-    <BinderDetailClient
-      binder={{
-        id: binder.id as string,
-        name: binder.name as string,
-        scopeType,
-        scopeParams,
-      }}
-      cards={cards}
-      customCardIds={customCardIds}
-      recentAdditions={recentAdditions}
-      cellOverrides={cellOverrides}
-      value={binderValue}
-      pricedCount={pricedCount}
-      ownedPricedTotal={ownedPairsInBinder.length}
-      priceSource={prefs.priceSource}
-      prices={priceRecord}
-    />
+    <Suspense
+      fallback={
+        <BinderUnpricedShell
+          binder={binderSummary}
+          cards={cards}
+          customCardIds={customCardIds}
+          recentAdditions={recentAdditions}
+          cellOverrides={cellOverrides}
+          priceSource={prefs.priceSource}
+        />
+      }
+    >
+      <BinderPricedShell
+        binder={binderSummary}
+        cards={cards}
+        customCardIds={customCardIds}
+        recentAdditions={recentAdditions}
+        cellOverrides={cellOverrides}
+        priceSource={prefs.priceSource}
+        ownedQtyByCard={ownedQtyByCard}
+      />
+    </Suspense>
   );
 }

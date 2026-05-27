@@ -368,7 +368,8 @@
     "artist": "Keisuke Azuma",
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me4-15/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me4-15/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-15/large",
+    "megaFormKey": "mega-pyroar"
   },
   {
     "id": "me4-16",
@@ -541,7 +542,8 @@
     "artist": "takuyoa",
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me4-22/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me4-22/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-22/large",
+    "megaFormKey": "mega-greninja"
   },
   {
     "id": "me4-23",
@@ -859,7 +861,8 @@
     "artist": "aky CG Works",
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me4-35/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me4-35/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-35/large",
+    "megaFormKey": "mega-floette"
   },
   {
     "id": "me4-36",
@@ -1180,7 +1183,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me4-48/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me4-48/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-48/large",
+    "megaFormKey": "mega-gallade"
   },
   {
     "id": "me4-49",
@@ -1601,7 +1605,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me4-65/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me4-65/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-65/large",
+    "megaFormKey": "mega-dragalge"
   },
   {
     "id": "me4-66",
@@ -2366,7 +2371,8 @@
     "artist": "Keisuke Azuma",
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me4-99/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me4-99/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-99/large",
+    "megaFormKey": "mega-pyroar"
   },
   {
     "id": "me4-100",
@@ -2393,7 +2399,8 @@
     "artist": "takuyoa",
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me4-100/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me4-100/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-100/large",
+    "megaFormKey": "mega-greninja"
   },
   {
     "id": "me4-101",
@@ -2419,7 +2426,8 @@
     "artist": "aky CG Works",
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me4-101/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me4-101/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-101/large",
+    "megaFormKey": "mega-floette"
   },
   {
     "id": "me4-102",
@@ -2497,7 +2505,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me4-104/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me4-104/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-104/large",
+    "megaFormKey": "mega-dragalge"
   },
   {
     "id": "me4-105",
@@ -2740,7 +2749,8 @@
     "artist": "Susumu Maeya",
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me4-116/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me4-116/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-116/large",
+    "megaFormKey": "mega-greninja"
   },
   {
     "id": "me4-117",
@@ -2766,7 +2776,8 @@
     "artist": "Teeziro",
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me4-117/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me4-117/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-117/large",
+    "megaFormKey": "mega-floette"
   },
   {
     "id": "me4-118",
@@ -2793,7 +2804,8 @@
     "artist": "Kazumasa Yasukunio",
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me4-118/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me4-118/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-118/large",
+    "megaFormKey": "mega-dragalge"
   },
   {
     "id": "me4-119",
@@ -2884,6 +2896,7 @@
     "artist": "takuyoa",
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me4-122/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me4-122/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me4-122/large",
+    "megaFormKey": "mega-greninja"
   }
 ]

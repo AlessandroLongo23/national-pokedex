@@ -816,7 +816,8 @@
     "evolvesFrom": "Metagross-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xyp/XY35.png",
-    "imageLarge": "https://images.pokemontcg.io/xyp/XY35_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xyp/XY35_hires.png",
+    "megaFormKey": "mega-metagross"
   },
   {
     "id": "xyp-XY36",
@@ -1029,7 +1030,8 @@
     "evolvesFrom": "Diancie-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xyp/XY44.png",
-    "imageLarge": "https://images.pokemontcg.io/xyp/XY44_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xyp/XY44_hires.png",
+    "megaFormKey": "mega-diancie"
   },
   {
     "id": "xyp-XY45",
@@ -1483,7 +1485,8 @@
     "evolvesFrom": "Absol-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xyp/XY63.png",
-    "imageLarge": "https://images.pokemontcg.io/xyp/XY63_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xyp/XY63_hires.png",
+    "megaFormKey": "mega-absol"
   },
   {
     "id": "xyp-XY64",
@@ -2046,7 +2049,8 @@
     "evolvesFrom": "Blaziken-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xyp/XY86.png",
-    "imageLarge": "https://images.pokemontcg.io/xyp/XY86_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xyp/XY86_hires.png",
+    "megaFormKey": "mega-blaziken"
   },
   {
     "id": "xyp-XY87",
@@ -2071,7 +2075,8 @@
     "evolvesFrom": "Swampert-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xyp/XY87.png",
-    "imageLarge": "https://images.pokemontcg.io/xyp/XY87_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xyp/XY87_hires.png",
+    "megaFormKey": "mega-swampert"
   },
   {
     "id": "xyp-XY88",
@@ -2324,7 +2329,8 @@
     "evolvesFrom": "Aerodactyl-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xyp/XY98.png",
-    "imageLarge": "https://images.pokemontcg.io/xyp/XY98_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xyp/XY98_hires.png",
+    "megaFormKey": "mega-aerodactyl"
   },
   {
     "id": "xyp-XY99",
@@ -2461,7 +2467,8 @@
     "evolvesFrom": "Mawile-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xyp/XY104.png",
-    "imageLarge": "https://images.pokemontcg.io/xyp/XY104_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xyp/XY104_hires.png",
+    "megaFormKey": "mega-mawile"
   },
   {
     "id": "xyp-XY105",
@@ -3751,7 +3758,8 @@
     "evolvesFrom": "Beedrill-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xyp/XY158.png",
-    "imageLarge": "https://images.pokemontcg.io/xyp/XY158_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xyp/XY158_hires.png",
+    "megaFormKey": "mega-beedrill"
   },
   {
     "id": "xyp-XY159",
@@ -3935,7 +3943,8 @@
     "evolvesFrom": "Gengar-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xyp/XY166.png",
-    "imageLarge": "https://images.pokemontcg.io/xyp/XY166_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xyp/XY166_hires.png",
+    "megaFormKey": "mega-gengar"
   },
   {
     "id": "xyp-XY167",
@@ -3984,7 +3993,8 @@
     "evolvesFrom": "Garchomp-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xyp/XY168.png",
-    "imageLarge": "https://images.pokemontcg.io/xyp/XY168_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xyp/XY168_hires.png",
+    "megaFormKey": "mega-garchomp"
   },
   {
     "id": "xyp-XY169",
@@ -4051,7 +4061,8 @@
     "evolvesFrom": "Salamence-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xyp/XY171.png",
-    "imageLarge": "https://images.pokemontcg.io/xyp/XY171_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xyp/XY171_hires.png",
+    "megaFormKey": "mega-salamence"
   },
   {
     "id": "xyp-XY172",
@@ -4685,7 +4696,8 @@
     "evolvesFrom": "Camerupt-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xyp/XY198.png",
-    "imageLarge": "https://images.pokemontcg.io/xyp/XY198_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xyp/XY198_hires.png",
+    "megaFormKey": "mega-camerupt"
   },
   {
     "id": "xyp-XY198a",
@@ -4710,7 +4722,8 @@
     "evolvesFrom": "Camerupt-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xyp/XY198a.png",
-    "imageLarge": "https://images.pokemontcg.io/xyp/XY198a_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xyp/XY198a_hires.png",
+    "megaFormKey": "mega-camerupt"
   },
   {
     "id": "xyp-XY199",
@@ -4753,7 +4766,8 @@
     "evolvesFrom": "Sharpedo-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xyp/XY200.png",
-    "imageLarge": "https://images.pokemontcg.io/xyp/XY200_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xyp/XY200_hires.png",
+    "megaFormKey": "mega-sharpedo"
   },
   {
     "id": "xyp-XY200a",
@@ -4778,7 +4792,8 @@
     "evolvesFrom": "Sharpedo-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xyp/XY200a.png",
-    "imageLarge": "https://images.pokemontcg.io/xyp/XY200a_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xyp/XY200a_hires.png",
+    "megaFormKey": "mega-sharpedo"
   },
   {
     "id": "xyp-XY201",

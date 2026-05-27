@@ -46,7 +46,8 @@
     "evolvesFrom": "Venusaur-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy12/2.png",
-    "imageLarge": "https://images.pokemontcg.io/xy12/2_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy12/2_hires.png",
+    "megaFormKey": "mega-venusaur"
   },
   {
     "id": "xy12-3",
@@ -307,7 +308,8 @@
     "evolvesFrom": "Charizard-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy12/13.png",
-    "imageLarge": "https://images.pokemontcg.io/xy12/13_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy12/13_hires.png",
+    "megaFormKey": "mega-charizard"
   },
   {
     "id": "xy12-14",
@@ -520,7 +522,8 @@
     "evolvesFrom": "Blastoise-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy12/22.png",
-    "imageLarge": "https://images.pokemontcg.io/xy12/22_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy12/22_hires.png",
+    "megaFormKey": "mega-blastoise"
   },
   {
     "id": "xy12-23",
@@ -640,7 +643,8 @@
     "evolvesFrom": "Slowbro-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy12/27.png",
-    "imageLarge": "https://images.pokemontcg.io/xy12/27_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy12/27_hires.png",
+    "megaFormKey": "mega-slowbro"
   },
   {
     "id": "xy12-28",
@@ -1533,7 +1537,8 @@
     "evolvesFrom": "Pidgeot-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy12/65.png",
-    "imageLarge": "https://images.pokemontcg.io/xy12/65_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy12/65_hires.png",
+    "megaFormKey": "mega-pidgeot"
   },
   {
     "id": "xy12-66",
@@ -2198,7 +2203,8 @@
     "evolvesFrom": "Venusaur-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy12/100.png",
-    "imageLarge": "https://images.pokemontcg.io/xy12/100_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy12/100_hires.png",
+    "megaFormKey": "mega-venusaur"
   },
   {
     "id": "xy12-101",
@@ -2223,7 +2229,8 @@
     "evolvesFrom": "Charizard-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy12/101.png",
-    "imageLarge": "https://images.pokemontcg.io/xy12/101_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy12/101_hires.png",
+    "megaFormKey": "mega-charizard"
   },
   {
     "id": "xy12-102",
@@ -2248,7 +2255,8 @@
     "evolvesFrom": "Blastoise-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy12/102.png",
-    "imageLarge": "https://images.pokemontcg.io/xy12/102_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy12/102_hires.png",
+    "megaFormKey": "mega-blastoise"
   },
   {
     "id": "xy12-103",
@@ -2321,7 +2329,8 @@
     "evolvesFrom": "Pidgeot-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy12/105.png",
-    "imageLarge": "https://images.pokemontcg.io/xy12/105_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy12/105_hires.png",
+    "megaFormKey": "mega-pidgeot"
   },
   {
     "id": "xy12-106",

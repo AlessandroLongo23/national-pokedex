@@ -305,7 +305,8 @@
     "evolvesFrom": "Charizard-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy2/13.png",
-    "imageLarge": "https://images.pokemontcg.io/xy2/13_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy2/13_hires.png",
+    "megaFormKey": "mega-charizard"
   },
   {
     "id": "xy2-14",
@@ -1622,7 +1623,8 @@
     "evolvesFrom": "Charizard-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy2/69.png",
-    "imageLarge": "https://images.pokemontcg.io/xy2/69_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy2/69_hires.png",
+    "megaFormKey": "mega-charizard"
   },
   {
     "id": "xy2-70",
@@ -1860,7 +1862,8 @@
     "evolvesFrom": "Kangaskhan-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy2/79.png",
-    "imageLarge": "https://images.pokemontcg.io/xy2/79_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy2/79_hires.png",
+    "megaFormKey": "mega-kangaskhan"
   },
   {
     "id": "xy2-80",
@@ -2437,7 +2440,8 @@
     "evolvesFrom": "Charizard-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy2/107.png",
-    "imageLarge": "https://images.pokemontcg.io/xy2/107_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy2/107_hires.png",
+    "megaFormKey": "mega-charizard"
   },
   {
     "id": "xy2-108",
@@ -2462,7 +2466,8 @@
     "evolvesFrom": "Charizard-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy2/108.png",
-    "imageLarge": "https://images.pokemontcg.io/xy2/108_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy2/108_hires.png",
+    "megaFormKey": "mega-charizard"
   },
   {
     "id": "xy2-109",
@@ -2487,7 +2492,8 @@
     "evolvesFrom": "Kangaskhan-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy2/109.png",
-    "imageLarge": "https://images.pokemontcg.io/xy2/109_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy2/109_hires.png",
+    "megaFormKey": "mega-kangaskhan"
   },
   {
     "id": "xy2-88a",

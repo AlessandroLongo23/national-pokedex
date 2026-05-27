@@ -143,19 +143,20 @@ async function fetchSetCardsPage(setId: string, page: number): Promise<ApiRespon
 // page crash).
 export async function fetchSetPrices(setId: string): Promise<Map<string, CardPrice>> {
   const out = new Map<string, CardPrice>();
-  // Track every card pokemontcg.io returned (even with no prices) so the
-  // fallback pass below knows whose TCGplayer slot needs filling vs which
-  // cards just aren't in the set at all.
-  const seenIds = new Set<string>();
+  let pokemonTcgFailed = false;
+  let cardsReturned = 0;
+  let cardsMissingTcgplayer = 0;
   try {
     let page = 1;
     while (true) {
       const json = await fetchSetCardsPage(setId, page);
       const rows = json.data ?? [];
       for (const row of rows) {
-        seenIds.add(row.id);
+        cardsReturned += 1;
+        const tcgplayer = pickTcgplayerPrice(row.tcgplayer?.prices);
+        if (tcgplayer == null) cardsMissingTcgplayer += 1;
         const price: CardPrice = {
-          tcgplayer: pickTcgplayerPrice(row.tcgplayer?.prices),
+          tcgplayer,
           cardmarket: pickCardmarketPrice(row.cardmarket?.prices),
           tcgplayerUrl: row.tcgplayer?.url ?? undefined,
           cardmarketUrl: row.cardmarket?.url ?? undefined,
@@ -175,25 +176,69 @@ export async function fetchSetPrices(setId: string): Promise<Map<string, CardPri
       page += 1;
     }
   } catch (err) {
+    pokemonTcgFailed = true;
     console.warn(`[pricing] fetchSetPrices(${setId}) failed:`, err);
   }
 
-  // Fill in TCGplayer prices for cards pokemontcg.io didn't price (or
-  // didn't even return) using the tcgcsv mirror. We only overwrite empty
-  // slots — pokemontcg.io stays the source of truth when both have data.
-  const fallback = await fetchSetTcgplayerFallback(setId);
-  if (fallback.size > 0) {
-    for (const [cardId, tcgplayer] of fallback) {
-      const existing = out.get(cardId);
-      if (!existing) {
-        out.set(cardId, { tcgplayer });
-      } else if (existing.tcgplayer == null) {
-        out.set(cardId, { ...existing, tcgplayer });
+  // Only pay the tcgcsv round-trip when there's actually a gap to fill —
+  // pokemontcg.io fully covers most established sets, and an unconditional
+  // second fetch per set was doubling the latency of binder/wishlist pages.
+  const needsFallback = pokemonTcgFailed || cardsReturned === 0 || cardsMissingTcgplayer > 0;
+  if (needsFallback) {
+    const fallback = await fetchSetTcgplayerFallback(setId);
+    if (fallback.size > 0) {
+      for (const [cardId, tcgplayer] of fallback) {
+        const existing = out.get(cardId);
+        if (!existing) {
+          out.set(cardId, { tcgplayer });
+        } else if (existing.tcgplayer == null) {
+          out.set(cardId, { ...existing, tcgplayer });
+        }
       }
     }
   }
 
   return out;
+}
+
+// Single-card lookup — used by the card-detail page so it doesn't have to
+// pull the entire set's prices (up to ~250 cards paginated) just to render
+// one number. Falls back to tcgcsv only when pokemontcg.io has no
+// tcgplayer price for the card.
+export async function fetchSingleCardPrice(cardId: string): Promise<CardPrice | undefined> {
+  const url = `${API_BASE}/cards/${encodeURIComponent(cardId)}?select=id,tcgplayer,cardmarket`;
+  let price: CardPrice | undefined;
+  try {
+    const res = await fetch(url, {
+      headers: apiHeaders(),
+      next: { revalidate: REVALIDATE_SECONDS, tags: [`card-price:${cardId}`] },
+    });
+    if (res.ok) {
+      const json = (await res.json()) as { data?: ApiCard };
+      const row = json.data;
+      if (row) {
+        price = {
+          tcgplayer: pickTcgplayerPrice(row.tcgplayer?.prices),
+          cardmarket: pickCardmarketPrice(row.cardmarket?.prices),
+          tcgplayerUrl: row.tcgplayer?.url ?? undefined,
+          cardmarketUrl: row.cardmarket?.url ?? undefined,
+        };
+      }
+    }
+  } catch (err) {
+    console.warn(`[pricing] fetchSingleCardPrice(${cardId}) failed:`, err);
+  }
+
+  if (price?.tcgplayer != null) return price;
+
+  // Gap-fill from tcgcsv. Cheaper than fetching the whole set's pokemontcg
+  // page just because one card was missing a price.
+  const setId = setIdOf(cardId);
+  if (!setId) return price;
+  const fallback = await fetchSetTcgplayerFallback(setId);
+  const tcgplayer = fallback.get(cardId);
+  if (tcgplayer == null) return price;
+  return price ? { ...price, tcgplayer } : { tcgplayer };
 }
 
 // Card IDs follow `${setId}-${number}` — extract setId by splitting on the

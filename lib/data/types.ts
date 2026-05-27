@@ -95,9 +95,24 @@ export interface CardEntry {
   regulationMark?: string;
   imageSmall: string;
   imageLarge: string;
+  // Set for Pokémon cards whose `subtypes` includes "MEGA" and whose name
+  // resolves to a known single-Pokémon Mega/Primal form. Tag-team cards
+  // (names containing " & ") never get a megaFormKey even though they carry
+  // the MEGA subtype.
+  megaFormKey?: string;
 }
 
 export type CardIndex = Record<number, string[]>;
+
+export interface MegaForm {
+  formKey: string;
+  displayName: string;
+  baseDex: number;
+  gen: Generation;
+  isPrimal: boolean;
+}
+
+export type MegaIndex = Record<string, string[]>;
 
 export interface SpeciesEntry {
   dex: number;

@@ -12,6 +12,8 @@ export default async function DashboardLayout({ children }: { children: React.Re
         userId=""
         email=""
         priceSource="tcgplayer"
+        treatMegasAsSeparate={false}
+        megaPlacement="appended"
         initialOwned={[]}
         initialWishlist={[]}
         initialFavorites={[]}
@@ -54,6 +56,8 @@ export default async function DashboardLayout({ children }: { children: React.Re
       userId={user.id}
       email={user.email ?? ""}
       priceSource={prefs.priceSource}
+      treatMegasAsSeparate={prefs.treatMegasAsSeparate}
+      megaPlacement={prefs.megaPlacement}
       initialOwned={initialOwned}
       initialWishlist={initialWishlist}
       initialFavorites={initialFavorites}

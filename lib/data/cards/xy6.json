@@ -822,7 +822,8 @@
     "evolvesFrom": "Gallade-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy6/35.png",
-    "imageLarge": "https://images.pokemontcg.io/xy6/35_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy6/35_hires.png",
+    "megaFormKey": "mega-gallade"
   },
   {
     "id": "xy6-36",
@@ -1387,7 +1388,8 @@
     "evolvesFrom": "Latios-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy6/59.png",
-    "imageLarge": "https://images.pokemontcg.io/xy6/59_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy6/59_hires.png",
+    "megaFormKey": "mega-latios"
   },
   {
     "id": "xy6-60",
@@ -1436,7 +1438,8 @@
     "evolvesFrom": "Rayquaza-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy6/61.png",
-    "imageLarge": "https://images.pokemontcg.io/xy6/61_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy6/61_hires.png",
+    "megaFormKey": "mega-rayquaza"
   },
   {
     "id": "xy6-62",
@@ -1789,7 +1792,8 @@
     "evolvesFrom": "Rayquaza-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy6/76.png",
-    "imageLarge": "https://images.pokemontcg.io/xy6/76_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy6/76_hires.png",
+    "megaFormKey": "mega-rayquaza"
   },
   {
     "id": "xy6-77",
@@ -2274,7 +2278,8 @@
     "evolvesFrom": "Gallade-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy6/100.png",
-    "imageLarge": "https://images.pokemontcg.io/xy6/100_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy6/100_hires.png",
+    "megaFormKey": "mega-gallade"
   },
   {
     "id": "xy6-101",
@@ -2323,7 +2328,8 @@
     "evolvesFrom": "Latios-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy6/102.png",
-    "imageLarge": "https://images.pokemontcg.io/xy6/102_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy6/102_hires.png",
+    "megaFormKey": "mega-latios"
   },
   {
     "id": "xy6-103",
@@ -2396,7 +2402,8 @@
     "evolvesFrom": "Rayquaza-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy6/105.png",
-    "imageLarge": "https://images.pokemontcg.io/xy6/105_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy6/105_hires.png",
+    "megaFormKey": "mega-rayquaza"
   },
   {
     "id": "xy6-106",

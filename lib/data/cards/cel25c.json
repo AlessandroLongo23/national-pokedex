@@ -362,7 +362,8 @@
     "evolvesFrom": "Rayquaza-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/cel25c/76_A.png",
-    "imageLarge": "https://images.pokemontcg.io/cel25c/76_A_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/cel25c/76_A_hires.png",
+    "megaFormKey": "mega-rayquaza"
   },
   {
     "id": "cel25c-86_A",

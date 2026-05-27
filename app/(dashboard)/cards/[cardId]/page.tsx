@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { Suspense } from "react";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { getSet, loadSetCards, SPECIES } from "@/lib/data";
 import { getAllCards } from "@/lib/data/binder-scope";
 import {
@@ -8,14 +9,7 @@ import {
   type CardEntry,
   type Generation,
 } from "@/lib/data/types";
-import {
-  fetchPricesForCards,
-  formatPrice,
-  pickPrice,
-  pickUrl,
-  PRICE_SOURCE_CURRENCY,
-  PRICE_SOURCE_LABEL,
-} from "@/lib/pricing/pokemontcg";
+import { PRICE_SOURCE_CURRENCY } from "@/lib/pricing/pokemontcg";
 import { getSupabaseServer } from "@/lib/supabase/server";
 import type { LedgerCurrency } from "@/lib/ledger/money";
 import { getOptionalUser } from "../../_lib/current-user";
@@ -36,6 +30,13 @@ import {
   AcquisitionLog,
   type AcquisitionEvent,
 } from "./_components/AcquisitionLog";
+import { MarketPriceBlock, MarketPriceFallback } from "./_components/MarketPriceBlock";
+
+// Allow longer cold-cache loads to complete instead of timing out at the
+// platform default (10s on Vercel Hobby). With the price block now
+// streamed via Suspense the shell HTML still ships fast, but the function
+// itself must stay alive until the upstream price fetch resolves.
+export const maxDuration = 60;
 
 interface PageProps {
   params: Promise<{ cardId: string }>;
@@ -84,7 +85,7 @@ export default async function CardDetailPage({ params }: PageProps) {
     ? await loadUserPreferences(user.id)
     : { priceSource: "tcgplayer" as const };
 
-  const [ownedRes, priceMap, packRows, txRows, allCards] = await Promise.all([
+  const [ownedRes, packRows, txRows, allCards] = await Promise.all([
     user
       ? supabase
           .from("owned_cards")
@@ -93,7 +94,6 @@ export default async function CardDetailPage({ params }: PageProps) {
           .eq("card_id", card.id)
           .maybeSingle()
       : Promise.resolve({ data: null }),
-    fetchPricesForCards([card.id]),
     user
       ? supabase
           .from("pack_contents")
@@ -115,10 +115,6 @@ export default async function CardDetailPage({ params }: PageProps) {
   ]);
   const ownedQty = (ownedRes.data?.quantity as number | null) ?? 0;
   const acquiredAt = (ownedRes.data?.acquired_at as string | null) ?? null;
-  const price = pickPrice(priceMap.get(card.id), prefs.priceSource);
-  const marketplaceUrl = pickUrl(priceMap.get(card.id), prefs.priceSource);
-  const marketplaceName =
-    prefs.priceSource === "tcgplayer" ? "TCGplayer" : "Cardmarket";
   const currency = PRICE_SOURCE_CURRENCY[prefs.priceSource];
 
   const dex = card.dex[0];
@@ -269,39 +265,20 @@ export default async function CardDetailPage({ params }: PageProps) {
             )}
             <div>
               <p className="eyebrow">Market price</p>
-              <p
-                className={[
-                  "text-2xl font-semibold tabular-nums",
-                  price != null ? "text-text" : "text-muted",
-                ].join(" ")}
-                title={`Market price — ${PRICE_SOURCE_LABEL[prefs.priceSource]}`}
+              <Suspense
+                fallback={
+                  <MarketPriceFallback
+                    priceSource={prefs.priceSource}
+                    isAuthed={!!user}
+                  />
+                }
               >
-                {price != null ? formatPrice(price, prefs.priceSource) : "—"}
-              </p>
-              {marketplaceUrl && (
-                <a
-                  href={marketplaceUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-1 inline-flex items-center gap-1 text-[11px] text-muted underline decoration-border-strong underline-offset-2 hover:text-text"
-                >
-                  View on {marketplaceName}
-                  <ExternalLink className="h-3 w-3" aria-hidden />
-                </a>
-              )}
-              <p className="text-[11px] text-muted">
-                via{" "}
-                {user ? (
-                  <Link
-                    href="/settings"
-                    className="underline decoration-border-strong underline-offset-2 hover:text-text"
-                  >
-                    {PRICE_SOURCE_LABEL[prefs.priceSource]}
-                  </Link>
-                ) : (
-                  <span>{PRICE_SOURCE_LABEL[prefs.priceSource]}</span>
-                )}
-              </p>
+                <MarketPriceBlock
+                  cardId={card.id}
+                  priceSource={prefs.priceSource}
+                  isAuthed={!!user}
+                />
+              </Suspense>
             </div>
           </div>
 
@@ -314,9 +291,7 @@ export default async function CardDetailPage({ params }: PageProps) {
                 number: card.number,
                 imageSmall: card.imageSmall,
               }}
-              suggestedUnitProceedsCents={
-                price != null ? Math.round(price * 100) : null
-              }
+              suggestedUnitProceedsCents={null}
               defaultCurrency={currency}
             />
           )}

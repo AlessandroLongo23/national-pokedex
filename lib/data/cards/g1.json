@@ -46,7 +46,8 @@
     "evolvesFrom": "Venusaur-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/g1/2.png",
-    "imageLarge": "https://images.pokemontcg.io/g1/2_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/g1/2_hires.png",
+    "megaFormKey": "mega-venusaur"
   },
   {
     "id": "g1-3",
@@ -283,7 +284,8 @@
     "evolvesFrom": "Charizard-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/g1/12.png",
-    "imageLarge": "https://images.pokemontcg.io/g1/12_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/g1/12_hires.png",
+    "megaFormKey": "mega-charizard"
   },
   {
     "id": "g1-13",
@@ -426,7 +428,8 @@
     "evolvesFrom": "Blastoise-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/g1/18.png",
-    "imageLarge": "https://images.pokemontcg.io/g1/18_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/g1/18_hires.png",
+    "megaFormKey": "mega-blastoise"
   },
   {
     "id": "g1-19",
@@ -2563,7 +2566,8 @@
     "evolvesFrom": "Gardevoir-EX",
     "artist": "Megumi Mizutani",
     "imageSmall": "https://images.pokemontcg.io/g1/RC31.png",
-    "imageLarge": "https://images.pokemontcg.io/g1/RC31_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/g1/RC31_hires.png",
+    "megaFormKey": "mega-gardevoir"
   },
   {
     "id": "g1-RC32",

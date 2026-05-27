@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { POKEDEX } from "@/lib/data";
+import { MEGAS, POKEDEX } from "@/lib/data";
 import { PageHeader } from "../_components/PageHeader";
 import { PokedexGrid } from "../_components/PokedexGrid";
 import { CardVariantPicker } from "../_components/CardVariantPicker";
@@ -12,10 +12,11 @@ import { useUser } from "../_lib/UserContext";
 
 export default function PokedexPage() {
   const [pickerDex, setPickerDex] = useState<number | null>(null);
-  const { ownedSpecies } = useOwnedCards();
-  const { isGuest } = useUser();
-  const total = POKEDEX.length;
-  const owned = ownedSpecies.size;
+  const { ownedSpecies, ownedMegaForms } = useOwnedCards();
+  const { isGuest, treatMegasAsSeparate, megaPlacement } = useUser();
+  const showMegasInDex = treatMegasAsSeparate && megaPlacement !== "separate";
+  const total = POKEDEX.length + (showMegasInDex ? MEGAS.length : 0);
+  const owned = ownedSpecies.size + (showMegasInDex ? ownedMegaForms.size : 0);
   const pct = total > 0 ? (owned / total) * 100 : 0;
 
   return (

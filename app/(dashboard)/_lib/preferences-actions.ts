@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 import { getSupabaseServer } from "@/lib/supabase/server";
 import { requireUserId } from "./current-user";
 import { PRICE_SOURCES, type PriceSource } from "@/lib/pricing/pokemontcg";
+import { MEGA_PLACEMENTS, type MegaPlacement } from "./user-preferences";
 
 export async function updatePriceSource(source: PriceSource): Promise<void> {
   if (!PRICE_SOURCES.includes(source)) {
@@ -24,4 +25,32 @@ export async function updatePriceSource(source: PriceSource): Promise<void> {
   revalidatePath("/portfolio");
   revalidatePath("/binders");
   revalidatePath("/binders/[id]", "page");
+}
+
+export async function updateMegaSettings(
+  treatAsSeparate: boolean,
+  placement: MegaPlacement,
+): Promise<void> {
+  if (!MEGA_PLACEMENTS.includes(placement)) {
+    throw new Error(`Invalid mega placement: ${placement}`);
+  }
+  const userId = await requireUserId();
+  const supabase = await getSupabaseServer();
+  const { error } = await supabase.from("user_preferences").upsert(
+    {
+      user_id: userId,
+      treat_megas_as_separate: treatAsSeparate,
+      mega_placement: placement,
+      updated_at: new Date().toISOString(),
+    },
+    { onConflict: "user_id" },
+  );
+  if (error) throw new Error(`Failed to update mega settings: ${error.message}`);
+  // The toggle affects every page that derives coverage from owned cards.
+  revalidatePath("/settings");
+  revalidatePath("/pokedex");
+  revalidatePath("/megas");
+  revalidatePath("/binders");
+  revalidatePath("/binders/[id]", "page");
+  revalidatePath("/cards");
 }

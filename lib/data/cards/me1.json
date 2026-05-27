@@ -70,7 +70,8 @@
     "evolvesFrom": "Ivysaur",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me1/3.png",
-    "imageLarge": "https://images.pokemontcg.io/me1/3_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me1/3_hires.png",
+    "megaFormKey": "mega-venusaur"
   },
   {
     "id": "me1-4",
@@ -518,7 +519,8 @@
     "evolvesFrom": "Numel",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me1/22.png",
-    "imageLarge": "https://images.pokemontcg.io/me1/22_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me1/22_hires.png",
+    "megaFormKey": "mega-camerupt"
   },
   {
     "id": "me1-23",
@@ -847,7 +849,8 @@
     "evolvesFrom": "Snover",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me1/36.png",
-    "imageLarge": "https://images.pokemontcg.io/me1/36_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me1/36_hires.png",
+    "megaFormKey": "mega-abomasnow"
   },
   {
     "id": "me1-37",
@@ -1178,7 +1181,8 @@
     "evolvesFrom": "Electrike",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me1/50.png",
-    "imageLarge": "https://images.pokemontcg.io/me1/50_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me1/50_hires.png",
+    "megaFormKey": "mega-manectric"
   },
   {
     "id": "me1-51",
@@ -1415,7 +1419,8 @@
     "evolvesFrom": "Kirlia",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me1/60.png",
-    "imageLarge": "https://images.pokemontcg.io/me1/60_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me1/60_hires.png",
+    "megaFormKey": "mega-gardevoir"
   },
   {
     "id": "me1-61",
@@ -1814,7 +1819,8 @@
     "evolvesFrom": "Riolu",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me1/77.png",
-    "imageLarge": "https://images.pokemontcg.io/me1/77_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me1/77_hires.png",
+    "megaFormKey": "mega-lucario"
   },
   {
     "id": "me1-78",
@@ -2027,7 +2033,8 @@
     ],
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me1/86.png",
-    "imageLarge": "https://images.pokemontcg.io/me1/86_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me1/86_hires.png",
+    "megaFormKey": "mega-absol"
   },
   {
     "id": "me1-87",
@@ -2216,7 +2223,8 @@
     ],
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me1/94.png",
-    "imageLarge": "https://images.pokemontcg.io/me1/94_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me1/94_hires.png",
+    "megaFormKey": "mega-mawile"
   },
   {
     "id": "me1-95",
@@ -2359,7 +2367,8 @@
     ],
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me1/100.png",
-    "imageLarge": "https://images.pokemontcg.io/me1/100_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me1/100_hires.png",
+    "megaFormKey": "mega-latias"
   },
   {
     "id": "me1-101",
@@ -2454,7 +2463,8 @@
     ],
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me1/104.png",
-    "imageLarge": "https://images.pokemontcg.io/me1/104_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me1/104_hires.png",
+    "megaFormKey": "mega-kangaskhan"
   },
   {
     "id": "me1-105",
@@ -3543,7 +3553,8 @@
     "evolvesFrom": "Ivysaur",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me1/155.png",
-    "imageLarge": "https://images.pokemontcg.io/me1/155_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me1/155_hires.png",
+    "megaFormKey": "mega-venusaur"
   },
   {
     "id": "me1-156",
@@ -3569,7 +3580,8 @@
     "evolvesFrom": "Numel",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me1/156.png",
-    "imageLarge": "https://images.pokemontcg.io/me1/156_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me1/156_hires.png",
+    "megaFormKey": "mega-camerupt"
   },
   {
     "id": "me1-157",
@@ -3595,7 +3607,8 @@
     "evolvesFrom": "Snover",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me1/157.png",
-    "imageLarge": "https://images.pokemontcg.io/me1/157_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me1/157_hires.png",
+    "megaFormKey": "mega-abomasnow"
   },
   {
     "id": "me1-158",
@@ -3621,7 +3634,8 @@
     "evolvesFrom": "Electrike",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me1/158.png",
-    "imageLarge": "https://images.pokemontcg.io/me1/158_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me1/158_hires.png",
+    "megaFormKey": "mega-manectric"
   },
   {
     "id": "me1-159",
@@ -3647,7 +3661,8 @@
     "evolvesFrom": "Kirlia",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me1/159.png",
-    "imageLarge": "https://images.pokemontcg.io/me1/159_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me1/159_hires.png",
+    "megaFormKey": "mega-gardevoir"
   },
   {
     "id": "me1-160",
@@ -3673,7 +3688,8 @@
     "evolvesFrom": "Riolu",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me1/160.png",
-    "imageLarge": "https://images.pokemontcg.io/me1/160_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me1/160_hires.png",
+    "megaFormKey": "mega-lucario"
   },
   {
     "id": "me1-161",
@@ -3698,7 +3714,8 @@
     ],
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me1/161.png",
-    "imageLarge": "https://images.pokemontcg.io/me1/161_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me1/161_hires.png",
+    "megaFormKey": "mega-absol"
   },
   {
     "id": "me1-162",
@@ -3723,7 +3740,8 @@
     ],
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me1/162.png",
-    "imageLarge": "https://images.pokemontcg.io/me1/162_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me1/162_hires.png",
+    "megaFormKey": "mega-mawile"
   },
   {
     "id": "me1-163",
@@ -3748,7 +3766,8 @@
     ],
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me1/163.png",
-    "imageLarge": "https://images.pokemontcg.io/me1/163_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me1/163_hires.png",
+    "megaFormKey": "mega-latias"
   },
   {
     "id": "me1-164",
@@ -3773,7 +3792,8 @@
     ],
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me1/164.png",
-    "imageLarge": "https://images.pokemontcg.io/me1/164_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me1/164_hires.png",
+    "megaFormKey": "mega-kangaskhan"
   },
   {
     "id": "me1-165",
@@ -4015,7 +4035,8 @@
     "evolvesFrom": "Ivysaur",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me1/177.png",
-    "imageLarge": "https://images.pokemontcg.io/me1/177_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me1/177_hires.png",
+    "megaFormKey": "mega-venusaur"
   },
   {
     "id": "me1-178",
@@ -4041,7 +4062,8 @@
     "evolvesFrom": "Kirlia",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me1/178.png",
-    "imageLarge": "https://images.pokemontcg.io/me1/178_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me1/178_hires.png",
+    "megaFormKey": "mega-gardevoir"
   },
   {
     "id": "me1-179",
@@ -4067,7 +4089,8 @@
     "evolvesFrom": "Riolu",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me1/179.png",
-    "imageLarge": "https://images.pokemontcg.io/me1/179_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me1/179_hires.png",
+    "megaFormKey": "mega-lucario"
   },
   {
     "id": "me1-180",
@@ -4092,7 +4115,8 @@
     ],
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me1/180.png",
-    "imageLarge": "https://images.pokemontcg.io/me1/180_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me1/180_hires.png",
+    "megaFormKey": "mega-absol"
   },
   {
     "id": "me1-181",
@@ -4117,7 +4141,8 @@
     ],
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me1/181.png",
-    "imageLarge": "https://images.pokemontcg.io/me1/181_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me1/181_hires.png",
+    "megaFormKey": "mega-latias"
   },
   {
     "id": "me1-182",
@@ -4142,7 +4167,8 @@
     ],
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me1/182.png",
-    "imageLarge": "https://images.pokemontcg.io/me1/182_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me1/182_hires.png",
+    "megaFormKey": "mega-kangaskhan"
   },
   {
     "id": "me1-183",
@@ -4240,7 +4266,8 @@
     "evolvesFrom": "Kirlia",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me1/187.png",
-    "imageLarge": "https://images.pokemontcg.io/me1/187_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me1/187_hires.png",
+    "megaFormKey": "mega-gardevoir"
   },
   {
     "id": "me1-188",
@@ -4266,6 +4293,7 @@
     "evolvesFrom": "Riolu",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me1/188.png",
-    "imageLarge": "https://images.pokemontcg.io/me1/188_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me1/188_hires.png",
+    "megaFormKey": "mega-lucario"
   }
 ]

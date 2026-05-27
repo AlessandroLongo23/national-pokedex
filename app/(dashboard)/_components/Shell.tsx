@@ -14,11 +14,14 @@ import { LogPackFab } from "./LogPackFab";
 import { Tooltip } from "./Tooltip";
 import { CardPreviewOverlay } from "./CardPreviewOverlay";
 import type { PriceSource } from "@/lib/pricing/pokemontcg";
+import type { MegaPlacement } from "../_lib/mega-prefs";
 
 export function Shell({
   userId,
   email,
   priceSource,
+  treatMegasAsSeparate,
+  megaPlacement,
   initialOwned,
   initialWishlist,
   initialFavorites,
@@ -28,6 +31,8 @@ export function Shell({
   userId: string;
   email: string;
   priceSource: PriceSource;
+  treatMegasAsSeparate: boolean;
+  megaPlacement: MegaPlacement;
   initialOwned: InitialOwnedCard[];
   initialWishlist: string[];
   initialFavorites: string[];
@@ -36,7 +41,13 @@ export function Shell({
 }) {
   const isGuest = !userId;
   return (
-    <UserProvider userId={userId} email={email} priceSource={priceSource}>
+    <UserProvider
+      userId={userId}
+      email={email}
+      priceSource={priceSource}
+      treatMegasAsSeparate={treatMegasAsSeparate}
+      megaPlacement={megaPlacement}
+    >
       <OwnedCardsProvider userId={userId} initial={initialOwned}>
         <WishlistProvider userId={userId} initial={initialWishlist}>
           <FavoritesProvider userId={userId} initial={initialFavorites}>

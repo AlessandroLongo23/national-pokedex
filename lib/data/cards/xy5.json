@@ -1296,7 +1296,8 @@
     "evolvesFrom": "Kyogre-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy5/55.png",
-    "imageLarge": "https://images.pokemontcg.io/xy5/55_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy5/55_hires.png",
+    "megaFormKey": "primal-kyogre"
   },
   {
     "id": "xy5-56",
@@ -2027,7 +2028,8 @@
     "evolvesFrom": "Groudon-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy5/86.png",
-    "imageLarge": "https://images.pokemontcg.io/xy5/86_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy5/86_hires.png",
+    "megaFormKey": "primal-groudon"
   },
   {
     "id": "xy5-87",
@@ -2218,7 +2220,8 @@
     "evolvesFrom": "Aggron-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy5/94.png",
-    "imageLarge": "https://images.pokemontcg.io/xy5/94_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy5/94_hires.png",
+    "megaFormKey": "mega-aggron"
   },
   {
     "id": "xy5-95",
@@ -2504,7 +2507,8 @@
     "evolvesFrom": "Gardevoir-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy5/106.png",
-    "imageLarge": "https://images.pokemontcg.io/xy5/106_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy5/106_hires.png",
+    "megaFormKey": "mega-gardevoir"
   },
   {
     "id": "xy5-107",
@@ -3391,7 +3395,8 @@
     "evolvesFrom": "Kyogre-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy5/149.png",
-    "imageLarge": "https://images.pokemontcg.io/xy5/149_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy5/149_hires.png",
+    "megaFormKey": "primal-kyogre"
   },
   {
     "id": "xy5-150",
@@ -3440,7 +3445,8 @@
     "evolvesFrom": "Groudon-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy5/151.png",
-    "imageLarge": "https://images.pokemontcg.io/xy5/151_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy5/151_hires.png",
+    "megaFormKey": "primal-groudon"
   },
   {
     "id": "xy5-152",
@@ -3513,7 +3519,8 @@
     "evolvesFrom": "Aggron-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy5/154.png",
-    "imageLarge": "https://images.pokemontcg.io/xy5/154_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy5/154_hires.png",
+    "megaFormKey": "mega-aggron"
   },
   {
     "id": "xy5-155",
@@ -3562,7 +3569,8 @@
     "evolvesFrom": "Gardevoir-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy5/156.png",
-    "imageLarge": "https://images.pokemontcg.io/xy5/156_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy5/156_hires.png",
+    "megaFormKey": "mega-gardevoir"
   },
   {
     "id": "xy5-157",

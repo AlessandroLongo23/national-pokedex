@@ -564,7 +564,8 @@
     "evolvesFrom": "Manectric-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy4/24.png",
-    "imageLarge": "https://images.pokemontcg.io/xy4/24_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy4/24_hires.png",
+    "megaFormKey": "mega-manectric"
   },
   {
     "id": "xy4-25",
@@ -824,7 +825,8 @@
     "evolvesFrom": "Gengar-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy4/35.png",
-    "imageLarge": "https://images.pokemontcg.io/xy4/35_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy4/35_hires.png",
+    "megaFormKey": "mega-gengar"
   },
   {
     "id": "xy4-36",
@@ -2687,7 +2689,8 @@
     "evolvesFrom": "Manectric-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy4/120.png",
-    "imageLarge": "https://images.pokemontcg.io/xy4/120_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy4/120_hires.png",
+    "megaFormKey": "mega-manectric"
   },
   {
     "id": "xy4-121",
@@ -2712,7 +2715,8 @@
     "evolvesFrom": "Gengar-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy4/121.png",
-    "imageLarge": "https://images.pokemontcg.io/xy4/121_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy4/121_hires.png",
+    "megaFormKey": "mega-gengar"
   },
   {
     "id": "xy4-122",
@@ -2761,7 +2765,8 @@
     "evolvesFrom": "Manectric-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy4/24a.png",
-    "imageLarge": "https://images.pokemontcg.io/xy4/24a_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy4/24a_hires.png",
+    "megaFormKey": "mega-manectric"
   },
   {
     "id": "xy4-65a",

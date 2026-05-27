@@ -516,7 +516,8 @@
     "evolvesFrom": "Houndoom-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy8/22.png",
-    "imageLarge": "https://images.pokemontcg.io/xy8/22_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy8/22_hires.png",
+    "megaFormKey": "mega-houndoom"
   },
   {
     "id": "xy8-23",
@@ -823,7 +824,8 @@
     "evolvesFrom": "Glalie-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy8/35.png",
-    "imageLarge": "https://images.pokemontcg.io/xy8/35_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy8/35_hires.png",
+    "megaFormKey": "mega-glalie"
   },
   {
     "id": "xy8-36",
@@ -1484,7 +1486,8 @@
     "evolvesFrom": "Mewtwo-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy8/63.png",
-    "imageLarge": "https://images.pokemontcg.io/xy8/63_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy8/63_hires.png",
+    "megaFormKey": "mega-mewtwo"
   },
   {
     "id": "xy8-64",
@@ -1509,7 +1512,8 @@
     "evolvesFrom": "Mewtwo-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy8/64.png",
-    "imageLarge": "https://images.pokemontcg.io/xy8/64_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy8/64_hires.png",
+    "megaFormKey": "mega-mewtwo"
   },
   {
     "id": "xy8-65",
@@ -3511,7 +3515,8 @@
     "evolvesFrom": "Houndoom-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy8/154.png",
-    "imageLarge": "https://images.pokemontcg.io/xy8/154_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy8/154_hires.png",
+    "megaFormKey": "mega-houndoom"
   },
   {
     "id": "xy8-155",
@@ -3560,7 +3565,8 @@
     "evolvesFrom": "Glalie-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy8/156.png",
-    "imageLarge": "https://images.pokemontcg.io/xy8/156_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy8/156_hires.png",
+    "megaFormKey": "mega-glalie"
   },
   {
     "id": "xy8-157",
@@ -3633,7 +3639,8 @@
     "evolvesFrom": "Mewtwo-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy8/159.png",
-    "imageLarge": "https://images.pokemontcg.io/xy8/159_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy8/159_hires.png",
+    "megaFormKey": "mega-mewtwo"
   },
   {
     "id": "xy8-160",
@@ -3658,7 +3665,8 @@
     "evolvesFrom": "Mewtwo-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy8/160.png",
-    "imageLarge": "https://images.pokemontcg.io/xy8/160_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy8/160_hires.png",
+    "megaFormKey": "mega-mewtwo"
   },
   {
     "id": "xy8-161",

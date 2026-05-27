@@ -2,21 +2,37 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { ChevronRight } from "lucide-react";
-import { COVERAGE, POKEDEX } from "@/lib/data";
-import { GEN_NAMES, GEN_RANGES, type CardEntry, type Generation } from "@/lib/data/types";
+import { COVERAGE, MEGAS, POKEDEX } from "@/lib/data";
+import {
+  GEN_NAMES,
+  GEN_RANGES,
+  type CardEntry,
+  type Generation,
+  type MegaForm,
+} from "@/lib/data/types";
 import { useOwnedCards } from "../_lib/OwnedCardsContext";
 import { useUser } from "../_lib/UserContext";
 import { FilterBar, type GridFilter } from "./FilterBar";
 import { PokemonCell } from "./PokemonCell";
+import { MegaCell } from "./MegaCell";
+
+type Slot =
+  | { kind: "dex"; key: string; dex: number; name: string; gen: Generation }
+  | { kind: "mega"; key: string; form: MegaForm; gen: Generation };
 
 interface Props {
+  /** Defaults to "pokedex" (renders the 1025 base species + optional Megas).
+   * When "megas", the grid renders ONLY mega forms — used by the /megas
+   * route when placement === "separate". */
+  mode?: "pokedex" | "megas";
   dexNumbers?: number[];
   groupByGenDefault?: boolean;
   showGenToggle?: boolean;
   showFilter?: boolean;
   showSearch?: boolean;
   storageKey?: string;
-  /** Override click handler — used by pack-logging flow */
+  /** Override click handler — used by pack-logging flow. Only fires for
+   * dex slots; Mega slots never appear when this is set. */
   onCellClick?: (dex: number) => void;
   /** Set of dex numbers visually selected (only used with onCellClick) */
   selectedDex?: Set<number>;
@@ -28,6 +44,7 @@ interface Props {
 
 const COLS_KEY_PREFIX = "pokedex.cols";
 const GROUP_KEY_PREFIX = "pokedex.groupByGen";
+const MEGA_GROUP_LABEL = "Mega Evolutions";
 
 function clampCols(n: number) {
   return Math.max(6, Math.min(40, Math.round(n)));
@@ -49,6 +66,7 @@ function loadBool(key: string, fallback: boolean): boolean {
 }
 
 export function PokedexGrid({
+  mode = "pokedex",
   dexNumbers,
   groupByGenDefault = true,
   showGenToggle = true,
@@ -59,8 +77,8 @@ export function PokedexGrid({
   selectedDex,
   displayCardByDex,
 }: Props) {
-  const { ownedSpecies } = useOwnedCards();
-  const { isGuest } = useUser();
+  const { ownedSpecies, ownedMegaForms } = useOwnedCards();
+  const { isGuest, treatMegasAsSeparate, megaPlacement } = useUser();
   const [filter, setFilter] = useState<GridFilter>("all");
   const [query, setQuery] = useState("");
   const [cols, setCols] = useState(20);
@@ -91,47 +109,165 @@ export function PokedexGrid({
   const missingSet = useMemo(() => new Set(COVERAGE.missingDex), []);
   const restrict = useMemo(() => (dexNumbers ? new Set(dexNumbers) : null), [dexNumbers]);
 
-  const entries = useMemo(() => {
-    const base = restrict ? POKEDEX.filter((p) => restrict.has(p.dex)) : POKEDEX;
-    const needle = query.trim().toLowerCase();
-    return base.filter((p) => {
-      if (needle) {
-        if (!p.name.toLowerCase().includes(needle) && String(p.dex) !== needle) return false;
+  // Restricted views (pack-logging, pokedex-scope binders) target specific
+  // dex numbers and never show Megas. The Pokédex page sets `onCellClick`
+  // to open a variant picker — that's fine; we still want Megas there.
+  // `displayCardByDex` is the binder-only signal.
+  const includeMegas =
+    mode === "megas"
+      ? true
+      : !restrict &&
+        !displayCardByDex &&
+        treatMegasAsSeparate &&
+        megaPlacement !== "separate";
+
+  const allSlots: Slot[] = useMemo(() => {
+    if (mode === "megas") {
+      return MEGAS.map((form) => ({
+        kind: "mega" as const,
+        key: `mega:${form.formKey}`,
+        form,
+        gen: form.gen,
+      }));
+    }
+
+    const baseDex: Slot[] = (restrict ? POKEDEX.filter((p) => restrict.has(p.dex)) : POKEDEX).map(
+      (p) => ({
+        kind: "dex" as const,
+        key: `dex:${p.dex}`,
+        dex: p.dex,
+        name: p.name,
+        gen: p.gen,
+      }),
+    );
+
+    if (!includeMegas) return baseDex;
+
+    const megaSlots: Slot[] = MEGAS.map((form) => ({
+      kind: "mega" as const,
+      key: `mega:${form.formKey}`,
+      form,
+      gen: form.gen,
+    }));
+
+    if (megaPlacement === "inline") {
+      // Insert each Mega slot immediately after the last slot for its
+      // baseDex (handles multiple Megas sharing a baseDex like X/Y).
+      const byBaseDex = new Map<number, Slot[]>();
+      for (const m of megaSlots) {
+        const arr = byBaseDex.get(m.kind === "mega" ? m.form.baseDex : -1);
+        if (arr) arr.push(m);
+        else byBaseDex.set(m.kind === "mega" ? m.form.baseDex : -1, [m]);
       }
-      const isMissing = missingSet.has(p.dex);
-      const isOwnedNow = ownedSpecies.has(p.dex);
+      const out: Slot[] = [];
+      for (const slot of baseDex) {
+        out.push(slot);
+        if (slot.kind === "dex") {
+          const megas = byBaseDex.get(slot.dex);
+          if (megas) out.push(...megas);
+        }
+      }
+      return out;
+    }
+
+    // Appended placement → Megas tacked on at the end.
+    return [...baseDex, ...megaSlots];
+  }, [mode, restrict, includeMegas, megaPlacement]);
+
+  const filtered = useMemo(() => {
+    const needle = query.trim().toLowerCase();
+    const isNumeric = needle !== "" && !Number.isNaN(Number(needle));
+    return allSlots.filter((slot) => {
+      if (needle) {
+        if (slot.kind === "dex") {
+          if (!slot.name.toLowerCase().includes(needle) && String(slot.dex) !== needle) {
+            return false;
+          }
+        } else {
+          // Numeric searches don't apply to Megas (they have no dex#).
+          if (isNumeric) return false;
+          if (!slot.form.displayName.toLowerCase().includes(needle)) return false;
+        }
+      }
       switch (filter) {
         case "all":
           return true;
         case "covered":
-          return !isMissing;
+          return slot.kind === "mega" ? true : !missingSet.has(slot.dex);
         case "missing":
-          return isMissing;
+          return slot.kind === "mega" ? false : missingSet.has(slot.dex);
         case "owned":
-          return isOwnedNow;
+          return slot.kind === "mega"
+            ? ownedMegaForms.has(slot.form.formKey)
+            : ownedSpecies.has(slot.dex);
         case "needed":
-          return !isOwnedNow;
+          return slot.kind === "mega"
+            ? !ownedMegaForms.has(slot.form.formKey)
+            : !ownedSpecies.has(slot.dex);
       }
     });
-  }, [restrict, query, filter, missingSet, ownedSpecies]);
+  }, [allSlots, query, filter, missingSet, ownedSpecies, ownedMegaForms]);
 
-  const byGen = useMemo(() => {
-    const map = new Map<Generation, typeof entries>();
-    for (const p of entries) {
-      const arr = map.get(p.gen);
-      if (arr) arr.push(p);
-      else map.set(p.gen, [p]);
+  // Bucket for gen-grouped rendering. In appended mode (mode='pokedex' +
+  // placement='appended'), Megas go into their own synthetic bucket below
+  // gen 9; everywhere else they live alongside the gen they evolve from.
+  const gens: Generation[] = useMemo(() => {
+    const set = new Set<Generation>();
+    for (const slot of filtered) {
+      if (mode === "megas") set.add(slot.gen);
+      else if (slot.kind === "dex") set.add(slot.gen);
+      else if (megaPlacement === "inline") set.add(slot.gen);
+      // appended Megas go in the synthetic group, not a real gen
+    }
+    return [...set].sort((a, b) => a - b);
+  }, [filtered, mode, megaPlacement]);
+
+  const slotsByGen = useMemo(() => {
+    const map = new Map<Generation, Slot[]>();
+    for (const slot of filtered) {
+      if (mode !== "megas" && slot.kind === "mega" && megaPlacement === "appended") continue;
+      const arr = map.get(slot.gen);
+      if (arr) arr.push(slot);
+      else map.set(slot.gen, [slot]);
     }
     return map;
-  }, [entries]);
+  }, [filtered, mode, megaPlacement]);
 
+  const appendedMegas = useMemo(() => {
+    if (mode === "megas" || megaPlacement !== "appended" || !includeMegas) return [];
+    return filtered.filter((s) => s.kind === "mega");
+  }, [filtered, mode, megaPlacement, includeMegas]);
+
+  // For the top-level "owned"/"all" counts in the FilterBar.
   const totalOwnedInView = useMemo(
-    () => entries.filter((p) => ownedSpecies.has(p.dex)).length,
-    [entries, ownedSpecies],
+    () =>
+      filtered.filter((slot) =>
+        slot.kind === "mega"
+          ? ownedMegaForms.has(slot.form.formKey)
+          : ownedSpecies.has(slot.dex),
+      ).length,
+    [filtered, ownedSpecies, ownedMegaForms],
   );
 
   const gap = cols <= 10 ? 8 : cols <= 18 ? 6 : 4;
-  const renderGrid = (items: typeof entries) => (
+
+  const renderSlot = (slot: Slot) => {
+    if (slot.kind === "mega") {
+      return <MegaCell key={slot.key} form={slot.form} />;
+    }
+    return (
+      <PokemonCell
+        key={slot.key}
+        dex={slot.dex}
+        isCovered={!missingSet.has(slot.dex)}
+        onClick={onCellClick}
+        selected={selectedDex?.has(slot.dex)}
+        displayCard={displayCardByDex?.get(slot.dex)}
+      />
+    );
+  };
+
+  const renderGrid = (items: Slot[]) => (
     <div
       className="grid"
       style={{
@@ -139,16 +275,7 @@ export function PokedexGrid({
         gap: `${gap}px`,
       }}
     >
-      {items.map((p) => (
-        <PokemonCell
-          key={p.dex}
-          dex={p.dex}
-          isCovered={!missingSet.has(p.dex)}
-          onClick={onCellClick}
-          selected={selectedDex?.has(p.dex)}
-          displayCard={displayCardByDex?.get(p.dex)}
-        />
-      ))}
+      {items.map(renderSlot)}
     </div>
   );
 
@@ -157,7 +284,6 @@ export function PokedexGrid({
 
   return (
     <div className="space-y-5">
-      {/* Toolbar — single unified row, lives directly on the page bg (no nesting) */}
       <div className="flex flex-wrap items-center gap-x-5 gap-y-3 border-b border-border pb-3">
         {showFilter && (
           <FilterBar
@@ -166,7 +292,7 @@ export function PokedexGrid({
             options={
               isGuest
                 ? [
-                    { value: "all", label: "All", hint: "Every species in the National Pokédex" },
+                    { value: "all", label: "All", hint: "Every entry in the grid" },
                     { value: "covered", label: "Available", hint: "A card exists in the tracked sets" },
                     { value: "missing", label: "No card", hint: "No card exists for this Pokémon in the tracked sets" },
                   ]
@@ -174,8 +300,8 @@ export function PokedexGrid({
             }
             counts={
               isGuest
-                ? { all: entries.length }
-                : { all: entries.length, owned: totalOwnedInView }
+                ? { all: filtered.length }
+                : { all: filtered.length, owned: totalOwnedInView }
             }
           />
         )}
@@ -186,7 +312,7 @@ export function PokedexGrid({
               type="search"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Name or #"
+              placeholder={mode === "megas" ? "Name" : "Name or #"}
               className="w-44 rounded-md border border-border bg-panel-2/60 py-1.5 pr-2.5 pl-7 text-xs text-text placeholder:text-muted focus:border-accent focus:bg-panel-2 focus:outline-none"
             />
           </div>
@@ -226,19 +352,34 @@ export function PokedexGrid({
         </div>
       </div>
 
-      {/* Grid — no outer card wrapper. Each gen is its own section with a
-          progress bar; flat mode renders a single block. */}
       {groupByGen && showGenToggle ? (
         <div className="space-y-7">
-          {([1, 2, 3, 4, 5, 6, 7, 8, 9] as Generation[]).map((g) => {
-            const items = byGen.get(g);
+          {gens.map((g) => {
+            const items = slotsByGen.get(g);
             if (!items || items.length === 0) return null;
             const [lo, hi] = GEN_RANGES[g];
-            const inRange = restrict
-              ? POKEDEX.filter((p) => restrict.has(p.dex) && p.gen === g).length
-              : hi - lo + 1;
-            const ownedInGen = items.filter((p) => ownedSpecies.has(p.dex)).length;
-            const pct = inRange > 0 ? (ownedInGen / inRange) * 100 : 0;
+            const ownedInGen = items.filter((s) =>
+              s.kind === "mega"
+                ? ownedMegaForms.has(s.form.formKey)
+                : ownedSpecies.has(s.dex),
+            ).length;
+            // Denominator considers ALL slots that would belong to this
+            // gen group (ignoring the current filter, so percentages stay
+            // honest even when filtering down).
+            const totalInGen = (() => {
+              if (mode === "megas") {
+                return MEGAS.filter((m) => m.gen === g).length;
+              }
+              const dexCount = restrict
+                ? POKEDEX.filter((p) => restrict.has(p.dex) && p.gen === g).length
+                : hi - lo + 1;
+              const megaCount =
+                includeMegas && megaPlacement === "inline"
+                  ? MEGAS.filter((m) => m.gen === g).length
+                  : 0;
+              return dexCount + megaCount;
+            })();
+            const pct = totalInGen > 0 ? (ownedInGen / totalInGen) * 100 : 0;
             return (
               <details key={g} open className="group">
                 <summary className="mb-3 flex cursor-pointer list-none items-end gap-4">
@@ -264,7 +405,7 @@ export function PokedexGrid({
                         </div>
                         <span className="shrink-0 text-[11px] nums tabular-nums">
                           <span className="font-semibold text-owned">{ownedInGen}</span>
-                          <span className="text-muted"> / {inRange}</span>
+                          <span className="text-muted"> / {totalInGen}</span>
                         </span>
                       </>
                     )}
@@ -278,12 +419,57 @@ export function PokedexGrid({
               </details>
             );
           })}
+          {appendedMegas.length > 0 && (
+            <details open className="group">
+              <summary className="mb-3 flex cursor-pointer list-none items-end gap-4">
+                <div className="flex items-baseline gap-2.5">
+                  <span className="text-[10px] uppercase tracking-[0.18em] text-muted nums">
+                    Bonus
+                  </span>
+                  <h2 className="text-base font-semibold tracking-tight">{MEGA_GROUP_LABEL}</h2>
+                  <span className="text-[11px] text-muted nums">{MEGAS.length} forms</span>
+                </div>
+                <div className="flex flex-1 items-center gap-3">
+                  {isGuest ? (
+                    <div className="flex-1" />
+                  ) : (
+                    (() => {
+                      const owned = appendedMegas.filter(
+                        (s) => s.kind === "mega" && ownedMegaForms.has(s.form.formKey),
+                      ).length;
+                      const total = MEGAS.length;
+                      const pct = total > 0 ? (owned / total) * 100 : 0;
+                      return (
+                        <>
+                          <div className="relative h-[3px] flex-1 overflow-hidden rounded-full bg-border">
+                            <div
+                              className="absolute inset-y-0 left-0 rounded-full bg-mega transition-[width] duration-300 ease-out"
+                              style={{ width: `${pct}%` }}
+                            />
+                          </div>
+                          <span className="shrink-0 text-[11px] nums tabular-nums">
+                            <span className="font-semibold text-mega">{owned}</span>
+                            <span className="text-muted"> / {total}</span>
+                          </span>
+                        </>
+                      );
+                    })()
+                  )}
+                  <ChevronRight
+                    aria-hidden
+                    className="ml-1 h-3.5 w-3.5 text-muted transition-transform group-open:rotate-90"
+                  />
+                </div>
+              </summary>
+              <div>{renderGrid(appendedMegas)}</div>
+            </details>
+          )}
         </div>
       ) : (
-        renderGrid(entries)
+        renderGrid(filtered)
       )}
 
-      {entries.length === 0 && (
+      {filtered.length === 0 && (
         <div className="rounded-md border border-dashed border-border bg-panel/40 px-4 py-10 text-center text-sm text-muted">
           No Pokémon match these filters.
         </div>

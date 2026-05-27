@@ -188,7 +188,8 @@
     "evolvesFrom": "Sceptile-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy7/8.png",
-    "imageLarge": "https://images.pokemontcg.io/xy7/8_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy7/8_hires.png",
+    "megaFormKey": "mega-sceptile"
   },
   {
     "id": "xy7-9",
@@ -661,7 +662,8 @@
     "evolvesFrom": "Ampharos-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy7/28.png",
-    "imageLarge": "https://images.pokemontcg.io/xy7/28_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy7/28_hires.png",
+    "megaFormKey": "mega-ampharos"
   },
   {
     "id": "xy7-29",
@@ -1015,7 +1017,8 @@
     "evolvesFrom": "Tyranitar-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy7/43.png",
-    "imageLarge": "https://images.pokemontcg.io/xy7/43_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy7/43_hires.png",
+    "megaFormKey": "mega-tyranitar"
   },
   {
     "id": "xy7-44",
@@ -1924,7 +1927,8 @@
     "evolvesFrom": "Sceptile-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy7/85.png",
-    "imageLarge": "https://images.pokemontcg.io/xy7/85_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy7/85_hires.png",
+    "megaFormKey": "mega-sceptile"
   },
   {
     "id": "xy7-86",
@@ -1997,7 +2001,8 @@
     "evolvesFrom": "Ampharos-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy7/88.png",
-    "imageLarge": "https://images.pokemontcg.io/xy7/88_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy7/88_hires.png",
+    "megaFormKey": "mega-ampharos"
   },
   {
     "id": "xy7-89",
@@ -2094,7 +2099,8 @@
     "evolvesFrom": "Tyranitar-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy7/92.png",
-    "imageLarge": "https://images.pokemontcg.io/xy7/92_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy7/92_hires.png",
+    "megaFormKey": "mega-tyranitar"
   },
   {
     "id": "xy7-93",
@@ -2185,7 +2191,8 @@
     "evolvesFrom": "Kyogre-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy7/96.png",
-    "imageLarge": "https://images.pokemontcg.io/xy7/96_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy7/96_hires.png",
+    "megaFormKey": "primal-kyogre"
   },
   {
     "id": "xy7-97",
@@ -2210,7 +2217,8 @@
     "evolvesFrom": "Groudon-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy7/97.png",
-    "imageLarge": "https://images.pokemontcg.io/xy7/97_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy7/97_hires.png",
+    "megaFormKey": "primal-groudon"
   },
   {
     "id": "xy7-98",
@@ -2235,7 +2243,8 @@
     "evolvesFrom": "Rayquaza-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy7/98.png",
-    "imageLarge": "https://images.pokemontcg.io/xy7/98_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy7/98_hires.png",
+    "megaFormKey": "mega-rayquaza"
   },
   {
     "id": "xy7-99",

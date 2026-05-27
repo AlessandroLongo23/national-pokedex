@@ -117,7 +117,8 @@
     "evolvesFrom": "Heracross-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy3/5.png",
-    "imageLarge": "https://images.pokemontcg.io/xy3/5_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy3/5_hires.png",
+    "megaFormKey": "mega-heracross"
   },
   {
     "id": "xy3-6",
@@ -1294,7 +1295,8 @@
     "evolvesFrom": "Lucario-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy3/55.png",
-    "imageLarge": "https://images.pokemontcg.io/xy3/55_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy3/55_hires.png",
+    "megaFormKey": "mega-lucario"
   },
   {
     "id": "xy3-56",
@@ -2528,7 +2530,8 @@
     "evolvesFrom": "Heracross-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy3/112.png",
-    "imageLarge": "https://images.pokemontcg.io/xy3/112_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy3/112_hires.png",
+    "megaFormKey": "mega-heracross"
   },
   {
     "id": "xy3-113",
@@ -2553,7 +2556,8 @@
     "evolvesFrom": "Lucario-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy3/113.png",
-    "imageLarge": "https://images.pokemontcg.io/xy3/113_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy3/113_hires.png",
+    "megaFormKey": "mega-lucario"
   },
   {
     "id": "xy3-55a",
@@ -2578,6 +2582,7 @@
     "evolvesFrom": "Lucario-EX",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/xy3/55a.png",
-    "imageLarge": "https://images.pokemontcg.io/xy3/55a_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/xy3/55a_hires.png",
+    "megaFormKey": "mega-lucario"
   }
 ]

@@ -246,7 +246,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-10/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-10/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-10/large",
+    "megaFormKey": "mega-meganium"
   },
   {
     "id": "me2pt5-11",
@@ -543,7 +544,8 @@
     "artist": "aky CG Works",
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-22/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-22/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-22/large",
+    "megaFormKey": "mega-charizard-y"
   },
   {
     "id": "me2pt5-23",
@@ -766,7 +768,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-31/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-31/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-31/large",
+    "megaFormKey": "mega-emboar"
   },
   {
     "id": "me2pt5-32",
@@ -1065,7 +1068,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-43/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-43/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-43/large",
+    "megaFormKey": "mega-feraligatr"
   },
   {
     "id": "me2pt5-44",
@@ -1165,7 +1169,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "I",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-47/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-47/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-47/large",
+    "megaFormKey": "mega-froslass"
   },
   {
     "id": "me2pt5-48",
@@ -1513,7 +1518,8 @@
     "artist": "takuyoa",
     "regulationMark": "I",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-61/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-61/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-61/large",
+    "megaFormKey": "mega-eelektross"
   },
   {
     "id": "me2pt5-62",
@@ -2207,7 +2213,8 @@
     "artist": "takuyoa",
     "regulationMark": "I",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-89/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-89/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-89/large",
+    "megaFormKey": "mega-gardevoir"
   },
   {
     "id": "me2pt5-90",
@@ -2795,7 +2802,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "I",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-113/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-113/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-113/large",
+    "megaFormKey": "mega-lucario"
   },
   {
     "id": "me2pt5-114",
@@ -2870,7 +2878,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "I",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-116/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-116/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-116/large",
+    "megaFormKey": "mega-hawlucha"
   },
   {
     "id": "me2pt5-117",
@@ -3092,7 +3101,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "I",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-125/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-125/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-125/large",
+    "megaFormKey": "mega-gengar"
   },
   {
     "id": "me2pt5-126",
@@ -3339,7 +3349,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "I",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-135/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-135/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-135/large",
+    "megaFormKey": "mega-scrafty"
   },
   {
     "id": "me2pt5-136",
@@ -3761,7 +3772,8 @@
     "artist": "aky CG Works",
     "regulationMark": "I",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-152/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-152/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-152/large",
+    "megaFormKey": "mega-dragonite"
   },
   {
     "id": "me2pt5-153",
@@ -4255,7 +4267,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-172/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-172/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-172/large",
+    "megaFormKey": "mega-audino"
   },
   {
     "id": "me2pt5-173",
@@ -6033,7 +6046,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-253/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-253/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-253/large",
+    "megaFormKey": "mega-audino"
   },
   {
     "id": "me2pt5-254",
@@ -6269,7 +6283,8 @@
     "artist": "Saboteri",
     "regulationMark": "I",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-265/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-265/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-265/large",
+    "megaFormKey": "mega-froslass"
   },
   {
     "id": "me2pt5-266",
@@ -6296,7 +6311,8 @@
     "artist": "DOM",
     "regulationMark": "I",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-266/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-266/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-266/large",
+    "megaFormKey": "mega-eelektross"
   },
   {
     "id": "me2pt5-267",
@@ -6322,7 +6338,8 @@
     "artist": "DOM",
     "regulationMark": "I",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-267/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-267/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-267/large",
+    "megaFormKey": "mega-diancie"
   },
   {
     "id": "me2pt5-268",
@@ -6348,7 +6365,8 @@
     "artist": "Taiga Kasai",
     "regulationMark": "I",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-268/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-268/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-268/large",
+    "megaFormKey": "mega-hawlucha"
   },
   {
     "id": "me2pt5-269",
@@ -6375,7 +6393,8 @@
     "artist": "Taiga Kasai",
     "regulationMark": "I",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-269/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-269/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-269/large",
+    "megaFormKey": "mega-gengar"
   },
   {
     "id": "me2pt5-270",
@@ -6402,7 +6421,8 @@
     "artist": "Taiga Kasai",
     "regulationMark": "I",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-270/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-270/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-270/large",
+    "megaFormKey": "mega-scrafty"
   },
   {
     "id": "me2pt5-271",
@@ -6429,7 +6449,8 @@
     "artist": "DOM",
     "regulationMark": "I",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-271/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-271/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-271/large",
+    "megaFormKey": "mega-dragonite"
   },
   {
     "id": "me2pt5-272",
@@ -6456,7 +6477,8 @@
     "artist": "Tika Matsuno",
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-272/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-272/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-272/large",
+    "megaFormKey": "mega-meganium"
   },
   {
     "id": "me2pt5-273",
@@ -6483,7 +6505,8 @@
     "artist": "nagimiso",
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-273/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-273/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-273/large",
+    "megaFormKey": "mega-emboar"
   },
   {
     "id": "me2pt5-274",
@@ -6510,7 +6533,8 @@
     "artist": "Souichirou Gunjima",
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-274/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-274/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-274/large",
+    "megaFormKey": "mega-feraligatr"
   },
   {
     "id": "me2pt5-275",
@@ -6537,7 +6561,8 @@
     "artist": "Teeziro",
     "regulationMark": "I",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-275/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-275/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-275/large",
+    "megaFormKey": "mega-froslass"
   },
   {
     "id": "me2pt5-276",
@@ -6615,7 +6640,8 @@
     "artist": "akagi",
     "regulationMark": "I",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-278/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-278/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-278/large",
+    "megaFormKey": "mega-eelektross"
   },
   {
     "id": "me2pt5-279",
@@ -6717,7 +6743,8 @@
     "artist": "Narano",
     "regulationMark": "I",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-282/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-282/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-282/large",
+    "megaFormKey": "mega-diancie"
   },
   {
     "id": "me2pt5-283",
@@ -6743,7 +6770,8 @@
     "artist": "AKIRA EGAWA",
     "regulationMark": "I",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-283/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-283/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-283/large",
+    "megaFormKey": "mega-hawlucha"
   },
   {
     "id": "me2pt5-284",
@@ -6770,7 +6798,8 @@
     "artist": "danciao",
     "regulationMark": "I",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-284/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-284/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-284/large",
+    "megaFormKey": "mega-gengar"
   },
   {
     "id": "me2pt5-285",
@@ -6797,7 +6826,8 @@
     "artist": "nagimiso",
     "regulationMark": "I",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-285/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-285/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-285/large",
+    "megaFormKey": "mega-scrafty"
   },
   {
     "id": "me2pt5-286",
@@ -6927,7 +6957,8 @@
     "artist": "DOM",
     "regulationMark": "I",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-290/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-290/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-290/large",
+    "megaFormKey": "mega-dragonite"
   },
   {
     "id": "me2pt5-291",
@@ -7011,7 +7042,8 @@
     "artist": "aky CG Works",
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-294/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-294/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-294/large",
+    "megaFormKey": "mega-charizard-y"
   },
   {
     "id": "me2pt5-295",
@@ -7038,6 +7070,7 @@
     "artist": "aky CG Works",
     "regulationMark": "I",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-295/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-295/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-295/large",
+    "megaFormKey": "mega-dragonite"
   }
 ]

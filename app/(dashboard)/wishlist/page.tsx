@@ -1,11 +1,18 @@
+import { Suspense } from "react";
 import { getSupabaseServer } from "@/lib/supabase/server";
 import { loadSetCards } from "@/lib/data";
 import type { CardEntry } from "@/lib/data/types";
-import { fetchPricesForCards } from "@/lib/pricing/pokemontcg";
 import { requireUserId } from "../_lib/current-user";
 import { PageHeader } from "../_components/PageHeader";
-import type { CardPriceRecord } from "../_lib/CardPricesContext";
-import { WishlistClient } from "./WishlistClient";
+import {
+  WishlistPricedShell,
+  WishlistUnpricedShell,
+} from "./WishlistPricedShell";
+
+// A wishlist can easily span 10+ sets; on cold caches that's 10+ upstream
+// fetches before the function can return. Lift the platform default (10s
+// on Vercel Hobby) so the streamed price subtree gets room to resolve.
+export const maxDuration = 60;
 
 async function loadCardsByIds(ids: string[]): Promise<CardEntry[]> {
   if (ids.length === 0) return [];
@@ -36,13 +43,6 @@ export default async function WishlistPage() {
   const cardIds = (data ?? []).map((r) => r.card_id as string);
   const cards = await loadCardsByIds(cardIds);
 
-  const priceMap = await fetchPricesForCards(cardIds);
-  const priceRecord: CardPriceRecord = {};
-  for (const id of cardIds) {
-    const p = priceMap.get(id);
-    if (p) priceRecord[id] = p;
-  }
-
   // Distinct types and artists across the wishlist for the toolbar's
   // multi-select / combo controls. Cheap on a ~500-card list.
   const typeSet = new Set<string>();
@@ -66,12 +66,18 @@ export default async function WishlistPage() {
           </>
         }
       />
-      <WishlistClient
-        cards={cards}
-        prices={priceRecord}
-        types={types}
-        artists={artists}
-      />
+      <Suspense
+        fallback={
+          <WishlistUnpricedShell cards={cards} types={types} artists={artists} />
+        }
+      >
+        <WishlistPricedShell
+          cards={cards}
+          cardIds={cardIds}
+          types={types}
+          artists={artists}
+        />
+      </Suspense>
     </div>
   );
 }

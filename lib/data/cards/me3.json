@@ -496,7 +496,8 @@
     "evolvesFrom": "Staryu",
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me3-21/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me3-21/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-21/large",
+    "megaFormKey": "mega-starmie"
   },
   {
     "id": "me3-22",
@@ -734,7 +735,8 @@
     "evolvesFrom": "Clefairy",
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me3-31/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me3-31/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-31/large",
+    "megaFormKey": "mega-clefable"
   },
   {
     "id": "me3-32",
@@ -1111,7 +1113,8 @@
     ],
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me3-47/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me3-47/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-47/large",
+    "megaFormKey": "mega-zygarde"
   },
   {
     "id": "me3-48",
@@ -1301,7 +1304,8 @@
     ],
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me3-55/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me3-55/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-55/large",
+    "megaFormKey": "mega-skarmory"
   },
   {
     "id": "me3-56",
@@ -2298,7 +2302,8 @@
     "evolvesFrom": "Staryu",
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me3-102/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me3-102/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-102/large",
+    "megaFormKey": "mega-starmie"
   },
   {
     "id": "me3-103",
@@ -2324,7 +2329,8 @@
     "evolvesFrom": "Clefairy",
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me3-103/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me3-103/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-103/large",
+    "megaFormKey": "mega-clefable"
   },
   {
     "id": "me3-104",
@@ -2349,7 +2355,8 @@
     ],
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me3-104/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me3-104/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-104/large",
+    "megaFormKey": "mega-zygarde"
   },
   {
     "id": "me3-105",
@@ -2398,7 +2405,8 @@
     ],
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me3-106/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me3-106/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-106/large",
+    "megaFormKey": "mega-skarmory"
   },
   {
     "id": "me3-107",
@@ -2628,7 +2636,8 @@
     "evolvesFrom": "Staryu",
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me3-118/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me3-118/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-118/large",
+    "megaFormKey": "mega-starmie"
   },
   {
     "id": "me3-119",
@@ -2654,7 +2663,8 @@
     "evolvesFrom": "Clefairy",
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me3-119/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me3-119/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-119/large",
+    "megaFormKey": "mega-clefable"
   },
   {
     "id": "me3-120",
@@ -2679,7 +2689,8 @@
     ],
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me3-120/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me3-120/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-120/large",
+    "megaFormKey": "mega-zygarde"
   },
   {
     "id": "me3-121",
@@ -2764,6 +2775,7 @@
     ],
     "regulationMark": "J",
     "imageSmall": "https://images.scrydex.com/pokemon/me3-124/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me3-124/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me3-124/large",
+    "megaFormKey": "mega-zygarde"
   }
 ]

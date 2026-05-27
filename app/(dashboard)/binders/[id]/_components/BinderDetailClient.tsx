@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState, useTransition } from "react";
 import type { CardEntry } from "@/lib/data/types";
+import { MEGAS } from "@/lib/data";
 import {
   ownedCardsByDex,
   pickDisplayCardId,
@@ -14,6 +15,7 @@ import { CardGrid } from "../../../_components/CardGrid";
 import { CardRail } from "../../../_components/CardRail";
 import { PokedexGrid } from "../../../_components/PokedexGrid";
 import { useOwnedCards } from "../../../_lib/OwnedCardsContext";
+import { useUser } from "../../../_lib/UserContext";
 import { scopeLabel } from "../../_lib/scope-label";
 import {
   clearBinderCellOverride,
@@ -62,7 +64,10 @@ export function BinderDetailClient({
   prices,
 }: Props) {
   const router = useRouter();
-  const { ownedCards, ownedSpecies } = useOwnedCards();
+  const { ownedCards, ownedSpecies, ownedMegaForms } = useOwnedCards();
+  const { treatMegasAsSeparate, megaPlacement } = useUser();
+  const includeMegasInBinder =
+    treatMegasAsSeparate && megaPlacement !== "separate";
   const [editing, setEditing] = useState(false);
   const [renaming, setRenaming] = useState(false);
   const [nameDraft, setNameDraft] = useState(binder.name);
@@ -80,15 +85,25 @@ export function BinderDetailClient({
     return { from, to, nums };
   }, [isPokedex, binder.scopeParams]);
 
-  const total = isPokedex ? (dexRange?.nums.length ?? 0) : cards.length;
+  // Megas that belong to this pokedex-binder's range (only when the toggle
+  // is on AND placement is not "separate").
+  const megasInRange = useMemo(() => {
+    if (!isPokedex || !dexRange || !includeMegasInBinder) return [];
+    return MEGAS.filter((m) => m.baseDex >= dexRange.from && m.baseDex <= dexRange.to);
+  }, [isPokedex, dexRange, includeMegasInBinder]);
+
+  const total = isPokedex
+    ? (dexRange?.nums.length ?? 0) + megasInRange.length
+    : cards.length;
   const ownedCount = useMemo(() => {
     if (isPokedex && dexRange) {
       let n = 0;
       for (const d of dexRange.nums) if (ownedSpecies.has(d)) n++;
+      for (const m of megasInRange) if (ownedMegaForms.has(m.formKey)) n++;
       return n;
     }
     return cards.reduce((acc, c) => acc + (ownedCards.has(c.id) ? 1 : 0), 0);
-  }, [isPokedex, dexRange, ownedSpecies, cards, ownedCards]);
+  }, [isPokedex, dexRange, ownedSpecies, megasInRange, ownedMegaForms, cards, ownedCards]);
   const pct = total > 0 ? (ownedCount / total) * 100 : 0;
 
   function commitRename() {
@@ -161,14 +176,17 @@ export function BinderDetailClient({
     const out = new Map<number, CardEntry>();
     for (const d of dexRange.nums) {
       const ownedForDex = ownedByDex.get(d) ?? [];
-      const cardId = pickDisplayCardId(overrides[d], ownedForDex);
+      // When the toggle is on, Mega cards must not represent a base dex slot.
+      // Stale overrides pointing at a Mega card fall through to the rarity
+      // fallback (no DB cleanup needed — flipping the toggle off restores).
+      const cardId = pickDisplayCardId(overrides[d], ownedForDex, treatMegasAsSeparate);
       if (cardId) {
         const card = byId.get(cardId);
         if (card) out.set(d, card);
       }
     }
     return out;
-  }, [isPokedex, dexRange, cards, ownedByDex, overrides]);
+  }, [isPokedex, dexRange, cards, ownedByDex, overrides, treatMegasAsSeparate]);
 
   function onPickCard(cardId: string) {
     if (pickerDex == null) return;
