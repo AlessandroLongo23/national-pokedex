@@ -72,7 +72,7 @@ const SUPERTYPES: { value: SupertypeFilter; label: string }[] = [
 const SORT_OPTIONS: { value: CardSort; label: string }[] = [
   { value: "number", label: "By #" },
   { value: "rarity", label: "By rarity" },
-  { value: "pokemon", label: "By Pokémon" },
+  { value: "pokemon", label: "By Pokédex #" },
   { value: "set", label: "By set" },
 ];
 

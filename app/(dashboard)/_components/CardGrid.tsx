@@ -59,16 +59,29 @@ export function CardGrid({
     if (mounted) window.localStorage.setItem(`${SIZE_KEY}.${storageKey}`, String(cols));
   }, [cols, storageKey, mounted]);
 
-  const sorted = useMemo(() => sortCards(cards, sort), [cards, sort]);
+  const singleSet = useMemo(() => {
+    if (cards.length === 0) return false;
+    const first = cards[0]!.setId;
+    for (let i = 1; i < cards.length; i++) if (cards[i]!.setId !== first) return false;
+    return true;
+  }, [cards]);
+
+  const effectiveSort: CardSort = singleSet && sort === "set" ? "number" : sort;
+  const sortOptions = useMemo<CardSort[]>(
+    () => (singleSet ? ["number", "rarity", "pokemon"] : ["number", "rarity", "pokemon", "set"]),
+    [singleSet],
+  );
+
+  const sorted = useMemo(() => sortCards(cards, effectiveSort), [cards, effectiveSort]);
 
   const groups = useMemo(() => {
-    if (sort === "number") return null;
+    if (effectiveSort === "number" || effectiveSort === "pokemon") return null;
     const m = new Map<string, CardEntry[]>();
     for (const c of sorted) {
       let key: string;
-      if (sort === "rarity") {
+      if (effectiveSort === "rarity") {
         key = RARITY_LABEL[c.rarity];
-      } else if (sort === "set") {
+      } else if (effectiveSort === "set") {
         const s = getSet(c.setId);
         key = s ? s.name : "Other";
       } else {
@@ -79,7 +92,7 @@ export function CardGrid({
       else m.set(key, [c]);
     }
     return m;
-  }, [sorted, sort]);
+  }, [sorted, effectiveSort]);
 
   const renderGrid = (items: CardEntry[]) => (
     <div
@@ -104,14 +117,14 @@ export function CardGrid({
     <div className="space-y-3">
       <div className="sticky top-2 z-10 flex flex-wrap items-center gap-3 rounded-lg border border-border bg-panel/90 backdrop-blur p-3 shadow-[0_4px_16px_-8px_rgb(0_0_0/0.6)]">
         <div className="flex gap-1.5">
-          {(["number", "rarity", "pokemon", "set"] as CardSort[]).map((s) => (
+          {sortOptions.map((s) => (
             <button
               key={s}
               type="button"
               onClick={() => setSort(s)}
               className={[
                 "rounded-md px-2.5 py-1 text-[11px] uppercase tracking-wider transition",
-                sort === s
+                effectiveSort === s
                   ? "bg-accent/15 text-accent"
                   : "text-muted hover:bg-panel-2 hover:text-text",
               ].join(" ")}
@@ -121,7 +134,7 @@ export function CardGrid({
                 : s === "rarity"
                   ? "By rarity"
                   : s === "pokemon"
-                    ? "By Pokémon"
+                    ? "By Pokédex #"
                     : "By set"}
             </button>
           ))}
@@ -151,7 +164,7 @@ export function CardGrid({
         <div className="space-y-4">
           {[...groups.entries()].map(([key, items]) => {
             const title =
-              sort === "pokemon" && key !== "other"
+              effectiveSort === "pokemon" && key !== "other"
                 ? `${pokemonNameByDex(Number(key)) ?? "#" + key} · Gen ${genByDex(Number(key)) ?? "?"}`
                 : key;
             return (
