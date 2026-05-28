@@ -6,10 +6,10 @@ import { X } from "lucide-react";
 import {
   formatMoneyCents,
   isLedgerCurrency,
-  LEDGER_CURRENCIES,
   parseMoneyCents,
   type LedgerCurrency,
 } from "@/lib/ledger/money";
+import { SUPPORTED_CURRENCIES } from "@/lib/pricing/currencies";
 import { useOwnedCards } from "../../_lib/OwnedCardsContext";
 import { logPsaSubmission } from "../_lib/transaction-actions";
 
@@ -291,7 +291,7 @@ export function NewPsaModal({ open, onClose, defaultCurrency }: Props) {
                   aria-label="Currency"
                   className="rounded-md border border-border bg-panel-2 px-2 py-1.5 text-sm text-text focus:border-accent focus:outline-none [color-scheme:dark]"
                 >
-                  {LEDGER_CURRENCIES.map((c) => (
+                  {SUPPORTED_CURRENCIES.map((c) => (
                     <option key={c} value={c}>
                       {c}
                     </option>

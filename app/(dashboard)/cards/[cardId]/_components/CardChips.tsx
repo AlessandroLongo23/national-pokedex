@@ -69,10 +69,12 @@ export function SetChip({
   setId,
   setName,
   number,
+  symbolUrl,
 }: {
   setId: string;
   setName: string;
   number: string;
+  symbolUrl?: string;
 }) {
   const [failed, setFailed] = useState(false);
   return (
@@ -90,7 +92,7 @@ export function SetChip({
       ) : (
         // eslint-disable-next-line @next/next/no-img-element
         <img
-          src={`https://images.pokemontcg.io/${setId}/symbol.png`}
+          src={symbolUrl ?? `https://images.pokemontcg.io/${setId}/symbol.png`}
           alt=""
           width={20}
           height={20}

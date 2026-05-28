@@ -1,14 +1,18 @@
 // Ledger amounts live as integer cents + a currency code so aggregation
 // and storage stay precise (no floating-point money math). This module
 // is the only place those two get rendered or parsed.
+//
+// The supported currency set lives in lib/pricing/currencies.ts;
+// LedgerCurrency is re-exported here as an alias so existing call
+// sites keep importing from "@/lib/ledger/money".
 
-export type LedgerCurrency = "USD" | "EUR";
+import {
+  isCurrency,
+  type Currency,
+} from "@/lib/pricing/currencies";
 
-export const LEDGER_CURRENCIES: readonly LedgerCurrency[] = ["USD", "EUR"];
-
-export function isLedgerCurrency(value: unknown): value is LedgerCurrency {
-  return value === "USD" || value === "EUR";
-}
+export type LedgerCurrency = Currency;
+export { isCurrency as isLedgerCurrency };
 
 export function formatMoneyCents(
   cents: number | null | undefined,
@@ -27,7 +31,7 @@ export function formatMoneyCents(
 // field" from "user typed nonsense" — both end up null here; the caller
 // decides how to react.
 export function parseMoneyCents(input: string): number | null {
-  const trimmed = input.trim().replace(/[$€,\s]/g, "");
+  const trimmed = input.trim().replace(/[$€£¥,\s]/g, "");
   if (!trimmed) return null;
   const n = Number(trimmed);
   if (!Number.isFinite(n) || n < 0) return null;

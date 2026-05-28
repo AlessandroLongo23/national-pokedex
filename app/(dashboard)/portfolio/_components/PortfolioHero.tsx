@@ -2,6 +2,7 @@ import Link from "next/link";
 import {
   formatPrice,
   PRICE_SOURCE_LABEL,
+  type DisplayConversion,
   type PriceSource,
 } from "@/lib/pricing/pokemontcg";
 
@@ -23,6 +24,7 @@ interface Props {
   packsOpened: number;
   priceSource: PriceSource;
   unpricedCards: UnpricedCard[];
+  display: DisplayConversion;
 }
 
 const UNPRICED_LIST_LIMIT = 60;
@@ -45,6 +47,7 @@ export function PortfolioHero({
   packsOpened,
   priceSource,
   unpricedCards,
+  display,
 }: Props) {
   const showSpecies = distinctSpecies !== totalCards;
   const showCopies = totalCopies != null && totalCopies > totalCards;
@@ -63,9 +66,9 @@ export function PortfolioHero({
           <p className="eyebrow">Portfolio value</p>
           <p
             className="text-4xl font-semibold tracking-tight tabular-nums md:text-5xl"
-            aria-label={`Portfolio value ${formatPrice(portfolioValue, priceSource)}`}
+            aria-label={`Portfolio value ${formatPrice(portfolioValue, priceSource, display)}`}
           >
-            {formatPrice(portfolioValue, priceSource)}
+            {formatPrice(portfolioValue, priceSource, display)}
           </p>
           <p className="text-xs text-muted">
             via{" "}

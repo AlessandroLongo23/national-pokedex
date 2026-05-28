@@ -7,10 +7,13 @@ import { ArrowLeft, RotateCcw, Trash2 } from "lucide-react";
 import {
   formatMoneyCents,
   isLedgerCurrency,
-  LEDGER_CURRENCIES,
   parseMoneyCents,
   type LedgerCurrency,
 } from "@/lib/ledger/money";
+import { SUPPORTED_CURRENCIES } from "@/lib/pricing/currencies";
+import { MoneyDisplay } from "../../../../_components/MoneyDisplay";
+import { Tooltip } from "../../../../_components/Tooltip";
+import { useUser } from "../../../../_lib/UserContext";
 import {
   deletePsaSubmission,
   updatePsaFee,
@@ -135,6 +138,7 @@ function draftsEqual(a: SubmissionDraft, b: SubmissionDraft): boolean {
 export function PsaDetailClient(props: Props) {
   const { submissionId } = props;
   const router = useRouter();
+  const { displayCurrency, latestRatesFromEur } = useUser();
   const db = useMemo(() => buildDbDraft(props), [props]);
   const [draft, setDraft] = useState<SubmissionDraft>(() => buildInitialDraft(props, db));
   const [pending, startTransition] = useTransition();
@@ -343,14 +347,15 @@ export function PsaDetailClient(props: Props) {
                 className="flex-1 rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-sm text-text focus:border-accent focus:outline-none [color-scheme:dark]"
               />
               {draft.returnedAt !== "" && (
-                <button
-                  type="button"
-                  onClick={() => setReturnedAt("")}
-                  className="rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-xs text-muted transition hover:text-text"
-                  title="Clear return date"
-                >
-                  Clear
-                </button>
+                <Tooltip content="Clear return date">
+                  <button
+                    type="button"
+                    onClick={() => setReturnedAt("")}
+                    className="rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-xs text-muted transition hover:text-text"
+                  >
+                    Clear
+                  </button>
+                </Tooltip>
               )}
             </div>
           </Labeled>
@@ -366,7 +371,7 @@ export function PsaDetailClient(props: Props) {
                 aria-label="Fee currency"
                 className="rounded-md border border-border bg-panel-2 px-2 py-1.5 text-sm text-text focus:border-accent focus:outline-none [color-scheme:dark]"
               >
-                {LEDGER_CURRENCIES.map((c) => (
+                {SUPPORTED_CURRENCIES.map((c) => (
                   <option key={c} value={c}>
                     {c}
                   </option>
@@ -417,6 +422,8 @@ export function PsaDetailClient(props: Props) {
                   row={row}
                   cardDraft={cardDraft}
                   currency={draft.feeCurrency}
+                  displayCurrency={displayCurrency}
+                  latestRatesFromEur={latestRatesFromEur}
                   onPreChange={(v) => setCardPre(row.cardId, v)}
                   onGradeChange={(g) => setCardGrade(row.cardId, g)}
                 />
@@ -493,12 +500,19 @@ function CardRow({
   row,
   cardDraft,
   currency,
+  displayCurrency,
+  latestRatesFromEur,
   onPreChange,
   onGradeChange,
 }: {
   row: PsaCardRow;
   cardDraft: CardDraft;
   currency: LedgerCurrency;
+  displayCurrency: import("@/lib/pricing/currencies").Currency;
+  latestRatesFromEur: Record<
+    import("@/lib/pricing/currencies").Currency,
+    number
+  >;
   onPreChange: (v: string) => void;
   onGradeChange: (g: number | null) => void;
 }) {
@@ -575,9 +589,8 @@ function CardRow({
           ))}
         </select>
       </td>
-      <td
-        className="px-4 py-3"
-        title={
+      <Tooltip
+        content={
           gradeDiffersFromDb
             ? "Save to snapshot the new post-grade price"
             : row.grade == null
@@ -587,20 +600,29 @@ function CardRow({
                 : "Snapshotted from market price when the grade was last saved"
         }
       >
+        <td className="px-4 py-3">
         <span
           className={[
             "text-sm tabular-nums",
             gradeDiffersFromDb ? "text-muted italic" : "",
           ].join(" ")}
         >
-          {row.postGradeValueCents != null
-            ? formatMoneyCents(row.postGradeValueCents, currency)
-            : "—"}
+          {row.postGradeValueCents != null ? (
+            <MoneyDisplay
+              cents={row.postGradeValueCents}
+              currency={currency}
+              displayCurrency={displayCurrency}
+              latestRatesFromEur={latestRatesFromEur}
+            />
+          ) : (
+            "—"
+          )}
           {gradeDiffersFromDb && (
             <span className="ml-1 text-[11px]">· save to refresh</span>
           )}
         </span>
-      </td>
+        </td>
+      </Tooltip>
       <td className="px-4 py-3 text-right">
         {delta != null ? (
           <span
@@ -610,7 +632,12 @@ function CardRow({
             ].join(" ")}
           >
             {delta >= 0 ? "+" : "−"}
-            {formatMoneyCents(Math.abs(delta), currency)}
+            <MoneyDisplay
+              cents={Math.abs(delta)}
+              currency={currency}
+              displayCurrency={displayCurrency}
+              latestRatesFromEur={latestRatesFromEur}
+            />
           </span>
         ) : (
           <span className="text-muted">—</span>

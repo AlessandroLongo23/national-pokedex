@@ -2,12 +2,12 @@ import { notFound } from "next/navigation";
 import { SETS } from "@/lib/data";
 import { getAllCards } from "@/lib/data/binder-scope";
 import {
-  formatMoneyCents,
   isLedgerCurrency,
   type LedgerCurrency,
 } from "@/lib/ledger/money";
-import { PRICE_SOURCE_CURRENCY } from "@/lib/pricing/pokemontcg";
+import { getLatestRatesFromEur } from "@/lib/pricing/exchange-rates";
 import { getSupabaseServer } from "@/lib/supabase/server";
+import { MoneyDisplay } from "../../../_components/MoneyDisplay";
 import { PageHeader } from "../../../_components/PageHeader";
 import { requireUserId } from "../../../_lib/current-user";
 import { loadUserPreferences } from "../../../_lib/user-preferences";
@@ -22,26 +22,28 @@ export default async function PsaSubmissionDetailPage({ params }: PageProps) {
   const userId = await requireUserId();
   const supabase = await getSupabaseServer();
 
-  const [submissionRes, cardsRes, feeRes, prefs, allCards] = await Promise.all([
-    supabase
-      .from("psa_submissions")
-      .select("id, submitted_at, returned_at, note, created_at")
-      .eq("id", id)
-      .eq("user_id", userId)
-      .maybeSingle(),
-    supabase
-      .from("psa_submission_cards")
-      .select("card_id, pre_grade_value_cents, grade, post_grade_value_cents")
-      .eq("submission_id", id),
-    supabase
-      .from("transactions")
-      .select("id, amount_cents, currency, occurred_at")
-      .eq("psa_submission_id", id)
-      .eq("kind", "psa_fee")
-      .maybeSingle(),
-    loadUserPreferences(userId),
-    getAllCards(),
-  ]);
+  const [submissionRes, cardsRes, feeRes, prefs, allCards, latestRatesFromEur] =
+    await Promise.all([
+      supabase
+        .from("psa_submissions")
+        .select("id, submitted_at, returned_at, note, created_at")
+        .eq("id", id)
+        .eq("user_id", userId)
+        .maybeSingle(),
+      supabase
+        .from("psa_submission_cards")
+        .select("card_id, pre_grade_value_cents, grade, post_grade_value_cents")
+        .eq("submission_id", id),
+      supabase
+        .from("transactions")
+        .select("id, amount_cents, currency, occurred_at, rate_to_eur")
+        .eq("psa_submission_id", id)
+        .eq("kind", "psa_fee")
+        .maybeSingle(),
+      loadUserPreferences(userId),
+      getAllCards(),
+      getLatestRatesFromEur(),
+    ]);
 
   if (submissionRes.error) throw new Error(submissionRes.error.message);
   if (!submissionRes.data) notFound();
@@ -71,8 +73,11 @@ export default async function PsaSubmissionDetailPage({ params }: PageProps) {
 
   const feeCurrency: LedgerCurrency = isLedgerCurrency(feeRes.data?.currency)
     ? (feeRes.data.currency as LedgerCurrency)
-    : PRICE_SOURCE_CURRENCY[prefs.priceSource];
+    : prefs.displayCurrency;
   const feeCents = feeRes.data?.amount_cents != null ? -Number(feeRes.data.amount_cents) : 0;
+  const feeRateToEur =
+    feeRes.data?.rate_to_eur != null ? Number(feeRes.data.rate_to_eur) : null;
+  const feeOccurredAt = (feeRes.data?.occurred_at as string | null) ?? null;
 
   // Aggregate pre vs post for an at-a-glance "did grading help?" line.
   // Skip cards where either side is missing — we only report on the
@@ -111,9 +116,21 @@ export default async function PsaSubmissionDetailPage({ params }: PageProps) {
         <Stat
           label="Fee"
           value={
-            feeCents > 0
-              ? `−${formatMoneyCents(feeCents, feeCurrency)}`
-              : <span className="text-muted">—</span>
+            feeCents > 0 ? (
+              <>
+                −
+                <MoneyDisplay
+                  cents={feeCents}
+                  currency={feeCurrency}
+                  rateToEur={feeRateToEur}
+                  asOf={feeOccurredAt}
+                  displayCurrency={prefs.displayCurrency}
+                  latestRatesFromEur={latestRatesFromEur}
+                />
+              </>
+            ) : (
+              <span className="text-muted">—</span>
+            )
           }
           tone="neg"
         />
@@ -126,8 +143,19 @@ export default async function PsaSubmissionDetailPage({ params }: PageProps) {
                   postTotal >= preTotal ? "text-covered" : "text-missing"
                 }
               >
-                {formatMoneyCents(preTotal, feeCurrency)} →{" "}
-                {formatMoneyCents(postTotal, feeCurrency)}
+                <MoneyDisplay
+                  cents={preTotal}
+                  currency={feeCurrency}
+                  displayCurrency={prefs.displayCurrency}
+                  latestRatesFromEur={latestRatesFromEur}
+                />
+                {" → "}
+                <MoneyDisplay
+                  cents={postTotal}
+                  currency={feeCurrency}
+                  displayCurrency={prefs.displayCurrency}
+                  latestRatesFromEur={latestRatesFromEur}
+                />
               </span>
             }
           />

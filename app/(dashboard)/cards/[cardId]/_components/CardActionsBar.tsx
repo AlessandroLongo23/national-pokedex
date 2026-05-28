@@ -7,6 +7,7 @@ import { LogSaleModal } from "../../../transactions/_components/LogSaleModal";
 import { useOwnedCards } from "../../../_lib/OwnedCardsContext";
 import { useWishlist } from "../../../_lib/WishlistContext";
 import { useFavorites } from "../../../_lib/FavoritesContext";
+import { Tooltip } from "../../../_components/Tooltip";
 
 interface CardInfo {
   id: string;
@@ -53,32 +54,34 @@ export function CardActionsBar({
           role="group"
           aria-label={`Owned — ${ownedQty} ${ownedQty === 1 ? "copy" : "copies"}`}
         >
-          <button
-            type="button"
-            onClick={() => adjustOwned(card.id, -1)}
-            aria-label={
-              ownedQty > 1
-                ? `Remove a copy of ${card.name}`
-                : `Mark ${card.name} not owned`
-            }
-            title={ownedQty > 1 ? "One fewer copy" : "Remove from collection"}
-            className="inline-flex w-9 items-center justify-center transition hover:bg-owned/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset"
-          >
-            <Minus className="h-3.5 w-3.5" strokeWidth={2.5} aria-hidden />
-          </button>
+          <Tooltip content={ownedQty > 1 ? "One fewer copy" : "Remove from collection"}>
+            <button
+              type="button"
+              onClick={() => adjustOwned(card.id, -1)}
+              aria-label={
+                ownedQty > 1
+                  ? `Remove a copy of ${card.name}`
+                  : `Mark ${card.name} not owned`
+              }
+              className="inline-flex w-9 items-center justify-center transition hover:bg-owned/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset"
+            >
+              <Minus className="h-3.5 w-3.5" strokeWidth={2.5} aria-hidden />
+            </button>
+          </Tooltip>
           <span className="inline-flex min-w-[3.25rem] items-center justify-center gap-1.5 border-x border-owned/40 bg-owned/10 px-3 text-xs font-semibold leading-none tabular-nums">
             <Check className="h-3.5 w-3.5" strokeWidth={3} aria-hidden />
             <span>×{ownedQty}</span>
           </span>
-          <button
-            type="button"
-            onClick={() => adjustOwned(card.id, +1)}
-            aria-label={`Add another copy of ${card.name}`}
-            title="One more copy"
-            className="inline-flex w-9 items-center justify-center transition hover:bg-owned/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset"
-          >
-            <Plus className="h-3.5 w-3.5" strokeWidth={2.5} aria-hidden />
-          </button>
+          <Tooltip content="One more copy">
+            <button
+              type="button"
+              onClick={() => adjustOwned(card.id, +1)}
+              aria-label={`Add another copy of ${card.name}`}
+              className="inline-flex w-9 items-center justify-center transition hover:bg-owned/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset"
+            >
+              <Plus className="h-3.5 w-3.5" strokeWidth={2.5} aria-hidden />
+            </button>
+          </Tooltip>
         </div>
       ) : (
         <button
@@ -95,63 +98,68 @@ export function CardActionsBar({
           don't have, you favorite what you do. Mirrors CardTile's logic
           so behavior is consistent everywhere a card surfaces. */}
       {ownedQty === 0 ? (
-        <button
-          type="button"
-          onClick={() => toggleWishlist(card.id)}
-          aria-pressed={wishlisted}
-          className={[
-            "inline-flex h-9 items-center gap-1.5 rounded-md border px-3 text-xs font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
-            wishlisted
-              ? "border-missing bg-missing/15 text-missing hover:bg-missing/20"
-              : "border-border bg-panel-2 text-text hover:border-missing/70 hover:text-missing",
-          ].join(" ")}
-          title={wishlisted ? "Wishlisted — click to remove" : "Add to wishlist"}
-        >
-          <Heart
-            className="h-3.5 w-3.5"
-            strokeWidth={2}
-            fill={wishlisted ? "currentColor" : "none"}
-            aria-hidden
-          />
-          {wishlisted ? "Wishlisted" : "Wishlist"}
-        </button>
+        <Tooltip content={wishlisted ? "Wishlisted, click to remove" : "Add to wishlist"}>
+          <button
+            type="button"
+            onClick={() => toggleWishlist(card.id)}
+            aria-pressed={wishlisted}
+            className={[
+              "inline-flex h-9 items-center gap-1.5 rounded-md border px-3 text-xs font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
+              wishlisted
+                ? "border-missing bg-missing/15 text-missing hover:bg-missing/20"
+                : "border-border bg-panel-2 text-text hover:border-missing/70 hover:text-missing",
+            ].join(" ")}
+          >
+            <Heart
+              className="h-3.5 w-3.5"
+              strokeWidth={2}
+              fill={wishlisted ? "currentColor" : "none"}
+              aria-hidden
+            />
+            {wishlisted ? "Wishlisted" : "Wishlist"}
+          </button>
+        </Tooltip>
       ) : (
-        <button
-          type="button"
-          onClick={() => toggleFavorite(card.id)}
-          aria-pressed={favorited}
-          className={[
-            "inline-flex h-9 items-center gap-1.5 rounded-md border px-3 text-xs font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
-            favorited
-              ? "border-[#fcd34d]/70 bg-[#fcd34d]/15 text-[#fcd34d] hover:bg-[#fcd34d]/20"
-              : "border-border bg-panel-2 text-text hover:border-[#fcd34d]/70 hover:text-[#fcd34d]",
-          ].join(" ")}
-          title={favorited ? "Favorited — click to remove" : "Mark as favorite"}
-        >
-          <Star
-            className="h-3.5 w-3.5"
-            strokeWidth={2}
-            fill={favorited ? "currentColor" : "none"}
-            aria-hidden
-          />
-          {favorited ? "Favorited" : "Favorite"}
-        </button>
+        <Tooltip content={favorited ? "Favorited, click to remove" : "Mark as favorite"}>
+          <button
+            type="button"
+            onClick={() => toggleFavorite(card.id)}
+            aria-pressed={favorited}
+            className={[
+              "inline-flex h-9 items-center gap-1.5 rounded-md border px-3 text-xs font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
+              favorited
+                ? "border-[#fcd34d]/70 bg-[#fcd34d]/15 text-[#fcd34d] hover:bg-[#fcd34d]/20"
+                : "border-border bg-panel-2 text-text hover:border-[#fcd34d]/70 hover:text-[#fcd34d]",
+            ].join(" ")}
+          >
+            <Star
+              className="h-3.5 w-3.5"
+              strokeWidth={2}
+              fill={favorited ? "currentColor" : "none"}
+              aria-hidden
+            />
+            {favorited ? "Favorited" : "Favorite"}
+          </button>
+        </Tooltip>
       )}
 
-      <button
-        type="button"
-        onClick={() => setSellOpen(true)}
-        disabled={ownedQty === 0}
-        className="inline-flex h-9 items-center gap-1.5 rounded-md border border-border bg-panel-2 px-3 text-xs font-medium text-text transition hover:border-accent/60 hover:bg-panel disabled:cursor-not-allowed disabled:opacity-40"
-        title={
+      <Tooltip
+        content={
           ownedQty === 0
             ? "You don't own this card"
             : `Sell up to ${ownedQty} ${ownedQty === 1 ? "copy" : "copies"}`
         }
       >
-        <Tag className="h-3.5 w-3.5" aria-hidden />
-        Sell{ownedQty > 1 ? ` (up to ${ownedQty})` : ""}
-      </button>
+        <button
+          type="button"
+          onClick={() => setSellOpen(true)}
+          disabled={ownedQty === 0}
+          className="inline-flex h-9 items-center gap-1.5 rounded-md border border-border bg-panel-2 px-3 text-xs font-medium text-text transition hover:border-accent/60 hover:bg-panel disabled:cursor-not-allowed disabled:opacity-40"
+        >
+          <Tag className="h-3.5 w-3.5" aria-hidden />
+          Sell{ownedQty > 1 ? ` (up to ${ownedQty})` : ""}
+        </button>
+      </Tooltip>
 
       <LogSaleModal
         open={sellOpen}

@@ -10,6 +10,7 @@ import {
 import {
   fetchPricesForCards,
   sumPricesByQuantity,
+  type DisplayConversion,
   type PriceSource,
 } from "@/lib/pricing/pokemontcg";
 import { BinderListCard } from "../../_components/BinderListCard";
@@ -28,6 +29,7 @@ interface Props {
   treatMegasAsSeparate: boolean;
   megaPlacement: "appended" | "inline" | "separate";
   priceSource: PriceSource;
+  display: DisplayConversion;
 }
 
 // Async server component nested in <Suspense> on the binders index. The
@@ -41,6 +43,7 @@ export async function BinderListPricedGrid({
   treatMegasAsSeparate,
   megaPlacement,
   priceSource,
+  display,
 }: Props) {
   const ownedIds = new Set(ownedQuantities.keys());
   const allCards = binders.length > 0 ? await getAllCards() : [];
@@ -120,6 +123,7 @@ export async function BinderListPricedGrid({
             ownedCount={c.ownedCount}
             value={total}
             priceSource={priceSource}
+            display={display}
           />
         );
       })}
@@ -138,6 +142,7 @@ export function BinderListUnpricedGrid({
   treatMegasAsSeparate,
   megaPlacement,
   priceSource,
+  display,
   allCards,
 }: Props & { allCards: import("@/lib/data/types").CardEntry[] }) {
   const ownedIds = new Set(ownedQuantities.keys());
@@ -189,6 +194,7 @@ export function BinderListUnpricedGrid({
           ownedCount={c.ownedCount}
           value={0}
           priceSource={priceSource}
+          display={display}
         />
       ))}
     </div>

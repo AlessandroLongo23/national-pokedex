@@ -1,10 +1,13 @@
 // Pure aggregations over ledger rows. Lives outside the route group so
-// it can be unit-tested without a Supabase client. Multi-currency rule
-// per the plan: aggregations are per-currency; rows that don't match the
-// display currency are counted under `excludedCount` so the UI can
-// surface the gap honestly rather than pretending we converted.
+// it can be unit-tested without a Supabase client.
+//
+// Multi-currency rule: every row is converted to the user's display
+// currency using its snapshot `rate_to_eur` (or today's rate as a
+// fallback for legacy rows). No exclusions, no parallel per-currency
+// totals — the user picks one currency and the numbers sum cleanly.
 
-import type { LedgerCurrency } from "./money";
+import type { Currency } from "@/lib/pricing/currencies";
+import { convertCents } from "@/lib/pricing/exchange-rates";
 
 export const TRANSACTION_KINDS = [
   "pack_purchase",
@@ -19,7 +22,11 @@ export interface LedgerRow {
   kind: TransactionKind;
   occurredAt: string;
   amountCents: number;
-  currency: LedgerCurrency;
+  currency: Currency;
+  /** EUR per 1 unit of `currency` on the row's date. Null on legacy
+   *  rows that haven't been backfilled — those convert at today's rate
+   *  as an approximation. */
+  rateToEur: number | null;
   packId: string | null;
   cardId: string | null;
   quantity: number | null;
@@ -31,31 +38,31 @@ export interface LedgerKpis {
   totalSpentCents: number;
   totalEarnedCents: number;
   netCashFlowCents: number;
-  /** Rows whose currency != the display currency. The UI surfaces this
-   * count so the user knows some activity is hidden from the totals. */
-  excludedCount: number;
 }
 
 export function computeKpis(
   rows: readonly LedgerRow[],
-  displayCurrency: LedgerCurrency,
+  displayCurrency: Currency,
+  latestRatesFromEur: Record<Currency, number>,
 ): LedgerKpis {
   let totalSpent = 0;
   let totalEarned = 0;
-  let excluded = 0;
   for (const r of rows) {
-    if (r.currency !== displayCurrency) {
-      excluded++;
-      continue;
-    }
-    if (r.amountCents < 0) totalSpent += -r.amountCents;
-    else totalEarned += r.amountCents;
+    const converted = convertCents(
+      r.amountCents,
+      r.currency,
+      displayCurrency,
+      r.rateToEur,
+      latestRatesFromEur,
+    );
+    if (converted == null) continue;
+    if (converted < 0) totalSpent += -converted;
+    else totalEarned += converted;
   }
   return {
     totalSpentCents: totalSpent,
     totalEarnedCents: totalEarned,
     netCashFlowCents: totalEarned - totalSpent,
-    excludedCount: excluded,
   };
 }
 

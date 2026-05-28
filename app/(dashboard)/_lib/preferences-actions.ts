@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 import { getSupabaseServer } from "@/lib/supabase/server";
 import { requireUserId } from "./current-user";
 import { PRICE_SOURCES, type PriceSource } from "@/lib/pricing/pokemontcg";
+import { isCurrency, type Currency } from "@/lib/pricing/currencies";
 import { MEGA_PLACEMENTS, type MegaPlacement } from "./user-preferences";
 
 export async function updatePriceSource(source: PriceSource): Promise<void> {
@@ -53,4 +54,26 @@ export async function updateMegaSettings(
   revalidatePath("/binders");
   revalidatePath("/binders/[id]", "page");
   revalidatePath("/cards");
+}
+
+export async function updateDisplayCurrency(currency: Currency): Promise<void> {
+  if (!isCurrency(currency)) {
+    throw new Error(`Invalid currency: ${currency}`);
+  }
+  const userId = await requireUserId();
+  const supabase = await getSupabaseServer();
+  const { error } = await supabase.from("user_preferences").upsert(
+    { user_id: userId, display_currency: currency, updated_at: new Date().toISOString() },
+    { onConflict: "user_id" },
+  );
+  if (error) throw new Error(`Failed to update display currency: ${error.message}`);
+  // Every page that shows a price reads from this preference.
+  revalidatePath("/settings");
+  revalidatePath("/transactions");
+  revalidatePath("/portfolio");
+  revalidatePath("/packs");
+  revalidatePath("/binders");
+  revalidatePath("/binders/[id]", "page");
+  revalidatePath("/cards/[cardId]", "page");
+  revalidatePath("/wishlist");
 }

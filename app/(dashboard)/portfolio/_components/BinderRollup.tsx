@@ -4,6 +4,7 @@ import { scopeLabel } from "../../binders/_lib/scope-label";
 import type { ScopeType, ScopeParams } from "@/lib/data/binder-scope";
 import {
   formatPriceCompact,
+  type DisplayConversion,
   type PriceSource,
 } from "@/lib/pricing/pokemontcg";
 
@@ -21,6 +22,7 @@ interface Props {
   rows: BinderRollupRow[];
   priceSource: PriceSource;
   totalValue: number;
+  display: DisplayConversion;
 }
 
 // Loose comparison for the binder-name / scope-label duplication check:
@@ -51,7 +53,7 @@ function trailingDifferentiator(name: string, label: string): string | null {
 // Rows are sorted by value descending — the question this answers is
 // "which binders carry most of my collection's worth?", so the highest
 // values go first.
-export function BinderRollup({ rows, priceSource, totalValue }: Props) {
+export function BinderRollup({ rows, priceSource, totalValue, display }: Props) {
   if (rows.length === 0) {
     return (
       <section className="space-y-3">
@@ -102,7 +104,7 @@ export function BinderRollup({ rows, priceSource, totalValue }: Props) {
               <li key={b.id}>
                 <Link
                   href={`/binders/${b.id}`}
-                  aria-label={`${b.name}, ${b.ownedCount.toLocaleString()} of ${b.targetCount.toLocaleString()} owned, value ${formatPriceCompact(b.value, priceSource)}${
+                  aria-label={`${b.name}, ${b.ownedCount.toLocaleString()} of ${b.targetCount.toLocaleString()} owned, value ${formatPriceCompact(b.value, priceSource, display)}${
                     totalValue > 0 && b.value > 0
                       ? ` (${valueShare.toFixed(0)}% of total)`
                       : ""
@@ -149,7 +151,7 @@ export function BinderRollup({ rows, priceSource, totalValue }: Props) {
                     aria-hidden
                   >
                     <div className="text-sm font-medium tabular-nums">
-                      {formatPriceCompact(b.value, priceSource)}
+                      {formatPriceCompact(b.value, priceSource, display)}
                     </div>
                     {showValueShare && (
                       <div className="text-[10px] text-muted tabular-nums">

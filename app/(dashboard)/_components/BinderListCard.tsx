@@ -1,7 +1,11 @@
 import Link from "next/link";
 import { scopeLabel } from "../binders/_lib/scope-label";
 import type { ScopeType, ScopeParams } from "@/lib/data/binder-scope";
-import { formatPriceCompact, type PriceSource } from "@/lib/pricing/pokemontcg";
+import {
+  formatPriceCompact,
+  type DisplayConversion,
+  type PriceSource,
+} from "@/lib/pricing/pokemontcg";
 
 interface Props {
   id: string;
@@ -12,6 +16,7 @@ interface Props {
   targetCount: number;
   value: number;
   priceSource: PriceSource;
+  display: DisplayConversion;
 }
 
 export function BinderListCard({
@@ -23,6 +28,7 @@ export function BinderListCard({
   targetCount,
   value,
   priceSource,
+  display,
 }: Props) {
   const pct = targetCount > 0 ? (ownedCount / targetCount) * 100 : 0;
   return (
@@ -47,7 +53,7 @@ export function BinderListCard({
         <div className="mt-1 text-xs text-muted tabular-nums">
           Value{" "}
           <span className="font-medium text-text">
-            {formatPriceCompact(value, priceSource)}
+            {formatPriceCompact(value, priceSource, display)}
           </span>
         </div>
       )}

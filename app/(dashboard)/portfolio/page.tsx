@@ -22,7 +22,9 @@ import {
   sumPrices,
   sumPricesByQuantity,
   type CardPrice,
+  type DisplayConversion,
 } from "@/lib/pricing/pokemontcg";
+import { getLatestRatesFromEur } from "@/lib/pricing/exchange-rates";
 
 const RECENT_PACK_LIMIT = 12;
 
@@ -38,25 +40,31 @@ export default async function PortfolioPage() {
   const supabase = await getSupabaseServer();
   const prefs = await loadUserPreferences(userId);
 
-  const [ownedRes, packsRes, bindersRes, allCards] = await Promise.all([
-    supabase
-      .from("owned_cards")
-      .select("card_id, acquired_at, quantity")
-      .eq("user_id", userId)
-      .order("acquired_at", { ascending: true }),
-    supabase
-      .from("packs_opened")
-      .select("id, set_id, opened_at")
-      .eq("user_id", userId)
-      .order("opened_at", { ascending: false })
-      .limit(RECENT_PACK_LIMIT),
-    supabase
-      .from("binders")
-      .select("id, name, scope_type, scope_params")
-      .eq("user_id", userId)
-      .order("created_at", { ascending: false }),
-    getAllCards(),
-  ]);
+  const [ownedRes, packsRes, bindersRes, allCards, latestRatesFromEur] =
+    await Promise.all([
+      supabase
+        .from("owned_cards")
+        .select("card_id, acquired_at, quantity")
+        .eq("user_id", userId)
+        .order("acquired_at", { ascending: true }),
+      supabase
+        .from("packs_opened")
+        .select("id, set_id, opened_at")
+        .eq("user_id", userId)
+        .order("opened_at", { ascending: false })
+        .limit(RECENT_PACK_LIMIT),
+      supabase
+        .from("binders")
+        .select("id, name, scope_type, scope_params")
+        .eq("user_id", userId)
+        .order("created_at", { ascending: false }),
+      getAllCards(),
+      getLatestRatesFromEur(),
+    ]);
+  const display: DisplayConversion = {
+    displayCurrency: prefs.displayCurrency,
+    latestRatesFromEur,
+  };
 
   const owned = ownedRes.data ?? [];
   const ownedIds = new Set(owned.map((r) => r.card_id as string));
@@ -251,6 +259,7 @@ export default async function PortfolioPage() {
         packsOpened={packsRes.data?.length ?? 0}
         priceSource={prefs.priceSource}
         unpricedCards={unpricedCards}
+        display={display}
       />
 
       <div className="mt-10 space-y-10">
@@ -258,18 +267,21 @@ export default async function PortfolioPage() {
           countPoints={countPoints}
           valuePoints={valuePoints}
           priceSource={prefs.priceSource}
+          display={display}
         />
 
         <BinderRollup
           rows={binderRows}
           priceSource={prefs.priceSource}
           totalValue={portfolioValue}
+          display={display}
         />
 
         <RecentPullsStrip
           cards={recentPackCards}
           prices={pullsPrices}
           priceSource={prefs.priceSource}
+          display={display}
         />
       </div>
     </div>

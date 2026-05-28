@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { memo } from "react";
 import { ArrowUpRight, Check, Heart, Minus, Plus, Star } from "lucide-react";
-import { getSet } from "@/lib/data";
+import { formatSetCode, getSet } from "@/lib/data";
 import type { CardEntry, Rarity } from "@/lib/data/types";
 import { useOwnedCards } from "../_lib/OwnedCardsContext";
 import { useWishlist } from "../_lib/WishlistContext";
@@ -12,6 +12,7 @@ import { useCardPrice } from "../_lib/CardPricesContext";
 import { useUser } from "../_lib/UserContext";
 import { formatPriceCompact, pickPrice } from "@/lib/pricing/pokemontcg";
 import { Separator } from "./Separator";
+import { Tooltip } from "./Tooltip";
 
 interface Props {
   card: CardEntry;
@@ -65,7 +66,7 @@ function TileBase({
   const { isOwned, toggle: toggleOwned, adjust: adjustOwned, quantityOf } = useOwnedCards();
   const { isWishlisted, toggle: toggleWishlist } = useWishlist();
   const { isFavorited, toggle: toggleFavorite } = useFavorites();
-  const { priceSource, isGuest } = useUser();
+  const { priceSource, isGuest, display } = useUser();
   const priceData = useCardPrice(card.id);
   // pickPrice returns undefined when this card has no row in the current
   // page's price map OR when prices haven't been provided at all (no
@@ -158,7 +159,7 @@ function TileBase({
                       className="rounded-sm bg-panel-2 px-1 py-px text-[10px] font-medium uppercase tracking-wider text-muted"
                       title={set.name}
                     >
-                      {set.id}
+                      {formatSetCode(set.id)}
                     </span>
                     <Separator />
                   </>
@@ -174,12 +175,13 @@ function TileBase({
                 {price != null && (
                   <>
                     <Separator />
-                    <span
-                      className="font-medium tabular-nums text-text"
-                      title={`Market price — ${priceSource === "tcgplayer" ? "TCGplayer" : "Cardmarket"}`}
+                    <Tooltip
+                      content={`Market price, ${priceSource === "tcgplayer" ? "TCGplayer" : "Cardmarket"}`}
                     >
-                      {formatPriceCompact(price, priceSource)}
-                    </span>
+                      <span className="font-medium tabular-nums text-text">
+                        {formatPriceCompact(price, priceSource, display)}
+                      </span>
+                    </Tooltip>
                   </>
                 )}
               </div>
@@ -196,19 +198,20 @@ function TileBase({
                   role="group"
                   aria-label={`Owned — ${quantity} ${quantity === 1 ? "copy" : "copies"}`}
                 >
-                  <button
-                    type="button"
-                    onClick={() => adjustOwned(card.id, -1)}
-                    aria-label={
-                      quantity > 1
-                        ? `Decrease ${card.name} quantity`
-                        : `Mark ${card.name} as not owned`
-                    }
-                    title={quantity > 1 ? "One fewer copy" : "Remove from collection"}
-                    className="inline-flex w-6 items-center justify-center transition hover:bg-owned/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset"
-                  >
-                    <Minus className="h-3 w-3" strokeWidth={2.5} aria-hidden />
-                  </button>
+                  <Tooltip content={quantity > 1 ? "One fewer copy" : "Remove from collection"}>
+                    <button
+                      type="button"
+                      onClick={() => adjustOwned(card.id, -1)}
+                      aria-label={
+                        quantity > 1
+                          ? `Decrease ${card.name} quantity`
+                          : `Mark ${card.name} as not owned`
+                      }
+                      className="inline-flex w-6 items-center justify-center transition hover:bg-owned/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset"
+                    >
+                      <Minus className="h-3 w-3" strokeWidth={2.5} aria-hidden />
+                    </button>
+                  </Tooltip>
                   <span
                     className="inline-flex min-w-7 items-center justify-center gap-0.5 border-x border-owned/40 bg-owned/10 px-1.5 text-[11px] font-semibold leading-none tabular-nums"
                     aria-hidden
@@ -216,83 +219,88 @@ function TileBase({
                     <Check className="h-3 w-3" strokeWidth={3} />
                     <span className="ml-0.5">×{quantity}</span>
                   </span>
-                  <button
-                    type="button"
-                    onClick={() => adjustOwned(card.id, +1)}
-                    aria-label={`Add another copy of ${card.name}`}
-                    title="One more copy"
-                    className="inline-flex w-6 items-center justify-center transition hover:bg-owned/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset"
-                  >
-                    <Plus className="h-3 w-3" strokeWidth={2.5} aria-hidden />
-                  </button>
+                  <Tooltip content="One more copy">
+                    <button
+                      type="button"
+                      onClick={() => adjustOwned(card.id, +1)}
+                      aria-label={`Add another copy of ${card.name}`}
+                      className="inline-flex w-6 items-center justify-center transition hover:bg-owned/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset"
+                    >
+                      <Plus className="h-3 w-3" strokeWidth={2.5} aria-hidden />
+                    </button>
+                  </Tooltip>
                 </div>
               ) : (
-                <button
-                  type="button"
-                  onClick={() => toggleOwned(card.id)}
-                  data-action="owned"
-                  aria-pressed={false}
-                  aria-label={`Mark ${card.name} as owned`}
-                  title="Mark as owned"
-                  className="inline-flex h-7 min-w-7 items-center justify-center rounded-md border border-border bg-panel-2 px-1.5 text-muted transition hover:border-owned hover:text-owned focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-                >
-                  <Plus className="h-3.5 w-3.5" strokeWidth={2.5} aria-hidden />
-                </button>
+                <Tooltip content="Mark as owned">
+                  <button
+                    type="button"
+                    onClick={() => toggleOwned(card.id)}
+                    data-action="owned"
+                    aria-pressed={false}
+                    aria-label={`Mark ${card.name} as owned`}
+                    className="inline-flex h-7 min-w-7 items-center justify-center rounded-md border border-border bg-panel-2 px-1.5 text-muted transition hover:border-owned hover:text-owned focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                  >
+                    <Plus className="h-3.5 w-3.5" strokeWidth={2.5} aria-hidden />
+                  </button>
+                </Tooltip>
               ))}
               {!isGuest && (owned ? (
-                <button
-                  type="button"
-                  onClick={() => toggleFavorite(card.id)}
-                  data-action="favorite"
-                  className={[
-                    "inline-flex h-7 min-w-7 items-center justify-center rounded-md border px-1.5 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
-                    favorited
-                      ? "border-[#fcd34d]/70 bg-[#fcd34d]/15 text-[#fcd34d]"
-                      : "border-border bg-panel-2 text-muted hover:border-[#fcd34d] hover:text-[#fcd34d]",
-                  ].join(" ")}
-                  aria-pressed={favorited}
-                  aria-label="Toggle favorite"
-                  title={favorited ? "Favorited, click to remove" : "Mark as favorite"}
-                >
-                  <Star
-                    className="h-3.5 w-3.5"
-                    fill={favorited ? "currentColor" : "none"}
-                    strokeWidth={2}
-                    aria-hidden
-                  />
-                </button>
+                <Tooltip content={favorited ? "Favorited, click to remove" : "Mark as favorite"}>
+                  <button
+                    type="button"
+                    onClick={() => toggleFavorite(card.id)}
+                    data-action="favorite"
+                    className={[
+                      "inline-flex h-7 min-w-7 items-center justify-center rounded-md border px-1.5 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
+                      favorited
+                        ? "border-[#fcd34d]/70 bg-[#fcd34d]/15 text-[#fcd34d]"
+                        : "border-border bg-panel-2 text-muted hover:border-[#fcd34d] hover:text-[#fcd34d]",
+                    ].join(" ")}
+                    aria-pressed={favorited}
+                    aria-label="Toggle favorite"
+                  >
+                    <Star
+                      className="h-3.5 w-3.5"
+                      fill={favorited ? "currentColor" : "none"}
+                      strokeWidth={2}
+                      aria-hidden
+                    />
+                  </button>
+                </Tooltip>
               ) : (
-                <button
-                  type="button"
-                  onClick={() => toggleWishlist(card.id)}
-                  data-action="wishlist"
-                  className={[
-                    "inline-flex h-7 min-w-7 items-center justify-center rounded-md border px-1.5 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
-                    wishlisted
-                      ? "border-missing bg-missing/20 text-missing"
-                      : "border-border bg-panel-2 text-muted hover:border-missing hover:text-missing",
-                  ].join(" ")}
-                  aria-pressed={wishlisted}
-                  aria-label="Toggle wishlist"
-                  title={wishlisted ? "Wishlisted, click to remove" : "Add to wishlist"}
-                >
-                  <Heart
-                    className="h-3.5 w-3.5"
-                    fill={wishlisted ? "currentColor" : "none"}
-                    strokeWidth={2}
-                    aria-hidden
-                  />
-                </button>
+                <Tooltip content={wishlisted ? "Wishlisted, click to remove" : "Add to wishlist"}>
+                  <button
+                    type="button"
+                    onClick={() => toggleWishlist(card.id)}
+                    data-action="wishlist"
+                    className={[
+                      "inline-flex h-7 min-w-7 items-center justify-center rounded-md border px-1.5 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
+                      wishlisted
+                        ? "border-missing bg-missing/20 text-missing"
+                        : "border-border bg-panel-2 text-muted hover:border-missing hover:text-missing",
+                    ].join(" ")}
+                    aria-pressed={wishlisted}
+                    aria-label="Toggle wishlist"
+                  >
+                    <Heart
+                      className="h-3.5 w-3.5"
+                      fill={wishlisted ? "currentColor" : "none"}
+                      strokeWidth={2}
+                      aria-hidden
+                    />
+                  </button>
+                </Tooltip>
               ))}
               {detailsHref && !hideDetailsLink && (
-                <Link
-                  href={detailsHref}
-                  className="inline-flex h-7 min-w-7 items-center justify-center rounded-md border border-border bg-panel-2 px-1.5 text-muted transition hover:border-accent hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-                  aria-label="Pokémon details"
-                  title="See Pokémon details"
-                >
-                  <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
-                </Link>
+                <Tooltip content="See Pokémon details">
+                  <Link
+                    href={detailsHref}
+                    className="inline-flex h-7 min-w-7 items-center justify-center rounded-md border border-border bg-panel-2 px-1.5 text-muted transition hover:border-accent hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                    aria-label="Pokémon details"
+                  >
+                    <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
+                  </Link>
+                </Tooltip>
               )}
             </div>
           )}

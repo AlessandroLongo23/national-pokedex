@@ -10,6 +10,7 @@ import {
   type SinglePurchaseEdit,
 } from "./LogSingleModal";
 import { LogSaleModal, type SingleSaleEdit } from "./LogSaleModal";
+import { Tooltip } from "../../_components/Tooltip";
 
 interface CardInfo {
   id: string;
@@ -59,40 +60,43 @@ export function LedgerRowActions(props: Props) {
   const { quantityOf } = useOwnedCards();
 
   const button = (onClick?: () => void) => (
-    <button
-      type="button"
-      onClick={onClick}
-      className="inline-flex h-7 w-7 items-center justify-center rounded-md text-muted transition hover:bg-panel-2 hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-      aria-label="Edit transaction"
-      title="Edit"
-    >
-      <Pencil className="h-3.5 w-3.5" aria-hidden />
-    </button>
+    <Tooltip content="Edit">
+      <button
+        type="button"
+        onClick={onClick}
+        className="inline-flex h-7 w-7 items-center justify-center rounded-md text-muted transition hover:bg-panel-2 hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+        aria-label="Edit transaction"
+      >
+        <Pencil className="h-3.5 w-3.5" aria-hidden />
+      </button>
+    </Tooltip>
   );
 
   if (props.kind === "pack_purchase") {
     return (
-      <Link
-        href={`/packs/${props.packId}/edit`}
-        className="inline-flex h-7 w-7 items-center justify-center rounded-md text-muted transition hover:bg-panel-2 hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-        aria-label="Edit pack"
-        title="Edit pack"
-      >
-        <Pencil className="h-3.5 w-3.5" aria-hidden />
-      </Link>
+      <Tooltip content="Edit pack">
+        <Link
+          href={`/packs/${props.packId}/edit`}
+          className="inline-flex h-7 w-7 items-center justify-center rounded-md text-muted transition hover:bg-panel-2 hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+          aria-label="Edit pack"
+        >
+          <Pencil className="h-3.5 w-3.5" aria-hidden />
+        </Link>
+      </Tooltip>
     );
   }
 
   if (props.kind === "psa_fee") {
     return (
-      <Link
-        href={`/transactions/psa/${props.psaSubmissionId}`}
-        className="inline-flex h-7 w-7 items-center justify-center rounded-md text-muted transition hover:bg-panel-2 hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-        aria-label="Edit submission"
-        title="Edit submission"
-      >
-        <Pencil className="h-3.5 w-3.5" aria-hidden />
-      </Link>
+      <Tooltip content="Edit submission">
+        <Link
+          href={`/transactions/psa/${props.psaSubmissionId}`}
+          className="inline-flex h-7 w-7 items-center justify-center rounded-md text-muted transition hover:bg-panel-2 hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+          aria-label="Edit submission"
+        >
+          <Pencil className="h-3.5 w-3.5" aria-hidden />
+        </Link>
+      </Tooltip>
     );
   }
 

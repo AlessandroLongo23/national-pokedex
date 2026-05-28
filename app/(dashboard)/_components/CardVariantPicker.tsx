@@ -10,6 +10,7 @@ import type { CardEntry, Rarity } from "@/lib/data/types";
 import { RARITY_LABEL } from "@/lib/data/types";
 import { useOwnedCards } from "../_lib/OwnedCardsContext";
 import { useWishlist } from "../_lib/WishlistContext";
+import { Tooltip } from "./Tooltip";
 import { useUser } from "../_lib/UserContext";
 import { SeriesBadge } from "./SeriesBadge";
 
@@ -162,26 +163,27 @@ function VariantRow({ card }: { card: CardEntry }) {
         </div>
       </div>
       {!isGuest && (
-        <button
-          type="button"
-          onClick={() => toggleWishlist(card.id)}
-          className={[
-            "inline-flex shrink-0 items-center justify-center rounded-md border px-2 py-1.5 transition",
-            wishlisted
-              ? "border-accent bg-accent/15 text-accent"
-              : "border-border text-muted hover:border-accent hover:text-accent",
-          ].join(" ")}
-          title={wishlisted ? "Wishlisted" : "Add to wishlist"}
-          aria-pressed={wishlisted}
-          aria-label="Toggle wishlist"
-        >
-          <Heart
-            className="h-3.5 w-3.5"
-            fill={wishlisted ? "currentColor" : "none"}
-            strokeWidth={2}
-            aria-hidden
-          />
-        </button>
+        <Tooltip content={wishlisted ? "Wishlisted" : "Add to wishlist"}>
+          <button
+            type="button"
+            onClick={() => toggleWishlist(card.id)}
+            className={[
+              "inline-flex shrink-0 items-center justify-center rounded-md border px-2 py-1.5 transition",
+              wishlisted
+                ? "border-accent bg-accent/15 text-accent"
+                : "border-border text-muted hover:border-accent hover:text-accent",
+            ].join(" ")}
+            aria-pressed={wishlisted}
+            aria-label="Toggle wishlist"
+          >
+            <Heart
+              className="h-3.5 w-3.5"
+              fill={wishlisted ? "currentColor" : "none"}
+              strokeWidth={2}
+              aria-hidden
+            />
+          </button>
+        </Tooltip>
       )}
       {!isGuest && (owned ? (
         <div
@@ -189,32 +191,34 @@ function VariantRow({ card }: { card: CardEntry }) {
           role="group"
           aria-label={`Owned — ${quantity} ${quantity === 1 ? "copy" : "copies"}`}
         >
-          <button
-            type="button"
-            onClick={() => adjustOwned(card.id, -1)}
-            aria-label={
-              quantity > 1
-                ? `Decrease ${card.name} quantity`
-                : `Mark ${card.name} as not owned`
-            }
-            title={quantity > 1 ? "One fewer copy" : "Remove from collection"}
-            className="inline-flex items-center justify-center px-2 transition hover:bg-owned/25"
-          >
-            <Minus className="h-3 w-3" strokeWidth={2.5} aria-hidden />
-          </button>
+          <Tooltip content={quantity > 1 ? "One fewer copy" : "Remove from collection"}>
+            <button
+              type="button"
+              onClick={() => adjustOwned(card.id, -1)}
+              aria-label={
+                quantity > 1
+                  ? `Decrease ${card.name} quantity`
+                  : `Mark ${card.name} as not owned`
+              }
+              className="inline-flex items-center justify-center px-2 transition hover:bg-owned/25"
+            >
+              <Minus className="h-3 w-3" strokeWidth={2.5} aria-hidden />
+            </button>
+          </Tooltip>
           <span className="inline-flex items-center gap-1 border-x border-owned/40 bg-owned/10 px-2 text-xs font-semibold tabular-nums">
             <Check className="h-3.5 w-3.5" strokeWidth={3} aria-hidden />
             <span>×{quantity}</span>
           </span>
-          <button
-            type="button"
-            onClick={() => adjustOwned(card.id, +1)}
-            aria-label={`Add another copy of ${card.name}`}
-            title="One more copy"
-            className="inline-flex items-center justify-center px-2 transition hover:bg-owned/25"
-          >
-            <Plus className="h-3 w-3" strokeWidth={2.5} aria-hidden />
-          </button>
+          <Tooltip content="One more copy">
+            <button
+              type="button"
+              onClick={() => adjustOwned(card.id, +1)}
+              aria-label={`Add another copy of ${card.name}`}
+              className="inline-flex items-center justify-center px-2 transition hover:bg-owned/25"
+            >
+              <Plus className="h-3 w-3" strokeWidth={2.5} aria-hidden />
+            </button>
+          </Tooltip>
         </div>
       ) : (
         <button

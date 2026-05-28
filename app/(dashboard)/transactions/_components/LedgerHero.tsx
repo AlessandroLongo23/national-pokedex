@@ -2,7 +2,6 @@ import Link from "next/link";
 import { formatMoneyCents, type LedgerCurrency } from "@/lib/ledger/money";
 import type { LedgerKpis } from "@/lib/ledger/aggregates";
 import {
-  PRICE_SOURCE_CURRENCY,
   PRICE_SOURCE_LABEL,
   type PriceSource,
 } from "@/lib/pricing/pokemontcg";
@@ -19,6 +18,11 @@ interface Props {
 // The supporting numbers (spent, earned, held) sit below in a quieter row,
 // matching the PortfolioHero rhythm where one number dominates and the
 // rest flow beneath as compact prose.
+//
+// All values arrive pre-converted into displayCurrency by the page's
+// computeKpis call, so this component just formats — no MoneyDisplay
+// tooltips needed here; the per-row tooltips in LedgerTable expose the
+// original amounts.
 export function LedgerHero({
   kpis,
   heldValueCents,
@@ -27,7 +31,6 @@ export function LedgerHero({
   priceSource,
 }: Props) {
   const ahead = netPositionCents >= 0;
-  const currencyMismatch = PRICE_SOURCE_CURRENCY[priceSource] !== displayCurrency;
 
   return (
     <section className="border-y border-border py-6">
@@ -69,20 +72,6 @@ export function LedgerHero({
           <Stat label="Held" value={formatMoneyCents(heldValueCents, displayCurrency)} />
         </dl>
       </div>
-
-      {kpis.excludedCount > 0 && (
-        <p className="mt-4 text-[11px] text-muted">
-          {kpis.excludedCount.toLocaleString()}{" "}
-          {kpis.excludedCount === 1 ? "transaction" : "transactions"} in another currency
-          excluded from totals.
-        </p>
-      )}
-      {currencyMismatch && (
-        <p className="mt-1 text-[11px] text-muted">
-          Held value priced in {PRICE_SOURCE_CURRENCY[priceSource]}; ledger totals in{" "}
-          {displayCurrency}.
-        </p>
-      )}
     </section>
   );
 }

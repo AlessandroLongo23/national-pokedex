@@ -5,6 +5,7 @@ import type { CumulativePoint } from "@/lib/data/cumulative-acquisitions";
 import type { ValuePoint } from "@/lib/data/cumulative-value";
 import {
   formatPriceCompact,
+  type DisplayConversion,
   type PriceSource,
 } from "@/lib/pricing/pokemontcg";
 import { TrendChart, type TrendPoint } from "./TrendChart";
@@ -13,6 +14,7 @@ interface Props {
   countPoints: CumulativePoint[];
   valuePoints: ValuePoint[];
   priceSource: PriceSource;
+  display: DisplayConversion;
 }
 
 // Build the day-by-day series each chart needs from its raw cumulative
@@ -71,6 +73,7 @@ export function TrendsSection({
   countPoints,
   valuePoints,
   priceSource,
+  display,
 }: Props) {
   const [hoveredDate, setHoveredDate] = useState<string | null>(null);
 
@@ -142,7 +145,7 @@ export function TrendsSection({
               <div>
                 <p className="eyebrow">Held value</p>
                 <p className="mt-1 text-2xl font-semibold tabular-nums">
-                  {formatPriceCompact(lastValue, priceSource)}
+                  {formatPriceCompact(lastValue, priceSource, display)}
                 </p>
               </div>
               <p className="text-[11px] text-muted tabular-nums">
@@ -155,7 +158,7 @@ export function TrendsSection({
               onHoverDate={setHoveredDate}
               color="owned"
               formatValue={(n) => formatPriceCompact(n, priceSource)}
-              ariaLabel={`Held value over time: ${formatPriceCompact(lastValue, priceSource)} as of ${data.end}`}
+              ariaLabel={`Held value over time: ${formatPriceCompact(lastValue, priceSource, display)} as of ${data.end}`}
             />
           </div>
         )}

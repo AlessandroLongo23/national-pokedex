@@ -1,6 +1,8 @@
 import Link from "next/link";
-import { formatMoneyCents, type LedgerCurrency } from "@/lib/ledger/money";
+import { type LedgerCurrency } from "@/lib/ledger/money";
 import type { LedgerRow, TransactionKind } from "@/lib/ledger/aggregates";
+import type { Currency } from "@/lib/pricing/currencies";
+import { MoneyDisplay } from "../../_components/MoneyDisplay";
 import { LedgerRowActions } from "./LedgerRowActions";
 
 export interface LedgerTableCardInfo {
@@ -20,7 +22,13 @@ export interface LedgerTableRow extends LedgerRow {
 
 interface Props {
   rows: LedgerTableRow[];
+  // Currency to default the edit modals' inputs to. Equal to
+  // displayCurrency in normal usage but kept as a separate prop so the
+  // ActionsBar / row edit modals can be threaded the same value the
+  // user picked in settings.
   defaultCurrency: LedgerCurrency;
+  displayCurrency: Currency;
+  latestRatesFromEur: Record<Currency, number>;
 }
 
 const KIND_LABEL: Record<TransactionKind, string> = {
@@ -30,7 +38,12 @@ const KIND_LABEL: Record<TransactionKind, string> = {
   psa_fee: "PSA",
 };
 
-export function LedgerTable({ rows, defaultCurrency }: Props) {
+export function LedgerTable({
+  rows,
+  defaultCurrency,
+  displayCurrency,
+  latestRatesFromEur,
+}: Props) {
   if (rows.length === 0) {
     return (
       <div className="rounded-lg border border-dashed border-border bg-panel p-12 text-center">
@@ -64,7 +77,13 @@ export function LedgerTable({ rows, defaultCurrency }: Props) {
         </thead>
         <tbody>
           {rows.map((r) => (
-            <Row key={r.id} row={r} defaultCurrency={defaultCurrency} />
+            <Row
+              key={r.id}
+              row={r}
+              defaultCurrency={defaultCurrency}
+              displayCurrency={displayCurrency}
+              latestRatesFromEur={latestRatesFromEur}
+            />
           ))}
         </tbody>
       </table>
@@ -75,9 +94,13 @@ export function LedgerTable({ rows, defaultCurrency }: Props) {
 function Row({
   row,
   defaultCurrency,
+  displayCurrency,
+  latestRatesFromEur,
 }: {
   row: LedgerTableRow;
   defaultCurrency: LedgerCurrency;
+  displayCurrency: Currency;
+  latestRatesFromEur: Record<Currency, number>;
 }) {
   const positive = row.amountCents >= 0;
   return (
@@ -98,7 +121,14 @@ function Row({
         ].join(" ")}
       >
         {positive ? "+" : "−"}
-        {formatMoneyCents(Math.abs(row.amountCents), row.currency)}
+        <MoneyDisplay
+          cents={Math.abs(row.amountCents)}
+          currency={row.currency}
+          rateToEur={row.rateToEur}
+          asOf={row.occurredAt}
+          displayCurrency={displayCurrency}
+          latestRatesFromEur={latestRatesFromEur}
+        />
       </td>
       <td className="px-2 py-2.5">
         <RowActions row={row} defaultCurrency={defaultCurrency} />

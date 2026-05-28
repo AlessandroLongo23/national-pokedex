@@ -7,6 +7,7 @@ import {
   formatPriceCompact,
   pickPrice,
   type CardPrice,
+  type DisplayConversion,
   type PriceSource,
 } from "@/lib/pricing/pokemontcg";
 
@@ -14,12 +15,13 @@ interface Props {
   cards: CardEntry[];
   prices: Record<string, CardPrice>;
   priceSource: PriceSource;
+  display: DisplayConversion;
 }
 
 // Compact, scannable strip — narrower tiles than CardRail (w-24 vs w-32)
 // so more pulls fit above the fold, with each tile annotated by price
 // and set code.
-export function RecentPullsStrip({ cards, prices, priceSource }: Props) {
+export function RecentPullsStrip({ cards, prices, priceSource, display }: Props) {
   return (
     <section className="space-y-3" data-rail="recent-pack-pulls">
       <header className="flex items-baseline justify-between gap-3">
@@ -73,7 +75,7 @@ export function RecentPullsStrip({ cards, prices, priceSource }: Props) {
                     {card.setId}
                   </span>
                   <span className={price != null ? "font-medium text-text" : "text-muted"}>
-                    {price != null ? formatPriceCompact(price, priceSource) : "—"}
+                    {price != null ? formatPriceCompact(price, priceSource, display) : "—"}
                   </span>
                 </div>
               </Link>
