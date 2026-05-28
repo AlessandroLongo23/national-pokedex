@@ -12,6 +12,7 @@ import { isCurrency, type Currency } from "@/lib/pricing/currencies";
 import { getRateToEurToday } from "@/lib/pricing/exchange-rates";
 import { requireUserId } from "../../_lib/current-user";
 import { loadUserPreferences } from "../../_lib/user-preferences";
+import { CARD_VARIANTS, type CardVariant } from "./variants";
 
 // Cap matches the pack-cost guard in pack-actions.ts: $1,000,000 in cents.
 // More than enough for any singles purchase that doesn't involve a vintage
@@ -21,6 +22,8 @@ const MAX_COST_CENTS = 1_000_000_00;
 
 const currencyField = z.string().refine(isCurrency, "unsupported currency");
 
+const variantField = z.enum(CARD_VARIANTS).nullable().optional();
+
 const logSinglePurchaseSchema = z.object({
   cardId: z.string().min(1).max(64),
   quantity: z.number().int().min(1).max(100),
@@ -28,6 +31,7 @@ const logSinglePurchaseSchema = z.object({
   currency: currencyField,
   occurredAt: z.string().datetime(),
   note: z.string().max(500).optional(),
+  variant: variantField,
 });
 
 const editSinglePurchaseSchema = z.object({
@@ -37,6 +41,7 @@ const editSinglePurchaseSchema = z.object({
   currency: currencyField,
   occurredAt: z.string().datetime(),
   note: z.string().max(500).optional(),
+  variant: variantField,
 });
 
 const editSingleSaleSchema = z.object({
@@ -46,6 +51,7 @@ const editSingleSaleSchema = z.object({
   currency: currencyField,
   occurredAt: z.string().datetime(),
   note: z.string().max(500).optional(),
+  variant: variantField,
 });
 
 const logSingleSaleSchema = z.object({
@@ -55,6 +61,7 @@ const logSingleSaleSchema = z.object({
   currency: currencyField,
   occurredAt: z.string().datetime(),
   note: z.string().max(500).optional(),
+  variant: variantField,
 });
 
 export interface LogSinglePurchaseInput {
@@ -64,6 +71,7 @@ export interface LogSinglePurchaseInput {
   currency: Currency;
   occurredAt: string;
   note?: string;
+  variant?: CardVariant | null;
 }
 
 export interface EditSinglePurchaseInput {
@@ -73,6 +81,7 @@ export interface EditSinglePurchaseInput {
   currency: Currency;
   occurredAt: string;
   note?: string;
+  variant?: CardVariant | null;
 }
 
 export interface EditSingleSaleInput {
@@ -82,6 +91,7 @@ export interface EditSingleSaleInput {
   currency: Currency;
   occurredAt: string;
   note?: string;
+  variant?: CardVariant | null;
 }
 
 export interface LogSingleSaleInput {
@@ -91,6 +101,7 @@ export interface LogSingleSaleInput {
   currency: Currency;
   occurredAt: string;
   note?: string;
+  variant?: CardVariant | null;
 }
 
 // Records a singles purchase atomically via the log_single_purchase RPC:
@@ -117,6 +128,7 @@ export async function logSinglePurchase(
     _occurred_at: parsed.occurredAt,
     _note: parsed.note ?? null,
     _rate_to_eur: rateToEur,
+    _variant: parsed.variant ?? null,
   });
   if (error) throw new Error(`Failed to log purchase: ${error.message}`);
 
@@ -323,6 +335,7 @@ export async function logSingleSale(
     _occurred_at: parsed.occurredAt,
     _note: parsed.note ?? null,
     _rate_to_eur: rateToEur,
+    _variant: parsed.variant ?? null,
   });
   if (error) throw new Error(`Failed to log sale: ${error.message}`);
 
@@ -352,6 +365,7 @@ export async function editSinglePurchase(input: EditSinglePurchaseInput): Promis
     _occurred_at: parsed.occurredAt,
     _note: parsed.note ?? null,
     _rate_to_eur: rateToEur,
+    _variant: parsed.variant ?? null,
   });
   if (error) throw new Error(`Failed to update purchase: ${error.message}`);
 
@@ -390,6 +404,7 @@ export async function editSingleSale(input: EditSingleSaleInput): Promise<void> 
     _occurred_at: parsed.occurredAt,
     _note: parsed.note ?? null,
     _rate_to_eur: rateToEur,
+    _variant: parsed.variant ?? null,
   });
   if (error) throw new Error(`Failed to update sale: ${error.message}`);
 
@@ -406,6 +421,37 @@ export async function deleteSingleSale(transactionId: string): Promise<void> {
   const { error } = await supabase.rpc("delete_single_sale", { _txn_id: parsed });
   if (error) throw new Error(`Failed to delete sale: ${error.message}`);
 
+  revalidatePath("/transactions");
+  revalidatePath("/portfolio");
+  revalidatePath("/collection");
+}
+
+const deleteTransactionsBatchSchema = z.object({
+  items: z
+    .array(
+      z.object({
+        id: z.string().uuid(),
+        kind: z.enum(["single_purchase", "sale"]),
+      }),
+    )
+    .min(1)
+    .max(200),
+});
+
+// Pack and PSA rows route to their dedicated editors; bulk delete
+// intentionally doesn't touch them, matching the per-row Edit affordance.
+export async function deleteTransactionsBatch(
+  items: Array<{ id: string; kind: "single_purchase" | "sale" }>,
+): Promise<void> {
+  const parsed = deleteTransactionsBatchSchema.parse({ items });
+  await requireUserId();
+  const supabase = await getSupabaseServer();
+  for (const { id, kind } of parsed.items) {
+    const rpc =
+      kind === "single_purchase" ? "delete_single_purchase" : "delete_single_sale";
+    const { error } = await supabase.rpc(rpc, { _txn_id: id });
+    if (error) throw new Error(`Failed to delete ${kind} ${id}: ${error.message}`);
+  }
   revalidatePath("/transactions");
   revalidatePath("/portfolio");
   revalidatePath("/collection");

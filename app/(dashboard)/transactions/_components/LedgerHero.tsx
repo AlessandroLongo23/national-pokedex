@@ -2,7 +2,8 @@ import Link from "next/link";
 import { formatMoneyCents, type LedgerCurrency } from "@/lib/ledger/money";
 import type { LedgerKpis } from "@/lib/ledger/aggregates";
 import {
-  PRICE_SOURCE_LABEL,
+  PRICE_SOURCE_CURRENCY,
+  PRICE_SOURCE_NAME,
   type PriceSource,
 } from "@/lib/pricing/pokemontcg";
 
@@ -31,12 +32,13 @@ export function LedgerHero({
   priceSource,
 }: Props) {
   const ahead = netPositionCents >= 0;
+  const sourceNative = PRICE_SOURCE_CURRENCY[priceSource];
 
   return (
     <section className="border-y border-border py-6">
       <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div className="space-y-1.5">
-          <p className="eyebrow">Net position</p>
+          <p className="text-[11px] uppercase tracking-wider text-muted">Net position</p>
           <p
             className={[
               "text-4xl font-semibold tracking-tight tabular-nums md:text-5xl",
@@ -48,12 +50,17 @@ export function LedgerHero({
             {formatMoneyCents(Math.abs(netPositionCents), displayCurrency)}
           </p>
           <p className="text-xs text-muted">
-            held value − net spent · {displayCurrency} via{" "}
+            held − spent + earned · {displayCurrency} via{" "}
             <Link
               href="/settings"
+              title={
+                sourceNative !== displayCurrency
+                  ? `Prices sourced in ${sourceNative}, shown in ${displayCurrency}`
+                  : undefined
+              }
               className="underline decoration-border-strong underline-offset-2 hover:text-text"
             >
-              {PRICE_SOURCE_LABEL[priceSource]}
+              {PRICE_SOURCE_NAME[priceSource]}
             </Link>
           </p>
         </div>

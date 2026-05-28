@@ -22,13 +22,14 @@ import { PageHeader } from "../_components/PageHeader";
 import { requireUserId } from "../_lib/current-user";
 import { loadUserPreferences } from "../_lib/user-preferences";
 import { ActionsBar } from "./_components/ActionsBar";
+import { LedgerControls } from "./_components/LedgerControls";
 import { LedgerHero } from "./_components/LedgerHero";
 import { LedgerRealtime } from "./_components/LedgerRealtime";
 import {
-  LedgerTable,
   type LedgerTableCardInfo,
   type LedgerTableRow,
 } from "./_components/LedgerTable";
+import { isCardVariant } from "./_lib/variants";
 
 function isTransactionKind(value: unknown): value is TransactionKind {
   return TRANSACTION_KINDS.includes(value as TransactionKind);
@@ -45,7 +46,7 @@ export default async function TransactionsPage() {
     supabase
       .from("transactions")
       .select(
-        "id, kind, occurred_at, amount_cents, currency, rate_to_eur, pack_id, card_id, quantity, note, psa_submission_id, packs_opened(set_id)",
+        "id, kind, occurred_at, amount_cents, currency, rate_to_eur, pack_id, card_id, quantity, note, variant, psa_submission_id, packs_opened(set_id)",
       )
       .eq("user_id", userId)
       .order("occurred_at", { ascending: false }),
@@ -138,6 +139,7 @@ export default async function TransactionsPage() {
     card_id: string | null;
     quantity: number | null;
     note: string | null;
+    variant: string | null;
     psa_submission_id: string | null;
     packs_opened: { set_id: string | null } | { set_id: string | null }[] | null;
   }>;
@@ -169,6 +171,7 @@ export default async function TransactionsPage() {
       psaCardCount: r.psa_submission_id
         ? psaCardCountById.get(r.psa_submission_id) ?? 0
         : null,
+      variant: isCardVariant(r.variant) ? r.variant : null,
     });
   }
 
@@ -194,7 +197,7 @@ export default async function TransactionsPage() {
       </div>
 
       <div className="mt-4">
-        <LedgerTable
+        <LedgerControls
           rows={tableRows}
           defaultCurrency={displayCurrency}
           displayCurrency={displayCurrency}

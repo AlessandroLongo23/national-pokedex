@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, useTransition } from "react";
+import { useEffect, useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { Trash2, X } from "lucide-react";
 import {
@@ -15,6 +15,8 @@ import {
   editSinglePurchase,
   logSinglePurchase,
 } from "../_lib/transaction-actions";
+import { CARD_VARIANTS, type CardVariant } from "../_lib/variants";
+import { CardPicker } from "./CardPicker";
 
 interface CardResult {
   id: string;
@@ -32,12 +34,17 @@ export interface SinglePurchaseEdit {
   currency: LedgerCurrency;
   occurredAt: string;
   note: string | null;
+  variant: CardVariant | null;
 }
 
 interface Props {
   open: boolean;
   onClose: () => void;
   defaultCurrency: LedgerCurrency;
+  /** Pre-selected card; when provided, the search step is skipped and
+   *  the card is locked (no Change affordance). Mirrors LogSaleModal's
+   *  preset pattern — used by the card detail page's Buy button. */
+  presetCard?: CardResult;
   /** When set, the modal pre-fills from this row and saves via
    *  editSinglePurchase instead of logSinglePurchase. The card is
    *  locked — you can't change which card a transaction is for. */
@@ -63,13 +70,23 @@ function localToIso(value: string): string | null {
   return d.toISOString();
 }
 
-export function LogSingleModal({ open, onClose, defaultCurrency, editing }: Props) {
+const VARIANT_LABEL: Record<CardVariant, string> = {
+  normal: "Normal",
+  holofoil: "Holo",
+  reverseHolofoil: "Reverse Holo",
+};
+
+export function LogSingleModal({
+  open,
+  onClose,
+  defaultCurrency,
+  presetCard,
+  editing,
+}: Props) {
   const router = useRouter();
   const isEditing = !!editing;
-  const [query, setQuery] = useState("");
-  const [results, setResults] = useState<CardResult[]>([]);
-  const [searching, setSearching] = useState(false);
-  const [selected, setSelected] = useState<CardResult | null>(editing?.card ?? null);
+  const initialCard = editing?.card ?? presetCard ?? null;
+  const [selected, setSelected] = useState<CardResult | null>(initialCard);
   const [quantity, setQuantity] = useState(editing?.quantity ?? 1);
   const [costDraft, setCostDraft] = useState(
     editing != null ? (editing.unitCostCents / 100).toFixed(2) : "",
@@ -82,18 +99,16 @@ export function LogSingleModal({ open, onClose, defaultCurrency, editing }: Prop
   );
   const [confirmingDelete, setConfirmingDelete] = useState(false);
   const [note, setNote] = useState(editing?.note ?? "");
+  const [variant, setVariant] = useState<CardVariant>(
+    editing?.variant ?? "normal",
+  );
   const [pending, start] = useTransition();
   const [error, setError] = useState<string | null>(null);
 
-  const searchInputRef = useRef<HTMLInputElement>(null);
-
-  // Reset everything when the modal opens so a previous failed/cancelled
-  // attempt doesn't leak into the next one. When `editing` is set we
-  // rehydrate the form from the row instead.
+  // Reset on open so a previous attempt doesn't bleed into the next one.
+  // When `editing` is set we rehydrate the form from the row.
   useEffect(() => {
     if (!open) return;
-    setQuery("");
-    setResults([]);
     setConfirmingDelete(false);
     setError(null);
     if (editing) {
@@ -103,21 +118,17 @@ export function LogSingleModal({ open, onClose, defaultCurrency, editing }: Prop
       setCurrency(editing.currency);
       setOccurredAtLocal(isoToLocalInput(editing.occurredAt));
       setNote(editing.note ?? "");
+      setVariant(editing.variant ?? "normal");
     } else {
-      setSelected(null);
+      setSelected(presetCard ?? null);
       setQuantity(1);
       setCostDraft("");
       setCurrency(defaultCurrency);
       setOccurredAtLocal(nowLocalInput());
       setNote("");
+      setVariant("normal");
     }
-    // Wait a tick so the input is mounted before we try to focus it.
-    // Skip focus when editing — the card field is locked.
-    if (!editing) {
-      const t = setTimeout(() => searchInputRef.current?.focus(), 0);
-      return () => clearTimeout(t);
-    }
-  }, [open, defaultCurrency, editing]);
+  }, [open, defaultCurrency, presetCard, editing]);
 
   // Escape closes; click outside closes (handled on the backdrop).
   useEffect(() => {
@@ -129,42 +140,9 @@ export function LogSingleModal({ open, onClose, defaultCurrency, editing }: Prop
     return () => document.removeEventListener("keydown", onKey);
   }, [open, onClose]);
 
-  // Debounced card search. 200ms so a fast typer doesn't fire a request
-  // per keystroke, but slow enough not to feel laggy.
-  useEffect(() => {
-    if (!open) return;
-    if (selected) {
-      // Skip searching while a card is selected — clearing the selection
-      // unsticks the input.
-      return;
-    }
-    const trimmed = query.trim();
-    if (trimmed.length < 2) {
-      setResults([]);
-      setSearching(false);
-      return;
-    }
-    setSearching(true);
-    const handle = setTimeout(async () => {
-      try {
-        const res = await fetch(
-          `/api/cards/search?q=${encodeURIComponent(trimmed)}&limit=12`,
-          { cache: "no-store" },
-        );
-        if (!res.ok) throw new Error("search failed");
-        const data = (await res.json()) as { results: CardResult[] };
-        setResults(data.results);
-      } catch {
-        setResults([]);
-      } finally {
-        setSearching(false);
-      }
-    }, 200);
-    return () => clearTimeout(handle);
-  }, [query, selected, open]);
-
   if (!open) return null;
 
+  const cardLocked = !!presetCard || isEditing;
   const costCents = parseMoneyCents(costDraft);
   const canSubmit = !!selected && quantity > 0 && costCents != null;
   const totalCents = costCents != null ? costCents * quantity : null;
@@ -191,6 +169,7 @@ export function LogSingleModal({ open, onClose, defaultCurrency, editing }: Prop
             currency,
             occurredAt: iso,
             note: note.trim() || undefined,
+            variant,
           });
         } else {
           await logSinglePurchase({
@@ -200,6 +179,7 @@ export function LogSingleModal({ open, onClose, defaultCurrency, editing }: Prop
             currency,
             occurredAt: iso,
             note: note.trim() || undefined,
+            variant,
           });
         }
         onClose();
@@ -234,10 +214,14 @@ export function LogSingleModal({ open, onClose, defaultCurrency, editing }: Prop
       aria-modal="true"
       aria-label={isEditing ? "Edit singles purchase" : "Log a singles purchase"}
     >
-      <div className="w-full max-w-md rounded-xl border border-border-strong bg-panel p-5 shadow-[0_24px_60px_-20px_rgb(0_0_0/0.8)]">
+      <div className="w-full max-w-3xl rounded-xl border border-border-strong bg-panel p-5 shadow-[0_24px_60px_-20px_rgb(0_0_0/0.8)]">
         <div className="mb-4 flex items-center justify-between">
           <h2 className="text-base font-semibold tracking-tight text-text">
-            {isEditing ? "Edit singles purchase" : "Log a singles purchase"}
+            {isEditing
+              ? `Edit purchase of ${editing.card.name}`
+              : presetCard
+                ? `Buy ${presetCard.name}`
+                : "Log a singles purchase"}
           </h2>
           <button
             type="button"
@@ -249,147 +233,51 @@ export function LogSingleModal({ open, onClose, defaultCurrency, editing }: Prop
           </button>
         </div>
 
-        <div className="space-y-3">
-          <div>
+        {selected ? (
+          <PickedForm
+            selected={selected}
+            cardLocked={cardLocked}
+            onClearCard={() => setSelected(null)}
+            quantity={quantity}
+            setQuantity={setQuantity}
+            costDraft={costDraft}
+            setCostDraft={setCostDraft}
+            currency={currency}
+            setCurrency={setCurrency}
+            occurredAtLocal={occurredAtLocal}
+            setOccurredAtLocal={setOccurredAtLocal}
+            note={note}
+            setNote={setNote}
+            variant={variant}
+            setVariant={setVariant}
+            totalCents={totalCents}
+            error={error}
+            pending={pending}
+            canSubmit={canSubmit}
+            isEditing={isEditing}
+            confirmingDelete={confirmingDelete}
+            onConfirmDelete={() => setConfirmingDelete(true)}
+            onDelete={remove}
+            onCancel={onClose}
+            onSubmit={submit}
+          />
+        ) : (
+          <div className="space-y-3">
             <label className="eyebrow mb-1 block">Card</label>
-            {selected ? (
-              // When editing the card is locked — changing which card a
-              // transaction represents is "delete + recreate", not a tweak.
-              <SelectedCard
-                card={selected}
-                onClear={isEditing ? undefined : () => setSelected(null)}
-              />
-            ) : (
-              <CardSearch
-                ref={searchInputRef}
-                query={query}
-                onQueryChange={setQuery}
-                results={results}
-                searching={searching}
-                onPick={(c) => {
-                  setSelected(c);
-                  setQuery("");
-                  setResults([]);
-                }}
-              />
-            )}
-          </div>
-
-          <div className="grid grid-cols-2 gap-3">
-            <div>
-              <label className="eyebrow mb-1 block" htmlFor="qty">
-                Quantity
-              </label>
-              <input
-                id="qty"
-                type="number"
-                min={1}
-                max={100}
-                step={1}
-                value={quantity}
-                onChange={(e) => setQuantity(Math.max(1, Number(e.target.value) || 1))}
-                className="w-full rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-sm text-text focus:border-accent focus:outline-none"
-              />
-            </div>
-            <div>
-              <label className="eyebrow mb-1 block" htmlFor="cost">
-                Unit price
-              </label>
-              <div className="flex gap-2">
-                <select
-                  value={currency}
-                  onChange={(e) => {
-                    const v = e.target.value;
-                    if (isLedgerCurrency(v)) setCurrency(v);
-                  }}
-                  aria-label="Currency"
-                  className="rounded-md border border-border bg-panel-2 px-2 py-1.5 text-sm text-text focus:border-accent focus:outline-none [color-scheme:dark]"
-                >
-                  {SUPPORTED_CURRENCIES.map((c) => (
-                    <option key={c} value={c}>
-                      {c}
-                    </option>
-                  ))}
-                </select>
-                <input
-                  id="cost"
-                  type="text"
-                  inputMode="decimal"
-                  placeholder="0.00"
-                  value={costDraft}
-                  onChange={(e) => setCostDraft(e.target.value)}
-                  className="w-full rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-sm text-text focus:border-accent focus:outline-none"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <label className="eyebrow mb-1 block" htmlFor="when">
-              When
-            </label>
-            <input
-              id="when"
-              type="datetime-local"
-              value={occurredAtLocal}
-              onChange={(e) => setOccurredAtLocal(e.target.value)}
-              className="w-full rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-sm text-text focus:border-accent focus:outline-none [color-scheme:dark]"
+            <CardPicker
+              mode="single"
+              autoFocus
+              onPick={(c) =>
+                setSelected({
+                  id: c.id,
+                  name: c.name,
+                  setId: c.setId,
+                  number: c.number,
+                  imageSmall: c.imageSmall,
+                })
+              }
             />
-          </div>
-
-          <div>
-            <label className="eyebrow mb-1 block" htmlFor="note">
-              Note <span className="text-muted">(optional)</span>
-            </label>
-            <input
-              id="note"
-              type="text"
-              maxLength={500}
-              value={note}
-              onChange={(e) => setNote(e.target.value)}
-              placeholder="e.g. eBay, $4 shipping"
-              className="w-full rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-sm text-text focus:border-accent focus:outline-none"
-            />
-          </div>
-
-          {totalCents != null && quantity > 1 && (
-            <p className="text-xs text-muted">
-              Total ={" "}
-              <span className="font-semibold text-text tabular-nums">
-                {formatMoneyCents(totalCents, currency)}
-              </span>{" "}
-              for {quantity} copies
-            </p>
-          )}
-
-          {error && <p className="text-sm text-missing">{error}</p>}
-
-          <div className="flex items-center justify-between gap-2 pt-1">
-            {isEditing ? (
-              confirmingDelete ? (
-                <button
-                  type="button"
-                  onClick={remove}
-                  disabled={pending}
-                  className="inline-flex items-center gap-1.5 rounded-md border border-missing/70 bg-missing/15 px-3 py-1.5 text-xs font-semibold text-missing transition hover:bg-missing/25 disabled:opacity-50"
-                >
-                  <Trash2 className="h-3.5 w-3.5" aria-hidden />
-                  {pending ? "Deleting…" : "Confirm delete"}
-                </button>
-              ) : (
-                <button
-                  type="button"
-                  onClick={() => setConfirmingDelete(true)}
-                  className="inline-flex items-center gap-1.5 rounded-md border border-border bg-panel-2 px-3 py-1.5 text-xs text-muted transition hover:border-missing/60 hover:text-missing"
-                >
-                  <Trash2 className="h-3.5 w-3.5" aria-hidden />
-                  Delete
-                </button>
-              )
-            ) : (
-              <span />
-            )}
-            <div className="flex items-center gap-2">
+            <div className="flex justify-end gap-2 pt-1">
               <button
                 type="button"
                 onClick={onClose}
@@ -397,88 +285,276 @@ export function LogSingleModal({ open, onClose, defaultCurrency, editing }: Prop
               >
                 Cancel
               </button>
-              <button
-                type="button"
-                onClick={submit}
-                disabled={!canSubmit || pending}
-                className="rounded-md bg-accent px-4 py-1.5 text-xs font-semibold text-bg transition hover:opacity-90 disabled:opacity-40"
-              >
-                {pending
-                  ? "Saving…"
-                  : isEditing
-                    ? "Save changes"
-                    : "Log purchase"}
-              </button>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
 }
 
-const CardSearch = function CardSearch({
-  query,
-  onQueryChange,
-  results,
-  searching,
-  onPick,
-  ref,
-}: {
-  query: string;
-  onQueryChange: (q: string) => void;
-  results: CardResult[];
-  searching: boolean;
-  onPick: (c: CardResult) => void;
-  ref: React.RefObject<HTMLInputElement | null>;
-}) {
+interface PickedFormProps {
+  selected: CardResult;
+  cardLocked: boolean;
+  onClearCard: () => void;
+  quantity: number;
+  setQuantity: (n: number) => void;
+  costDraft: string;
+  setCostDraft: (s: string) => void;
+  currency: LedgerCurrency;
+  setCurrency: (c: LedgerCurrency) => void;
+  occurredAtLocal: string;
+  setOccurredAtLocal: (s: string) => void;
+  note: string;
+  setNote: (s: string) => void;
+  variant: CardVariant;
+  setVariant: (v: CardVariant) => void;
+  totalCents: number | null;
+  error: string | null;
+  pending: boolean;
+  canSubmit: boolean;
+  isEditing: boolean;
+  confirmingDelete: boolean;
+  onConfirmDelete: () => void;
+  onDelete: () => void;
+  onCancel: () => void;
+  onSubmit: () => void;
+}
+
+function PickedForm(props: PickedFormProps) {
+  const {
+    selected,
+    cardLocked,
+    onClearCard,
+    quantity,
+    setQuantity,
+    costDraft,
+    setCostDraft,
+    currency,
+    setCurrency,
+    occurredAtLocal,
+    setOccurredAtLocal,
+    note,
+    setNote,
+    variant,
+    setVariant,
+    totalCents,
+    error,
+    pending,
+    canSubmit,
+    isEditing,
+    confirmingDelete,
+    onConfirmDelete,
+    onDelete,
+    onCancel,
+    onSubmit,
+  } = props;
+
   return (
-    <div className="space-y-2">
-      <input
-        ref={ref}
-        type="search"
-        value={query}
-        onChange={(e) => onQueryChange(e.target.value)}
-        placeholder="Search by card name…"
-        className="w-full rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-sm text-text placeholder:text-muted focus:border-accent focus:outline-none"
-        aria-label="Search card"
-      />
-      {query.trim().length >= 2 && (
-        <div className="max-h-64 overflow-y-auto rounded-md border border-border bg-panel-2">
-          {searching && results.length === 0 ? (
-            <p className="p-3 text-xs text-muted">Searching…</p>
-          ) : results.length === 0 ? (
-            <p className="p-3 text-xs text-muted">No matches.</p>
-          ) : (
-            <ul>
-              {results.map((c) => (
-                <li key={c.id}>
-                  <button
-                    type="button"
-                    onClick={() => onPick(c)}
-                    className="flex w-full items-center gap-2.5 px-2.5 py-1.5 text-left text-sm transition hover:bg-panel"
-                  >
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={c.imageSmall}
-                      alt=""
-                      className="h-9 w-7 rounded-sm object-cover"
-                      loading="lazy"
-                    />
-                    <span className="min-w-0 flex-1 truncate">{c.name}</span>
-                    <span className="shrink-0 text-[11px] text-muted tabular-nums">
-                      {c.setId}-{c.number}
-                    </span>
-                  </button>
-                </li>
-              ))}
-            </ul>
-          )}
+    <div className="grid gap-4 md:grid-cols-[1fr_240px]">
+      <div className="space-y-3">
+        <div>
+          <label className="eyebrow mb-1 block">Card</label>
+          <SelectedCard
+            card={selected}
+            onClear={cardLocked ? undefined : onClearCard}
+          />
         </div>
-      )}
+
+        <VariantPicker variant={variant} setVariant={setVariant} />
+
+        <div className="grid grid-cols-2 gap-3">
+          <div>
+            <label className="eyebrow mb-1 block" htmlFor="qty">
+              Quantity
+            </label>
+            <input
+              id="qty"
+              type="number"
+              min={1}
+              max={100}
+              step={1}
+              value={quantity}
+              onChange={(e) =>
+                setQuantity(Math.max(1, Number(e.target.value) || 1))
+              }
+              className="w-full rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-sm text-text focus:border-accent focus:outline-none"
+            />
+          </div>
+          <div>
+            <label className="eyebrow mb-1 block" htmlFor="cost">
+              Unit price
+            </label>
+            <div className="flex gap-2">
+              <select
+                value={currency}
+                onChange={(e) => {
+                  const v = e.target.value;
+                  if (isLedgerCurrency(v)) setCurrency(v);
+                }}
+                aria-label="Currency"
+                className="rounded-md border border-border bg-panel-2 px-2 py-1.5 text-sm text-text focus:border-accent focus:outline-none [color-scheme:dark]"
+              >
+                {SUPPORTED_CURRENCIES.map((c) => (
+                  <option key={c} value={c}>
+                    {c}
+                  </option>
+                ))}
+              </select>
+              <input
+                id="cost"
+                type="text"
+                inputMode="decimal"
+                placeholder="0.00"
+                value={costDraft}
+                onChange={(e) => setCostDraft(e.target.value)}
+                className="w-full rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-sm text-text focus:border-accent focus:outline-none"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <label className="eyebrow mb-1 block" htmlFor="when">
+            When
+          </label>
+          <input
+            id="when"
+            type="datetime-local"
+            value={occurredAtLocal}
+            onChange={(e) => setOccurredAtLocal(e.target.value)}
+            className="w-full rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-sm text-text focus:border-accent focus:outline-none [color-scheme:dark]"
+          />
+        </div>
+
+        <div>
+          <label className="eyebrow mb-1 block" htmlFor="note">
+            Note <span className="text-muted">(optional)</span>
+          </label>
+          <input
+            id="note"
+            type="text"
+            maxLength={500}
+            value={note}
+            onChange={(e) => setNote(e.target.value)}
+            placeholder="e.g. eBay, $4 shipping"
+            className="w-full rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-sm text-text focus:border-accent focus:outline-none"
+          />
+        </div>
+
+        {totalCents != null && quantity > 1 && (
+          <p className="text-xs text-muted">
+            Total ={" "}
+            <span className="font-semibold text-text tabular-nums">
+              {formatMoneyCents(totalCents, currency)}
+            </span>{" "}
+            for {quantity} copies
+          </p>
+        )}
+
+        {error && <p className="text-sm text-missing">{error}</p>}
+
+        <div className="flex items-center justify-between gap-2 pt-1">
+          {isEditing ? (
+            confirmingDelete ? (
+              <button
+                type="button"
+                onClick={onDelete}
+                disabled={pending}
+                className="inline-flex items-center gap-1.5 rounded-md border border-missing/70 bg-missing/15 px-3 py-1.5 text-xs font-semibold text-missing transition hover:bg-missing/25 disabled:opacity-50"
+              >
+                <Trash2 className="h-3.5 w-3.5" aria-hidden />
+                {pending ? "Deleting…" : "Confirm delete"}
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={onConfirmDelete}
+                className="inline-flex items-center gap-1.5 rounded-md border border-border bg-panel-2 px-3 py-1.5 text-xs text-muted transition hover:border-missing/60 hover:text-missing"
+              >
+                <Trash2 className="h-3.5 w-3.5" aria-hidden />
+                Delete
+              </button>
+            )
+          ) : (
+            <span />
+          )}
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={onCancel}
+              className="rounded-md border border-border bg-panel-2 px-3 py-1.5 text-xs text-muted transition hover:text-text"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              onClick={onSubmit}
+              disabled={!canSubmit || pending}
+              className="rounded-md bg-accent px-4 py-1.5 text-xs font-semibold text-bg transition hover:opacity-90 disabled:opacity-40"
+            >
+              {pending
+                ? "Saving…"
+                : isEditing
+                  ? "Save changes"
+                  : "Log purchase"}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="hidden md:flex md:items-start md:justify-center">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={selected.imageSmall}
+          alt={selected.name}
+          className="w-full max-w-[220px] rounded-md object-contain shadow-[0_10px_30px_-10px_rgb(0_0_0/0.6)]"
+          loading="lazy"
+        />
+      </div>
     </div>
   );
-};
+}
+
+function VariantPicker({
+  variant,
+  setVariant,
+}: {
+  variant: CardVariant;
+  setVariant: (v: CardVariant) => void;
+}) {
+  return (
+    <div>
+      <label className="eyebrow mb-1 block">Printing</label>
+      <div
+        className="inline-flex rounded-md border border-border bg-panel-2 p-0.5"
+        role="radiogroup"
+        aria-label="Card printing"
+      >
+        {CARD_VARIANTS.map((v) => {
+          const selected = variant === v;
+          return (
+            <button
+              key={v}
+              type="button"
+              role="radio"
+              aria-checked={selected}
+              onClick={() => setVariant(v)}
+              className={[
+                "rounded px-2.5 py-1 text-xs font-medium transition",
+                selected
+                  ? "bg-accent text-bg"
+                  : "text-muted hover:text-text",
+              ].join(" ")}
+            >
+              {VARIANT_LABEL[v]}
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
 
 function SelectedCard({
   card,

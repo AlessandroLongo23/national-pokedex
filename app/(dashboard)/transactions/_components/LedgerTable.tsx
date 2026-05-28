@@ -1,9 +1,25 @@
+"use client";
+
 import Link from "next/link";
-import { type LedgerCurrency } from "@/lib/ledger/money";
+import { useEffect, useRef } from "react";
+import { formatMoneyCents, type LedgerCurrency } from "@/lib/ledger/money";
 import type { LedgerRow, TransactionKind } from "@/lib/ledger/aggregates";
 import type { Currency } from "@/lib/pricing/currencies";
+import { convertCents } from "@/lib/pricing/exchange-rates";
 import { MoneyDisplay } from "../../_components/MoneyDisplay";
+import type { CardVariant } from "../_lib/variants";
 import { LedgerRowActions } from "./LedgerRowActions";
+
+export type SelectableKind = "single_purchase" | "sale";
+
+export interface SelectableRow {
+  id: string;
+  kind: SelectableKind;
+}
+
+function isSelectableKind(kind: TransactionKind): kind is SelectableKind {
+  return kind === "single_purchase" || kind === "sale";
+}
 
 export interface LedgerTableCardInfo {
   id: string;
@@ -18,6 +34,7 @@ export interface LedgerTableRow extends LedgerRow {
   card: LedgerTableCardInfo | null;
   psaSubmissionId: string | null;
   psaCardCount: number | null;
+  variant: CardVariant | null;
 }
 
 interface Props {
@@ -29,6 +46,10 @@ interface Props {
   defaultCurrency: LedgerCurrency;
   displayCurrency: Currency;
   latestRatesFromEur: Record<Currency, number>;
+  selectedIds: ReadonlySet<string>;
+  pendingDeleteIds: ReadonlySet<string>;
+  onToggleSelected: (id: string, kind: SelectableKind) => void;
+  onSelectVisible: (rows: SelectableRow[]) => void;
 }
 
 const KIND_LABEL: Record<TransactionKind, string> = {
@@ -38,34 +59,75 @@ const KIND_LABEL: Record<TransactionKind, string> = {
   psa_fee: "PSA",
 };
 
+// Variant labels rendered inline next to non-normal singles. Normal is
+// the default-and-implicit case so it gets no label, keeping the most
+// common variant visually quiet.
+const VARIANT_CHIP_LABEL: Partial<Record<CardVariant, string>> = {
+  holofoil: "Holo",
+  reverseHolofoil: "Reverse",
+};
+
+interface DayGroup {
+  key: string;
+  date: Date;
+  rows: LedgerTableRow[];
+  dominantKind: TransactionKind;
+  totalCents: number;
+  approximate: boolean;
+}
+
 export function LedgerTable({
   rows,
   defaultCurrency,
   displayCurrency,
   latestRatesFromEur,
+  selectedIds,
+  pendingDeleteIds,
+  onToggleSelected,
+  onSelectVisible,
 }: Props) {
   if (rows.length === 0) {
     return (
       <div className="rounded-lg border border-dashed border-border bg-panel p-12 text-center">
         <p className="text-sm text-muted">
-          No transactions yet. Log a pack with a price, or use the buttons above
-          to record a singles purchase.
+          No transactions match. Adjust the filters, or log a pack, a
+          singles purchase, a sale, or a PSA submission.
         </p>
-        <Link
-          href="/packs/new"
-          className="mt-3 inline-block text-xs text-accent underline-offset-2 hover:underline"
-        >
-          Log a pack
-        </Link>
       </div>
     );
   }
+
+  const groups = groupRowsByDay(rows, displayCurrency, latestRatesFromEur);
+
+  const selectableVisible: SelectableRow[] = [];
+  for (const r of rows) {
+    if (isSelectableKind(r.kind)) {
+      selectableVisible.push({ id: r.id, kind: r.kind });
+    }
+  }
+  const selectableVisibleCount = selectableVisible.length;
+  const selectedVisibleCount = selectableVisible.reduce(
+    (acc, r) => acc + (selectedIds.has(r.id) ? 1 : 0),
+    0,
+  );
+  const allChecked =
+    selectableVisibleCount > 0 && selectedVisibleCount === selectableVisibleCount;
+  const someChecked =
+    selectedVisibleCount > 0 && selectedVisibleCount < selectableVisibleCount;
 
   return (
     <div className="overflow-x-auto rounded-lg border border-border bg-panel">
       <table className="min-w-full text-sm">
         <thead className="border-b border-border text-left text-[11px] uppercase tracking-wider text-muted">
           <tr>
+            <th className="w-9 px-3 py-2 font-medium">
+              <HeaderCheckbox
+                checked={allChecked}
+                indeterminate={someChecked}
+                disabled={selectableVisibleCount === 0}
+                onChange={() => onSelectVisible(selectableVisible)}
+              />
+            </th>
             <th className="px-4 py-2 font-medium">Date</th>
             <th className="px-4 py-2 font-medium">Kind</th>
             <th className="px-4 py-2 font-medium">Description</th>
@@ -76,13 +138,16 @@ export function LedgerTable({
           </tr>
         </thead>
         <tbody>
-          {rows.map((r) => (
-            <Row
-              key={r.id}
-              row={r}
+          {groups.map((g) => (
+            <DayGroupRows
+              key={g.key}
+              group={g}
               defaultCurrency={defaultCurrency}
               displayCurrency={displayCurrency}
               latestRatesFromEur={latestRatesFromEur}
+              selectedIds={selectedIds}
+              pendingDeleteIds={pendingDeleteIds}
+              onToggleSelected={onToggleSelected}
             />
           ))}
         </tbody>
@@ -91,27 +156,173 @@ export function LedgerTable({
   );
 }
 
-function Row({
-  row,
+function HeaderCheckbox({
+  checked,
+  indeterminate,
+  disabled,
+  onChange,
+}: {
+  checked: boolean;
+  indeterminate: boolean;
+  disabled: boolean;
+  onChange: () => void;
+}) {
+  const ref = useRef<HTMLInputElement | null>(null);
+  useEffect(() => {
+    if (ref.current) ref.current.indeterminate = indeterminate && !checked;
+  }, [indeterminate, checked]);
+  return (
+    <input
+      ref={ref}
+      type="checkbox"
+      checked={checked}
+      disabled={disabled}
+      onChange={onChange}
+      aria-label="Select all visible"
+      className="h-4 w-4 cursor-pointer accent-accent disabled:cursor-not-allowed disabled:opacity-40"
+    />
+  );
+}
+
+function DayGroupRows({
+  group,
   defaultCurrency,
   displayCurrency,
   latestRatesFromEur,
+  selectedIds,
+  pendingDeleteIds,
+  onToggleSelected,
 }: {
-  row: LedgerTableRow;
+  group: DayGroup;
   defaultCurrency: LedgerCurrency;
   displayCurrency: Currency;
   latestRatesFromEur: Record<Currency, number>;
+  selectedIds: ReadonlySet<string>;
+  pendingDeleteIds: ReadonlySet<string>;
+  onToggleSelected: (id: string, kind: SelectableKind) => void;
+}) {
+  return (
+    <>
+      <DayHeaderRow
+        group={group}
+        displayCurrency={displayCurrency}
+      />
+      {group.rows.map((r) => (
+        <Row
+          key={r.id}
+          row={r}
+          kindLabel={
+            r.kind === group.dominantKind ? null : KIND_LABEL[r.kind]
+          }
+          timeLabel={formatTime(r.occurredAt)}
+          defaultCurrency={defaultCurrency}
+          displayCurrency={displayCurrency}
+          latestRatesFromEur={latestRatesFromEur}
+          selected={selectedIds.has(r.id)}
+          pending={pendingDeleteIds.has(r.id)}
+          onToggleSelected={onToggleSelected}
+        />
+      ))}
+    </>
+  );
+}
+
+function DayHeaderRow({
+  group,
+  displayCurrency,
+}: {
+  group: DayGroup;
+  displayCurrency: Currency;
+}) {
+  const count = group.rows.length;
+  const positive = group.totalCents >= 0;
+  const sign = positive ? "+" : "−";
+  const totalText = `${sign}${formatMoneyCents(
+    Math.abs(group.totalCents),
+    displayCurrency,
+  )}`;
+  return (
+    <tr className="bg-panel-2/50 text-[11px] uppercase tracking-wider text-muted">
+      <td colSpan={6} className="px-4 py-1.5">
+        <div className="flex items-center justify-between gap-4">
+          <span>{formatDayLabel(group.date)}</span>
+          <span className="tabular-nums">
+            <span>
+              · {count} transaction{count === 1 ? "" : "s"} ·{" "}
+            </span>
+            {group.approximate ? (
+              <span
+                className="italic"
+                title="Some amounts converted at today's rate"
+              >
+                {totalText}
+              </span>
+            ) : (
+              <span>{totalText}</span>
+            )}
+          </span>
+        </div>
+      </td>
+    </tr>
+  );
+}
+
+function Row({
+  row,
+  kindLabel,
+  timeLabel,
+  defaultCurrency,
+  displayCurrency,
+  latestRatesFromEur,
+  selected,
+  pending,
+  onToggleSelected,
+}: {
+  row: LedgerTableRow;
+  kindLabel: string | null;
+  timeLabel: string;
+  defaultCurrency: LedgerCurrency;
+  displayCurrency: Currency;
+  latestRatesFromEur: Record<Currency, number>;
+  selected: boolean;
+  pending: boolean;
+  onToggleSelected: (id: string, kind: SelectableKind) => void;
 }) {
   const positive = row.amountCents >= 0;
+  const selectable = isSelectableKind(row.kind);
+  const trClass = [
+    "border-b border-border/60 last:border-b-0",
+    pending ? "opacity-50 pointer-events-none" : "hover:bg-panel-2",
+    selected ? "bg-accent/5" : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
   return (
-    <tr className="border-b border-border/60 last:border-b-0 hover:bg-panel-2">
-      <td className="whitespace-nowrap px-4 py-2.5 tabular-nums text-muted">
-        {formatDate(row.occurredAt)}
+    <tr className={trClass}>
+      <td className="w-9 px-3 py-2.5 align-middle">
+        {selectable ? (
+          <input
+            type="checkbox"
+            checked={selected}
+            onChange={() =>
+              onToggleSelected(row.id, row.kind as SelectableKind)
+            }
+            aria-label="Select transaction"
+            className="h-4 w-4 cursor-pointer accent-accent"
+          />
+        ) : (
+          <span aria-hidden className="inline-block h-4 w-4" />
+        )}
+      </td>
+      <td className="whitespace-nowrap px-4 py-2.5 text-[11px] tabular-nums text-muted">
+        {timeLabel}
       </td>
       <td className="px-4 py-2.5">
-        <span className="rounded-md border border-border bg-panel-2 px-2 py-0.5 text-[11px] uppercase tracking-wider text-muted">
-          {KIND_LABEL[row.kind]}
-        </span>
+        {kindLabel && (
+          <span className="rounded-md border border-border bg-panel-2 px-2 py-0.5 text-[11px] uppercase tracking-wider text-muted">
+            {kindLabel}
+          </span>
+        )}
       </td>
       <td className="px-4 py-2.5">{renderDescription(row)}</td>
       <td
@@ -168,6 +379,7 @@ function RowActions({
         currency={row.currency}
         occurredAt={row.occurredAt}
         note={row.note}
+        variant={row.variant}
       />
     );
   }
@@ -184,6 +396,7 @@ function RowActions({
         currency={row.currency}
         occurredAt={row.occurredAt}
         note={row.note}
+        variant={row.variant}
       />
     );
   }
@@ -233,6 +446,7 @@ function CardLine({
   card: LedgerTableCardInfo;
 }) {
   const qty = row.quantity && row.quantity > 1 ? ` × ${row.quantity}` : "";
+  const variantLabel = row.variant ? VARIANT_CHIP_LABEL[row.variant] : null;
   return (
     <div className="flex items-center gap-2">
       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -249,7 +463,12 @@ function CardLine({
         >
           {card.name}
           {qty}
-        </Link>{" "}
+        </Link>
+        {variantLabel && (
+          <span className="ml-1 text-[11px] lowercase tracking-wide text-muted">
+            {variantLabel.toLowerCase()}
+          </span>
+        )}{" "}
         <span className="text-[11px] text-muted tabular-nums">
           {card.setId}-{card.number}
         </span>
@@ -259,14 +478,104 @@ function CardLine({
   );
 }
 
-function formatDate(iso: string): string {
-  const d = new Date(iso);
-  if (Number.isNaN(d.getTime())) return iso;
-  const sameYear = d.getFullYear() === new Date().getFullYear();
-  return d.toLocaleString(undefined, {
+function groupRowsByDay(
+  rows: LedgerTableRow[],
+  displayCurrency: Currency,
+  latestRatesFromEur: Record<Currency, number>,
+): DayGroup[] {
+  const groups: DayGroup[] = [];
+  let current: { key: string; date: Date; rows: LedgerTableRow[] } | null = null;
+  for (const r of rows) {
+    const d = new Date(r.occurredAt);
+    const key = localDayKey(d);
+    if (!current || current.key !== key) {
+      current = { key, date: d, rows: [] };
+      groups.push({
+        key,
+        date: d,
+        rows: current.rows,
+        dominantKind: r.kind,
+        totalCents: 0,
+        approximate: false,
+      });
+    }
+    current.rows.push(r);
+  }
+  for (const g of groups) {
+    const counts: Partial<Record<TransactionKind, number>> = {};
+    let total = 0;
+    let approximate = false;
+    for (const r of g.rows) {
+      counts[r.kind] = (counts[r.kind] ?? 0) + 1;
+      const converted = convertCents(
+        r.amountCents,
+        r.currency,
+        displayCurrency,
+        r.rateToEur,
+        latestRatesFromEur,
+      );
+      if (converted == null) {
+        approximate = true;
+      } else {
+        total += converted;
+        if (r.rateToEur == null && r.currency !== displayCurrency) {
+          approximate = true;
+        }
+      }
+    }
+    const firstKind = g.rows[0]?.kind ?? g.dominantKind;
+    const dominantKind = pickDominantKind(counts, firstKind);
+    g.dominantKind = dominantKind;
+    g.totalCents = total;
+    g.approximate = approximate;
+  }
+  return groups;
+}
+
+function pickDominantKind(
+  counts: Partial<Record<TransactionKind, number>>,
+  fallback: TransactionKind,
+): TransactionKind {
+  let best: TransactionKind = fallback;
+  let bestCount = counts[fallback] ?? 0;
+  for (const [k, c] of Object.entries(counts) as [TransactionKind, number][]) {
+    if (c > bestCount) {
+      best = k;
+      bestCount = c;
+    }
+  }
+  return best;
+}
+
+function localDayKey(d: Date): string {
+  if (Number.isNaN(d.getTime())) return "invalid";
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
+}
+
+function formatDayLabel(d: Date): string {
+  if (Number.isNaN(d.getTime())) return "Unknown date";
+  const now = new Date();
+  const sameYear = d.getFullYear() === now.getFullYear();
+  const label = d.toLocaleDateString(undefined, {
+    weekday: "short",
     month: "short",
     day: "numeric",
     year: sameYear ? undefined : "numeric",
+  });
+  const isToday =
+    d.getFullYear() === now.getFullYear() &&
+    d.getMonth() === now.getMonth() &&
+    d.getDate() === now.getDate();
+  return isToday ? `Today · ${label}` : label;
+}
+
+function formatTime(iso: string): string {
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return iso;
+  return d.toLocaleTimeString(undefined, {
     hour: "numeric",
     minute: "2-digit",
   });

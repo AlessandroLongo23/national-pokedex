@@ -10,6 +10,7 @@ import {
   type SinglePurchaseEdit,
 } from "./LogSingleModal";
 import { LogSaleModal, type SingleSaleEdit } from "./LogSaleModal";
+import type { CardVariant } from "../_lib/variants";
 import { Tooltip } from "../../_components/Tooltip";
 
 interface CardInfo {
@@ -39,6 +40,7 @@ type Props =
       currency: LedgerCurrency;
       occurredAt: string;
       note: string | null;
+      variant: CardVariant | null;
     }
   | {
       kind: "sale";
@@ -50,6 +52,7 @@ type Props =
       currency: LedgerCurrency;
       occurredAt: string;
       note: string | null;
+      variant: CardVariant | null;
     };
 
 // One Edit affordance per ledger row. For pack/PSA rows we link to the
@@ -109,6 +112,7 @@ export function LedgerRowActions(props: Props) {
       currency: props.currency,
       occurredAt: props.occurredAt,
       note: props.note,
+      variant: props.variant,
     };
     return (
       <>
@@ -132,6 +136,7 @@ export function LedgerRowActions(props: Props) {
     currency: props.currency,
     occurredAt: props.occurredAt,
     note: props.note,
+    variant: props.variant,
   };
   // The RPC's "not enough copies" check compares against current
   // owned_cards; the existing sale's quantity is already removed from

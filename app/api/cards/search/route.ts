@@ -7,7 +7,7 @@ import { NextResponse } from "next/server";
 import { getAllCards } from "@/lib/data/binder-scope";
 
 const MAX_LIMIT = 25;
-const DEFAULT_LIMIT = 12;
+const DEFAULT_LIMIT = 20;
 
 export async function GET(req: Request) {
   const url = new URL(req.url);
@@ -40,6 +40,9 @@ export async function GET(req: Request) {
     setId: c.setId,
     number: c.number,
     imageSmall: c.imageSmall,
+    imageLarge: c.imageLarge,
+    rarity: c.rarity,
+    regulationMark: c.regulationMark ?? null,
   }));
   return NextResponse.json({ results });
 }

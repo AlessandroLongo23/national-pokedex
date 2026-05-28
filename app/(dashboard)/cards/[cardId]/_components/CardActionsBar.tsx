@@ -1,9 +1,18 @@
 "use client";
 
 import { useState } from "react";
-import { Check, Heart, Minus, Plus, Star, Tag } from "lucide-react";
+import {
+  Check,
+  Heart,
+  Minus,
+  Plus,
+  ShoppingCart,
+  Star,
+  Tag,
+} from "lucide-react";
 import type { LedgerCurrency } from "@/lib/ledger/money";
 import { LogSaleModal } from "../../../transactions/_components/LogSaleModal";
+import { LogSingleModal } from "../../../transactions/_components/LogSingleModal";
 import { useOwnedCards } from "../../../_lib/OwnedCardsContext";
 import { useWishlist } from "../../../_lib/WishlistContext";
 import { useFavorites } from "../../../_lib/FavoritesContext";
@@ -34,6 +43,7 @@ export function CardActionsBar({
   defaultCurrency,
 }: Props) {
   const [sellOpen, setSellOpen] = useState(false);
+  const [buyOpen, setBuyOpen] = useState(false);
   const {
     quantityOf,
     toggle: toggleOwned,
@@ -143,6 +153,17 @@ export function CardActionsBar({
         </Tooltip>
       )}
 
+      <Tooltip content="Record a purchase of this card">
+        <button
+          type="button"
+          onClick={() => setBuyOpen(true)}
+          className="inline-flex h-9 items-center gap-1.5 rounded-md border border-border bg-panel-2 px-3 text-xs font-medium text-text transition hover:border-accent/60 hover:bg-panel focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+        >
+          <ShoppingCart className="h-3.5 w-3.5" aria-hidden />
+          Buy
+        </button>
+      </Tooltip>
+
       <Tooltip
         content={
           ownedQty === 0
@@ -160,6 +181,13 @@ export function CardActionsBar({
           Sell{ownedQty > 1 ? ` (up to ${ownedQty})` : ""}
         </button>
       </Tooltip>
+
+      <LogSingleModal
+        open={buyOpen}
+        onClose={() => setBuyOpen(false)}
+        defaultCurrency={defaultCurrency}
+        presetCard={card}
+      />
 
       <LogSaleModal
         open={sellOpen}

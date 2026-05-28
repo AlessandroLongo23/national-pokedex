@@ -1,7 +1,7 @@
 import Link from "next/link";
 import {
   formatPrice,
-  PRICE_SOURCE_LABEL,
+  PRICE_SOURCE_NAME,
   type DisplayConversion,
   type PriceSource,
 } from "@/lib/pricing/pokemontcg";
@@ -76,7 +76,7 @@ export function PortfolioHero({
               href="/settings"
               className="underline decoration-border-strong underline-offset-2 hover:text-text"
             >
-              {PRICE_SOURCE_LABEL[priceSource]}
+              {PRICE_SOURCE_NAME[priceSource]}
             </Link>
             {totalCards > 0 && (
               <>

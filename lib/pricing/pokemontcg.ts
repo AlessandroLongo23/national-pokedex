@@ -30,6 +30,11 @@ export const PRICE_SOURCE_LABEL: Record<PriceSource, string> = {
   cardmarket: "Cardmarket (EUR)",
 };
 
+export const PRICE_SOURCE_NAME: Record<PriceSource, string> = {
+  tcgplayer: "TCGplayer",
+  cardmarket: "Cardmarket",
+};
+
 export const PRICE_SOURCE_CURRENCY: Record<PriceSource, "USD" | "EUR"> = {
   tcgplayer: "USD",
   cardmarket: "EUR",
