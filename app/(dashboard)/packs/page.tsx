@@ -77,14 +77,18 @@ async function loadHistory(): Promise<PackHistoryItem[]> {
 
   return (packs as PackRow[]).map((p) => {
     const cardIds = cardsByPack.get(p.id) ?? [];
-    const cards: PackHistoryCard[] = cardIds.map((id) => {
-      const c = cardLookup.get(id);
-      return {
-        cardId: id,
-        name: c?.name ?? id,
-        imageSmall: c?.imageSmall ?? "",
-      };
-    });
+    const cards: PackHistoryCard[] = cardIds
+      .map((id) => {
+        const c = cardLookup.get(id);
+        return {
+          cardId: id,
+          name: c?.name ?? id,
+          imageSmall: c?.imageSmall ?? "",
+          numberInt: c?.numberInt ?? Number.MAX_SAFE_INTEGER,
+        };
+      })
+      .sort((a, b) => a.numberInt - b.numberInt)
+      .map(({ numberInt: _n, ...rest }) => rest);
     return {
       id: p.id,
       setId: p.set_id,
