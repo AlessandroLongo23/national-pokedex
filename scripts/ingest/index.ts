@@ -24,6 +24,8 @@ interface RawSet {
   name: string;
   series: string;
   releaseDate: string;
+  ptcgoCode?: string;
+  images?: { logo?: string; symbol?: string };
 }
 
 function loadShowdownPokedex(showdownDir: string) {
@@ -72,6 +74,9 @@ function loadAllSets(tcgDataDir: string): AllSetsResult {
       uniqueCount: 0,
       distinctPokemonCount: summary.distinctPokemonCount,
       cardCount: summary.cardCount,
+      ...(s.ptcgoCode ? { ptcgoCode: s.ptcgoCode } : {}),
+      ...(s.images?.logo ? { logoUrl: s.images.logo } : {}),
+      ...(s.images?.symbol ? { symbolUrl: s.images.symbol } : {}),
     });
     pools[s.id] = summary.rarityPool;
     cardsBySet[s.id] = summary.cards;

@@ -77,7 +77,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 69,
-    "cardCount": 102
+    "cardCount": 102,
+    "ptcgoCode": "BS",
+    "logoUrl": "https://images.pokemontcg.io/base1/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/base1/symbol.png"
   },
   {
     "id": "base2",
@@ -135,7 +138,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 47,
-    "cardCount": 64
+    "cardCount": 64,
+    "ptcgoCode": "JU",
+    "logoUrl": "https://images.pokemontcg.io/base2/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/base2/symbol.png"
   },
   {
     "id": "basep",
@@ -182,7 +188,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 36,
-    "cardCount": 53
+    "cardCount": 53,
+    "ptcgoCode": "PR",
+    "logoUrl": "https://images.pokemontcg.io/basep/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/basep/symbol.png"
   },
   {
     "id": "base3",
@@ -235,7 +244,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 42,
-    "cardCount": 62
+    "cardCount": 62,
+    "ptcgoCode": "FO",
+    "logoUrl": "https://images.pokemontcg.io/base3/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/base3/symbol.png"
   },
   {
     "id": "base4",
@@ -346,7 +358,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 100,
-    "cardCount": 130
+    "cardCount": 130,
+    "ptcgoCode": "B2",
+    "logoUrl": "https://images.pokemontcg.io/base4/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/base4/symbol.png"
   },
   {
     "id": "base5",
@@ -411,7 +426,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 54,
-    "cardCount": 83
+    "cardCount": 83,
+    "ptcgoCode": "TR",
+    "logoUrl": "https://images.pokemontcg.io/base5/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/base5/symbol.png"
   },
   {
     "id": "gym1",
@@ -494,7 +512,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 72,
-    "cardCount": 132
+    "cardCount": 132,
+    "ptcgoCode": "G1",
+    "logoUrl": "https://images.pokemontcg.io/gym1/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/gym1/symbol.png"
   },
   {
     "id": "gym2",
@@ -589,7 +610,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 84,
-    "cardCount": 132
+    "cardCount": 132,
+    "ptcgoCode": "G2",
+    "logoUrl": "https://images.pokemontcg.io/gym2/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/gym2/symbol.png"
   },
   {
     "id": "neo1",
@@ -672,7 +696,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 72,
-    "cardCount": 111
+    "cardCount": 111,
+    "ptcgoCode": "N1",
+    "logoUrl": "https://images.pokemontcg.io/neo1/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/neo1/symbol.png"
   },
   {
     "id": "neo2",
@@ -728,7 +755,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 45,
-    "cardCount": 75
+    "cardCount": 75,
+    "ptcgoCode": "N2",
+    "logoUrl": "https://images.pokemontcg.io/neo2/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/neo2/symbol.png"
   },
   {
     "id": "si1",
@@ -757,7 +787,9 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 18,
-    "cardCount": 18
+    "cardCount": 18,
+    "logoUrl": "https://images.pokemontcg.io/si1/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/si1/symbol.png"
   },
   {
     "id": "neo3",
@@ -822,7 +854,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 54,
-    "cardCount": 66
+    "cardCount": 66,
+    "ptcgoCode": "N3",
+    "logoUrl": "https://images.pokemontcg.io/neo3/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/neo3/symbol.png"
   },
   {
     "id": "neo4",
@@ -918,7 +953,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 85,
-    "cardCount": 113
+    "cardCount": 113,
+    "ptcgoCode": "N4",
+    "logoUrl": "https://images.pokemontcg.io/neo4/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/neo4/symbol.png"
   },
   {
     "id": "base6",
@@ -1028,7 +1066,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 99,
-    "cardCount": 110
+    "cardCount": 110,
+    "ptcgoCode": "LC",
+    "logoUrl": "https://images.pokemontcg.io/base6/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/base6/symbol.png"
   },
   {
     "id": "ecard1",
@@ -1131,7 +1172,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 92,
-    "cardCount": 165
+    "cardCount": 165,
+    "ptcgoCode": "EX",
+    "logoUrl": "https://images.pokemontcg.io/ecard1/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/ecard1/symbol.png"
   },
   {
     "id": "bp",
@@ -1149,7 +1193,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 7,
-    "cardCount": 9
+    "cardCount": 9,
+    "ptcgoCode": "BP",
+    "logoUrl": "https://images.pokemontcg.io/bp/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/bp/symbol.png"
   },
   {
     "id": "ecard2",
@@ -1264,7 +1311,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 104,
-    "cardCount": 182
+    "cardCount": 182,
+    "ptcgoCode": "AQ",
+    "logoUrl": "https://images.pokemontcg.io/ecard2/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/ecard2/symbol.png"
   },
   {
     "id": "ecard3",
@@ -1382,7 +1432,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 107,
-    "cardCount": 182
+    "cardCount": 182,
+    "ptcgoCode": "SK",
+    "logoUrl": "https://images.pokemontcg.io/ecard3/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/ecard3/symbol.png"
   },
   {
     "id": "ex1",
@@ -1453,7 +1506,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 60,
-    "cardCount": 109
+    "cardCount": 109,
+    "ptcgoCode": "RS",
+    "logoUrl": "https://images.pokemontcg.io/ex1/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/ex1/symbol.png"
   },
   {
     "id": "ex2",
@@ -1547,7 +1603,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 83,
-    "cardCount": 100
+    "cardCount": 100,
+    "ptcgoCode": "SS",
+    "logoUrl": "https://images.pokemontcg.io/ex2/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/ex2/symbol.png"
   },
   {
     "id": "np",
@@ -1585,7 +1644,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 27,
-    "cardCount": 40
+    "cardCount": 40,
+    "ptcgoCode": "PR-NP",
+    "logoUrl": "https://images.pokemontcg.io/np/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/np/symbol.png"
   },
   {
     "id": "ex3",
@@ -1664,7 +1726,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 68,
-    "cardCount": 100
+    "cardCount": 100,
+    "ptcgoCode": "DR",
+    "logoUrl": "https://images.pokemontcg.io/ex3/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/ex3/symbol.png"
   },
   {
     "id": "ex4",
@@ -1724,7 +1789,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 49,
-    "cardCount": 97
+    "cardCount": 97,
+    "ptcgoCode": "MA",
+    "logoUrl": "https://images.pokemontcg.io/ex4/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/ex4/symbol.png"
   },
   {
     "id": "tk1a",
@@ -1742,7 +1810,9 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 7,
-    "cardCount": 10
+    "cardCount": 10,
+    "logoUrl": "https://images.pokemontcg.io/tk1a/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/tk1a/symbol.png"
   },
   {
     "id": "tk1b",
@@ -1760,7 +1830,9 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 7,
-    "cardCount": 10
+    "cardCount": 10,
+    "logoUrl": "https://images.pokemontcg.io/tk1b/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/tk1b/symbol.png"
   },
   {
     "id": "ex5",
@@ -1849,7 +1921,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 78,
-    "cardCount": 102
+    "cardCount": 102,
+    "ptcgoCode": "HL",
+    "logoUrl": "https://images.pokemontcg.io/ex5/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/ex5/symbol.png"
   },
   {
     "id": "ex6",
@@ -1954,7 +2029,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 94,
-    "cardCount": 116
+    "cardCount": 116,
+    "ptcgoCode": "RG",
+    "logoUrl": "https://images.pokemontcg.io/ex6/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/ex6/symbol.png"
   },
   {
     "id": "pop1",
@@ -1982,7 +2060,9 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 17,
-    "cardCount": 17
+    "cardCount": 17,
+    "logoUrl": "https://images.pokemontcg.io/pop1/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/pop1/symbol.png"
   },
   {
     "id": "ex7",
@@ -2082,7 +2162,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 89,
-    "cardCount": 111
+    "cardCount": 111,
+    "ptcgoCode": "TRR",
+    "logoUrl": "https://images.pokemontcg.io/ex7/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/ex7/symbol.png"
   },
   {
     "id": "ex8",
@@ -2175,7 +2258,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 82,
-    "cardCount": 108
+    "cardCount": 108,
+    "ptcgoCode": "DX",
+    "logoUrl": "https://images.pokemontcg.io/ex8/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/ex8/symbol.png"
   },
   {
     "id": "ex9",
@@ -2261,7 +2347,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 75,
-    "cardCount": 107
+    "cardCount": 107,
+    "ptcgoCode": "EM",
+    "logoUrl": "https://images.pokemontcg.io/ex9/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/ex9/symbol.png"
   },
   {
     "id": "ex10",
@@ -2364,7 +2453,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 92,
-    "cardCount": 145
+    "cardCount": 145,
+    "ptcgoCode": "UF",
+    "logoUrl": "https://images.pokemontcg.io/ex10/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/ex10/symbol.png"
   },
   {
     "id": "pop2",
@@ -2388,7 +2480,9 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 13,
-    "cardCount": 17
+    "cardCount": 17,
+    "logoUrl": "https://images.pokemontcg.io/pop2/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/pop2/symbol.png"
   },
   {
     "id": "ex11",
@@ -2468,7 +2562,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 69,
-    "cardCount": 114
+    "cardCount": 114,
+    "ptcgoCode": "DS",
+    "logoUrl": "https://images.pokemontcg.io/ex11/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/ex11/symbol.png"
   },
   {
     "id": "ex12",
@@ -2560,7 +2657,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 81,
-    "cardCount": 93
+    "cardCount": 93,
+    "ptcgoCode": "LM",
+    "logoUrl": "https://images.pokemontcg.io/ex12/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/ex12/symbol.png"
   },
   {
     "id": "tk2a",
@@ -2578,7 +2678,9 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 7,
-    "cardCount": 12
+    "cardCount": 12,
+    "logoUrl": "https://images.pokemontcg.io/tk2a/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/tk2a/symbol.png"
   },
   {
     "id": "tk2b",
@@ -2596,7 +2698,9 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 7,
-    "cardCount": 12
+    "cardCount": 12,
+    "logoUrl": "https://images.pokemontcg.io/tk2b/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/tk2b/symbol.png"
   },
   {
     "id": "pop3",
@@ -2622,7 +2726,9 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 15,
-    "cardCount": 17
+    "cardCount": 17,
+    "logoUrl": "https://images.pokemontcg.io/pop3/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/pop3/symbol.png"
   },
   {
     "id": "ex13",
@@ -2711,7 +2817,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 78,
-    "cardCount": 111
+    "cardCount": 111,
+    "ptcgoCode": "HP",
+    "logoUrl": "https://images.pokemontcg.io/ex13/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/ex13/symbol.png"
   },
   {
     "id": "ex14",
@@ -2790,7 +2899,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 68,
-    "cardCount": 100
+    "cardCount": 100,
+    "ptcgoCode": "CG",
+    "logoUrl": "https://images.pokemontcg.io/ex14/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/ex14/symbol.png"
   },
   {
     "id": "pop4",
@@ -2814,7 +2926,9 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 13,
-    "cardCount": 17
+    "cardCount": 17,
+    "logoUrl": "https://images.pokemontcg.io/pop4/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/pop4/symbol.png"
   },
   {
     "id": "ex15",
@@ -2900,7 +3014,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 75,
-    "cardCount": 101
+    "cardCount": 101,
+    "ptcgoCode": "DF",
+    "logoUrl": "https://images.pokemontcg.io/ex15/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/ex15/symbol.png"
   },
   {
     "id": "ex16",
@@ -2992,7 +3109,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 81,
-    "cardCount": 108
+    "cardCount": 108,
+    "ptcgoCode": "PK",
+    "logoUrl": "https://images.pokemontcg.io/ex16/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/ex16/symbol.png"
   },
   {
     "id": "pop5",
@@ -3014,7 +3134,9 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 11,
-    "cardCount": 17
+    "cardCount": 17,
+    "logoUrl": "https://images.pokemontcg.io/pop5/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/pop5/symbol.png"
   },
   {
     "id": "dp1",
@@ -3126,7 +3248,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 101,
-    "cardCount": 130
+    "cardCount": 130,
+    "ptcgoCode": "DP",
+    "logoUrl": "https://images.pokemontcg.io/dp1/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/dp1/symbol.png"
   },
   {
     "id": "dpp",
@@ -3178,7 +3303,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 41,
-    "cardCount": 56
+    "cardCount": 56,
+    "ptcgoCode": "PR-DPP",
+    "logoUrl": "https://images.pokemontcg.io/dpp/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/dpp/symbol.png"
   },
   {
     "id": "dp2",
@@ -3296,7 +3424,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 107,
-    "cardCount": 124
+    "cardCount": 124,
+    "ptcgoCode": "MT",
+    "logoUrl": "https://images.pokemontcg.io/dp2/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/dp2/symbol.png"
   },
   {
     "id": "pop6",
@@ -3324,7 +3455,9 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 17,
-    "cardCount": 17
+    "cardCount": 17,
+    "logoUrl": "https://images.pokemontcg.io/pop6/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/pop6/symbol.png"
   },
   {
     "id": "dp3",
@@ -3443,7 +3576,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 108,
-    "cardCount": 132
+    "cardCount": 132,
+    "ptcgoCode": "SW",
+    "logoUrl": "https://images.pokemontcg.io/dp3/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/dp3/symbol.png"
   },
   {
     "id": "dp4",
@@ -3546,7 +3682,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 92,
-    "cardCount": 106
+    "cardCount": 106,
+    "ptcgoCode": "GE",
+    "logoUrl": "https://images.pokemontcg.io/dp4/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/dp4/symbol.png"
   },
   {
     "id": "pop7",
@@ -3573,7 +3712,9 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 16,
-    "cardCount": 17
+    "cardCount": 17,
+    "logoUrl": "https://images.pokemontcg.io/pop7/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/pop7/symbol.png"
   },
   {
     "id": "dp5",
@@ -3655,7 +3796,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 71,
-    "cardCount": 100
+    "cardCount": 100,
+    "ptcgoCode": "MD",
+    "logoUrl": "https://images.pokemontcg.io/dp5/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/dp5/symbol.png"
   },
   {
     "id": "dp6",
@@ -3773,7 +3917,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 107,
-    "cardCount": 146
+    "cardCount": 146,
+    "ptcgoCode": "LA",
+    "logoUrl": "https://images.pokemontcg.io/dp6/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/dp6/symbol.png"
   },
   {
     "id": "pop8",
@@ -3798,7 +3945,9 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 14,
-    "cardCount": 17
+    "cardCount": 17,
+    "logoUrl": "https://images.pokemontcg.io/pop8/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/pop8/symbol.png"
   },
   {
     "id": "dp7",
@@ -3886,7 +4035,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 77,
-    "cardCount": 106
+    "cardCount": 106,
+    "ptcgoCode": "SF",
+    "logoUrl": "https://images.pokemontcg.io/dp7/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/dp7/symbol.png"
   },
   {
     "id": "pl1",
@@ -3994,7 +4146,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 97,
-    "cardCount": 133
+    "cardCount": 133,
+    "ptcgoCode": "PL",
+    "logoUrl": "https://images.pokemontcg.io/pl1/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/pl1/symbol.png"
   },
   {
     "id": "pop9",
@@ -4022,7 +4177,9 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 17,
-    "cardCount": 17
+    "cardCount": 17,
+    "logoUrl": "https://images.pokemontcg.io/pop9/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/pop9/symbol.png"
   },
   {
     "id": "pl2",
@@ -4116,7 +4273,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 83,
-    "cardCount": 120
+    "cardCount": 120,
+    "ptcgoCode": "RR",
+    "logoUrl": "https://images.pokemontcg.io/pl2/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/pl2/symbol.png"
   },
   {
     "id": "pl3",
@@ -4253,7 +4413,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 126,
-    "cardCount": 153
+    "cardCount": 153,
+    "ptcgoCode": "SV",
+    "logoUrl": "https://images.pokemontcg.io/pl3/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/pl3/symbol.png"
   },
   {
     "id": "pl4",
@@ -4326,7 +4489,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 62,
-    "cardCount": 111
+    "cardCount": 111,
+    "ptcgoCode": "AR",
+    "logoUrl": "https://images.pokemontcg.io/pl4/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/pl4/symbol.png"
   },
   {
     "id": "ru1",
@@ -4353,7 +4519,9 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 16,
-    "cardCount": 16
+    "cardCount": 16,
+    "logoUrl": "https://images.pokemontcg.io/ru1/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/ru1/symbol.png"
   },
   {
     "id": "hgss1",
@@ -4453,7 +4621,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 89,
-    "cardCount": 124
+    "cardCount": 124,
+    "ptcgoCode": "HS",
+    "logoUrl": "https://images.pokemontcg.io/hgss1/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/hgss1/symbol.png"
   },
   {
     "id": "hsp",
@@ -4488,7 +4659,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 24,
-    "cardCount": 25
+    "cardCount": 25,
+    "ptcgoCode": "PR-HS",
+    "logoUrl": "https://images.pokemontcg.io/hsp/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/hsp/symbol.png"
   },
   {
     "id": "hgss2",
@@ -4569,7 +4743,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 70,
-    "cardCount": 96
+    "cardCount": 96,
+    "ptcgoCode": "UL",
+    "logoUrl": "https://images.pokemontcg.io/hgss2/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/hgss2/symbol.png"
   },
   {
     "id": "hgss3",
@@ -4648,7 +4825,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 68,
-    "cardCount": 91
+    "cardCount": 91,
+    "ptcgoCode": "UD",
+    "logoUrl": "https://images.pokemontcg.io/hgss3/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/hgss3/symbol.png"
   },
   {
     "id": "hgss4",
@@ -4751,7 +4931,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 92,
-    "cardCount": 103
+    "cardCount": 103,
+    "ptcgoCode": "TM",
+    "logoUrl": "https://images.pokemontcg.io/hgss4/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/hgss4/symbol.png"
   },
   {
     "id": "col1",
@@ -4840,7 +5023,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 78,
-    "cardCount": 106
+    "cardCount": 106,
+    "ptcgoCode": "CL",
+    "logoUrl": "https://images.pokemontcg.io/col1/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/col1/symbol.png"
   },
   {
     "id": "bwp",
@@ -4918,7 +5104,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 67,
-    "cardCount": 101
+    "cardCount": 101,
+    "ptcgoCode": "PR-BLW",
+    "logoUrl": "https://images.pokemontcg.io/bwp/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/bwp/symbol.png"
   },
   {
     "id": "bw1",
@@ -5002,7 +5191,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 73,
-    "cardCount": 115
+    "cardCount": 115,
+    "ptcgoCode": "BLW",
+    "logoUrl": "https://images.pokemontcg.io/bw1/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/bw1/symbol.png"
   },
   {
     "id": "mcd11",
@@ -5025,7 +5217,9 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 12,
-    "cardCount": 12
+    "cardCount": 12,
+    "logoUrl": "https://images.pokemontcg.io/mcd11/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/mcd11/symbol.png"
   },
   {
     "id": "bw2",
@@ -5106,7 +5300,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 70,
-    "cardCount": 98
+    "cardCount": 98,
+    "ptcgoCode": "EPO",
+    "logoUrl": "https://images.pokemontcg.io/bw2/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/bw2/symbol.png"
   },
   {
     "id": "bw3",
@@ -5193,7 +5390,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 76,
-    "cardCount": 102
+    "cardCount": 102,
+    "ptcgoCode": "NVI",
+    "logoUrl": "https://images.pokemontcg.io/bw3/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/bw3/symbol.png"
   },
   {
     "id": "bw4",
@@ -5285,7 +5485,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 81,
-    "cardCount": 103
+    "cardCount": 103,
+    "ptcgoCode": "NXD",
+    "logoUrl": "https://images.pokemontcg.io/bw4/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/bw4/symbol.png"
   },
   {
     "id": "bw5",
@@ -5378,7 +5581,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 82,
-    "cardCount": 111
+    "cardCount": 111,
+    "ptcgoCode": "DEX",
+    "logoUrl": "https://images.pokemontcg.io/bw5/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/bw5/symbol.png"
   },
   {
     "id": "mcd12",
@@ -5401,7 +5607,9 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 12,
-    "cardCount": 12
+    "cardCount": 12,
+    "logoUrl": "https://images.pokemontcg.io/mcd12/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/mcd12/symbol.png"
   },
   {
     "id": "bw6",
@@ -5515,7 +5723,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 103,
-    "cardCount": 128
+    "cardCount": 128,
+    "ptcgoCode": "DRX",
+    "logoUrl": "https://images.pokemontcg.io/bw6/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/bw6/symbol.png"
   },
   {
     "id": "dv1",
@@ -5540,7 +5751,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 14,
-    "cardCount": 21
+    "cardCount": 21,
+    "ptcgoCode": "DRV",
+    "logoUrl": "https://images.pokemontcg.io/dv1/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/dv1/symbol.png"
   },
   {
     "id": "bw7",
@@ -5670,7 +5884,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 119,
-    "cardCount": 153
+    "cardCount": 153,
+    "ptcgoCode": "BCR",
+    "logoUrl": "https://images.pokemontcg.io/bw7/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/bw7/symbol.png"
   },
   {
     "id": "bw8",
@@ -5783,7 +6000,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 102,
-    "cardCount": 138
+    "cardCount": 138,
+    "ptcgoCode": "PLS",
+    "logoUrl": "https://images.pokemontcg.io/bw8/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/bw8/symbol.png"
   },
   {
     "id": "bw9",
@@ -5890,7 +6110,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 96,
-    "cardCount": 122
+    "cardCount": 122,
+    "ptcgoCode": "PLF",
+    "logoUrl": "https://images.pokemontcg.io/bw9/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/bw9/symbol.png"
   },
   {
     "id": "bw10",
@@ -5978,7 +6201,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 77,
-    "cardCount": 105
+    "cardCount": 105,
+    "ptcgoCode": "PLB",
+    "logoUrl": "https://images.pokemontcg.io/bw10/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/bw10/symbol.png"
   },
   {
     "id": "xyp",
@@ -6098,7 +6324,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 109,
-    "cardCount": 216
+    "cardCount": 216,
+    "ptcgoCode": "PR-XY",
+    "logoUrl": "https://images.pokemontcg.io/xyp/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/xyp/symbol.png"
   },
   {
     "id": "bw11",
@@ -6217,7 +6446,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 108,
-    "cardCount": 140
+    "cardCount": 140,
+    "ptcgoCode": "LTR",
+    "logoUrl": "https://images.pokemontcg.io/bw11/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/bw11/symbol.png"
   },
   {
     "id": "xy0",
@@ -6260,7 +6492,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 32,
-    "cardCount": 39
+    "cardCount": 39,
+    "ptcgoCode": "KSS",
+    "logoUrl": "https://images.pokemontcg.io/xy0/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/xy0/symbol.png"
   },
   {
     "id": "xy1",
@@ -6376,7 +6611,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 105,
-    "cardCount": 146
+    "cardCount": 146,
+    "ptcgoCode": "XY",
+    "logoUrl": "https://images.pokemontcg.io/xy1/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/xy1/symbol.png"
   },
   {
     "id": "xy2",
@@ -6465,7 +6703,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 78,
-    "cardCount": 110
+    "cardCount": 110,
+    "ptcgoCode": "FLF",
+    "logoUrl": "https://images.pokemontcg.io/xy2/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/xy2/symbol.png"
   },
   {
     "id": "mcd14",
@@ -6488,7 +6729,9 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 12,
-    "cardCount": 12
+    "cardCount": 12,
+    "logoUrl": "https://images.pokemontcg.io/mcd14/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/mcd14/symbol.png"
   },
   {
     "id": "xy3",
@@ -6581,7 +6824,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 82,
-    "cardCount": 114
+    "cardCount": 114,
+    "ptcgoCode": "FFI",
+    "logoUrl": "https://images.pokemontcg.io/xy3/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/xy3/symbol.png"
   },
   {
     "id": "xy4",
@@ -6679,7 +6925,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 87,
-    "cardCount": 124
+    "cardCount": 124,
+    "ptcgoCode": "PHF",
+    "logoUrl": "https://images.pokemontcg.io/xy4/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/xy4/symbol.png"
   },
   {
     "id": "xy5",
@@ -6786,7 +7035,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 96,
-    "cardCount": 164
+    "cardCount": 164,
+    "ptcgoCode": "PRC",
+    "logoUrl": "https://images.pokemontcg.io/xy5/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/xy5/symbol.png"
   },
   {
     "id": "dc1",
@@ -6817,7 +7069,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 20,
-    "cardCount": 34
+    "cardCount": 34,
+    "ptcgoCode": "DCR",
+    "logoUrl": "https://images.pokemontcg.io/dc1/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/dc1/symbol.png"
   },
   {
     "id": "xy6",
@@ -6895,7 +7150,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 67,
-    "cardCount": 112
+    "cardCount": 112,
+    "ptcgoCode": "ROS",
+    "logoUrl": "https://images.pokemontcg.io/xy6/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/xy6/symbol.png"
   },
   {
     "id": "xy7",
@@ -6966,7 +7224,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 60,
-    "cardCount": 101
+    "cardCount": 101,
+    "ptcgoCode": "AOR",
+    "logoUrl": "https://images.pokemontcg.io/xy7/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/xy7/symbol.png"
   },
   {
     "id": "xy8",
@@ -7089,7 +7350,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 112,
-    "cardCount": 165
+    "cardCount": 165,
+    "ptcgoCode": "BKT",
+    "logoUrl": "https://images.pokemontcg.io/xy8/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/xy8/symbol.png"
   },
   {
     "id": "mcd15",
@@ -7112,7 +7376,9 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 12,
-    "cardCount": 12
+    "cardCount": 12,
+    "logoUrl": "https://images.pokemontcg.io/mcd15/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/mcd15/symbol.png"
   },
   {
     "id": "xy9",
@@ -7210,7 +7476,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 87,
-    "cardCount": 126
+    "cardCount": 126,
+    "ptcgoCode": "BKP",
+    "logoUrl": "https://images.pokemontcg.io/xy9/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/xy9/symbol.png"
   },
   {
     "id": "g1",
@@ -7298,7 +7567,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 77,
-    "cardCount": 117
+    "cardCount": 117,
+    "ptcgoCode": "GEN",
+    "logoUrl": "https://images.pokemontcg.io/g1/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/g1/symbol.png"
   },
   {
     "id": "xy10",
@@ -7379,7 +7651,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 70,
-    "cardCount": 129
+    "cardCount": 129,
+    "ptcgoCode": "FCO",
+    "logoUrl": "https://images.pokemontcg.io/xy10/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/xy10/symbol.png"
   },
   {
     "id": "xy11",
@@ -7477,7 +7752,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 87,
-    "cardCount": 116
+    "cardCount": 116,
+    "ptcgoCode": "STS",
+    "logoUrl": "https://images.pokemontcg.io/xy11/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/xy11/symbol.png"
   },
   {
     "id": "mcd16",
@@ -7500,7 +7778,9 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 12,
-    "cardCount": 12
+    "cardCount": 12,
+    "logoUrl": "https://images.pokemontcg.io/mcd16/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/mcd16/symbol.png"
   },
   {
     "id": "xy12",
@@ -7573,7 +7853,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 62,
-    "cardCount": 113
+    "cardCount": 113,
+    "ptcgoCode": "EVO",
+    "logoUrl": "https://images.pokemontcg.io/xy12/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/xy12/symbol.png"
   },
   {
     "id": "sm1",
@@ -7694,7 +7977,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 110,
-    "cardCount": 173
+    "cardCount": 173,
+    "ptcgoCode": "SUM",
+    "logoUrl": "https://images.pokemontcg.io/sm1/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/sm1/symbol.png"
   },
   {
     "id": "smp",
@@ -7840,7 +8126,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 135,
-    "cardCount": 251
+    "cardCount": 251,
+    "ptcgoCode": "PR-SM",
+    "logoUrl": "https://images.pokemontcg.io/smp/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/smp/symbol.png"
   },
   {
     "id": "sm2",
@@ -7962,7 +8251,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 111,
-    "cardCount": 180
+    "cardCount": 180,
+    "ptcgoCode": "GRI",
+    "logoUrl": "https://images.pokemontcg.io/sm2/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/sm2/symbol.png"
   },
   {
     "id": "sm3",
@@ -8083,7 +8375,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 110,
-    "cardCount": 177
+    "cardCount": 177,
+    "ptcgoCode": "BUS",
+    "logoUrl": "https://images.pokemontcg.io/sm3/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/sm3/symbol.png"
   },
   {
     "id": "sm35",
@@ -8151,7 +8446,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 57,
-    "cardCount": 81
+    "cardCount": 81,
+    "ptcgoCode": "SLG",
+    "logoUrl": "https://images.pokemontcg.io/sm35/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/sm35/symbol.png"
   },
   {
     "id": "sm4",
@@ -8252,7 +8550,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 90,
-    "cardCount": 126
+    "cardCount": 126,
+    "ptcgoCode": "CIN",
+    "logoUrl": "https://images.pokemontcg.io/sm4/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/sm4/symbol.png"
   },
   {
     "id": "mcd17",
@@ -8275,7 +8576,9 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 12,
-    "cardCount": 12
+    "cardCount": 12,
+    "logoUrl": "https://images.pokemontcg.io/mcd17/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/mcd17/symbol.png"
   },
   {
     "id": "sm5",
@@ -8392,7 +8695,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 106,
-    "cardCount": 178
+    "cardCount": 178,
+    "ptcgoCode": "UPR",
+    "logoUrl": "https://images.pokemontcg.io/sm5/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/sm5/symbol.png"
   },
   {
     "id": "sm6",
@@ -8497,7 +8803,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 94,
-    "cardCount": 150
+    "cardCount": 150,
+    "ptcgoCode": "FLI",
+    "logoUrl": "https://images.pokemontcg.io/sm6/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/sm6/symbol.png"
   },
   {
     "id": "sm7",
@@ -8618,7 +8927,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 110,
-    "cardCount": 187
+    "cardCount": 187,
+    "ptcgoCode": "CES",
+    "logoUrl": "https://images.pokemontcg.io/sm7/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/sm7/symbol.png"
   },
   {
     "id": "sm75",
@@ -8682,7 +8994,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 53,
-    "cardCount": 80
+    "cardCount": 80,
+    "ptcgoCode": "DRM",
+    "logoUrl": "https://images.pokemontcg.io/sm75/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/sm75/symbol.png"
   },
   {
     "id": "mcd18",
@@ -8705,7 +9020,9 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 12,
-    "cardCount": 12
+    "cardCount": 12,
+    "logoUrl": "https://images.pokemontcg.io/mcd18/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/mcd18/symbol.png"
   },
   {
     "id": "sm8",
@@ -8866,7 +9183,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 150,
-    "cardCount": 240
+    "cardCount": 240,
+    "ptcgoCode": "LOT",
+    "logoUrl": "https://images.pokemontcg.io/sm8/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/sm8/symbol.png"
   },
   {
     "id": "sm9",
@@ -9003,7 +9323,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 126,
-    "cardCount": 198
+    "cardCount": 198,
+    "ptcgoCode": "TEU",
+    "logoUrl": "https://images.pokemontcg.io/sm9/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/sm9/symbol.png"
   },
   {
     "id": "det1",
@@ -9032,7 +9355,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 18,
-    "cardCount": 18
+    "cardCount": 18,
+    "ptcgoCode": "DET",
+    "logoUrl": "https://images.pokemontcg.io/det1/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/det1/symbol.png"
   },
   {
     "id": "sm10",
@@ -9196,7 +9522,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 153,
-    "cardCount": 238
+    "cardCount": 238,
+    "ptcgoCode": "UNB",
+    "logoUrl": "https://images.pokemontcg.io/sm10/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/sm10/symbol.png"
   },
   {
     "id": "sm11",
@@ -9381,7 +9710,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 174,
-    "cardCount": 261
+    "cardCount": 261,
+    "ptcgoCode": "UNM",
+    "logoUrl": "https://images.pokemontcg.io/sm11/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/sm11/symbol.png"
   },
   {
     "id": "sm115",
@@ -9440,7 +9772,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 48,
-    "cardCount": 69
+    "cardCount": 69,
+    "ptcgoCode": "HIF",
+    "logoUrl": "https://images.pokemontcg.io/sm115/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/sm115/symbol.png"
   },
   {
     "id": "sma",
@@ -9528,7 +9863,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 77,
-    "cardCount": 94
+    "cardCount": 94,
+    "ptcgoCode": "HIF",
+    "logoUrl": "https://images.pokemontcg.io/sma/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/sma/symbol.png"
   },
   {
     "id": "mcd19",
@@ -9551,7 +9889,9 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 12,
-    "cardCount": 12
+    "cardCount": 12,
+    "logoUrl": "https://images.pokemontcg.io/mcd19/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/mcd19/symbol.png"
   },
   {
     "id": "sm12",
@@ -9742,7 +10082,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 180,
-    "cardCount": 272
+    "cardCount": 272,
+    "ptcgoCode": "CEC",
+    "logoUrl": "https://images.pokemontcg.io/sm12/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/sm12/symbol.png"
   },
   {
     "id": "swshp",
@@ -9904,7 +10247,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 151,
-    "cardCount": 304
+    "cardCount": 304,
+    "ptcgoCode": "PR-SW",
+    "logoUrl": "https://images.pokemontcg.io/swshp/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/swshp/symbol.png"
   },
   {
     "id": "swsh1",
@@ -10036,7 +10382,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 121,
-    "cardCount": 216
+    "cardCount": 216,
+    "ptcgoCode": "SSH",
+    "logoUrl": "https://images.pokemontcg.io/swsh1/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/swsh1/symbol.png"
   },
   {
     "id": "swsh2",
@@ -10188,7 +10537,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 141,
-    "cardCount": 209
+    "cardCount": 209,
+    "ptcgoCode": "RCL",
+    "logoUrl": "https://images.pokemontcg.io/swsh2/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/swsh2/symbol.png"
   },
   {
     "id": "swsh3",
@@ -10349,7 +10701,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 150,
-    "cardCount": 201
+    "cardCount": 201,
+    "ptcgoCode": "DAA",
+    "logoUrl": "https://images.pokemontcg.io/swsh3/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/swsh3/symbol.png"
   },
   {
     "id": "fut20",
@@ -10365,7 +10720,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 5,
-    "cardCount": 5
+    "cardCount": 5,
+    "ptcgoCode": "FUT20",
+    "logoUrl": "https://images.pokemontcg.io/fut20/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/fut20/symbol.png"
   },
   {
     "id": "swsh35",
@@ -10423,7 +10781,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 47,
-    "cardCount": 80
+    "cardCount": 80,
+    "ptcgoCode": "CPA",
+    "logoUrl": "https://images.pokemontcg.io/swsh35/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/swsh35/symbol.png"
   },
   {
     "id": "swsh4",
@@ -10577,7 +10938,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 143,
-    "cardCount": 203
+    "cardCount": 203,
+    "ptcgoCode": "VIV",
+    "logoUrl": "https://images.pokemontcg.io/swsh4/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/swsh4/symbol.png"
   },
   {
     "id": "mcd21",
@@ -10613,7 +10977,9 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 25,
-    "cardCount": 25
+    "cardCount": 25,
+    "logoUrl": "https://images.pokemontcg.io/mcd21/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/mcd21/symbol.png"
   },
   {
     "id": "swsh45",
@@ -10671,7 +11037,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 47,
-    "cardCount": 73
+    "cardCount": 73,
+    "ptcgoCode": "SHF",
+    "logoUrl": "https://images.pokemontcg.io/swsh45/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/swsh45/symbol.png"
   },
   {
     "id": "swsh45sv",
@@ -10790,7 +11159,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 108,
-    "cardCount": 122
+    "cardCount": 122,
+    "ptcgoCode": "SHF",
+    "logoUrl": "https://images.pokemontcg.io/swsh45sv/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/swsh45sv/symbol.png"
   },
   {
     "id": "swsh5",
@@ -10913,7 +11285,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 112,
-    "cardCount": 183
+    "cardCount": 183,
+    "ptcgoCode": "BST",
+    "logoUrl": "https://images.pokemontcg.io/swsh5/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/swsh5/symbol.png"
   },
   {
     "id": "swsh6",
@@ -11041,7 +11416,10 @@
     ],
     "uniqueCount": 1,
     "distinctPokemonCount": 117,
-    "cardCount": 233
+    "cardCount": 233,
+    "ptcgoCode": "CRE",
+    "logoUrl": "https://images.pokemontcg.io/swsh6/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/swsh6/symbol.png"
   },
   {
     "id": "swsh7",
@@ -11184,7 +11562,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 132,
-    "cardCount": 237
+    "cardCount": 237,
+    "ptcgoCode": "EVS",
+    "logoUrl": "https://images.pokemontcg.io/swsh7/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/swsh7/symbol.png"
   },
   {
     "id": "cel25",
@@ -11213,7 +11594,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 18,
-    "cardCount": 25
+    "cardCount": 25,
+    "ptcgoCode": "CEL",
+    "logoUrl": "https://images.pokemontcg.io/cel25/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/cel25/symbol.png"
   },
   {
     "id": "cel25c",
@@ -11246,7 +11630,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 22,
-    "cardCount": 25
+    "cardCount": 25,
+    "ptcgoCode": "CEL",
+    "logoUrl": "https://images.pokemontcg.io/cel25c/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/cel25c/symbol.png"
   },
   {
     "id": "swsh8",
@@ -11465,7 +11852,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 208,
-    "cardCount": 284
+    "cardCount": 284,
+    "ptcgoCode": "FST",
+    "logoUrl": "https://images.pokemontcg.io/swsh8/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/swsh8/symbol.png"
   },
   {
     "id": "swsh9",
@@ -11597,7 +11987,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 121,
-    "cardCount": 186
+    "cardCount": 186,
+    "ptcgoCode": "BRS",
+    "logoUrl": "https://images.pokemontcg.io/swsh9/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/swsh9/symbol.png"
   },
   {
     "id": "swsh9tg",
@@ -11625,7 +12018,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 17,
-    "cardCount": 30
+    "cardCount": 30,
+    "ptcgoCode": "BRS",
+    "logoUrl": "https://images.pokemontcg.io/swsh9tg/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/swsh9tg/symbol.png"
   },
   {
     "id": "swsh10",
@@ -11751,7 +12147,10 @@
     ],
     "uniqueCount": 1,
     "distinctPokemonCount": 115,
-    "cardCount": 216
+    "cardCount": 216,
+    "ptcgoCode": "ASR",
+    "logoUrl": "https://images.pokemontcg.io/swsh10/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/swsh10/symbol.png"
   },
   {
     "id": "swsh10tg",
@@ -11782,7 +12181,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 20,
-    "cardCount": 30
+    "cardCount": 30,
+    "ptcgoCode": "ASR",
+    "logoUrl": "https://images.pokemontcg.io/swsh10tg/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/swsh10tg/symbol.png"
   },
   {
     "id": "pgo",
@@ -11848,7 +12250,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 55,
-    "cardCount": 88
+    "cardCount": 88,
+    "ptcgoCode": "PGO",
+    "logoUrl": "https://images.pokemontcg.io/pgo/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/pgo/symbol.png"
   },
   {
     "id": "mcd22",
@@ -11874,7 +12279,9 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 15,
-    "cardCount": 15
+    "cardCount": 15,
+    "logoUrl": "https://images.pokemontcg.io/mcd22/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/mcd22/symbol.png"
   },
   {
     "id": "swsh11",
@@ -12028,7 +12435,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 143,
-    "cardCount": 217
+    "cardCount": 217,
+    "ptcgoCode": "LOR",
+    "logoUrl": "https://images.pokemontcg.io/swsh11/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/swsh11/symbol.png"
   },
   {
     "id": "swsh11tg",
@@ -12057,7 +12467,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 18,
-    "cardCount": 30
+    "cardCount": 30,
+    "ptcgoCode": "LOR",
+    "logoUrl": "https://images.pokemontcg.io/swsh11tg/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/swsh11tg/symbol.png"
   },
   {
     "id": "swsh12",
@@ -12209,7 +12622,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 141,
-    "cardCount": 215
+    "cardCount": 215,
+    "ptcgoCode": "SIT",
+    "logoUrl": "https://images.pokemontcg.io/swsh12/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/swsh12/symbol.png"
   },
   {
     "id": "swsh12tg",
@@ -12240,7 +12656,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 20,
-    "cardCount": 30
+    "cardCount": 30,
+    "ptcgoCode": "SIT",
+    "logoUrl": "https://images.pokemontcg.io/swsh12tg/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/swsh12tg/symbol.png"
   },
   {
     "id": "svp",
@@ -12366,7 +12785,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 115,
-    "cardCount": 165
+    "cardCount": 165,
+    "ptcgoCode": "PR-SV",
+    "logoUrl": "https://images.pokemontcg.io/svp/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/svp/symbol.png"
   },
   {
     "id": "swsh12pt5",
@@ -12478,7 +12900,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 101,
-    "cardCount": 160
+    "cardCount": 160,
+    "ptcgoCode": "CRZ",
+    "logoUrl": "https://images.pokemontcg.io/swsh12pt5/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/swsh12pt5/symbol.png"
   },
   {
     "id": "swsh12pt5gg",
@@ -12545,7 +12970,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 56,
-    "cardCount": 70
+    "cardCount": 70,
+    "ptcgoCode": "CRZ",
+    "logoUrl": "https://images.pokemontcg.io/swsh12pt5gg/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
   },
   {
     "id": "sv1",
@@ -12693,7 +13121,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 137,
-    "cardCount": 258
+    "cardCount": 258,
+    "ptcgoCode": "SVI",
+    "logoUrl": "https://images.pokemontcg.io/sv1/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/sv1/symbol.png"
   },
   {
     "id": "sv2",
@@ -12848,7 +13279,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 144,
-    "cardCount": 279
+    "cardCount": 279,
+    "ptcgoCode": "PAL",
+    "logoUrl": "https://images.pokemontcg.io/sv2/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/sv2/symbol.png"
   },
   {
     "id": "sv3",
@@ -13026,7 +13460,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 167,
-    "cardCount": 230
+    "cardCount": 230,
+    "ptcgoCode": "OBF",
+    "logoUrl": "https://images.pokemontcg.io/sv3/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/sv3/symbol.png"
   },
   {
     "id": "sv3pt5",
@@ -13188,7 +13625,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 151,
-    "cardCount": 207
+    "cardCount": 207,
+    "ptcgoCode": "MEW",
+    "logoUrl": "https://images.pokemontcg.io/sv3pt5/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/sv3pt5/symbol.png"
   },
   {
     "id": "sv4",
@@ -13343,7 +13783,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 144,
-    "cardCount": 266
+    "cardCount": 266,
+    "ptcgoCode": "PAR",
+    "logoUrl": "https://images.pokemontcg.io/sv4/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/sv4/symbol.png"
   },
   {
     "id": "sv4pt5",
@@ -13524,7 +13967,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 170,
-    "cardCount": 245
+    "cardCount": 245,
+    "ptcgoCode": "PAF",
+    "logoUrl": "https://images.pokemontcg.io/sv4pt5/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/sv4pt5/symbol.png"
   },
   {
     "id": "sv5",
@@ -13670,7 +14116,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 135,
-    "cardCount": 218
+    "cardCount": 218,
+    "ptcgoCode": "TEF",
+    "logoUrl": "https://images.pokemontcg.io/sv5/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/sv5/symbol.png"
   },
   {
     "id": "sv6",
@@ -13813,7 +14262,10 @@
     ],
     "uniqueCount": 2,
     "distinctPokemonCount": 132,
-    "cardCount": 226
+    "cardCount": 226,
+    "ptcgoCode": "TWM",
+    "logoUrl": "https://images.pokemontcg.io/sv6/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/sv6/symbol.png"
   },
   {
     "id": "sv6pt5",
@@ -13877,7 +14329,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 53,
-    "cardCount": 99
+    "cardCount": 99,
+    "ptcgoCode": "SFA",
+    "logoUrl": "https://images.pokemontcg.io/sv6pt5/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/sv6pt5/symbol.png"
   },
   {
     "id": "sv7",
@@ -14012,7 +14467,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 124,
-    "cardCount": 175
+    "cardCount": 175,
+    "ptcgoCode": "SCR",
+    "logoUrl": "https://images.pokemontcg.io/sv7/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/sv7/symbol.png"
   },
   {
     "id": "sv8",
@@ -14176,7 +14634,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 153,
-    "cardCount": 252
+    "cardCount": 252,
+    "ptcgoCode": "SSP",
+    "logoUrl": "https://images.pokemontcg.io/sv8/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/sv8/symbol.png"
   },
   {
     "id": "sv8pt5",
@@ -14262,7 +14723,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 75,
-    "cardCount": 180
+    "cardCount": 180,
+    "ptcgoCode": "PRE",
+    "logoUrl": "https://images.pokemontcg.io/sv8pt5/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/sv8pt5/symbol.png"
   },
   {
     "id": "sv9",
@@ -14412,7 +14876,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 139,
-    "cardCount": 190
+    "cardCount": 190,
+    "ptcgoCode": "JTG",
+    "logoUrl": "https://images.pokemontcg.io/sv9/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/sv9/symbol.png"
   },
   {
     "id": "sv10",
@@ -14576,7 +15043,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 153,
-    "cardCount": 244
+    "cardCount": 244,
+    "ptcgoCode": "DRI",
+    "logoUrl": "https://images.pokemontcg.io/sv10/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/sv10/symbol.png"
   },
   {
     "id": "zsv10pt5",
@@ -14664,7 +15134,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 77,
-    "cardCount": 172
+    "cardCount": 172,
+    "ptcgoCode": "BLK",
+    "logoUrl": "https://images.pokemontcg.io/zsv10pt5/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/zsv10pt5/symbol.png"
   },
   {
     "id": "rsv10pt5",
@@ -14754,7 +15227,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 79,
-    "cardCount": 173
+    "cardCount": 173,
+    "ptcgoCode": "WHT",
+    "logoUrl": "https://images.pokemontcg.io/rsv10pt5/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/rsv10pt5/symbol.png"
   },
   {
     "id": "me1",
@@ -14877,7 +15353,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 112,
-    "cardCount": 188
+    "cardCount": 188,
+    "ptcgoCode": "MEG",
+    "logoUrl": "https://images.pokemontcg.io/me1/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/me1/symbol.png"
   },
   {
     "id": "me2",
@@ -14974,7 +15453,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 86,
-    "cardCount": 130
+    "cardCount": 130,
+    "ptcgoCode": "PFL",
+    "logoUrl": "https://images.pokemontcg.io/me2/logo.png",
+    "symbolUrl": "https://images.pokemontcg.io/me2/symbol.png"
   },
   {
     "id": "me2pt5",
@@ -15159,7 +15641,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 174,
-    "cardCount": 295
+    "cardCount": 295,
+    "ptcgoCode": "ASC",
+    "logoUrl": "https://images.scrydex.com/pokemon/me2pt5-logo/logo",
+    "symbolUrl": "https://images.scrydex.com/pokemon/me2pt5-symbol/symbol"
   },
   {
     "id": "me3",
@@ -15237,7 +15722,10 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 67,
-    "cardCount": 124
+    "cardCount": 124,
+    "ptcgoCode": "POR",
+    "logoUrl": "https://images.scrydex.com/pokemon/me3-logo/logo",
+    "symbolUrl": "https://images.scrydex.com/pokemon/me3-symbol/symbol"
   },
   {
     "id": "me4",
@@ -15318,6 +15806,9 @@
     ],
     "uniqueCount": 0,
     "distinctPokemonCount": 70,
-    "cardCount": 122
+    "cardCount": 122,
+    "ptcgoCode": "CRI",
+    "logoUrl": "https://images.scrydex.com/pokemon/me4-logo/logo",
+    "symbolUrl": "https://images.scrydex.com/pokemon/me4-symbol/symbol"
   }
 ]
