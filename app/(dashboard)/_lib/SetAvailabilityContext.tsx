@@ -11,7 +11,7 @@ import {
 } from "react";
 import { SETS } from "@/lib/data";
 import { getSupabaseBrowser } from "@/lib/supabase/client";
-import { setSetAvailability } from "./availability-actions";
+import { clearAllSetOverrides, setSetAvailability } from "./availability-actions";
 
 // Sets released within this window are auto-flagged as buyable locally.
 const RECENCY_WINDOW_MS = 1000 * 60 * 60 * 24 * 30 * 18; // ~18 months
@@ -21,6 +21,7 @@ interface AvailabilityCtx {
   isAvailable: (setId: string) => boolean;
   hasOverride: (setId: string) => boolean;
   set: (setId: string, available: boolean | null) => void;
+  clearAll: () => void;
   availableSetIds: Set<string>;
   isPending: boolean;
 }
@@ -124,6 +125,18 @@ export function SetAvailabilityProvider({
     [userId],
   );
 
+  const clearAll = useCallback(() => {
+    if (!userId) return;
+    setOverrides(new Map());
+    startTransition(async () => {
+      try {
+        await clearAllSetOverrides();
+      } catch (err) {
+        console.error("clearAllSetOverrides failed", err);
+      }
+    });
+  }, [userId]);
+
   const availableSetIds = useMemo(() => {
     const out = new Set<string>();
     for (const s of SETS) if (isAvailable(s.id)) out.add(s.id);
@@ -137,6 +150,7 @@ export function SetAvailabilityProvider({
         isAvailable,
         hasOverride,
         set: setOverride,
+        clearAll,
         availableSetIds,
         isPending,
       }}

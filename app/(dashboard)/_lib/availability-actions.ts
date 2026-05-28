@@ -37,3 +37,13 @@ export async function setSetAvailability(
     );
   if (error) throw new Error(error.message);
 }
+
+export async function clearAllSetOverrides(): Promise<void> {
+  const userId = await requireUserId();
+  const supabase = await getSupabaseServer();
+  const { error } = await supabase
+    .from("set_availability")
+    .delete()
+    .eq("user_id", userId);
+  if (error) throw new Error(error.message);
+}
