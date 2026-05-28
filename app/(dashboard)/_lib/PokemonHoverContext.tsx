@@ -2,28 +2,28 @@
 
 import { createContext, useCallback, useContext, useState } from "react";
 
-interface TooltipState {
+interface HoverState {
   dex: number;
   anchor: DOMRect;
 }
 
-interface TooltipCtx {
-  state: TooltipState | null;
+interface HoverCtx {
+  state: HoverState | null;
   show: (dex: number, anchor: DOMRect) => void;
   hide: () => void;
 }
 
-const Ctx = createContext<TooltipCtx | null>(null);
+const Ctx = createContext<HoverCtx | null>(null);
 
-export function TooltipProvider({ children }: { children: React.ReactNode }) {
-  const [state, setState] = useState<TooltipState | null>(null);
+export function PokemonHoverProvider({ children }: { children: React.ReactNode }) {
+  const [state, setState] = useState<HoverState | null>(null);
   const show = useCallback((dex: number, anchor: DOMRect) => setState({ dex, anchor }), []);
   const hide = useCallback(() => setState(null), []);
   return <Ctx.Provider value={{ state, show, hide }}>{children}</Ctx.Provider>;
 }
 
-export function useTooltip() {
+export function usePokemonHover() {
   const ctx = useContext(Ctx);
-  if (!ctx) throw new Error("useTooltip must be inside TooltipProvider");
+  if (!ctx) throw new Error("usePokemonHover must be inside PokemonHoverProvider");
   return ctx;
 }

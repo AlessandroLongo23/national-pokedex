@@ -1,0 +1,120 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   LAYER 1 — PRIMITIVE COLOR PALETTE
+   ═══════════════════════════════════════════════════════════════════════════
+   The ONLY file in the codebase where raw color literals may appear.
+   Every semantic token in semantic.css resolves to one of these var()s.
+   Components must NEVER reference these directly — go through semantic.css.
+
+   Format: OKLCH — perceptually uniform, lets us keep hue constant across a
+   scale while tuning lightness + chroma independently.
+
+   Scale (per hue):
+     50   near-white tint
+     100  hairline
+     200  subtle backgrounds
+     300  disabled / hint
+     400  secondary text / icons
+     500  anchor — the "true" brand value
+     600  hover / pressed
+     700  deeper emphasis
+     800  dense surfaces (dark mode)
+     900  dark surfaces
+     950  near-black
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@theme {
+  /* ── Neutral (hue 265, cool zinc-ish) ─────────────────────────────────── */
+  --color-neutral-50:  oklch(0.985 0.002 265);
+  --color-neutral-100: oklch(0.967 0.003 265);
+  --color-neutral-200: oklch(0.902 0.005 265);
+  --color-neutral-300: oklch(0.847 0.006 265);
+  --color-neutral-400: oklch(0.692 0.010 265);
+  --color-neutral-500: oklch(0.538 0.011 265);
+  --color-neutral-600: oklch(0.421 0.011 265);
+  --color-neutral-700: oklch(0.341 0.010 265);
+  --color-neutral-800: oklch(0.234 0.007 265);
+  --color-neutral-900: oklch(0.171 0.005 265);
+  --color-neutral-950: oklch(0.106 0.004 265);
+
+  /* ── Brand primary — Indigo (hue 275) ─────────────────────────────────── */
+  /* 500 anchored at #6366F1 (the existing Lume accent). */
+  --color-brand-primary-50:  oklch(0.970 0.020 275);
+  --color-brand-primary-100: oklch(0.930 0.040 275);
+  --color-brand-primary-200: oklch(0.870 0.080 275);
+  --color-brand-primary-300: oklch(0.790 0.120 275);
+  --color-brand-primary-400: oklch(0.710 0.160 275);
+  --color-brand-primary-500: oklch(0.620 0.190 275);
+  --color-brand-primary-600: oklch(0.540 0.210 275);
+  --color-brand-primary-700: oklch(0.470 0.190 275);
+  --color-brand-primary-800: oklch(0.390 0.160 275);
+  --color-brand-primary-900: oklch(0.320 0.120 275);
+  --color-brand-primary-950: oklch(0.220 0.080 275);
+
+  /* ── Brand secondary — Amber / warm gold (hue 80) ─────────────────────── */
+  /* Complementary pop color. Use sparingly: upgrade/promo, highlights. */
+  --color-brand-secondary-50:  oklch(0.980 0.020 80);
+  --color-brand-secondary-100: oklch(0.955 0.050 80);
+  --color-brand-secondary-200: oklch(0.915 0.090 80);
+  --color-brand-secondary-300: oklch(0.870 0.125 80);
+  --color-brand-secondary-400: oklch(0.830 0.150 80);
+  --color-brand-secondary-500: oklch(0.785 0.160 80);
+  --color-brand-secondary-600: oklch(0.690 0.150 80);
+  --color-brand-secondary-700: oklch(0.580 0.130 80);
+  --color-brand-secondary-800: oklch(0.470 0.105 80);
+  --color-brand-secondary-900: oklch(0.380 0.080 80);
+  --color-brand-secondary-950: oklch(0.260 0.055 80);
+
+  /* ── Info — Blue (hue 245) ────────────────────────────────────────────── */
+  --color-info-50:  oklch(0.970 0.020 245);
+  --color-info-100: oklch(0.930 0.050 245);
+  --color-info-200: oklch(0.860 0.090 245);
+  --color-info-300: oklch(0.770 0.130 245);
+  --color-info-400: oklch(0.680 0.160 245);
+  --color-info-500: oklch(0.600 0.180 245);
+  --color-info-600: oklch(0.520 0.190 245);
+  --color-info-700: oklch(0.440 0.170 245);
+  --color-info-800: oklch(0.370 0.140 245);
+  --color-info-900: oklch(0.300 0.110 245);
+  --color-info-950: oklch(0.210 0.075 245);
+
+  /* ── Success — Green (hue 148) ────────────────────────────────────────── */
+  --color-success-50:  oklch(0.970 0.030 148);
+  --color-success-100: oklch(0.930 0.060 148);
+  --color-success-200: oklch(0.870 0.100 148);
+  --color-success-300: oklch(0.790 0.140 148);
+  --color-success-400: oklch(0.720 0.160 148);
+  --color-success-500: oklch(0.650 0.170 148);
+  --color-success-600: oklch(0.560 0.160 148);
+  --color-success-700: oklch(0.480 0.140 148);
+  --color-success-800: oklch(0.400 0.110 148);
+  --color-success-900: oklch(0.330 0.090 148);
+  --color-success-950: oklch(0.220 0.060 148);
+
+  /* ── Warning — Yellow (hue 95) ────────────────────────────────────────── */
+  /* Distinct from amber by higher lightness at 500 and narrower hue band. */
+  --color-warning-50:  oklch(0.980 0.030 95);
+  --color-warning-100: oklch(0.960 0.060 95);
+  --color-warning-200: oklch(0.930 0.100 95);
+  --color-warning-300: oklch(0.890 0.135 95);
+  --color-warning-400: oklch(0.855 0.155 95);
+  --color-warning-500: oklch(0.820 0.165 95);
+  --color-warning-600: oklch(0.700 0.150 88);
+  --color-warning-700: oklch(0.580 0.130 82);
+  --color-warning-800: oklch(0.470 0.105 78);
+  --color-warning-900: oklch(0.370 0.075 72);
+  --color-warning-950: oklch(0.250 0.050 65);
+
+  /* ── Danger — Red (hue 25) ────────────────────────────────────────────── */
+  /* Maps to the destructive button semantic. */
+  --color-danger-50:  oklch(0.970 0.020 25);
+  --color-danger-100: oklch(0.940 0.040 25);
+  --color-danger-200: oklch(0.890 0.080 25);
+  --color-danger-300: oklch(0.810 0.125 25);
+  --color-danger-400: oklch(0.720 0.165 25);
+  --color-danger-500: oklch(0.640 0.200 25);
+  --color-danger-600: oklch(0.560 0.210 25);
+  --color-danger-700: oklch(0.480 0.190 25);
+  --color-danger-800: oklch(0.400 0.160 25);
+  --color-danger-900: oklch(0.330 0.130 25);
+  --color-danger-950: oklch(0.220 0.090 25);
+}

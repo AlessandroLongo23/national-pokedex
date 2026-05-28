@@ -1,3 +1,4 @@
+import { PackagePlus } from "lucide-react";
 import { PRICE_SOURCE_CURRENCY } from "@/lib/pricing/pokemontcg";
 import { PageHeader } from "../../_components/PageHeader";
 import { LogPackFlow } from "../../_components/LogPackFlow";
@@ -15,7 +16,7 @@ export default async function NewPackPage({ searchParams }: PageProps) {
   const defaultCurrency = PRICE_SOURCE_CURRENCY[prefs.priceSource];
   return (
     <div className="mx-auto max-w-[1280px] space-y-6">
-      <PageHeader eyebrow="New pack" title="Log a pack" />
+      <PageHeader icon={PackagePlus} title="Log a pack" />
       <LogPackFlow initialSetId={set} defaultCurrency={defaultCurrency} />
     </div>
   );

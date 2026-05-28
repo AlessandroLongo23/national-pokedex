@@ -1,20 +1,64 @@
 "use client";
 
+import { useMemo } from "react";
+import { usePathname } from "next/navigation";
+import {
+  LogOut,
+  Settings,
+  Layers,
+  CreditCard,
+  MoreHorizontal,
+  Notebook,
+  FolderOpen,
+  LineChart,
+  Package,
+  Receipt,
+  Heart,
+  Sparkles,
+  type LucideIcon,
+} from "lucide-react";
 import { OwnedCardsProvider, type InitialOwnedCard } from "../_lib/OwnedCardsContext";
 import { WishlistProvider } from "../_lib/WishlistContext";
 import { FavoritesProvider } from "../_lib/FavoritesContext";
 import { SetAvailabilityProvider } from "../_lib/SetAvailabilityContext";
-import { TooltipProvider } from "../_lib/TooltipContext";
+import { PokemonHoverProvider } from "../_lib/PokemonHoverContext";
 import { PageTitleProvider } from "../_lib/PageTitleContext";
-import { UserProvider } from "../_lib/UserContext";
+import { UserProvider, useUser } from "../_lib/UserContext";
 import { CardPreviewProvider } from "../_lib/CardPreviewContext";
-import { MobileNav, Sidebar } from "./Sidebar";
-import { MobileHeader } from "./MobileHeader";
+import { signOut } from "../_lib/auth-actions";
 import { LogPackFab } from "./LogPackFab";
-import { Tooltip } from "./Tooltip";
+import { PokemonHoverTooltip } from "./PokemonHoverTooltip";
 import { CardPreviewOverlay } from "./CardPreviewOverlay";
+import { AppShell } from "@/lib/components/shell/AppShell";
+import {
+  Sidebar,
+  type SidebarNavGroup,
+  type SidebarNavItem,
+} from "@/lib/components/shell/Sidebar";
+import { TopBar } from "@/lib/components/shell/TopBar";
+import { Breadcrumbs } from "@/lib/components/shell/Breadcrumbs";
+import { useBreadcrumbs } from "@/lib/components/shell/useBreadcrumbs";
+import {
+  SidebarUserCard,
+  type UserCardMenuItem,
+} from "@/lib/components/shell/SidebarUserCard";
+import { ThemeToggle } from "@/lib/theme/ThemeToggle";
+import { PokedexLogo, PokeballIcon } from "@/lib/components/ui/PokedexLogo";
 import type { PriceSource } from "@/lib/pricing/pokemontcg";
 import type { MegaPlacement } from "../_lib/mega-prefs";
+
+interface ShellProps {
+  userId: string;
+  email: string;
+  priceSource: PriceSource;
+  treatMegasAsSeparate: boolean;
+  megaPlacement: MegaPlacement;
+  initialOwned: InitialOwnedCard[];
+  initialWishlist: string[];
+  initialFavorites: string[];
+  initialAvailability: { setId: string; available: boolean }[];
+  children: React.ReactNode;
+}
 
 export function Shell({
   userId,
@@ -27,19 +71,7 @@ export function Shell({
   initialFavorites,
   initialAvailability,
   children,
-}: {
-  userId: string;
-  email: string;
-  priceSource: PriceSource;
-  treatMegasAsSeparate: boolean;
-  megaPlacement: MegaPlacement;
-  initialOwned: InitialOwnedCard[];
-  initialWishlist: string[];
-  initialFavorites: string[];
-  initialAvailability: { setId: string; available: boolean }[];
-  children: React.ReactNode;
-}) {
-  const isGuest = !userId;
+}: ShellProps) {
   return (
     <UserProvider
       userId={userId}
@@ -53,21 +85,11 @@ export function Shell({
           <FavoritesProvider userId={userId} initial={initialFavorites}>
             <SetAvailabilityProvider userId={userId} initial={initialAvailability}>
               <PageTitleProvider>
-                <TooltipProvider>
+                <PokemonHoverProvider>
                   <CardPreviewProvider>
-                    <div className="flex min-h-screen">
-                      <Sidebar />
-                      <div className="flex min-w-0 flex-1 flex-col">
-                        <MobileHeader />
-                        <main className="flex-1 px-4 py-6 md:px-8 md:py-8">{children}</main>
-                        <MobileNav />
-                      </div>
-                    </div>
-                    {!isGuest && <LogPackFab />}
-                    <Tooltip />
-                    <CardPreviewOverlay />
+                    <ShellInner>{children}</ShellInner>
                   </CardPreviewProvider>
-                </TooltipProvider>
+                </PokemonHoverProvider>
               </PageTitleProvider>
             </SetAvailabilityProvider>
           </FavoritesProvider>
@@ -75,4 +97,131 @@ export function Shell({
       </OwnedCardsProvider>
     </UserProvider>
   );
+}
+
+function ShellInner({ children }: { children: React.ReactNode }) {
+  const { isGuest, email, treatMegasAsSeparate, megaPlacement } = useUser();
+  const pathname = usePathname();
+  const breadcrumbItems = useBreadcrumbs(pathname);
+  const showMegasNav = !isGuest && treatMegasAsSeparate && megaPlacement === "separate";
+
+  const navGroups = useMemo<SidebarNavGroup[]>(
+    () => buildNavGroups({ showMegasNav, isGuest }),
+    [showMegasNav, isGuest],
+  );
+
+  const pinnedLinks: SidebarNavItem[] = isGuest
+    ? []
+    : [{ name: "Settings", url: "/settings", icon: Settings }];
+
+  const userInitials = email ? email[0]!.toUpperCase() : "?";
+
+  const userMenuItems: UserCardMenuItem[] = [
+    { type: "link", label: "Settings", href: "/settings", icon: Settings },
+    {
+      type: "button",
+      label: "Sign out",
+      loadingLabel: "Signing out…",
+      icon: LogOut,
+      danger: true,
+      onClick: async () => {
+        await signOut();
+      },
+    },
+  ];
+
+  const sidebar = (
+    <Sidebar
+      identity={
+        <div className="flex h-10 items-center px-2">
+          <PokedexLogo size="md" />
+        </div>
+      }
+      navGroups={navGroups}
+      pinnedLinks={pinnedLinks}
+      userCard={
+        !isGuest ? (
+          <SidebarUserCard
+            name={email}
+            initials={userInitials}
+            menuItems={userMenuItems}
+          />
+        ) : undefined
+      }
+    />
+  );
+
+  const topBar = (
+    <TopBar
+      leftCluster={<Breadcrumbs items={breadcrumbItems} />}
+      rightCluster={<ThemeToggle />}
+    />
+  );
+
+  return (
+    <>
+      <AppShell sidebar={sidebar} topBar={topBar}>
+        {children}
+      </AppShell>
+      {!isGuest && <LogPackFab />}
+      <PokemonHoverTooltip />
+      <CardPreviewOverlay />
+    </>
+  );
+}
+
+interface FlatNavSpec {
+  name: string;
+  url: string;
+  icon: LucideIcon | ((p: { className?: string }) => React.ReactElement);
+  group: "Browse" | "Collection" | "Activity";
+}
+
+function buildNavGroups({
+  showMegasNav,
+  isGuest,
+}: {
+  showMegasNav: boolean;
+  isGuest: boolean;
+}): SidebarNavGroup[] {
+  const specs: FlatNavSpec[] = [
+    { name: "Pokédex", url: "/pokedex", icon: PokeballIcon, group: "Browse" },
+    ...(showMegasNav
+      ? ([
+          {
+            name: "Mega Evolutions",
+            url: "/megas",
+            icon: Sparkles,
+            group: "Browse" as const,
+          },
+        ] satisfies FlatNavSpec[])
+      : []),
+    { name: "Sets", url: "/sets", icon: Layers, group: "Browse" },
+    { name: "Cards", url: "/cards", icon: CreditCard, group: "Browse" },
+    { name: "Other cards", url: "/other", icon: MoreHorizontal, group: "Browse" },
+  ];
+
+  if (!isGuest) {
+    specs.push(
+      { name: "Binders", url: "/binders", icon: Notebook, group: "Collection" },
+      { name: "Collection", url: "/collection", icon: FolderOpen, group: "Collection" },
+      { name: "Portfolio", url: "/portfolio", icon: LineChart, group: "Collection" },
+      { name: "Wishlist", url: "/wishlist", icon: Heart, group: "Collection" },
+      { name: "Packs", url: "/packs", icon: Package, group: "Activity" },
+      { name: "Transactions", url: "/transactions", icon: Receipt, group: "Activity" },
+    );
+  }
+
+  const groupOrder = (
+    isGuest ? (["Browse"] as const) : (["Browse", "Collection", "Activity"] as const)
+  ).filter(Boolean);
+
+  return groupOrder
+    .map((title) => ({
+      title,
+      items: specs
+        .filter((s) => s.group === title)
+        .map(({ name, url, icon }) => ({ name, url, icon })),
+    }))
+    .filter((g) => g.items.length > 0);
 }

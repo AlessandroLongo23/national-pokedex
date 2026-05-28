@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import { CreditCard } from "lucide-react";
 import { getAllCards, distinctArtists } from "@/lib/data/binder-scope";
 import { PageHeader } from "../_components/PageHeader";
 import { CardsBrowser } from "./_components/CardsBrowser";
@@ -33,7 +34,7 @@ export default function CardsPage() {
   return (
     <div className="mx-auto max-w-[1280px] space-y-6">
       <PageHeader
-        eyebrow="Catalog"
+        icon={CreditCard}
         title="Cards"
         subtitle="Every card across your tracked sets. Filter by set, rarity, type, artist, or dex range."
       />

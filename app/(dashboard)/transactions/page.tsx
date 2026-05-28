@@ -13,6 +13,7 @@ import {
   type LedgerRow,
   type TransactionKind,
 } from "@/lib/ledger/aggregates";
+import { Receipt } from "lucide-react";
 import { isLedgerCurrency } from "@/lib/ledger/money";
 import { PageHeader } from "../_components/PageHeader";
 import { requireUserId } from "../_lib/current-user";
@@ -151,7 +152,7 @@ export default async function TransactionsPage() {
   return (
     <div className="mx-auto max-w-[1280px]">
       <LedgerRealtime userId={userId} />
-      <PageHeader title="Transactions" />
+      <PageHeader icon={Receipt} title="Transactions" />
 
       <LedgerHero
         kpis={kpis}

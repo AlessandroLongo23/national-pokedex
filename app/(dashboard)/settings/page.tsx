@@ -1,3 +1,4 @@
+import { Settings } from "lucide-react";
 import { PageHeader } from "../_components/PageHeader";
 import { requireUserId } from "../_lib/current-user";
 import { loadUserPreferences } from "../_lib/user-preferences";
@@ -11,7 +12,7 @@ export default async function SettingsPage() {
   return (
     <div className="mx-auto max-w-[640px] space-y-6">
       <PageHeader
-        eyebrow="Account"
+        icon={Settings}
         title="Settings"
         subtitle="Per-account preferences. More options land as features grow."
       />

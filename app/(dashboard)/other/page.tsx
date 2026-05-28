@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MoreHorizontal } from "lucide-react";
 import { loadOtherCardsBySubtype } from "@/lib/data";
 import {
   OTHER_SUBTYPES,
@@ -20,6 +21,7 @@ export default async function OtherCardsHubPage() {
   return (
     <div className="mx-auto max-w-[1280px] space-y-6">
       <PageHeader
+        icon={MoreHorizontal}
         title="Other cards"
         subtitle="Trainers and Energies — every set you can find them in. Less popular than Pokémon, but you still need them to complete a master set."
       />

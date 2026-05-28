@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowRight, CreditCard, Layers, type LucideIcon } from "lucide-react";
 import { POKEDEX, SETS } from "@/lib/data";
 import { getAllCards } from "@/lib/data/binder-scope";
-import { PokeballIcon } from "./Logo";
+import { PokeballIcon } from "@/lib/components/ui/PokedexLogo";
 
 export async function PublicHero() {
   const allCards = await getAllCards();

@@ -1,3 +1,4 @@
+import { Package } from "lucide-react";
 import { getSupabaseServer } from "@/lib/supabase/server";
 import { CARD_INDEX, loadSetCards } from "@/lib/data";
 import type { CardEntry } from "@/lib/data/types";
@@ -104,7 +105,7 @@ export default async function PacksPage() {
   return (
     <div className="mx-auto max-w-[1280px] space-y-8">
       <PageHeader
-        eyebrow="Recommendation"
+        icon={Package}
         title="Packs"
         subtitle="Rarity-aware simulation of every set against your current binder. Toggle the local-store filter to focus on sets you can actually buy."
       />

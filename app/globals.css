@@ -1,67 +1,327 @@
 @import "tailwindcss";
 
-@theme {
-  /* Surfaces — Tailwind zinc scale */
-  --color-bg: #09090b;            /* zinc-950 */
-  --color-panel: #18181b;         /* zinc-900 */
-  --color-panel-2: #27272a;       /* zinc-800 */
-  --color-panel-3: #3f3f46;       /* zinc-700 */
-  --color-text: #f4f4f5;          /* zinc-100 */
-  --color-muted: #a1a1aa;         /* zinc-400 */
-  --color-border: #27272a;        /* zinc-800 */
-  --color-border-strong: #3f3f46; /* zinc-700 */
+/* ════════════════════════════════════════════════════════════════════════════
+   POKÉDEX DESIGN TOKEN SYSTEM (ported from Lume)
+   Layer 1 (palette) → Layer 2 (primitives) → Layer 3 (semantic).
+   Palette holds the only color literals; semantic maps roles → palette;
+   primitives cover everything else. See lib/styles/tokens/ for details.
+   ════════════════════════════════════════════════════════════════════════════ */
+@import "../lib/styles/tokens/palette.css";
+@import "../lib/styles/tokens/primitives.css";
+@import "../lib/styles/tokens/semantic.css";
 
-  /* Accent — cool blue. Used for active nav, primary buttons, focus rings.
-     Distinct from the "owned" amber so each color has one job. */
-  --color-accent: #60a5fa;
-  --color-accent-dark: #2563eb;
+@custom-variant dark (&:where(.dark, .dark *));
 
-  /* Status semantics — used everywhere consistently */
-  --color-owned: #fbbf24;        /* warm amber */
-  --color-owned-dark: #b45309;
-  --color-covered: #34d399;      /* cool emerald */
-  --color-covered-dark: #047857;
-  --color-missing: #f87171;      /* soft red */
-  --color-missing-dark: #991b1b;
+/* ════════════════════════════════════════════════════════════════════════════
+   SHADCN-STYLE TOKEN BRIDGE
+   Re-exposes the semantic --lume-* tokens as the shadcn vocabulary
+   (--background, --primary, --card, …) so any future shadcn-style component
+   transparently picks up the theme.
+   ════════════════════════════════════════════════════════════════════════════ */
 
-  /* Series tints (badge use only) */
-  --color-me-tint: #a78bff;
-  --color-sv-tint: #5db8ff;
-
-  /* Mega Evolution accent — slate violet, distinct from accent + owned so a
-     Mega slot reads as "different kind of Pokémon" without competing with
-     ownership or selection signals. */
-  --color-mega: #a78bff;
-
-  --font-sans:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
-    "Helvetica Neue", sans-serif;
+:root {
+  --background:           var(--lume-bg);
+  --foreground:           var(--lume-text);
+  --card:                 var(--lume-surface-raised);
+  --card-foreground:      var(--lume-text);
+  --popover:              var(--lume-surface-raised);
+  --popover-foreground:   var(--lume-text);
+  --primary:              var(--lume-button-accent-bg);
+  --primary-foreground:   var(--lume-button-accent-fg);
+  --secondary:            var(--lume-button-secondary-bg);
+  --secondary-foreground: var(--lume-button-secondary-fg);
+  --muted:                var(--color-neutral-100);
+  --muted-foreground:     var(--lume-text-muted);
+  --accent:               var(--color-neutral-100);
+  --accent-foreground:    var(--lume-text);
+  --destructive:          var(--lume-button-destructive-bg);
+  --success:              var(--lume-success-fg);
+  --warning:              var(--lume-warning-fg);
+  --border:               var(--lume-border);
+  --input:                var(--lume-border);
+  --ring:                 var(--lume-ring-focus);
+  --radius:               var(--radius-lg);
+  --sidebar:                    var(--lume-surface);
+  --sidebar-foreground:         var(--lume-text);
+  --sidebar-primary:            var(--lume-button-accent-bg);
+  --sidebar-primary-foreground: var(--lume-button-accent-fg);
+  --sidebar-accent:             var(--color-neutral-100);
+  --sidebar-accent-foreground:  var(--lume-text);
+  --sidebar-border:             var(--lume-border);
+  --sidebar-ring:               var(--lume-ring-focus);
 }
+
+.dark {
+  --background:           var(--lume-bg);
+  --foreground:           var(--lume-text);
+  --card:                 var(--lume-surface-raised);
+  --card-foreground:      var(--lume-text);
+  --popover:              var(--lume-surface-raised);
+  --popover-foreground:   var(--lume-text);
+  --primary:              var(--lume-button-accent-bg);
+  --primary-foreground:   var(--lume-button-accent-fg);
+  --secondary:            var(--lume-button-secondary-bg);
+  --secondary-foreground: var(--lume-button-secondary-fg);
+  /* Sidebar/card surface lives at L 0.232, so muted/accent (the hover-bg role)
+     pushes up to ~0.295 for a visible but quiet hover. */
+  --muted:                oklch(0.295 0.010 265);
+  --muted-foreground:     var(--lume-text-muted);
+  --accent:               oklch(0.295 0.010 265);
+  --accent-foreground:    var(--lume-text);
+  --destructive:          var(--lume-button-destructive-bg);
+  --success:              var(--lume-success-fg);
+  --warning:              var(--lume-warning-fg);
+  --border:               var(--lume-border);
+  --input:                var(--lume-border);
+  --ring:                 var(--lume-ring-focus);
+  --sidebar:                    var(--lume-surface);
+  --sidebar-foreground:         var(--lume-text);
+  --sidebar-primary:            var(--lume-button-accent-bg);
+  --sidebar-primary-foreground: var(--lume-button-accent-fg);
+  --sidebar-accent:             oklch(0.295 0.010 265);
+  --sidebar-accent-foreground:  var(--lume-text);
+  --sidebar-border:             var(--lume-border);
+  --sidebar-ring:               var(--lume-ring-focus);
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   POKÉDEX-SPECIFIC SEMANTIC TOKENS
+   Status (owned / covered / missing) and series (mega / me-tint / sv-tint).
+   Defined per-theme so the same utility (text-owned, bg-missing/10, …)
+   reads correctly on both light and dark surfaces. Dark values match the
+   pre-port hex palette; light values are OKLCH-tuned for ≥4.5:1 against
+   the light surface family.
+   ════════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  --pokedex-owned:           oklch(0.685 0.165 80);    /* amber, deep enough on white */
+  --pokedex-owned-dark:      oklch(0.530 0.155 70);    /* darker amber for borders / strong text */
+  --pokedex-covered:         oklch(0.580 0.145 165);   /* emerald */
+  --pokedex-covered-dark:    oklch(0.430 0.135 160);
+  --pokedex-missing:         oklch(0.595 0.205 25);    /* red */
+  --pokedex-missing-dark:    oklch(0.445 0.185 25);
+  --pokedex-mega:            oklch(0.555 0.180 290);   /* violet */
+  --pokedex-me-tint:         oklch(0.555 0.180 290);
+  --pokedex-sv-tint:         oklch(0.555 0.155 234);   /* SV blue */
+}
+
+.dark {
+  --pokedex-owned:           oklch(0.850 0.170 86);    /* ≈ #fbbf24 — original amber */
+  --pokedex-owned-dark:      oklch(0.645 0.145 70);    /* ≈ #b45309 */
+  --pokedex-covered:         oklch(0.780 0.140 167);   /* ≈ #34d399 */
+  --pokedex-covered-dark:    oklch(0.535 0.130 162);   /* ≈ #047857 */
+  --pokedex-missing:         oklch(0.740 0.180 22);    /* ≈ #f87171 */
+  --pokedex-missing-dark:    oklch(0.460 0.180 25);    /* ≈ #991b1b */
+  --pokedex-mega:            oklch(0.715 0.170 290);   /* ≈ #a78bff */
+  --pokedex-me-tint:         oklch(0.715 0.170 290);
+  --pokedex-sv-tint:         oklch(0.745 0.135 234);   /* ≈ #5db8ff */
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   TAILWIND UTILITY SURFACE
+   Exposes every CSS variable above as a Tailwind color utility. Includes:
+   - shadcn-style (bg-background, text-primary, …)
+   - pokédex backward-compat (bg-panel, text-text, text-muted, border-border,
+     text-accent, text-owned, …) — ~1000 utility usages depend on these
+   ════════════════════════════════════════════════════════════════════════════ */
+@theme inline {
+  /* shadcn vocabulary */
+  --color-background:                   var(--background);
+  --color-foreground:                   var(--foreground);
+  --color-card:                         var(--card);
+  --color-card-foreground:              var(--card-foreground);
+  --color-popover:                      var(--popover);
+  --color-popover-foreground:           var(--popover-foreground);
+  --color-primary:                      var(--primary);
+  --color-primary-foreground:           var(--primary-foreground);
+  --color-secondary:                    var(--secondary);
+  --color-secondary-foreground:         var(--secondary-foreground);
+  --color-muted:                        var(--muted);
+  --color-muted-foreground:             var(--muted-foreground);
+  --color-accent:                       var(--accent);
+  --color-accent-foreground:            var(--accent-foreground);
+  --color-destructive:                  var(--destructive);
+  --color-success:                      var(--success);
+  --color-warning:                      var(--warning);
+  --color-border:                       var(--border);
+  --color-input:                        var(--input);
+  --color-ring:                         var(--ring);
+  --color-sidebar:                      var(--sidebar);
+  --color-sidebar-foreground:           var(--sidebar-foreground);
+  --color-sidebar-primary:              var(--sidebar-primary);
+  --color-sidebar-primary-foreground:   var(--sidebar-primary-foreground);
+  --color-sidebar-accent:               var(--sidebar-accent);
+  --color-sidebar-accent-foreground:    var(--sidebar-accent-foreground);
+  --color-sidebar-border:               var(--sidebar-border);
+  --color-sidebar-ring:                 var(--sidebar-ring);
+
+  /* Pokédex backward-compat (legacy utility names → semantic vars) */
+  --color-bg:                           var(--lume-bg);
+  --color-panel:                        var(--lume-surface-raised);
+  --color-panel-2:                      var(--muted);
+  --color-panel-3:                      var(--color-neutral-200);
+  --color-text:                         var(--lume-text);
+  --color-muted-fg:                     var(--lume-text-muted);
+  /* `text-muted` collides with shadcn's bg-muted utility — we want it as a
+     text color in pokédex callsites, so override the foreground role on it. */
+  --color-border-strong:                var(--color-neutral-300);
+
+  /* Pokédex status + series, theme-aware */
+  --color-owned:                        var(--pokedex-owned);
+  --color-owned-dark:                   var(--pokedex-owned-dark);
+  --color-covered:                      var(--pokedex-covered);
+  --color-covered-dark:                 var(--pokedex-covered-dark);
+  --color-missing:                      var(--pokedex-missing);
+  --color-missing-dark:                 var(--pokedex-missing-dark);
+  --color-mega:                         var(--pokedex-mega);
+  --color-me-tint:                      var(--pokedex-me-tint);
+  --color-sv-tint:                      var(--pokedex-sv-tint);
+
+  /* Accent washes (Lume accent-light/muted, repurposed for backward compat) */
+  --color-accent-soft:                  var(--lume-accent-light);
+  --color-accent-muted:                 var(--lume-accent-muted);
+}
+
+/* `text-muted` is referenced 374 times as a body-text color, so we override
+   Tailwind's auto-generated text-muted utility (which would resolve to the
+   hover-bg from shadcn) and point it at the foreground muted role instead.
+   bg-muted still works as expected because Tailwind generates bg/border
+   utilities from --color-muted, but the standalone text-muted now uses
+   the foreground variant we expose under --color-muted-fg. */
+@layer utilities {
+  .text-muted {
+    color: var(--color-muted-fg);
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   BASE
+   ════════════════════════════════════════════════════════════════════════════ */
 
 html,
 body {
-  background: var(--color-bg);
-  color: var(--color-text);
-  font-family: var(--font-sans);
+  background: var(--lume-bg);
+  color: var(--lume-text);
   font-feature-settings: "ss01", "cv11";
 }
 
-/* Tabular numerals utility — keeps percentages and counters from jittering */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   THEME WIPE TRANSITION
+   View Transition API drives a directional clip-path wipe when ThemeProvider
+   toggles light ↔ dark. Reduced-motion users get an instant switch.
+   ════════════════════════════════════════════════════════════════════════════ */
+
+.disable-transitions *,
+.disable-transitions *::before,
+.disable-transitions *::after {
+  transition: none !important;
+  animation: none !important;
+}
+
+@keyframes wipeRight {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0% 0 0); }
+}
+
+@keyframes wipeLeft {
+  from { clip-path: inset(0 0 0 100%); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+[data-theme='dark']::view-transition-new(root) {
+  animation: wipeRight 320ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme='light']::view-transition-new(root) {
+  animation: wipeLeft 320ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   APP SHELL HELPERS
+   Used by AppShell, Sidebar, and TopBar.
+   ════════════════════════════════════════════════════════════════════════════ */
+
+@keyframes shellPageEnter {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.shell-page-enter {
+  animation: shellPageEnter 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shell-page-enter { animation: none; }
+}
+
+.shell-content-fade {
+  background: linear-gradient(to bottom, var(--lume-surface-raised), transparent);
+}
+.dark .shell-content-fade {
+  background: linear-gradient(to bottom, oklch(0.232 0.007 265), transparent);
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   POKÉDEX UTILITIES — preserved from the pre-port stylesheet
+   ════════════════════════════════════════════════════════════════════════════ */
+
+/* Tabular numerals — keeps percentages and counters from jittering */
 .nums {
   font-variant-numeric: tabular-nums;
   font-feature-settings: "tnum";
 }
 
-/* Single canonical micro-label. Anywhere a small uppercase eyebrow,
-   section-tag, or meta-label appears, use this — never roll one inline
-   with bespoke tracking/size. Declared via @utility so Tailwind v4 keeps
-   it in the build alongside framework-generated utilities. */
+/* Single canonical micro-label. Use anywhere a small uppercase eyebrow,
+   section-tag, or meta-label appears. */
 @utility eyebrow {
   font-size: 11px;
   line-height: 1;
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  color: var(--color-muted);
+  color: var(--lume-text-muted);
   font-variant-numeric: tabular-nums;
   font-feature-settings: "tnum";
 }
@@ -69,21 +329,19 @@ body {
 /* Subtle scrollbar so long lists don't shout */
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--color-border-strong) transparent;
+  scrollbar-color: var(--lume-border) transparent;
 }
 
-/* Pokédex cell hover: warm glow keyed to elemental type. The CSS variable
-   --type-glow is set inline by PokemonCell. Kept here so the easing curve
-   is reusable and not duplicated across instances. */
+/* Pokédex cell hover — warm glow keyed to elemental type. The CSS variable
+   --type-glow is set inline by PokemonCell. */
 .pokemon-cell:hover {
   box-shadow:
-    0 0 0 1px rgb(255 255 255 / 0.08),
-    0 8px 24px -6px var(--type-glow, rgb(0 0 0 / 0.5)),
-    0 2px 6px -2px rgb(0 0 0 / 0.6);
+    0 0 0 1px color-mix(in oklch, var(--lume-text) 8%, transparent),
+    0 8px 24px -6px var(--type-glow, oklch(0 0 0 / 0.5)),
+    0 2px 6px -2px oklch(0 0 0 / 0.6);
 }
 
-/* Stylized range slider used by the grid density control. Native styling
-   on dark backgrounds clashes with the rest of the toolbar vocabulary. */
+/* Stylized range slider used by the grid density control. */
 .range-density {
   -webkit-appearance: none;
   appearance: none;
@@ -108,8 +366,8 @@ body {
   height: 12px;
   margin-top: -5px;
   border-radius: 999px;
-  background: var(--color-text);
-  box-shadow: 0 0 0 3px var(--color-bg), 0 0 0 4px var(--color-border-strong);
+  background: var(--lume-text);
+  box-shadow: 0 0 0 3px var(--lume-bg), 0 0 0 4px var(--color-border-strong);
   transition: transform 120ms ease-out;
 }
 .range-density::-webkit-slider-thumb:hover {
@@ -120,13 +378,11 @@ body {
   height: 12px;
   border: 0;
   border-radius: 999px;
-  background: var(--color-text);
-  box-shadow: 0 0 0 3px var(--color-bg), 0 0 0 4px var(--color-border-strong);
+  background: var(--lume-text);
+  box-shadow: 0 0 0 3px var(--lume-bg), 0 0 0 4px var(--color-border-strong);
 }
 
-/* Filter toolbar — popover open + sheet open animations.
-   Live in globals so the keyframe names resolve in components that
-   reference them via Tailwind's arbitrary-animation utility. */
+/* Filter toolbar — popover open + sheet open animations. */
 @keyframes popover-in {
   from {
     opacity: 0;
@@ -138,12 +394,8 @@ body {
   }
 }
 @keyframes sheet-fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 @keyframes sheet-slide {
   from {

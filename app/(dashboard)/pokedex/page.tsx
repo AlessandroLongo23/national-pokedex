@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { MEGAS, POKEDEX } from "@/lib/data";
 import { PageHeader } from "../_components/PageHeader";
+import { PokeballIcon } from "@/lib/components/ui/PokedexLogo";
 import { PokedexGrid } from "../_components/PokedexGrid";
 import { CardVariantPicker } from "../_components/CardVariantPicker";
 import { useOwnedCards } from "../_lib/OwnedCardsContext";
@@ -22,14 +23,14 @@ export default function PokedexPage() {
   return (
     <div className="mx-auto max-w-[1280px] space-y-6">
       <PageHeader
-        eyebrow="Catalog"
+        icon={PokeballIcon}
         title="Pokédex"
         subtitle={
           isGuest
             ? "Every National Pokédex entry, with the cards available across the tracked sets."
             : "Click a Pokémon to pick the card you own."
         }
-        right={
+        actions={
           isGuest ? (
             <Link
               href="/login"

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { requestPasswordReset } from "./actions";
-import { Logo } from "@/app/(dashboard)/_components/Logo";
+import { LinkedPokedexLogo } from "@/lib/components/ui/PokedexLogo";
 
 export default async function ForgotPasswordPage({
   searchParams,
@@ -11,7 +11,7 @@ export default async function ForgotPasswordPage({
   return (
     <main className="mx-auto flex min-h-screen max-w-md flex-col justify-center px-6">
       <h1 className="mb-8">
-        <Logo />
+        <LinkedPokedexLogo />
       </h1>
       <p className="mb-6 text-sm text-muted">
         Enter your email and we&apos;ll send you a link to reset your password.

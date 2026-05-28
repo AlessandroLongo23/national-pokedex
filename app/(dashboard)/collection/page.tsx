@@ -1,3 +1,4 @@
+import { FolderOpen } from "lucide-react";
 import { requireUserId } from "../_lib/current-user";
 import { getSupabaseServer } from "@/lib/supabase/server";
 import { PageHeader } from "../_components/PageHeader";
@@ -60,7 +61,7 @@ export default async function CollectionPage() {
   return (
     <div className="mx-auto max-w-[1280px] space-y-8">
       <PageHeader
-        eyebrow="Yours"
+        icon={FolderOpen}
         title="Collection"
         subtitle="Everything you own, surfaced through rails."
       />

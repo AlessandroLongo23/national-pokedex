@@ -1,0 +1,201 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   LAYER 2 — PRIMITIVE (THEME-INDEPENDENT) TOKENS
+   ═══════════════════════════════════════════════════════════════════════════
+   Scales that do NOT change between light and dark mode:
+     - spacing
+     - radius
+     - typography (family, size, weight, line-height, tracking)
+     - opacity
+     - shadow (shadow *color* lives in semantic.css; blur/offset here)
+     - motion (duration, easing)
+     - z-index
+
+   Every value here is a raw unit (rem / px / ms / unitless). No color refs.
+   Declared under @theme so they become Tailwind utilities automatically.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@theme {
+  /* ── Spacing (4px grid, no odd steps) ─────────────────────────────────── */
+  /* Tailwind's default --spacing is 0.25rem; we re-declare for clarity     */
+  /* and to document the allowed subset. Use these via p-*, m-*, gap-*.    */
+  --spacing: 0.25rem; /* base unit = 4px */
+
+  /* ── Radius ───────────────────────────────────────────────────────────── */
+  --radius-none: 0;
+  --radius-sm:   0.25rem;  /*  4px — pill tags, chips */
+  --radius-md:   0.5rem;   /*  8px — buttons, inputs  */
+  --radius-lg:   0.75rem;  /* 12px — default cards    */
+  --radius-xl:   1rem;     /* 16px — pricing cards    */
+  --radius-2xl:  1.5rem;   /* 24px — hero panels      */
+  --radius-full: 9999px;   /* avatars, fully round    */
+
+  /* ── Control heights — buttons, inputs, selects, dropdowns ────────────
+     Single source of truth so every toolbar control aligns on a 36px
+     baseline: Button, Searchbar, ToggleButton, DropdownMenu trigger,
+     ColumnPicker trigger, every page-header action. md is the default
+     across the admin app; sm is for table inline filters; lg is reserved
+     for landing-page CTAs and onboarding.
+
+     Pair with the matching --lume-control-px-*, --lume-control-text-* and
+     --lume-control-gap-* below. iconOnly uses width = height (square). */
+  --lume-control-h-sm: 2rem;     /* 32px — table inline filters       */
+  --lume-control-h-md: 2.25rem;  /* 36px — default toolbar baseline   */
+  --lume-control-h-lg: 2.75rem;  /* 44px — landing CTAs, touch target */
+
+  --lume-control-px-sm: 0.5rem;   /*  8px */
+  --lume-control-px-md: 0.75rem;  /* 12px */
+  --lume-control-px-lg: 1.125rem; /* 18px */
+
+  --lume-control-text-sm: 0.8125rem; /* 13px */
+  --lume-control-text-md: 0.875rem;  /* 14px — reads cleanly at 36px  */
+  --lume-control-text-lg: 1rem;      /* 16px */
+
+  --lume-control-gap-sm: 0.375rem; /* 6px between icon and label */
+  --lume-control-gap-md: 0.5rem;   /* 8px */
+  --lume-control-gap-lg: 0.5rem;   /* 8px */
+
+  /* ── Typography — family ──────────────────────────────────────────────── */
+  /* --font-sans and --font-mono are owned by next/font (Geist + JetBrains   */
+  /* Mono) via layout.tsx; they're injected onto <html> at runtime. The     */
+  /* previous `--font-heading: Inter` was dead — DESIGN.md doesn't define   */
+  /* a separate heading font, titles inherit body Geist.                   */
+
+  /* ── Typography — size ────────────────────────────────────────────────── */
+  /* 2xs (11px) replaces arbitrary text-[9px]/text-[10px]/text-[11px]       */
+  /* usage across the codebase. 9/10px are rejected on accessibility.      */
+  --text-2xs:  0.6875rem;  /* 11px */
+  --text-xs:   0.75rem;    /* 12px */
+  --text-sm:   0.875rem;   /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-lg:   1.125rem;   /* 18px */
+  --text-xl:   1.25rem;    /* 20px */
+  --text-2xl:  1.5rem;     /* 24px */
+  --text-3xl:  1.875rem;   /* 30px */
+  --text-4xl:  2.25rem;    /* 36px */
+  --text-5xl:  3rem;       /* 48px */
+  --text-6xl:  3.75rem;    /* 60px */
+
+  /* ── Typography — weight ──────────────────────────────────────────────── */
+  --font-weight-regular:  400;
+  --font-weight-medium:   500;
+  --font-weight-semibold: 600;
+  --font-weight-bold:     700;
+
+  /* ── Typography — line-height ─────────────────────────────────────────── */
+  --leading-tight:   1.2;
+  --leading-snug:    1.35;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.65;
+
+  /* ── Typography — tracking ────────────────────────────────────────────── */
+  --tracking-tight:  -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide:   0.04em;
+
+  --opacity-0:   0%;
+  --opacity-5:   5%;
+  --opacity-10:  10%;
+  --opacity-20:  20%;
+  --opacity-40:  40%;
+  --opacity-60:  60%;
+  --opacity-80:  80%;
+  --opacity-100: 100%;
+
+  /* ── Shadow (blur/offset only — color comes from semantic layer) ──────── */
+  /* The shadow color is tinted via the --shadow-color var in semantic.css */
+  /* so shadows automatically adjust in dark mode.                         */
+  --shadow-xs: 0 1px 1px 0 var(--shadow-color, rgb(0 0 0 / 0.04));
+  --shadow-sm: 0 1px 2px 0 var(--shadow-color, rgb(0 0 0 / 0.05)),
+               0 1px 3px 0 var(--shadow-color, rgb(0 0 0 / 0.04));
+  --shadow-md: 0 2px 4px -1px var(--shadow-color, rgb(0 0 0 / 0.06)),
+               0 4px 8px -2px var(--shadow-color, rgb(0 0 0 / 0.06));
+  --shadow-lg: 0 4px 8px -2px var(--shadow-color, rgb(0 0 0 / 0.08)),
+               0 10px 20px -4px var(--shadow-color, rgb(0 0 0 / 0.08));
+  --shadow-xl: 0 8px 16px -4px var(--shadow-color, rgb(0 0 0 / 0.10)),
+               0 20px 40px -8px var(--shadow-color, rgb(0 0 0 / 0.10));
+
+  /* ── Motion ───────────────────────────────────────────────────────────── */
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --duration-slow: 320ms;
+
+  --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ── Z-index ──────────────────────────────────────────────────────────── */
+  /* Order = visual priority. Names are SEMANTIC, not numeric: pick the one
+     that describes the role, not a magic number. Numerical gaps leave room
+     for future tiers without a renumbering migration.
+
+     RULE: any floating UI element (dropdown, popover, modal, tooltip, toast,
+     drawer, lightbox, drag ghost) MUST render through <Portal> so its
+     z-index isn't trapped by a parent stacking context (filter, transform,
+     opacity < 1, will-change, contain, isolation: isolate). */
+
+  --z-behind:           -1;   /* decorative layers behind content */
+  --z-base:              0;   /* default document flow */
+  --z-raised:            1;   /* gentle card raise, hover lift */
+
+  /* Within-page layering (scoped to a section / scrollable region) */
+  --z-sticky:           10;   /* sticky table headers, scroll affordances */
+  --z-content-floating: 20;   /* calendar resize handles, slot indicators */
+
+  /* Fixed app chrome — sits above page content but below floating menus */
+  --z-sidebar:          30;   /* desktop sidebar */
+  --z-header:           40;   /* top banner / page header */
+  --z-fab:              50;   /* floating action buttons (e.g. report-bug) */
+
+  /* Drawers & their scrims */
+  --z-drawer-backdrop:  70;
+  --z-drawer:           71;   /* mobile sidebar */
+
+  /* Blocking modal layer */
+  --z-modal-backdrop:   80;
+  --z-modal:            81;   /* dialogs, confirm dialogs, side panels */
+
+  /* Anchored menus & popovers — must be portaled. Sit ABOVE blocking
+     layers (drawer, modal) because they're logically *inside* whichever
+     surface triggered them: a select inside a modal must render over
+     that modal, otherwise the listbox is hidden behind the backdrop.
+     When no modal/drawer is open, these still sit above shell chrome,
+     which is what their original placement guaranteed. */
+  --z-dropdown:         85;   /* three-dot menus, action menus, table filters */
+  --z-popover:          86;   /* date pickers, custom selects, hover popovers */
+
+  /* Above-popover floating UI */
+  --z-command:          90;   /* Cmd+K palette (works from inside modals) */
+  --z-lightbox:        100;   /* fullscreen image viewer */
+  --z-tooltip:         110;   /* tooltips appear above all UI chrome */
+  --z-toast:           120;   /* messages must never be hidden */
+  --z-drag:            130;   /* drag ghost following cursor */
+
+  /* Browser-level page transitions */
+  --z-transition:     9999;
+}
+
+/* ── Z-index utilities ────────────────────────────────────────────────────
+   Tailwind v4 doesn't auto-generate z-* utilities from --z-* theme tokens
+   (z-index isn't an auto-namespace), so register each tier as a custom
+   utility. Keeps Tailwind's built-in z-0/z-10/z-50/etc. intact since these
+   names don't collide with them.                                          */
+
+@utility z-behind           { z-index: var(--z-behind); }
+@utility z-base             { z-index: var(--z-base); }
+@utility z-raised           { z-index: var(--z-raised); }
+@utility z-sticky           { z-index: var(--z-sticky); }
+@utility z-content-floating { z-index: var(--z-content-floating); }
+@utility z-sidebar          { z-index: var(--z-sidebar); }
+@utility z-header           { z-index: var(--z-header); }
+@utility z-fab              { z-index: var(--z-fab); }
+@utility z-dropdown         { z-index: var(--z-dropdown); }
+@utility z-popover          { z-index: var(--z-popover); }
+@utility z-drawer-backdrop  { z-index: var(--z-drawer-backdrop); }
+@utility z-drawer           { z-index: var(--z-drawer); }
+@utility z-modal-backdrop   { z-index: var(--z-modal-backdrop); }
+@utility z-modal            { z-index: var(--z-modal); }
+@utility z-command          { z-index: var(--z-command); }
+@utility z-lightbox         { z-index: var(--z-lightbox); }
+@utility z-tooltip          { z-index: var(--z-tooltip); }
+@utility z-toast            { z-index: var(--z-toast); }
+@utility z-drag             { z-index: var(--z-drag); }
+@utility z-transition       { z-index: var(--z-transition); }

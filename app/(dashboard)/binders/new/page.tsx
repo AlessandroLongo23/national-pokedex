@@ -1,3 +1,4 @@
+import { NotebookPen } from "lucide-react";
 import { SETS, POKEDEX } from "@/lib/data";
 import { listArtists, listNonPokemonNames } from "@/lib/data/binder-scope";
 import { PageHeader } from "../../_components/PageHeader";
@@ -8,7 +9,7 @@ export default async function NewBinderPage() {
   return (
     <div className="mx-auto max-w-[720px] space-y-6">
       <PageHeader
-        eyebrow="Workspace"
+        icon={NotebookPen}
         title="New binder"
         subtitle="Pick a scope. The target card list is computed live — new releases will appear automatically."
       />

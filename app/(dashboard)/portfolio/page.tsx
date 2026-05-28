@@ -1,3 +1,4 @@
+import { LineChart } from "lucide-react";
 import { requireUserId } from "../_lib/current-user";
 import { getSupabaseServer } from "@/lib/supabase/server";
 import { PageHeader } from "../_components/PageHeader";
@@ -240,7 +241,7 @@ export default async function PortfolioPage() {
 
   return (
     <div className="mx-auto max-w-[1280px]">
-      <PageHeader title="Portfolio" />
+      <PageHeader icon={LineChart} title="Portfolio" />
 
       <PortfolioHero
         portfolioValue={portfolioValue}

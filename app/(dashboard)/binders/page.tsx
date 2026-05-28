@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import Link from "next/link";
+import { Notebook } from "lucide-react";
 import { PageHeader } from "../_components/PageHeader";
 import { requireUserId } from "../_lib/current-user";
 import { loadUserPreferences } from "../_lib/user-preferences";
@@ -64,13 +65,13 @@ export default async function BindersPage() {
   return (
     <div className="mx-auto max-w-[1280px] space-y-6">
       <PageHeader
-        eyebrow="Workspace"
+        icon={Notebook}
         title="Binders"
         subtitle="Track any slice of the TCG — a master set, an artist, a Pokémon, a hand-picked list."
-        right={
+        actions={
           <Link
             href="/binders/new"
-            className="rounded-md border border-border bg-panel px-3 py-1.5 text-sm font-medium transition hover:border-border-strong"
+            className="rounded-md border border-border bg-card px-3 py-1.5 text-sm font-medium transition hover:border-border-strong"
           >
             + New binder
           </Link>

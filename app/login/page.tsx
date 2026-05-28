@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { signIn } from "./actions";
-import { Logo } from "@/app/(dashboard)/_components/Logo";
+import { LinkedPokedexLogo } from "@/lib/components/ui/PokedexLogo";
 
 export default async function LoginPage({
   searchParams,
@@ -11,7 +11,7 @@ export default async function LoginPage({
   return (
     <main className="mx-auto flex min-h-screen max-w-md flex-col justify-center px-6">
       <h1 className="mb-8">
-        <Logo />
+        <LinkedPokedexLogo />
       </h1>
       <form action={signIn} className="space-y-3">
         <label className="block">

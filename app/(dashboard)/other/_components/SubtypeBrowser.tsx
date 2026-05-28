@@ -1,3 +1,4 @@
+import { MoreHorizontal } from "lucide-react";
 import { SETS, loadOtherSubtype } from "@/lib/data";
 import { OTHER_SUBTYPE_META, type OtherSubtype } from "@/lib/data/other-subtypes";
 import type { CardEntry } from "@/lib/data/types";
@@ -21,7 +22,7 @@ export async function SubtypeBrowser({ subtype }: { subtype: OtherSubtype }) {
   return (
     <div className="mx-auto max-w-[1280px] space-y-6">
       <PageHeader
-        eyebrow="Other cards"
+        icon={MoreHorizontal}
         title={meta.label}
         subtitle={`${cards.length} cards across ${sectionSets.length} sets · ${meta.blurb}`}
       />

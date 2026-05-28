@@ -3,11 +3,11 @@
 import Image from "next/image";
 import { POKEDEX, SETS, SPECIES } from "@/lib/data";
 import { officialArtworkUrl } from "@/lib/pokeapi";
-import { useTooltip } from "../_lib/TooltipContext";
+import { usePokemonHover } from "../_lib/PokemonHoverContext";
 import { typeBackground, typeRgb } from "./pokemonTypeColors";
 
-export function Tooltip() {
-  const { state, hide } = useTooltip();
+export function PokemonHoverTooltip() {
+  const { state, hide } = usePokemonHover();
   if (!state) return null;
 
   const entry = POKEDEX.find((p) => p.dex === state.dex);

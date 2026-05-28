@@ -7,6 +7,7 @@ import {
   type LedgerCurrency,
 } from "@/lib/ledger/money";
 import { PRICE_SOURCE_CURRENCY } from "@/lib/pricing/pokemontcg";
+import { Award } from "lucide-react";
 import { getSupabaseServer } from "@/lib/supabase/server";
 import { PageHeader } from "../../../_components/PageHeader";
 import { requireUserId } from "../../../_lib/current-user";
@@ -91,8 +92,9 @@ export default async function PsaSubmissionDetailPage({ params }: PageProps) {
   return (
     <div className="mx-auto max-w-[1280px] space-y-6">
       <PageHeader
-        eyebrow="PSA submission"
+        icon={Award}
         title={`${cards.length} card${cards.length === 1 ? "" : "s"} submitted`}
+        subtitle="PSA submission"
       />
 
       <section className="grid grid-cols-2 gap-x-6 gap-y-4 border-y border-border py-4 text-sm md:grid-cols-4">

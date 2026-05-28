@@ -13,13 +13,17 @@
     "data:rebuild": "tsx scripts/ingest/index.ts"
   },
   "dependencies": {
+    "@base-ui/react": "^1.5.0",
     "@supabase/ssr": "^0.10.3",
     "@supabase/supabase-js": "^2",
     "@tanstack/react-virtual": "^3.13.24",
+    "clsx": "^2.1.1",
     "lucide-react": "^1.16.0",
+    "motion": "^12.40.0",
     "next": "^16",
     "react": "^19",
     "react-dom": "^19",
+    "tailwind-merge": "^3.6.0",
     "zod": "^3"
   },
   "devDependencies": {

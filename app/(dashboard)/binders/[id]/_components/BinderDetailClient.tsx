@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState, useTransition } from "react";
+import { Notebook } from "lucide-react";
 import type { CardEntry } from "@/lib/data/types";
 import { MEGAS } from "@/lib/data";
 import {
@@ -231,7 +232,9 @@ export function BinderDetailClient({
   return (
     <div className="mx-auto max-w-[1280px] space-y-6">
       <PageHeader
-        eyebrow={scopeLabel(binder.scopeType, binder.scopeParams)}
+        icon={Notebook}
+        mobileTitle={binder.name}
+        subtitle={scopeLabel(binder.scopeType, binder.scopeParams)}
         title={
           renaming ? (
             <input
@@ -259,7 +262,7 @@ export function BinderDetailClient({
             </button>
           )
         }
-        right={
+        actions={
           <div className="flex w-[260px] flex-col gap-1.5">
             <div className="flex items-baseline justify-between text-[11px]">
               <span className="uppercase tracking-wider text-muted">Progress</span>

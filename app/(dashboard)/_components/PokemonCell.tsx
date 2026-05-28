@@ -7,7 +7,7 @@ import { officialArtworkUrl } from "@/lib/pokeapi";
 import { CARD_INDEX, SPECIES } from "@/lib/data";
 import type { CardEntry } from "@/lib/data/types";
 import { useOwnedCards } from "../_lib/OwnedCardsContext";
-import { useTooltip } from "../_lib/TooltipContext";
+import { usePokemonHover } from "../_lib/PokemonHoverContext";
 import { typeColor, typeRgb } from "./pokemonTypeColors";
 
 interface Props {
@@ -28,7 +28,7 @@ interface Props {
 
 function CellBase({ dex, isCovered, hidden, onClick, selected, displayCard }: Props) {
   const { isSpeciesOwned, ownedCountForSpecies } = useOwnedCards();
-  const { show, hide } = useTooltip();
+  const { show, hide } = usePokemonHover();
   const owned = isSpeciesOwned(dex);
   const totalVariants = CARD_INDEX[dex]?.length ?? 0;
   const ownedVariants = ownedCountForSpecies(dex);

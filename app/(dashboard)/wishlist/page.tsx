@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import { Heart } from "lucide-react";
 import { getSupabaseServer } from "@/lib/supabase/server";
 import { loadSetCards } from "@/lib/data";
 import type { CardEntry } from "@/lib/data/types";
@@ -57,14 +58,9 @@ export default async function WishlistPage() {
   return (
     <div className="mx-auto max-w-[1280px] space-y-6">
       <PageHeader
-        eyebrow="Want list"
+        icon={Heart}
         title="Wishlist"
-        subtitle={
-          <>
-            {cards.length} card{cards.length === 1 ? "" : "s"} marked as wanted. Click a card's Own
-            button to move it from wishlist into your collection.
-          </>
-        }
+        subtitle={`${cards.length} card${cards.length === 1 ? "" : "s"} marked as wanted. Click a card's Own button to move it from wishlist into your collection.`}
       />
       <Suspense
         fallback={
