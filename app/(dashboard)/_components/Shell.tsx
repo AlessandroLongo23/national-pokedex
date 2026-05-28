@@ -11,7 +11,7 @@ import { CardPreviewProvider } from "../_lib/CardPreviewContext";
 import { MobileNav, Sidebar } from "./Sidebar";
 import { MobileHeader } from "./MobileHeader";
 import { LogPackFab } from "./LogPackFab";
-import { Tooltip } from "./Tooltip";
+import { PokemonTooltip } from "./PokemonTooltip";
 import { CardPreviewOverlay } from "./CardPreviewOverlay";
 import type { PriceSource } from "@/lib/pricing/pokemontcg";
 import type { MegaPlacement } from "../_lib/mega-prefs";
@@ -64,7 +64,7 @@ export function Shell({
                       </div>
                     </div>
                     {!isGuest && <LogPackFab />}
-                    <Tooltip />
+                    <PokemonTooltip />
                     <CardPreviewOverlay />
                   </CardPreviewProvider>
                 </TooltipProvider>

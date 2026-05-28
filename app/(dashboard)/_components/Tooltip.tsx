@@ -1,100 +1,212 @@
 "use client";
 
-import Image from "next/image";
-import { POKEDEX, SETS, SPECIES } from "@/lib/data";
-import { officialArtworkUrl } from "@/lib/pokeapi";
-import { useTooltip } from "../_lib/TooltipContext";
-import { typeBackground, typeRgb } from "./pokemonTypeColors";
+import {
+  cloneElement,
+  isValidElement,
+  useCallback,
+  useEffect,
+  useId,
+  useLayoutEffect,
+  useRef,
+  useState,
+  type ReactElement,
+  type ReactNode,
+} from "react";
+import { createPortal } from "react-dom";
 
-export function Tooltip() {
-  const { state, hide } = useTooltip();
-  if (!state) return null;
+type Placement = "top" | "bottom";
 
-  const entry = POKEDEX.find((p) => p.dex === state.dex);
-  if (!entry) return null;
+type TriggerHandlers = {
+  "aria-describedby"?: string;
+  onMouseEnter?: React.MouseEventHandler;
+  onMouseLeave?: React.MouseEventHandler;
+  onFocus?: React.FocusEventHandler;
+  onBlur?: React.FocusEventHandler;
+  onTouchStart?: React.TouchEventHandler;
+};
 
-  const species = SPECIES[state.dex];
-  const types = species?.types ?? [];
+interface Props {
+  content: ReactNode;
+  children: ReactElement<TriggerHandlers>;
+  delay?: number;
+  placement?: Placement;
+  maxWidth?: number;
+}
 
-  const containingSets = SETS.filter((s) => s.dexNumbers.includes(state.dex));
+interface Position {
+  top: number;
+  left: number;
+  placement: Placement;
+}
 
-  const top = Math.min(state.anchor.bottom + 8, window.innerHeight - 240);
-  const left = Math.min(state.anchor.left, window.innerWidth - 300);
+const GAP = 6;
+const VIEWPORT_PADDING = 8;
+
+export function Tooltip({
+  content,
+  children,
+  delay = 200,
+  placement = "top",
+  maxWidth = 280,
+}: Props) {
+  const tooltipId = useId();
+  const triggerRef = useRef<HTMLElement | null>(null);
+  const tooltipRef = useRef<HTMLDivElement | null>(null);
+  const showTimer = useRef<number | null>(null);
+  const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const [position, setPosition] = useState<Position | null>(null);
+
+  useEffect(() => setMounted(true), []);
+
+  const clearShowTimer = () => {
+    if (showTimer.current !== null) {
+      window.clearTimeout(showTimer.current);
+      showTimer.current = null;
+    }
+  };
+
+  const close = useCallback(() => {
+    clearShowTimer();
+    setOpen(false);
+    setPosition(null);
+  }, []);
+
+  const scheduleShow = useCallback(
+    (immediate = false) => {
+      clearShowTimer();
+      if (immediate || delay <= 0) {
+        setOpen(true);
+        return;
+      }
+      showTimer.current = window.setTimeout(() => setOpen(true), delay);
+    },
+    [delay],
+  );
+
+  useEffect(() => () => clearShowTimer(), []);
+
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") close();
+    };
+    const onScroll = () => close();
+    window.addEventListener("keydown", onKey);
+    window.addEventListener("scroll", onScroll, true);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      window.removeEventListener("scroll", onScroll, true);
+    };
+  }, [open, close]);
+
+  useLayoutEffect(() => {
+    if (!open || !triggerRef.current || !tooltipRef.current) return;
+    const trigger = triggerRef.current.getBoundingClientRect();
+    const tip = tooltipRef.current.getBoundingClientRect();
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+
+    const spaceAbove = trigger.top;
+    const spaceBelow = vh - trigger.bottom;
+    const needs = tip.height + GAP + VIEWPORT_PADDING;
+    const finalPlacement: Placement =
+      placement === "top" && spaceAbove < needs && spaceBelow >= needs
+        ? "bottom"
+        : placement === "bottom" && spaceBelow < needs && spaceAbove >= needs
+          ? "top"
+          : placement;
+
+    const centerX = trigger.left + trigger.width / 2;
+    let left = centerX - tip.width / 2;
+    left = Math.max(VIEWPORT_PADDING, Math.min(left, vw - tip.width - VIEWPORT_PADDING));
+    const top =
+      finalPlacement === "top"
+        ? trigger.top - tip.height - GAP
+        : trigger.bottom + GAP;
+
+    setPosition({ top, left, placement: finalPlacement });
+  }, [open, placement]);
+
+  // Touch / outside-tap: dismiss when the user taps anywhere outside.
+  useEffect(() => {
+    if (!open) return;
+    const onPointer = (e: PointerEvent) => {
+      const target = e.target as Node | null;
+      if (
+        target &&
+        !triggerRef.current?.contains(target) &&
+        !tooltipRef.current?.contains(target)
+      ) {
+        close();
+      }
+    };
+    window.addEventListener("pointerdown", onPointer);
+    return () => window.removeEventListener("pointerdown", onPointer);
+  }, [open, close]);
+
+  if (!isValidElement(children)) return children;
+
+  const child = children;
+  const childProps = child.props;
+  const triggerProps: TriggerHandlers & { ref: (n: HTMLElement | null) => void } = {
+    ref: (node: HTMLElement | null) => {
+      triggerRef.current = node;
+      const original = (child as unknown as { ref?: unknown }).ref;
+      if (typeof original === "function") original(node);
+      else if (original && typeof original === "object" && "current" in original) {
+        (original as { current: HTMLElement | null }).current = node;
+      }
+    },
+    "aria-describedby": open ? tooltipId : childProps["aria-describedby"],
+    onMouseEnter: (e) => {
+      scheduleShow();
+      childProps.onMouseEnter?.(e);
+    },
+    onMouseLeave: (e) => {
+      close();
+      childProps.onMouseLeave?.(e);
+    },
+    onFocus: (e) => {
+      scheduleShow(true);
+      childProps.onFocus?.(e);
+    },
+    onBlur: (e) => {
+      close();
+      childProps.onBlur?.(e);
+    },
+    onTouchStart: (e) => {
+      scheduleShow(true);
+      childProps.onTouchStart?.(e);
+    },
+  };
+  const trigger = cloneElement(child, triggerProps);
 
   return (
-    <div
-      role="tooltip"
-      className="pointer-events-none fixed z-50 w-[280px] overflow-hidden rounded-lg border border-border-strong bg-panel shadow-[0_20px_40px_-12px_rgb(0_0_0/0.6)]"
-      style={{ top, left }}
-      onMouseLeave={hide}
-    >
-      <div
-        className="flex gap-3 p-3"
-        style={{ background: typeBackground(types, 0.14) }}
-      >
-        <div
-          className="relative flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-md"
-          style={{ background: typeBackground(types, 0.4) }}
-        >
-          <Image
-            src={officialArtworkUrl(state.dex)}
-            alt={entry.name}
-            width={64}
-            height={64}
-            unoptimized
-            className="h-full w-full object-contain"
-          />
-        </div>
-        <div className="min-w-0 flex-1">
-          <div className="flex items-baseline justify-between gap-2">
-            <div className="truncate text-sm font-semibold tracking-tight">{entry.name}</div>
-            <div className="shrink-0 text-[11px] text-muted nums tabular-nums">
-              #{String(entry.dex).padStart(4, "0")}
-            </div>
-          </div>
-          <div className="text-[11px] text-muted">
-            Gen {entry.gen}
-            {species?.genus ? ` · ${species.genus}` : ""}
-          </div>
-          {types.length > 0 && (
-            <div className="mt-1.5 flex flex-wrap gap-1">
-              {types.map((t) => (
-                <span
-                  key={t}
-                  className="inline-flex items-center rounded-full px-1.5 py-[1px] text-[10px] font-medium uppercase tracking-wider"
-                  style={{
-                    background: `rgb(${typeRgb(t)} / 0.18)`,
-                    color: `rgb(${typeRgb(t)} / 0.95)`,
-                    border: `1px solid rgb(${typeRgb(t)} / 0.35)`,
-                  }}
-                >
-                  {t}
-                </span>
-              ))}
-            </div>
-          )}
-        </div>
-      </div>
-
-      <div className="border-t border-border bg-panel px-3 py-2.5 text-[11px]">
-        {containingSets.length > 0 ? (
-          <div className="flex items-baseline gap-1.5">
-            <span className="text-covered nums tabular-nums">{containingSets.length}</span>
-            <span className="text-muted">
-              set{containingSets.length === 1 ? "" : "s"} ·{" "}
-              <span className="text-text/85">
-                {containingSets
-                  .slice(0, 2)
-                  .map((s) => s.name)
-                  .join(", ")}
-                {containingSets.length > 2 ? ` +${containingSets.length - 2}` : ""}
-              </span>
-            </span>
-          </div>
-        ) : (
-          <div className="font-medium text-missing">Not in any tracked set</div>
-        )}
-      </div>
-    </div>
+    <>
+      {trigger}
+      {mounted && open
+        ? createPortal(
+            <div
+              ref={tooltipRef}
+              role="tooltip"
+              id={tooltipId}
+              style={{
+                position: "fixed",
+                top: position?.top ?? -9999,
+                left: position?.left ?? -9999,
+                maxWidth,
+                pointerEvents: "none",
+                opacity: position ? 1 : 0,
+                transition: "opacity 120ms ease-out",
+              }}
+              className="z-50 rounded-md border border-border-strong bg-panel-3 px-2.5 py-1.5 text-xs leading-snug text-text shadow-[0_8px_24px_-12px_rgb(0_0_0/0.7)]"
+            >
+              {content}
+            </div>,
+            document.body,
+          )
+        : null}
+    </>
   );
 }
