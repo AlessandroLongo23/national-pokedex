@@ -7,7 +7,7 @@ import { SETS } from "@/lib/data";
 import { useOwnedCards } from "../_lib/OwnedCardsContext";
 import { useSetAvailability } from "../_lib/SetAvailabilityContext";
 import { useUser } from "../_lib/UserContext";
-import { SeriesBadge } from "./SeriesBadge";
+import { DEFAULT_SERIES_TINT, SERIES_TINT, SeriesBadge } from "./SeriesBadge";
 import { SetAvailabilityToggle } from "./SetAvailabilityToggle";
 
 type SortKey = "releaseDate" | "name" | "cardCount" | "ownedCards" | "distinctPokemonCount";
@@ -195,11 +195,12 @@ export function SetsTable() {
                   <tr key={s.id} className="border-t border-border transition hover:bg-panel-2">
                     <td className="px-4 py-4">
                       <Link href={`/sets/${s.id}`} className="flex items-center gap-3.5">
-                        <SetSymbol setId={s.id} series={s.series} size={40} />
+                        <SetLogo setId={s.id} setName={s.name} size="sm" />
                         <span className="min-w-0 leading-tight">
                           <span className="block text-base font-semibold">{s.name}</span>
-                          <span className="mt-0.5 block text-[11px] uppercase tracking-wider text-muted">
-                            {s.series}
+                          <span className="mt-1 flex items-center gap-1.5 text-[11px] uppercase tracking-wider text-muted">
+                            <SetCodeBadge setId={s.id} series={s.series} />
+                            <span>{s.series}</span>
                           </span>
                         </span>
                       </Link>
@@ -330,44 +331,28 @@ function ToggleButton({
   );
 }
 
-function SetSymbol({
+function SetLogo({
   setId,
-  series,
-  size,
+  setName,
+  size = "lg",
 }: {
   setId: string;
-  series: string;
-  size: number;
+  setName: string;
+  size?: "sm" | "lg";
 }) {
   const [failed, setFailed] = useState(false);
   if (failed) {
     return (
       <span
-        className="flex flex-shrink-0 items-center justify-center"
-        style={{ width: size, height: size }}
+        className={
+          size === "sm"
+            ? "flex h-10 w-[120px] flex-shrink-0 items-center text-xs font-semibold tracking-tight text-text"
+            : "text-sm font-bold tracking-tight text-text"
+        }
       >
-        <SeriesBadge series={series} />
+        {setName}
       </span>
     );
-  }
-  return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
-      src={`https://images.pokemontcg.io/${setId}/symbol.png`}
-      alt=""
-      onError={() => setFailed(true)}
-      loading="lazy"
-      draggable={false}
-      className="flex-shrink-0 object-contain"
-      style={{ width: size, height: size }}
-    />
-  );
-}
-
-function SetLogo({ setId, setName }: { setId: string; setName: string }) {
-  const [failed, setFailed] = useState(false);
-  if (failed) {
-    return <span className="text-sm font-bold tracking-tight text-text">{setName}</span>;
   }
   return (
     // eslint-disable-next-line @next/next/no-img-element
@@ -377,7 +362,25 @@ function SetLogo({ setId, setName }: { setId: string; setName: string }) {
       onError={() => setFailed(true)}
       loading="lazy"
       draggable={false}
-      className="max-h-16 w-auto max-w-[80%] object-contain drop-shadow-[0_3px_10px_rgba(0,0,0,0.3)]"
+      className={
+        size === "sm"
+          ? "h-10 w-[120px] flex-shrink-0 object-contain object-left"
+          : "max-h-16 w-auto max-w-[80%] object-contain drop-shadow-[0_3px_10px_rgba(0,0,0,0.3)]"
+      }
     />
+  );
+}
+
+function SetCodeBadge({ setId, series }: { setId: string; series: string }) {
+  const tint = SERIES_TINT[series] ?? DEFAULT_SERIES_TINT;
+  return (
+    <span
+      className={[
+        "inline-block whitespace-nowrap rounded border px-1.5 py-0.5 text-[10px] font-semibold tracking-wider",
+        tint,
+      ].join(" ")}
+    >
+      {setId.toUpperCase()}
+    </span>
   );
 }

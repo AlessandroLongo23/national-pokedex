@@ -18,7 +18,7 @@ const SERIES_ABBREV: Record<string, string> = {
   Other: "•",
 };
 
-const SERIES_TINT: Record<string, string> = {
+export const SERIES_TINT: Record<string, string> = {
   "Scarlet & Violet": "border-sv-tint/35 bg-sv-tint/15 text-sv-tint",
   "Mega Evolution": "border-me-tint/40 bg-me-tint/15 text-me-tint",
   "Sword & Shield": "border-[#a78bff]/35 bg-[#a78bff]/15 text-[#c4b3ff]",
@@ -31,10 +31,10 @@ const SERIES_TINT: Record<string, string> = {
   "HeartGold & SoulSilver": "border-[#fde047]/35 bg-[#fde047]/15 text-[#fef08a]",
 };
 
-const DEFAULT_TINT = "border-border bg-panel-2 text-muted";
+export const DEFAULT_SERIES_TINT = "border-border bg-panel-2 text-muted";
 
 export function SeriesBadge({ series, full }: { series: string; full?: boolean }) {
-  const tint = SERIES_TINT[series] ?? DEFAULT_TINT;
+  const tint = SERIES_TINT[series] ?? DEFAULT_SERIES_TINT;
   const label = full ? series : SERIES_ABBREV[series] ?? series.slice(0, 3).toUpperCase();
   return (
     <span
