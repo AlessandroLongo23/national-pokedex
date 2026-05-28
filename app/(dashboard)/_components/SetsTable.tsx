@@ -2,15 +2,22 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-import { ChevronDown, ChevronUp, LayoutGrid, List } from "lucide-react";
-import { SETS } from "@/lib/data";
+import { ChevronDown, ChevronUp, LayoutGrid, List, Search, X } from "lucide-react";
+import { formatSetCode, SETS } from "@/lib/data";
 import { useOwnedCards } from "../_lib/OwnedCardsContext";
 import { useSetAvailability } from "../_lib/SetAvailabilityContext";
 import { useUser } from "../_lib/UserContext";
-import { DEFAULT_SERIES_TINT, SERIES_TINT, SeriesBadge } from "./SeriesBadge";
+import { DEFAULT_SERIES_TINT, SERIES_TINT } from "./SeriesBadge";
 import { SetAvailabilityToggle } from "./SetAvailabilityToggle";
+import { Tooltip } from "./Tooltip";
 
-type SortKey = "releaseDate" | "name" | "cardCount" | "ownedCards" | "distinctPokemonCount";
+type SortKey =
+  | "releaseDate"
+  | "name"
+  | "cardCount"
+  | "ownedCards"
+  | "distinctPokemonCount"
+  | "packsOpened";
 type ViewMode = "list" | "grid";
 
 // Series chips are derived from the data — most recently active series first
@@ -30,13 +37,18 @@ const SERIES_GROUPS: { label: string; value: string | null }[] = (() => {
 
 const VIEW_STORAGE_KEY = "sets-view";
 
-export function SetsTable() {
+export function SetsTable({
+  packCountsBySet = {},
+}: {
+  packCountsBySet?: Record<string, number>;
+}) {
   const { ownedCards } = useOwnedCards();
-  const { isAvailable } = useSetAvailability();
+  const { isAvailable, overrides, clearAll } = useSetAvailability();
   const { isGuest } = useUser();
   const [sortKey, setSortKey] = useState<SortKey>("releaseDate");
   const [asc, setAsc] = useState(false);
   const [seriesFilter, setSeriesFilter] = useState<string | null>(null);
+  const [search, setSearch] = useState("");
   const [availableOnly, setAvailableOnly] = useState(false);
   // Read the persisted view on the first client render so the table doesn't
   // flash through "list" before flipping to the stored value. The SSR-side
@@ -68,17 +80,22 @@ export function SetsTable() {
       SETS.map((s) => ({
         ...s,
         ownedCards: ownedBySet.get(s.id) ?? 0,
+        packsOpened: packCountsBySet[s.id] ?? 0,
       })),
-    [ownedBySet],
+    [ownedBySet, packCountsBySet],
   );
 
   const filtered = useMemo(() => {
+    const q = search.trim().toLowerCase();
     return enriched.filter((s) => {
       if (availableOnly && !isAvailable(s.id)) return false;
-      if (!seriesFilter) return true;
-      return s.series === seriesFilter;
+      if (seriesFilter && s.series !== seriesFilter) return false;
+      if (q && !s.name.toLowerCase().includes(q) && !s.series.toLowerCase().includes(q)) {
+        return false;
+      }
+      return true;
     });
-  }, [enriched, seriesFilter, availableOnly, isAvailable]);
+  }, [enriched, seriesFilter, search, availableOnly, isAvailable]);
 
   const rows = useMemo(() => {
     const copy = [...filtered];
@@ -130,39 +147,70 @@ export function SetsTable() {
 
   return (
     <div className="space-y-3">
-      <div className="flex flex-wrap items-center gap-2 rounded-lg border border-border bg-panel p-3">
-        <div className="flex flex-wrap gap-1.5">
-          {SERIES_GROUPS.map((g) => (
+      <div className="flex flex-wrap items-center gap-3 rounded-lg border border-border bg-panel p-3">
+        <div className="relative min-w-0 flex-1 sm:min-w-[220px] sm:max-w-xs">
+          <Search
+            className="pointer-events-none absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted"
+            aria-hidden
+          />
+          <input
+            type="search"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search sets or eras"
+            aria-label="Search sets or eras"
+            className="h-8 w-full rounded-md border border-border bg-panel-2 pl-8 pr-7 text-xs text-text placeholder:text-muted focus:border-accent focus:outline-none"
+          />
+          {search && (
             <button
-              key={g.label}
               type="button"
-              onClick={() => setSeriesFilter(g.value)}
-              className={[
-                "rounded-full border px-2.5 py-1 text-[11px] uppercase tracking-wider transition",
-                seriesFilter === g.value
-                  ? "border-accent bg-accent/10 text-accent"
-                  : "border-border text-muted hover:text-text",
-              ].join(" ")}
+              onClick={() => setSearch("")}
+              aria-label="Clear search"
+              className="absolute right-1.5 top-1/2 inline-flex h-5 w-5 -translate-y-1/2 items-center justify-center rounded text-muted transition hover:text-text"
             >
-              {g.label}
+              <X className="h-3 w-3" aria-hidden />
             </button>
-          ))}
-        </div>
-
-        <div className="ml-auto flex items-center gap-3">
-          <ViewToggle view={view} onChange={setView} />
-          {!isGuest && (
-            <label className="flex items-center gap-1.5 text-xs text-muted">
-              <input
-                type="checkbox"
-                checked={availableOnly}
-                onChange={(e) => setAvailableOnly(e.target.checked)}
-                className="h-3.5 w-3.5 accent-[var(--color-accent)]"
-              />
-              Available locally only
-            </label>
           )}
         </div>
+
+        <select
+          value={seriesFilter ?? ""}
+          onChange={(e) => setSeriesFilter(e.target.value || null)}
+          aria-label="Filter by era"
+          className="h-8 rounded-md border border-border bg-panel-2 px-2.5 pr-7 text-xs text-text focus:border-accent focus:outline-none [color-scheme:dark]"
+        >
+          {SERIES_GROUPS.map((g) => (
+            <option key={g.label} value={g.value ?? ""}>
+              {g.value === null ? "All eras" : g.label}
+            </option>
+          ))}
+        </select>
+
+        {!isGuest && (
+          <label className="flex items-center gap-1.5 text-xs text-muted">
+            <input
+              type="checkbox"
+              checked={availableOnly}
+              onChange={(e) => setAvailableOnly(e.target.checked)}
+              className="h-3.5 w-3.5 accent-[var(--color-accent)]"
+            />
+            Available locally only
+          </label>
+        )}
+
+        {!isGuest && overrides.size > 0 && (
+          <Tooltip content="Forget your manual local-availability picks. Sets revert to the auto-detected default (recent sets stay available, older sets do not).">
+            <button
+              type="button"
+              onClick={clearAll}
+              className="inline-flex items-center gap-1 rounded-md border border-border bg-panel-2 px-2 py-1 text-[11px] text-muted transition hover:border-accent hover:text-accent"
+            >
+              Reset {overrides.size} override{overrides.size === 1 ? "" : "s"}
+            </button>
+          </Tooltip>
+        )}
+
+        <ViewToggle view={view} onChange={setView} />
       </div>
 
       {rows.length === 0 ? (
@@ -180,6 +228,7 @@ export function SetsTable() {
                 <Th k="distinctPokemonCount" className="text-right">Pokémon</Th>
                 {!isGuest && (
                   <>
+                    <Th k="packsOpened" className="text-right">Packs</Th>
                     <Th k="ownedCards" className="text-right">Owned</Th>
                     <th className="bg-panel-2 px-4 py-3 text-center text-[10px] font-semibold uppercase tracking-[0.14em] text-muted">
                       Local
@@ -195,11 +244,16 @@ export function SetsTable() {
                   <tr key={s.id} className="border-t border-border transition hover:bg-panel-2">
                     <td className="px-4 py-4">
                       <Link href={`/sets/${s.id}`} className="flex items-center gap-3.5">
-                        <SetLogo setId={s.id} setName={s.name} size="sm" />
+                        <SetLogo setId={s.id} setName={s.name} logoUrl={s.logoUrl} size="sm" />
                         <span className="min-w-0 leading-tight">
                           <span className="block text-base font-semibold">{s.name}</span>
                           <span className="mt-1 flex items-center gap-1.5 text-[11px] uppercase tracking-wider text-muted">
                             <SetCodeBadge setId={s.id} series={s.series} />
+                            {s.ptcgoCode && (
+                              <span className="rounded border border-border bg-panel-2 px-1 py-px text-[10px] font-medium uppercase tracking-wider text-muted">
+                                {s.ptcgoCode}
+                              </span>
+                            )}
                             <span>{s.series}</span>
                           </span>
                         </span>
@@ -210,6 +264,13 @@ export function SetsTable() {
                     <td className="px-4 py-4 text-right text-muted nums">{s.distinctPokemonCount}</td>
                     {!isGuest && (
                       <>
+                        <td className="px-4 py-4 text-right nums">
+                          {s.packsOpened > 0 ? (
+                            <span className="text-base font-semibold">{s.packsOpened}</span>
+                          ) : (
+                            <span className="text-muted">—</span>
+                          )}
+                        </td>
                         <td className="px-4 py-4 text-right nums">
                           <div className="inline-flex items-center gap-2.5">
                             <span className="text-base font-semibold text-owned">{s.ownedCards}</span>
@@ -237,42 +298,71 @@ export function SetsTable() {
         <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {rows.map((s) => {
             const ownedPct = s.cardCount === 0 ? 0 : s.ownedCards / s.cardCount;
+            // Completed sets earn the emerald edge (celebration); untouched sets dim back so the started-but-unfinished middle pops when scanning.
+            const stateClass = isGuest
+              ? ""
+              : s.cardCount > 0 && s.ownedCards >= s.cardCount
+                ? "border-covered/70 hover:border-covered"
+                : s.ownedCards === 0
+                  ? "opacity-70 hover:opacity-100"
+                  : "";
             return (
               <li key={s.id}>
-                <div className="group relative flex h-full flex-col gap-3 rounded-xl border border-border bg-panel p-4 transition hover:border-border-strong">
-                  <div className="flex items-start justify-between gap-2">
-                    <SeriesBadge series={s.series} />
-                    {!isGuest && <SetAvailabilityToggle setId={s.id} compact />}
-                  </div>
+                <div
+                  className={`group relative flex h-full flex-col gap-3 rounded-xl border border-border bg-panel p-4 transition hover:border-border-strong ${stateClass}`}
+                >
+                  {!isGuest && (
+                    <div className="absolute right-3 top-3 z-10">
+                      <SetAvailabilityToggle setId={s.id} compact />
+                    </div>
+                  )}
 
                   <Link
                     href={`/sets/${s.id}`}
-                    className="flex h-20 items-center justify-center rounded-lg bg-bg/50 transition group-hover:bg-bg/70"
+                    aria-label={s.name}
+                    className="flex h-full flex-col gap-3"
                   >
-                    <SetLogo setId={s.id} setName={s.name} />
-                  </Link>
-
-                  <Link href={`/sets/${s.id}`} className="block min-w-0">
-                    <span className="block truncate text-base font-semibold transition group-hover:text-accent">
-                      {s.name}
+                    <span className="flex h-20 items-center justify-center">
+                      <SetLogo setId={s.id} setName={s.name} logoUrl={s.logoUrl} />
                     </span>
-                    <span className="mt-0.5 block text-[11px] text-muted nums">
-                      {s.releaseDate} · {s.cardCount} cards · {s.distinctPokemonCount} Pokémon
-                    </span>
-                  </Link>
 
-                  {!isGuest && (
-                    <div className="mt-auto flex items-center gap-2 text-xs">
-                      <span className="font-semibold text-owned nums">{s.ownedCards}</span>
-                      <span className="text-muted nums">/ {s.cardCount}</span>
-                      <span className="ml-auto h-1.5 flex-1 overflow-hidden rounded-full bg-panel-2">
-                        <span
-                          className="block h-full bg-owned"
-                          style={{ width: `${ownedPct * 100}%` }}
-                        />
+                    <span className="block min-w-0">
+                      <span className="flex flex-wrap items-center gap-1.5">
+                        <SetCodeBadge setId={s.id} series={s.series} />
+                        {s.ptcgoCode && (
+                          <span className="rounded border border-border bg-panel-2 px-1 py-px text-[10px] font-medium uppercase tracking-wider text-muted">
+                            {s.ptcgoCode}
+                          </span>
+                        )}
                       </span>
-                    </div>
-                  )}
+                      <span className="mt-1 flex items-baseline gap-1.5 text-[11px] text-muted nums">
+                        <span className="text-text">{s.distinctPokemonCount}</span>
+                        <span>Pokémon</span>
+                        <span aria-hidden>·</span>
+                        <span>{s.cardCount} cards</span>
+                        <span aria-hidden className="ml-auto opacity-60">{s.releaseDate}</span>
+                      </span>
+                    </span>
+
+                    {!isGuest && (
+                      <span className="mt-auto flex items-center gap-2 text-xs">
+                        {s.ownedCards === 0 ? (
+                          <span className="text-[11px] text-muted">Not started</span>
+                        ) : (
+                          <>
+                            <span className="font-semibold text-owned nums">{s.ownedCards}</span>
+                            <span className="text-muted nums">/ {s.cardCount}</span>
+                            <span className="ml-auto h-1.5 flex-1 overflow-hidden rounded-full bg-panel-2">
+                              <span
+                                className="block h-full bg-owned"
+                                style={{ width: `${ownedPct * 100}%` }}
+                              />
+                            </span>
+                          </>
+                        )}
+                      </span>
+                    )}
+                  </Link>
                 </div>
               </li>
             );
@@ -334,10 +424,12 @@ function ToggleButton({
 function SetLogo({
   setId,
   setName,
+  logoUrl,
   size = "lg",
 }: {
   setId: string;
   setName: string;
+  logoUrl?: string;
   size?: "sm" | "lg";
 }) {
   const [failed, setFailed] = useState(false);
@@ -346,7 +438,7 @@ function SetLogo({
       <span
         className={
           size === "sm"
-            ? "flex h-10 w-[120px] flex-shrink-0 items-center text-xs font-semibold tracking-tight text-text"
+            ? "flex h-10 w-[120px] flex-shrink-0 items-center justify-center text-center text-xs font-semibold tracking-tight text-text"
             : "text-sm font-bold tracking-tight text-text"
         }
       >
@@ -354,17 +446,18 @@ function SetLogo({
       </span>
     );
   }
+  const src = logoUrl ?? `https://images.pokemontcg.io/${setId}/logo.png`;
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      src={`https://images.pokemontcg.io/${setId}/logo.png`}
+      src={src}
       alt={setName}
       onError={() => setFailed(true)}
       loading="lazy"
       draggable={false}
       className={
         size === "sm"
-          ? "h-10 w-[120px] flex-shrink-0 object-contain object-left"
+          ? "h-10 w-[120px] flex-shrink-0 object-contain"
           : "max-h-16 w-auto max-w-[80%] object-contain drop-shadow-[0_3px_10px_rgba(0,0,0,0.3)]"
       }
     />
@@ -380,7 +473,7 @@ function SetCodeBadge({ setId, series }: { setId: string; series: string }) {
         tint,
       ].join(" ")}
     >
-      {setId.toUpperCase()}
+      {formatSetCode(setId)}
     </span>
   );
 }
