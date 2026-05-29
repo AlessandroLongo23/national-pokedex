@@ -23,7 +23,7 @@ export function CardHeroImage({ card }: Props) {
       <img
         src={card.imageLarge}
         alt={card.name}
-        className="w-full rounded-lg shadow-[0_24px_60px_-20px_rgb(0_0_0/0.7)]"
+        className="w-full rounded-lg shadow-[0_24px_60px_-20px_oklch(0.12_0.03_275/0.6)]"
         style={{ aspectRatio: "245 / 342" }}
       />
     </button>

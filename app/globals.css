@@ -302,7 +302,7 @@ a {
   background: linear-gradient(to bottom, var(--lume-surface-raised), transparent);
 }
 .dark .shell-content-fade {
-  background: linear-gradient(to bottom, oklch(0.232 0.007 265), transparent);
+  background: linear-gradient(to bottom, var(--color-zinc-950, oklch(0.141 0.005 285.823)), transparent);
 }
 
 .no-scrollbar {

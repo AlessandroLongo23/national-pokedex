@@ -86,10 +86,10 @@ export function AppShell({ sidebar, topBar, children }: AppShellProps) {
     <SidebarCollapseContext.Provider value={collapseState}>
       <MobileMenuContext.Provider value={{ open: mobileOpen, setOpen: setMobileOpen }}>
         <motion.div
-          className="h-screen overflow-hidden bg-zinc-50 font-sans text-foreground dark:bg-zinc-950 dark:text-white"
+          className="h-screen overflow-hidden bg-zinc-50 font-sans text-foreground dark:bg-zinc-900 dark:text-white"
           style={{ ...staticVars, ["--shell-sidebar-w" as string]: sidebarWPx }}
         >
-          <aside className="z-sidebar fixed left-0 bottom-0 top-[var(--shell-banner-h)] hidden w-[var(--shell-sidebar-w)] flex-col overflow-y-auto overflow-x-hidden bg-zinc-50 md:flex dark:bg-zinc-950">
+          <aside className="z-sidebar fixed left-0 bottom-0 top-[var(--shell-banner-h)] hidden w-[var(--shell-sidebar-w)] flex-col overflow-y-auto overflow-x-hidden bg-zinc-50 md:flex dark:bg-zinc-900">
             <SidebarForceExpandedContext.Provider value={false}>
               {sidebar}
             </SidebarForceExpandedContext.Provider>
@@ -101,7 +101,7 @@ export function AppShell({ sidebar, topBar, children }: AppShellProps) {
 
           {mobileOpen && (
             <>
-              <aside className="z-drawer fixed left-0 bottom-0 top-[var(--shell-banner-h)] flex w-72 flex-col overflow-y-auto bg-zinc-50 md:hidden dark:bg-zinc-950">
+              <aside className="z-drawer fixed left-0 bottom-0 top-[var(--shell-banner-h)] flex w-72 flex-col overflow-y-auto bg-zinc-50 md:hidden dark:bg-zinc-900">
                 <div className="flex justify-end p-3">
                   <Button
                     variant="ghost"
@@ -129,11 +129,11 @@ export function AppShell({ sidebar, topBar, children }: AppShellProps) {
           <main className="flex h-screen flex-col pl-0 pt-[var(--shell-banner-h)] md:pl-[var(--shell-sidebar-w)]">
             <div className="flex min-h-0 flex-1 flex-col p-2">
               <div
-                className={`flex-1 min-h-0 rounded-xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900 ${
+                className={`flex-1 min-h-0 rounded-xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950 ${
                   isViewportFit ? "flex flex-col overflow-hidden" : "overflow-y-auto"
                 }`}
               >
-                <div className="z-sticky sticky top-0 h-16 rounded-t-xl bg-white dark:bg-zinc-900">
+                <div className="z-sticky sticky top-0 h-16 rounded-t-xl bg-white dark:bg-zinc-950">
                   {topBar}
                   {!isViewportFit && (
                     <div
