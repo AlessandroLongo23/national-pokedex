@@ -38,12 +38,13 @@ Quiet, dense, slightly nerdy. Treats users like peers who already know TCG. Type
 
 Aesthetic: full light and dark themes with a real token-driven design system (see [BACKLOG.md](BACKLOG.md) §1 — currently dark-only and being rebuilt). Tinted neutrals, never `#000` or `#fff`. Accent in the cool blue-purple family. Type-led product chrome, art-led content surfaces.
 
-State color system. Two semantically distinct collecting states get two distinct colors:
+State color system. Distinct collecting states get distinct colors. Each state gets one color, never two stacked on the same element.
 
-- **Owned (amber, `--color-owned` #fbbf24).** A count of physical cards held. Used on per-card quantity badges, per-set owned counts, and progress bars that read "X of Y cards". Amber communicates "tracked, in progress" without implying completion.
-- **Covered (emerald, `--color-covered` #34d399).** A binary fulfilment signal: this entry is satisfied (≥1 owned card meets it). Used on Pokémon-level dex completion, artist coverage, and any place where the question is "done or not done?". Emerald is the moment-of-celebration color.
-
-Other state colors: accent blue-purple (`--color-accent` #60a5fa) for wishlist, selection, and primary actions; soft red (`--color-missing` #f87171) for explicit missing/error states. Each state gets one color — never stack two state colors on the same element.
+- **Owned (amber, `--color-owned` ≈ #fbbf24).** A count of physical cards held. Used on per-card quantity badges, per-set owned counts, and progress bars that read "X of Y cards". Amber communicates "tracked, in progress" without implying completion.
+- **Covered (emerald, `--color-covered` ≈ #34d399).** A binary fulfilment signal: this entry is satisfied (≥1 owned card meets it). Used on Pokémon-level dex completion, artist coverage, and any place where the question is "done or not done?". Emerald is the moment-of-celebration color.
+- **Wanted (red, `--color-missing` ≈ #f87171).** The "I don't have this and I want it" signal, shared by two faces of one idea: explicit **wishlist** (the heart on a card you don't own) and **missing** coverage gaps. Red reads as desire and need here, not alarm. Genuine errors are rare in this UI and reuse the same red; they are separated by context and timing and never sit on the same element as a wishlist heart.
+- **Favorite (gold, `--color-favorite` ≈ #fcd34d).** The star on a card you already own and love. A warm gold kept deliberately distinct from owned-amber so the two warm signals don't read as the same thing. (Currently hardcoded in [CardActionsBar](app/(dashboard)/cards/[cardId]/_components/CardActionsBar.tsx); should be tokenized.)
+- **Accent (blue-purple, `--color-accent` ≈ #60a5fa).** Selection and primary actions only. Not a collecting-state color, not decoration.
 
 ## What this is
 

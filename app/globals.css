@@ -96,6 +96,7 @@
 :root {
   --pokedex-owned:           oklch(0.685 0.165 80);    /* amber, deep enough on white */
   --pokedex-owned-dark:      oklch(0.530 0.155 70);    /* darker amber for borders / strong text */
+  --pokedex-favorite:        oklch(0.720 0.150 90);    /* gold, yellower than owned-amber for distinction */
   --pokedex-covered:         oklch(0.580 0.145 165);   /* emerald */
   --pokedex-covered-dark:    oklch(0.430 0.135 160);
   --pokedex-missing:         oklch(0.595 0.205 25);    /* red */
@@ -108,6 +109,7 @@
 .dark {
   --pokedex-owned:           oklch(0.850 0.170 86);    /* ≈ #fbbf24 — original amber */
   --pokedex-owned-dark:      oklch(0.645 0.145 70);    /* ≈ #b45309 */
+  --pokedex-favorite:        oklch(0.870 0.155 92);    /* ≈ #fcd34d — gold, yellower than owned-amber */
   --pokedex-covered:         oklch(0.780 0.140 167);   /* ≈ #34d399 */
   --pokedex-covered-dark:    oklch(0.535 0.130 162);   /* ≈ #047857 */
   --pokedex-missing:         oklch(0.740 0.180 22);    /* ≈ #f87171 */
@@ -169,6 +171,7 @@
   /* Pokédex status + series, theme-aware */
   --color-owned:                        var(--pokedex-owned);
   --color-owned-dark:                   var(--pokedex-owned-dark);
+  --color-favorite:                     var(--pokedex-favorite);
   --color-covered:                      var(--pokedex-covered);
   --color-covered-dark:                 var(--pokedex-covered-dark);
   --color-missing:                      var(--pokedex-missing);
