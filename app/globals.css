@@ -284,8 +284,14 @@ a {
 }
 
 .shell-page-enter {
-  animation: shellPageEnter 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
-  will-change: transform, opacity;
+  /* `backwards` (not `both`) and no `will-change` on purpose: a held
+     `transform: translateY(0)` from a `forwards`/`both` fill — or a standing
+     `will-change: transform` hint — makes this wrapper a containing block for
+     `position: fixed` descendants, which traps every modal/overlay rendered
+     inside the page (e.g. the binder cell picker) to the content column instead
+     of the viewport. `backwards` applies the entry frame without leaving any
+     transform behind once the animation settles. */
+  animation: shellPageEnter 0.28s cubic-bezier(0.22, 1, 0.36, 1) backwards;
 }
 
 @media (prefers-reduced-motion: reduce) {
