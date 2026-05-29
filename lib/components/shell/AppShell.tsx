@@ -14,8 +14,14 @@ import { SidebarEdgeToggle } from "./SidebarCollapseToggle";
 import { SidebarShortcutHint } from "./SidebarShortcutHint";
 import { Button } from "@/lib/components/ui/Button";
 
-// Pages that fit the viewport exactly — typically tables that own their own
-// internal scroll so rows fit the viewport and pagination stays pinned.
+// Pages that fit the viewport exactly: the content panel is clipped
+// (`overflow-hidden`) and the page owns its own internal scroll so toolbars
+// stay pinned while the body scrolls. The contract each such page must honour:
+//   - page root:     `flex w-full min-h-0 flex-1 flex-col` (fills this area)
+//   - pinned header:  a `shrink-0` wrapper (PageHeader + any filter toolbar)
+//   - scroll body:    `min-h-0 flex-1 overflow-y-auto` (the grid/table/list)
+// Routes NOT listed here get a scrolling panel (`overflow-y-auto`) instead and
+// flow as normal documents.
 const VIEWPORT_FIT_ROUTES = new Set([
   "/pokedex",
   "/megas",

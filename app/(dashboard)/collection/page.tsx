@@ -59,13 +59,16 @@ export default async function CollectionPage() {
   const byWishlist = pluck(wishlistRes.data ?? []).slice(0, RAIL_SIZE);
 
   return (
-    <div className="mx-auto max-w-[1280px] space-y-8">
+    <div className="mx-auto flex w-full min-h-0 max-w-[1280px] flex-1 flex-col gap-8">
+      <div className="shrink-0">
       <PageHeader
         icon={FolderOpen}
         title="Collection"
         subtitle="Everything you own, surfaced through rails."
       />
+      </div>
 
+      <div className="min-h-0 flex-1 space-y-8 overflow-y-auto pr-1">
       <CardRail
         title="Recently added"
         subtitle="The latest cards added to your collection"
@@ -109,6 +112,7 @@ export default async function CollectionPage() {
           Coming with price data — see BACKLOG section 7.
         </p>
       </section>
+      </div>
     </div>
   );
 }

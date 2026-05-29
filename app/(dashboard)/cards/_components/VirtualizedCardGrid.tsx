@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
-import { useWindowVirtualizer } from "@tanstack/react-virtual";
+import { useVirtualizer } from "@tanstack/react-virtual";
 import { CardTile } from "../../_components/CardTile";
 import type { CardEntry } from "@/lib/data/types";
 
@@ -19,29 +19,24 @@ interface Props {
 }
 
 export function VirtualizedCardGrid({ cards, cols }: Props) {
-  const containerRef = useRef<HTMLDivElement>(null);
+  // The grid owns its own scroll container so it fits the viewport-bounded
+  // shell (the document itself does not scroll). `scrollRef` is the scroll
+  // element the virtualizer watches; `sizeRef` measures the row content width.
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const sizeRef = useRef<HTMLDivElement>(null);
   const [containerWidth, setContainerWidth] = useState(0);
-  const [scrollMargin, setScrollMargin] = useState(0);
 
-  // Track container width + offset from the top of the document, so the
-  // window-scroll virtualizer knows when rows are in view and so we can
-  // compute pixel-precise row heights from the card aspect ratio.
+  // Track the content width so we can compute pixel-precise row heights from
+  // the card aspect ratio. ResizeObserver on the inner sizing div reflects the
+  // width available to a row (inside any scroll-container padding).
   useLayoutEffect(() => {
-    const el = containerRef.current;
+    const el = sizeRef.current;
     if (!el) return;
-    const measure = () => {
-      setContainerWidth(el.offsetWidth);
-      const rect = el.getBoundingClientRect();
-      setScrollMargin(rect.top + window.scrollY);
-    };
+    const measure = () => setContainerWidth(el.offsetWidth);
     measure();
     const ro = new ResizeObserver(measure);
     ro.observe(el);
-    window.addEventListener("resize", measure);
-    return () => {
-      ro.disconnect();
-      window.removeEventListener("resize", measure);
-    };
+    return () => ro.disconnect();
   }, []);
 
   const cardWidth =
@@ -53,11 +48,11 @@ export function VirtualizedCardGrid({ cards, cols }: Props) {
 
   const rowCount = Math.ceil(cards.length / cols);
 
-  const virtualizer = useWindowVirtualizer({
+  const virtualizer = useVirtualizer({
     count: rowCount,
+    getScrollElement: () => scrollRef.current,
     estimateSize: () => rowHeight,
     overscan: 4,
-    scrollMargin,
   });
 
   // Re-measure rows when the computed row height changes (resize, col count).
@@ -71,34 +66,41 @@ export function VirtualizedCardGrid({ cards, cols }: Props) {
   if (cards.length === 0) {
     return (
       <div
-        ref={containerRef}
-        className="rounded-lg border border-dashed border-border bg-panel/50 p-12 text-center text-sm text-muted"
+        ref={scrollRef}
+        className="min-h-0 flex-1 overflow-y-auto"
       >
-        No cards match the current filters.
+        <div
+          ref={sizeRef}
+          className="rounded-lg border border-dashed border-border bg-panel/50 p-12 text-center text-sm text-muted"
+        >
+          No cards match the current filters.
+        </div>
       </div>
     );
   }
 
   return (
-    <div ref={containerRef} className="relative w-full" style={{ height: totalSize }}>
-      {items.map((virtualRow) => {
-        const start = virtualRow.index * cols;
-        const rowCards = cards.slice(start, start + cols);
-        return (
-          <div
-            key={virtualRow.key}
-            className="absolute left-0 right-0 grid gap-2"
-            style={{
-              top: virtualRow.start - virtualizer.options.scrollMargin,
-              gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`,
-            }}
-          >
-            {rowCards.map((card) => (
-              <CardTile key={card.id} card={card} density="grid" />
-            ))}
-          </div>
-        );
-      })}
+    <div ref={scrollRef} className="min-h-0 flex-1 overflow-y-auto pr-1">
+      <div ref={sizeRef} className="relative w-full" style={{ height: totalSize }}>
+        {items.map((virtualRow) => {
+          const start = virtualRow.index * cols;
+          const rowCards = cards.slice(start, start + cols);
+          return (
+            <div
+              key={virtualRow.key}
+              className="absolute left-0 right-0 grid gap-2"
+              style={{
+                top: virtualRow.start,
+                gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`,
+              }}
+            >
+              {rowCards.map((card) => (
+                <CardTile key={card.id} card={card} density="grid" />
+              ))}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

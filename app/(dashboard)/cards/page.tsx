@@ -32,15 +32,19 @@ function GridSkeleton() {
 
 export default function CardsPage() {
   return (
-    <div className="mx-auto max-w-[1280px] space-y-6">
-      <PageHeader
-        icon={CreditCard}
-        title="Cards"
-        subtitle="Every card across your tracked sets. Filter by set, rarity, type, artist, or dex range."
-      />
-      <Suspense fallback={<GridSkeleton />}>
-        <CardsBrowserLoader />
-      </Suspense>
+    <div className="mx-auto flex w-full min-h-0 max-w-[1280px] flex-1 flex-col gap-6">
+      <div className="shrink-0">
+        <PageHeader
+          icon={CreditCard}
+          title="Cards"
+          subtitle="Every card across your tracked sets. Filter by set, rarity, type, artist, or dex range."
+        />
+      </div>
+      <div className="flex min-h-0 flex-1 flex-col">
+        <Suspense fallback={<GridSkeleton />}>
+          <CardsBrowserLoader />
+        </Suspense>
+      </div>
     </div>
   );
 }

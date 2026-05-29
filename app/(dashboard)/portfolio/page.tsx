@@ -248,9 +248,12 @@ export default async function PortfolioPage() {
   }
 
   return (
-    <div className="mx-auto max-w-[1280px]">
-      <PageHeader icon={LineChart} title="Portfolio" />
+    <div className="mx-auto flex w-full min-h-0 max-w-[1280px] flex-1 flex-col gap-6">
+      <div className="shrink-0">
+        <PageHeader icon={LineChart} title="Portfolio" />
+      </div>
 
+      <div className="min-h-0 flex-1 overflow-y-auto pr-1">
       <PortfolioHero
         portfolioValue={portfolioValue}
         pricedCount={pricedCount}
@@ -284,6 +287,7 @@ export default async function PortfolioPage() {
           priceSource={prefs.priceSource}
           display={display}
         />
+      </div>
       </div>
     </div>
   );

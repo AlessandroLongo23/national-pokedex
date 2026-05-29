@@ -40,6 +40,11 @@ interface Props {
    * pokedex-scope binders. Cells without an entry fall back to the official
    * artwork + amber-dot treatment. */
   displayCardByDex?: Map<number, CardEntry>;
+  /** When true, the grid fills its (bounded-height) parent and owns its own
+   * vertical scroll: the filter/density toolbar stays pinned while the cells
+   * scroll. Used by the viewport-fit /pokedex and /megas pages. Off by default
+   * so embedded uses (binder detail) keep flowing in the page's own scroll. */
+  fitToViewport?: boolean;
 }
 
 const COLS_KEY_PREFIX = "pokedex.cols";
@@ -76,6 +81,7 @@ export function PokedexGrid({
   onCellClick,
   selectedDex,
   displayCardByDex,
+  fitToViewport = false,
 }: Props) {
   const { ownedSpecies, ownedMegaForms } = useOwnedCards();
   const { isGuest, treatMegasAsSeparate, megaPlacement } = useUser();
@@ -282,9 +288,8 @@ export function PokedexGrid({
   const minCols = 6;
   const maxCols = 40;
 
-  return (
-    <div className="space-y-5">
-      <div className="flex flex-wrap items-center gap-x-5 gap-y-3 border-b border-border pb-3">
+  const toolbar = (
+    <div className="flex flex-wrap items-center gap-x-5 gap-y-3 border-b border-border pb-3">
         {showFilter && (
           <FilterBar
             value={filter}
@@ -351,7 +356,10 @@ export function PokedexGrid({
           </label>
         </div>
       </div>
+  );
 
+  const body = (
+    <>
       {groupByGen && showGenToggle ? (
         <div className="space-y-7">
           {gens.map((g) => {
@@ -474,6 +482,22 @@ export function PokedexGrid({
           No Pokémon match these filters.
         </div>
       )}
+    </>
+  );
+
+  if (fitToViewport) {
+    return (
+      <div className="flex min-h-0 flex-1 flex-col gap-5">
+        <div className="shrink-0">{toolbar}</div>
+        <div className="min-h-0 flex-1 space-y-5 overflow-y-auto pr-1">{body}</div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-5">
+      {toolbar}
+      {body}
     </div>
   );
 }

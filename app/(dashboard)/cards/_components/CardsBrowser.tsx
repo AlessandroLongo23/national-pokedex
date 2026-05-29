@@ -101,19 +101,21 @@ export function CardsBrowser({ cards, artists, types }: Props) {
   const sorted = useMemo(() => sortCards(filtered, sort), [filtered, sort]);
 
   return (
-    <div className="space-y-3">
-      <CardFiltersToolbar
-        filters={filters}
-        onFiltersChange={setFilters}
-        sort={sort}
-        onSortChange={setSort}
-        cols={cols}
-        onColsChange={setCols}
-        resultCount={sorted.length}
-        totalCount={cards.length}
-        artists={artists}
-        types={types}
-      />
+    <div className="flex min-h-0 flex-1 flex-col gap-3">
+      <div className="shrink-0">
+        <CardFiltersToolbar
+          filters={filters}
+          onFiltersChange={setFilters}
+          sort={sort}
+          onSortChange={setSort}
+          cols={cols}
+          onColsChange={setCols}
+          resultCount={sorted.length}
+          totalCount={cards.length}
+          artists={artists}
+          types={types}
+        />
+      </div>
       <VirtualizedCardGrid cards={sorted} cols={cols} />
     </div>
   );

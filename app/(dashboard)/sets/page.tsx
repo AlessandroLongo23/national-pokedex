@@ -24,13 +24,17 @@ async function loadPackCountsBySet(): Promise<Record<string, number>> {
 export default async function SetsPage() {
   const packCountsBySet = await loadPackCountsBySet();
   return (
-    <div className="mx-auto max-w-[1280px] space-y-6">
-      <PageHeader
-        icon={Layers}
-        title="Sets"
-        subtitle={`${SETS.length} sets in the catalog · click a set to view its cards and log a pack`}
-      />
-      <SetsTable packCountsBySet={packCountsBySet} />
+    <div className="mx-auto flex w-full min-h-0 max-w-[1280px] flex-1 flex-col gap-6">
+      <div className="shrink-0">
+        <PageHeader
+          icon={Layers}
+          title="Sets"
+          subtitle={`${SETS.length} sets in the catalog · click a set to view its cards and log a pack`}
+        />
+      </div>
+      <div className="flex min-h-0 flex-1 flex-col">
+        <SetsTable packCountsBySet={packCountsBySet} />
+      </div>
     </div>
   );
 }

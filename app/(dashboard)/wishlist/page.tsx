@@ -56,24 +56,28 @@ export default async function WishlistPage() {
   const artists = [...artistSet].sort((a, b) => a.localeCompare(b));
 
   return (
-    <div className="mx-auto max-w-[1280px] space-y-6">
-      <PageHeader
-        icon={Heart}
-        title="Wishlist"
-        subtitle={`${cards.length} card${cards.length === 1 ? "" : "s"} marked as wanted. Click a card's Own button to move it from wishlist into your collection.`}
-      />
-      <Suspense
-        fallback={
-          <WishlistUnpricedShell cards={cards} types={types} artists={artists} />
-        }
-      >
-        <WishlistPricedShell
-          cards={cards}
-          cardIds={cardIds}
-          types={types}
-          artists={artists}
+    <div className="mx-auto flex w-full min-h-0 max-w-[1280px] flex-1 flex-col gap-6">
+      <div className="shrink-0">
+        <PageHeader
+          icon={Heart}
+          title="Wishlist"
+          subtitle={`${cards.length} card${cards.length === 1 ? "" : "s"} marked as wanted. Click a card's Own button to move it from wishlist into your collection.`}
         />
-      </Suspense>
+      </div>
+      <div className="flex min-h-0 flex-1 flex-col">
+        <Suspense
+          fallback={
+            <WishlistUnpricedShell cards={cards} types={types} artists={artists} />
+          }
+        >
+          <WishlistPricedShell
+            cards={cards}
+            cardIds={cardIds}
+            types={types}
+            artists={artists}
+          />
+        </Suspense>
+      </div>
     </div>
   );
 }

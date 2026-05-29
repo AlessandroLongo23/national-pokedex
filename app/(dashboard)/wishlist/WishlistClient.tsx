@@ -203,12 +203,14 @@ export function WishlistClient({ cards, prices, types, artists }: Props) {
 
   return (
     <CardPricesProvider prices={prices}>
-      <div className="space-y-3">
-        <VariantSwitcher value={variant} onChange={setVariant} />
+      <div className="flex min-h-0 flex-1 flex-col gap-3">
+        <div className="shrink-0 space-y-3">
+          <VariantSwitcher value={variant} onChange={setVariant} />
 
-        {variant === "sheet" && <ToolbarSheet {...toolbarProps} />}
-        {variant === "inline" && <ToolbarInline {...toolbarProps} />}
-        {variant === "tiered" && <ToolbarTiered {...toolbarProps} />}
+          {variant === "sheet" && <ToolbarSheet {...toolbarProps} />}
+          {variant === "inline" && <ToolbarInline {...toolbarProps} />}
+          {variant === "tiered" && <ToolbarTiered {...toolbarProps} />}
+        </div>
 
         <VirtualizedCardGrid cards={sorted} cols={cols} />
       </div>

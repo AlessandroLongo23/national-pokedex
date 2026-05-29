@@ -70,7 +70,8 @@ export default async function BindersPage() {
   const allCards = binders.length > 0 ? await getAllCards() : [];
 
   return (
-    <div className="mx-auto max-w-[1280px] space-y-6">
+    <div className="mx-auto flex w-full min-h-0 max-w-[1280px] flex-1 flex-col gap-6">
+      <div className="shrink-0">
       <PageHeader
         icon={Notebook}
         title="Binders"
@@ -84,7 +85,9 @@ export default async function BindersPage() {
           </Link>
         }
       />
+      </div>
 
+      <div className="min-h-0 flex-1 overflow-y-auto pr-1">
       {binders.length === 0 ? (
         <div className="rounded-lg border border-border bg-panel p-8 text-sm text-muted">
           <p className="text-base text-text">No binders yet.</p>
@@ -125,6 +128,7 @@ export default async function BindersPage() {
           />
         </Suspense>
       )}
+      </div>
     </div>
   );
 }

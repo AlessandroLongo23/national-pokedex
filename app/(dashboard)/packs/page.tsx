@@ -103,13 +103,17 @@ async function loadHistory(): Promise<PackHistoryItem[]> {
 export default async function PacksPage() {
   const history = await loadHistory();
   return (
-    <div className="mx-auto max-w-[1280px] space-y-8">
-      <PageHeader
-        icon={Package}
-        title="Packs"
-        subtitle="Rarity-aware simulation of every set against your current binder. Toggle the local-store filter to focus on sets you can actually buy."
-      />
-      <PacksClient history={history} />
+    <div className="mx-auto flex w-full min-h-0 max-w-[1280px] flex-1 flex-col gap-8">
+      <div className="shrink-0">
+        <PageHeader
+          icon={Package}
+          title="Packs"
+          subtitle="Rarity-aware simulation of every set against your current binder. Toggle the local-store filter to focus on sets you can actually buy."
+        />
+      </div>
+      <div className="min-h-0 flex-1 space-y-8 overflow-y-auto pr-1">
+        <PacksClient history={history} />
+      </div>
     </div>
   );
 }

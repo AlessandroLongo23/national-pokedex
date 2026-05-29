@@ -181,10 +181,13 @@ export default async function TransactionsPage() {
   const netPositionCents = computeNetPositionCents(kpis, heldValueCents);
 
   return (
-    <div className="mx-auto max-w-[1280px]">
+    <div className="mx-auto flex w-full min-h-0 max-w-[1280px] flex-1 flex-col gap-6">
       <LedgerRealtime userId={userId} />
-      <PageHeader icon={Receipt} title="Transactions" />
+      <div className="shrink-0">
+        <PageHeader icon={Receipt} title="Transactions" />
+      </div>
 
+      <div className="min-h-0 flex-1 overflow-y-auto pr-1">
       <LedgerHero
         kpis={kpis}
         heldValueCents={heldValueCents}
@@ -204,6 +207,7 @@ export default async function TransactionsPage() {
           displayCurrency={displayCurrency}
           latestRatesFromEur={latestRatesFromEur}
         />
+      </div>
       </div>
     </div>
   );

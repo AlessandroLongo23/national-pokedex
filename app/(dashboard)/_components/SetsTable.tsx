@@ -146,8 +146,8 @@ export function SetsTable({
   );
 
   return (
-    <div className="space-y-3">
-      <div className="flex flex-wrap items-center gap-3 rounded-lg border border-border bg-panel p-3">
+    <div className="flex min-h-0 flex-1 flex-col gap-3">
+      <div className="flex shrink-0 flex-wrap items-center gap-3 rounded-lg border border-border bg-panel p-3">
         <div className="relative min-w-0 flex-1 sm:min-w-[220px] sm:max-w-xs">
           <Search
             className="pointer-events-none absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted"
@@ -213,6 +213,7 @@ export function SetsTable({
         <ViewToggle view={view} onChange={setView} />
       </div>
 
+      <div className="min-h-0 flex-1 overflow-y-auto pr-1">
       {rows.length === 0 ? (
         <div className="rounded-xl border border-border bg-panel p-10 text-center text-sm text-muted">
           No sets match this filter.
@@ -369,6 +370,7 @@ export function SetsTable({
           })}
         </ul>
       )}
+      </div>
     </div>
   );
 }
