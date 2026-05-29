@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import { getSupabaseServer } from "@/lib/supabase/server";
 import { SETS } from "@/lib/data";
-import { PRICE_SOURCE_CURRENCY } from "@/lib/pricing/pokemontcg";
 import { isLedgerCurrency } from "@/lib/ledger/money";
 import { requireUserId } from "../../../_lib/current-user";
 import { loadUserPreferences } from "../../../_lib/user-preferences";
@@ -42,7 +41,7 @@ export default async function EditPackPage({ params }: PageProps) {
     <div className="mx-auto max-w-[1280px]">
       <LogPackFlow
         initialSetId={setId}
-        defaultCurrency={PRICE_SOURCE_CURRENCY[prefs.priceSource]}
+        defaultCurrency={prefs.displayCurrency}
         editingPackId={pack.id as string}
         editingSetName={set?.name ?? setId}
         editingSetSeries={set?.series}

@@ -36,8 +36,8 @@ export function BestPackHero({ filterAvailable }: Props) {
     );
   }
 
-  const logoUrl = `https://images.pokemontcg.io/${best.set.id}/logo.png`;
-  const symbolUrl = `https://images.pokemontcg.io/${best.set.id}/symbol.png`;
+  const logoUrl = best.set.logoUrl ?? `https://images.pokemontcg.io/${best.set.id}/logo.png`;
+  const symbolUrl = best.set.symbolUrl ?? `https://images.pokemontcg.io/${best.set.id}/symbol.png`;
 
   return (
     <section className="relative overflow-hidden rounded-2xl border border-accent/40 bg-gradient-to-br from-accent/10 via-panel to-panel">

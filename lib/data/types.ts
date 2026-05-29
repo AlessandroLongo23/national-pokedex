@@ -15,6 +15,9 @@ export interface SetInfo {
   uniqueCount: number;
   distinctPokemonCount: number;
   cardCount: number;
+  ptcgoCode?: string;
+  logoUrl?: string;
+  symbolUrl?: string;
 }
 
 export interface Coverage {

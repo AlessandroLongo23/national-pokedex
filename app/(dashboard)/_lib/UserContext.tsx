@@ -1,7 +1,11 @@
 "use client";
 
-import { createContext, useContext } from "react";
-import type { PriceSource } from "@/lib/pricing/pokemontcg";
+import { createContext, useContext, useMemo } from "react";
+import type {
+  DisplayConversion,
+  PriceSource,
+} from "@/lib/pricing/pokemontcg";
+import type { Currency } from "@/lib/pricing/currencies";
 import type { MegaPlacement } from "./mega-prefs";
 
 interface UserCtx {
@@ -10,6 +14,10 @@ interface UserCtx {
   priceSource: PriceSource;
   treatMegasAsSeparate: boolean;
   megaPlacement: MegaPlacement;
+  displayCurrency: Currency;
+  latestRatesFromEur: Record<Currency, number>;
+  // Memoized bundle for passing into formatPrice/formatPriceCompact.
+  display: DisplayConversion;
   isGuest: boolean;
 }
 
@@ -21,6 +29,8 @@ export function UserProvider({
   priceSource,
   treatMegasAsSeparate,
   megaPlacement,
+  displayCurrency,
+  latestRatesFromEur,
   children,
 }: {
   userId: string;
@@ -28,8 +38,14 @@ export function UserProvider({
   priceSource: PriceSource;
   treatMegasAsSeparate: boolean;
   megaPlacement: MegaPlacement;
+  displayCurrency: Currency;
+  latestRatesFromEur: Record<Currency, number>;
   children: React.ReactNode;
 }) {
+  const display = useMemo<DisplayConversion>(
+    () => ({ displayCurrency, latestRatesFromEur }),
+    [displayCurrency, latestRatesFromEur],
+  );
   return (
     <Ctx.Provider
       value={{
@@ -38,6 +54,9 @@ export function UserProvider({
         priceSource,
         treatMegasAsSeparate,
         megaPlacement,
+        displayCurrency,
+        latestRatesFromEur,
+        display,
         isGuest: !userId,
       }}
     >

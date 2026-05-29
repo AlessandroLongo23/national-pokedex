@@ -36,7 +36,14 @@ Touch parity is not optional. Hover-only affordances actively block the phone co
 
 Quiet, dense, slightly nerdy. Treats users like peers who already know TCG. Type-led, not graphic-led — the card art does the heavy visual lifting; product chrome stays out of the way. No marketing-speak, no exclamation points, no friendly tutorialese.
 
-Aesthetic: full light and dark themes with a real token-driven design system (see [BACKLOG.md](BACKLOG.md) §1 — currently dark-only and being rebuilt). Tinted neutrals, never `#000` or `#fff`. Accent in the cool blue-purple family. Owned state is green, wishlist state is the accent. Type-led product chrome, art-led content surfaces.
+Aesthetic: full light and dark themes with a real token-driven design system (see [BACKLOG.md](BACKLOG.md) §1 — currently dark-only and being rebuilt). Tinted neutrals, never `#000` or `#fff`. Accent in the cool blue-purple family. Type-led product chrome, art-led content surfaces.
+
+State color system. Two semantically distinct collecting states get two distinct colors:
+
+- **Owned (amber, `--color-owned` #fbbf24).** A count of physical cards held. Used on per-card quantity badges, per-set owned counts, and progress bars that read "X of Y cards". Amber communicates "tracked, in progress" without implying completion.
+- **Covered (emerald, `--color-covered` #34d399).** A binary fulfilment signal: this entry is satisfied (≥1 owned card meets it). Used on Pokémon-level dex completion, artist coverage, and any place where the question is "done or not done?". Emerald is the moment-of-celebration color.
+
+Other state colors: accent blue-purple (`--color-accent` #60a5fa) for wishlist, selection, and primary actions; soft red (`--color-missing` #f87171) for explicit missing/error states. Each state gets one color — never stack two state colors on the same element.
 
 ## What this is
 

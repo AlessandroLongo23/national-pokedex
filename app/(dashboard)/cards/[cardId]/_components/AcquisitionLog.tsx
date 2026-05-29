@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { ArrowDownLeft, ArrowUpRight, Award, Package } from "lucide-react";
 import { getSet } from "@/lib/data";
-import { formatMoneyCents, type LedgerCurrency } from "@/lib/ledger/money";
+import { type LedgerCurrency } from "@/lib/ledger/money";
+import type { Currency } from "@/lib/pricing/currencies";
+import { MoneyDisplay } from "../../../_components/MoneyDisplay";
 import { Separator } from "../../../_components/Separator";
 
 export interface PackEvent {
@@ -11,6 +13,7 @@ export interface PackEvent {
   openedAt: string;
   costCents: number | null;
   currency: LedgerCurrency | null;
+  rateToEur: number | null;
 }
 
 export interface TxEvent {
@@ -18,6 +21,7 @@ export interface TxEvent {
   occurredAt: string;
   amountCents: number;
   currency: LedgerCurrency;
+  rateToEur: number | null;
   quantity: number | null;
   note: string | null;
 }
@@ -28,9 +32,17 @@ interface Props {
   events: AcquisitionEvent[];
   ownedQty: number;
   acquiredAt: string | null;
+  displayCurrency: Currency;
+  latestRatesFromEur: Record<Currency, number>;
 }
 
-export function AcquisitionLog({ events, ownedQty, acquiredAt }: Props) {
+export function AcquisitionLog({
+  events,
+  ownedQty,
+  acquiredAt,
+  displayCurrency,
+  latestRatesFromEur,
+}: Props) {
   if (ownedQty === 0 && events.length === 0) return null;
 
   // Sort newest first; pack opens use openedAt, transactions use occurredAt.
@@ -61,7 +73,11 @@ export function AcquisitionLog({ events, ownedQty, acquiredAt }: Props) {
         <ol className="mt-4 divide-y divide-border/60">
           {sorted.map((ev, i) => (
             <li key={i}>
-              <EventRow event={ev} />
+              <EventRow
+                event={ev}
+                displayCurrency={displayCurrency}
+                latestRatesFromEur={latestRatesFromEur}
+              />
             </li>
           ))}
         </ol>
@@ -70,7 +86,15 @@ export function AcquisitionLog({ events, ownedQty, acquiredAt }: Props) {
   );
 }
 
-function EventRow({ event }: { event: AcquisitionEvent }) {
+function EventRow({
+  event,
+  displayCurrency,
+  latestRatesFromEur,
+}: {
+  event: AcquisitionEvent;
+  displayCurrency: Currency;
+  latestRatesFromEur: Record<Currency, number>;
+}) {
   if (event.kind === "pack") {
     const set = getSet(event.setId);
     return (
@@ -92,7 +116,15 @@ function EventRow({ event }: { event: AcquisitionEvent }) {
         </div>
         {event.costCents != null && event.currency && (
           <span className="text-[11px] text-muted nums">
-            pack {formatMoneyCents(event.costCents, event.currency)}
+            pack{" "}
+            <MoneyDisplay
+              cents={event.costCents}
+              currency={event.currency}
+              rateToEur={event.rateToEur}
+              asOf={event.openedAt}
+              displayCurrency={displayCurrency}
+              latestRatesFromEur={latestRatesFromEur}
+            />
           </span>
         )}
         <ArrowUpRight
@@ -146,7 +178,14 @@ function EventRow({ event }: { event: AcquisitionEvent }) {
       </div>
       <span className={`text-xs font-medium nums ${amountColor}`}>
         {amountSign}
-        {formatMoneyCents(amountAbs, event.currency)}
+        <MoneyDisplay
+          cents={amountAbs}
+          currency={event.currency}
+          rateToEur={event.rateToEur}
+          asOf={event.occurredAt}
+          displayCurrency={displayCurrency}
+          latestRatesFromEur={latestRatesFromEur}
+        />
       </span>
     </div>
   );

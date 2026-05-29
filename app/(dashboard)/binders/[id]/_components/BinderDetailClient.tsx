@@ -66,7 +66,7 @@ export function BinderDetailClient({
 }: Props) {
   const router = useRouter();
   const { ownedCards, ownedSpecies, ownedMegaForms } = useOwnedCards();
-  const { treatMegasAsSeparate, megaPlacement } = useUser();
+  const { treatMegasAsSeparate, megaPlacement, display } = useUser();
   const includeMegasInBinder =
     treatMegasAsSeparate && megaPlacement !== "separate";
   const [editing, setEditing] = useState(false);
@@ -286,7 +286,7 @@ export function BinderDetailClient({
                   title={`${pricedCount.toLocaleString()} of ${ownedPricedTotal.toLocaleString()} owned cards priced`}
                 >
                   <span className="font-semibold text-text">
-                    {formatPriceCompact(value, priceSource)}
+                    {formatPriceCompact(value, priceSource, display)}
                   </span>
                   {pricedCount < ownedPricedTotal && (
                     <span className="ml-1 text-muted">

@@ -41,6 +41,12 @@ export function getSet(setId: string): SetInfo | undefined {
   return SETS.find((s) => s.id === setId);
 }
 
+// Display form of a set ID: uppercased and with the "ptN" decimal marker
+// rewritten as ".N" ("me2pt5" → "ME2.5", "swsh12pt5gg" → "SWSH12.5GG").
+export function formatSetCode(setId: string): string {
+  return setId.toUpperCase().replace(/PT(\d)/g, ".$1");
+}
+
 export function getSpecies(dex: number): import("./types").SpeciesEntry | undefined {
   return SPECIES[dex];
 }

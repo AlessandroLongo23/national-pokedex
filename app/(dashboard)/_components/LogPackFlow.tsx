@@ -9,10 +9,10 @@ import type { CardEntry } from "@/lib/data/types";
 import {
   formatMoneyCents,
   isLedgerCurrency,
-  LEDGER_CURRENCIES,
   type LedgerCurrency,
   parseMoneyCents,
 } from "@/lib/ledger/money";
+import { SUPPORTED_CURRENCIES } from "@/lib/pricing/currencies";
 import { deletePack, logPack, updatePack } from "../_lib/pack-actions";
 import { useSetPageTitle } from "../_lib/PageTitleContext";
 import { CardGrid } from "./CardGrid";
@@ -644,7 +644,7 @@ function PricePaidField({
               className="rounded-md border border-border bg-panel-2 px-2 py-1.5 text-xs text-text focus:border-accent focus:outline-none [color-scheme:dark]"
               aria-label="Currency"
             >
-              {LEDGER_CURRENCIES.map((c) => (
+              {SUPPORTED_CURRENCIES.map((c) => (
                 <option key={c} value={c}>
                   {c}
                 </option>

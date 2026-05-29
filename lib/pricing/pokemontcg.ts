@@ -11,6 +11,8 @@
 // Constraint from CLAUDE.md: only free sources allowed. Never the paid
 // Scrydex endpoints.
 
+import type { Currency } from "./currencies";
+import { convertCents } from "./exchange-rates";
 import { fetchSetTcgplayerFallback } from "./tcgcsv";
 
 const API_BASE = "https://api.pokemontcg.io/v2";
@@ -26,6 +28,11 @@ export const PRICE_SOURCES: readonly PriceSource[] = ["tcgplayer", "cardmarket"]
 export const PRICE_SOURCE_LABEL: Record<PriceSource, string> = {
   tcgplayer: "TCGplayer (USD)",
   cardmarket: "Cardmarket (EUR)",
+};
+
+export const PRICE_SOURCE_NAME: Record<PriceSource, string> = {
+  tcgplayer: "TCGplayer",
+  cardmarket: "Cardmarket",
 };
 
 export const PRICE_SOURCE_CURRENCY: Record<PriceSource, "USD" | "EUR"> = {
@@ -329,25 +336,68 @@ export function sumPricesByQuantity(
   return { total, coveredCount };
 }
 
-export function formatPrice(value: number | undefined, source: PriceSource): string {
+// Optional conversion to the user's display currency. When the caller
+// passes a `display` block, we convert the value out of the source's
+// native currency at today's rate before formatting. No tooltip — these
+// helpers are used in tight spots (card tiles, KPI numbers, charts)
+// where there's no room for a hover affordance. For places that need
+// the "Original: $X.XX, rate Y" tooltip, render <MoneyDisplay/> instead.
+export interface DisplayConversion {
+  displayCurrency: Currency;
+  latestRatesFromEur: Record<Currency, number>;
+}
+
+function convertForDisplay(
+  value: number,
+  source: PriceSource,
+  display: DisplayConversion | undefined,
+): { value: number; currency: Currency } {
+  const nativeCurrency = PRICE_SOURCE_CURRENCY[source];
+  if (!display || display.displayCurrency === nativeCurrency) {
+    return { value, currency: nativeCurrency };
+  }
+  const cents = Math.round(value * 100);
+  const convertedCents = convertCents(
+    cents,
+    nativeCurrency,
+    display.displayCurrency,
+    // Live market prices have no snapshot — convert at today's rate.
+    nativeCurrency === "EUR"
+      ? 1
+      : 1 / (display.latestRatesFromEur[nativeCurrency] ?? 1),
+    display.latestRatesFromEur,
+  );
+  if (convertedCents == null) return { value, currency: nativeCurrency };
+  return { value: convertedCents / 100, currency: display.displayCurrency };
+}
+
+export function formatPrice(
+  value: number | undefined,
+  source: PriceSource,
+  display?: DisplayConversion,
+): string {
   if (value == null) return "—";
-  const currency = PRICE_SOURCE_CURRENCY[source];
+  const { value: v, currency } = convertForDisplay(value, source, display);
   // Compact for large totals, full for individual cards. Callers can pass
   // through formatPriceCompact instead when they want the K/M suffix.
   return new Intl.NumberFormat("en-US", {
     style: "currency",
     currency,
-    maximumFractionDigits: value >= 100 ? 0 : 2,
-  }).format(value);
+    maximumFractionDigits: v >= 100 ? 0 : 2,
+  }).format(v);
 }
 
-export function formatPriceCompact(value: number | undefined, source: PriceSource): string {
+export function formatPriceCompact(
+  value: number | undefined,
+  source: PriceSource,
+  display?: DisplayConversion,
+): string {
   if (value == null) return "—";
-  const currency = PRICE_SOURCE_CURRENCY[source];
+  const { value: v, currency } = convertForDisplay(value, source, display);
   return new Intl.NumberFormat("en-US", {
     style: "currency",
     currency,
-    notation: value >= 10000 ? "compact" : "standard",
-    maximumFractionDigits: value >= 100 ? 0 : 2,
-  }).format(value);
+    notation: v >= 10000 ? "compact" : "standard",
+    maximumFractionDigits: v >= 100 ? 0 : 2,
+  }).format(v);
 }

@@ -6,6 +6,8 @@ import { requireUserId } from "../_lib/current-user";
 import { loadUserPreferences } from "../_lib/user-preferences";
 import { getSupabaseServer } from "@/lib/supabase/server";
 import { getAllCards, type ScopeType, type ScopeParams } from "@/lib/data/binder-scope";
+import { getLatestRatesFromEur } from "@/lib/pricing/exchange-rates";
+import type { DisplayConversion } from "@/lib/pricing/pokemontcg";
 import {
   BinderListPricedGrid,
   BinderListUnpricedGrid,
@@ -28,14 +30,19 @@ export default async function BindersPage() {
   const supabase = await getSupabaseServer();
   const prefs = await loadUserPreferences(userId);
 
-  const [bindersResult, ownedResult] = await Promise.all([
+  const [bindersResult, ownedResult, latestRatesFromEur] = await Promise.all([
     supabase
       .from("binders")
       .select("id, name, scope_type, scope_params")
       .eq("user_id", userId)
       .order("created_at", { ascending: false }),
     supabase.from("owned_cards").select("card_id, quantity").eq("user_id", userId),
+    getLatestRatesFromEur(),
   ]);
+  const display: DisplayConversion = {
+    displayCurrency: prefs.displayCurrency,
+    latestRatesFromEur,
+  };
 
   const binders = (bindersResult.data ?? []) as BinderRow[];
   const ownedQuantities = new Map<string, number>();
@@ -102,6 +109,7 @@ export default async function BindersPage() {
               treatMegasAsSeparate={prefs.treatMegasAsSeparate}
               megaPlacement={prefs.megaPlacement}
               priceSource={prefs.priceSource}
+              display={display}
               allCards={allCards}
             />
           }
@@ -113,6 +121,7 @@ export default async function BindersPage() {
             treatMegasAsSeparate={prefs.treatMegasAsSeparate}
             megaPlacement={prefs.megaPlacement}
             priceSource={prefs.priceSource}
+            display={display}
           />
         </Suspense>
       )}

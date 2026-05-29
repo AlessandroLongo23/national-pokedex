@@ -8,8 +8,11 @@ import {
   pickPrice,
   type PriceSource,
 } from "@/lib/pricing/pokemontcg";
+import { isCurrency, type Currency } from "@/lib/pricing/currencies";
+import { getRateToEurToday } from "@/lib/pricing/exchange-rates";
 import { requireUserId } from "../../_lib/current-user";
 import { loadUserPreferences } from "../../_lib/user-preferences";
+import { CARD_VARIANTS, type CardVariant } from "./variants";
 
 // Cap matches the pack-cost guard in pack-actions.ts: $1,000,000 in cents.
 // More than enough for any singles purchase that doesn't involve a vintage
@@ -17,76 +20,88 @@ import { loadUserPreferences } from "../../_lib/user-preferences";
 // guard against fat-fingered entries.
 const MAX_COST_CENTS = 1_000_000_00;
 
+const currencyField = z.string().refine(isCurrency, "unsupported currency");
+
+const variantField = z.enum(CARD_VARIANTS).nullable().optional();
+
 const logSinglePurchaseSchema = z.object({
   cardId: z.string().min(1).max(64),
   quantity: z.number().int().min(1).max(100),
   unitCostCents: z.number().int().min(0).max(MAX_COST_CENTS),
-  currency: z.enum(["USD", "EUR"]),
+  currency: currencyField,
   occurredAt: z.string().datetime(),
   note: z.string().max(500).optional(),
+  variant: variantField,
 });
 
 const editSinglePurchaseSchema = z.object({
   transactionId: z.string().uuid(),
   quantity: z.number().int().min(1).max(100),
   unitCostCents: z.number().int().min(0).max(MAX_COST_CENTS),
-  currency: z.enum(["USD", "EUR"]),
+  currency: currencyField,
   occurredAt: z.string().datetime(),
   note: z.string().max(500).optional(),
+  variant: variantField,
 });
 
 const editSingleSaleSchema = z.object({
   transactionId: z.string().uuid(),
   quantity: z.number().int().min(1).max(100),
   unitProceedsCents: z.number().int().min(0).max(MAX_COST_CENTS),
-  currency: z.enum(["USD", "EUR"]),
+  currency: currencyField,
   occurredAt: z.string().datetime(),
   note: z.string().max(500).optional(),
+  variant: variantField,
 });
 
 const logSingleSaleSchema = z.object({
   cardId: z.string().min(1).max(64),
   quantity: z.number().int().min(1).max(100),
   unitProceedsCents: z.number().int().min(0).max(MAX_COST_CENTS),
-  currency: z.enum(["USD", "EUR"]),
+  currency: currencyField,
   occurredAt: z.string().datetime(),
   note: z.string().max(500).optional(),
+  variant: variantField,
 });
 
 export interface LogSinglePurchaseInput {
   cardId: string;
   quantity: number;
   unitCostCents: number;
-  currency: "USD" | "EUR";
+  currency: Currency;
   occurredAt: string;
   note?: string;
+  variant?: CardVariant | null;
 }
 
 export interface EditSinglePurchaseInput {
   transactionId: string;
   quantity: number;
   unitCostCents: number;
-  currency: "USD" | "EUR";
+  currency: Currency;
   occurredAt: string;
   note?: string;
+  variant?: CardVariant | null;
 }
 
 export interface EditSingleSaleInput {
   transactionId: string;
   quantity: number;
   unitProceedsCents: number;
-  currency: "USD" | "EUR";
+  currency: Currency;
   occurredAt: string;
   note?: string;
+  variant?: CardVariant | null;
 }
 
 export interface LogSingleSaleInput {
   cardId: string;
   quantity: number;
   unitProceedsCents: number;
-  currency: "USD" | "EUR";
+  currency: Currency;
   occurredAt: string;
   note?: string;
+  variant?: CardVariant | null;
 }
 
 // Records a singles purchase atomically via the log_single_purchase RPC:
@@ -103,6 +118,7 @@ export async function logSinglePurchase(
   const supabase = await getSupabaseServer();
 
   const totalCents = parsed.unitCostCents * parsed.quantity;
+  const rateToEur = await getRateToEurToday(parsed.currency);
 
   const { data: txnId, error } = await supabase.rpc("log_single_purchase", {
     _card_id: parsed.cardId,
@@ -111,6 +127,8 @@ export async function logSinglePurchase(
     _currency: parsed.currency,
     _occurred_at: parsed.occurredAt,
     _note: parsed.note ?? null,
+    _rate_to_eur: rateToEur,
+    _variant: parsed.variant ?? null,
   });
   if (error) throw new Error(`Failed to log purchase: ${error.message}`);
 
@@ -126,7 +144,7 @@ const logPsaSubmissionSchema = z.object({
   cardIds: z.array(z.string().min(1).max(64)).min(1).max(64),
   submittedAt: z.string().datetime(),
   feeCents: z.number().int().min(0).max(MAX_COST_CENTS),
-  currency: z.enum(["USD", "EUR"]),
+  currency: currencyField,
   note: z.string().max(500).optional(),
 });
 
@@ -134,7 +152,7 @@ export interface LogPsaSubmissionInput {
   cardIds: string[];
   submittedAt: string;
   feeCents: number;
-  currency: "USD" | "EUR";
+  currency: Currency;
   note?: string;
 }
 
@@ -158,6 +176,9 @@ export async function logPsaSubmission(
     return v == null ? null : Math.round(v * 100);
   });
 
+  const rateToEur =
+    parsed.feeCents > 0 ? await getRateToEurToday(parsed.currency) : null;
+
   const { data: submissionId, error } = await supabase.rpc("log_psa_submission", {
     _card_ids: deduped,
     _pre_grade_values: preGradeValues,
@@ -165,6 +186,7 @@ export async function logPsaSubmission(
     _fee_cents: parsed.feeCents,
     _currency: parsed.currency,
     _note: parsed.note ?? null,
+    _rate_to_eur: rateToEur,
   });
   if (error) throw new Error(`Failed to create submission: ${error.message}`);
 
@@ -303,6 +325,7 @@ export async function logSingleSale(
   const supabase = await getSupabaseServer();
 
   const totalCents = parsed.unitProceedsCents * parsed.quantity;
+  const rateToEur = await getRateToEurToday(parsed.currency);
 
   const { data: txnId, error } = await supabase.rpc("log_single_sale", {
     _card_id: parsed.cardId,
@@ -311,6 +334,8 @@ export async function logSingleSale(
     _currency: parsed.currency,
     _occurred_at: parsed.occurredAt,
     _note: parsed.note ?? null,
+    _rate_to_eur: rateToEur,
+    _variant: parsed.variant ?? null,
   });
   if (error) throw new Error(`Failed to log sale: ${error.message}`);
 
@@ -328,6 +353,10 @@ export async function editSinglePurchase(input: EditSinglePurchaseInput): Promis
   const supabase = await getSupabaseServer();
 
   const totalCents = parsed.unitCostCents * parsed.quantity;
+  // Always fetch today's rate; the RPC ignores it when the currency
+  // didn't actually change (ledger truth — see edit_single_purchase in
+  // 20260528120100_rpcs_rate_to_eur.sql). The fetch is request-cached.
+  const rateToEur = await getRateToEurToday(parsed.currency);
   const { error } = await supabase.rpc("edit_single_purchase", {
     _txn_id: parsed.transactionId,
     _quantity: parsed.quantity,
@@ -335,6 +364,8 @@ export async function editSinglePurchase(input: EditSinglePurchaseInput): Promis
     _currency: parsed.currency,
     _occurred_at: parsed.occurredAt,
     _note: parsed.note ?? null,
+    _rate_to_eur: rateToEur,
+    _variant: parsed.variant ?? null,
   });
   if (error) throw new Error(`Failed to update purchase: ${error.message}`);
 
@@ -364,6 +395,7 @@ export async function editSingleSale(input: EditSingleSaleInput): Promise<void> 
   const supabase = await getSupabaseServer();
 
   const totalCents = parsed.unitProceedsCents * parsed.quantity;
+  const rateToEur = await getRateToEurToday(parsed.currency);
   const { error } = await supabase.rpc("edit_single_sale", {
     _txn_id: parsed.transactionId,
     _quantity: parsed.quantity,
@@ -371,6 +403,8 @@ export async function editSingleSale(input: EditSingleSaleInput): Promise<void> 
     _currency: parsed.currency,
     _occurred_at: parsed.occurredAt,
     _note: parsed.note ?? null,
+    _rate_to_eur: rateToEur,
+    _variant: parsed.variant ?? null,
   });
   if (error) throw new Error(`Failed to update sale: ${error.message}`);
 
@@ -392,21 +426,54 @@ export async function deleteSingleSale(transactionId: string): Promise<void> {
   revalidatePath("/collection");
 }
 
+const deleteTransactionsBatchSchema = z.object({
+  items: z
+    .array(
+      z.object({
+        id: z.string().uuid(),
+        kind: z.enum(["single_purchase", "sale"]),
+      }),
+    )
+    .min(1)
+    .max(200),
+});
+
+// Pack and PSA rows route to their dedicated editors; bulk delete
+// intentionally doesn't touch them, matching the per-row Edit affordance.
+export async function deleteTransactionsBatch(
+  items: Array<{ id: string; kind: "single_purchase" | "sale" }>,
+): Promise<void> {
+  const parsed = deleteTransactionsBatchSchema.parse({ items });
+  await requireUserId();
+  const supabase = await getSupabaseServer();
+  for (const { id, kind } of parsed.items) {
+    const rpc =
+      kind === "single_purchase" ? "delete_single_purchase" : "delete_single_sale";
+    const { error } = await supabase.rpc(rpc, { _txn_id: id });
+    if (error) throw new Error(`Failed to delete ${kind} ${id}: ${error.message}`);
+  }
+  revalidatePath("/transactions");
+  revalidatePath("/portfolio");
+  revalidatePath("/collection");
+}
+
 // ─── PSA fee editing (inline on the submission detail page) ──────────
 
 const updatePsaFeeSchema = z.object({
   submissionId: z.string().uuid(),
   feeCents: z.number().int().min(0).max(MAX_COST_CENTS),
-  currency: z.enum(["USD", "EUR"]),
+  currency: currencyField,
 });
 
 // Sets the fee for a submission. Updates the existing psa_fee
 // transaction if there is one, inserts a new one if the user previously
-// had a zero fee, or deletes the row if the new fee is zero.
+// had a zero fee, or deletes the row if the new fee is zero. New rows
+// get a snapshot rate_to_eur; existing rows keep their snapshot unless
+// the currency changed (matching the singles-edit ledger-truth rule).
 export async function updatePsaFee(
   submissionId: string,
   feeCents: number,
-  currency: "USD" | "EUR",
+  currency: Currency,
 ): Promise<void> {
   const parsed = updatePsaFeeSchema.parse({ submissionId, feeCents, currency });
   const userId = await requireUserId();
@@ -423,7 +490,7 @@ export async function updatePsaFee(
 
   const { data: existingFee, error: feeErr } = await supabase
     .from("transactions")
-    .select("id")
+    .select("id, currency")
     .eq("psa_submission_id", parsed.submissionId)
     .eq("kind", "psa_fee")
     .maybeSingle();
@@ -438,15 +505,25 @@ export async function updatePsaFee(
       if (error) throw new Error(error.message);
     }
   } else if (existingFee) {
+    const currencyChanged = existingFee.currency !== parsed.currency;
+    const patch: {
+      amount_cents: number;
+      currency: string;
+      rate_to_eur?: number | null;
+    } = {
+      amount_cents: -parsed.feeCents,
+      currency: parsed.currency,
+    };
+    if (currencyChanged) {
+      patch.rate_to_eur = await getRateToEurToday(parsed.currency);
+    }
     const { error } = await supabase
       .from("transactions")
-      .update({
-        amount_cents: -parsed.feeCents,
-        currency: parsed.currency,
-      })
+      .update(patch)
       .eq("id", existingFee.id);
     if (error) throw new Error(error.message);
   } else {
+    const rateToEur = await getRateToEurToday(parsed.currency);
     const { error } = await supabase.from("transactions").insert({
       user_id: userId,
       kind: "psa_fee",
@@ -455,6 +532,7 @@ export async function updatePsaFee(
       currency: parsed.currency,
       psa_submission_id: parsed.submissionId,
       note: submission.note ?? null,
+      rate_to_eur: rateToEur,
     });
     if (error) throw new Error(error.message);
   }

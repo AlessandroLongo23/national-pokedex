@@ -1,4 +1,5 @@
 import { getSupabaseServer } from "@/lib/supabase/server";
+import { getLatestRatesFromEur } from "@/lib/pricing/exchange-rates";
 import { getOptionalUser } from "./_lib/current-user";
 import { Shell } from "./_components/Shell";
 import { loadUserPreferences } from "./_lib/user-preferences";
@@ -7,6 +8,7 @@ export default async function DashboardLayout({ children }: { children: React.Re
   const user = await getOptionalUser();
 
   if (!user) {
+    const latestRatesFromEur = await getLatestRatesFromEur();
     return (
       <Shell
         userId=""
@@ -14,6 +16,8 @@ export default async function DashboardLayout({ children }: { children: React.Re
         priceSource="tcgplayer"
         treatMegasAsSeparate={false}
         megaPlacement="appended"
+        displayCurrency="USD"
+        latestRatesFromEur={latestRatesFromEur}
         initialOwned={[]}
         initialWishlist={[]}
         initialFavorites={[]}
@@ -26,13 +30,15 @@ export default async function DashboardLayout({ children }: { children: React.Re
 
   const supabase = await getSupabaseServer();
 
-  const [ownedRes, wishlistRes, favoritesRes, availabilityRes, prefs] = await Promise.all([
-    supabase.from("owned_cards").select("card_id, quantity").eq("user_id", user.id),
-    supabase.from("wishlist_cards").select("card_id").eq("user_id", user.id),
-    supabase.from("user_favorites").select("card_id").eq("user_id", user.id),
-    supabase.from("set_availability").select("set_id, available").eq("user_id", user.id),
-    loadUserPreferences(user.id),
-  ]);
+  const [ownedRes, wishlistRes, favoritesRes, availabilityRes, prefs, latestRatesFromEur] =
+    await Promise.all([
+      supabase.from("owned_cards").select("card_id, quantity").eq("user_id", user.id),
+      supabase.from("wishlist_cards").select("card_id").eq("user_id", user.id),
+      supabase.from("user_favorites").select("card_id").eq("user_id", user.id),
+      supabase.from("set_availability").select("set_id, available").eq("user_id", user.id),
+      loadUserPreferences(user.id),
+      getLatestRatesFromEur(),
+    ]);
 
   if (ownedRes.error) throw new Error(`Failed to load owned: ${ownedRes.error.message}`);
   if (wishlistRes.error) throw new Error(`Failed to load wishlist: ${wishlistRes.error.message}`);
@@ -58,6 +64,8 @@ export default async function DashboardLayout({ children }: { children: React.Re
       priceSource={prefs.priceSource}
       treatMegasAsSeparate={prefs.treatMegasAsSeparate}
       megaPlacement={prefs.megaPlacement}
+      displayCurrency={prefs.displayCurrency}
+      latestRatesFromEur={latestRatesFromEur}
       initialOwned={initialOwned}
       initialWishlist={initialWishlist}
       initialFavorites={initialFavorites}

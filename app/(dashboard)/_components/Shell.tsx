@@ -45,6 +45,7 @@ import {
 import { ThemeToggle } from "@/lib/theme/ThemeToggle";
 import { PokedexLogo, PokeballIcon } from "@/lib/components/ui/PokedexLogo";
 import type { PriceSource } from "@/lib/pricing/pokemontcg";
+import type { Currency } from "@/lib/pricing/currencies";
 import type { MegaPlacement } from "../_lib/mega-prefs";
 
 interface ShellProps {
@@ -53,6 +54,8 @@ interface ShellProps {
   priceSource: PriceSource;
   treatMegasAsSeparate: boolean;
   megaPlacement: MegaPlacement;
+  displayCurrency: Currency;
+  latestRatesFromEur: Record<Currency, number>;
   initialOwned: InitialOwnedCard[];
   initialWishlist: string[];
   initialFavorites: string[];
@@ -66,6 +69,8 @@ export function Shell({
   priceSource,
   treatMegasAsSeparate,
   megaPlacement,
+  displayCurrency,
+  latestRatesFromEur,
   initialOwned,
   initialWishlist,
   initialFavorites,
@@ -79,6 +84,8 @@ export function Shell({
       priceSource={priceSource}
       treatMegasAsSeparate={treatMegasAsSeparate}
       megaPlacement={megaPlacement}
+      displayCurrency={displayCurrency}
+      latestRatesFromEur={latestRatesFromEur}
     >
       <OwnedCardsProvider userId={userId} initial={initialOwned}>
         <WishlistProvider userId={userId} initial={initialWishlist}>

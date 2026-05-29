@@ -2,12 +2,16 @@ import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import {
   fetchSingleCardPrice,
-  formatPrice,
   pickPrice,
   pickUrl,
+  PRICE_SOURCE_CURRENCY,
   PRICE_SOURCE_LABEL,
   type PriceSource,
 } from "@/lib/pricing/pokemontcg";
+import type { Currency } from "@/lib/pricing/currencies";
+import { getLatestRatesFromEur } from "@/lib/pricing/exchange-rates";
+import { MoneyDisplay } from "../../../_components/MoneyDisplay";
+import { Tooltip } from "../../../_components/Tooltip";
 
 // Lives in its own async server component so the rest of the card-detail
 // page can stream first while pokemontcg.io is still resolving. Wrap with
@@ -15,28 +19,46 @@ import {
 export async function MarketPriceBlock({
   cardId,
   priceSource,
+  displayCurrency,
   isAuthed,
 }: {
   cardId: string;
   priceSource: PriceSource;
+  displayCurrency: Currency;
   isAuthed: boolean;
 }) {
-  const price = await fetchSingleCardPrice(cardId);
+  const [price, latestRatesFromEur] = await Promise.all([
+    fetchSingleCardPrice(cardId),
+    getLatestRatesFromEur(),
+  ]);
   const value = pickPrice(price, priceSource);
   const marketplaceUrl = pickUrl(price, priceSource);
   const marketplaceName = priceSource === "tcgplayer" ? "TCGplayer" : "Cardmarket";
+  const nativeCurrency = PRICE_SOURCE_CURRENCY[priceSource];
+  const valueCents = value != null ? Math.round(value * 100) : null;
 
   return (
     <>
-      <p
-        className={[
-          "text-2xl font-semibold tabular-nums",
-          value != null ? "text-text" : "text-muted",
-        ].join(" ")}
-        title={`Market price — ${PRICE_SOURCE_LABEL[priceSource]}`}
-      >
-        {value != null ? formatPrice(value, priceSource) : "—"}
-      </p>
+      <Tooltip content={`Market price, ${PRICE_SOURCE_LABEL[priceSource]}`}>
+        <p
+          className={[
+            "text-2xl font-semibold tabular-nums",
+            value != null ? "text-text" : "text-muted",
+          ].join(" ")}
+        >
+          {valueCents != null ? (
+            <MoneyDisplay
+              cents={valueCents}
+              currency={nativeCurrency}
+              displayCurrency={displayCurrency}
+              rateToEur={null}
+              latestRatesFromEur={latestRatesFromEur}
+            />
+          ) : (
+            "—"
+          )}
+        </p>
+      </Tooltip>
       {marketplaceUrl && (
         <a
           href={marketplaceUrl}

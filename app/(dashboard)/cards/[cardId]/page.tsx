@@ -9,9 +9,10 @@ import {
   type CardEntry,
   type Generation,
 } from "@/lib/data/types";
-import { PRICE_SOURCE_CURRENCY } from "@/lib/pricing/pokemontcg";
 import { getSupabaseServer } from "@/lib/supabase/server";
 import type { LedgerCurrency } from "@/lib/ledger/money";
+import type { Currency } from "@/lib/pricing/currencies";
+import { getLatestRatesFromEur } from "@/lib/pricing/exchange-rates";
 import { getOptionalUser } from "../../_lib/current-user";
 import { loadUserPreferences } from "../../_lib/user-preferences";
 import { Separator } from "../../_components/Separator";
@@ -83,39 +84,48 @@ export default async function CardDetailPage({ params }: PageProps) {
   const supabase = await getSupabaseServer();
   const prefs = user
     ? await loadUserPreferences(user.id)
-    : { priceSource: "tcgplayer" as const };
+    : {
+        priceSource: "tcgplayer" as const,
+        displayCurrency: "USD" as Currency,
+      };
 
-  const [ownedRes, packRows, txRows, allCards] = await Promise.all([
-    user
-      ? supabase
-          .from("owned_cards")
-          .select("quantity, acquired_at")
-          .eq("user_id", user.id)
-          .eq("card_id", card.id)
-          .maybeSingle()
-      : Promise.resolve({ data: null }),
-    user
-      ? supabase
-          .from("pack_contents")
-          .select(
-            "pack_id, packs_opened!inner(id, user_id, set_id, opened_at, cost_cents, currency)",
-          )
-          .eq("card_id", card.id)
-          .eq("packs_opened.user_id", user.id)
-      : Promise.resolve({ data: [] }),
-    user
-      ? supabase
-          .from("transactions")
-          .select("kind, occurred_at, amount_cents, currency, quantity, note")
-          .eq("user_id", user.id)
-          .eq("card_id", card.id)
-          .in("kind", ["single_purchase", "sale", "psa_fee"])
-      : Promise.resolve({ data: [] }),
-    getAllCards(),
-  ]);
+  const [ownedRes, packRows, txRows, allCards, latestRatesFromEur] =
+    await Promise.all([
+      user
+        ? supabase
+            .from("owned_cards")
+            .select("quantity, acquired_at")
+            .eq("user_id", user.id)
+            .eq("card_id", card.id)
+            .maybeSingle()
+        : Promise.resolve({ data: null }),
+      user
+        ? supabase
+            .from("pack_contents")
+            .select(
+              "pack_id, packs_opened!inner(id, user_id, set_id, opened_at, cost_cents, currency, rate_to_eur)",
+            )
+            .eq("card_id", card.id)
+            .eq("packs_opened.user_id", user.id)
+        : Promise.resolve({ data: [] }),
+      user
+        ? supabase
+            .from("transactions")
+            .select(
+              "kind, occurred_at, amount_cents, currency, rate_to_eur, quantity, note",
+            )
+            .eq("user_id", user.id)
+            .eq("card_id", card.id)
+            .in("kind", ["single_purchase", "sale", "psa_fee"])
+        : Promise.resolve({ data: [] }),
+      getAllCards(),
+      getLatestRatesFromEur(),
+    ]);
   const ownedQty = (ownedRes.data?.quantity as number | null) ?? 0;
   const acquiredAt = (ownedRes.data?.acquired_at as string | null) ?? null;
-  const currency = PRICE_SOURCE_CURRENCY[prefs.priceSource];
+  // Defaults for the singles purchase/sale modals — pick the user's
+  // chosen display currency so logging matches what they see.
+  const currency = prefs.displayCurrency;
 
   const dex = card.dex[0];
   const species = dex != null ? SPECIES[dex] : undefined;
@@ -181,7 +191,10 @@ export default async function CardDetailPage({ params }: PageProps) {
         opened_at: string;
         cost_cents: number | null;
         currency: string | null;
+        rate_to_eur: number | string | null;
       };
+      const rateToEur =
+        pack.rate_to_eur == null ? null : Number(pack.rate_to_eur);
       return {
         kind: "pack" as const,
         packId: pack.id,
@@ -189,16 +202,22 @@ export default async function CardDetailPage({ params }: PageProps) {
         openedAt: pack.opened_at,
         costCents: pack.cost_cents,
         currency: (pack.currency as LedgerCurrency | null) ?? null,
+        rateToEur: Number.isFinite(rateToEur) ? rateToEur : null,
       };
     }),
-    ...(txRows.data ?? []).map((row) => ({
-      kind: row.kind as "single_purchase" | "sale" | "psa_fee",
-      occurredAt: row.occurred_at as string,
-      amountCents: row.amount_cents as number,
-      currency: row.currency as LedgerCurrency,
-      quantity: (row.quantity as number | null) ?? null,
-      note: (row.note as string | null) ?? null,
-    })),
+    ...(txRows.data ?? []).map((row) => {
+      const rateRaw = (row as { rate_to_eur: number | string | null }).rate_to_eur;
+      const rateToEur = rateRaw == null ? null : Number(rateRaw);
+      return {
+        kind: row.kind as "single_purchase" | "sale" | "psa_fee",
+        occurredAt: row.occurred_at as string,
+        amountCents: row.amount_cents as number,
+        currency: row.currency as LedgerCurrency,
+        rateToEur: Number.isFinite(rateToEur) ? rateToEur : null,
+        quantity: (row.quantity as number | null) ?? null,
+        note: (row.note as string | null) ?? null,
+      };
+    }),
   ];
 
   return (
@@ -276,6 +295,7 @@ export default async function CardDetailPage({ params }: PageProps) {
                 <MarketPriceBlock
                   cardId={card.id}
                   priceSource={prefs.priceSource}
+                  displayCurrency={prefs.displayCurrency}
                   isAuthed={!!user}
                 />
               </Suspense>
@@ -329,7 +349,7 @@ export default async function CardDetailPage({ params }: PageProps) {
               </Field>
             )}
             <Field label="Set">
-              <SetChip setId={setId} setName={set.name} number={card.number} />
+              <SetChip setId={setId} setName={set.name} number={card.number} symbolUrl={set.symbolUrl} />
             </Field>
             {dex != null && (
               <Field label="Pokémon">
@@ -414,6 +434,8 @@ export default async function CardDetailPage({ params }: PageProps) {
             events={events}
             ownedQty={ownedQty}
             acquiredAt={acquiredAt}
+            displayCurrency={prefs.displayCurrency}
+            latestRatesFromEur={latestRatesFromEur}
           />
         </div>
       )}

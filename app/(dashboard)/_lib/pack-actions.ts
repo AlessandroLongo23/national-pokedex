@@ -4,14 +4,16 @@ import { z } from "zod";
 import { revalidatePath } from "next/cache";
 import { getSupabaseServer } from "@/lib/supabase/server";
 import type { SupabaseClient } from "@supabase/supabase-js";
+import { isCurrency, type Currency } from "@/lib/pricing/currencies";
+import { getRateToEurToday } from "@/lib/pricing/exchange-rates";
 import { requireUserId } from "./current-user";
 
 // Replaces the pack's pack_purchase ledger row with one reflecting the
-// pack's current cost/currency/opened_at. Called whenever a pack is
-// created or its cost/date is edited. Idempotent — if cost is null, the
-// row simply doesn't exist after the sync. deletePack relies on the
-// transactions.pack_id FK's on-delete cascade, so no explicit delete
-// needed there.
+// pack's current cost/currency/opened_at/rate_to_eur. Called whenever a
+// pack is created or its cost/date is edited. Idempotent — if cost is
+// null, the row simply doesn't exist after the sync. deletePack relies
+// on the transactions.pack_id FK's on-delete cascade, so no explicit
+// delete needed there.
 async function syncPackPurchaseTransaction(
   supabase: SupabaseClient,
   userId: string,
@@ -19,7 +21,7 @@ async function syncPackPurchaseTransaction(
 ): Promise<void> {
   const { data: pack, error: lookupErr } = await supabase
     .from("packs_opened")
-    .select("cost_cents, currency, opened_at")
+    .select("cost_cents, currency, opened_at, rate_to_eur")
     .eq("id", packId)
     .eq("user_id", userId)
     .single();
@@ -42,6 +44,7 @@ async function syncPackPurchaseTransaction(
     amount_cents: -pack.cost_cents,
     currency: pack.currency,
     pack_id: packId,
+    rate_to_eur: pack.rate_to_eur ?? null,
   });
   if (insErr) throw new Error(insErr.message);
 }
@@ -53,7 +56,7 @@ const MAX_COST_CENTS = 1_000_000_00;
 const costSchema = z
   .object({
     costCents: z.number().int().min(0).max(MAX_COST_CENTS).nullable(),
-    currency: z.enum(["USD", "EUR"]),
+    currency: z.string().refine(isCurrency, "unsupported currency"),
   })
   .optional();
 
@@ -65,7 +68,7 @@ const logPackSchema = z.object({
 
 export interface PackCostInput {
   costCents: number | null;
-  currency: "USD" | "EUR";
+  currency: Currency;
 }
 
 export async function logPack(
@@ -101,10 +104,18 @@ export async function logPack(
     set_id: string;
     cost_cents?: number | null;
     currency?: string | null;
+    rate_to_eur?: number | null;
   } = { user_id: userId, set_id: sid };
   if (parsedCost) {
     packRow.cost_cents = parsedCost.costCents;
     packRow.currency = parsedCost.costCents != null ? parsedCost.currency : null;
+    // Snapshot today's EUR rate so the pack's cost converts to any
+    // display currency using the rate that was true when it was logged.
+    // Null is acceptable — the display layer falls back to today's rate
+    // and marks the value as approximate.
+    if (parsedCost.costCents != null) {
+      packRow.rate_to_eur = await getRateToEurToday(parsedCost.currency);
+    }
   }
 
   const { data: pack, error: packErr } = await supabase
@@ -157,7 +168,7 @@ const updatePackSchema = z.object({
 export interface UpdatePackOptions {
   openedAt?: string;
   costCents?: number | null;
-  currency?: "USD" | "EUR";
+  currency?: Currency;
 }
 
 export async function updatePack(
@@ -186,18 +197,34 @@ export async function updatePack(
 
   const { data: pack, error: lookupErr } = await supabase
     .from("packs_opened")
-    .select("id")
+    .select("id, currency")
     .eq("id", pid)
     .eq("user_id", userId)
     .maybeSingle();
   if (lookupErr) throw new Error(lookupErr.message);
   if (!pack) throw new Error("Pack not found");
 
-  const packPatch: { opened_at?: string; cost_cents?: number | null; currency?: string | null } = {};
+  const packPatch: {
+    opened_at?: string;
+    cost_cents?: number | null;
+    currency?: string | null;
+    rate_to_eur?: number | null;
+  } = {};
   if (when) packPatch.opened_at = when;
   if (parsedCost) {
     packPatch.cost_cents = parsedCost.costCents;
     packPatch.currency = parsedCost.costCents != null ? parsedCost.currency : null;
+    // Ledger truth: keep the original snapshot rate when the currency
+    // didn't change (the user is just correcting the amount on the same
+    // day they paid). Only refetch when the currency actually changed or
+    // when going from null cost to a real cost.
+    const currencyChanged =
+      parsedCost.costCents != null && pack.currency !== parsedCost.currency;
+    if (parsedCost.costCents == null) {
+      packPatch.rate_to_eur = null;
+    } else if (currencyChanged) {
+      packPatch.rate_to_eur = await getRateToEurToday(parsedCost.currency);
+    }
   }
   if (Object.keys(packPatch).length > 0) {
     const { error: patchErr } = await supabase
