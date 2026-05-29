@@ -12,7 +12,7 @@ import {
   type SelectableKind,
   type SelectableRow,
 } from "./LedgerTable";
-import { UndoToast } from "./UndoToast";
+import { UndoToast } from "../../_components/UndoToast";
 
 interface Props {
   rows: LedgerTableRow[];

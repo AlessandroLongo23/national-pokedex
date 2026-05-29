@@ -7,9 +7,12 @@ interface Props {
   count: number;
   expiresAt: number;
   onUndo: () => void;
+  /** Optional message. When omitted, falls back to the count-based
+   * "N transaction(s) deleted" copy so existing call sites are unchanged. */
+  label?: string;
 }
 
-export function UndoToast({ count, expiresAt, onUndo }: Props) {
+export function UndoToast({ count, expiresAt, onUndo, label }: Props) {
   const [mounted, setMounted] = useState(false);
   const [secondsLeft, setSecondsLeft] = useState(() =>
     computeSecondsLeft(expiresAt),
@@ -36,7 +39,7 @@ export function UndoToast({ count, expiresAt, onUndo }: Props) {
       className="fixed bottom-6 right-6 z-50 rounded-lg border border-border bg-panel-2 px-4 py-3 text-sm text-text shadow-lg"
     >
       <span>
-        {count} transaction{count === 1 ? "" : "s"} deleted{" "}
+        {label ?? `${count} transaction${count === 1 ? "" : "s"} deleted`}{" "}
         <span className="text-muted">· Undo {secondsLeft}s</span>
       </span>
       <button

@@ -20,6 +20,15 @@ export default function CardDetailLoading() {
               <div className="h-6 w-20 animate-pulse rounded bg-panel-2" />
             </div>
           </div>
+          <div className="flex flex-wrap gap-2">
+            {[28, 24, 16, 20].map((w, i) => (
+              <div
+                key={i}
+                className="h-9 animate-pulse rounded-md bg-panel-2"
+                style={{ width: `${w * 4}px` }}
+              />
+            ))}
+          </div>
           <div className="space-y-3">
             {Array.from({ length: 5 }).map((_, i) => (
               <div key={i} className="h-4 w-full animate-pulse rounded bg-panel-2/70" />
