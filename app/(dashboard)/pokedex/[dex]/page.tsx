@@ -4,6 +4,7 @@ import type { CardEntry } from "@/lib/data/types";
 import { SpeciesHero } from "../../_components/SpeciesHero";
 import { SpeciesPagination } from "../../_components/SpeciesPagination";
 import { CardGrid } from "../../_components/CardGrid";
+import { SetPageTitle } from "../../_components/SetPageTitle";
 
 interface PageProps {
   params: Promise<{ dex: string }>;
@@ -40,6 +41,10 @@ export default async function PokemonDetailPage({ params }: PageProps) {
 
   return (
     <div className="mx-auto max-w-[1280px] space-y-6">
+      <SetPageTitle
+        title={species.name}
+        detail={`#${String(n).padStart(4, "0")}`}
+      />
       <SpeciesPagination dex={n} />
       <SpeciesHero dex={n} />
       <div>

@@ -14,7 +14,7 @@ import {
 } from "@/lib/ledger/money";
 import { SUPPORTED_CURRENCIES } from "@/lib/pricing/currencies";
 import { deletePack, logPack, updatePack } from "../_lib/pack-actions";
-import { useSetPageTitle } from "../_lib/PageTitleContext";
+import { useSetCrumb } from "../_lib/PageTitleContext";
 import { CardGrid } from "./CardGrid";
 import { SeriesBadge } from "./SeriesBadge";
 
@@ -218,6 +218,7 @@ export function LogPackFlow({
     <div className="space-y-5">
       {editing ? (
         <EditContextBar
+          packId={editingPackId!}
           setName={editingSetName ?? set.name}
           series={editingSetSeries ?? set.series}
           openedAtLocal={openedAtLocal}
@@ -327,6 +328,7 @@ export function LogPackFlow({
 }
 
 function EditContextBar({
+  packId,
   setName,
   series,
   openedAtLocal,
@@ -339,6 +341,7 @@ function EditContextBar({
   dirtyCost,
   onExitClick,
 }: {
+  packId: string;
   setName: string;
   series: string;
   openedAtLocal: string;
@@ -351,7 +354,10 @@ function EditContextBar({
   dirtyCost: boolean;
   onExitClick: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }) {
-  useSetPageTitle(setName);
+  // The [packId] segment has no index route of its own, so the set name links
+  // back to the packs list rather than a dead /packs/<uuid>. Breadcrumb reads
+  // "Packs › <set> › Edit" instead of leaking the raw pack id.
+  useSetCrumb(packId, { label: setName, href: "/packs" });
   return (
     <div className="flex flex-wrap items-center gap-x-5 gap-y-3 rounded-lg border border-border bg-panel px-4 py-3">
       <div className="flex min-w-0 items-center gap-3">

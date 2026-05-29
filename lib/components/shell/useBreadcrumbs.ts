@@ -1,12 +1,12 @@
 "use client";
 
 import { useMemo } from "react";
-import { usePageTitle } from "@/app/(dashboard)/_lib/PageTitleContext";
+import { useBreadcrumbOverrides } from "@/app/(dashboard)/_lib/PageTitleContext";
 import type { BreadcrumbItem } from "./Breadcrumbs";
 
-// Single-segment route label map. The final segment also gets overridden
-// by the live PageTitle if a page set one — that lets dynamic routes
-// (e.g. /sets/[setId]) surface a real name instead of the slug.
+// Route label map. Any segment can also be overridden at runtime by a page
+// (via useSetPageTitle / useSetCrumb) so dynamic routes surface a real name
+// — and a secondary detail — instead of the raw slug or id.
 const ROUTE_LABELS: Record<string, string> = {
   dashboard: "Dashboard",
   pokedex: "Pokédex",
@@ -28,6 +28,7 @@ const ROUTE_LABELS: Record<string, string> = {
   wishlist: "Wishlist",
   settings: "Settings",
   new: "New",
+  edit: "Edit",
 };
 
 function labelFor(segment: string): string {
@@ -38,7 +39,7 @@ function labelFor(segment: string): string {
 }
 
 export function useBreadcrumbs(pathname: string): BreadcrumbItem[] {
-  const pageTitle = usePageTitle();
+  const overrides = useBreadcrumbOverrides();
 
   return useMemo(() => {
     const segments = pathname.split("/").filter(Boolean);
@@ -49,9 +50,13 @@ export function useBreadcrumbs(pathname: string): BreadcrumbItem[] {
     segments.forEach((segment, idx) => {
       href += `/${segment}`;
       const isLast = idx === segments.length - 1;
-      const label = isLast && pageTitle ? pageTitle : labelFor(segment);
-      items.push({ label, href: isLast ? undefined : href });
+      const override = overrides[segment];
+      items.push({
+        label: override?.label || labelFor(segment),
+        detail: override?.detail,
+        href: isLast ? undefined : (override?.href ?? href),
+      });
     });
     return items;
-  }, [pathname, pageTitle]);
+  }, [pathname, overrides]);
 }

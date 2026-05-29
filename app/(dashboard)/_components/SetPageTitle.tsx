@@ -2,7 +2,13 @@
 
 import { useSetPageTitle } from "../_lib/PageTitleContext";
 
-export function SetPageTitle({ title }: { title: string }) {
-  useSetPageTitle(title);
+export function SetPageTitle({
+  title,
+  detail,
+}: {
+  title: string;
+  detail?: string;
+}) {
+  useSetPageTitle(title, detail);
   return null;
 }
