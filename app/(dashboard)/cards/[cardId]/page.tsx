@@ -1,9 +1,13 @@
 import Link from "next/link";
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
-import { ArrowLeft } from "lucide-react";
 import { getSet, loadSetCards, SPECIES } from "@/lib/data";
-import { getAllCards } from "@/lib/data/binder-scope";
+import {
+  getAllCards,
+  filterByScope,
+  type ScopeType,
+  type ScopeParams,
+} from "@/lib/data/binder-scope";
 import {
   RARITY_LABEL,
   type CardEntry,
@@ -15,8 +19,10 @@ import type { Currency } from "@/lib/pricing/currencies";
 import { getLatestRatesFromEur } from "@/lib/pricing/exchange-rates";
 import { getOptionalUser } from "../../_lib/current-user";
 import { loadUserPreferences } from "../../_lib/user-preferences";
+import { SetPageTitle } from "../../_components/SetPageTitle";
 import { Separator } from "../../_components/Separator";
 import { CardActionsBar } from "./_components/CardActionsBar";
+import { BinderMembership } from "./_components/BinderMembership";
 import { CardHeroImage } from "./_components/CardHeroImage";
 import { CardStrip } from "./_components/CardStrip";
 import {
@@ -183,6 +189,40 @@ export default async function CardDetailPage({ params }: PageProps) {
   ).length;
   const otherPrintsSetCount = new Set(otherPrints.map((c) => c.setId)).size;
 
+  // Which of the user's binders contain this card. Membership reuses the
+  // canonical scope logic — for non-custom scopes we run `filterByScope` on a
+  // single-element array and check whether the card survives; for custom
+  // scopes (which `filterByScope` returns [] for) we consult the
+  // `binder_cards` join populated only for that scope type.
+  const matchedBinders: { id: string; name: string; href: string }[] = [];
+  if (user) {
+    const [bindersRes, binderCardRes] = await Promise.all([
+      supabase
+        .from("binders")
+        .select("id, name, scope_type, scope_params")
+        .eq("user_id", user.id),
+      supabase.from("binder_cards").select("binder_id").eq("card_id", card.id),
+    ]);
+    const customBinderIds = new Set(
+      (binderCardRes.data ?? []).map((r) => r.binder_id as string),
+    );
+    for (const b of bindersRes.data ?? []) {
+      const scopeType = b.scope_type as ScopeType;
+      const included =
+        scopeType === "custom"
+          ? customBinderIds.has(b.id as string)
+          : filterByScope([card], scopeType, b.scope_params as ScopeParams)
+              .length > 0;
+      if (included) {
+        matchedBinders.push({
+          id: b.id as string,
+          name: b.name as string,
+          href: `/binders/${b.id}`,
+        });
+      }
+    }
+  }
+
   const events: AcquisitionEvent[] = [
     ...(packRows.data ?? []).map((row) => {
       const pack = row.packs_opened as unknown as {
@@ -222,13 +262,7 @@ export default async function CardDetailPage({ params }: PageProps) {
 
   return (
     <div className="mx-auto max-w-[1280px]">
-      <Link
-        href={`/sets/${setId}`}
-        className="inline-flex items-center gap-1.5 text-xs text-muted transition hover:text-text"
-      >
-        <ArrowLeft className="h-3.5 w-3.5" aria-hidden />
-        {set.name}
-      </Link>
+      <SetPageTitle title={card.name} detail={`${set.name} · #${card.number}`} />
 
       <div className="mt-6 grid gap-8 md:grid-cols-[minmax(260px,360px)_1fr]">
         <div>
@@ -316,6 +350,10 @@ export default async function CardDetailPage({ params }: PageProps) {
             />
           )}
 
+          {user && matchedBinders.length > 0 && (
+            <BinderMembership binders={matchedBinders} cardId={card.id} />
+          )}
+
           <dl className="grid grid-cols-[auto_1fr] gap-x-6 gap-y-4 text-sm">
             {(card.types.length > 0 || card.hp != null) && (
               <Field label="Type">
@@ -393,12 +431,6 @@ export default async function CardDetailPage({ params }: PageProps) {
               </Field>
             )}
           </dl>
-
-          {species?.flavorText && (
-            <p className="max-w-[60ch] border-l border-border-strong/40 pl-4 text-sm leading-relaxed text-muted/85 italic">
-              {species.flavorText}
-            </p>
-          )}
         </div>
       </div>
 
