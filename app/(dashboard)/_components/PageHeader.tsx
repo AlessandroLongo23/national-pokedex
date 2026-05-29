@@ -1,15 +1,8 @@
-"use client";
-
 import type { ReactNode, ElementType } from "react";
-import { useSetPageTitle } from "../_lib/PageTitleContext";
+import { SetPageTitle } from "./SetPageTitle";
 
 interface PageHeaderProps {
-  /** The page title. Typically a string; pages that need an inline editor
-   * (e.g. binder rename) can pass a ReactNode and a `mobileTitle` string to
-   * drive the breadcrumb. */
   title: string | ReactNode;
-  /** String form of the title, used to drive the breadcrumb / page-title
-   * context. Defaults to `title` when it's a string. */
   mobileTitle?: string;
   subtitle?: string;
   icon?: ElementType;
@@ -23,13 +16,11 @@ export function PageHeader({
   icon: Icon,
   actions,
 }: PageHeaderProps) {
-  // Drive the breadcrumb's final segment from the live title — gives dynamic
-  // routes (e.g. /sets/[setId]) a real name without route-map upkeep.
   const resolvedTitle = mobileTitle ?? (typeof title === "string" ? title : "");
-  useSetPageTitle(resolvedTitle);
 
   return (
     <div className="flex w-full flex-row items-center justify-between gap-4">
+      <SetPageTitle title={resolvedTitle} />
       <div className="flex min-w-0 items-center gap-4">
         {Icon && (
           <span className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-zinc-200 bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-800/60">
