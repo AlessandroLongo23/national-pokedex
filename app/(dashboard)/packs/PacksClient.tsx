@@ -14,7 +14,7 @@ export function PacksClient({ history }: Props) {
 
   return (
     <>
-      <div className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-border bg-panel p-3">
+      <div className="sticky top-16 z-sticky flex flex-wrap items-center justify-between gap-3 rounded-lg border border-border bg-panel/90 p-3 backdrop-blur-md">
         <label className="flex items-center gap-2 text-sm">
           <input
             type="checkbox"

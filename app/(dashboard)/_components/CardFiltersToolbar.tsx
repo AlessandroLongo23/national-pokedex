@@ -170,7 +170,7 @@ export function CardFiltersToolbar({
     features.showPrice || features.showGeneration || features.showRegionalForm;
 
   return (
-    <div className="sticky top-2 z-10 space-y-2 rounded-lg border border-border bg-panel/90 p-3 backdrop-blur shadow-[0_4px_16px_-8px_rgb(0_0_0/0.6)]">
+    <div className="sticky top-16 z-sticky space-y-2 rounded-lg border border-border bg-panel/90 p-3 backdrop-blur shadow-[0_4px_16px_-8px_rgb(0_0_0/0.6)]">
       {/* Row 1: search · supertype · sort · size */}
       <div className="flex flex-wrap items-center gap-3">
         <div className="relative min-w-0 flex-1 sm:min-w-[220px] sm:max-w-xs">

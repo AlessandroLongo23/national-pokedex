@@ -100,22 +100,23 @@ export function CardsBrowser({ cards, artists, types }: Props) {
 
   const sorted = useMemo(() => sortCards(filtered, sort), [filtered, sort]);
 
+  // Document scroll: the page title scrolls away, the toolbar stays pinned, and
+  // the grid virtualizes against the page's own scroll. Toolbar + grid share
+  // this parent so the sticky toolbar holds for the whole list.
   return (
-    <div className="flex min-h-0 flex-1 flex-col gap-3">
-      <div className="shrink-0">
-        <CardFiltersToolbar
-          filters={filters}
-          onFiltersChange={setFilters}
-          sort={sort}
-          onSortChange={setSort}
-          cols={cols}
-          onColsChange={setCols}
-          resultCount={sorted.length}
-          totalCount={cards.length}
-          artists={artists}
-          types={types}
-        />
-      </div>
+    <div className="space-y-3">
+      <CardFiltersToolbar
+        filters={filters}
+        onFiltersChange={setFilters}
+        sort={sort}
+        onSortChange={setSort}
+        cols={cols}
+        onColsChange={setCols}
+        resultCount={sorted.length}
+        totalCount={cards.length}
+        artists={artists}
+        types={types}
+      />
       <VirtualizedCardGrid cards={sorted} cols={cols} />
     </div>
   );

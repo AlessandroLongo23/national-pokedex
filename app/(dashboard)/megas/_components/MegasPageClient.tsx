@@ -15,8 +15,7 @@ export function MegasPageClient() {
   const pct = total > 0 ? (owned / total) * 100 : 0;
 
   return (
-    <div className="mx-auto flex w-full min-h-0 max-w-[1280px] flex-1 flex-col gap-6">
-      <div className="shrink-0">
+    <div className="mx-auto w-full max-w-[1280px] space-y-6">
       <PageHeader
         icon={Sparkles}
         title="Mega Evolutions"
@@ -42,7 +41,6 @@ export function MegasPageClient() {
           )
         }
       />
-      </div>
       <PokedexGrid mode="megas" storageKey="megas" groupByGenDefault={true} fitToViewport />
     </div>
   );

@@ -21,8 +21,7 @@ export default function PokedexPage() {
   const pct = total > 0 ? (owned / total) * 100 : 0;
 
   return (
-    <div className="mx-auto flex w-full min-h-0 max-w-[1280px] flex-1 flex-col gap-6">
-      <div className="shrink-0">
+    <div className="mx-auto w-full max-w-[1280px] space-y-6">
       <PageHeader
         icon={PokeballIcon}
         title="Pokédex"
@@ -60,7 +59,6 @@ export default function PokedexPage() {
           )
         }
       />
-      </div>
       <PokedexGrid
         fitToViewport
         storageKey="full"

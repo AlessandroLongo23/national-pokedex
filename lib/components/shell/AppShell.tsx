@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useState, type CSSProperties } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { usePathname } from "next/navigation";
+import { ScrollAreaContext } from "./ScrollAreaContext";
 import { X } from "lucide-react";
 import { animate, motion, useMotionValue, useTransform } from "motion/react";
 import { useSidebarCollapse } from "./useSidebarCollapse";
@@ -22,17 +23,15 @@ import { Button } from "@/lib/components/ui/Button";
 //   - scroll body:    `min-h-0 flex-1 overflow-y-auto` (the grid/table/list)
 // Routes NOT listed here get a scrolling panel (`overflow-y-auto`) instead and
 // flow as normal documents.
+// Routes that fill the viewport exactly (content panel clipped, page owns its
+// own internal scroll). Routes NOT listed here scroll as a normal document:
+// the page title scrolls away while sticky toolbars stay pinned. The browse
+// pages (Pokédex, Sets, Cards, Packs, …) deliberately use document scroll so
+// their tall page headers don't permanently eat vertical space.
 const VIEWPORT_FIT_ROUTES = new Set([
-  "/pokedex",
-  "/megas",
-  "/sets",
-  "/cards",
   "/transactions",
   "/binders",
-  "/collection",
-  "/wishlist",
   "/portfolio",
-  "/packs",
 ]);
 
 interface AppShellProps {
@@ -46,6 +45,9 @@ export function AppShell({ sidebar, topBar, children }: AppShellProps) {
   const { collapsed, toggle } = collapseState;
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
+  // The scrolling panel (document-scroll routes). Exposed so virtualized grids
+  // can scroll against the page instead of a nested container.
+  const scrollAreaRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
@@ -83,6 +85,7 @@ export function AppShell({ sidebar, topBar, children }: AppShellProps) {
   const isViewportFit = VIEWPORT_FIT_ROUTES.has(pathname);
 
   return (
+    <ScrollAreaContext.Provider value={scrollAreaRef}>
     <SidebarCollapseContext.Provider value={collapseState}>
       <MobileMenuContext.Provider value={{ open: mobileOpen, setOpen: setMobileOpen }}>
         <motion.div
@@ -129,7 +132,8 @@ export function AppShell({ sidebar, topBar, children }: AppShellProps) {
           <main className="flex h-screen flex-col pl-0 pt-[var(--shell-banner-h)] md:pl-[var(--shell-sidebar-w)]">
             <div className="flex min-h-0 flex-1 flex-col p-2">
               <div
-                className={`flex-1 min-h-0 rounded-xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950 ${
+                ref={scrollAreaRef}
+                className={`relative flex-1 min-h-0 rounded-xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950 ${
                   isViewportFit ? "flex flex-col overflow-hidden" : "overflow-y-auto"
                 }`}
               >
@@ -160,5 +164,6 @@ export function AppShell({ sidebar, topBar, children }: AppShellProps) {
         </motion.div>
       </MobileMenuContext.Provider>
     </SidebarCollapseContext.Provider>
+    </ScrollAreaContext.Provider>
   );
 }
