@@ -6,7 +6,7 @@
    filter active, the tier auto-expands on mount. */
 
 import { useEffect, useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Filter, LayoutGrid, Rows3, Star } from "lucide-react";
 import { PRICE_SOURCE_CURRENCY } from "@/lib/pricing/pokemontcg";
 import { useUser } from "../../_lib/UserContext";
 import { SearchInput } from "./SearchInput";
@@ -27,13 +27,16 @@ import {
   emptyFilters,
   isFiltersDirty,
 } from "./types";
-import type { ToolbarProps } from "./ToolbarShared";
+import type { CardView, ToolbarProps } from "./ToolbarShared";
 
 export function ToolbarTiered({
   filters,
   onFiltersChange,
   sort,
   onSortChange,
+  sortDir,
+  onSortDirChange,
+  sortOptions,
   cols,
   onColsChange,
   resultCount,
@@ -41,6 +44,8 @@ export function ToolbarTiered({
   artists,
   types,
   features = {},
+  view = "grid",
+  onViewChange,
 }: ToolbarProps) {
   const { priceSource } = useUser();
   const currencySymbol =
@@ -75,7 +80,9 @@ export function ToolbarTiered({
     onFiltersChange({ ...filters, ...patch });
 
   return (
-    <div className="sticky top-2 z-10 rounded-lg border border-border bg-panel/85 backdrop-blur-md">
+    // `top-16` clears the 64px-tall app top bar; the page scrolls beneath it so
+    // the title disappears while this stays pinned.
+    <div className="sticky top-16 z-sticky rounded-lg border border-border bg-panel/85 backdrop-blur-md">
       <div className="flex flex-wrap items-center gap-2 px-3 py-2.5 sm:gap-3">
         <SearchInput
           value={filters.search}
@@ -86,7 +93,13 @@ export function ToolbarTiered({
           value={filters.supertype}
           onChange={(supertype) => update({ supertype })}
         />
-        <SortControl value={sort} onChange={onSortChange} />
+        <SortControl
+          value={sort}
+          onChange={onSortChange}
+          dir={sortDir}
+          onDirChange={onSortDirChange}
+          options={sortOptions}
+        />
 
         <button
           type="button"
@@ -102,6 +115,7 @@ export function ToolbarTiered({
                 : "bg-panel-2 text-muted hover:bg-panel-3 hover:text-text",
           ].join(" ")}
         >
+          <Filter className="h-3.5 w-3.5" aria-hidden />
           <span>More filters</span>
           {activeCount > 0 && !expanded && (
             <span className="rounded-sm bg-[var(--color-accent)] px-1 py-px text-[10px] nums text-bg">
@@ -124,7 +138,10 @@ export function ToolbarTiered({
             dirty={dirty}
             onClear={() => onFiltersChange(emptyFilters())}
           />
-          <SizeControl cols={cols} onColsChange={onColsChange} compact />
+          {onViewChange && <ViewToggle value={view} onChange={onViewChange} />}
+          {view === "grid" && (
+            <SizeControl cols={cols} onColsChange={onColsChange} compact />
+          )}
         </div>
       </div>
 
@@ -179,9 +196,74 @@ export function ToolbarTiered({
                 onChange={(regionalForms) => update({ regionalForms })}
               />
             )}
+            {features.showFavorites && (
+              <button
+                type="button"
+                onClick={() => update({ favoritesOnly: !filters.favoritesOnly })}
+                aria-pressed={filters.favoritesOnly}
+                className={[
+                  "inline-flex h-8 items-center gap-1.5 rounded-md border px-2.5 text-xs transition outline-none",
+                  "focus-visible:ring-2 focus-visible:ring-accent/60",
+                  filters.favoritesOnly
+                    ? "border-[#fcd34d]/70 bg-[#fcd34d]/15 text-[#fcd34d]"
+                    : "border-border bg-panel-2 text-muted hover:border-border-strong hover:text-text",
+                ].join(" ")}
+              >
+                <Star
+                  className="h-3.5 w-3.5"
+                  fill={filters.favoritesOnly ? "currentColor" : "none"}
+                  strokeWidth={2}
+                  aria-hidden
+                />
+                <span>Favorites</span>
+              </button>
+            )}
           </div>
         </div>
       </div>
+    </div>
+  );
+}
+
+function ViewToggle({
+  value,
+  onChange,
+}: {
+  value: CardView;
+  onChange: (next: CardView) => void;
+}) {
+  const options = [
+    { value: "grid" as const, Icon: LayoutGrid, label: "Grid" },
+    { value: "list" as const, Icon: Rows3, label: "List" },
+  ];
+  return (
+    <div
+      role="radiogroup"
+      aria-label="View"
+      className="inline-flex h-8 items-center rounded-md bg-panel-2 p-0.5"
+    >
+      {options.map(({ value: v, Icon, label }) => {
+        const active = value === v;
+        return (
+          <button
+            key={v}
+            type="button"
+            role="radio"
+            aria-checked={active}
+            aria-label={label}
+            onClick={() => onChange(v)}
+            className={[
+              "inline-flex h-7 w-7 items-center justify-center rounded transition outline-none",
+              "focus-visible:ring-2 focus-visible:ring-accent/60",
+              active
+                ? "bg-panel-3 text-text shadow-[inset_0_0_0_1px_var(--color-border)]"
+                : "text-muted hover:text-text",
+            ].join(" ")}
+          >
+            <Icon className="h-3.5 w-3.5" aria-hidden />
+          </button>
+        );
+      })}
     </div>
   );
 }
