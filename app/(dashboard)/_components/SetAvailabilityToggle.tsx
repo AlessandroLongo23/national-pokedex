@@ -31,53 +31,38 @@ export function SetAvailabilityToggle({ setId, compact }: Props) {
     set(setId, !available);
   };
 
-  const compactClass = [
+  // One visual language everywhere (table, grid, set header): covered/missing
+  // colors plus distinct Store/Ban icon shapes so the on/off signal stays legible
+  // for red-green colorblind users. The labeled variant just adds a neutral text
+  // label next to the same button — never a second color, so signals don't stack.
+  const Icon = available ? Store : Ban;
+  const buttonClass = [
     "inline-flex h-6 w-6 items-center justify-center rounded-md transition",
     available
       ? "text-covered/80 ring-1 ring-covered/30 bg-covered/10 hover:text-covered hover:ring-covered/50"
       : "text-missing ring-1 ring-missing/50 bg-missing/10 hover:ring-missing hover:bg-missing/15",
   ].join(" ");
 
-  const fullClass = [
-    "inline-flex h-6 w-6 items-center justify-center rounded-md transition",
-    available
-      ? "bg-accent/15 text-accent ring-1 ring-accent/40 hover:bg-accent/25"
-      : "bg-panel-2 text-muted ring-1 ring-border hover:text-text hover:ring-border-strong",
-  ].join(" ");
+  const button = (
+    <Tooltip content={description}>
+      <button
+        type="button"
+        role="switch"
+        aria-checked={available}
+        aria-label={`Available locally: ${available ? "yes" : "no"}`}
+        onClick={onToggle}
+        className={buttonClass}
+      >
+        <Icon className="h-3.5 w-3.5" aria-hidden />
+      </button>
+    </Tooltip>
+  );
 
-  if (compact) {
-    // Distinct icon shapes (Store vs Ban) carry the on/off signal alongside the
-    // covered/missing colors so red-green colorblind users still parse it.
-    const CompactIcon = available ? Store : Ban;
-    return (
-      <Tooltip content={description}>
-        <button
-          type="button"
-          role="switch"
-          aria-checked={available}
-          aria-label={`Available locally: ${available ? "yes" : "no"}`}
-          onClick={onToggle}
-          className={compactClass}
-        >
-          <CompactIcon className="h-3.5 w-3.5" aria-hidden />
-        </button>
-      </Tooltip>
-    );
-  }
+  if (compact) return button;
 
   return (
     <span className="inline-flex items-center gap-2 text-xs text-muted">
-      <Tooltip content={description}>
-        <button
-          type="button"
-          role="switch"
-          aria-checked={available}
-          onClick={onToggle}
-          className={fullClass}
-        >
-          <Store className="h-3.5 w-3.5" aria-hidden />
-        </button>
-      </Tooltip>
+      {button}
       <span>Available locally{overridden ? " · manual" : ""}</span>
     </span>
   );

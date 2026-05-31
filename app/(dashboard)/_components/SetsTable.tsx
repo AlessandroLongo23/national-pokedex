@@ -9,6 +9,7 @@ import { useSetAvailability } from "../_lib/SetAvailabilityContext";
 import { useUser } from "../_lib/UserContext";
 import { DEFAULT_SERIES_TINT, SERIES_TINT } from "./SeriesBadge";
 import { SetAvailabilityToggle } from "./SetAvailabilityToggle";
+import { SetLogo } from "./SetLogo";
 import { Tooltip } from "./Tooltip";
 
 type SortKey =
@@ -146,8 +147,8 @@ export function SetsTable({
   );
 
   return (
-    <div className="flex min-h-0 flex-1 flex-col gap-3">
-      <div className="flex shrink-0 flex-wrap items-center gap-3 rounded-lg border border-border bg-panel p-3">
+    <div className="space-y-3">
+      <div className="sticky top-16 z-sticky flex flex-wrap items-center gap-3 rounded-lg border border-border bg-panel/90 p-3 backdrop-blur-md">
         <div className="relative min-w-0 flex-1 sm:min-w-[220px] sm:max-w-xs">
           <Search
             className="pointer-events-none absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted"
@@ -213,7 +214,7 @@ export function SetsTable({
         <ViewToggle view={view} onChange={setView} />
       </div>
 
-      <div className="min-h-0 flex-1 overflow-y-auto pr-1">
+      <div>
       {rows.length === 0 ? (
         <div className="rounded-xl border border-border bg-panel p-10 text-center text-sm text-muted">
           No sets match this filter.
@@ -420,49 +421,6 @@ function ToggleButton({
     >
       {children}
     </button>
-  );
-}
-
-function SetLogo({
-  setId,
-  setName,
-  logoUrl,
-  size = "lg",
-}: {
-  setId: string;
-  setName: string;
-  logoUrl?: string;
-  size?: "sm" | "lg";
-}) {
-  const [failed, setFailed] = useState(false);
-  if (failed) {
-    return (
-      <span
-        className={
-          size === "sm"
-            ? "flex h-10 w-[120px] flex-shrink-0 items-center justify-center text-center text-xs font-semibold tracking-tight text-text"
-            : "text-sm font-bold tracking-tight text-text"
-        }
-      >
-        {setName}
-      </span>
-    );
-  }
-  const src = logoUrl ?? `https://images.pokemontcg.io/${setId}/logo.png`;
-  return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
-      src={src}
-      alt={setName}
-      onError={() => setFailed(true)}
-      loading="lazy"
-      draggable={false}
-      className={
-        size === "sm"
-          ? "h-10 w-[120px] flex-shrink-0 object-contain"
-          : "max-h-16 w-auto max-w-[80%] object-contain drop-shadow-[0_3px_10px_rgba(0,0,0,0.3)]"
-      }
-    />
   );
 }
 

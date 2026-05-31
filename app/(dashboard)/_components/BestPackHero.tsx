@@ -8,6 +8,7 @@ import { rankSets } from "@/lib/packs/rank";
 import type { BoosterWrapper } from "@/lib/data/types";
 import { useOwnedCards } from "../_lib/OwnedCardsContext";
 import { useSetAvailability } from "../_lib/SetAvailabilityContext";
+import { BoosterStrip } from "./BoosterStrip";
 import { SeriesBadge } from "./SeriesBadge";
 
 interface Props {
@@ -128,58 +129,10 @@ export function BestPackHero({ filterAvailable }: Props) {
               <ArrowRight className="h-3 w-3" aria-hidden />
             </Link>
           </div>
-          <WrapperRow wrappers={wrappers} setName={best.set.name} />
+          <BoosterStrip wrappers={wrappers} setName={best.set.name} />
         </div>
       )}
     </section>
-  );
-}
-
-function WrapperRow({ wrappers, setName }: { wrappers: BoosterWrapper[]; setName: string }) {
-  // Solo wrapper: center it, slightly larger. Multi: row with consistent gaps.
-  const solo = wrappers.length === 1;
-  return (
-    <div className="-mx-1 overflow-x-auto pb-1">
-      <ul
-        className={[
-          "flex w-max items-end pl-1",
-          solo ? "justify-start gap-0" : "gap-3 md:gap-4",
-        ].join(" ")}
-      >
-        {wrappers.map((w, i) => (
-          <li
-            key={w.title}
-            className="group relative"
-            style={{ zIndex: wrappers.length - i }}
-          >
-            <div
-              title={solo ? setName : `${setName} — ${w.name}`}
-              className="block transition-transform duration-[420ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform group-hover:-translate-y-1.5 group-hover:scale-[1.03]"
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={w.url}
-                alt={solo ? `${setName} booster pack` : `${setName} — ${w.name} booster pack`}
-                loading="lazy"
-                draggable={false}
-                referrerPolicy="no-referrer"
-                width={w.width}
-                height={w.height}
-                className={[
-                  "block w-auto rounded-md bg-bg/60 shadow-[0_12px_26px_-12px_rgba(0,0,0,0.7)] ring-1 ring-black/40 transition-shadow group-hover:shadow-[0_22px_36px_-12px_rgba(0,0,0,0.8)]",
-                  solo ? "h-44 md:h-56" : "h-36 md:h-44",
-                ].join(" ")}
-              />
-            </div>
-            {!solo && (
-              <span className="mt-2 block max-w-[6.5rem] truncate text-center text-[10px] uppercase tracking-wider text-muted md:max-w-[8rem]">
-                {w.name}
-              </span>
-            )}
-          </li>
-        ))}
-      </ul>
-    </div>
   );
 }
 
