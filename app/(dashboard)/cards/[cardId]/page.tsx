@@ -194,7 +194,12 @@ export default async function CardDetailPage({ params }: PageProps) {
   // single-element array and check whether the card survives; for custom
   // scopes (which `filterByScope` returns [] for) we consult the
   // `binder_cards` join populated only for that scope type.
-  const matchedBinders: { id: string; name: string; href: string }[] = [];
+  const matchedBinders: {
+    id: string;
+    name: string;
+    href: string;
+    coverageRange: { from: number; to: number } | null;
+  }[] = [];
   if (user) {
     const [bindersRes, binderCardRes] = await Promise.all([
       supabase
@@ -214,10 +219,21 @@ export default async function CardDetailPage({ params }: PageProps) {
           : filterByScope([card], scopeType, b.scope_params as ScopeParams)
               .length > 0;
       if (included) {
+        // Pokedex-scope binders track coverage at the species level: owning any
+        // card for an in-range dex# satisfies that slot, so a different print of
+        // a Pokémon you already have is "covered", not "needed". Pass the range
+        // so the client can compute species coverage live. Other scopes collect
+        // each specific card, so they stay per-card (coverageRange = null).
+        let coverageRange: { from: number; to: number } | null = null;
+        if (scopeType === "pokedex") {
+          const p = b.scope_params as { dexFrom: number; dexTo: number };
+          coverageRange = { from: p.dexFrom, to: p.dexTo };
+        }
         matchedBinders.push({
           id: b.id as string,
           name: b.name as string,
           href: `/binders/${b.id}`,
+          coverageRange,
         });
       }
     }
@@ -264,7 +280,7 @@ export default async function CardDetailPage({ params }: PageProps) {
     <div className="mx-auto max-w-[1280px]">
       <SetPageTitle title={card.name} detail={`${set.name} · #${card.number}`} />
 
-      <div className="mt-6 grid gap-8 md:grid-cols-[minmax(260px,360px)_1fr]">
+      <div className="grid gap-8 md:grid-cols-[minmax(260px,360px)_1fr]">
         <div>
           <CardHeroImage card={card} />
         </div>
@@ -351,7 +367,12 @@ export default async function CardDetailPage({ params }: PageProps) {
           )}
 
           {user && matchedBinders.length > 0 && (
-            <BinderMembership binders={matchedBinders} cardId={card.id} />
+            <BinderMembership
+              binders={matchedBinders}
+              cardId={card.id}
+              dexNumbers={card.dex}
+              megaFormKey={card.megaFormKey ?? null}
+            />
           )}
 
           <dl className="grid grid-cols-[auto_1fr] gap-x-6 gap-y-4 text-sm">
