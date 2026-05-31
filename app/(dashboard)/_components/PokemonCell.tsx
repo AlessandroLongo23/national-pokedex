@@ -12,7 +12,6 @@ import { typeColor, typeRgb } from "./pokemonTypeColors";
 
 interface Props {
   dex: number;
-  isCovered: boolean;
   hidden?: boolean;
   onClick?: (dex: number) => void;
   selected?: boolean;
@@ -26,7 +25,7 @@ interface Props {
 // corner. The sprite fills the card so the grid reads as a wall of
 // Pokémon rather than a wall of frames.
 
-function CellBase({ dex, isCovered, hidden, onClick, selected, displayCard }: Props) {
+function CellBase({ dex, hidden, onClick, selected, displayCard }: Props) {
   const { isSpeciesOwned, ownedCountForSpecies } = useOwnedCards();
   const { show, hide } = usePokemonHover();
   const owned = isSpeciesOwned(dex);
@@ -44,15 +43,9 @@ function CellBase({ dex, isCovered, hidden, onClick, selected, displayCard }: Pr
       ? showCardArt
         ? "border-owned/40 bg-bg"
         : "border-owned/55 bg-panel-2"
-      : isCovered
-        ? "border-border bg-panel-2 hover:border-border-strong"
-        : "border-border/40 bg-panel/60 hover:border-border";
+      : "border-border bg-panel-2 hover:border-border-strong";
 
-  const imgClass = selected || owned
-    ? "opacity-100"
-    : isCovered
-      ? "opacity-95"
-      : "opacity-40 grayscale";
+  const imgClass = selected || owned ? "opacity-100" : "opacity-95";
 
   return (
     <button
@@ -76,7 +69,7 @@ function CellBase({ dex, isCovered, hidden, onClick, selected, displayCard }: Pr
           "--type-glow": typeColor(types, 0.55),
         } as React.CSSProperties
       }
-      aria-label={`#${dex}${owned ? " owned" : isCovered ? "" : " missing"}`}
+      aria-label={`#${dex}${owned ? " owned" : ""}`}
     >
       {/* Sprite fills the cell — or the chosen card art, letterboxed */}
       {showCardArt && displayCard ? (

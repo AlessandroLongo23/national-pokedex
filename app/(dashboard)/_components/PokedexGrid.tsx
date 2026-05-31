@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { ChevronRight } from "lucide-react";
-import { COVERAGE, MEGAS, POKEDEX } from "@/lib/data";
+import { MEGAS, POKEDEX } from "@/lib/data";
 import {
   GEN_NAMES,
   GEN_RANGES,
@@ -112,7 +112,6 @@ export function PokedexGrid({
     }
   }, [groupByGen, storageKey, mounted]);
 
-  const missingSet = useMemo(() => new Set(COVERAGE.missingDex), []);
   const restrict = useMemo(() => (dexNumbers ? new Set(dexNumbers) : null), [dexNumbers]);
 
   // Restricted views (pack-logging, pokedex-scope binders) target specific
@@ -198,10 +197,6 @@ export function PokedexGrid({
       switch (filter) {
         case "all":
           return true;
-        case "covered":
-          return slot.kind === "mega" ? true : !missingSet.has(slot.dex);
-        case "missing":
-          return slot.kind === "mega" ? false : missingSet.has(slot.dex);
         case "owned":
           return slot.kind === "mega"
             ? ownedMegaForms.has(slot.form.formKey)
@@ -212,7 +207,7 @@ export function PokedexGrid({
             : !ownedSpecies.has(slot.dex);
       }
     });
-  }, [allSlots, query, filter, missingSet, ownedSpecies, ownedMegaForms]);
+  }, [allSlots, query, filter, ownedSpecies, ownedMegaForms]);
 
   // Bucket for gen-grouped rendering. In appended mode (mode='pokedex' +
   // placement='appended'), Megas go into their own synthetic bucket below
@@ -265,7 +260,6 @@ export function PokedexGrid({
       <PokemonCell
         key={slot.key}
         dex={slot.dex}
-        isCovered={!missingSet.has(slot.dex)}
         onClick={onCellClick}
         selected={selectedDex?.has(slot.dex)}
         displayCard={displayCardByDex?.get(slot.dex)}
@@ -296,11 +290,7 @@ export function PokedexGrid({
             onChange={setFilter}
             options={
               isGuest
-                ? [
-                    { value: "all", label: "All", hint: "Every entry in the grid" },
-                    { value: "covered", label: "Available", hint: "A card exists in the tracked sets" },
-                    { value: "missing", label: "No card", hint: "No card exists for this Pokémon in the tracked sets" },
-                  ]
+                ? [{ value: "all", label: "All", hint: "Every entry in the grid" }]
                 : undefined
             }
             counts={
@@ -486,10 +476,16 @@ export function PokedexGrid({
   );
 
   if (fitToViewport) {
+    // The page scrolls as a document; the filter/density bar stays pinned just
+    // below the app top bar (`top-16`) while the cells scroll past. The toolbar
+    // and body share this one parent so the sticky bar stays pinned for the
+    // whole grid (a `sticky` element only holds within its containing block).
     return (
-      <div className="flex min-h-0 flex-1 flex-col gap-5">
-        <div className="shrink-0">{toolbar}</div>
-        <div className="min-h-0 flex-1 space-y-5 overflow-y-auto pr-1">{body}</div>
+      <div className="space-y-5">
+        <div className="sticky top-16 z-sticky bg-white/85 pt-3 backdrop-blur-md dark:bg-zinc-950/85">
+          {toolbar}
+        </div>
+        <div className="space-y-5">{body}</div>
       </div>
     );
   }

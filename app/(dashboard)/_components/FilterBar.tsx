@@ -1,6 +1,6 @@
 "use client";
 
-export type GridFilter = "all" | "covered" | "missing" | "owned" | "needed";
+export type GridFilter = "all" | "owned" | "needed";
 
 interface FilterOption {
   value: GridFilter;
@@ -11,9 +11,7 @@ interface FilterOption {
 const OPTIONS: FilterOption[] = [
   { value: "all", label: "All", hint: "Every species in the National Pokédex" },
   { value: "owned", label: "Owned", hint: "You own at least one card of this Pokémon" },
-  { value: "needed", label: "To buy", hint: "A card exists in your tracked sets, but you don't own one yet" },
-  { value: "covered", label: "Available", hint: "A card exists in your tracked sets (owned or not)" },
-  { value: "missing", label: "No card", hint: "No card exists for this Pokémon in your tracked sets" },
+  { value: "needed", label: "To buy", hint: "You don't own a card of this Pokémon yet" },
 ];
 
 interface Props {
