@@ -4,7 +4,8 @@ import Link from "next/link";
 import { memo } from "react";
 import { ArrowUpRight, Check, Heart, Minus, Plus, Star } from "lucide-react";
 import { formatSetCode, getSet } from "@/lib/data";
-import type { CardEntry, Rarity } from "@/lib/data/types";
+import type { CardEntry } from "@/lib/data/types";
+import { RARITY_ABBR, RARITY_COLOR } from "../_lib/rarity";
 import { useOwnedCards } from "../_lib/OwnedCardsContext";
 import { useWishlist } from "../_lib/WishlistContext";
 import { useFavorites } from "../_lib/FavoritesContext";
@@ -27,32 +28,6 @@ interface Props {
   // On the species page the details link is redundant — we're already there.
   hideDetailsLink?: boolean;
 }
-
-const RARITY_COLOR: Record<Rarity, string> = {
-  Common: "text-muted",
-  Uncommon: "text-[#86efac]",
-  Rare: "text-[#93c5fd]",
-  DoubleRare: "text-[#60a5fa]",
-  UltraRare: "text-[#c4b5fd]",
-  IllustrationRare: "text-[#f0abfc]",
-  SpecialIllustrationRare: "text-[#fda4af]",
-  HyperRare: "text-[#fcd34d]",
-  Promo: "text-muted",
-  Unknown: "text-muted",
-};
-
-const RARITY_ABBR: Record<Rarity, string> = {
-  Common: "C",
-  Uncommon: "U",
-  Rare: "R",
-  DoubleRare: "DR",
-  UltraRare: "UR",
-  IllustrationRare: "IR",
-  SpecialIllustrationRare: "SIR",
-  HyperRare: "HR",
-  Promo: "PR",
-  Unknown: "—",
-};
 
 function TileBase({
   card,
