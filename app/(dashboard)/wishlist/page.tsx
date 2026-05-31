@@ -1,10 +1,8 @@
 import { Suspense } from "react";
-import { Heart } from "lucide-react";
 import { getSupabaseServer } from "@/lib/supabase/server";
 import { loadSetCards } from "@/lib/data";
 import type { CardEntry } from "@/lib/data/types";
 import { requireUserId } from "../_lib/current-user";
-import { PageHeader } from "../_components/PageHeader";
 import {
   WishlistPricedShell,
   WishlistUnpricedShell,
@@ -55,29 +53,24 @@ export default async function WishlistPage() {
   const types = [...typeSet].sort((a, b) => a.localeCompare(b));
   const artists = [...artistSet].sort((a, b) => a.localeCompare(b));
 
+  // The wishlist scrolls as a document (it is intentionally NOT in
+  // AppShell's VIEWPORT_FIT_ROUTES): the title scrolls away while the filter
+  // toolbar stays pinned. The header lives inside the client so its count
+  // tracks the owned-aware visible set.
   return (
-    <div className="mx-auto flex w-full min-h-0 max-w-[1280px] flex-1 flex-col gap-6">
-      <div className="shrink-0">
-        <PageHeader
-          icon={Heart}
-          title="Wishlist"
-          subtitle={`${cards.length} card${cards.length === 1 ? "" : "s"} marked as wanted. Click a card's Own button to move it from wishlist into your collection.`}
+    <div className="mx-auto w-full max-w-[1280px]">
+      <Suspense
+        fallback={
+          <WishlistUnpricedShell cards={cards} types={types} artists={artists} />
+        }
+      >
+        <WishlistPricedShell
+          cards={cards}
+          cardIds={cardIds}
+          types={types}
+          artists={artists}
         />
-      </div>
-      <div className="flex min-h-0 flex-1 flex-col">
-        <Suspense
-          fallback={
-            <WishlistUnpricedShell cards={cards} types={types} artists={artists} />
-          }
-        >
-          <WishlistPricedShell
-            cards={cards}
-            cardIds={cardIds}
-            types={types}
-            artists={artists}
-          />
-        </Suspense>
-      </div>
+      </Suspense>
     </div>
   );
 }
