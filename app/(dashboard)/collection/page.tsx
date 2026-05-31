@@ -1,118 +1,76 @@
-import { FolderOpen } from "lucide-react";
+import { Suspense } from "react";
 import { requireUserId } from "../_lib/current-user";
 import { getSupabaseServer } from "@/lib/supabase/server";
-import { PageHeader } from "../_components/PageHeader";
-import { CardRail } from "../_components/CardRail";
 import { getAllCards } from "@/lib/data/binder-scope";
-import { RARITY_ORDER } from "@/lib/data/types";
-import type { CardEntry, Rarity } from "@/lib/data/types";
+import type { CardEntry } from "@/lib/data/types";
+import {
+  CollectionPricedShell,
+  CollectionUnpricedShell,
+} from "./CollectionPricedShell";
 
-const RAIL_SIZE = 12;
+// Pricing a large collection means many upstream per-set fetches on a cold
+// cache; lift the platform default so the streamed price subtree can resolve.
+export const maxDuration = 60;
 
 export default async function CollectionPage() {
   const userId = await requireUserId();
   const supabase = await getSupabaseServer();
 
-  const [ownedRes, favoritesRes, wishlistRes, allCards] = await Promise.all([
+  const [ownedRes, allCards] = await Promise.all([
     supabase
       .from("owned_cards")
       .select("card_id, acquired_at")
-      .eq("user_id", userId)
-      .order("acquired_at", { ascending: false })
-      .limit(500),
-    supabase
-      .from("user_favorites")
-      .select("card_id, favorited_at")
-      .eq("user_id", userId)
-      .order("favorited_at", { ascending: false })
-      .limit(200),
-    supabase
-      .from("wishlist_cards")
-      .select("card_id, added_at")
-      .eq("user_id", userId)
-      .order("added_at", { ascending: false })
-      .limit(200),
+      .eq("user_id", userId),
     getAllCards(),
   ]);
-
-  const cardsById = new Map<string, CardEntry>(allCards.map((c) => [c.id, c]));
-
-  const rarityRank: Record<Rarity, number> = Object.fromEntries(
-    RARITY_ORDER.map((r, i) => [r, i]),
-  ) as Record<Rarity, number>;
-
-  function pluck(ids: { card_id: unknown }[]): CardEntry[] {
-    const out: CardEntry[] = [];
-    for (const row of ids) {
-      const c = cardsById.get(row.card_id as string);
-      if (c) out.push(c);
-    }
-    return out;
+  if (ownedRes.error) {
+    throw new Error(`Failed to load collection: ${ownedRes.error.message}`);
   }
 
-  const ownedCards = pluck(ownedRes.data ?? []);
-  const recentlyAdded = ownedCards.slice(0, RAIL_SIZE);
-  const byRarity = [...ownedCards]
-    .sort((a, b) => (rarityRank[b.rarity] ?? 0) - (rarityRank[a.rarity] ?? 0))
-    .slice(0, RAIL_SIZE);
-  const byFavorite = pluck(favoritesRes.data ?? []).slice(0, RAIL_SIZE);
-  const byWishlist = pluck(wishlistRes.data ?? []).slice(0, RAIL_SIZE);
+  const cardsById = new Map<string, CardEntry>(allCards.map((c) => [c.id, c]));
+  const cards: CardEntry[] = [];
+  const addedAt: Record<string, number> = {};
+  for (const row of (ownedRes.data ?? []) as {
+    card_id: string;
+    acquired_at: string | null;
+  }[]) {
+    const c = cardsById.get(row.card_id);
+    if (!c) continue;
+    cards.push(c);
+    if (row.acquired_at) addedAt[c.id] = Date.parse(row.acquired_at);
+  }
+  const cardIds = cards.map((c) => c.id);
+
+  // Distinct types and artists across the collection for the toolbar controls.
+  const typeSet = new Set<string>();
+  const artistSet = new Set<string>();
+  for (const c of cards) {
+    for (const t of c.types) typeSet.add(t);
+    if (c.artist) artistSet.add(c.artist);
+  }
+  const types = [...typeSet].sort((a, b) => a.localeCompare(b));
+  const artists = [...artistSet].sort((a, b) => a.localeCompare(b));
 
   return (
-    <div className="mx-auto flex w-full min-h-0 max-w-[1280px] flex-1 flex-col gap-8">
-      <div className="shrink-0">
-      <PageHeader
-        icon={FolderOpen}
-        title="Collection"
-        subtitle="Everything you own, surfaced through rails."
-      />
-      </div>
-
-      <div className="min-h-0 flex-1 space-y-8 overflow-y-auto pr-1">
-      <CardRail
-        title="Recently added"
-        subtitle="The latest cards added to your collection"
-        cards={recentlyAdded}
-        emptyMessage="You haven't added any cards yet."
-        rail="recently-added"
-      />
-
-      <CardRail
-        title="Top by rarity"
-        subtitle="Your rarest pulls first"
-        cards={byRarity}
-        emptyMessage="Nothing to rank yet — add some cards."
-        rail="by-rarity"
-      />
-
-      <CardRail
-        title="Favorites"
-        subtitle="Cards you've starred"
-        cards={byFavorite}
-        emptyMessage="Star a card from any tile to add it here."
-        rail="favorites"
-        href="/collection"
-      />
-
-      <CardRail
-        title="Wishlist"
-        subtitle="Cards you want next"
-        cards={byWishlist}
-        emptyMessage="Nothing on your wishlist yet."
-        rail="wishlist"
-        href="/wishlist"
-      />
-
-      <section
-        className="rounded-md border border-dashed border-border p-6 text-center"
-        data-rail="by-price"
+    <div className="mx-auto w-full max-w-[1280px]">
+      <Suspense
+        fallback={
+          <CollectionUnpricedShell
+            cards={cards}
+            addedAt={addedAt}
+            types={types}
+            artists={artists}
+          />
+        }
       >
-        <h3 className="text-sm font-semibold tracking-tight">Top by price</h3>
-        <p className="mt-1 text-xs text-muted">
-          Coming with price data — see BACKLOG section 7.
-        </p>
-      </section>
-      </div>
+        <CollectionPricedShell
+          cards={cards}
+          cardIds={cardIds}
+          addedAt={addedAt}
+          types={types}
+          artists={artists}
+        />
+      </Suspense>
     </div>
   );
 }
