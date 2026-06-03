@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { BestPackHero } from "../_components/BestPackHero";
+import { SinglesToBuy } from "../_components/SinglesToBuy";
 import { RankLeaderboard } from "../_components/RankLeaderboard";
 import { PackHistory, type PackHistoryItem } from "../_components/PackHistory";
 
@@ -30,6 +31,7 @@ export function PacksClient({ history }: Props) {
         </p>
       </div>
       <BestPackHero filterAvailable={filterAvailable} />
+      <SinglesToBuy filterAvailable={filterAvailable} />
       <RankLeaderboard filterAvailable={filterAvailable} />
       <PackHistory items={history} />
     </>
