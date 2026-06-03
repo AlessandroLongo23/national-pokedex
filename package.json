@@ -10,7 +10,10 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
-    "data:rebuild": "tsx scripts/ingest/index.ts"
+    "data:rebuild": "tsx scripts/ingest/index.ts",
+    "sim:run": "tsx scripts/sim/run.ts",
+    "sim:report": "tsx scripts/sim/report.ts && tsx scripts/sim/render-pdf.ts",
+    "sim:all": "npm run sim:run && npm run sim:report"
   },
   "dependencies": {
     "@base-ui/react": "^1.5.0",
