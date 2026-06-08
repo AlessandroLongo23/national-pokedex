@@ -33,6 +33,9 @@ interface Props {
   initialPurchasedAt?: string;
   initialCostCents?: number | null;
   initialCurrency?: LedgerCurrency | null;
+  // When set, this create-mode flow is consolidating existing single
+  // purchases; saving creates the lot AND deletes these single txn rows.
+  sourceSingleIds?: string[];
 }
 
 const SIZE_KEY = "cardgrid.size.lot-flow";
@@ -82,6 +85,7 @@ export function LogLotFlow({
   initialPurchasedAt,
   initialCostCents,
   initialCurrency,
+  sourceSingleIds,
 }: Props) {
   const router = useRouter();
   const editing = Boolean(editingLotId);
@@ -188,7 +192,14 @@ export function LogLotFlow({
           });
           router.push(`/transactions?lotEdited=${editingLotId}`);
         } else {
-          const { lotId } = await logCardLot(contents, { costCents, currency });
+          const { lotId } = await logCardLot(
+            contents,
+            { costCents, currency },
+            {
+              purchasedAt: fromLocalInput(purchasedAtLocal),
+              consumeSingleIds: sourceSingleIds,
+            },
+          );
           router.push(`/transactions?lotLogged=${lotId}`);
         }
       } catch (e) {
@@ -212,6 +223,14 @@ export function LogLotFlow({
 
   return (
     <div className="space-y-4">
+      {sourceSingleIds && sourceSingleIds.length > 0 && (
+        <p className="rounded-lg border border-accent/40 bg-accent/5 px-4 py-2 text-xs text-muted">
+          Grouping{" "}
+          <span className="font-semibold text-text">{sourceSingleIds.length}</span>{" "}
+          single purchase{sourceSingleIds.length === 1 ? "" : "s"} — saving replaces
+          {sourceSingleIds.length === 1 ? " it" : " them"} with this bulk lot.
+        </p>
+      )}
       <div className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-border bg-panel p-4">
         <div className="flex items-center gap-3">
           <span className="flex h-9 w-9 items-center justify-center rounded-md bg-panel-2 text-accent">
@@ -323,7 +342,7 @@ export function LogLotFlow({
               type="button"
               onClick={submit}
               disabled={pending || (!editing && picked.size === 0) || (editing && !dirty)}
-              className="rounded-md bg-accent px-4 py-2 text-sm font-semibold text-primary-foreground transition hover:opacity-90 disabled:opacity-40"
+              className="rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition hover:opacity-90 disabled:opacity-40"
             >
               {pending ? "Saving…" : editing ? "Save changes" : `Save lot (${copies})`}
             </button>
