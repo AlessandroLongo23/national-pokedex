@@ -78,6 +78,9 @@ test("log a bulk lot with a quantity and a price, then delete it", async ({
   page,
   context,
 }) => {
+  // Heavy spec: it loads the full ~20k-card catalogue twice (new + edit),
+  // compiled on-demand in dev. Give it room beyond the 30s default.
+  test.setTimeout(120_000);
   await signIn(context);
   const userId = await getUserId();
   expect(userId).not.toBeNull();
@@ -101,29 +104,30 @@ test("log a bulk lot with a quantity and a price, then delete it", async ({
 
   // Add a price.
   await page.getByRole("button", { name: "Add price" }).click();
-  await page.getByLabel("Price paid").fill("40.00");
+  await page.getByRole("textbox", { name: "Price paid" }).fill("40.00");
   await page.getByRole("button", { name: "Done" }).click();
 
-  // Save.
+  // Save. Wait for the post-save redirect specifically (the loose
+  // /transactions/ also matches /transactions/lots/new).
   await page.getByRole("button", { name: /Save lot/ }).click();
-  await expect(page).toHaveURL(/\/transactions/);
+  await expect(page).toHaveURL(/lotLogged=/);
 
-  // The ledger shows a "Bulk lot" row.
-  await expect(page.getByText(/Bulk lot/).first()).toBeVisible();
-
-  // Verify in the database: one lot, one content row with quantity 2, the
-  // card owned with quantity 2, and a lot_purchase transaction of -4000.
+  // Verify creation in the database directly — independent of the ledger's
+  // render, which blocks on a slow external pricing fetch on /transactions.
+  // One lot, one content row with quantity 2, the card owned with quantity
+  // 2, and a lot_purchase transaction of -4000.
   const { data: lots } = await admin()
     .from("card_lots")
     .select("id, cost_cents")
     .eq("user_id", userId!);
   expect(lots?.length).toBe(1);
   expect(lots?.[0]?.cost_cents).toBe(4000);
+  const lotId = lots![0]!.id as string;
 
   const { data: contents } = await admin()
     .from("lot_contents")
     .select("card_id, quantity")
-    .eq("lot_id", lots![0]!.id);
+    .eq("lot_id", lotId);
   expect(contents?.length).toBe(1);
   expect(contents?.[0]?.quantity).toBe(2);
   expect(contents?.[0]?.card_id).toBe(cardId);
@@ -144,15 +148,22 @@ test("log a bulk lot with a quantity and a price, then delete it", async ({
   expect(txns?.length).toBe(1);
   expect(txns?.[0]?.amount_cents).toBe(-4000);
 
-  // Open the editor via the row link, clear the lot, and delete it.
-  await page.getByRole("link", { name: /Bulk lot/ }).first().click();
-  await expect(page).toHaveURL(/\/transactions\/lots\/.*\/edit/);
+  // Open the editor directly (the lot pages don't hit the pricing API, so
+  // this is deterministic), clear the lot, and delete it.
+  await page.goto(`/transactions/lots/${lotId}/edit`);
+  // Wait for the editor to hydrate the lot's contents into the tray before
+  // removing — otherwise .all() can race ahead and return nothing.
+  await expect(
+    page.getByRole("button", { name: /^Remove / }).first(),
+  ).toBeVisible({ timeout: 20_000 });
   for (const btn of await page.getByRole("button", { name: /^Remove / }).all()) {
     await btn.click();
   }
   await page.getByRole("button", { name: "Delete this lot" }).click();
   await page.getByRole("button", { name: "Yes, delete lot" }).click();
-  await expect(page).toHaveURL(/\/transactions/);
+  // Wait for the post-delete redirect specifically, so the delete has
+  // committed server-side before we assert on the database.
+  await expect(page).toHaveURL(/lotDeleted=/);
 
   // The lot and its owned copies are gone.
   const { data: lotsAfter } = await admin()
