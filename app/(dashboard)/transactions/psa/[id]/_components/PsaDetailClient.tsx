@@ -344,7 +344,7 @@ export function PsaDetailClient(props: Props) {
                 type="date"
                 value={draft.returnedAt}
                 onChange={(e) => setReturnedAt(e.target.value)}
-                className="flex-1 rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-sm text-text focus:border-accent focus:outline-none [color-scheme:dark]"
+                className="flex-1 rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-base text-text focus:border-accent focus:outline-none md:text-sm [color-scheme:dark]"
               />
               {draft.returnedAt !== "" && (
                 <Tooltip content="Clear return date">
@@ -369,7 +369,7 @@ export function PsaDetailClient(props: Props) {
                   if (isLedgerCurrency(v)) setFeeCurrency(v);
                 }}
                 aria-label="Fee currency"
-                className="rounded-md border border-border bg-panel-2 px-2 py-1.5 text-sm text-text focus:border-accent focus:outline-none [color-scheme:dark]"
+                className="rounded-md border border-border bg-panel-2 px-2 py-1.5 text-base text-text focus:border-accent focus:outline-none md:text-sm [color-scheme:dark]"
               >
                 {SUPPORTED_CURRENCIES.map((c) => (
                   <option key={c} value={c}>
@@ -383,7 +383,7 @@ export function PsaDetailClient(props: Props) {
                 value={draft.feeDraft}
                 onChange={(e) => setFeeDraft(e.target.value)}
                 placeholder="0.00"
-                className="w-full rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-sm text-text focus:border-accent focus:outline-none"
+                className="w-full rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-base text-text focus:border-accent focus:outline-none md:text-sm"
               />
             </div>
           </Labeled>
@@ -396,13 +396,16 @@ export function PsaDetailClient(props: Props) {
             maxLength={500}
             onChange={(e) => setNote(e.target.value)}
             placeholder="Optional — e.g. Express service, expected return Aug"
-            className="w-full resize-none rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-sm text-text placeholder:text-muted focus:border-accent focus:outline-none"
+            className="w-full resize-none rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-base text-text placeholder:text-muted focus:border-accent focus:outline-none md:text-sm"
           />
         </Labeled>
       </div>
 
       <div className="overflow-x-auto rounded-lg border border-border bg-panel">
-        <table className="min-w-full text-sm">
+        {/* On mobile the 5-column grading table scrolls horizontally within this
+            bordered card (min-w forces room for the inputs); desktop fits to
+            full width as before. */}
+        <table className="min-w-[560px] text-sm md:min-w-full">
           <thead className="border-b border-border text-left text-[11px] uppercase tracking-wider text-muted">
             <tr>
               <th className="px-4 py-2 font-medium">Card</th>
@@ -568,7 +571,7 @@ function CardRow({
             value={cardDraft.preDraft}
             onChange={(e) => onPreChange(e.target.value)}
             placeholder="—"
-            className="w-24 rounded-md border border-border bg-panel-2 px-2 py-1 text-sm text-text focus:border-accent focus:outline-none"
+            className="w-24 rounded-md border border-border bg-panel-2 px-2 py-2 text-base text-text focus:border-accent focus:outline-none md:py-1 md:text-sm"
           />
         </div>
       </td>
@@ -579,7 +582,7 @@ function CardRow({
             const v = e.target.value;
             onGradeChange(v === "" ? null : parseInt(v, 10));
           }}
-          className="rounded-md border border-border bg-panel-2 px-2 py-1 text-sm text-text focus:border-accent focus:outline-none [color-scheme:dark]"
+          className="rounded-md border border-border bg-panel-2 px-2 py-2 text-base text-text focus:border-accent focus:outline-none md:py-1 md:text-sm [color-scheme:dark]"
         >
           <option value="">—</option>
           {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((g) => (
@@ -687,7 +690,7 @@ function SaveBar({
           type="button"
           onClick={onSave}
           disabled={!canSave}
-          className="rounded-md bg-accent px-4 py-1.5 text-xs font-semibold text-bg transition hover:opacity-90 disabled:opacity-40"
+          className="rounded-md bg-primary px-4 py-1.5 text-xs font-semibold text-primary-foreground transition hover:opacity-90 disabled:opacity-40"
         >
           {pending ? "Saving…" : "Save changes"}
         </button>

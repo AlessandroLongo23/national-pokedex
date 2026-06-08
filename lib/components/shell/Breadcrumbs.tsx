@@ -29,12 +29,12 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
         return (
           <Fragment key={`${idx}-${item.label}`}>
             {idx > 0 && (
-              <ChevronRight className="size-3.5 shrink-0 text-zinc-400 dark:text-zinc-600" />
+              <ChevronRight className="size-3.5 shrink-0 text-muted" />
             )}
             {isLink ? (
               <Link
                 href={item.href!}
-                className="truncate text-zinc-500 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+                className="truncate text-text-secondary transition-colors hover:text-text"
               >
                 {item.label}
               </Link>
@@ -46,14 +46,14 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
                 <span
                   className={
                     isLast
-                      ? "min-w-0 truncate font-medium text-zinc-900 dark:text-zinc-100"
-                      : "min-w-0 truncate text-zinc-500 dark:text-zinc-400"
+                      ? "min-w-0 truncate font-medium text-text"
+                      : "min-w-0 truncate text-text-secondary"
                   }
                 >
                   {item.label}
                 </span>
                 {item.detail && (
-                  <span className="hidden shrink-0 whitespace-nowrap font-normal text-zinc-400 dark:text-zinc-500 sm:inline">
+                  <span className="hidden shrink-0 whitespace-nowrap font-normal text-muted sm:inline">
                     {item.detail}
                   </span>
                 )}

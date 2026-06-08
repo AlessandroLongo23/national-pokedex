@@ -101,7 +101,7 @@ export function NewPsaModal({ open, onClose, defaultCurrency }: Props) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-start justify-center bg-black/60 p-4 backdrop-blur-sm md:items-center"
       onMouseDown={(e) => {
         if (e.target === e.currentTarget) onClose();
       }}
@@ -109,7 +109,7 @@ export function NewPsaModal({ open, onClose, defaultCurrency }: Props) {
       aria-modal="true"
       aria-label="New PSA submission"
     >
-      <div className="w-full max-w-3xl rounded-xl border border-border-strong bg-panel p-5 shadow-[0_24px_60px_-20px_rgb(0_0_0/0.8)]">
+      <div className="max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-xl border border-border-strong bg-panel p-5 shadow-[0_24px_60px_-20px_rgb(0_0_0/0.8)]">
         <div className="mb-4 flex items-center justify-between">
           <h2 className="text-base font-semibold tracking-tight text-text">
             New PSA submission
@@ -118,7 +118,7 @@ export function NewPsaModal({ open, onClose, defaultCurrency }: Props) {
             type="button"
             onClick={onClose}
             aria-label="Close"
-            className="rounded-md p-1 text-muted transition hover:bg-panel-2 hover:text-text"
+            className="rounded-md p-2.5 text-muted transition hover:bg-panel-2 hover:text-text md:p-1"
           >
             <X className="h-4 w-4" />
           </button>
@@ -143,7 +143,7 @@ export function NewPsaModal({ open, onClose, defaultCurrency }: Props) {
             )}
           </div>
 
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
             <div>
               <label className="eyebrow mb-1 block" htmlFor="psa-when">
                 Submitted
@@ -153,7 +153,7 @@ export function NewPsaModal({ open, onClose, defaultCurrency }: Props) {
                 type="datetime-local"
                 value={submittedAtLocal}
                 onChange={(e) => setSubmittedAtLocal(e.target.value)}
-                className="w-full rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-sm text-text focus:border-accent focus:outline-none [color-scheme:dark]"
+                className="w-full rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-base text-text focus:border-accent focus:outline-none [color-scheme:dark] md:text-sm"
               />
             </div>
             <div>
@@ -168,7 +168,7 @@ export function NewPsaModal({ open, onClose, defaultCurrency }: Props) {
                     if (isLedgerCurrency(v)) setCurrency(v);
                   }}
                   aria-label="Currency"
-                  className="rounded-md border border-border bg-panel-2 px-2 py-1.5 text-sm text-text focus:border-accent focus:outline-none [color-scheme:dark]"
+                  className="rounded-md border border-border bg-panel-2 px-2 py-1.5 text-base text-text focus:border-accent focus:outline-none [color-scheme:dark] md:text-sm"
                 >
                   {SUPPORTED_CURRENCIES.map((c) => (
                     <option key={c} value={c}>
@@ -183,7 +183,7 @@ export function NewPsaModal({ open, onClose, defaultCurrency }: Props) {
                   placeholder="0.00"
                   value={feeDraft}
                   onChange={(e) => setFeeDraft(e.target.value)}
-                  className="w-full rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-sm text-text focus:border-accent focus:outline-none"
+                  className="w-full rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-base text-text focus:border-accent focus:outline-none md:text-sm"
                 />
               </div>
             </div>
@@ -200,7 +200,7 @@ export function NewPsaModal({ open, onClose, defaultCurrency }: Props) {
               value={note}
               onChange={(e) => setNote(e.target.value)}
               placeholder="e.g. Value bulk, expected return Aug"
-              className="w-full rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-sm text-text focus:border-accent focus:outline-none"
+              className="w-full rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-base text-text focus:border-accent focus:outline-none md:text-sm"
             />
           </div>
 
@@ -227,7 +227,7 @@ export function NewPsaModal({ open, onClose, defaultCurrency }: Props) {
               type="button"
               onClick={submit}
               disabled={!canSubmit || pending}
-              className="rounded-md bg-accent px-4 py-1.5 text-xs font-semibold text-bg transition hover:opacity-90 disabled:opacity-40"
+              className="rounded-md bg-primary px-4 py-1.5 text-xs font-semibold text-primary-foreground transition hover:opacity-90 disabled:opacity-40"
             >
               {pending ? "Saving…" : "Create submission"}
             </button>

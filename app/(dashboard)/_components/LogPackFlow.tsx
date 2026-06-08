@@ -310,7 +310,7 @@ export function LogPackFlow({
               type="button"
               onClick={submit}
               disabled={pending || (!editing && picked.size === 0) || (editing && !dirty)}
-              className="rounded-md bg-accent px-4 py-2 text-sm font-semibold text-bg transition hover:opacity-90 disabled:opacity-40"
+              className="rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition hover:opacity-90 disabled:opacity-40"
             >
               {pending
                 ? "Saving…"
@@ -523,14 +523,14 @@ function OpenedAtField({
               type="date"
               value={date}
               onChange={(e) => onChange(joinLocalInput(e.target.value, time))}
-              className="flex-1 rounded-md border border-border bg-panel-2 px-2 py-1.5 text-xs text-text focus:border-accent focus:outline-none [color-scheme:dark]"
+              className="flex-1 rounded-md border border-border bg-panel-2 px-2 py-1.5 text-base md:text-xs text-text focus:border-accent focus:outline-none [color-scheme:dark]"
               aria-label="Date"
             />
             <input
               type="time"
               value={time}
               onChange={(e) => onChange(joinLocalInput(date, e.target.value))}
-              className="w-[96px] rounded-md border border-border bg-panel-2 px-2 py-1.5 text-xs text-text focus:border-accent focus:outline-none [color-scheme:dark]"
+              className="w-[96px] rounded-md border border-border bg-panel-2 px-2 py-1.5 text-base md:text-xs text-text focus:border-accent focus:outline-none [color-scheme:dark]"
               aria-label="Time"
             />
           </div>
@@ -647,7 +647,7 @@ function PricePaidField({
                 const next = e.target.value;
                 if (isLedgerCurrency(next)) onCurrencyChange(next);
               }}
-              className="rounded-md border border-border bg-panel-2 px-2 py-1.5 text-xs text-text focus:border-accent focus:outline-none [color-scheme:dark]"
+              className="rounded-md border border-border bg-panel-2 px-2 py-1.5 text-base md:text-xs text-text focus:border-accent focus:outline-none [color-scheme:dark]"
               aria-label="Currency"
             >
               {SUPPORTED_CURRENCIES.map((c) => (
@@ -669,7 +669,7 @@ function PricePaidField({
                 }
               }}
               placeholder="0.00"
-              className="flex-1 rounded-md border border-border bg-panel-2 px-2 py-1.5 text-xs text-text focus:border-accent focus:outline-none"
+              className="flex-1 rounded-md border border-border bg-panel-2 px-2 py-1.5 text-base md:text-xs text-text focus:border-accent focus:outline-none"
               aria-label="Price paid"
             />
           </div>
@@ -826,7 +826,7 @@ function SetPicker({ onPick }: { onPick: (id: string) => void }) {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search set name or series…"
-          className="ml-auto w-64 rounded-md border border-border bg-panel-2 px-2.5 py-1 text-xs text-text placeholder:text-muted focus:border-accent focus:outline-none"
+          className="ml-auto w-64 rounded-md border border-border bg-panel-2 px-2.5 py-1 text-base md:text-xs text-text placeholder:text-muted focus:border-accent focus:outline-none"
         />
       </div>
       <ul className="grid gap-1.5 md:grid-cols-2">

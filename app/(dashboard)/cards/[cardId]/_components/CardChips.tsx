@@ -9,54 +9,132 @@ import type { Rarity } from "@/lib/data/types";
 import { officialArtworkUrl } from "@/lib/pokeapi";
 import { typeRgb } from "../../../_components/pokemonTypeColors";
 
-// Type pill — colored to the type's canonical hue. Pokémon types carry a
-// strong visual association in fans' heads; using the recognized color does
-// the icon's job without inventing pictograms.
-export function TypeChip({ type }: { type: string }) {
-  const rgb = typeRgb(type);
-  return (
-    <span
-      className="inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em]"
-      style={{
-        backgroundColor: `rgb(${rgb} / 0.12)`,
-        borderColor: `rgb(${rgb} / 0.55)`,
-        color: `rgb(${rgb} / 1)`,
-      }}
-    >
+// Type symbol — the Pokémon type's energy badge (an SVG in /public/types,
+// keyed by the lowercased TCG energy-type name). The symbol carries the
+// type's color and is instantly recognizable, so it stands in for the old
+// text pill; the name is revealed on hover and exposed to assistive tech and
+// touch via alt + title. Falls back to a colored text pill if the asset is
+// missing or the type is unknown.
+export function TypeChip({ type, size = 26 }: { type: string; size?: number }) {
+  const [failed, setFailed] = useState(false);
+  const key = type.toLowerCase();
+  if (failed) {
+    const rgb = typeRgb(type);
+    return (
       <span
-        aria-hidden
-        className="h-1.5 w-1.5 rounded-full"
-        style={{ backgroundColor: `rgb(${rgb} / 1)` }}
+        className="inline-flex items-center rounded-full border px-2 py-0.5 text-[11px] font-semibold uppercase tracking-[0.12em]"
+        style={{
+          backgroundColor: `rgb(${rgb} / 0.12)`,
+          borderColor: `rgb(${rgb} / 0.55)`,
+          color: `rgb(${rgb} / 1)`,
+        }}
+      >
+        {type}
+      </span>
+    );
+  }
+  return (
+    <span className="group/type relative inline-flex">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={`/types/${key}.png`}
+        alt={type}
+        title={type}
+        width={size}
+        height={size}
+        onError={() => setFailed(true)}
+        className="block"
+        style={{ width: size, height: size }}
       />
-      {type}
+      <span
+        role="tooltip"
+        className="pointer-events-none absolute bottom-full left-1/2 z-10 mb-1.5 -translate-x-1/2 whitespace-nowrap rounded-md border border-border bg-panel px-2 py-1 text-[11px] font-medium normal-case tracking-normal text-text opacity-0 shadow-lg transition-opacity duration-150 group-hover/type:opacity-100"
+      >
+        {type}
+      </span>
     </span>
   );
 }
 
-const RARITY_RGB: Record<Rarity, string> = {
-  Common: "138 147 163",
-  Uncommon: "134 239 172",
-  Rare: "147 197 253",
-  DoubleRare: "96 165 250",
-  UltraRare: "196 181 253",
-  IllustrationRare: "240 171 252",
-  SpecialIllustrationRare: "253 164 175",
-  HyperRare: "252 211 77",
-  Promo: "138 147 163",
-  Unknown: "138 147 163",
+// Rarity is shown as the TCG rarity glyph (circle / diamond / 1–3 stars)
+// next to the short label, tier-colored: gold for the illustration tiers (to
+// match the gold star printed on the card), silver for the rare tiers, and a
+// quiet gray for common/uncommon. Promo/Unknown have no canonical glyph, so
+// they render label-only.
+type RarityGlyph = "circle" | "diamond" | "star";
+type RarityTier = "gold" | "silver" | "gray";
+
+const RARITY_SYMBOL: Record<
+  Rarity,
+  { glyph: RarityGlyph; count: number; tier: RarityTier } | null
+> = {
+  Common: { glyph: "circle", count: 1, tier: "gray" },
+  Uncommon: { glyph: "diamond", count: 1, tier: "gray" },
+  Rare: { glyph: "star", count: 1, tier: "silver" },
+  DoubleRare: { glyph: "star", count: 2, tier: "silver" },
+  UltraRare: { glyph: "star", count: 2, tier: "silver" },
+  IllustrationRare: { glyph: "star", count: 1, tier: "gold" },
+  SpecialIllustrationRare: { glyph: "star", count: 2, tier: "gold" },
+  HyperRare: { glyph: "star", count: 3, tier: "gold" },
+  Promo: null,
+  Unknown: null,
 };
 
+// Theme-aware tier colors — deep gold on light, bright gold on dark (the
+// app's established `-dark dark:` favorite pattern), so the gold reads on both
+// backgrounds. Symbol fill inherits this via currentColor.
+const TIER_CLASS: Record<RarityTier, string> = {
+  gold: "text-favorite-dark dark:text-favorite",
+  silver: "text-text-secondary",
+  gray: "text-muted",
+};
+
+const STAR_PATH =
+  "M12 1.6l3.09 6.26 6.91 1.01-5 4.87 1.18 6.88L12 17.27l-6.18 3.25 1.18-6.88-5-4.87 6.91-1.01z";
+const DIAMOND_PATH = "M12 1.5l6.5 10.5L12 22.5 5.5 12z";
+
+function RaritySymbol({
+  glyph,
+  count,
+  size = 12,
+}: {
+  glyph: RarityGlyph;
+  count: number;
+  size?: number;
+}) {
+  const unit = 24;
+  const gap = 3;
+  const totalUnits = count * unit + (count - 1) * gap;
+  return (
+    <svg
+      width={(size / unit) * totalUnits}
+      height={size}
+      viewBox={`0 0 ${totalUnits} ${unit}`}
+      fill="currentColor"
+      aria-hidden
+      className="shrink-0"
+    >
+      {Array.from({ length: count }).map((_, i) => (
+        <g key={i} transform={`translate(${i * (unit + gap)}, 0)`}>
+          {glyph === "circle" ? (
+            <circle cx={12} cy={12} r={7.5} />
+          ) : (
+            <path d={glyph === "star" ? STAR_PATH : DIAMOND_PATH} />
+          )}
+        </g>
+      ))}
+    </svg>
+  );
+}
+
 export function RarityBadge({ rarity, label }: { rarity: Rarity; label: string }) {
-  const rgb = RARITY_RGB[rarity];
+  const sym = RARITY_SYMBOL[rarity];
+  const tierClass = sym ? TIER_CLASS[sym.tier] : "text-muted";
   return (
     <span
-      className="inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em]"
-      style={{
-        backgroundColor: `rgb(${rgb} / 0.12)`,
-        borderColor: `rgb(${rgb} / 0.55)`,
-        color: `rgb(${rgb} / 1)`,
-      }}
+      className={`inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] ${tierClass}`}
     >
+      {sym && <RaritySymbol glyph={sym.glyph} count={sym.count} />}
       {label}
     </span>
   );
@@ -180,7 +258,7 @@ function EvoChip({ dex, highlight }: { dex: number; highlight?: boolean }) {
       className={[
         "inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-[11px] transition",
         highlight
-          ? "border-owned/60 bg-owned/15 text-owned"
+          ? "border-owned/60 bg-owned/15 text-owned-dark dark:text-owned"
           : "border-border bg-panel-2 hover:border-accent hover:text-accent",
       ].join(" ")}
     >

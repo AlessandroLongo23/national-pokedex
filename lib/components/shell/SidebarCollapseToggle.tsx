@@ -27,7 +27,7 @@ export function SidebarEdgeToggle() {
         type="button"
         onClick={handleClick}
         aria-label={label}
-        className="hidden h-5 w-5 items-center justify-center rounded-full border border-zinc-200 bg-white text-zinc-400 shadow-sm transition-colors hover:border-zinc-300 hover:text-zinc-900 md:flex dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-500 dark:hover:border-zinc-600 dark:hover:text-white"
+        className="hidden h-5 w-5 items-center justify-center rounded-full border border-border bg-panel text-muted shadow-sm transition-colors hover:border-border-strong hover:text-text md:flex"
       >
         {collapsed ? (
           <ChevronRight className="h-3 w-3" strokeWidth={2} />

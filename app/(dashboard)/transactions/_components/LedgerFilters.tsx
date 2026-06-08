@@ -50,7 +50,7 @@ export function LedgerFilters({
               onClick={() => onKindChange(opt.value)}
               aria-pressed={active}
               className={[
-                "rounded-md px-2.5 py-1 text-xs font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
+                "rounded-md px-2.5 py-2 md:py-1 text-xs font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
                 active
                   ? "border border-accent/40 bg-accent/10 text-accent"
                   : "border border-transparent text-muted hover:bg-panel-2 hover:text-text",
@@ -74,14 +74,14 @@ export function LedgerFilters({
             onChange={(e) => onSearchChange(e.target.value)}
             placeholder="Card name or set code"
             aria-label="Search transactions"
-            className="w-full rounded-md border border-border bg-panel-2 py-1.5 pl-8 pr-2.5 text-sm text-text placeholder:text-muted focus:border-accent focus:outline-none"
+            className="w-full rounded-md border border-border bg-panel-2 py-1.5 pl-8 pr-2.5 text-base md:text-sm text-text placeholder:text-muted focus:border-accent focus:outline-none"
           />
         </div>
         <select
           value={timeRange}
           onChange={(e) => onTimeRangeChange(e.target.value as TimeRange)}
           aria-label="Time range"
-          className="rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-sm text-text focus:border-accent focus:outline-none [color-scheme:dark]"
+          className="rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-base md:text-sm text-text focus:border-accent focus:outline-none [color-scheme:dark]"
         >
           {TIME_OPTIONS.map((opt) => (
             <option key={opt.value} value={opt.value}>

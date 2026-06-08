@@ -1,5 +1,9 @@
 import { describe, it, expect } from "vitest";
-import { normalizeMegaName, discoverMegas } from "@/scripts/ingest/parseMegas";
+import {
+  normalizeMegaName,
+  discoverMegas,
+  mergeGenericMegaForms,
+} from "@/scripts/ingest/parseMegas";
 import type { CardEntry } from "@/lib/data/types";
 
 describe("normalizeMegaName", () => {
@@ -130,5 +134,67 @@ describe("discoverMegas", () => {
     };
     const { megas } = discoverMegas(cardsBySet);
     expect(megas[0]?.gen).toBe(4);
+  });
+});
+
+describe("mergeGenericMegaForms", () => {
+  it("folds a generic Mega form into its -x sibling (cards, index, forms)", () => {
+    const cardsBySet = {
+      xy2: [megaCard("xy2-13", "M Charizard-EX", 6, "mega-charizard")],
+      me1: [
+        megaCard("me1-1", "Mega Charizard X ex", 6, "mega-charizard-x"),
+        megaCard("me1-2", "Mega Charizard Y ex", 6, "mega-charizard-y"),
+      ],
+    };
+    const { megas, cardIndexByMega } = discoverMegas(cardsBySet);
+    expect(megas.map((m) => m.formKey)).toContain("mega-charizard");
+
+    const merged = mergeGenericMegaForms(cardsBySet, megas, cardIndexByMega);
+
+    // generic form dropped; X/Y kept
+    expect(merged.megas.map((m) => m.formKey).sort()).toEqual([
+      "mega-charizard-x",
+      "mega-charizard-y",
+    ]);
+    // the legacy card is rewritten in place and folded into the X index
+    expect(cardsBySet.xy2[0]!.megaFormKey).toBe("mega-charizard-x");
+    expect(merged.cardIndexByMega["mega-charizard-x"]).toEqual(["me1-1", "xy2-13"]);
+    expect(merged.cardIndexByMega["mega-charizard"]).toBeUndefined();
+  });
+
+  it("falls back to the -y sibling when no -x exists", () => {
+    const cardsBySet = {
+      a: [
+        megaCard("a-1", "Mega Foo", 200, "mega-foo"),
+        megaCard("a-2", "Mega Foo Y", 200, "mega-foo-y"),
+      ],
+    };
+    const { megas, cardIndexByMega } = discoverMegas(cardsBySet);
+    const merged = mergeGenericMegaForms(cardsBySet, megas, cardIndexByMega);
+    expect(merged.megas.map((m) => m.formKey)).toEqual(["mega-foo-y"]);
+    expect(cardsBySet.a[0]!.megaFormKey).toBe("mega-foo-y");
+  });
+
+  it("is a no-op when a generic form has no X/Y sibling (e.g. plain Mewtwo)", () => {
+    const cardsBySet = {
+      me1: [megaCard("me1-1", "M Mewtwo-EX", 150, "mega-mewtwo")],
+    };
+    const { megas, cardIndexByMega } = discoverMegas(cardsBySet);
+    const merged = mergeGenericMegaForms(cardsBySet, megas, cardIndexByMega);
+    expect(merged.megas.map((m) => m.formKey)).toEqual(["mega-mewtwo"]);
+    expect(cardsBySet.me1[0]!.megaFormKey).toBe("mega-mewtwo");
+  });
+
+  it("never collapses Primal forms", () => {
+    const cardsBySet = {
+      xy5: [
+        megaCard("xy5-1", "Primal Kyogre-EX", 382, "primal-kyogre"),
+        // a hypothetical X variant must not pull the primal in
+        megaCard("xy5-2", "Primal Kyogre X", 382, "primal-kyogre-x"),
+      ],
+    };
+    const { megas, cardIndexByMega } = discoverMegas(cardsBySet);
+    const merged = mergeGenericMegaForms(cardsBySet, megas, cardIndexByMega);
+    expect(merged.megas.map((m) => m.formKey)).toContain("primal-kyogre");
   });
 });

@@ -55,7 +55,7 @@ export function SortControl({
             "focus-visible:ring-2 focus-visible:ring-accent/60",
             open
               ? "border-border-strong bg-panel-2 text-text"
-              : "border-border bg-panel-2 text-muted hover:border-border-strong hover:text-text",
+              : "border-border bg-panel-2 text-text-secondary hover:border-border-strong hover:text-text",
           ].join(" ")}
         >
           <ArrowUpDown className="h-3.5 w-3.5" aria-hidden />
@@ -82,7 +82,7 @@ export function SortControl({
                 "flex w-full items-center justify-between gap-3 rounded-md px-2 py-1.5 text-left text-xs transition",
                 selected
                   ? "bg-panel-2 text-text"
-                  : "text-muted hover:bg-panel-2 hover:text-text",
+                  : "text-text-secondary hover:bg-panel-2 hover:text-text",
               ].join(" ")}
             >
               <span className="text-text">{meta.label}</span>
@@ -112,7 +112,7 @@ export function SortControl({
                   "focus-visible:ring-2 focus-visible:ring-accent/60",
                   isActive
                     ? "bg-panel-3 text-text shadow-[inset_0_0_0_1px_var(--color-border)]"
-                    : "text-muted hover:text-text",
+                    : "text-text-secondary hover:text-text",
                 ].join(" ")}
               >
                 <Icon className="h-3 w-3" aria-hidden />

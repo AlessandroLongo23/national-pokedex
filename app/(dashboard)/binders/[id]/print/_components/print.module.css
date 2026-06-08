@@ -1,0 +1,78 @@
+/* On-screen-only cosmetics for the print workspace. Physical sheet/cell
+   geometry lives in globals.css (.print-sheet / .print-cell); the print-only
+   isolation rules there strip the shadows / scaling below. */
+
+.canvas {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  background: #e6e6ea;
+  padding: 24px 16px 96px;
+}
+
+/* A fixed-size frame that reserves the scaled-down footprint of a real A4
+   sheet, so the transform-scaled sheet inside doesn't leave layout gaps. */
+.sheetFrame {
+  width: calc(210mm * var(--preview-scale, 1));
+  height: calc(297mm * var(--preview-scale, 1));
+  margin: 0 auto 20px;
+  position: relative;
+}
+.sheetFrame > .sheet {
+  transform: scale(var(--preview-scale, 1));
+  transform-origin: top left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow:
+    0 1px 3px rgb(0 0 0 / 0.16),
+    0 10px 28px rgb(0 0 0 / 0.18);
+  border-radius: 2px;
+}
+
+@media print {
+  .canvas {
+    overflow: visible !important;
+    background: #fff !important;
+    padding: 0 !important;
+  }
+  .sheetFrame {
+    width: 210mm !important;
+    height: 297mm !important;
+    margin: 0 !important;
+  }
+  .sheetFrame > .sheet {
+    transform: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+}
+
+/* Per-cell exclude button (hover, screen only). */
+.cellWrap {
+  position: relative;
+}
+.excludeBtn {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 9999px;
+  border: none;
+  background: rgb(0 0 0 / 0.55);
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 120ms ease;
+}
+.cellWrap:hover .excludeBtn {
+  opacity: 1;
+}
+.excludeBtn:hover {
+  background: rgb(0 0 0 / 0.8);
+}

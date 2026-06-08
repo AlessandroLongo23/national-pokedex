@@ -273,7 +273,7 @@ export function NewBinderFlow({ sets, pokedex, artists, cardNames }: Props) {
             <select
               value={setId}
               onChange={(e) => setSetId(e.target.value)}
-              className="w-full rounded-md border border-border bg-panel-2 px-2 py-1.5"
+              className="w-full rounded-md border border-border bg-panel-2 px-2 py-1.5 text-base md:text-sm"
             >
               <option value="">Choose a set…</option>
               {sortedSets.map((s) => (
@@ -295,7 +295,7 @@ export function NewBinderFlow({ sets, pokedex, artists, cardNames }: Props) {
               value={dexInput}
               onChange={(e) => setDexInput(e.target.value)}
               placeholder="e.g. Pikachu or 25"
-              className="w-full rounded-md border border-border bg-panel-2 px-2 py-1.5"
+              className="w-full rounded-md border border-border bg-panel-2 px-2 py-1.5 text-base md:text-sm"
             />
             <datalist id="pokedex-list">
               {pokedex.map((p) => (
@@ -316,7 +316,7 @@ export function NewBinderFlow({ sets, pokedex, artists, cardNames }: Props) {
               value={artist}
               onChange={(e) => setArtist(e.target.value)}
               placeholder="Start typing an illustrator name…"
-              className="w-full rounded-md border border-border bg-panel-2 px-2 py-1.5"
+              className="w-full rounded-md border border-border bg-panel-2 px-2 py-1.5 text-base md:text-sm"
             />
             <datalist id="artist-list">
               {artists.map((a) => (
@@ -365,7 +365,7 @@ export function NewBinderFlow({ sets, pokedex, artists, cardNames }: Props) {
               value={position}
               onChange={(e) => setPosition(e.target.value)}
               placeholder='e.g. "1", "1a", "TG01"'
-              className="w-full rounded-md border border-border bg-panel-2 px-2 py-1.5"
+              className="w-full rounded-md border border-border bg-panel-2 px-2 py-1.5 text-base md:text-sm"
             />
             <p className="text-xs text-muted">
               Matches every card with this exact number — e.g. {'"'}1{'"'} returns the #1 of every
@@ -419,7 +419,7 @@ export function NewBinderFlow({ sets, pokedex, artists, cardNames }: Props) {
               value={cardName}
               onChange={(e) => setCardName(e.target.value)}
               placeholder="e.g. Professor's Research"
-              className="w-full rounded-md border border-border bg-panel-2 px-2 py-1.5"
+              className="w-full rounded-md border border-border bg-panel-2 px-2 py-1.5 text-base md:text-sm"
             />
             <datalist id="card-name-list">
               {cardNames.map((n) => (
@@ -481,7 +481,7 @@ export function NewBinderFlow({ sets, pokedex, artists, cardNames }: Props) {
                     max={1025}
                     value={dexFrom}
                     onChange={(e) => setDexFrom(Number(e.target.value) || 0)}
-                    className="w-20 rounded-md border border-border bg-panel-2 px-2 py-1"
+                    className="w-20 rounded-md border border-border bg-panel-2 px-2 py-1 text-base md:text-sm"
                   />
                 </label>
                 <label className="flex items-center gap-1">
@@ -492,7 +492,7 @@ export function NewBinderFlow({ sets, pokedex, artists, cardNames }: Props) {
                     max={1025}
                     value={dexTo}
                     onChange={(e) => setDexTo(Number(e.target.value) || 0)}
-                    className="w-20 rounded-md border border-border bg-panel-2 px-2 py-1"
+                    className="w-20 rounded-md border border-border bg-panel-2 px-2 py-1 text-base md:text-sm"
                   />
                 </label>
                 {dexFrom > dexTo && (
@@ -519,7 +519,7 @@ export function NewBinderFlow({ sets, pokedex, artists, cardNames }: Props) {
           }}
           maxLength={80}
           placeholder={suggestedName || "Name your binder"}
-          className="w-full rounded-md border border-border bg-panel-2 px-2 py-1.5"
+          className="w-full rounded-md border border-border bg-panel-2 px-2 py-1.5 text-base md:text-sm"
         />
       </label>
 

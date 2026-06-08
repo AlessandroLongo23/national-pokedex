@@ -37,9 +37,9 @@ export function SetAvailabilityToggle({ setId, compact }: Props) {
   // label next to the same button — never a second color, so signals don't stack.
   const Icon = available ? Store : Ban;
   const buttonClass = [
-    "inline-flex h-6 w-6 items-center justify-center rounded-md transition",
+    "inline-flex h-10 w-10 md:h-6 md:w-6 items-center justify-center rounded-md transition",
     available
-      ? "text-covered/80 ring-1 ring-covered/30 bg-covered/10 hover:text-covered hover:ring-covered/50"
+      ? "text-covered-dark dark:text-covered ring-1 ring-covered/30 bg-covered/10 hover:text-covered hover:ring-covered/50"
       : "text-missing ring-1 ring-missing/50 bg-missing/10 hover:ring-missing hover:bg-missing/15",
   ].join(" ");
 

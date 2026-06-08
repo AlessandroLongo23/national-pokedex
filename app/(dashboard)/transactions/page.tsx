@@ -212,7 +212,7 @@ export default async function TransactionsPage() {
         priceSource={prefs.priceSource}
       />
 
-      <div className="mt-6 flex justify-end">
+      <div className="mt-6 flex justify-start md:justify-end">
         <ActionsBar defaultCurrency={displayCurrency} />
       </div>
 

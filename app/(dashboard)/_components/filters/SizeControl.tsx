@@ -16,7 +16,12 @@ export function SizeControl({
   compact?: boolean;
 }) {
   return (
-    <div className="inline-flex h-8 items-center gap-2 rounded-md bg-panel-2 px-2.5">
+    <div
+      className={[
+        "inline-flex items-center gap-2 rounded-md bg-panel-2 px-2.5",
+        compact ? "h-10 md:h-8" : "h-8",
+      ].join(" ")}
+    >
       {compact ? (
         cols >= 6 ? (
           <Grid3x3

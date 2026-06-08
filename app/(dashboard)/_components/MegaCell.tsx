@@ -6,19 +6,22 @@ import { officialArtworkUrl } from "@/lib/pokeapi";
 import { CARD_INDEX_BY_MEGA } from "@/lib/data";
 import type { CardEntry, MegaForm } from "@/lib/data/types";
 import { useOwnedCards } from "../_lib/OwnedCardsContext";
+import { usePokemonHover } from "../_lib/PokemonHoverContext";
 import { OwnedBadge } from "./OwnedBadge";
 
 interface Props {
   form: MegaForm;
+  onClick?: (form: MegaForm) => void;
   /** When set, the cell shows this card's art (letterboxed) instead of the
    * silhouette fallback. */
   displayCard?: CardEntry | null;
 }
 
-function CellBase({ form, displayCard }: Props) {
+function CellBase({ form, onClick, displayCard }: Props) {
   const { isMegaFormOwned, ownedCountForMegaForm } = useOwnedCards();
+  const { show, hide } = usePokemonHover();
   const owned = isMegaFormOwned(form.formKey);
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLButtonElement>(null);
   const totalVariants = CARD_INDEX_BY_MEGA[form.formKey]?.length ?? 0;
   const ownedVariants = ownedCountForMegaForm(form.formKey);
   const partial = owned && ownedVariants < totalVariants;
@@ -33,16 +36,26 @@ function CellBase({ form, displayCard }: Props) {
     : "border-mega/25 bg-panel/60 hover:border-mega/45";
 
   return (
-    <div
+    <button
       ref={ref}
+      type="button"
       data-mega-form={form.formKey}
+      onClick={onClick ? () => onClick(form) : undefined}
+      onMouseEnter={() =>
+        ref.current && show({ kind: "mega", form }, ref.current.getBoundingClientRect())
+      }
+      onMouseLeave={hide}
+      onFocus={() =>
+        ref.current && show({ kind: "mega", form }, ref.current.getBoundingClientRect())
+      }
+      onBlur={hide}
       className={[
         "pokemon-cell group/cell relative flex aspect-[4/5] w-full items-center justify-center overflow-hidden rounded-md border select-none",
-        "transition-[transform,box-shadow,border-color,background-color] duration-150 ease-out hover:z-10 hover:scale-[1.05]",
+        onClick ? "cursor-pointer" : "cursor-default",
+        "transition-[transform,box-shadow,border-color,background-color] duration-150 ease-out hover:z-10 hover:scale-[1.05] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mega",
         stateClass,
       ].join(" ")}
       style={{ "--type-glow": "rgb(167 139 255 / 0.55)" } as React.CSSProperties}
-      title={form.displayName}
       aria-label={`${form.displayName}${owned ? " owned" : ""}`}
     >
       {showCardArt && displayCard ? (
@@ -56,7 +69,7 @@ function CellBase({ form, displayCard }: Props) {
         />
       ) : (
         <Image
-          src={officialArtworkUrl(form.baseDex)}
+          src={officialArtworkUrl(form.artworkId ?? form.baseDex)}
           alt=""
           width={112}
           height={112}
@@ -93,7 +106,7 @@ function CellBase({ form, displayCard }: Props) {
           {ownedVariants}/{totalVariants}
         </span>
       )}
-    </div>
+    </button>
   );
 }
 

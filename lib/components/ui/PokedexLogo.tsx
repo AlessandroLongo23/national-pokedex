@@ -45,8 +45,8 @@ export function PokedexLogo({ size = "md" }: PokedexLogoProps) {
     <span
       className={`inline-flex items-center gap-1.5 font-semibold tracking-tight ${text}`}
     >
-      <PokeballIcon className={`${icon} text-primary`} />
-      Pókedex<span className="text-primary">.</span>
+      <PokeballIcon className={`${icon} text-accent`} />
+      Pókedex<span className="text-accent">.</span>
     </span>
   );
 }

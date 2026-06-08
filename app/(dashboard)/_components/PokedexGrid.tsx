@@ -34,6 +34,9 @@ interface Props {
   /** Override click handler — used by pack-logging flow. Only fires for
    * dex slots; Mega slots never appear when this is set. */
   onCellClick?: (dex: number) => void;
+  /** Click handler for Mega/Primal slots — opens the mega card-variant picker
+   * on the Pokédex page. When omitted, Mega cells render but aren't clickable. */
+  onMegaClick?: (form: MegaForm) => void;
   /** Set of dex numbers visually selected (only used with onCellClick) */
   selectedDex?: Set<number>;
   /** Per-dex card art to show in the cell (letterboxed). Used by
@@ -79,6 +82,7 @@ export function PokedexGrid({
   showSearch = true,
   storageKey = "main",
   onCellClick,
+  onMegaClick,
   selectedDex,
   displayCardByDex,
   fitToViewport = false,
@@ -90,9 +94,20 @@ export function PokedexGrid({
   const [cols, setCols] = useState(20);
   const [groupByGen, setGroupByGen] = useState(groupByGenDefault);
   const [mounted, setMounted] = useState(false);
+  // Mobile keeps an independent density (own storage key + a much lower
+  // default) so phones get tappable ~40px cells instead of inheriting the
+  // desktop default of 20 columns (~18px cells, untappable). Desktop reads
+  // the original key + default 20, so its behaviour is byte-identical.
+  const [isMobile, setIsMobile] = useState(false);
+  const colsKey = `${COLS_KEY_PREFIX}.${storageKey}${isMobile ? ".m" : ""}`;
 
   useEffect(() => {
-    setCols(loadInt(`${COLS_KEY_PREFIX}.${storageKey}`, 20));
+    const mobile =
+      typeof window !== "undefined" &&
+      window.matchMedia("(max-width: 767px)").matches;
+    setIsMobile(mobile);
+    const key = `${COLS_KEY_PREFIX}.${storageKey}${mobile ? ".m" : ""}`;
+    setCols(loadInt(key, mobile ? 8 : 20));
     if (showGenToggle) {
       setGroupByGen(loadBool(`${GROUP_KEY_PREFIX}.${storageKey}`, groupByGenDefault));
     }
@@ -100,8 +115,8 @@ export function PokedexGrid({
   }, [storageKey, groupByGenDefault, showGenToggle]);
 
   useEffect(() => {
-    if (mounted) window.localStorage.setItem(`${COLS_KEY_PREFIX}.${storageKey}`, String(cols));
-  }, [cols, storageKey, mounted]);
+    if (mounted) window.localStorage.setItem(colsKey, String(cols));
+  }, [cols, colsKey, mounted]);
 
   useEffect(() => {
     if (mounted) {
@@ -254,7 +269,7 @@ export function PokedexGrid({
 
   const renderSlot = (slot: Slot) => {
     if (slot.kind === "mega") {
-      return <MegaCell key={slot.key} form={slot.form} />;
+      return <MegaCell key={slot.key} form={slot.form} onClick={onMegaClick} />;
     }
     return (
       <PokemonCell

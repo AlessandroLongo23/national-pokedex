@@ -25,7 +25,7 @@ export function SearchInput({
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
         className={[
-          "h-8 w-full rounded-md bg-panel-2 pl-8 pr-7 text-xs text-text placeholder:text-muted",
+          "h-8 w-full rounded-md bg-panel-2 pl-8 pr-7 text-base md:text-xs text-text placeholder:text-muted",
           "border border-transparent transition",
           "hover:bg-panel-3 focus:bg-panel-3 focus:border-accent/50 focus:outline-none",
         ].join(" ")}

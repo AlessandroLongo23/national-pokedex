@@ -18,11 +18,11 @@ export function LedgerSelectionBar({
   onClear,
 }: Props) {
   return (
-    <div className="flex items-center justify-between gap-3 rounded-lg border border-border bg-panel-2 px-3 py-2">
+    <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between md:gap-3 rounded-lg border border-border bg-panel-2 px-3 py-2">
       <span className="text-sm font-medium text-text tabular-nums">
         {selectedCount} selected
       </span>
-      <div className="flex items-center gap-1">
+      <div className="flex flex-wrap items-center gap-1">
         {canGroup && (
           <button
             type="button"

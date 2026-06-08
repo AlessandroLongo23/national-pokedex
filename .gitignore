@@ -39,3 +39,5 @@ supabase/.branches
 supabase/.temp
 
 .mcp.json
+# mobile-audit screenshots (dev-only)
+.mobile-audit/

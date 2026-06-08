@@ -60,8 +60,15 @@ export function Popover({
       {trigger({ open, toggle })}
       {open && (
         <div
+          className="fixed inset-0 z-dropdown md:hidden"
+          onClick={() => onOpenChange(false)}
+          aria-hidden
+        />
+      )}
+      {open && (
+        <div
           className={[
-            "absolute top-full z-30 mt-1.5 origin-top overflow-hidden rounded-lg border border-border bg-panel shadow-[0_12px_32px_-12px_rgb(0_0_0/0.7)]",
+            "absolute top-full z-dropdown md:z-30 mt-1.5 origin-top overflow-hidden rounded-lg border border-border bg-panel shadow-[0_12px_32px_-12px_rgb(0_0_0/0.7)]",
             "animate-[popover-in_140ms_ease-out]",
             align === "start" ? "left-0" : "right-0",
             width,
@@ -94,7 +101,7 @@ export function PopoverHeader({
         <button
           type="button"
           onClick={onClear}
-          className="text-[10px] uppercase tracking-[0.16em] text-muted transition hover:text-text"
+          className="text-[10px] uppercase tracking-[0.16em] text-text-secondary transition hover:text-text"
         >
           Reset
         </button>
@@ -135,7 +142,7 @@ export const FilterButton = forwardRef<HTMLButtonElement, FilterButtonProps>(
             ? "border-border-strong text-text"
             : active
               ? "border-border-strong text-text hover:bg-panel-3"
-              : "border-border text-muted hover:border-border-strong hover:text-text",
+              : "border-border text-text-secondary hover:border-border-strong hover:text-text",
           className,
         ].join(" ")}
       >
@@ -193,7 +200,7 @@ export function FilterChip({
           : "px-2.5 py-1.5 text-xs",
         active
           ? "bg-[color-mix(in_oklch,var(--color-accent)_18%,transparent)] text-[var(--color-accent)] shadow-[inset_0_0_0_1px_color-mix(in_oklch,var(--color-accent)_45%,transparent)]"
-          : "bg-panel-2 text-muted hover:bg-panel-3 hover:text-text",
+          : "bg-panel-2 text-text-secondary hover:bg-panel-3 hover:text-text",
       ].join(" ")}
     >
       {children}
@@ -222,7 +229,7 @@ export function ActiveChip({
       <span className="whitespace-nowrap">{label}</span>
       <span
         aria-hidden
-        className="-mr-0.5 inline-flex h-4 w-4 items-center justify-center rounded-full text-muted transition group-hover:text-text"
+        className="-mr-0.5 inline-flex h-4 w-4 items-center justify-center rounded-full text-text-secondary transition group-hover:text-text"
       >
         <svg viewBox="0 0 8 8" className="h-2 w-2" fill="none">
           <path
@@ -258,7 +265,7 @@ export function Segmented<T extends string>({
     <div
       role="radiogroup"
       aria-label={ariaLabel}
-      className="inline-flex h-8 items-center rounded-md bg-panel-2 p-0.5"
+      className="inline-flex h-10 md:h-8 items-center rounded-md bg-panel-2 p-0.5"
     >
       {options.map((opt) => {
         const active = value === opt.value;
@@ -271,11 +278,11 @@ export function Segmented<T extends string>({
             aria-checked={active}
             onClick={() => onChange(opt.value)}
             className={[
-              "h-7 rounded px-2.5 text-xs font-medium transition outline-none",
+              "h-9 md:h-7 rounded px-2.5 text-xs font-medium transition outline-none",
               "focus-visible:ring-2 focus-visible:ring-accent/60",
               active
                 ? "bg-panel-3 text-text shadow-[inset_0_0_0_1px_var(--color-border)]"
-                : "text-muted hover:text-text",
+                : "text-text-secondary hover:text-text",
             ].join(" ")}
           >
             {opt.label}
@@ -321,7 +328,7 @@ export function ResultCount({
         <button
           type="button"
           onClick={onClear}
-          className="text-[10px] uppercase tracking-[0.16em] text-muted transition hover:text-text"
+          className="text-[10px] uppercase tracking-[0.16em] text-text-secondary transition hover:text-text"
         >
           Clear
         </button>

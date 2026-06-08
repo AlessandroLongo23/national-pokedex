@@ -1,8 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState, useTransition } from "react";
-import { Notebook } from "lucide-react";
+import { Notebook, Printer } from "lucide-react";
 import type { CardEntry } from "@/lib/data/types";
 import { MEGAS } from "@/lib/data";
 import {
@@ -263,7 +264,7 @@ export function BinderDetailClient({
           )
         }
         actions={
-          <div className="flex w-[260px] flex-col gap-1.5">
+          <div className="flex w-full flex-col gap-1.5 md:w-[260px]">
             <div className="flex items-baseline justify-between text-[11px]">
               <span className="uppercase tracking-wider text-muted">Progress</span>
               <span className="nums tabular-nums">
@@ -306,6 +307,13 @@ export function BinderDetailClient({
                   {editing ? "Done editing" : "Add cards"}
                 </button>
               )}
+              <Link
+                href={`/binders/${binder.id}/print`}
+                className="inline-flex items-center gap-1 rounded border border-border bg-panel px-2 py-0.5 hover:border-border-strong"
+              >
+                <Printer className="h-3 w-3" />
+                Print placeholders
+              </Link>
               <button
                 type="button"
                 onClick={onDelete}

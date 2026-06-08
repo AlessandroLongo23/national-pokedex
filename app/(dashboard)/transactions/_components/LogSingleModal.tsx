@@ -206,7 +206,7 @@ export function LogSingleModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-start justify-center bg-black/60 p-4 backdrop-blur-sm md:items-center"
       onMouseDown={(e) => {
         if (e.target === e.currentTarget) onClose();
       }}
@@ -214,7 +214,7 @@ export function LogSingleModal({
       aria-modal="true"
       aria-label={isEditing ? "Edit singles purchase" : "Log a singles purchase"}
     >
-      <div className="w-full max-w-3xl rounded-xl border border-border-strong bg-panel p-5 shadow-[0_24px_60px_-20px_rgb(0_0_0/0.8)]">
+      <div className="max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-xl border border-border-strong bg-panel p-5 shadow-[0_24px_60px_-20px_rgb(0_0_0/0.8)]">
         <div className="mb-4 flex items-center justify-between">
           <h2 className="text-base font-semibold tracking-tight text-text">
             {isEditing
@@ -227,7 +227,7 @@ export function LogSingleModal({
             type="button"
             onClick={onClose}
             aria-label="Close"
-            className="rounded-md p-1 text-muted transition hover:bg-panel-2 hover:text-text"
+            className="rounded-md p-2.5 text-muted transition hover:bg-panel-2 hover:text-text md:p-1"
           >
             <X className="h-4 w-4" />
           </button>
@@ -378,7 +378,7 @@ function PickedForm(props: PickedFormProps) {
               onChange={(e) =>
                 setQuantity(Math.max(1, Number(e.target.value) || 1))
               }
-              className="w-full rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-sm text-text focus:border-accent focus:outline-none"
+              className="w-full rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-base text-text focus:border-accent focus:outline-none md:text-sm"
             />
           </div>
           <div>
@@ -393,7 +393,7 @@ function PickedForm(props: PickedFormProps) {
                   if (isLedgerCurrency(v)) setCurrency(v);
                 }}
                 aria-label="Currency"
-                className="rounded-md border border-border bg-panel-2 px-2 py-1.5 text-sm text-text focus:border-accent focus:outline-none [color-scheme:dark]"
+                className="rounded-md border border-border bg-panel-2 px-2 py-1.5 text-base text-text focus:border-accent focus:outline-none [color-scheme:dark] md:text-sm"
               >
                 {SUPPORTED_CURRENCIES.map((c) => (
                   <option key={c} value={c}>
@@ -408,7 +408,7 @@ function PickedForm(props: PickedFormProps) {
                 placeholder="0.00"
                 value={costDraft}
                 onChange={(e) => setCostDraft(e.target.value)}
-                className="w-full rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-sm text-text focus:border-accent focus:outline-none"
+                className="w-full rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-base text-text focus:border-accent focus:outline-none md:text-sm"
               />
             </div>
           </div>
@@ -423,7 +423,7 @@ function PickedForm(props: PickedFormProps) {
             type="datetime-local"
             value={occurredAtLocal}
             onChange={(e) => setOccurredAtLocal(e.target.value)}
-            className="w-full rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-sm text-text focus:border-accent focus:outline-none [color-scheme:dark]"
+            className="w-full rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-base text-text focus:border-accent focus:outline-none [color-scheme:dark] md:text-sm"
           />
         </div>
 
@@ -438,7 +438,7 @@ function PickedForm(props: PickedFormProps) {
             value={note}
             onChange={(e) => setNote(e.target.value)}
             placeholder="e.g. eBay, $4 shipping"
-            className="w-full rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-sm text-text focus:border-accent focus:outline-none"
+            className="w-full rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-base text-text focus:border-accent focus:outline-none md:text-sm"
           />
         </div>
 
@@ -491,7 +491,7 @@ function PickedForm(props: PickedFormProps) {
               type="button"
               onClick={onSubmit}
               disabled={!canSubmit || pending}
-              className="rounded-md bg-accent px-4 py-1.5 text-xs font-semibold text-bg transition hover:opacity-90 disabled:opacity-40"
+              className="rounded-md bg-primary px-4 py-1.5 text-xs font-semibold text-primary-foreground transition hover:opacity-90 disabled:opacity-40"
             >
               {pending
                 ? "Saving…"
@@ -543,7 +543,7 @@ function VariantPicker({
               className={[
                 "rounded px-2.5 py-1 text-xs font-medium transition",
                 selected
-                  ? "bg-accent text-bg"
+                  ? "bg-primary text-primary-foreground"
                   : "text-muted hover:text-text",
               ].join(" ")}
             >
@@ -582,7 +582,7 @@ function SelectedCard({
         <button
           type="button"
           onClick={onClear}
-          className="rounded-md p-1 text-muted transition hover:bg-panel-2 hover:text-text"
+          className="rounded-md p-2.5 text-muted transition hover:bg-panel-2 hover:text-text md:p-1"
           aria-label="Change card"
         >
           <X className="h-3.5 w-3.5" />

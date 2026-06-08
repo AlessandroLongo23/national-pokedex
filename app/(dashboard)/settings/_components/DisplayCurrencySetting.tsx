@@ -58,7 +58,7 @@ export function DisplayCurrencySetting({ initial }: Props) {
           onChange={(e) => onSelect(e.target.value)}
           disabled={pending}
           aria-label="Display currency"
-          className="w-full max-w-xs rounded-md border border-border bg-panel-2 px-3 py-2 text-sm text-text focus:border-accent focus:outline-none [color-scheme:dark] disabled:opacity-60"
+          className="w-full max-w-xs rounded-md border border-border bg-panel-2 px-3 py-2 text-base md:text-sm text-text focus:border-accent focus:outline-none [color-scheme:dark] disabled:opacity-60"
         >
           {SUPPORTED_CURRENCIES.map((c) => (
             <option key={c} value={c}>

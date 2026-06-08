@@ -19,7 +19,10 @@ export function PageHeader({
   const resolvedTitle = mobileTitle ?? (typeof title === "string" ? title : "");
 
   return (
-    <div className="flex w-full flex-row items-center justify-between gap-4">
+    // Mobile: stack the title block over the actions so wide actions (e.g. the
+    // Pokédex/binder progress column) don't crush the H1 to zero. Desktop keeps
+    // the single-row, space-between layout exactly (md:flex-row md:justify-between).
+    <div className="flex w-full flex-col gap-3 md:flex-row md:items-center md:justify-between md:gap-4">
       <SetPageTitle title={resolvedTitle} />
       <div className="flex min-w-0 items-center gap-4">
         {Icon && (
@@ -28,18 +31,23 @@ export function PageHeader({
           </span>
         )}
         <div className="min-w-0">
-          <h1 className="truncate text-3xl font-bold leading-tight tracking-tight text-zinc-900 dark:text-zinc-50">
+          {/* On mobile the title/subtitle wrap instead of truncating so no info
+              is lost in the narrow column; desktop keeps the single-line
+              truncation (md:truncate) exactly as before. */}
+          <h1 className="text-2xl font-bold leading-tight tracking-tight text-zinc-900 md:truncate md:text-3xl dark:text-zinc-50">
             {title}
           </h1>
           {subtitle && (
-            <p className="mt-1.5 truncate text-sm font-normal text-zinc-500 dark:text-zinc-400">
+            <p className="mt-1.5 text-sm font-normal text-zinc-500 md:truncate dark:text-zinc-400">
               {subtitle}
             </p>
           )}
         </div>
       </div>
       {actions && (
-        <div className="flex shrink-0 flex-row items-center gap-2">{actions}</div>
+        <div className="flex w-full flex-row items-center gap-2 md:w-auto md:shrink-0">
+          {actions}
+        </div>
       )}
     </div>
   );

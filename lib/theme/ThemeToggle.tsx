@@ -14,6 +14,8 @@ export function ThemeToggle() {
       iconOnly
       aria-label="Toggle theme"
       onClick={toggleTheme}
+      // Mobile: floor the tap target at 44px; desktop keeps the 36px md control size.
+      className="min-h-[44px] min-w-[44px] md:min-h-[var(--lume-control-h-md)] md:min-w-[var(--lume-control-h-md)]"
     >
       <span className="relative flex size-5 items-center justify-center">
         <Sun

@@ -78,7 +78,7 @@ export function SidebarUserCard({
         ref={buttonRef}
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="flex w-full cursor-pointer items-center justify-between overflow-hidden rounded-md transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-900"
+        className="flex w-full cursor-pointer items-center justify-between overflow-hidden rounded-md transition-colors hover:bg-panel-2"
         aria-haspopup="menu"
         aria-expanded={open}
         aria-label="Account menu"
@@ -99,11 +99,11 @@ export function SidebarUserCard({
                 transition={{ duration: 0.18, ease: "easeOut" }}
                 className="flex min-w-0 flex-col items-start overflow-hidden whitespace-nowrap leading-tight"
               >
-                <span className="max-w-[140px] truncate text-sm font-medium text-zinc-900 dark:text-white">
+                <span className="max-w-[140px] truncate text-sm font-medium text-text">
                   {name}
                 </span>
                 {subtitle && (
-                  <span className="max-w-[140px] truncate text-xs text-zinc-500 dark:text-zinc-400">
+                  <span className="max-w-[140px] truncate text-xs text-muted">
                     {subtitle}
                   </span>
                 )}
@@ -121,7 +121,7 @@ export function SidebarUserCard({
               transition={{ duration: 0.18, ease: "easeOut" }}
               className="shrink-0 overflow-hidden"
             >
-              <ChevronDown className="h-4 w-4 text-zinc-400" strokeWidth={1.5} />
+              <ChevronDown className="h-4 w-4 text-muted" strokeWidth={1.5} />
             </motion.span>
           )}
         </AnimatePresence>
@@ -137,8 +137,8 @@ export function SidebarUserCard({
           }
           className={
             effectiveCollapsed
-              ? "z-dropdown w-56 rounded-lg border border-zinc-200 bg-white py-1 shadow-lg dark:border-zinc-700 dark:bg-zinc-900"
-              : "z-dropdown absolute bottom-full left-0 right-0 mb-2 rounded-lg border border-zinc-200 bg-white py-1 shadow-lg dark:border-zinc-700 dark:bg-zinc-900"
+              ? "z-dropdown w-56 rounded-lg border border-border bg-panel py-1 shadow-lg"
+              : "z-dropdown absolute bottom-full left-0 right-0 mb-2 rounded-lg border border-border bg-panel py-1 shadow-lg"
           }
         >
           {menuItems.map((item, idx) => {
@@ -150,7 +150,7 @@ export function SidebarUserCard({
                   href={item.href}
                   onClick={() => setOpen(false)}
                   role="menuitem"
-                  className="flex items-center gap-3 px-4 py-2.5 text-sm text-zinc-700 transition-colors hover:bg-zinc-100 dark:text-zinc-300 dark:hover:bg-zinc-800"
+                  className="flex items-center gap-3 px-4 py-2.5 text-sm text-text-secondary transition-colors hover:bg-panel-2 hover:text-text"
                 >
                   {Icon && <Icon className="h-4 w-4" strokeWidth={1.5} />}
                   <span>{item.label}</span>
@@ -166,8 +166,8 @@ export function SidebarUserCard({
                 role="menuitem"
                 className={`flex w-full cursor-pointer items-center gap-3 px-4 py-2.5 text-sm transition-colors disabled:opacity-50 ${
                   item.danger
-                    ? "text-red-600 hover:bg-zinc-100 dark:text-red-400 dark:hover:bg-zinc-800"
-                    : "text-zinc-700 hover:bg-zinc-100 dark:text-zinc-300 dark:hover:bg-zinc-800"
+                    ? "text-missing hover:bg-panel-2"
+                    : "text-text-secondary hover:bg-panel-2 hover:text-text"
                 }`}
               >
                 {isBusy ? (

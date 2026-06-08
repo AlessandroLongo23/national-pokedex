@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/lib/theme/ThemeProvider";
 import { cn } from "@/lib/utils";
@@ -14,6 +14,17 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "National Pokédex Tracker",
   description: "Personal binder progress: one card per Pokémon, #1–1025",
+};
+
+// `viewport-fit=cover` lets the layout extend under the notch / home indicator;
+// the shell pads its fixed chrome (top bar, drawer, FAB, sticky footers) with
+// env(safe-area-inset-*) so nothing is occluded. On non-notched devices every
+// inset resolves to 0px, so desktop is unaffected. maximumScale is intentionally
+// left unset so users can still pinch-zoom (accessibility).
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
 };
 
 // Inline script: read the saved theme preference and toggle the `.dark` class

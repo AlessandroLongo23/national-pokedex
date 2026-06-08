@@ -49,15 +49,26 @@ export function CardGrid({
   const [sort, setSort] = useState<CardSort>(initialSort);
   const [cols, setCols] = useState(5);
   const [mounted, setMounted] = useState(false);
+  // Mobile keeps an independent density (own ".m" storage key + a lower
+  // default of 3) so phones get tappable cells instead of inheriting the
+  // desktop default of 5. Desktop reads the original key + default 5, so its
+  // behaviour is byte-identical.
+  const [isMobile, setIsMobile] = useState(false);
+  const sizeKey = `${SIZE_KEY}.${storageKey}${isMobile ? ".m" : ""}`;
 
   useEffect(() => {
-    setCols(loadInt(`${SIZE_KEY}.${storageKey}`, 5));
+    const mobile =
+      typeof window !== "undefined" &&
+      window.matchMedia("(max-width: 767px)").matches;
+    setIsMobile(mobile);
+    const key = `${SIZE_KEY}.${storageKey}${mobile ? ".m" : ""}`;
+    setCols(loadInt(key, mobile ? 3 : 5));
     setMounted(true);
   }, [storageKey]);
 
   useEffect(() => {
-    if (mounted) window.localStorage.setItem(`${SIZE_KEY}.${storageKey}`, String(cols));
-  }, [cols, storageKey, mounted]);
+    if (mounted) window.localStorage.setItem(sizeKey, String(cols));
+  }, [cols, sizeKey, mounted]);
 
   const singleSet = useMemo(() => {
     if (cards.length === 0) return false;
@@ -125,7 +136,7 @@ export function CardGrid({
               className={[
                 "rounded-md px-2.5 py-1 text-[11px] uppercase tracking-wider transition",
                 effectiveSort === s
-                  ? "bg-accent/15 text-accent"
+                  ? "bg-accent/10 text-accent"
                   : "text-muted hover:bg-panel-2 hover:text-text",
               ].join(" ")}
             >

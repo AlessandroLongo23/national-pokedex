@@ -51,7 +51,7 @@ export function ArtistFilter({
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search artists…"
-          className="block h-7 w-full rounded-md border border-transparent bg-panel-2 px-2 text-xs text-text placeholder:text-muted focus:border-accent/50 focus:outline-none"
+          className="block h-7 w-full rounded-md border border-transparent bg-panel-2 px-2 text-base md:text-xs text-text placeholder:text-muted focus:border-accent/50 focus:outline-none"
         />
       </div>
       <div className="max-h-64 overflow-y-auto px-1.5 pb-2">

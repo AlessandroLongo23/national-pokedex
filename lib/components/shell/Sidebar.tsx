@@ -56,8 +56,8 @@ function NavLink({
         onClick={onNavigate}
         className={`flex items-center overflow-hidden rounded-md text-sm transition-colors ${
           isActive
-            ? "bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary"
-            : "text-muted-foreground hover:bg-zinc-100 hover:text-foreground dark:text-muted-foreground dark:hover:bg-zinc-900 dark:hover:text-white"
+            ? "bg-primary/10 text-accent dark:bg-primary/20 dark:text-accent"
+            : "text-muted-foreground hover:bg-panel-2 hover:text-foreground"
         }`}
       >
         <span className="flex h-9 w-9 shrink-0 items-center justify-center">
@@ -119,7 +119,7 @@ export function Sidebar({ identity, navGroups, pinnedLinks, userCard }: SidebarP
                         className="absolute inset-0 flex items-center"
                         aria-hidden
                       >
-                        <div className="h-px w-full bg-zinc-200 dark:bg-zinc-800" />
+                        <div className="h-px w-full bg-border" />
                       </motion.div>
                     )
                   ) : (
@@ -129,7 +129,7 @@ export function Sidebar({ identity, navGroups, pinnedLinks, userCard }: SidebarP
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.15, delay: 0.2 }}
-                      className="absolute inset-0 flex items-center whitespace-nowrap text-xs leading-none uppercase tracking-wide text-zinc-500"
+                      className="absolute inset-0 flex items-center whitespace-nowrap text-xs leading-none uppercase tracking-wide text-muted"
                     >
                       {group.title}
                     </motion.p>
@@ -165,7 +165,7 @@ export function Sidebar({ identity, navGroups, pinnedLinks, userCard }: SidebarP
       )}
 
       {userCard && (
-        <div className="shrink-0 border-t border-zinc-200 pt-2 dark:border-zinc-800">
+        <div className="shrink-0 border-t border-border pt-2">
           {userCard}
         </div>
       )}

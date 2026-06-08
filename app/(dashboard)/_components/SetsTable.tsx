@@ -160,7 +160,7 @@ export function SetsTable({
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search sets or eras"
             aria-label="Search sets or eras"
-            className="h-8 w-full rounded-md border border-border bg-panel-2 pl-8 pr-7 text-xs text-text placeholder:text-muted focus:border-accent focus:outline-none"
+            className="h-8 w-full rounded-md border border-border bg-panel-2 pl-8 pr-7 text-base md:text-xs text-text placeholder:text-muted focus:border-accent focus:outline-none"
           />
           {search && (
             <button
@@ -178,7 +178,7 @@ export function SetsTable({
           value={seriesFilter ?? ""}
           onChange={(e) => setSeriesFilter(e.target.value || null)}
           aria-label="Filter by era"
-          className="h-8 rounded-md border border-border bg-panel-2 px-2.5 pr-7 text-xs text-text focus:border-accent focus:outline-none [color-scheme:dark]"
+          className="h-8 rounded-md border border-border bg-panel-2 px-2.5 pr-7 text-base md:text-xs text-text focus:border-accent focus:outline-none [color-scheme:dark]"
         >
           {SERIES_GROUPS.map((g) => (
             <option key={g.label} value={g.value ?? ""}>
@@ -204,7 +204,7 @@ export function SetsTable({
             <button
               type="button"
               onClick={clearAll}
-              className="inline-flex items-center gap-1 rounded-md border border-border bg-panel-2 px-2 py-1 text-[11px] text-muted transition hover:border-accent hover:text-accent"
+              className="inline-flex items-center gap-1 rounded-md border border-border bg-panel-2 px-2 py-2.5 md:py-1 text-[11px] text-muted transition hover:border-accent hover:text-accent"
             >
               Reset {overrides.size} override{overrides.size === 1 ? "" : "s"}
             </button>
@@ -225,12 +225,12 @@ export function SetsTable({
             <thead>
               <tr>
                 <Th k="name" className="text-left">Set</Th>
-                <Th k="releaseDate" className="text-right">Released</Th>
-                <Th k="cardCount" className="text-right">Cards</Th>
-                <Th k="distinctPokemonCount" className="text-right">Pokémon</Th>
+                <Th k="releaseDate" className="text-right hidden md:table-cell">Released</Th>
+                <Th k="cardCount" className="text-right hidden md:table-cell">Cards</Th>
+                <Th k="distinctPokemonCount" className="text-right hidden md:table-cell">Pokémon</Th>
                 {!isGuest && (
                   <>
-                    <Th k="packsOpened" className="text-right">Packs</Th>
+                    <Th k="packsOpened" className="text-right hidden md:table-cell">Packs</Th>
                     <Th k="ownedCards" className="text-right">Owned</Th>
                     <th className="bg-panel-2 px-4 py-3 text-center text-[10px] font-semibold uppercase tracking-[0.14em] text-muted">
                       Local
@@ -261,12 +261,12 @@ export function SetsTable({
                         </span>
                       </Link>
                     </td>
-                    <td className="px-4 py-4 text-right text-xs text-muted nums">{s.releaseDate}</td>
-                    <td className="px-4 py-4 text-right text-base nums">{s.cardCount}</td>
-                    <td className="px-4 py-4 text-right text-muted nums">{s.distinctPokemonCount}</td>
+                    <td className="px-4 py-4 text-right text-xs text-muted nums hidden md:table-cell">{s.releaseDate}</td>
+                    <td className="px-4 py-4 text-right text-base nums hidden md:table-cell">{s.cardCount}</td>
+                    <td className="px-4 py-4 text-right text-muted nums hidden md:table-cell">{s.distinctPokemonCount}</td>
                     {!isGuest && (
                       <>
-                        <td className="px-4 py-4 text-right nums">
+                        <td className="px-4 py-4 text-right nums hidden md:table-cell">
                           {s.packsOpened > 0 ? (
                             <span className="text-base font-semibold">{s.packsOpened}</span>
                           ) : (
@@ -413,9 +413,9 @@ function ToggleButton({
       title={label}
       onClick={onClick}
       className={[
-        "flex h-7 w-7 items-center justify-center rounded transition",
+        "flex h-10 w-10 md:h-7 md:w-7 items-center justify-center rounded transition",
         active
-          ? "bg-accent/15 text-accent"
+          ? "bg-accent/10 text-accent"
           : "text-muted hover:text-text",
       ].join(" ")}
     >

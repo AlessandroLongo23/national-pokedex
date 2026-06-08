@@ -52,9 +52,13 @@ function CellBase({ dex, hidden, onClick, selected, displayCard }: Props) {
       type="button"
       data-dex={dex}
       onClick={onClick ? () => onClick(dex) : undefined}
-      onMouseEnter={() => ref.current && show(dex, ref.current.getBoundingClientRect())}
+      onMouseEnter={() =>
+        ref.current && show({ kind: "dex", dex }, ref.current.getBoundingClientRect())
+      }
       onMouseLeave={hide}
-      onFocus={() => ref.current && show(dex, ref.current.getBoundingClientRect())}
+      onFocus={() =>
+        ref.current && show({ kind: "dex", dex }, ref.current.getBoundingClientRect())
+      }
       onBlur={hide}
       className={[
         "pokemon-cell group/cell relative flex aspect-[4/5] w-full items-center justify-center overflow-hidden rounded-md border select-none",
@@ -132,7 +136,7 @@ function CellBase({ dex, hidden, onClick, selected, displayCard }: Props) {
       {selected && (
         <span
           aria-hidden
-          className="pointer-events-none absolute top-1.5 right-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-accent text-bg shadow-[0_0_0_1.5px_var(--color-bg)]"
+          className="pointer-events-none absolute top-1.5 right-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-[0_0_0_1.5px_var(--color-bg)]"
         >
           <Check className="h-2.5 w-2.5" strokeWidth={3.5} aria-hidden />
         </span>

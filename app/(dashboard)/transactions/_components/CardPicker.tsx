@@ -171,7 +171,7 @@ export function CardPicker(props: CardPickerProps) {
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={onKey}
           placeholder="Search by card name…"
-          className="w-full rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-sm text-text placeholder:text-muted focus:border-accent focus:outline-none"
+          className="w-full rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-base text-text placeholder:text-muted focus:border-accent focus:outline-none md:text-sm"
           aria-label="Search card"
         />
         <div className="min-h-[280px] max-h-[440px] overflow-y-auto rounded-md border border-border bg-panel-2">
@@ -243,7 +243,7 @@ export function CardPicker(props: CardPickerProps) {
                 <button
                   type="button"
                   onClick={() => handleUnpick(c.id)}
-                  className="rounded-md p-1 text-muted transition hover:bg-panel hover:text-missing"
+                  className="rounded-md p-2.5 text-muted transition hover:bg-panel hover:text-missing md:p-1"
                   aria-label={`Remove ${c.name}`}
                 >
                   <X className="h-3.5 w-3.5" />

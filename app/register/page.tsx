@@ -9,7 +9,7 @@ export default async function RegisterPage({
 }) {
   const params = await searchParams;
   return (
-    <main className="mx-auto flex min-h-screen max-w-md flex-col justify-center px-6">
+    <main className="mx-auto flex min-h-dvh max-w-md flex-col justify-start py-12 md:justify-center md:py-0 px-6">
       <h1 className="mb-8">
         <LinkedPokedexLogo />
       </h1>
@@ -51,7 +51,7 @@ export default async function RegisterPage({
         </label>
         <button
           type="submit"
-          className="w-full rounded-md bg-accent px-3 py-2 font-semibold text-bg hover:opacity-90"
+          className="w-full rounded-md bg-primary px-3 py-2 font-semibold text-primary-foreground hover:opacity-90"
         >
           Create account
         </button>
@@ -66,7 +66,7 @@ export default async function RegisterPage({
       </div>
       <p className="mt-6 text-sm text-muted">
         Already have an account?{" "}
-        <Link href="/login" className="text-accent hover:underline">
+        <Link href="/login" className="inline-block py-2 md:py-0 text-accent hover:underline">
           Sign in
         </Link>
       </p>

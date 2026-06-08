@@ -106,19 +106,19 @@ function TileBase({
                 className="h-full w-full object-cover"
               />
               {selected && !onQuantityChange && (
-                <span className="pointer-events-none absolute top-1 right-1 flex h-7 w-7 items-center justify-center rounded-full bg-accent text-primary-foreground">
+                <span className="pointer-events-none absolute top-1 right-1 flex h-7 w-7 items-center justify-center rounded-full bg-primary text-primary-foreground">
                   <Check className="h-3.5 w-3.5" strokeWidth={3} aria-hidden />
                 </span>
               )}
             </button>
             {selected && onQuantityChange && (
-              <div className="absolute top-1 right-1 inline-flex h-7 items-stretch overflow-hidden rounded-md border border-accent bg-accent text-primary-foreground shadow">
+              <div className="absolute top-1 right-1 inline-flex h-7 pointer-coarse:h-9 items-stretch overflow-hidden rounded-md border border-accent bg-primary text-primary-foreground shadow">
                 <button
                   type="button"
                   onClick={() =>
                     onQuantityChange(card.id, Math.max(0, (selectedQuantity ?? 1) - 1))
                   }
-                  className="inline-flex w-6 items-center justify-center transition hover:bg-accent/80 focus-visible:outline-none"
+                  className="inline-flex w-6 pointer-coarse:w-8 items-center justify-center transition hover:bg-accent/80 focus-visible:outline-none"
                   aria-label={`Decrease ${card.name} quantity`}
                 >
                   <Minus className="h-3 w-3" strokeWidth={3} aria-hidden />
@@ -134,7 +134,7 @@ function TileBase({
                   onClick={() =>
                     onQuantityChange(card.id, Math.min(99, (selectedQuantity ?? 1) + 1))
                   }
-                  className="inline-flex w-6 items-center justify-center transition hover:bg-accent/80 focus-visible:outline-none"
+                  className="inline-flex w-6 pointer-coarse:w-8 items-center justify-center transition hover:bg-accent/80 focus-visible:outline-none"
                   aria-label={`Increase ${card.name} quantity`}
                 >
                   <Plus className="h-3 w-3" strokeWidth={3} aria-hidden />
@@ -217,7 +217,7 @@ function TileBase({
             <div className="ml-auto flex shrink-0 items-center gap-1 opacity-0 transition-opacity group-hover:opacity-100 focus-within:opacity-100 pointer-coarse:opacity-100">
               {!isGuest && (owned ? (
                 <div
-                  className="inline-flex h-7 items-stretch overflow-hidden rounded-md border border-owned/70 bg-owned/15 text-owned"
+                  className="inline-flex h-7 pointer-coarse:h-9 items-stretch overflow-hidden rounded-md border border-owned/70 bg-owned/15 text-owned-dark dark:text-owned"
                   data-action="quantity"
                   data-quantity={quantity}
                   role="group"
@@ -232,7 +232,7 @@ function TileBase({
                           ? `Decrease ${card.name} quantity`
                           : `Mark ${card.name} as not owned`
                       }
-                      className="inline-flex w-6 items-center justify-center transition hover:bg-owned/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset"
+                      className="inline-flex w-6 pointer-coarse:w-8 items-center justify-center transition hover:bg-owned/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset"
                     >
                       <Minus className="h-3 w-3" strokeWidth={2.5} aria-hidden />
                     </button>
@@ -249,7 +249,7 @@ function TileBase({
                       type="button"
                       onClick={() => adjustOwned(card.id, +1)}
                       aria-label={`Add another copy of ${card.name}`}
-                      className="inline-flex w-6 items-center justify-center transition hover:bg-owned/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset"
+                      className="inline-flex w-6 pointer-coarse:w-8 items-center justify-center transition hover:bg-owned/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset"
                     >
                       <Plus className="h-3 w-3" strokeWidth={2.5} aria-hidden />
                     </button>
@@ -263,7 +263,7 @@ function TileBase({
                     data-action="owned"
                     aria-pressed={false}
                     aria-label={`Mark ${card.name} as owned`}
-                    className="inline-flex h-7 min-w-7 items-center justify-center rounded-md border border-border bg-panel-2 px-1.5 text-muted transition hover:border-owned hover:text-owned focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                    className="inline-flex h-7 pointer-coarse:h-9 min-w-7 pointer-coarse:min-w-9 items-center justify-center rounded-md border border-border bg-panel-2 px-1.5 text-muted transition hover:border-owned hover:text-owned focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                   >
                     <Plus className="h-3.5 w-3.5" strokeWidth={2.5} aria-hidden />
                   </button>
@@ -276,10 +276,10 @@ function TileBase({
                     onClick={() => toggleFavorite(card.id)}
                     data-action="favorite"
                     className={[
-                      "inline-flex h-7 min-w-7 items-center justify-center rounded-md border px-1.5 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
+                      "inline-flex h-7 pointer-coarse:h-9 min-w-7 pointer-coarse:min-w-9 items-center justify-center rounded-md border px-1.5 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
                       favorited
-                        ? "border-[#fcd34d]/70 bg-[#fcd34d]/15 text-[#fcd34d]"
-                        : "border-border bg-panel-2 text-muted hover:border-[#fcd34d] hover:text-[#fcd34d]",
+                        ? "border-favorite/70 bg-favorite/15 text-favorite-dark dark:text-favorite"
+                        : "border-border bg-panel-2 text-muted hover:border-favorite hover:text-favorite-dark dark:hover:text-favorite",
                     ].join(" ")}
                     aria-pressed={favorited}
                     aria-label="Toggle favorite"
@@ -299,7 +299,7 @@ function TileBase({
                     onClick={() => toggleWishlist(card.id)}
                     data-action="wishlist"
                     className={[
-                      "inline-flex h-7 min-w-7 items-center justify-center rounded-md border px-1.5 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
+                      "inline-flex h-7 pointer-coarse:h-9 min-w-7 pointer-coarse:min-w-9 items-center justify-center rounded-md border px-1.5 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
                       wishlisted
                         ? "border-missing bg-missing/20 text-missing"
                         : "border-border bg-panel-2 text-muted hover:border-missing hover:text-missing",
@@ -320,7 +320,7 @@ function TileBase({
                 <Tooltip content="See Pokémon details">
                   <Link
                     href={detailsHref}
-                    className="inline-flex h-7 min-w-7 items-center justify-center rounded-md border border-border bg-panel-2 px-1.5 text-muted transition hover:border-accent hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                    className="inline-flex h-7 pointer-coarse:h-9 min-w-7 pointer-coarse:min-w-9 items-center justify-center rounded-md border border-border bg-panel-2 px-1.5 text-muted transition hover:border-accent hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                     aria-label="Pokémon details"
                   >
                     <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />

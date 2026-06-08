@@ -71,7 +71,7 @@ export function LedgerRowActions(props: Props) {
       <button
         type="button"
         onClick={onClick}
-        className="inline-flex h-7 w-7 items-center justify-center rounded-md text-muted transition hover:bg-panel-2 hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+        className="inline-flex h-10 w-10 md:h-7 md:w-7 items-center justify-center rounded-md text-muted transition hover:bg-panel-2 hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
         aria-label="Edit transaction"
       >
         <Pencil className="h-3.5 w-3.5" aria-hidden />
@@ -84,7 +84,7 @@ export function LedgerRowActions(props: Props) {
       <Tooltip content="Edit pack">
         <Link
           href={`/packs/${props.packId}/edit`}
-          className="inline-flex h-7 w-7 items-center justify-center rounded-md text-muted transition hover:bg-panel-2 hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+          className="inline-flex h-10 w-10 md:h-7 md:w-7 items-center justify-center rounded-md text-muted transition hover:bg-panel-2 hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
           aria-label="Edit pack"
         >
           <Pencil className="h-3.5 w-3.5" aria-hidden />
@@ -98,7 +98,7 @@ export function LedgerRowActions(props: Props) {
       <Tooltip content="Edit lot">
         <Link
           href={`/transactions/lots/${props.lotId}/edit`}
-          className="inline-flex h-7 w-7 items-center justify-center rounded-md text-muted transition hover:bg-panel-2 hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+          className="inline-flex h-10 w-10 md:h-7 md:w-7 items-center justify-center rounded-md text-muted transition hover:bg-panel-2 hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
           aria-label="Edit lot"
         >
           <Pencil className="h-3.5 w-3.5" aria-hidden />
@@ -112,7 +112,7 @@ export function LedgerRowActions(props: Props) {
       <Tooltip content="Edit submission">
         <Link
           href={`/transactions/psa/${props.psaSubmissionId}`}
-          className="inline-flex h-7 w-7 items-center justify-center rounded-md text-muted transition hover:bg-panel-2 hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+          className="inline-flex h-10 w-10 md:h-7 md:w-7 items-center justify-center rounded-md text-muted transition hover:bg-panel-2 hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
           aria-label="Edit submission"
         >
           <Pencil className="h-3.5 w-3.5" aria-hidden />

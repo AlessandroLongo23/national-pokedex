@@ -297,7 +297,7 @@ export function LogLotFlow({
         onQuantityChange={setQuantity}
       />
 
-      <div className="sticky bottom-0 -mx-4 flex flex-wrap items-center justify-between gap-3 border-t border-border bg-panel/95 px-4 py-3 backdrop-blur md:-mx-8 md:px-8">
+      <div className="sticky bottom-0 -mx-6 flex flex-wrap items-center justify-between gap-3 border-t border-border bg-panel/95 px-6 py-3 backdrop-blur md:-mx-8 md:px-8">
         <p className="text-sm text-muted">
           {distinct === 0 ? (
             "Click cards to add them to this lot."
@@ -394,7 +394,7 @@ function PickedTray({
             <button
               type="button"
               onClick={() => onSetQty(card.id, qty - 1)}
-              className="px-1.5 text-muted transition hover:text-text"
+              className="inline-flex min-h-9 min-w-9 items-center justify-center md:min-h-0 md:min-w-0 px-1.5 text-muted transition hover:text-text"
               aria-label={`Decrease ${card.name} quantity`}
             >
               −
@@ -403,7 +403,7 @@ function PickedTray({
             <button
               type="button"
               onClick={() => onSetQty(card.id, qty + 1)}
-              className="px-1.5 text-muted transition hover:text-text"
+              className="inline-flex min-h-9 min-w-9 items-center justify-center md:min-h-0 md:min-w-0 px-1.5 text-muted transition hover:text-text"
               aria-label={`Increase ${card.name} quantity`}
             >
               +
@@ -415,7 +415,7 @@ function PickedTray({
             aria-label={`Remove ${card.name}`}
           >
             <X
-              className="h-3 w-3 text-muted transition-colors group-hover:text-missing"
+              className="h-3 w-3 text-text-secondary transition-colors group-hover:text-missing"
               aria-hidden
             />
           </button>
@@ -488,14 +488,14 @@ function PurchasedAtField({
               type="date"
               value={date}
               onChange={(e) => onChange(joinLocalInput(e.target.value, time))}
-              className="flex-1 rounded-md border border-border bg-panel-2 px-2 py-1.5 text-xs text-text focus:border-accent focus:outline-none [color-scheme:dark]"
+              className="flex-1 rounded-md border border-border bg-panel-2 px-2 py-1.5 text-base md:text-xs text-text focus:border-accent focus:outline-none [color-scheme:dark]"
               aria-label="Date"
             />
             <input
               type="time"
               value={time}
               onChange={(e) => onChange(joinLocalInput(date, e.target.value))}
-              className="w-[96px] rounded-md border border-border bg-panel-2 px-2 py-1.5 text-xs text-text focus:border-accent focus:outline-none [color-scheme:dark]"
+              className="w-[96px] rounded-md border border-border bg-panel-2 px-2 py-1.5 text-base md:text-xs text-text focus:border-accent focus:outline-none [color-scheme:dark]"
               aria-label="Time"
             />
           </div>
@@ -599,7 +599,7 @@ function PricePaidField({
                 const next = e.target.value;
                 if (isLedgerCurrency(next)) onCurrencyChange(next);
               }}
-              className="rounded-md border border-border bg-panel-2 px-2 py-1.5 text-xs text-text focus:border-accent focus:outline-none [color-scheme:dark]"
+              className="rounded-md border border-border bg-panel-2 px-2 py-1.5 text-base md:text-xs text-text focus:border-accent focus:outline-none [color-scheme:dark]"
               aria-label="Currency"
             >
               {SUPPORTED_CURRENCIES.map((c) => (
@@ -621,7 +621,7 @@ function PricePaidField({
                 }
               }}
               placeholder="0.00"
-              className="flex-1 rounded-md border border-border bg-panel-2 px-2 py-1.5 text-xs text-text focus:border-accent focus:outline-none"
+              className="flex-1 rounded-md border border-border bg-panel-2 px-2 py-1.5 text-base md:text-xs text-text focus:border-accent focus:outline-none"
               aria-label="Price paid"
             />
           </div>

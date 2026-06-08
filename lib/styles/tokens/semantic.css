@@ -20,13 +20,21 @@
   --lume-bg:             var(--color-neutral-50);
   --lume-surface:        var(--color-neutral-100);
   --lume-surface-raised: #FFFFFF;
+  /* Active-segment / pressed surface (bg-panel-3). Was a fixed neutral-200,
+     which left white text invisible on it in dark mode (1.2:1). Theme-aware:
+     a light step on light, a raised graphite on dark that text-text clears. */
+  --lume-panel-3:        var(--color-neutral-200);
   --lume-control-bg:     #FFFFFF;
   --lume-overlay:        oklch(0.171 0.005 265 / 0.45);
 
   /* ── Text ───────────────────────────────────────────────────────────── */
+  /* Muted was neutral-400 (L 0.692) → ~2.3:1 on the light bg, well under WCAG.
+     neutral-500 (L 0.538) lifts it to ~3.8:1 — readable for quiet metadata,
+     placeholders, and inactive controls — while staying clearly lighter than
+     secondary (neutral-600). Mirrors the dark-mode muted fix already in .dark. */
   --lume-text:           var(--color-neutral-950);
   --lume-text-secondary: var(--color-neutral-600);
-  --lume-text-muted:     var(--color-neutral-400);
+  --lume-text-muted:     var(--color-neutral-500);
   --lume-text-on-accent: #FFFFFF;
 
   /* ── Borders ────────────────────────────────────────────────────────── */
@@ -36,16 +44,22 @@
   --lume-border-accent:  var(--color-brand-primary-500);
   --lume-border-tooltip: var(--color-neutral-200);
 
-  /* ── Accent (indigo) — kept for backward compat of legacy --lume-accent */
-  --lume-accent:       var(--color-brand-primary-500);
-  --lume-accent-dark:  var(--color-brand-primary-600);
+  /* ── Accent (indigo) — TEXT/border/wash role (not the fill). On a light
+     surface the accent must be deep enough to read as text: 500 gave only
+     3.7:1, 600 gives 5.2:1. The solid primary *fill* lives in
+     --lume-button-accent-bg below, kept separate so each role hits AA in its
+     own context (text wants deeper on light / brighter on dark; a fill wants
+     to stay dark enough for white text). */
+  --lume-accent:       var(--color-brand-primary-600);
+  --lume-accent-dark:  var(--color-brand-primary-700);
   --lume-accent-light: var(--color-brand-primary-50);
   --lume-accent-muted: oklch(0.620 0.190 275 / 0.10);
 
-  /* ── Button — accent (indigo) ───────────────────────────────────────── */
-  --lume-button-accent-bg:         var(--color-brand-primary-500);
-  --lume-button-accent-bg-hover:   var(--color-brand-primary-600);
-  --lume-button-accent-bg-active:  var(--color-brand-primary-700);
+  /* ── Button — accent (indigo) fill. 600 so white text clears AA (5.4:1);
+     500 was 3.8:1. Hover/active deepen further (white stays ≥7:1). */
+  --lume-button-accent-bg:         var(--color-brand-primary-600);
+  --lume-button-accent-bg-hover:   var(--color-brand-primary-700);
+  --lume-button-accent-bg-active:  var(--color-brand-primary-800);
   --lume-button-accent-fg:         #FFFFFF;
 
   /* ── Button — secondary ─────────────────────────────────────────────── */
@@ -116,6 +130,7 @@
   --lume-bg:             oklch(0.148 0.007 265);  /* app shell / body */
   --lume-surface:        oklch(0.192 0.008 265);  /* sidebar, topbar, cards */
   --lume-surface-raised: oklch(0.232 0.009 265);  /* modals, popovers, hover */
+  --lume-panel-3:        oklch(0.370 0.010 265);  /* active segment: pops vs track, text-text ~6:1 */
   --lume-control-bg:     oklch(0.192 0.008 265);
   --lume-overlay:        oklch(0.050 0 0 / 0.72);
 
@@ -127,7 +142,11 @@
      These new values target ~7:1 and ~4.5:1 against bg respectively. */
   --lume-text:           oklch(0.965 0.004 265);
   --lume-text-secondary: oklch(0.780 0.010 265);
-  --lume-text-muted:     oklch(0.605 0.012 265);
+  /* 0.605 hit ~4.5:1 on the base shell but dropped to ~3.6:1 on lighter raised
+     panels; 0.665 clears AA across the surface ramp while staying clearly
+     below secondary (0.780). Small interactive labels on the lightest panel
+     (panel-2) use text-text-secondary instead. */
+  --lume-text-muted:     oklch(0.665 0.013 265);
   --lume-text-on-accent: #FFFFFF;
 
   /* ── Borders — visible separation, no noise ─────────────────────────
@@ -143,16 +162,20 @@
   --lume-border-accent:  var(--color-brand-primary-400);
   --lume-border-tooltip: oklch(0.355 0.011 265);
 
-  /* ── Accent (indigo) ──────────────────────────────────────────────── */
-  --lume-accent:       var(--color-brand-primary-500);
-  --lume-accent-dark:  var(--color-brand-primary-600);
+  /* ── Accent (indigo) — TEXT/border/wash role. On the dark shell the accent
+     must be bright enough to read: 400 gives ~7.4:1 as text. The solid fill
+     (--lume-button-accent-bg) stays at 600 for white-text contrast. */
+  --lume-accent:       var(--color-brand-primary-400);
+  --lume-accent-dark:  var(--color-brand-primary-500);
   --lume-accent-light: var(--color-brand-primary-950);
   --lume-accent-muted: oklch(0.620 0.190 275 / 0.20);
 
-  /* ── Button — accent ──────────────────────────────────────────────── */
-  --lume-button-accent-bg:         var(--color-brand-primary-500);
-  --lume-button-accent-bg-hover:   var(--color-brand-primary-400);
-  --lume-button-accent-bg-active:  var(--color-brand-primary-300);
+  /* ── Button — accent fill. 600 in both themes so white text clears AA
+     (5.4:1). Hover/active deepen (darken) to keep white legible through the
+     interaction rather than washing it out. */
+  --lume-button-accent-bg:         var(--color-brand-primary-600);
+  --lume-button-accent-bg-hover:   var(--color-brand-primary-700);
+  --lume-button-accent-bg-active:  var(--color-brand-primary-800);
   --lume-button-accent-fg:         #FFFFFF;
 
   /* ── Button — secondary ───────────────────────────────────────────── */

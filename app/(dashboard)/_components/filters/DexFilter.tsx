@@ -114,7 +114,7 @@ function Box({
       onChange={(e) => onChange(parse(e.target.value))}
       placeholder={placeholder}
       aria-label={`Dex ${aria}`}
-      className="h-7 w-14 rounded-md border border-transparent bg-panel-3 px-1.5 text-center text-xs text-text nums placeholder:text-muted focus:border-accent/50 focus:outline-none"
+      className="h-9 md:h-7 w-14 rounded-md border border-transparent bg-panel-3 px-1.5 text-center text-base md:text-xs text-text nums placeholder:text-muted focus:border-accent/50 focus:outline-none"
     />
   );
 }

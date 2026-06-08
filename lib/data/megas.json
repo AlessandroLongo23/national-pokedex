@@ -4,433 +4,487 @@
     "displayName": "Mega Venusaur",
     "baseDex": 3,
     "gen": 1,
-    "isPrimal": false
-  },
-  {
-    "formKey": "mega-charizard",
-    "displayName": "Mega Charizard",
-    "baseDex": 6,
-    "gen": 1,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10033
   },
   {
     "formKey": "mega-charizard-x",
     "displayName": "Mega Charizard X",
     "baseDex": 6,
     "gen": 1,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10034
   },
   {
     "formKey": "mega-charizard-y",
     "displayName": "Mega Charizard Y",
     "baseDex": 6,
     "gen": 1,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10035
   },
   {
     "formKey": "mega-blastoise",
     "displayName": "Mega Blastoise",
     "baseDex": 9,
     "gen": 1,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10036
   },
   {
     "formKey": "mega-beedrill",
     "displayName": "Mega Beedrill",
     "baseDex": 15,
     "gen": 1,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10090
   },
   {
     "formKey": "mega-pidgeot",
     "displayName": "Mega Pidgeot",
     "baseDex": 18,
     "gen": 1,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10073
   },
   {
     "formKey": "mega-clefable",
     "displayName": "Mega Clefable",
     "baseDex": 36,
     "gen": 1,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10278
   },
   {
     "formKey": "mega-alakazam",
     "displayName": "Mega Alakazam",
     "baseDex": 65,
     "gen": 1,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10037
   },
   {
     "formKey": "mega-slowbro",
     "displayName": "Mega Slowbro",
     "baseDex": 80,
     "gen": 1,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10071
   },
   {
     "formKey": "mega-gengar",
     "displayName": "Mega Gengar",
     "baseDex": 94,
     "gen": 1,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10038
   },
   {
     "formKey": "mega-kangaskhan",
     "displayName": "Mega Kangaskhan",
     "baseDex": 115,
     "gen": 1,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10039
   },
   {
     "formKey": "mega-starmie",
     "displayName": "Mega Starmie",
     "baseDex": 121,
     "gen": 1,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10280
   },
   {
     "formKey": "mega-gyarados",
     "displayName": "Mega Gyarados",
     "baseDex": 130,
     "gen": 1,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10041
   },
   {
     "formKey": "mega-aerodactyl",
     "displayName": "Mega Aerodactyl",
     "baseDex": 142,
     "gen": 1,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10042
   },
   {
     "formKey": "mega-dragonite",
     "displayName": "Mega Dragonite",
     "baseDex": 149,
     "gen": 1,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10281
   },
   {
     "formKey": "mega-mewtwo",
     "displayName": "Mega Mewtwo",
     "baseDex": 150,
     "gen": 1,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10043
   },
   {
     "formKey": "mega-meganium",
     "displayName": "Mega Meganium",
     "baseDex": 154,
     "gen": 2,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10282
   },
   {
     "formKey": "mega-feraligatr",
     "displayName": "Mega Feraligatr",
     "baseDex": 160,
     "gen": 2,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10283
   },
   {
     "formKey": "mega-ampharos",
     "displayName": "Mega Ampharos",
     "baseDex": 181,
     "gen": 2,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10045
   },
   {
     "formKey": "mega-steelix",
     "displayName": "Mega Steelix",
     "baseDex": 208,
     "gen": 2,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10072
   },
   {
     "formKey": "mega-scizor",
     "displayName": "Mega Scizor",
     "baseDex": 212,
     "gen": 2,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10046
   },
   {
     "formKey": "mega-heracross",
     "displayName": "Mega Heracross",
     "baseDex": 214,
     "gen": 2,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10047
   },
   {
     "formKey": "mega-skarmory",
     "displayName": "Mega Skarmory",
     "baseDex": 227,
     "gen": 2,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10284
   },
   {
     "formKey": "mega-houndoom",
     "displayName": "Mega Houndoom",
     "baseDex": 229,
     "gen": 2,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10048
   },
   {
     "formKey": "mega-tyranitar",
     "displayName": "Mega Tyranitar",
     "baseDex": 248,
     "gen": 2,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10049
   },
   {
     "formKey": "mega-sceptile",
     "displayName": "Mega Sceptile",
     "baseDex": 254,
     "gen": 3,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10065
   },
   {
     "formKey": "mega-blaziken",
     "displayName": "Mega Blaziken",
     "baseDex": 257,
     "gen": 3,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10050
   },
   {
     "formKey": "mega-swampert",
     "displayName": "Mega Swampert",
     "baseDex": 260,
     "gen": 3,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10064
   },
   {
     "formKey": "mega-gardevoir",
     "displayName": "Mega Gardevoir",
     "baseDex": 282,
     "gen": 3,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10051
   },
   {
     "formKey": "mega-mawile",
     "displayName": "Mega Mawile",
     "baseDex": 303,
     "gen": 3,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10052
   },
   {
     "formKey": "mega-aggron",
     "displayName": "Mega Aggron",
     "baseDex": 306,
     "gen": 3,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10053
   },
   {
     "formKey": "mega-manectric",
     "displayName": "Mega Manectric",
     "baseDex": 310,
     "gen": 3,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10055
   },
   {
     "formKey": "mega-sharpedo",
     "displayName": "Mega Sharpedo",
     "baseDex": 319,
     "gen": 3,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10070
   },
   {
     "formKey": "mega-camerupt",
     "displayName": "Mega Camerupt",
     "baseDex": 323,
     "gen": 3,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10087
   },
   {
     "formKey": "mega-altaria",
     "displayName": "Mega Altaria",
     "baseDex": 334,
     "gen": 3,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10067
   },
   {
     "formKey": "mega-absol",
     "displayName": "Mega Absol",
     "baseDex": 359,
     "gen": 3,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10057
   },
   {
     "formKey": "mega-glalie",
     "displayName": "Mega Glalie",
     "baseDex": 362,
     "gen": 3,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10074
   },
   {
     "formKey": "mega-salamence",
     "displayName": "Mega Salamence",
     "baseDex": 373,
     "gen": 3,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10089
   },
   {
     "formKey": "mega-metagross",
     "displayName": "Mega Metagross",
     "baseDex": 376,
     "gen": 3,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10076
   },
   {
     "formKey": "mega-latias",
     "displayName": "Mega Latias",
     "baseDex": 380,
     "gen": 3,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10062
   },
   {
     "formKey": "mega-latios",
     "displayName": "Mega Latios",
     "baseDex": 381,
     "gen": 3,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10063
   },
   {
     "formKey": "primal-kyogre",
     "displayName": "Primal Kyogre",
     "baseDex": 382,
     "gen": 3,
-    "isPrimal": true
+    "isPrimal": true,
+    "artworkId": 10077
   },
   {
     "formKey": "primal-groudon",
     "displayName": "Primal Groudon",
     "baseDex": 383,
     "gen": 3,
-    "isPrimal": true
+    "isPrimal": true,
+    "artworkId": 10078
   },
   {
     "formKey": "mega-rayquaza",
     "displayName": "Mega Rayquaza",
     "baseDex": 384,
     "gen": 3,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10079
   },
   {
     "formKey": "mega-lopunny",
     "displayName": "Mega Lopunny",
     "baseDex": 428,
     "gen": 4,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10088
   },
   {
     "formKey": "mega-garchomp",
     "displayName": "Mega Garchomp",
     "baseDex": 445,
     "gen": 4,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10058
   },
   {
     "formKey": "mega-lucario",
     "displayName": "Mega Lucario",
     "baseDex": 448,
     "gen": 4,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10059
   },
   {
     "formKey": "mega-abomasnow",
     "displayName": "Mega Abomasnow",
     "baseDex": 460,
     "gen": 4,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10060
   },
   {
     "formKey": "mega-gallade",
     "displayName": "Mega Gallade",
     "baseDex": 475,
     "gen": 4,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10068
   },
   {
     "formKey": "mega-froslass",
     "displayName": "Mega Froslass",
     "baseDex": 478,
     "gen": 4,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10285
   },
   {
     "formKey": "mega-emboar",
     "displayName": "Mega Emboar",
     "baseDex": 500,
     "gen": 5,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10286
   },
   {
     "formKey": "mega-audino",
     "displayName": "Mega Audino",
     "baseDex": 531,
     "gen": 5,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10069
   },
   {
     "formKey": "mega-scrafty",
     "displayName": "Mega Scrafty",
     "baseDex": 560,
     "gen": 5,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10289
   },
   {
     "formKey": "mega-eelektross",
     "displayName": "Mega Eelektross",
     "baseDex": 604,
     "gen": 5,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10290
   },
   {
     "formKey": "mega-greninja",
     "displayName": "Mega Greninja",
     "baseDex": 658,
     "gen": 6,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10294
   },
   {
     "formKey": "mega-pyroar",
     "displayName": "Mega Pyroar",
     "baseDex": 668,
     "gen": 6,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10295
   },
   {
     "formKey": "mega-floette",
     "displayName": "Mega Floette",
     "baseDex": 670,
     "gen": 6,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10296
   },
   {
     "formKey": "mega-dragalge",
     "displayName": "Mega Dragalge",
     "baseDex": 691,
     "gen": 6,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10299
   },
   {
     "formKey": "mega-hawlucha",
     "displayName": "Mega Hawlucha",
     "baseDex": 701,
     "gen": 6,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10300
   },
   {
     "formKey": "mega-zygarde",
     "displayName": "Mega Zygarde",
     "baseDex": 718,
     "gen": 6,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10301
   },
   {
     "formKey": "mega-diancie",
     "displayName": "Mega Diancie",
     "baseDex": 719,
     "gen": 6,
-    "isPrimal": false
+    "isPrimal": false,
+    "artworkId": 10075
   }
 ]

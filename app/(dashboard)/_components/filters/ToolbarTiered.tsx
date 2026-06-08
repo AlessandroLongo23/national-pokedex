@@ -112,7 +112,7 @@ export function ToolbarTiered({
               ? "bg-panel-3 text-text"
               : activeCount > 0
                 ? "bg-[color-mix(in_oklch,var(--color-accent)_14%,transparent)] text-[var(--color-accent)]"
-                : "bg-panel-2 text-muted hover:bg-panel-3 hover:text-text",
+                : "bg-panel-2 text-text-secondary hover:bg-panel-3 hover:text-text",
           ].join(" ")}
         >
           <Filter className="h-3.5 w-3.5" aria-hidden />
@@ -205,8 +205,8 @@ export function ToolbarTiered({
                   "inline-flex h-8 items-center gap-1.5 rounded-md border px-2.5 text-xs transition outline-none",
                   "focus-visible:ring-2 focus-visible:ring-accent/60",
                   filters.favoritesOnly
-                    ? "border-[#fcd34d]/70 bg-[#fcd34d]/15 text-[#fcd34d]"
-                    : "border-border bg-panel-2 text-muted hover:border-border-strong hover:text-text",
+                    ? "border-favorite/70 bg-favorite/15 text-favorite-dark dark:text-favorite"
+                    : "border-border bg-panel-2 text-text-secondary hover:border-border-strong hover:text-text",
                 ].join(" ")}
               >
                 <Star
@@ -240,7 +240,7 @@ function ViewToggle({
     <div
       role="radiogroup"
       aria-label="View"
-      className="inline-flex h-8 items-center rounded-md bg-panel-2 p-0.5"
+      className="inline-flex h-10 md:h-8 items-center rounded-md bg-panel-2 p-0.5"
     >
       {options.map(({ value: v, Icon, label }) => {
         const active = value === v;
@@ -253,11 +253,11 @@ function ViewToggle({
             aria-label={label}
             onClick={() => onChange(v)}
             className={[
-              "inline-flex h-7 w-7 items-center justify-center rounded transition outline-none",
+              "inline-flex h-10 w-10 md:h-7 md:w-7 items-center justify-center rounded transition outline-none",
               "focus-visible:ring-2 focus-visible:ring-accent/60",
               active
                 ? "bg-panel-3 text-text shadow-[inset_0_0_0_1px_var(--color-border)]"
-                : "text-muted hover:text-text",
+                : "text-text-secondary hover:text-text",
             ].join(" ")}
           >
             <Icon className="h-3.5 w-3.5" aria-hidden />

@@ -36,7 +36,7 @@ export function UndoToast({ count, expiresAt, onUndo, label }: Props) {
     <div
       role="status"
       aria-live="polite"
-      className="fixed bottom-6 right-6 z-50 rounded-lg border border-border bg-panel-2 px-4 py-3 text-sm text-text shadow-lg"
+      className="fixed bottom-[calc(1.5rem+env(safe-area-inset-bottom))] right-4 z-toast rounded-lg border border-border bg-panel-2 px-4 py-3 text-sm text-text shadow-lg md:right-6"
     >
       <span>
         {label ?? `${count} transaction${count === 1 ? "" : "s"} deleted`}{" "}

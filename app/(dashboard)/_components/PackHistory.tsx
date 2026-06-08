@@ -89,7 +89,7 @@ function Row({
         </div>
         <div className="flex items-center gap-3">
           {item.newWhenOpened > 0 ? (
-            <span className="rounded-full bg-owned/15 px-2.5 py-1 text-xs font-semibold text-owned nums">
+            <span className="rounded-full bg-owned/15 px-2.5 py-1 text-xs font-semibold text-owned-dark dark:text-owned nums">
               +{item.newWhenOpened} new
             </span>
           ) : (
@@ -97,7 +97,7 @@ function Row({
           )}
           <Link
             href={`/packs/${item.id}/edit`}
-            className="text-[11px] text-muted transition hover:text-accent"
+            className="text-[11px] text-text-secondary transition hover:text-accent"
           >
             Edit
           </Link>
@@ -108,7 +108,7 @@ function Row({
               if (!confirm("Delete this pack entry? Cards already owned stay owned.")) return;
               start(async () => deletePack(item.id));
             }}
-            className="text-[11px] text-muted transition hover:text-missing disabled:opacity-50"
+            className="text-[11px] text-text-secondary transition hover:text-missing disabled:opacity-50"
             aria-label="Delete pack entry"
           >
             {pending ? "…" : "Delete"}

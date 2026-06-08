@@ -48,6 +48,12 @@ export function WishlistClient({ cards, prices, types, artists }: Props) {
   const [cols, setCols] = useState(5);
   const [view, setView] = useState<CardView>("grid");
   const [mounted, setMounted] = useState(false);
+  // Mobile keeps an independent density (own ".m" storage key + a lower
+  // default of 3) so phones get tappable cells instead of inheriting the
+  // desktop default of 5. Desktop reads the original key + default 5, so its
+  // behaviour is byte-identical.
+  const [isMobile, setIsMobile] = useState(false);
+  const sizeKey = `${SIZE_STORAGE_KEY}${isMobile ? ".m" : ""}`;
 
   const [searchDebounced, setSearchDebounced] = useState("");
   useEffect(() => {
@@ -56,18 +62,24 @@ export function WishlistClient({ cards, prices, types, artists }: Props) {
   }, [filters.search]);
 
   useEffect(() => {
-    const rawSize = window.localStorage.getItem(SIZE_STORAGE_KEY);
+    const mobile =
+      typeof window !== "undefined" &&
+      window.matchMedia("(max-width: 767px)").matches;
+    setIsMobile(mobile);
+    const rawSize = window.localStorage.getItem(`${SIZE_STORAGE_KEY}${mobile ? ".m" : ""}`);
     if (rawSize) {
       const n = parseInt(rawSize, 10);
       if (Number.isFinite(n)) setCols(clampSize(n));
+    } else {
+      setCols(mobile ? 3 : 5);
     }
     const storedView = window.localStorage.getItem(VIEW_STORAGE_KEY);
     if (storedView === "grid" || storedView === "list") setView(storedView);
     setMounted(true);
   }, []);
   useEffect(() => {
-    if (mounted) window.localStorage.setItem(SIZE_STORAGE_KEY, String(cols));
-  }, [cols, mounted]);
+    if (mounted) window.localStorage.setItem(sizeKey, String(cols));
+  }, [cols, sizeKey, mounted]);
   useEffect(() => {
     if (mounted) window.localStorage.setItem(VIEW_STORAGE_KEY, view);
   }, [view, mounted]);

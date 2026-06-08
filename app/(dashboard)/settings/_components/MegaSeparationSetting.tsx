@@ -4,6 +4,7 @@ import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { MEGA_PLACEMENTS, type MegaPlacement } from "../../_lib/mega-prefs";
 import { updateMegaSettings } from "../../_lib/preferences-actions";
+import { Toggle } from "@/lib/components/ui/Toggle";
 
 interface Props {
   initialEnabled: boolean;
@@ -54,34 +55,22 @@ export function MegaSeparationSetting({ initialEnabled, initialPlacement }: Prop
     <div className="rounded-lg border border-border bg-panel p-5">
       <div className="flex items-start justify-between gap-3">
         <div>
-          <div className="text-sm font-semibold tracking-tight">
+          <div id="mega-separation-label" className="text-sm font-semibold tracking-tight">
             Treat Mega Evolutions as separate Pokémon
           </div>
-          <p className="mt-1 text-xs text-muted">
+          <p id="mega-separation-desc" className="mt-1 text-xs text-muted">
             By default a Mega Charizard X card counts toward Charizard #6. Turn this on if you
             think of Megas (and Primal Kyogre/Groudon) as their own Pokémon — each form gets its
             own slot and stops contributing to its base Pokédex number.
           </p>
         </div>
-        <button
-          type="button"
-          role="switch"
-          aria-checked={enabled}
+        <Toggle
+          checked={enabled}
+          onCheckedChange={(next) => commit(next, placement)}
           disabled={pending}
-          onClick={() => commit(!enabled, placement)}
-          className={[
-            "relative h-6 w-11 shrink-0 rounded-full border transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
-            enabled ? "border-accent bg-accent/40" : "border-border bg-panel-2",
-            pending ? "opacity-60" : "",
-          ].join(" ")}
-        >
-          <span
-            className={[
-              "absolute top-0.5 h-4 w-4 rounded-full bg-text transition-transform",
-              enabled ? "translate-x-[22px]" : "translate-x-0.5",
-            ].join(" ")}
-          />
-        </button>
+          aria-labelledby="mega-separation-label"
+          aria-describedby="mega-separation-desc"
+        />
       </div>
 
       {enabled && (

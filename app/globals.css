@@ -97,6 +97,7 @@
   --pokedex-owned:           oklch(0.685 0.165 80);    /* amber, deep enough on white */
   --pokedex-owned-dark:      oklch(0.530 0.155 70);    /* darker amber for borders / strong text */
   --pokedex-favorite:        oklch(0.720 0.150 90);    /* gold, yellower than owned-amber for distinction */
+  --pokedex-favorite-dark:   oklch(0.560 0.130 85);    /* deep gold for text/icon on a pale favorite tint */
   --pokedex-covered:         oklch(0.580 0.145 165);   /* emerald */
   --pokedex-covered-dark:    oklch(0.430 0.135 160);
   --pokedex-missing:         oklch(0.595 0.205 25);    /* red */
@@ -110,6 +111,7 @@
   --pokedex-owned:           oklch(0.850 0.170 86);    /* ≈ #fbbf24 — original amber */
   --pokedex-owned-dark:      oklch(0.645 0.145 70);    /* ≈ #b45309 */
   --pokedex-favorite:        oklch(0.870 0.155 92);    /* ≈ #fcd34d — gold, yellower than owned-amber */
+  --pokedex-favorite-dark:   oklch(0.700 0.150 90);    /* deep gold (unused by chips, which keep base in dark) */
   --pokedex-covered:         oklch(0.780 0.140 167);   /* ≈ #34d399 */
   --pokedex-covered-dark:    oklch(0.535 0.130 162);   /* ≈ #047857 */
   --pokedex-missing:         oklch(0.740 0.180 22);    /* ≈ #f87171 */
@@ -140,8 +142,14 @@
   --color-secondary-foreground:         var(--secondary-foreground);
   --color-muted:                        var(--muted);
   --color-muted-foreground:             var(--muted-foreground);
-  --color-accent:                       var(--accent);
-  --color-accent-foreground:            var(--accent-foreground);
+  /* `accent` is the BRAND accent (indigo) here, not the shadcn neutral
+     hover-surface role. ~200 callsites use bg-accent/text-accent/border-accent/
+     ring-accent for selection, links, focus rings, and primary fills (mirrors
+     the sidebar's bg-primary/10 text-primary). The shadcn neutral hover role
+     stays available as bg-muted / the raw var(--accent). accent-foreground has
+     zero callsites, so pointing it at the on-accent white is safe and coherent. */
+  --color-accent:                       var(--lume-accent);
+  --color-accent-foreground:            var(--lume-text-on-accent);
   --color-destructive:                  var(--destructive);
   --color-success:                      var(--success);
   --color-warning:                      var(--warning);
@@ -161,9 +169,15 @@
   --color-bg:                           var(--lume-bg);
   --color-panel:                        var(--lume-surface-raised);
   --color-panel-2:                      var(--muted);
-  --color-panel-3:                      var(--color-neutral-200);
+  --color-panel-3:                      var(--lume-panel-3);
   --color-text:                         var(--lume-text);
   --color-muted-fg:                     var(--lume-text-muted);
+  /* Secondary text role (neutral-600 light / 0.780 dark). Exposed under its own
+     non-colliding name — `text-secondary` is owned by Tailwind's button-secondary
+     *background* color and an @layer override of it is cascade-order fragile
+     (wins in the prod build, loses to the generated utility in dev). Sibling of
+     `text-text`; use text-text-secondary for quiet-but-readable text and actions. */
+  --color-text-secondary:               var(--lume-text-secondary);
   /* `text-muted` collides with shadcn's bg-muted utility — we want it as a
      text color in pokédex callsites, so override the foreground role on it. */
   --color-border-strong:                var(--color-neutral-300);
@@ -176,6 +190,7 @@
      the badge fill in light and dark. Mirrors the --color-*-foreground pattern. */
   --color-owned-foreground:             oklch(0.27 0.045 72);
   --color-favorite:                     var(--pokedex-favorite);
+  --color-favorite-dark:                var(--pokedex-favorite-dark);
   --color-covered:                      var(--pokedex-covered);
   --color-covered-dark:                 var(--pokedex-covered-dark);
   --color-missing:                      var(--pokedex-missing);
@@ -418,5 +433,89 @@ a {
   to {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+
+/* ════════════════════════════════════════════════════════════════════════════
+   PLACEHOLDER PRINT SHEETS
+   Real-size 3×3 grid of 63×88 mm placeholder cards centered on A4, matching the
+   legacy ReportLab geometry. The on-screen workspace (gray canvas, shadows) is
+   styled in print.module.css; here we keep the physical sheet/cell geometry
+   (shared on screen + print) and the print-only isolation rules.
+   ════════════════════════════════════════════════════════════════════════════ */
+.print-sheet {
+  width: 210mm;
+  height: 297mm;
+  box-sizing: border-box;
+  padding: 16.5mm 10.5mm; /* centers the 189×264 mm grid on A4 (legacy margins) */
+  display: grid;
+  grid-template-columns: repeat(3, 63mm);
+  grid-template-rows: repeat(3, 88mm);
+  gap: 0;
+  justify-content: center;
+  align-content: center;
+  background: #fff;
+}
+.print-cell {
+  width: 63mm;
+  height: 88mm;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  border: 0.4pt dashed #000; /* legacy cut line */
+  background: #fff;
+  color: #000;
+}
+.print-cell-empty {
+  border: 0.4pt dashed #c9c9c9;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  /* Hide everything, then reveal only the print root. visibility (not display)
+     keeps the grid intact so cells don't reflow. */
+  body * {
+    visibility: hidden !important;
+  }
+  #print-root,
+  #print-root * {
+    visibility: visible !important;
+  }
+  #print-root {
+    position: absolute !important;
+    inset: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  html,
+  body {
+    height: auto !important;
+    overflow: visible !important;
+  }
+  .print-sheet {
+    box-shadow: none !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    break-after: page;
+    page-break-after: always;
+    break-inside: avoid;
+  }
+  .print-sheet:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+  /* Honor type-pill fills, gen badges, and the grayscale filter in print. */
+  .print-sheet,
+  .print-sheet * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 }

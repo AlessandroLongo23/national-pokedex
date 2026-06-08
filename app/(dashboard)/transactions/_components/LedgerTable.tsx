@@ -118,7 +118,11 @@ export function LedgerTable({
     selectedVisibleCount > 0 && selectedVisibleCount < selectableVisibleCount;
 
   return (
-    <div className="overflow-x-auto rounded-lg border border-border bg-panel">
+    <>
+    {/* Desktop: the full data table. Hidden on mobile, where a multi-column
+        table would overflow horizontally and push the Amount/Actions columns
+        off-screen — mobile gets the stacked card list below instead. */}
+    <div className="hidden overflow-x-auto rounded-lg border border-border bg-panel md:block">
       <table className="min-w-full text-sm">
         <thead className="border-b border-border text-left text-[11px] uppercase tracking-wider text-muted">
           <tr>
@@ -155,6 +159,157 @@ export function LedgerTable({
         </tbody>
       </table>
     </div>
+
+    {/* Mobile: stacked card list — each transaction is a full-width row with the
+        description + amount on top and time/kind/actions below. No horizontal
+        scroll. Reuses the same day grouping and render helpers as the table. */}
+    <div className="space-y-4 md:hidden">
+      {groups.map((g) => (
+        <MobileDayGroup
+          key={g.key}
+          group={g}
+          defaultCurrency={defaultCurrency}
+          displayCurrency={displayCurrency}
+          latestRatesFromEur={latestRatesFromEur}
+          selectedIds={selectedIds}
+          pendingDeleteIds={pendingDeleteIds}
+          onToggleSelected={onToggleSelected}
+        />
+      ))}
+    </div>
+    </>
+  );
+}
+
+function MobileDayGroup({
+  group,
+  defaultCurrency,
+  displayCurrency,
+  latestRatesFromEur,
+  selectedIds,
+  pendingDeleteIds,
+  onToggleSelected,
+}: {
+  group: DayGroup;
+  defaultCurrency: LedgerCurrency;
+  displayCurrency: Currency;
+  latestRatesFromEur: Record<Currency, number>;
+  selectedIds: ReadonlySet<string>;
+  pendingDeleteIds: ReadonlySet<string>;
+  onToggleSelected: (id: string, kind: SelectableKind) => void;
+}) {
+  const count = group.rows.length;
+  const positive = group.totalCents >= 0;
+  const totalText = `${positive ? "+" : "−"}${formatMoneyCents(
+    Math.abs(group.totalCents),
+    displayCurrency,
+  )}`;
+  return (
+    <section className="overflow-hidden rounded-lg border border-border bg-panel">
+      <header className="flex items-center justify-between gap-3 border-b border-border bg-panel-2/50 px-3 py-2 text-[11px] uppercase tracking-wider text-muted">
+        <span>{formatDayLabel(group.date)}</span>
+        <span className="tabular-nums">
+          {count} · {group.approximate ? <span className="italic">{totalText}</span> : totalText}
+        </span>
+      </header>
+      <ul className="divide-y divide-border/60">
+        {group.rows.map((r) => (
+          <MobileRow
+            key={r.id}
+            row={r}
+            kindLabel={r.kind === group.dominantKind ? null : KIND_LABEL[r.kind]}
+            timeLabel={formatTime(r.occurredAt)}
+            defaultCurrency={defaultCurrency}
+            displayCurrency={displayCurrency}
+            latestRatesFromEur={latestRatesFromEur}
+            selected={selectedIds.has(r.id)}
+            pending={pendingDeleteIds.has(r.id)}
+            onToggleSelected={onToggleSelected}
+          />
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+function MobileRow({
+  row,
+  kindLabel,
+  timeLabel,
+  defaultCurrency,
+  displayCurrency,
+  latestRatesFromEur,
+  selected,
+  pending,
+  onToggleSelected,
+}: {
+  row: LedgerTableRow;
+  kindLabel: string | null;
+  timeLabel: string;
+  defaultCurrency: LedgerCurrency;
+  displayCurrency: Currency;
+  latestRatesFromEur: Record<Currency, number>;
+  selected: boolean;
+  pending: boolean;
+  onToggleSelected: (id: string, kind: SelectableKind) => void;
+}) {
+  const positive = row.amountCents >= 0;
+  const selectable = isSelectableKind(row.kind);
+  const liClass = [
+    "flex items-start gap-2.5 px-3 py-3",
+    pending ? "opacity-50 pointer-events-none" : "",
+    selected ? "bg-accent/5" : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+  return (
+    <li className={liClass}>
+      {selectable ? (
+        <label className="flex h-9 w-7 shrink-0 items-center justify-center">
+          <input
+            type="checkbox"
+            checked={selected}
+            onChange={() => onToggleSelected(row.id, row.kind as SelectableKind)}
+            aria-label="Select transaction"
+            className="h-5 w-5 cursor-pointer accent-accent"
+          />
+        </label>
+      ) : (
+        <span aria-hidden className="w-7 shrink-0" />
+      )}
+      <div className="min-w-0 flex-1">
+        <div className="flex items-start justify-between gap-2">
+          <div className="min-w-0">{renderDescription(row)}</div>
+          <span
+            className={[
+              "shrink-0 text-right text-sm font-semibold tabular-nums",
+              positive ? "text-covered" : "text-missing",
+            ].join(" ")}
+          >
+            {positive ? "+" : "−"}
+            <MoneyDisplay
+              cents={Math.abs(row.amountCents)}
+              currency={row.currency}
+              rateToEur={row.rateToEur}
+              asOf={row.occurredAt}
+              displayCurrency={displayCurrency}
+              latestRatesFromEur={latestRatesFromEur}
+            />
+          </span>
+        </div>
+        <div className="mt-1.5 flex items-center gap-2 text-[11px] text-muted">
+          <span className="tabular-nums">{timeLabel}</span>
+          {kindLabel && (
+            <span className="rounded-md border border-border bg-panel-2 px-1.5 py-px uppercase tracking-wider">
+              {kindLabel}
+            </span>
+          )}
+          <span className="ml-auto">
+            <RowActions row={row} defaultCurrency={defaultCurrency} />
+          </span>
+        </div>
+      </div>
+    </li>
   );
 }
 

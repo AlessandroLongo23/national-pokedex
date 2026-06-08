@@ -8,11 +8,14 @@ import { PageHeader } from "../_components/PageHeader";
 import { PokeballIcon } from "@/lib/components/ui/PokedexLogo";
 import { PokedexGrid } from "../_components/PokedexGrid";
 import { CardVariantPicker } from "../_components/CardVariantPicker";
+import { MegaVariantPicker } from "../_components/MegaVariantPicker";
 import { useOwnedCards } from "../_lib/OwnedCardsContext";
 import { useUser } from "../_lib/UserContext";
+import type { MegaForm } from "@/lib/data/types";
 
 export default function PokedexPage() {
   const [pickerDex, setPickerDex] = useState<number | null>(null);
+  const [pickerMega, setPickerMega] = useState<MegaForm | null>(null);
   const { ownedSpecies, ownedMegaForms } = useOwnedCards();
   const { isGuest, treatMegasAsSeparate, megaPlacement } = useUser();
   const showMegasInDex = treatMegasAsSeparate && megaPlacement !== "separate";
@@ -40,7 +43,7 @@ export default function PokedexPage() {
               <ArrowRight className="h-3.5 w-3.5" aria-hidden />
             </Link>
           ) : (
-            <div className="flex w-[260px] flex-col gap-1.5">
+            <div className="flex w-full flex-col gap-1.5 md:w-[260px]">
               <div className="flex items-baseline justify-between text-[11px]">
                 <span className="uppercase tracking-wider text-muted">Binder progress</span>
                 <span className="nums tabular-nums">
@@ -64,8 +67,10 @@ export default function PokedexPage() {
         storageKey="full"
         groupByGenDefault={true}
         onCellClick={(dex) => setPickerDex(dex)}
+        onMegaClick={(form) => setPickerMega(form)}
       />
       <CardVariantPicker dex={pickerDex} onClose={() => setPickerDex(null)} />
+      <MegaVariantPicker form={pickerMega} onClose={() => setPickerMega(null)} />
     </div>
   );
 }

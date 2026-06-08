@@ -44,6 +44,7 @@ export function AppShell({ sidebar, topBar, children }: AppShellProps) {
   const collapseState = useSidebarCollapse();
   const { collapsed, toggle } = collapseState;
   const [mobileOpen, setMobileOpen] = useState(false);
+  const mobileDrawerRef = useRef<HTMLElement>(null);
   const pathname = usePathname();
   // The scrolling panel (document-scroll routes). Exposed so virtualized grids
   // can scroll against the page instead of a nested container.
@@ -65,6 +66,18 @@ export function AppShell({ sidebar, topBar, children }: AppShellProps) {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [toggle]);
+
+  // Mobile drawer a11y: Escape closes it, and focus moves into the drawer on
+  // open so keyboard/AT users land inside the menu rather than behind it.
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMobileOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    mobileDrawerRef.current?.focus();
+    return () => document.removeEventListener("keydown", onKey);
+  }, [mobileOpen]);
 
   const sidebarW = useMotionValue(collapsed ? 64 : 240);
   const sidebarWPx = useTransform(sidebarW, (v) => `${v}px`);
@@ -104,7 +117,14 @@ export function AppShell({ sidebar, topBar, children }: AppShellProps) {
 
           {mobileOpen && (
             <>
-              <aside className="z-drawer fixed left-0 bottom-0 top-[var(--shell-banner-h)] flex w-72 flex-col overflow-y-auto bg-zinc-50 md:hidden dark:bg-zinc-900">
+              <aside
+                ref={mobileDrawerRef}
+                tabIndex={-1}
+                role="dialog"
+                aria-modal="true"
+                aria-label="Navigation menu"
+                className="z-drawer fixed left-0 bottom-0 top-[var(--shell-banner-h)] flex w-72 flex-col overflow-y-auto bg-zinc-50 pb-[env(safe-area-inset-bottom)] outline-none md:hidden dark:bg-zinc-900"
+              >
                 <div className="flex justify-end p-3">
                   <Button
                     variant="ghost"
@@ -112,6 +132,7 @@ export function AppShell({ sidebar, topBar, children }: AppShellProps) {
                     iconOnly
                     aria-label="Close menu"
                     onClick={() => setMobileOpen(false)}
+                    className="min-h-[44px] min-w-[44px]"
                   >
                     <X />
                   </Button>
@@ -149,9 +170,12 @@ export function AppShell({ sidebar, topBar, children }: AppShellProps) {
                 <div
                   key={pageAnimationKey}
                   className={`shell-page-enter ${
+                    // Extra bottom padding on mobile so the last content row clears
+                    // the floating LogPack FAB (bottom-right) and the home indicator;
+                    // desktop keeps its original pb-8 / pb-12 (md:).
                     isViewportFit
-                      ? "flex flex-1 min-h-0 flex-col px-6 pt-8 pb-8 md:px-12"
-                      : "px-6 pt-10 pb-12 md:px-12"
+                      ? "flex flex-1 min-h-0 flex-col px-6 pt-8 pb-[max(6rem,env(safe-area-inset-bottom))] md:px-12 md:pb-8"
+                      : "px-6 pt-10 pb-[max(6rem,env(safe-area-inset-bottom))] md:px-12 md:pb-12"
                   }`}
                 >
                   {children}

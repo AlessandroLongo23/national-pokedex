@@ -178,7 +178,7 @@ function VariantRow({
         className={[
           "shrink-0 rounded-md border px-3 py-1.5 text-xs font-semibold transition",
           owned
-            ? "border-owned bg-owned/15 text-owned"
+            ? "border-owned bg-owned/15 text-owned-dark dark:text-owned"
             : "border-border text-text hover:border-owned hover:text-owned",
         ].join(" ")}
         aria-pressed={owned}
@@ -210,7 +210,7 @@ function VariantRow({
         className={[
           "shrink-0 rounded-md border px-3 py-1.5 text-xs font-semibold transition",
           isCurrentOverride
-            ? "border-accent bg-accent/15 text-accent"
+            ? "border-accent bg-accent/10 text-accent"
             : isDisplayed
               ? "border-border-strong text-muted"
               : "border-border text-text hover:border-accent hover:text-accent",

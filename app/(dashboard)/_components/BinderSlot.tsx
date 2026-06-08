@@ -32,7 +32,7 @@ export function BinderSlotStatus({ filled, untracked = false }: StatusProps) {
       className={[
         "inline-flex min-h-9 items-center gap-2 rounded-full border px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em]",
         filled
-          ? "border-owned/60 bg-owned/15 text-owned"
+          ? "border-owned/60 bg-owned/15 text-owned-dark dark:text-owned"
           : "border-border-strong/70 bg-panel-2 text-muted",
       ].join(" ")}
     >

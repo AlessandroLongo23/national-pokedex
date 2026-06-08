@@ -144,7 +144,7 @@ function EvoChip({ dex, highlight }: { dex: number; highlight?: boolean }) {
       className={[
         "inline-flex min-h-9 items-center gap-2 rounded-full border px-2.5 py-1 text-xs transition",
         highlight
-          ? "border-owned/60 bg-owned/15 text-owned"
+          ? "border-owned/60 bg-owned/15 text-owned-dark dark:text-owned"
           : "border-border bg-panel-2 hover:border-accent hover:text-accent active:border-accent active:bg-panel-3 active:text-accent",
       ].join(" ")}
     >

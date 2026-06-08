@@ -104,7 +104,7 @@ export function CardActionsBar({
     <div className="flex flex-wrap items-center gap-2">
       {ownedQty > 0 ? (
         <div
-          className="inline-flex h-9 items-stretch overflow-hidden rounded-md border border-owned/60 bg-owned/10 text-owned"
+          className="inline-flex h-11 md:h-9 items-stretch overflow-hidden rounded-md border border-owned/60 bg-owned/10 text-owned-dark dark:text-owned"
           role="group"
           aria-label={`Owned — ${ownedQty} ${ownedQty === 1 ? "copy" : "copies"}`}
         >
@@ -117,7 +117,7 @@ export function CardActionsBar({
                   ? `Remove a copy of ${card.name}`
                   : `Mark ${card.name} not owned`
               }
-              className="inline-flex w-9 items-center justify-center transition hover:bg-owned/20 active:bg-panel-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset"
+              className="inline-flex w-11 md:w-9 items-center justify-center transition hover:bg-owned/20 active:bg-panel-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset"
             >
               <Minus className="h-3.5 w-3.5" strokeWidth={2.5} aria-hidden />
             </button>
@@ -131,7 +131,7 @@ export function CardActionsBar({
               type="button"
               onClick={() => adjustOwned(card.id, +1)}
               aria-label={`Add another copy of ${card.name}`}
-              className="inline-flex w-9 items-center justify-center transition hover:bg-owned/20 active:bg-panel-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset"
+              className="inline-flex w-11 md:w-9 items-center justify-center transition hover:bg-owned/20 active:bg-panel-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset"
             >
               <Plus className="h-3.5 w-3.5" strokeWidth={2.5} aria-hidden />
             </button>
@@ -141,7 +141,7 @@ export function CardActionsBar({
         <button
           type="button"
           onClick={() => toggleOwned(card.id)}
-          className="inline-flex h-9 items-center gap-1.5 rounded-md bg-primary px-3 text-xs font-semibold text-primary-foreground transition hover:bg-[var(--lume-button-accent-bg-hover)] active:bg-[var(--lume-button-accent-bg-active)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
+          className="inline-flex h-10 md:h-9 items-center gap-1.5 rounded-md bg-primary px-3 text-xs font-semibold text-primary-foreground transition hover:bg-[var(--lume-button-accent-bg-hover)] active:bg-[var(--lume-button-accent-bg-active)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
         >
           <Plus className="h-3.5 w-3.5" strokeWidth={2.5} aria-hidden />
           Mark owned
@@ -158,7 +158,7 @@ export function CardActionsBar({
             onClick={() => toggleWishlist(card.id)}
             aria-pressed={wishlisted}
             className={[
-              "inline-flex h-9 items-center gap-1.5 rounded-md border px-3 text-xs font-medium transition active:bg-panel-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
+              "inline-flex h-10 md:h-9 items-center gap-1.5 rounded-md border px-3 text-xs font-medium transition active:bg-panel-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
               wishlisted
                 ? "border-missing bg-missing/15 text-missing hover:bg-missing/20"
                 : "border-border bg-panel-2 text-text hover:border-missing/70 hover:text-missing",
@@ -180,7 +180,7 @@ export function CardActionsBar({
             onClick={() => toggleFavorite(card.id)}
             aria-pressed={favorited}
             className={[
-              "inline-flex h-9 items-center gap-1.5 rounded-md border px-3 text-xs font-medium transition active:bg-panel-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
+              "inline-flex h-10 md:h-9 items-center gap-1.5 rounded-md border px-3 text-xs font-medium transition active:bg-panel-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
               favorited
                 ? "border-favorite/70 bg-favorite/15 text-favorite hover:bg-favorite/20"
                 : "border-border bg-panel-2 text-text hover:border-favorite/70 hover:text-favorite",
@@ -206,7 +206,7 @@ export function CardActionsBar({
           <button
             type="button"
             onClick={() => setBuyOpen(true)}
-            className="inline-flex h-9 items-center gap-1.5 rounded-md border border-border bg-panel-2 px-3 text-xs font-medium text-text transition hover:border-accent/60 hover:bg-panel active:bg-panel-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+            className="inline-flex h-10 md:h-9 items-center gap-1.5 rounded-md border border-border bg-panel-2 px-3 text-xs font-medium text-text transition hover:border-accent/60 hover:bg-panel active:bg-panel-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
           >
             <ShoppingCart className="h-3.5 w-3.5" aria-hidden />
             Buy
@@ -224,7 +224,7 @@ export function CardActionsBar({
             type="button"
             onClick={() => setSellOpen(true)}
             disabled={ownedQty === 0}
-            className="inline-flex h-9 items-center gap-1.5 rounded-md border border-border bg-panel-2 px-3 text-xs font-medium text-text transition hover:border-accent/60 hover:bg-panel active:bg-panel-3 disabled:cursor-not-allowed disabled:opacity-40"
+            className="inline-flex h-10 md:h-9 items-center gap-1.5 rounded-md border border-border bg-panel-2 px-3 text-xs font-medium text-text transition hover:border-accent/60 hover:bg-panel active:bg-panel-3 disabled:cursor-not-allowed disabled:opacity-40"
           >
             <Tag className="h-3.5 w-3.5" aria-hidden />
             Sell{ownedQty > 1 ? ` (up to ${ownedQty})` : ""}

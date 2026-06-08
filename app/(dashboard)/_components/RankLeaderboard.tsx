@@ -30,7 +30,7 @@ export function RankLeaderboard({ limit = 10, filterAvailable }: Props) {
         </span>
       </div>
       <div className="overflow-x-auto">
-        <table className="w-full min-w-[640px] border-collapse text-sm">
+        <table className="w-full min-w-0 md:min-w-[640px] border-collapse text-sm">
           <thead>
             <tr>
               <Th className="w-10 text-center">#</Th>

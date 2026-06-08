@@ -22,7 +22,7 @@ export function TopBar({ rightCluster, leftCluster }: TopBarProps) {
           iconOnly
           aria-label="Open menu"
           onClick={() => setOpen(true)}
-          className="md:hidden"
+          className="min-h-[44px] min-w-[44px] md:hidden"
         >
           <Menu />
         </Button>

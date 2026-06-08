@@ -102,7 +102,7 @@ export function CardVariantPicker({ dex, onClose }: Props) {
           <button
             type="button"
             onClick={onClose}
-            className="rounded-md p-1.5 text-muted transition hover:bg-panel-2 hover:text-text"
+            className="rounded-md p-2.5 md:p-1.5 text-muted transition hover:bg-panel-2 hover:text-text"
             aria-label="Close"
           >
             <X className="h-4 w-4" aria-hidden />
@@ -131,7 +131,7 @@ export function CardVariantPicker({ dex, onClose }: Props) {
   );
 }
 
-function VariantRow({ card }: { card: CardEntry }) {
+export function VariantRow({ card }: { card: CardEntry }) {
   const { isOwned, toggle: toggleOwn, adjust: adjustOwned, quantityOf } = useOwnedCards();
   const { isWishlisted, toggle: toggleWishlist } = useWishlist();
   const { isGuest } = useUser();
@@ -170,7 +170,7 @@ function VariantRow({ card }: { card: CardEntry }) {
             className={[
               "inline-flex shrink-0 items-center justify-center rounded-md border px-2 py-1.5 transition",
               wishlisted
-                ? "border-accent bg-accent/15 text-accent"
+                ? "border-accent bg-accent/10 text-accent"
                 : "border-border text-muted hover:border-accent hover:text-accent",
             ].join(" ")}
             aria-pressed={wishlisted}
@@ -187,7 +187,7 @@ function VariantRow({ card }: { card: CardEntry }) {
       )}
       {!isGuest && (owned ? (
         <div
-          className="inline-flex shrink-0 items-stretch overflow-hidden rounded-md border border-owned bg-owned/15 text-owned"
+          className="inline-flex shrink-0 items-stretch overflow-hidden rounded-md border border-owned bg-owned/15 text-owned-dark dark:text-owned"
           role="group"
           aria-label={`Owned — ${quantity} ${quantity === 1 ? "copy" : "copies"}`}
         >
@@ -224,7 +224,7 @@ function VariantRow({ card }: { card: CardEntry }) {
         <button
           type="button"
           onClick={() => toggleOwn(card.id)}
-          className="inline-flex shrink-0 items-center gap-1 rounded-md border border-border px-3 py-1.5 text-xs font-semibold text-text transition hover:border-owned hover:text-owned"
+          className="inline-flex shrink-0 items-center gap-1 rounded-md border border-border px-3 py-2.5 md:py-1.5 text-xs font-semibold text-text transition hover:border-owned hover:text-owned"
           aria-pressed={false}
         >
           <Plus className="h-3.5 w-3.5" strokeWidth={2.5} aria-hidden />

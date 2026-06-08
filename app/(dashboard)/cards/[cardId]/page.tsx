@@ -1,6 +1,9 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
+import { Ruler, Weight } from "lucide-react";
+import { officialArtworkUrl } from "@/lib/pokeapi";
 import { getSet, loadSetCards, SPECIES } from "@/lib/data";
 import {
   getAllCards,
@@ -28,7 +31,6 @@ import { CardStrip } from "./_components/CardStrip";
 import {
   EvolutionRow,
   MetaPill,
-  PokemonChip,
   RarityBadge,
   SetChip,
   TypeChip,
@@ -285,36 +287,67 @@ export default async function CardDetailPage({ params }: PageProps) {
           <CardHeroImage card={card} />
         </div>
 
-        <div className="space-y-7">
-          <div className="space-y-2.5">
-            <p className="eyebrow">
+        <div className="flex flex-col gap-7">
+          {/* Identity header — official artwork beside the name/rarity rows,
+              with the type symbol(s) sitting by the name like a card's title
+              bar. The sprite links to the species page (the role the old
+              "Pokémon" details row used to play). */}
+          <div className="flex items-start gap-4">
+            {dex != null && (
               <Link
-                href={`/sets/${setId}`}
-                className="underline-offset-2 hover:text-text hover:underline"
+                href={`/pokedex/${dex}`}
+                aria-label={SPECIES[dex]?.name ?? `#${dex}`}
+                className="shrink-0 transition hover:opacity-80"
               >
-                {set.name}
-              </Link>{" "}
-              · #{card.number}
-            </p>
-            <h1 className="text-3xl font-semibold tracking-tight text-text">
-              {card.name}
-            </h1>
-            <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-sm text-muted">
-              <RarityBadge
-                rarity={card.rarity}
-                label={RARITY_LABEL[card.rarity]}
-              />
-              {card.supertype !== "Pokémon" && (
-                <span className="text-xs uppercase tracking-wider">
-                  {card.supertype}
-                </span>
-              )}
-              {card.artist && (
-                <span className="text-xs">
-                  illus.{" "}
-                  <span className="text-text">{card.artist}</span>
-                </span>
-              )}
+                <Image
+                  src={officialArtworkUrl(dex)}
+                  alt=""
+                  width={112}
+                  height={112}
+                  unoptimized
+                  className="h-[104px] w-[104px] object-contain"
+                />
+              </Link>
+            )}
+            <div className="min-w-0 flex-1 space-y-2.5">
+              <p className="eyebrow">
+                <Link
+                  href={`/sets/${setId}`}
+                  className="underline-offset-2 hover:text-text hover:underline"
+                >
+                  {set.name}
+                </Link>{" "}
+                · #{card.number}
+              </p>
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                <h1 className="text-3xl font-semibold tracking-tight text-text">
+                  {card.name}
+                </h1>
+                {card.types.length > 0 && (
+                  <div className="flex shrink-0 items-center gap-1.5">
+                    {card.types.map((t) => (
+                      <TypeChip key={t} type={t} />
+                    ))}
+                  </div>
+                )}
+              </div>
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-sm text-muted">
+                <RarityBadge
+                  rarity={card.rarity}
+                  label={RARITY_LABEL[card.rarity]}
+                />
+                {card.supertype !== "Pokémon" && (
+                  <span className="text-xs uppercase tracking-wider">
+                    {card.supertype}
+                  </span>
+                )}
+                {card.artist && (
+                  <span className="text-xs">
+                    illus.{" "}
+                    <span className="text-text">{card.artist}</span>
+                  </span>
+                )}
+              </div>
             </div>
           </div>
 
@@ -375,24 +408,9 @@ export default async function CardDetailPage({ params }: PageProps) {
             />
           )}
 
+          {/* Collecting data — what a collector actually tracks. Type moved
+              to the header; the Pokémon sprite moved to the header; HP dropped. */}
           <dl className="grid grid-cols-[auto_1fr] gap-x-6 gap-y-4 text-sm">
-            {(card.types.length > 0 || card.hp != null) && (
-              <Field label="Type">
-                <div className="flex flex-wrap items-center gap-2">
-                  {card.types.map((t) => (
-                    <TypeChip key={t} type={t} />
-                  ))}
-                  {card.hp != null && (
-                    <span className="ml-1 text-text nums">
-                      <span className="font-semibold">{card.hp}</span>
-                      <span className="ml-1 text-[11px] uppercase tracking-wider text-muted">
-                        HP
-                      </span>
-                    </span>
-                  )}
-                </div>
-              </Field>
-            )}
             {card.subtypes.length > 0 && (
               <Field label="Subtypes">
                 <div className="flex flex-wrap gap-1.5">
@@ -410,11 +428,6 @@ export default async function CardDetailPage({ params }: PageProps) {
             <Field label="Set">
               <SetChip setId={setId} setName={set.name} number={card.number} symbolUrl={set.symbolUrl} />
             </Field>
-            {dex != null && (
-              <Field label="Pokémon">
-                <PokemonChip dex={dex} />
-              </Field>
-            )}
             {card.evolvesFrom && (
               <Field label="Evolves from">
                 <span className="text-text">{card.evolvesFrom}</span>
@@ -428,30 +441,37 @@ export default async function CardDetailPage({ params }: PageProps) {
                 />
               </Field>
             )}
-            {species && (
-              <Field label="Pokédex">
-                <p className="text-text nums">
-                  <span>{species.genus}</span>
-                  {region && (
-                    <>
-                      <Separator tone="muted" spaced />
-                      <span>{region}</span>
-                    </>
-                  )}
-                  <Separator tone="muted" spaced />
-                  <span>{(species.heightDm / 10).toFixed(1)} m</span>
-                  <Separator tone="muted" spaced />
-                  <span>{(species.weightHg / 10).toFixed(1)} kg</span>
-                  {abilities && (
-                    <>
-                      <Separator tone="muted" spaced />
-                      <span className="text-muted">{abilities}</span>
-                    </>
-                  )}
-                </p>
-              </Field>
-            )}
           </dl>
+
+          {/* Pokédex flavour — demoted to a quiet footer pinned to the bottom
+              of the column so the right side ends level with the card art. */}
+          {species && (
+            <p className="mt-auto border-t border-border pt-3 text-xs text-muted nums">
+              <span>{species.genus}</span>
+              {region && (
+                <>
+                  <Separator tone="muted" spaced />
+                  <span>{region}</span>
+                </>
+              )}
+              <Separator tone="muted" spaced />
+              <span className="inline-flex items-center gap-1 align-middle">
+                <Ruler aria-hidden className="h-3.5 w-3.5 text-muted" />
+                {(species.heightDm / 10).toFixed(1)} m
+              </span>
+              <Separator tone="muted" spaced />
+              <span className="inline-flex items-center gap-1 align-middle">
+                <Weight aria-hidden className="h-3.5 w-3.5 text-muted" />
+                {(species.weightHg / 10).toFixed(1)} kg
+              </span>
+              {abilities && (
+                <>
+                  <Separator tone="muted" spaced />
+                  <span>{abilities}</span>
+                </>
+              )}
+            </p>
+          )}
         </div>
       </div>
 

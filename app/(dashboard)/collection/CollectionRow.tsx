@@ -81,7 +81,7 @@ function RowBase({ card }: { card: CardEntry }) {
         {!isGuest && (
           <>
             <div
-              className="inline-flex h-7 items-stretch overflow-hidden rounded-md border border-owned/70 bg-owned/15 text-owned"
+              className="inline-flex h-7 items-stretch overflow-hidden rounded-md border border-owned/70 bg-owned/15 text-owned-dark dark:text-owned"
               role="group"
               aria-label={`Owned — ${quantity} ${quantity === 1 ? "copy" : "copies"}`}
             >
@@ -126,8 +126,8 @@ function RowBase({ card }: { card: CardEntry }) {
                 className={[
                   "inline-flex h-7 min-w-7 items-center justify-center rounded-md border px-1.5 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
                   favorited
-                    ? "border-[#fcd34d]/70 bg-[#fcd34d]/15 text-[#fcd34d]"
-                    : "border-border bg-panel-2 text-muted hover:border-[#fcd34d] hover:text-[#fcd34d]",
+                    ? "border-favorite/70 bg-favorite/15 text-favorite-dark dark:text-favorite"
+                    : "border-border bg-panel-2 text-muted hover:border-favorite hover:text-favorite-dark dark:hover:text-favorite",
                 ].join(" ")}
               >
                 <Star

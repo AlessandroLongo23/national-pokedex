@@ -9,7 +9,7 @@ export default async function ForgotPasswordPage({
 }) {
   const params = await searchParams;
   return (
-    <main className="mx-auto flex min-h-screen max-w-md flex-col justify-center px-6">
+    <main className="mx-auto flex min-h-dvh max-w-md flex-col justify-start py-12 md:justify-center md:py-0 px-6">
       <h1 className="mb-8">
         <LinkedPokedexLogo />
       </h1>
@@ -30,7 +30,7 @@ export default async function ForgotPasswordPage({
         </label>
         <button
           type="submit"
-          className="w-full rounded-md bg-accent px-3 py-2 font-semibold text-bg hover:opacity-90"
+          className="w-full rounded-md bg-primary px-3 py-2 font-semibold text-primary-foreground hover:opacity-90"
         >
           Send reset link
         </button>
@@ -45,7 +45,7 @@ export default async function ForgotPasswordPage({
       </div>
       <p className="mt-6 text-sm text-muted">
         Remembered it?{" "}
-        <Link href="/login" className="text-accent hover:underline">
+        <Link href="/login" className="inline-block py-2 md:py-0 text-accent hover:underline">
           Back to sign in
         </Link>
       </p>

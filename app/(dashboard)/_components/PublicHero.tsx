@@ -31,7 +31,7 @@ export async function PublicHero() {
         <div className="flex flex-wrap items-center gap-3 pt-2">
           <Link
             href="/login"
-            className="inline-flex items-center gap-1.5 rounded-md bg-accent px-4 py-2.5 text-sm font-semibold text-bg transition hover:opacity-90"
+            className="inline-flex items-center gap-1.5 rounded-md bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
           >
             Sign in
             <ArrowRight className="h-4 w-4" aria-hidden />

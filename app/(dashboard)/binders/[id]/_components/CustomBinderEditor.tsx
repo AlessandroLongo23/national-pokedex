@@ -100,7 +100,7 @@ export function CustomBinderEditor({ binderId, initialIds, onChange }: Props) {
           <select
             value={setId}
             onChange={(e) => setSetId(e.target.value)}
-            className="w-full rounded-md border border-border bg-panel-2 px-2 py-1.5"
+            className="w-full rounded-md border border-border bg-panel-2 px-2 py-1.5 text-base md:text-sm"
           >
             <option value="">Choose a set…</option>
             {sortedSets.map((s) => (

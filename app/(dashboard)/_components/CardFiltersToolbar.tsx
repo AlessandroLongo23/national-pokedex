@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ChevronDown, Search, X } from "lucide-react";
+import { ChevronDown, Filter, Search, X } from "lucide-react";
 import { SETS } from "@/lib/data";
 import {
   RARITY_LABEL,
@@ -169,6 +169,26 @@ export function CardFiltersToolbar({
   const showRow3 =
     features.showPrice || features.showGeneration || features.showRegionalForm;
 
+  // Count of active *secondary* filters (rows 2 & 3). On mobile these rows
+  // collapse behind a "Filters" toggle so they don't bury the card grid; on
+  // desktop (md:) the rows stay permanently visible exactly as before.
+  const activeSecondary =
+    filters.rarities.size +
+    filters.setIds.size +
+    (filters.artist ? 1 : 0) +
+    filters.types.size +
+    (filters.dexFrom !== null || filters.dexTo !== null ? 1 : 0) +
+    filters.priceBuckets.size +
+    filters.generations.size +
+    filters.regionalForms.size;
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+  // Auto-open the secondary rows on mount if the user already has secondary
+  // filters applied (mirrors ToolbarTiered's behaviour).
+  useEffect(() => {
+    if (activeSecondary > 0) setMobileFiltersOpen(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <div className="sticky top-16 z-sticky space-y-2 rounded-lg border border-border bg-panel/90 p-3 backdrop-blur shadow-[0_4px_16px_-8px_rgb(0_0_0/0.6)]">
       {/* Row 1: search · supertype · sort · size */}
@@ -183,7 +203,7 @@ export function CardFiltersToolbar({
             value={filters.search}
             onChange={(e) => update({ search: e.target.value })}
             placeholder="Search by card name"
-            className="h-8 w-full rounded-md border border-border bg-panel-2 pl-8 pr-7 text-xs text-text placeholder:text-muted focus:border-accent focus:outline-none"
+            className="h-10 w-full rounded-md border border-border bg-panel-2 pl-8 pr-7 text-base text-text placeholder:text-muted focus:border-accent focus:outline-none md:h-8 md:text-xs"
           />
           {filters.search && (
             <button
@@ -225,9 +245,9 @@ export function CardFiltersToolbar({
               type="button"
               onClick={() => onSortChange(opt.value)}
               className={[
-                "rounded-md px-2.5 py-1 text-[11px] uppercase tracking-wider transition",
+                "rounded-md px-2.5 py-2 text-[11px] uppercase tracking-wider transition md:py-1",
                 sort === opt.value
-                  ? "bg-accent/15 text-accent"
+                  ? "bg-accent/10 text-accent"
                   : "text-muted hover:bg-panel-2 hover:text-text",
               ].join(" ")}
             >
@@ -235,6 +255,36 @@ export function CardFiltersToolbar({
             </button>
           ))}
         </div>
+
+        <button
+          type="button"
+          onClick={() => setMobileFiltersOpen((v) => !v)}
+          aria-expanded={mobileFiltersOpen}
+          className={[
+            "inline-flex h-9 items-center gap-1.5 rounded-md px-2.5 text-xs transition outline-none md:hidden",
+            "focus-visible:ring-2 focus-visible:ring-accent/60",
+            mobileFiltersOpen
+              ? "bg-panel-3 text-text"
+              : activeSecondary > 0
+                ? "bg-[color-mix(in_oklch,var(--color-accent)_14%,transparent)] text-[var(--color-accent)]"
+                : "bg-panel-2 text-text-secondary",
+          ].join(" ")}
+        >
+          <Filter className="h-3.5 w-3.5" aria-hidden />
+          <span>Filters</span>
+          {activeSecondary > 0 && !mobileFiltersOpen && (
+            <span className="rounded-sm bg-[var(--color-accent)] px-1 py-px text-[10px] nums text-bg">
+              {activeSecondary}
+            </span>
+          )}
+          <ChevronDown
+            aria-hidden
+            className={[
+              "h-3 w-3 transition-transform",
+              mobileFiltersOpen ? "rotate-180" : "",
+            ].join(" ")}
+          />
+        </button>
 
         <div className="ml-auto flex items-center gap-2 text-xs text-muted">
           <span className="hidden sm:inline">Size</span>
@@ -252,8 +302,13 @@ export function CardFiltersToolbar({
       </div>
 
       {/* Row 2: rarity chips · set/artist dropdowns · dex range · type chips · clear */}
-      <div className="flex flex-wrap items-center gap-2 border-t border-border pt-2">
-        <div className="flex flex-wrap gap-1">
+      <div
+        className={[
+          "flex-wrap items-center gap-2 border-t border-border pt-2",
+          mobileFiltersOpen ? "flex" : "hidden md:flex",
+        ].join(" ")}
+      >
+        <div className="flex flex-wrap gap-1.5 md:gap-1">
           {RARITY_ORDER.map((r) => {
             const active = filters.rarities.has(r);
             return (
@@ -262,9 +317,9 @@ export function CardFiltersToolbar({
                 type="button"
                 onClick={() => toggleRarity(r)}
                 className={[
-                  "rounded-md border px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider transition",
+                  "rounded-md border px-2.5 py-1.5 text-[10px] font-medium uppercase tracking-wider transition md:px-2 md:py-0.5",
                   active
-                    ? "border-accent bg-accent/15 text-accent"
+                    ? "border-accent bg-accent/10 text-accent"
                     : "border-border bg-panel-2 text-muted hover:border-border-strong hover:text-text",
                 ].join(" ")}
               >
@@ -320,7 +375,12 @@ export function CardFiltersToolbar({
       </div>
 
       {showRow3 && (
-        <div className="flex flex-wrap items-center gap-2 border-t border-border pt-2">
+        <div
+          className={[
+            "flex-wrap items-center gap-2 border-t border-border pt-2",
+            mobileFiltersOpen ? "flex" : "hidden md:flex",
+          ].join(" ")}
+        >
           {features.showPrice && (
             <ChipGroup label="Price">
               {PRICE_BUCKETS.map((b) => {
@@ -384,7 +444,7 @@ function chipClass(active: boolean): string {
   return [
     "rounded-md border px-2 py-0.5 text-[11px] font-medium transition",
     active
-      ? "border-accent bg-accent/15 text-accent"
+      ? "border-accent bg-accent/10 text-accent"
       : "border-border bg-panel-2 text-muted hover:border-border-strong hover:text-text",
   ].join(" ");
 }
@@ -506,7 +566,7 @@ function SetMultiSelect({
                       className={[
                         "flex w-full items-center justify-between gap-2 rounded px-2 py-1 text-left text-xs transition",
                         active
-                          ? "bg-accent/15 text-accent"
+                          ? "bg-accent/10 text-accent"
                           : "text-text hover:bg-panel-2",
                       ].join(" ")}
                     >
@@ -584,7 +644,7 @@ function ComboBox({
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Filter…"
-            className="block w-full border-b border-border bg-panel px-3 py-2 text-xs text-text placeholder:text-muted focus:outline-none"
+            className="block w-full border-b border-border bg-panel px-3 py-2 text-base text-text placeholder:text-muted focus:outline-none md:text-xs"
           />
           <div className="max-h-64 overflow-y-auto p-1">
             {value && (
@@ -615,7 +675,7 @@ function ComboBox({
                   className={[
                     "block w-full truncate rounded px-2 py-1 text-left text-xs transition",
                     active
-                      ? "bg-accent/15 text-accent"
+                      ? "bg-accent/10 text-accent"
                       : "text-text hover:bg-panel-2",
                   ].join(" ")}
                 >
@@ -674,7 +734,7 @@ function TypeChips({
                   className={[
                     "rounded-md border px-2 py-0.5 text-[11px] transition",
                     active
-                      ? "border-accent bg-accent/15 text-accent"
+                      ? "border-accent bg-accent/10 text-accent"
                       : "border-border bg-panel-2 text-muted hover:border-border-strong hover:text-text",
                   ].join(" ")}
                 >
@@ -708,7 +768,7 @@ function DexRange({
   return (
     <div
       className={[
-        "inline-flex h-7 items-center gap-1.5 rounded-md border px-2 text-xs",
+        "inline-flex h-10 items-center gap-1.5 rounded-md border px-2 text-xs md:h-7",
         active
           ? "border-accent bg-accent/10 text-accent"
           : "border-border bg-panel-2 text-muted",
@@ -722,7 +782,7 @@ function DexRange({
         value={from ?? ""}
         onChange={(e) => onChange(parse(e.target.value), to)}
         placeholder="1"
-        className="h-5 w-12 rounded-sm bg-transparent text-center nums focus:outline-none"
+        className="h-9 w-12 rounded-sm bg-transparent text-center text-base text-text nums focus:outline-none md:h-5 md:text-xs"
         aria-label="Dex from"
       />
       <span aria-hidden>–</span>
@@ -733,7 +793,7 @@ function DexRange({
         value={to ?? ""}
         onChange={(e) => onChange(from, parse(e.target.value))}
         placeholder="1025"
-        className="h-5 w-14 rounded-sm bg-transparent text-center nums focus:outline-none"
+        className="h-9 w-14 rounded-sm bg-transparent text-center text-base text-text nums focus:outline-none md:h-5 md:text-xs"
         aria-label="Dex to"
       />
     </div>

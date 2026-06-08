@@ -1,5 +1,46 @@
 import { genOf, type CardEntry, type MegaForm, type MegaIndex } from "@/lib/data/types";
 
+/**
+ * Some Pokémon carry both a generic Mega form (legacy "M Name-EX" cards, printed
+ * before the TCG distinguished X/Y) and explicit X/Y forms. The generic form is
+ * not a real game form and has no artwork of its own, so it renders as a visual
+ * duplicate of the X cell. Fold each generic form's cards into its `-x` sibling
+ * (`-y` if no `-x` exists). Charizard is the only case in the current catalog.
+ *
+ * Mutates `card.megaFormKey` in place across `cardsBySet` and returns updated
+ * `megas` (generic forms dropped) and `cardIndexByMega` (entries merged).
+ */
+export function mergeGenericMegaForms(
+  cardsBySet: Record<string, CardEntry[]>,
+  megas: MegaForm[],
+  cardIndexByMega: MegaIndex,
+): { megas: MegaForm[]; cardIndexByMega: MegaIndex } {
+  const keys = new Set(megas.map((m) => m.formKey));
+  const remap = new Map<string, string>(); // generic formKey → target formKey
+  for (const m of megas) {
+    if (m.isPrimal || /-(x|y)$/.test(m.formKey)) continue;
+    if (keys.has(`${m.formKey}-x`)) remap.set(m.formKey, `${m.formKey}-x`);
+    else if (keys.has(`${m.formKey}-y`)) remap.set(m.formKey, `${m.formKey}-y`);
+  }
+  if (remap.size === 0) return { megas, cardIndexByMega };
+
+  for (const cards of Object.values(cardsBySet)) {
+    for (const card of cards) {
+      const target = card.megaFormKey ? remap.get(card.megaFormKey) : undefined;
+      if (target) card.megaFormKey = target;
+    }
+  }
+
+  const nextIndex: MegaIndex = { ...cardIndexByMega };
+  for (const [from, to] of remap) {
+    nextIndex[to] = [...(nextIndex[to] ?? []), ...(nextIndex[from] ?? [])];
+    delete nextIndex[from];
+  }
+  const nextMegas = megas.filter((m) => !remap.has(m.formKey));
+
+  return { megas: nextMegas, cardIndexByMega: nextIndex };
+}
+
 // Trailing card-product suffixes that need to be stripped before we extract
 // the form. The historical TCG has cycled through "-EX", " GX", " V",
 // " VMAX", " VSTAR" (uppercase) and the modern " ex" (lowercase).
