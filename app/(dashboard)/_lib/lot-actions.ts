@@ -33,7 +33,14 @@ const contentSchema = z.object({
 const logLotSchema = z.object({
   contents: z.array(contentSchema).max(MAX_CARDS),
   cost: costSchema,
+  purchasedAt: z.string().datetime().optional(),
+  consumeSingleIds: z.array(z.string().uuid()).max(200).optional(),
 });
+
+export interface LogCardLotOptions {
+  purchasedAt?: string;
+  consumeSingleIds?: string[];
+}
 
 // Replaces the lot's lot_purchase ledger row with one reflecting the
 // lot's current cost/currency/purchased_at/rate. Idempotent — no row
@@ -77,8 +84,19 @@ async function syncLotPurchaseTransaction(
 export async function logCardLot(
   contents: LotContentRow[],
   cost?: LotCostInput,
+  options: LogCardLotOptions = {},
 ): Promise<{ lotId: string; newCards: number }> {
-  const { contents: rows, cost: parsedCost } = logLotSchema.parse({ contents, cost });
+  const {
+    contents: rows,
+    cost: parsedCost,
+    purchasedAt,
+    consumeSingleIds,
+  } = logLotSchema.parse({
+    contents,
+    cost,
+    purchasedAt: options.purchasedAt,
+    consumeSingleIds: options.consumeSingleIds,
+  });
 
   // Dedupe by card_id, keeping the last quantity supplied.
   const byCard = new Map<string, number>();
@@ -100,18 +118,42 @@ export async function logCardLot(
     newCards = cardIds.filter((c) => !alreadyOwned.has(c)).length;
   }
 
+  const rateToEur =
+    parsedCost && parsedCost.costCents != null
+      ? await getRateToEurToday(parsedCost.currency)
+      : null;
+
+  // Grouping path: consolidate existing singles into the lot atomically.
+  if (consumeSingleIds && consumeSingleIds.length > 0) {
+    const { data: lotId, error } = await supabase.rpc("group_singles_into_lot", {
+      _card_ids: cardIds,
+      _quantities: cardIds.map((c) => byCard.get(c)!),
+      _cost_cents: parsedCost ? parsedCost.costCents : null,
+      _currency:
+        parsedCost && parsedCost.costCents != null ? parsedCost.currency : null,
+      _purchased_at: purchasedAt ?? null,
+      _rate_to_eur: rateToEur,
+      _single_ids: consumeSingleIds,
+    });
+    if (error) throw new Error(`Failed to group into lot: ${error.message}`);
+    revalidatePath("/transactions");
+    revalidatePath("/portfolio");
+    revalidatePath("/collection");
+    return { lotId: lotId as string, newCards };
+  }
+
   const lotRow: {
     user_id: string;
+    purchased_at?: string;
     cost_cents?: number | null;
     currency?: string | null;
     rate_to_eur?: number | null;
   } = { user_id: userId };
+  if (purchasedAt) lotRow.purchased_at = purchasedAt;
   if (parsedCost) {
     lotRow.cost_cents = parsedCost.costCents;
     lotRow.currency = parsedCost.costCents != null ? parsedCost.currency : null;
-    if (parsedCost.costCents != null) {
-      lotRow.rate_to_eur = await getRateToEurToday(parsedCost.currency);
-    }
+    if (parsedCost.costCents != null) lotRow.rate_to_eur = rateToEur;
   }
 
   const { data: lot, error: lotErr } = await supabase
