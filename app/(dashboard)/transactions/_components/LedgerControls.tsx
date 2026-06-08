@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import type { LedgerCurrency } from "@/lib/ledger/money";
 import type { Currency } from "@/lib/pricing/currencies";
 import { deleteTransactionsBatch } from "../_lib/transaction-actions";
@@ -43,6 +44,7 @@ export function LedgerControls({
   );
   const [pending, setPending] = useState<PendingDelete | null>(null);
   const timerRef = useRef<number | null>(null);
+  const router = useRouter();
 
   const filteredRows = useMemo(
     () => applyFilters(rows, kind, search, timeRange),
@@ -131,6 +133,24 @@ export function LedgerControls({
     setPending(null);
   };
 
+  const selectedSingleIds = useMemo(() => {
+    const out: string[] = [];
+    for (const r of rows) {
+      if (selectedIds.has(r.id) && r.kind === "single_purchase") out.push(r.id);
+    }
+    return out;
+  }, [rows, selectedIds]);
+
+  // Group only when EVERY selected row is a single purchase.
+  const canGroup =
+    selectedIds.size > 0 && selectedSingleIds.length === selectedIds.size;
+
+  const handleGroup = () => {
+    if (selectedSingleIds.length === 0) return;
+    setSelectedIds(new Set());
+    router.push(`/transactions/lots/new?fromSingles=${selectedSingleIds.join(",")}`);
+  };
+
   return (
     <div className="flex flex-col gap-3">
       <LedgerFilters
@@ -145,6 +165,8 @@ export function LedgerControls({
       {selectedIds.size > 0 && (
         <LedgerSelectionBar
           selectedCount={selectedIds.size}
+          canGroup={canGroup}
+          onGroup={handleGroup}
           onDelete={handleDelete}
           onClear={handleClear}
         />

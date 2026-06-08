@@ -1,15 +1,19 @@
 "use client";
 
-import { Trash2 } from "lucide-react";
+import { Layers, Trash2 } from "lucide-react";
 
 interface Props {
   selectedCount: number;
+  canGroup: boolean;
+  onGroup: () => void;
   onDelete: () => void;
   onClear: () => void;
 }
 
 export function LedgerSelectionBar({
   selectedCount,
+  canGroup,
+  onGroup,
   onDelete,
   onClear,
 }: Props) {
@@ -19,6 +23,16 @@ export function LedgerSelectionBar({
         {selectedCount} selected
       </span>
       <div className="flex items-center gap-1">
+        {canGroup && (
+          <button
+            type="button"
+            onClick={onGroup}
+            className="inline-flex items-center gap-1.5 rounded-md border border-accent/40 bg-accent/10 px-2.5 py-1 text-xs font-medium text-accent transition hover:bg-accent/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+          >
+            <Layers className="h-3.5 w-3.5" aria-hidden />
+            Group into bulk lot
+          </button>
+        )}
         <button
           type="button"
           onClick={onDelete}
