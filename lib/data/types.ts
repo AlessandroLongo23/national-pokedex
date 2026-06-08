@@ -103,6 +103,14 @@ export interface CardEntry {
   // (names containing " & ") never get a megaFormKey even though they carry
   // the MEGA subtype.
   megaFormKey?: string;
+  // Set for Pokémon cards whose name carries a regional prefix (Alolan /
+  // Galarian / Hisuian / Paldean) AND whose (region, baseDex) resolved to a
+  // true variant in variants.json. Assigned ONLY from the resolved
+  // cardIndexByVariant during ingest (never from the name prefix alone), so
+  // region-exclusive region-prefixed cards (e.g. Paldean Clodsire) carry no
+  // variantFormKey and remain ordinary base-dex cards. A card has at most one
+  // of megaFormKey / variantFormKey, or neither.
+  variantFormKey?: string;
 }
 
 export type CardIndex = Record<number, string[]>;
@@ -113,9 +121,32 @@ export interface MegaForm {
   baseDex: number;
   gen: Generation;
   isPrimal: boolean;
+  /** PokeAPI "form id" for this Mega/Primal's official artwork sprite
+   * (`/official-artwork/{id}.png`) — e.g. 10034 for Mega Charizard X, 10282
+   * for Mega Meganium. Resolved during ingest by `resolveMegaArtwork`; absent
+   * for any form PokeAPI doesn't list yet, in which case the cell falls back
+   * to the base species art. */
+  artworkId?: number;
 }
 
 export type MegaIndex = Record<string, string[]>;
+
+export type VariantRegion = "alola" | "galar" | "hisui" | "paldea";
+
+export interface RegionalVariant {
+  variantKey: string; // "alola-vulpix", "galar-darmanitan", "hisui-basculin"
+  displayName: string; // "Alolan Vulpix", "Galarian Darmanitan"
+  region: VariantRegion;
+  baseDex: number; // 37
+  gen: Generation; // genOf(baseDex)
+  /** PokeAPI "form id" for THIS form's official-artwork sprite
+   * (`/official-artwork/{id}.png`) — e.g. 10103 for Alolan Vulpix. Resolved
+   * during ingest by `resolveVariantArtwork`; absent only for a form PokeAPI
+   * doesn't list, in which case the cell falls back to the base species art. */
+  artworkId?: number;
+}
+
+export type VariantIndex = Record<string, string[]>; // variantKey → cardId[]
 
 export interface SpeciesEntry {
   dex: number;
