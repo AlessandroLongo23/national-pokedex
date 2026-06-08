@@ -43,29 +43,36 @@ export default async function TransactionsPage() {
   const displayCurrency = prefs.displayCurrency;
   const heldValueCurrency = PRICE_SOURCE_CURRENCY[prefs.priceSource];
 
-  const [txnRes, ownedRes, psaCardsRes, latestRatesFromEur] = await Promise.all([
-    supabase
-      .from("transactions")
-      .select(
-        "id, kind, occurred_at, amount_cents, currency, rate_to_eur, pack_id, card_id, quantity, note, variant, psa_submission_id, packs_opened(set_id)",
-      )
-      .eq("user_id", userId)
-      .order("occurred_at", { ascending: false }),
-    supabase
-      .from("owned_cards")
-      .select("card_id, quantity")
-      .eq("user_id", userId),
-    // For each PSA submission referenced in the ledger we want to show
-    // a card count next to the fee row. One round-trip groups all of
-    // them up front.
-    supabase
-      .from("psa_submission_cards")
-      .select("submission_id, card_id, psa_submissions!inner(user_id)")
-      .eq("psa_submissions.user_id", userId),
-    // Cached for 24h by Next.js's fetch — essentially free after the
-    // first render of the day.
-    getLatestRatesFromEur(),
-  ]);
+  const [txnRes, ownedRes, psaCardsRes, lotContentsRes, latestRatesFromEur] =
+    await Promise.all([
+      supabase
+        .from("transactions")
+        .select(
+          "id, kind, occurred_at, amount_cents, currency, rate_to_eur, pack_id, lot_id, card_id, quantity, note, variant, psa_submission_id, packs_opened(set_id)",
+        )
+        .eq("user_id", userId)
+        .order("occurred_at", { ascending: false }),
+      supabase
+        .from("owned_cards")
+        .select("card_id, quantity")
+        .eq("user_id", userId),
+      // For each PSA submission referenced in the ledger we want to show
+      // a card count next to the fee row. One round-trip groups all of
+      // them up front.
+      supabase
+        .from("psa_submission_cards")
+        .select("submission_id, card_id, psa_submissions!inner(user_id)")
+        .eq("psa_submissions.user_id", userId),
+      // Distinct-card count per bulk lot, for the "Bulk lot · N cards"
+      // ledger label. Same grouping strategy as the PSA counts above.
+      supabase
+        .from("lot_contents")
+        .select("lot_id, card_lots!inner(user_id)")
+        .eq("card_lots.user_id", userId),
+      // Cached for 24h by Next.js's fetch — essentially free after the
+      // first render of the day.
+      getLatestRatesFromEur(),
+    ]);
 
   // Pricing the held value mirrors the portfolio page so the two pages
   // agree on the same number for the same set of cards.
@@ -127,6 +134,12 @@ export default async function TransactionsPage() {
     psaCardCountById.set(sid, (psaCardCountById.get(sid) ?? 0) + 1);
   }
 
+  const lotCardCountById = new Map<string, number>();
+  for (const r of lotContentsRes.data ?? []) {
+    const lid = (r as { lot_id: string }).lot_id;
+    lotCardCountById.set(lid, (lotCardCountById.get(lid) ?? 0) + 1);
+  }
+
   // Supabase types the embedded `packs_opened` join as an array even
   // though our FK is N:1; in practice it has 0 or 1 element.
   const rawRows = (txnRes.data ?? []) as unknown as Array<{
@@ -137,6 +150,7 @@ export default async function TransactionsPage() {
     currency: string;
     rate_to_eur: number | string | null;
     pack_id: string | null;
+    lot_id: string | null;
     card_id: string | null;
     quantity: number | null;
     note: string | null;
@@ -163,6 +177,7 @@ export default async function TransactionsPage() {
       currency: r.currency,
       rateToEur: Number.isFinite(rateToEur) ? rateToEur : null,
       packId: r.pack_id,
+      lotId: r.lot_id,
       cardId: r.card_id,
       quantity: r.quantity,
       note: r.note,
@@ -172,6 +187,7 @@ export default async function TransactionsPage() {
       psaCardCount: r.psa_submission_id
         ? psaCardCountById.get(r.psa_submission_id) ?? 0
         : null,
+      lotCardCount: r.lot_id ? lotCardCountById.get(r.lot_id) ?? 0 : null,
       variant: isCardVariant(r.variant) ? r.variant : null,
     });
   }

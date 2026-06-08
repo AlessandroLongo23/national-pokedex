@@ -27,6 +27,10 @@ type Props =
       packId: string;
     }
   | {
+      kind: "lot_purchase";
+      lotId: string;
+    }
+  | {
       kind: "psa_fee";
       psaSubmissionId: string;
     }
@@ -82,6 +86,20 @@ export function LedgerRowActions(props: Props) {
           href={`/packs/${props.packId}/edit`}
           className="inline-flex h-7 w-7 items-center justify-center rounded-md text-muted transition hover:bg-panel-2 hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
           aria-label="Edit pack"
+        >
+          <Pencil className="h-3.5 w-3.5" aria-hidden />
+        </Link>
+      </Tooltip>
+    );
+  }
+
+  if (props.kind === "lot_purchase") {
+    return (
+      <Tooltip content="Edit lot">
+        <Link
+          href={`/transactions/lots/${props.lotId}/edit`}
+          className="inline-flex h-7 w-7 items-center justify-center rounded-md text-muted transition hover:bg-panel-2 hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+          aria-label="Edit lot"
         >
           <Pencil className="h-3.5 w-3.5" aria-hidden />
         </Link>

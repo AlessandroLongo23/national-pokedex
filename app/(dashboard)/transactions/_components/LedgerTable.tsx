@@ -34,6 +34,7 @@ export interface LedgerTableRow extends LedgerRow {
   card: LedgerTableCardInfo | null;
   psaSubmissionId: string | null;
   psaCardCount: number | null;
+  lotCardCount: number | null;
   variant: CardVariant | null;
 }
 
@@ -57,6 +58,7 @@ const KIND_LABEL: Record<TransactionKind, string> = {
   single_purchase: "Single",
   sale: "Sale",
   psa_fee: "PSA",
+  lot_purchase: "Bulk lot",
 };
 
 // Variant labels rendered inline next to non-normal singles. Normal is
@@ -358,6 +360,9 @@ function RowActions({
   if (row.kind === "pack_purchase" && row.packId) {
     return <LedgerRowActions kind="pack_purchase" packId={row.packId} />;
   }
+  if (row.kind === "lot_purchase" && row.lotId) {
+    return <LedgerRowActions kind="lot_purchase" lotId={row.lotId} />;
+  }
   if (row.kind === "psa_fee" && row.psaSubmissionId) {
     return (
       <LedgerRowActions
@@ -416,6 +421,22 @@ function renderDescription(row: LedgerTableRow) {
   }
   if ((row.kind === "single_purchase" || row.kind === "sale") && row.card) {
     return <CardLine row={row} card={row.card} />;
+  }
+  if (row.kind === "lot_purchase" && row.lotId) {
+    const n = row.lotCardCount ?? 0;
+    return (
+      <Link
+        href={`/transactions/lots/${row.lotId}/edit`}
+        className="text-text underline-offset-2 hover:underline"
+      >
+        Bulk lot
+        {n > 0 && (
+          <span className="ml-1 text-[11px] text-muted tabular-nums">
+            · {n} card{n === 1 ? "" : "s"}
+          </span>
+        )}
+      </Link>
+    );
   }
   if (row.kind === "psa_fee" && row.psaSubmissionId) {
     const n = row.psaCardCount ?? 0;
