@@ -20,6 +20,7 @@ const KIND_OPTIONS: ReadonlyArray<{ value: KindFilter; label: string }> = [
   { value: "single_purchase", label: "Single" },
   { value: "sale", label: "Sale" },
   { value: "pack_purchase", label: "Pack" },
+  { value: "lot_purchase", label: "Bulk lot" },
   { value: "psa_fee", label: "PSA" },
 ];
 

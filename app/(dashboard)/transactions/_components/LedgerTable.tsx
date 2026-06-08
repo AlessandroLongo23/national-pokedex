@@ -92,8 +92,8 @@ export function LedgerTable({
     return (
       <div className="rounded-lg border border-dashed border-border bg-panel p-12 text-center">
         <p className="text-sm text-muted">
-          No transactions match. Adjust the filters, or log a pack, a
-          singles purchase, a sale, or a PSA submission.
+          No transactions match. Adjust the filters, or log a pack, a bulk
+          lot, a singles purchase, a sale, or a PSA submission.
         </p>
       </div>
     );
