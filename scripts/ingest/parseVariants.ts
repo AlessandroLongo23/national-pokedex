@@ -1,4 +1,9 @@
-import { genOf, type CardEntry, type VariantRegion } from "@/lib/data/types";
+import {
+  genOf,
+  type CardEntry,
+  type VariantIndex,
+  type VariantRegion,
+} from "@/lib/data/types";
 import type { VarietyForm } from "./fetchMegaArtwork";
 
 // Same trailing card-product suffixes parseMegas strips before extracting a
@@ -155,4 +160,27 @@ export function discoverVariants(
   }));
 
   return { candidates };
+}
+
+/**
+ * Derive `variantFormKey` onto cards from the RESOLVED `cardIndexByVariant`
+ * (the orphan-card invariant): a card gets a variantFormKey iff its id appears
+ * in the index — i.e. its (region, dex) resolved to a true variant. Cards that
+ * were region-exclusive (dropped by the resolver, absent from the index) keep
+ * no variantFormKey and remain ordinary base-dex cards. Mutates in place.
+ */
+export function applyVariantFormKeys(
+  cardsBySet: Record<string, CardEntry[]>,
+  cardIndexByVariant: VariantIndex,
+): void {
+  const cardToVariant = new Map<string, string>();
+  for (const [variantKey, ids] of Object.entries(cardIndexByVariant)) {
+    for (const id of ids) cardToVariant.set(id, variantKey);
+  }
+  for (const cards of Object.values(cardsBySet)) {
+    for (const card of cards) {
+      const key = cardToVariant.get(card.id);
+      if (key) card.variantFormKey = key;
+    }
+  }
 }

@@ -5,6 +5,8 @@ import { parsePokedex } from "./parsePokedex";
 import { parseSetCards, type RawCard } from "./parseCards";
 import { discoverMegas, mergeGenericMegaForms } from "./parseMegas";
 import { resolveMegaArtwork } from "./fetchMegaArtwork";
+import { discoverVariants, applyVariantFormKeys } from "./parseVariants";
+import { resolveVariantArtwork } from "./fetchVariantArtwork";
 import { computeCoverage } from "./coverage";
 import { computeGreedyOrder } from "./greedy";
 import { fetchSpecies } from "./fetchSpecies";
@@ -138,6 +140,18 @@ async function main() {
     `[ingest] mega artwork: resolved ${Object.keys(megaArtwork).length}/${megas.length} form ids`,
   );
 
+  const variantDiscovery = discoverVariants(cardsBySet);
+  const { variants, cardIndexByVariant } = await resolveVariantArtwork(
+    variantDiscovery.candidates,
+  );
+  // Orphan-card invariant: assign variantFormKey ONLY from the resolved index,
+  // never from the name prefix — region-exclusive cards (Clodsire, Sneasler…)
+  // get none and stay on their base dex.
+  applyVariantFormKeys(cardsBySet, cardIndexByVariant);
+  console.log(
+    `[ingest] variants: ${variants.length} true variants from ${variantDiscovery.candidates.length} region-prefixed candidates`,
+  );
+
   const coverage = computeCoverage(pokedex, sets);
   console.log(
     `[ingest] coverage: ${coverage.totalCovered}/${pokedex.length} (${coverage.totalMissing} missing)`,
@@ -207,6 +221,8 @@ async function main() {
   writeJson(path.join(dataDir, "cardIndex.json"), cardIndex);
   writeJson(path.join(dataDir, "megas.json"), megas);
   writeJson(path.join(dataDir, "cardIndexByMega.json"), cardIndexByMega);
+  writeJson(path.join(dataDir, "variants.json"), variants);
+  writeJson(path.join(dataDir, "cardIndexByVariant.json"), cardIndexByVariant);
   writeJson(path.join(dataDir, "species.json"), species);
   writeJson(path.join(dataDir, "boosters.json"), boosters);
   writeJson(path.join(dataDir, "tcgcsvMap.json"), tcgcsvMap);

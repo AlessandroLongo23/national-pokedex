@@ -9,6 +9,8 @@ import boosters from "./boosters.json";
 import tcgcsvMap from "./tcgcsvMap.json";
 import megas from "./megas.json";
 import cardIndexByMega from "./cardIndexByMega.json";
+import variants from "./variants.json";
+import cardIndexByVariant from "./cardIndexByVariant.json";
 import type {
   BoosterManifest,
   CardEntry,
@@ -18,6 +20,8 @@ import type {
   MegaForm,
   MegaIndex,
   PokedexEntry,
+  RegionalVariant,
+  VariantIndex,
   SetInfo,
   SetPools,
   SpeciesIndex,
@@ -36,6 +40,8 @@ export const BOOSTERS = boosters as BoosterManifest;
 export const TCGCSV_MAP = tcgcsvMap as TcgCsvMap;
 export const MEGAS = megas as MegaForm[];
 export const CARD_INDEX_BY_MEGA = cardIndexByMega as MegaIndex;
+export const VARIANTS = variants as RegionalVariant[];
+export const CARD_INDEX_BY_VARIANT = cardIndexByVariant as VariantIndex;
 
 export function getSet(setId: string): SetInfo | undefined {
   return SETS.find((s) => s.id === setId);
