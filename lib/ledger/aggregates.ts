@@ -14,6 +14,7 @@ export const TRANSACTION_KINDS = [
   "single_purchase",
   "sale",
   "psa_fee",
+  "lot_purchase",
 ] as const;
 export type TransactionKind = (typeof TRANSACTION_KINDS)[number];
 
@@ -28,6 +29,8 @@ export interface LedgerRow {
    *  as an approximation. */
   rateToEur: number | null;
   packId: string | null;
+  /** Set on lot_purchase rows; links to card_lots.id. */
+  lotId: string | null;
   cardId: string | null;
   quantity: number | null;
   note: string | null;

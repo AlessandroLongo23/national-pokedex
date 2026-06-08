@@ -24,6 +24,7 @@ function row(partial: Partial<LedgerRow> & { amountCents: number }): LedgerRow {
     currency: "USD",
     rateToEur: null,
     packId: null,
+    lotId: null,
     cardId: null,
     quantity: null,
     note: null,
