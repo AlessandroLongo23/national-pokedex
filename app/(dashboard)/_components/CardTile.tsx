@@ -24,6 +24,12 @@ interface Props {
   selectMode?: boolean;
   selected?: boolean;
   onSelect?: (cardId: string) => void;
+  // When provided alongside selectMode, the tile shows a quantity badge with
+  // +/- steppers instead of a plain check. `selected` still gates the ring.
+  // First click sets qty 1; the steppers adjust 0..99. Used by the bulk-lot
+  // flow.
+  selectedQuantity?: number;
+  onQuantityChange?: (cardId: string, quantity: number) => void;
   hideActions?: boolean;
   // On the species page the details link is redundant — we're already there.
   hideDetailsLink?: boolean;
@@ -35,6 +41,8 @@ function TileBase({
   selectMode,
   selected,
   onSelect,
+  selectedQuantity,
+  onQuantityChange,
   hideActions,
   hideDetailsLink,
 }: Props) {
@@ -79,27 +87,63 @@ function TileBase({
     >
       <div className="relative">
         {selectMode ? (
-          <button
-            type="button"
-            onClick={() => onSelect?.(card.id)}
-            className={imageClassName}
-            style={{ aspectRatio: "245 / 342" }}
-            aria-label={`Toggle ${card.name}`}
-            tabIndex={0}
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={card.imageSmall}
-              alt={card.name}
-              loading="lazy"
-              className="h-full w-full object-cover"
-            />
-            {selected && (
-              <span className="pointer-events-none absolute top-1 right-1 flex h-7 w-7 items-center justify-center rounded-full bg-accent text-bg">
-                <Check className="h-3.5 w-3.5" strokeWidth={3} aria-hidden />
-              </span>
+          <>
+            <button
+              type="button"
+              onClick={() =>
+                onQuantityChange
+                  ? onQuantityChange(card.id, selected ? 0 : 1)
+                  : onSelect?.(card.id)
+              }
+              className={imageClassName}
+              style={{ aspectRatio: "245 / 342" }}
+              aria-label={`Toggle ${card.name}`}
+              tabIndex={0}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={card.imageSmall}
+                alt={card.name}
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+              {selected && !onQuantityChange && (
+                <span className="pointer-events-none absolute top-1 right-1 flex h-7 w-7 items-center justify-center rounded-full bg-accent text-primary-foreground">
+                  <Check className="h-3.5 w-3.5" strokeWidth={3} aria-hidden />
+                </span>
+              )}
+            </button>
+            {selected && onQuantityChange && (
+              <div className="absolute top-1 right-1 inline-flex h-7 items-stretch overflow-hidden rounded-md border border-accent bg-accent text-primary-foreground shadow">
+                <button
+                  type="button"
+                  onClick={() =>
+                    onQuantityChange(card.id, Math.max(0, (selectedQuantity ?? 1) - 1))
+                  }
+                  className="inline-flex w-6 items-center justify-center transition hover:bg-accent/80 focus-visible:outline-none"
+                  aria-label={`Decrease ${card.name} quantity`}
+                >
+                  <Minus className="h-3 w-3" strokeWidth={3} aria-hidden />
+                </button>
+                <span
+                  className="inline-flex min-w-7 items-center justify-center border-x border-bg/30 px-1.5 text-[11px] font-semibold tabular-nums"
+                  aria-hidden
+                >
+                  ×{selectedQuantity ?? 1}
+                </span>
+                <button
+                  type="button"
+                  onClick={() =>
+                    onQuantityChange(card.id, Math.min(99, (selectedQuantity ?? 1) + 1))
+                  }
+                  className="inline-flex w-6 items-center justify-center transition hover:bg-accent/80 focus-visible:outline-none"
+                  aria-label={`Increase ${card.name} quantity`}
+                >
+                  <Plus className="h-3 w-3" strokeWidth={3} aria-hidden />
+                </button>
+              </div>
             )}
-          </button>
+          </>
         ) : (
           <Link
             href={`/cards/${encodeURIComponent(card.id)}`}

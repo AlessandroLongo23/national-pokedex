@@ -17,9 +17,13 @@ const ASPECT = 342 / 245;
 interface Props {
   cards: CardEntry[];
   cols: number;
+  // When provided, tiles render in select mode with a quantity stepper.
+  // Absent => read-only (the /cards catalogue).
+  selected?: ReadonlyMap<string, number>;
+  onQuantityChange?: (cardId: string, quantity: number) => void;
 }
 
-export function VirtualizedCardGrid({ cards, cols }: Props) {
+export function VirtualizedCardGrid({ cards, cols, selected, onQuantityChange }: Props) {
   // Document-scroll pages expose their scrolling panel via context. When it's
   // available the grid virtualizes against the *page* scroll — so the page
   // title and the sticky toolbar share one scroll region — and `scrollMargin`
@@ -132,7 +136,15 @@ export function VirtualizedCardGrid({ cards, cols }: Props) {
               }}
             >
               {rowCards.map((card) => (
-                <CardTile key={card.id} card={card} density="grid" />
+                <CardTile
+                  key={card.id}
+                  card={card}
+                  density="grid"
+                  selectMode={selected != null}
+                  selected={selected != null && (selected.get(card.id) ?? 0) > 0}
+                  selectedQuantity={selected?.get(card.id) ?? 0}
+                  onQuantityChange={onQuantityChange}
+                />
               ))}
             </div>
           );
