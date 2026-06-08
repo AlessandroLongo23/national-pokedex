@@ -12,6 +12,7 @@ import { useFavorites } from "../_lib/FavoritesContext";
 import { useCardPrice } from "../_lib/CardPricesContext";
 import { useUser } from "../_lib/UserContext";
 import { formatPriceCompact, pickPrice } from "@/lib/pricing/pokemontcg";
+import { OwnedBadge } from "./OwnedBadge";
 import { Separator } from "./Separator";
 import { Tooltip } from "./Tooltip";
 
@@ -64,7 +65,7 @@ function TileBase({
   const imageBorder = selected
     ? "ring-2 ring-accent ring-offset-0 border-accent"
     : owned
-      ? "border-owned/70"
+      ? "border-owned ring-1 ring-owned/40"
       : wishlisted
         ? "border-missing ring-2 ring-missing/55"
         : "border-transparent group-hover:border-border-strong/70";
@@ -77,10 +78,7 @@ function TileBase({
 
   return (
     <div
-      className={[
-        "group relative transition-opacity",
-        owned || selected || selectMode ? "opacity-100" : "opacity-55 hover:opacity-95",
-      ].join(" ")}
+      className="group relative"
       data-card-id={card.id}
       data-owned={owned ? "true" : "false"}
       data-favorited={favorited ? "true" : "false"}
@@ -162,6 +160,14 @@ function TileBase({
           </Link>
         )}
 
+        {/* Owned marker — the primary ownership signal now that art stays at full
+            brightness. Hidden in select mode, which drives its own corner UI. */}
+        {owned && !selectMode && (
+          <OwnedBadge
+            quantity={quantity}
+            className="absolute top-1.5 right-1.5"
+          />
+        )}
       </div>
 
       {(density === "grid" || (!hideActions && !selectMode)) && (

@@ -171,6 +171,10 @@
   /* Pokédex status + series, theme-aware */
   --color-owned:                        var(--pokedex-owned);
   --color-owned-dark:                   var(--pokedex-owned-dark);
+  /* Glyph color for a filled-amber owned badge. Amber is light in BOTH themes,
+     so this stays a single deep warm brown (no theme split) and reads ≥7:1 on
+     the badge fill in light and dark. Mirrors the --color-*-foreground pattern. */
+  --color-owned-foreground:             oklch(0.27 0.045 72);
   --color-favorite:                     var(--pokedex-favorite);
   --color-covered:                      var(--pokedex-covered);
   --color-covered-dark:                 var(--pokedex-covered-dark);

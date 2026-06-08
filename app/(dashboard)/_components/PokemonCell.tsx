@@ -8,6 +8,7 @@ import { CARD_INDEX, SPECIES } from "@/lib/data";
 import type { CardEntry } from "@/lib/data/types";
 import { useOwnedCards } from "../_lib/OwnedCardsContext";
 import { usePokemonHover } from "../_lib/PokemonHoverContext";
+import { OwnedBadge } from "./OwnedBadge";
 import { typeColor, typeRgb } from "./pokemonTypeColors";
 
 interface Props {
@@ -20,10 +21,10 @@ interface Props {
   displayCard?: CardEntry | null;
 }
 
-// Neutral panel surface; ownership encoded by amber border + corner dot,
-// species identity encoded by tiny type-color pips in the bottom-right
-// corner. The sprite fills the card so the grid reads as a wall of
-// Pokémon rather than a wall of frames.
+// Neutral panel surface; ownership encoded by an amber border + the amber
+// owned badge (sprite always at full brightness), species identity by tiny
+// type-color pips in the bottom-right corner. The sprite fills the card so
+// the grid reads as a wall of Pokémon rather than a wall of frames.
 
 function CellBase({ dex, hidden, onClick, selected, displayCard }: Props) {
   const { isSpeciesOwned, ownedCountForSpecies } = useOwnedCards();
@@ -44,8 +45,6 @@ function CellBase({ dex, hidden, onClick, selected, displayCard }: Props) {
         ? "border-owned/40 bg-bg"
         : "border-owned/55 bg-panel-2"
       : "border-border bg-panel-2 hover:border-border-strong";
-
-  const imgClass = selected || owned ? "opacity-100" : "opacity-95";
 
   return (
     <button
@@ -89,10 +88,7 @@ function CellBase({ dex, hidden, onClick, selected, displayCard }: Props) {
           height={112}
           unoptimized
           loading="lazy"
-          className={[
-            "pointer-events-none absolute inset-[6%] h-[88%] w-[88%] object-contain transition-[filter,opacity] duration-150",
-            imgClass,
-          ].join(" ")}
+          className="pointer-events-none absolute inset-[6%] h-[88%] w-[88%] object-contain opacity-100 transition-[filter] duration-150"
           style={{
             filter: owned || selected
               ? "drop-shadow(0 2px 3px rgb(0 0 0 / 0.35))"
@@ -101,13 +97,10 @@ function CellBase({ dex, hidden, onClick, selected, displayCard }: Props) {
         />
       )}
 
-      {/* Owned indicator — top-right amber dot. Suppressed when card art is shown:
-           the card itself is the ownership signal. */}
-      {owned && !selected && !showCardArt && (
-        <span
-          aria-hidden
-          className="pointer-events-none absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-owned shadow-[0_0_0_1.5px_var(--color-panel-2),0_0_6px_rgb(251_191_36/0.5)]"
-        />
+      {/* Owned indicator — top-right amber badge. Shown even over card art now
+           that the sprite/art stays at full brightness in every state. */}
+      {owned && !selected && (
+        <OwnedBadge size="sm" className="absolute top-1 right-1" />
       )}
 
       {/* Partial-variant badge — top-left small monochrome chip */}

@@ -6,6 +6,7 @@ import { officialArtworkUrl } from "@/lib/pokeapi";
 import { CARD_INDEX_BY_MEGA } from "@/lib/data";
 import type { CardEntry, MegaForm } from "@/lib/data/types";
 import { useOwnedCards } from "../_lib/OwnedCardsContext";
+import { OwnedBadge } from "./OwnedBadge";
 
 interface Props {
   form: MegaForm;
@@ -30,8 +31,6 @@ function CellBase({ form, displayCard }: Props) {
       ? "border-mega/45 bg-bg"
       : "border-mega/60 bg-panel-2"
     : "border-mega/25 bg-panel/60 hover:border-mega/45";
-
-  const imgClass = owned ? "opacity-100" : "opacity-40 grayscale";
 
   return (
     <div
@@ -63,10 +62,7 @@ function CellBase({ form, displayCard }: Props) {
           height={112}
           unoptimized
           loading="lazy"
-          className={[
-            "pointer-events-none absolute inset-[6%] h-[88%] w-[88%] object-contain transition-[filter,opacity] duration-150",
-            imgClass,
-          ].join(" ")}
+          className="pointer-events-none absolute inset-[6%] h-[88%] w-[88%] object-contain opacity-100 transition-[filter] duration-150"
           style={{
             filter: owned
               ? "drop-shadow(0 2px 3px rgb(0 0 0 / 0.35))"
@@ -83,13 +79,9 @@ function CellBase({ form, displayCard }: Props) {
         {form.isPrimal ? "P" : "M"}
       </span>
 
-      {/* Owned dot — top-right, matches PokemonCell convention */}
-      {owned && !showCardArt && (
-        <span
-          aria-hidden
-          className="pointer-events-none absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-owned shadow-[0_0_0_1.5px_var(--color-panel-2),0_0_6px_rgb(251_191_36/0.5)]"
-        />
-      )}
+      {/* Owned badge — top-right, matches PokemonCell. Shown over card art too
+           now that the silhouette/art stays at full brightness in both states. */}
+      {owned && <OwnedBadge size="sm" className="absolute top-1 right-1" />}
 
       {/* Partial-variant chip */}
       {partial && (
