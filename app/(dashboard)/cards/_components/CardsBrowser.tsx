@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import type { CardEntry } from "@/lib/data/types";
 import { sortCards, type CardSort } from "../../_lib/card-sort";
+import { applyCardFilters } from "../../_lib/catalog-filter";
 import { VirtualizedCardGrid } from "./VirtualizedCardGrid";
 import {
   CardFiltersToolbar,
@@ -14,51 +15,6 @@ const SIZE_STORAGE_KEY = "cardgrid.size.cards-catalog";
 
 function clampSize(n: number) {
   return Math.max(2, Math.min(10, Math.round(n)));
-}
-
-function applyFilters(
-  cards: CardEntry[],
-  f: CardsFilterState,
-  searchDebounced: string,
-): CardEntry[] {
-  const q = searchDebounced.trim().toLowerCase();
-  const hasSetIds = f.setIds.size > 0;
-  const hasRarities = f.rarities.size > 0;
-  const hasTypes = f.types.size > 0;
-  const hasDex = f.dexFrom !== null || f.dexTo !== null;
-  const lo = f.dexFrom ?? 1;
-  const hi = f.dexTo ?? 1025;
-  const dexLo = Math.min(lo, hi);
-  const dexHi = Math.max(lo, hi);
-
-  return cards.filter((c) => {
-    if (q && !c.name.toLowerCase().includes(q)) return false;
-    if (f.supertype !== "all" && c.supertype !== f.supertype) return false;
-    if (hasSetIds && !f.setIds.has(c.setId)) return false;
-    if (hasRarities && !f.rarities.has(c.rarity)) return false;
-    if (hasTypes) {
-      let hit = false;
-      for (const t of c.types) {
-        if (f.types.has(t)) {
-          hit = true;
-          break;
-        }
-      }
-      if (!hit) return false;
-    }
-    if (f.artist && c.artist !== f.artist) return false;
-    if (hasDex) {
-      let hit = false;
-      for (const d of c.dex) {
-        if (d >= dexLo && d <= dexHi) {
-          hit = true;
-          break;
-        }
-      }
-      if (!hit) return false;
-    }
-    return true;
-  });
 }
 
 interface Props {
@@ -94,7 +50,7 @@ export function CardsBrowser({ cards, artists, types }: Props) {
   }, [cols, mounted]);
 
   const filtered = useMemo(
-    () => applyFilters(cards, filters, searchDebounced),
+    () => applyCardFilters(cards, filters, searchDebounced),
     [cards, filters, searchDebounced],
   );
 
