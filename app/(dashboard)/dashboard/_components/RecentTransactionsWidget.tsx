@@ -10,6 +10,7 @@ const KIND_LABEL: Record<TransactionKind, string> = {
   single_purchase: "Single",
   sale: "Sale",
   psa_fee: "PSA",
+  lot_purchase: "Bulk lot",
 };
 
 export interface RecentTransactionItem {

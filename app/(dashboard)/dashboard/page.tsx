@@ -206,6 +206,7 @@ export default async function DashboardPage() {
     let description = cardName ?? r.note ?? "Transaction";
     if (r.kind === "pack_purchase") description = setName ?? "Booster pack";
     else if (r.kind === "psa_fee") description = r.note ?? "PSA grading";
+    else if (r.kind === "lot_purchase") description = r.note ?? "Bulk lot";
     const rateToEur = r.rate_to_eur == null ? null : Number(r.rate_to_eur);
     txnItems.push({
       id: r.id,

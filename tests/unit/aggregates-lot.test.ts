@@ -1,5 +1,8 @@
 import { describe, expect, it } from "vitest";
 import { computeKpis, type LedgerRow } from "@/lib/ledger/aggregates";
+import type { Currency } from "@/lib/pricing/currencies";
+
+const RATES = { EUR: 1, USD: 1.1 } as unknown as Record<Currency, number>;
 
 const base = {
   occurredAt: "2026-06-01T00:00:00.000Z",
@@ -18,7 +21,7 @@ describe("computeKpis with lot_purchase", () => {
     const rows: LedgerRow[] = [
       { ...base, id: "1", kind: "lot_purchase", amountCents: -12000, lotId: "lot-1" },
     ];
-    const kpis = computeKpis(rows, "EUR", { EUR: 1, USD: 1.1 });
+    const kpis = computeKpis(rows, "EUR", RATES);
     expect(kpis.totalSpentCents).toBe(12000);
     expect(kpis.totalEarnedCents).toBe(0);
     expect(kpis.netCashFlowCents).toBe(-12000);
