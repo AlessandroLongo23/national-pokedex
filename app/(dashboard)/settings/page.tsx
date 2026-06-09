@@ -5,6 +5,7 @@ import { loadUserPreferences } from "../_lib/user-preferences";
 import { DisplayCurrencySetting } from "./_components/DisplayCurrencySetting";
 import { PriceSourceSetting } from "./_components/PriceSourceSetting";
 import { MegaSeparationSetting } from "./_components/MegaSeparationSetting";
+import { VariantSeparationSetting } from "./_components/VariantSeparationSetting";
 
 export default async function SettingsPage() {
   const userId = await requireUserId();
@@ -22,6 +23,10 @@ export default async function SettingsPage() {
       <MegaSeparationSetting
         initialEnabled={prefs.treatMegasAsSeparate}
         initialPlacement={prefs.megaPlacement}
+      />
+      <VariantSeparationSetting
+        initialEnabled={prefs.treatVariantsAsSeparate}
+        initialPlacement={prefs.variantPlacement}
       />
     </div>
   );
