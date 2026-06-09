@@ -1,4 +1,4 @@
-import { MEGAS } from "@/lib/data";
+import { MEGAS, VARIANTS } from "@/lib/data";
 import {
   filterByScope,
   filterCardsByIds,
@@ -28,6 +28,8 @@ interface Props {
   ownedQuantities: Map<string, number>;
   treatMegasAsSeparate: boolean;
   megaPlacement: "appended" | "inline" | "separate";
+  treatVariantsAsSeparate: boolean;
+  variantPlacement: "appended" | "inline" | "separate";
   priceSource: PriceSource;
   display: DisplayConversion;
 }
@@ -42,6 +44,8 @@ export async function BinderListPricedGrid({
   ownedQuantities,
   treatMegasAsSeparate,
   megaPlacement,
+  treatVariantsAsSeparate,
+  variantPlacement,
   priceSource,
   display,
 }: Props) {
@@ -65,13 +69,19 @@ export async function BinderListPricedGrid({
     if (b.scope_type === "pokedex") {
       const params = b.scope_params as { dexFrom: number; dexTo: number };
       const inRange = filterByScope(allCards, "pokedex", params);
-      const cov = pokedexCoverage(params, ownedIds, inRange, {
-        treatMegasAsSeparate,
-        megaPlacement,
-        megas: MEGAS,
-      });
-      targetCount = cov.dexNumbers.length + cov.megaForms.length;
-      ownedCount = cov.covered.size + cov.coveredMegaForms.size;
+      const cov = pokedexCoverage(
+        params,
+        ownedIds,
+        inRange,
+        { treatMegasAsSeparate, megaPlacement, megas: MEGAS },
+        { treatVariantsAsSeparate, variantPlacement, variants: VARIANTS },
+      );
+      targetCount =
+        cov.dexNumbers.length + cov.megaForms.length + cov.variantForms.length;
+      ownedCount =
+        cov.covered.size +
+        cov.coveredMegaForms.size +
+        cov.coveredVariantForms.size;
       for (const c of inRange) {
         if (ownedIds.has(c.id)) ownedIdsInBinder.push(c.id);
       }
@@ -141,6 +151,8 @@ export function BinderListUnpricedGrid({
   ownedQuantities,
   treatMegasAsSeparate,
   megaPlacement,
+  treatVariantsAsSeparate,
+  variantPlacement,
   priceSource,
   display,
   allCards,
@@ -153,13 +165,19 @@ export function BinderListUnpricedGrid({
     if (b.scope_type === "pokedex") {
       const params = b.scope_params as { dexFrom: number; dexTo: number };
       const inRange = filterByScope(allCards, "pokedex", params);
-      const cov = pokedexCoverage(params, ownedIds, inRange, {
-        treatMegasAsSeparate,
-        megaPlacement,
-        megas: MEGAS,
-      });
-      targetCount = cov.dexNumbers.length + cov.megaForms.length;
-      ownedCount = cov.covered.size + cov.coveredMegaForms.size;
+      const cov = pokedexCoverage(
+        params,
+        ownedIds,
+        inRange,
+        { treatMegasAsSeparate, megaPlacement, megas: MEGAS },
+        { treatVariantsAsSeparate, variantPlacement, variants: VARIANTS },
+      );
+      targetCount =
+        cov.dexNumbers.length + cov.megaForms.length + cov.variantForms.length;
+      ownedCount =
+        cov.covered.size +
+        cov.coveredMegaForms.size +
+        cov.coveredVariantForms.size;
     } else {
       const target =
         b.scope_type === "custom"
