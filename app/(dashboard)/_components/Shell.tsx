@@ -47,6 +47,7 @@ import { PokedexLogo, PokeballIcon } from "@/lib/components/ui/PokedexLogo";
 import type { PriceSource } from "@/lib/pricing/pokemontcg";
 import type { Currency } from "@/lib/pricing/currencies";
 import type { MegaPlacement } from "../_lib/mega-prefs";
+import type { VariantPlacement } from "../_lib/variant-prefs";
 
 interface ShellProps {
   userId: string;
@@ -54,6 +55,8 @@ interface ShellProps {
   priceSource: PriceSource;
   treatMegasAsSeparate: boolean;
   megaPlacement: MegaPlacement;
+  treatVariantsAsSeparate: boolean;
+  variantPlacement: VariantPlacement;
   displayCurrency: Currency;
   latestRatesFromEur: Record<Currency, number>;
   initialOwned: InitialOwnedCard[];
@@ -69,6 +72,8 @@ export function Shell({
   priceSource,
   treatMegasAsSeparate,
   megaPlacement,
+  treatVariantsAsSeparate,
+  variantPlacement,
   displayCurrency,
   latestRatesFromEur,
   initialOwned,
@@ -84,6 +89,8 @@ export function Shell({
       priceSource={priceSource}
       treatMegasAsSeparate={treatMegasAsSeparate}
       megaPlacement={megaPlacement}
+      treatVariantsAsSeparate={treatVariantsAsSeparate}
+      variantPlacement={variantPlacement}
       displayCurrency={displayCurrency}
       latestRatesFromEur={latestRatesFromEur}
     >
@@ -107,14 +114,17 @@ export function Shell({
 }
 
 function ShellInner({ children }: { children: React.ReactNode }) {
-  const { isGuest, email, treatMegasAsSeparate, megaPlacement } = useUser();
+  const { isGuest, email, treatMegasAsSeparate, megaPlacement, treatVariantsAsSeparate, variantPlacement } =
+    useUser();
   const pathname = usePathname();
   const breadcrumbItems = useBreadcrumbs(pathname);
   const showMegasNav = !isGuest && treatMegasAsSeparate && megaPlacement === "separate";
+  const showVariantsNav =
+    !isGuest && treatVariantsAsSeparate && variantPlacement === "separate";
 
   const navGroups = useMemo<SidebarNavGroup[]>(
-    () => buildNavGroups({ showMegasNav, isGuest }),
-    [showMegasNav, isGuest],
+    () => buildNavGroups({ showMegasNav, showVariantsNav, isGuest }),
+    [showMegasNav, showVariantsNav, isGuest],
   );
 
   const pinnedLinks: SidebarNavItem[] = isGuest
@@ -186,9 +196,11 @@ interface FlatNavSpec {
 
 function buildNavGroups({
   showMegasNav,
+  showVariantsNav,
   isGuest,
 }: {
   showMegasNav: boolean;
+  showVariantsNav: boolean;
   isGuest: boolean;
 }): SidebarNavGroup[] {
   const specs: FlatNavSpec[] = [
@@ -198,6 +210,16 @@ function buildNavGroups({
           {
             name: "Mega Evolutions",
             url: "/megas",
+            icon: Sparkles,
+            group: "Browse" as const,
+          },
+        ] satisfies FlatNavSpec[])
+      : []),
+    ...(showVariantsNav
+      ? ([
+          {
+            name: "Regional Variants",
+            url: "/variants",
             icon: Sparkles,
             group: "Browse" as const,
           },
