@@ -1,6 +1,11 @@
 import { SETS, loadSetCards } from ".";
 import { OTHER_SUBTYPE_PREDICATES } from "./other-subtypes";
-import { RARITY_ORDER, type CardEntry, type MegaForm } from "./types";
+import {
+  RARITY_ORDER,
+  type CardEntry,
+  type MegaForm,
+  type RegionalVariant,
+} from "./types";
 
 export type MegaPlacementForCoverage = "appended" | "inline" | "separate";
 
@@ -8,6 +13,12 @@ export interface MegaCoverageOptions {
   treatMegasAsSeparate: boolean;
   megaPlacement: MegaPlacementForCoverage;
   megas: MegaForm[];
+}
+
+export interface VariantCoverageOptions {
+  treatVariantsAsSeparate: boolean;
+  variantPlacement: "appended" | "inline" | "separate";
+  variants: RegionalVariant[];
 }
 
 export type ScopeType =
@@ -115,17 +126,23 @@ export function filterByScope(
  *
  * When `excludeMegas` is true (the `treat_megas_as_separate` toggle is on),
  * any owned card carrying a `megaFormKey` is filtered out — a Mega Charizard X
- * can't represent slot #6 Charizard. An override pointing at a now-excluded
- * Mega card is treated as stale and falls through to the rarity fallback.
+ * can't represent slot #6 Charizard. When `excludeVariants` is true (the
+ * `treat_variants_as_separate` toggle is on), cards carrying a `variantFormKey`
+ * are likewise dropped — an Alolan Vulpix can't represent slot #37 Vulpix. An
+ * override pointing at a now-excluded card is treated as stale and falls
+ * through to the rarity fallback.
  */
 export function pickDisplayCardId(
   overrideCardId: string | undefined,
   ownedCardsForDex: CardEntry[],
   excludeMegas = false,
+  excludeVariants = false,
 ): string | null {
-  const eligible = excludeMegas
-    ? ownedCardsForDex.filter((c) => !c.megaFormKey)
-    : ownedCardsForDex;
+  const eligible = ownedCardsForDex.filter(
+    (c) =>
+      (!excludeMegas || !c.megaFormKey) &&
+      (!excludeVariants || !c.variantFormKey),
+  );
   if (overrideCardId && eligible.some((c) => c.id === overrideCardId)) {
     return overrideCardId;
   }
@@ -169,6 +186,10 @@ export interface PokedexCoverageResult {
    * when the toggle is on and placement is not "separate". */
   megaForms: MegaForm[];
   coveredMegaForms: Set<string>;
+  /** Regional variant forms whose `baseDex` falls in [dexFrom, dexTo].
+   * Populated only when the toggle is on and placement is not "separate". */
+  variantForms: RegionalVariant[];
+  coveredVariantForms: Set<string>;
 }
 
 /** Build the species-coverage view for a pokedex-scope binder.
@@ -187,6 +208,7 @@ export function pokedexCoverage(
   ownedCardIds: Set<string>,
   cards: CardEntry[],
   mega?: MegaCoverageOptions,
+  variant?: VariantCoverageOptions,
 ): PokedexCoverageResult {
   const lo = Math.min(range.dexFrom, range.dexTo);
   const hi = Math.max(range.dexFrom, range.dexTo);
@@ -194,10 +216,12 @@ export function pokedexCoverage(
   for (let d = lo; d <= hi; d++) dexNumbers.push(d);
 
   const excludeMegasFromDex = mega?.treatMegasAsSeparate === true;
+  const excludeVariantsFromDex = variant?.treatVariantsAsSeparate === true;
   const covered = new Set<number>();
   for (const c of cards) {
     if (!ownedCardIds.has(c.id)) continue;
     if (excludeMegasFromDex && c.megaFormKey) continue;
+    if (excludeVariantsFromDex && c.variantFormKey) continue;
     for (const d of c.dex) {
       if (d >= lo && d <= hi) covered.add(d);
     }
@@ -217,7 +241,29 @@ export function pokedexCoverage(
     }
   }
 
-  return { dexNumbers, covered, megaForms, coveredMegaForms };
+  const includeVariantsInBinder =
+    variant?.treatVariantsAsSeparate === true &&
+    variant.variantPlacement !== "separate";
+  const variantForms = includeVariantsInBinder
+    ? variant.variants.filter((f) => f.baseDex >= lo && f.baseDex <= hi)
+    : [];
+  const coveredVariantForms = new Set<string>();
+  if (includeVariantsInBinder) {
+    const wantedKeys = new Set(variantForms.map((f) => f.variantKey));
+    for (const c of cards) {
+      if (!c.variantFormKey || !wantedKeys.has(c.variantFormKey)) continue;
+      if (ownedCardIds.has(c.id)) coveredVariantForms.add(c.variantFormKey);
+    }
+  }
+
+  return {
+    dexNumbers,
+    covered,
+    megaForms,
+    coveredMegaForms,
+    variantForms,
+    coveredVariantForms,
+  };
 }
 
 export function filterCardsByIds(
