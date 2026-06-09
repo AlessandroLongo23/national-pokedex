@@ -39,7 +39,9 @@ export function PokemonHoverTooltip() {
   } else if (state.target.kind === "variant") {
     const { form } = state.target;
     const species = SPECIES[form.baseDex];
-    types = species?.types ?? [];
+    // The variant's OWN types (Galarian Zapdos is Fighting/Flying), falling back
+    // to the base species only if a variant predates the types-aware ingest.
+    types = form.types?.length ? form.types : (species?.types ?? []);
     dexForArt = form.artworkId ?? form.baseDex;
     title = form.displayName;
     const regionLabel: Record<typeof form.region, string> = {

@@ -87,7 +87,7 @@ export function VariantCardPicker({ form, onClose }: Props) {
               <div className="mt-0.5 flex flex-wrap items-center gap-1.5 text-[11px] text-muted">
                 <span>Gen {form.gen}</span>
                 <span>·</span>
-                <span>{species.types.join(" / ")}</span>
+                <span>{(form.types?.length ? form.types : species.types).join(" / ")}</span>
               </div>
             )}
           </div>

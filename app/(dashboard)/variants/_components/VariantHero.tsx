@@ -27,7 +27,9 @@ export function VariantHero({ form }: { form: RegionalVariant }) {
   const species = SPECIES[form.baseDex];
   const baseName =
     POKEDEX.find((p) => p.dex === form.baseDex)?.name ?? species?.name ?? `#${form.baseDex}`;
-  const types = species?.types ?? [];
+  // The variant's OWN types (e.g. Galarian Zapdos is Fighting/Flying), not the
+  // base species' — falling back to base only for pre-types-ingest data.
+  const types = form.types?.length ? form.types : (species?.types ?? []);
   const regionLabel = REGION_LABEL[form.region];
   const regionLetter = REGION_LETTER[form.region];
   const primaryRgb = typeRgb(types[0]);

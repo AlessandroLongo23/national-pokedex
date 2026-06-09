@@ -5,6 +5,10 @@
     "region": "alola",
     "baseDex": 19,
     "gen": 1,
+    "types": [
+      "Dark",
+      "Normal"
+    ],
     "artworkId": 10091
   },
   {
@@ -13,6 +17,10 @@
     "region": "alola",
     "baseDex": 20,
     "gen": 1,
+    "types": [
+      "Dark",
+      "Normal"
+    ],
     "artworkId": 10092
   },
   {
@@ -21,6 +29,10 @@
     "region": "alola",
     "baseDex": 26,
     "gen": 1,
+    "types": [
+      "Electric",
+      "Psychic"
+    ],
     "artworkId": 10100
   },
   {
@@ -29,6 +41,10 @@
     "region": "alola",
     "baseDex": 27,
     "gen": 1,
+    "types": [
+      "Ice",
+      "Steel"
+    ],
     "artworkId": 10101
   },
   {
@@ -37,6 +53,10 @@
     "region": "alola",
     "baseDex": 28,
     "gen": 1,
+    "types": [
+      "Ice",
+      "Steel"
+    ],
     "artworkId": 10102
   },
   {
@@ -45,6 +65,9 @@
     "region": "alola",
     "baseDex": 37,
     "gen": 1,
+    "types": [
+      "Ice"
+    ],
     "artworkId": 10103
   },
   {
@@ -53,6 +76,10 @@
     "region": "alola",
     "baseDex": 38,
     "gen": 1,
+    "types": [
+      "Ice",
+      "Fairy"
+    ],
     "artworkId": 10104
   },
   {
@@ -61,6 +88,10 @@
     "region": "alola",
     "baseDex": 50,
     "gen": 1,
+    "types": [
+      "Ground",
+      "Steel"
+    ],
     "artworkId": 10105
   },
   {
@@ -69,6 +100,10 @@
     "region": "alola",
     "baseDex": 51,
     "gen": 1,
+    "types": [
+      "Ground",
+      "Steel"
+    ],
     "artworkId": 10106
   },
   {
@@ -77,6 +112,9 @@
     "region": "alola",
     "baseDex": 52,
     "gen": 1,
+    "types": [
+      "Dark"
+    ],
     "artworkId": 10107
   },
   {
@@ -85,6 +123,9 @@
     "region": "alola",
     "baseDex": 53,
     "gen": 1,
+    "types": [
+      "Dark"
+    ],
     "artworkId": 10108
   },
   {
@@ -93,6 +134,10 @@
     "region": "alola",
     "baseDex": 74,
     "gen": 1,
+    "types": [
+      "Rock",
+      "Electric"
+    ],
     "artworkId": 10109
   },
   {
@@ -101,6 +146,10 @@
     "region": "alola",
     "baseDex": 75,
     "gen": 1,
+    "types": [
+      "Rock",
+      "Electric"
+    ],
     "artworkId": 10110
   },
   {
@@ -109,6 +158,10 @@
     "region": "alola",
     "baseDex": 76,
     "gen": 1,
+    "types": [
+      "Rock",
+      "Electric"
+    ],
     "artworkId": 10111
   },
   {
@@ -117,6 +170,10 @@
     "region": "alola",
     "baseDex": 88,
     "gen": 1,
+    "types": [
+      "Poison",
+      "Dark"
+    ],
     "artworkId": 10112
   },
   {
@@ -125,6 +182,10 @@
     "region": "alola",
     "baseDex": 89,
     "gen": 1,
+    "types": [
+      "Poison",
+      "Dark"
+    ],
     "artworkId": 10113
   },
   {
@@ -133,6 +194,10 @@
     "region": "alola",
     "baseDex": 103,
     "gen": 1,
+    "types": [
+      "Grass",
+      "Dragon"
+    ],
     "artworkId": 10114
   },
   {
@@ -141,6 +206,10 @@
     "region": "alola",
     "baseDex": 105,
     "gen": 1,
+    "types": [
+      "Fire",
+      "Ghost"
+    ],
     "artworkId": 10115
   },
   {
@@ -149,6 +218,9 @@
     "region": "galar",
     "baseDex": 52,
     "gen": 1,
+    "types": [
+      "Steel"
+    ],
     "artworkId": 10161
   },
   {
@@ -157,6 +229,9 @@
     "region": "galar",
     "baseDex": 77,
     "gen": 1,
+    "types": [
+      "Psychic"
+    ],
     "artworkId": 10162
   },
   {
@@ -165,6 +240,10 @@
     "region": "galar",
     "baseDex": 78,
     "gen": 1,
+    "types": [
+      "Psychic",
+      "Fairy"
+    ],
     "artworkId": 10163
   },
   {
@@ -173,6 +252,9 @@
     "region": "galar",
     "baseDex": 79,
     "gen": 1,
+    "types": [
+      "Psychic"
+    ],
     "artworkId": 10164
   },
   {
@@ -181,6 +263,10 @@
     "region": "galar",
     "baseDex": 80,
     "gen": 1,
+    "types": [
+      "Poison",
+      "Psychic"
+    ],
     "artworkId": 10165
   },
   {
@@ -189,6 +275,9 @@
     "region": "galar",
     "baseDex": 83,
     "gen": 1,
+    "types": [
+      "Fighting"
+    ],
     "artworkId": 10166
   },
   {
@@ -197,6 +286,10 @@
     "region": "galar",
     "baseDex": 110,
     "gen": 1,
+    "types": [
+      "Poison",
+      "Fairy"
+    ],
     "artworkId": 10167
   },
   {
@@ -205,6 +298,10 @@
     "region": "galar",
     "baseDex": 122,
     "gen": 1,
+    "types": [
+      "Ice",
+      "Psychic"
+    ],
     "artworkId": 10168
   },
   {
@@ -213,6 +310,10 @@
     "region": "galar",
     "baseDex": 144,
     "gen": 1,
+    "types": [
+      "Psychic",
+      "Flying"
+    ],
     "artworkId": 10169
   },
   {
@@ -221,6 +322,10 @@
     "region": "galar",
     "baseDex": 145,
     "gen": 1,
+    "types": [
+      "Fighting",
+      "Flying"
+    ],
     "artworkId": 10170
   },
   {
@@ -229,6 +334,10 @@
     "region": "galar",
     "baseDex": 146,
     "gen": 1,
+    "types": [
+      "Dark",
+      "Flying"
+    ],
     "artworkId": 10171
   },
   {
@@ -237,6 +346,10 @@
     "region": "galar",
     "baseDex": 199,
     "gen": 2,
+    "types": [
+      "Poison",
+      "Psychic"
+    ],
     "artworkId": 10172
   },
   {
@@ -245,6 +358,9 @@
     "region": "galar",
     "baseDex": 222,
     "gen": 2,
+    "types": [
+      "Ghost"
+    ],
     "artworkId": 10173
   },
   {
@@ -253,6 +369,10 @@
     "region": "galar",
     "baseDex": 263,
     "gen": 3,
+    "types": [
+      "Dark",
+      "Normal"
+    ],
     "artworkId": 10174
   },
   {
@@ -261,6 +381,10 @@
     "region": "galar",
     "baseDex": 264,
     "gen": 3,
+    "types": [
+      "Dark",
+      "Normal"
+    ],
     "artworkId": 10175
   },
   {
@@ -269,6 +393,9 @@
     "region": "galar",
     "baseDex": 554,
     "gen": 5,
+    "types": [
+      "Ice"
+    ],
     "artworkId": 10176
   },
   {
@@ -277,6 +404,9 @@
     "region": "galar",
     "baseDex": 555,
     "gen": 5,
+    "types": [
+      "Ice"
+    ],
     "artworkId": 10177
   },
   {
@@ -285,6 +415,10 @@
     "region": "galar",
     "baseDex": 562,
     "gen": 5,
+    "types": [
+      "Ground",
+      "Ghost"
+    ],
     "artworkId": 10179
   },
   {
@@ -293,6 +427,10 @@
     "region": "galar",
     "baseDex": 618,
     "gen": 5,
+    "types": [
+      "Ground",
+      "Steel"
+    ],
     "artworkId": 10180
   },
   {
@@ -301,6 +439,10 @@
     "region": "hisui",
     "baseDex": 58,
     "gen": 1,
+    "types": [
+      "Fire",
+      "Rock"
+    ],
     "artworkId": 10229
   },
   {
@@ -309,6 +451,10 @@
     "region": "hisui",
     "baseDex": 59,
     "gen": 1,
+    "types": [
+      "Fire",
+      "Rock"
+    ],
     "artworkId": 10230
   },
   {
@@ -317,6 +463,10 @@
     "region": "hisui",
     "baseDex": 100,
     "gen": 1,
+    "types": [
+      "Electric",
+      "Grass"
+    ],
     "artworkId": 10231
   },
   {
@@ -325,6 +475,10 @@
     "region": "hisui",
     "baseDex": 101,
     "gen": 1,
+    "types": [
+      "Electric",
+      "Grass"
+    ],
     "artworkId": 10232
   },
   {
@@ -333,6 +487,10 @@
     "region": "hisui",
     "baseDex": 157,
     "gen": 2,
+    "types": [
+      "Fire",
+      "Ghost"
+    ],
     "artworkId": 10233
   },
   {
@@ -341,6 +499,10 @@
     "region": "hisui",
     "baseDex": 211,
     "gen": 2,
+    "types": [
+      "Dark",
+      "Poison"
+    ],
     "artworkId": 10234
   },
   {
@@ -349,6 +511,10 @@
     "region": "hisui",
     "baseDex": 215,
     "gen": 2,
+    "types": [
+      "Fighting",
+      "Poison"
+    ],
     "artworkId": 10235
   },
   {
@@ -357,6 +523,10 @@
     "region": "hisui",
     "baseDex": 503,
     "gen": 5,
+    "types": [
+      "Water",
+      "Dark"
+    ],
     "artworkId": 10236
   },
   {
@@ -365,6 +535,10 @@
     "region": "hisui",
     "baseDex": 549,
     "gen": 5,
+    "types": [
+      "Grass",
+      "Fighting"
+    ],
     "artworkId": 10237
   },
   {
@@ -373,6 +547,9 @@
     "region": "hisui",
     "baseDex": 550,
     "gen": 5,
+    "types": [
+      "Water"
+    ],
     "artworkId": 10247
   },
   {
@@ -381,6 +558,10 @@
     "region": "hisui",
     "baseDex": 570,
     "gen": 5,
+    "types": [
+      "Normal",
+      "Ghost"
+    ],
     "artworkId": 10238
   },
   {
@@ -389,6 +570,10 @@
     "region": "hisui",
     "baseDex": 571,
     "gen": 5,
+    "types": [
+      "Normal",
+      "Ghost"
+    ],
     "artworkId": 10239
   },
   {
@@ -397,6 +582,10 @@
     "region": "hisui",
     "baseDex": 628,
     "gen": 5,
+    "types": [
+      "Psychic",
+      "Flying"
+    ],
     "artworkId": 10240
   },
   {
@@ -405,6 +594,10 @@
     "region": "hisui",
     "baseDex": 705,
     "gen": 6,
+    "types": [
+      "Steel",
+      "Dragon"
+    ],
     "artworkId": 10241
   },
   {
@@ -413,6 +606,10 @@
     "region": "hisui",
     "baseDex": 706,
     "gen": 6,
+    "types": [
+      "Steel",
+      "Dragon"
+    ],
     "artworkId": 10242
   },
   {
@@ -421,6 +618,10 @@
     "region": "hisui",
     "baseDex": 713,
     "gen": 6,
+    "types": [
+      "Ice",
+      "Rock"
+    ],
     "artworkId": 10243
   },
   {
@@ -429,6 +630,10 @@
     "region": "hisui",
     "baseDex": 724,
     "gen": 7,
+    "types": [
+      "Grass",
+      "Fighting"
+    ],
     "artworkId": 10244
   },
   {
@@ -437,6 +642,9 @@
     "region": "paldea",
     "baseDex": 128,
     "gen": 1,
+    "types": [
+      "Fighting"
+    ],
     "artworkId": 10250
   },
   {
@@ -445,6 +653,10 @@
     "region": "paldea",
     "baseDex": 194,
     "gen": 2,
+    "types": [
+      "Poison",
+      "Ground"
+    ],
     "artworkId": 10253
   }
 ]

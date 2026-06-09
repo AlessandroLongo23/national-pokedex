@@ -34,6 +34,14 @@ interface SpeciesVarietiesResp {
   varieties: { pokemon: { name: string; url: string } }[];
 }
 
+interface PokemonResp {
+  types: { type: { name: string } }[];
+}
+
+function capitalise(s: string): string {
+  return s.length ? s[0]!.toUpperCase() + s.slice(1) : s;
+}
+
 async function fetchJson<T>(url: string): Promise<T> {
   let lastErr: unknown;
   for (let i = 0; i < RETRIES; i++) {
@@ -135,10 +143,34 @@ export async function resolveVariantArtwork(
       region: c.region,
       baseDex: c.baseDex,
       gen: genOf(c.baseDex),
+      types: [], // filled by the type-fetch pass below
       artworkId,
     });
     cardIndexByVariant[variantKey] = c.cardIds;
   }
+
+  // Second pass: fetch each resolved variant's OWN types from its PokeAPI form
+  // (`/pokemon/{formId}`). The species response only lists varieties, not their
+  // types, and a regional variant is usually re-typed vs its base species
+  // (Galarian Zapdos → Fighting/Flying, Alolan Vulpix → Ice, …).
+  let nextV = 0;
+  async function typeWorker() {
+    while (true) {
+      const i = nextV++;
+      if (i >= variants.length) return;
+      const v = variants[i]!;
+      if (v.artworkId == null) continue;
+      try {
+        const p = await fetchJson<PokemonResp>(`${POKEAPI}/pokemon/${v.artworkId}`);
+        v.types = p.types.map((t) => capitalise(t.type.name));
+      } catch (err) {
+        console.warn(
+          `[variant-art] types for ${v.variantKey} (id=${v.artworkId}) failed: ${(err as Error).message}`,
+        );
+      }
+    }
+  }
+  await Promise.all(Array.from({ length: CONCURRENCY }, () => typeWorker()));
 
   variants.sort(
     (a, b) => REGION_RANK[a.region] - REGION_RANK[b.region] || a.baseDex - b.baseDex,

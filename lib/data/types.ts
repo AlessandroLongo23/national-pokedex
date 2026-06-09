@@ -139,6 +139,11 @@ export interface RegionalVariant {
   region: VariantRegion;
   baseDex: number; // 37
   gen: Generation; // genOf(baseDex)
+  /** The variant's OWN types, captured from its PokeAPI form at ingest — NOT
+   * the base species' types. A regional variant is usually re-typed (Galarian
+   * Zapdos is Fighting/Flying, not the base Zapdos's Electric/Flying; Alolan
+   * Vulpix is Ice, not Fire). Capitalised, e.g. ["Fighting", "Flying"]. */
+  types: string[];
   /** PokeAPI "form id" for THIS form's official-artwork sprite
    * (`/official-artwork/{id}.png`) — e.g. 10103 for Alolan Vulpix. Resolved
    * during ingest by `resolveVariantArtwork`; absent only for a form PokeAPI
