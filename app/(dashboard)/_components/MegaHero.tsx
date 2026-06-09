@@ -25,7 +25,9 @@ export function MegaHero({ form }: { form: MegaForm }) {
   const species = SPECIES[form.baseDex];
   const baseName =
     POKEDEX.find((p) => p.dex === form.baseDex)?.name ?? species?.name ?? `#${form.baseDex}`;
-  const types = species?.types ?? [];
+  // The Mega/Primal's OWN types (Mega Charizard X is Fire/Dragon), not the base
+  // species' — falling back to base only for forms PokeAPI couldn't resolve.
+  const types = form.types?.length ? form.types : (species?.types ?? []);
   const region = REGION_BY_GEN[form.gen] ?? `Gen ${form.gen}`;
   const primaryRgb = typeRgb(types[0]);
   const kind = form.isPrimal ? "Primal" : "Mega";

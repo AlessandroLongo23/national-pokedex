@@ -133,8 +133,11 @@ async function main() {
 
   const megaArtwork = await resolveMegaArtwork(megas);
   for (const m of megas) {
-    const id = megaArtwork[m.formKey];
-    if (id != null) m.artworkId = id;
+    const resolved = megaArtwork[m.formKey];
+    if (resolved != null) {
+      m.artworkId = resolved.artworkId;
+      m.types = resolved.types;
+    }
   }
   console.log(
     `[ingest] mega artwork: resolved ${Object.keys(megaArtwork).length}/${megas.length} form ids`,

@@ -5,7 +5,11 @@
     "baseDex": 3,
     "gen": 1,
     "isPrimal": false,
-    "artworkId": 10033
+    "artworkId": 10033,
+    "types": [
+      "Grass",
+      "Poison"
+    ]
   },
   {
     "formKey": "mega-charizard-x",
@@ -13,7 +17,11 @@
     "baseDex": 6,
     "gen": 1,
     "isPrimal": false,
-    "artworkId": 10034
+    "artworkId": 10034,
+    "types": [
+      "Fire",
+      "Dragon"
+    ]
   },
   {
     "formKey": "mega-charizard-y",
@@ -21,7 +29,11 @@
     "baseDex": 6,
     "gen": 1,
     "isPrimal": false,
-    "artworkId": 10035
+    "artworkId": 10035,
+    "types": [
+      "Fire",
+      "Flying"
+    ]
   },
   {
     "formKey": "mega-blastoise",
@@ -29,7 +41,10 @@
     "baseDex": 9,
     "gen": 1,
     "isPrimal": false,
-    "artworkId": 10036
+    "artworkId": 10036,
+    "types": [
+      "Water"
+    ]
   },
   {
     "formKey": "mega-beedrill",
@@ -37,7 +52,11 @@
     "baseDex": 15,
     "gen": 1,
     "isPrimal": false,
-    "artworkId": 10090
+    "artworkId": 10090,
+    "types": [
+      "Bug",
+      "Poison"
+    ]
   },
   {
     "formKey": "mega-pidgeot",
@@ -45,7 +64,11 @@
     "baseDex": 18,
     "gen": 1,
     "isPrimal": false,
-    "artworkId": 10073
+    "artworkId": 10073,
+    "types": [
+      "Normal",
+      "Flying"
+    ]
   },
   {
     "formKey": "mega-clefable",
@@ -53,7 +76,11 @@
     "baseDex": 36,
     "gen": 1,
     "isPrimal": false,
-    "artworkId": 10278
+    "artworkId": 10278,
+    "types": [
+      "Fairy",
+      "Flying"
+    ]
   },
   {
     "formKey": "mega-alakazam",
@@ -61,7 +88,10 @@
     "baseDex": 65,
     "gen": 1,
     "isPrimal": false,
-    "artworkId": 10037
+    "artworkId": 10037,
+    "types": [
+      "Psychic"
+    ]
   },
   {
     "formKey": "mega-slowbro",
@@ -69,7 +99,11 @@
     "baseDex": 80,
     "gen": 1,
     "isPrimal": false,
-    "artworkId": 10071
+    "artworkId": 10071,
+    "types": [
+      "Water",
+      "Psychic"
+    ]
   },
   {
     "formKey": "mega-gengar",
@@ -77,7 +111,11 @@
     "baseDex": 94,
     "gen": 1,
     "isPrimal": false,
-    "artworkId": 10038
+    "artworkId": 10038,
+    "types": [
+      "Ghost",
+      "Poison"
+    ]
   },
   {
     "formKey": "mega-kangaskhan",
@@ -85,7 +123,10 @@
     "baseDex": 115,
     "gen": 1,
     "isPrimal": false,
-    "artworkId": 10039
+    "artworkId": 10039,
+    "types": [
+      "Normal"
+    ]
   },
   {
     "formKey": "mega-starmie",
@@ -93,7 +134,11 @@
     "baseDex": 121,
     "gen": 1,
     "isPrimal": false,
-    "artworkId": 10280
+    "artworkId": 10280,
+    "types": [
+      "Water",
+      "Psychic"
+    ]
   },
   {
     "formKey": "mega-gyarados",
@@ -101,7 +146,11 @@
     "baseDex": 130,
     "gen": 1,
     "isPrimal": false,
-    "artworkId": 10041
+    "artworkId": 10041,
+    "types": [
+      "Water",
+      "Dark"
+    ]
   },
   {
     "formKey": "mega-aerodactyl",
@@ -109,7 +158,11 @@
     "baseDex": 142,
     "gen": 1,
     "isPrimal": false,
-    "artworkId": 10042
+    "artworkId": 10042,
+    "types": [
+      "Rock",
+      "Flying"
+    ]
   },
   {
     "formKey": "mega-dragonite",
@@ -117,7 +170,11 @@
     "baseDex": 149,
     "gen": 1,
     "isPrimal": false,
-    "artworkId": 10281
+    "artworkId": 10281,
+    "types": [
+      "Dragon",
+      "Flying"
+    ]
   },
   {
     "formKey": "mega-mewtwo",
@@ -125,7 +182,11 @@
     "baseDex": 150,
     "gen": 1,
     "isPrimal": false,
-    "artworkId": 10043
+    "artworkId": 10043,
+    "types": [
+      "Psychic",
+      "Fighting"
+    ]
   },
   {
     "formKey": "mega-meganium",
@@ -133,7 +194,11 @@
     "baseDex": 154,
     "gen": 2,
     "isPrimal": false,
-    "artworkId": 10282
+    "artworkId": 10282,
+    "types": [
+      "Grass",
+      "Fairy"
+    ]
   },
   {
     "formKey": "mega-feraligatr",
@@ -141,7 +206,11 @@
     "baseDex": 160,
     "gen": 2,
     "isPrimal": false,
-    "artworkId": 10283
+    "artworkId": 10283,
+    "types": [
+      "Water",
+      "Dragon"
+    ]
   },
   {
     "formKey": "mega-ampharos",
@@ -149,7 +218,11 @@
     "baseDex": 181,
     "gen": 2,
     "isPrimal": false,
-    "artworkId": 10045
+    "artworkId": 10045,
+    "types": [
+      "Electric",
+      "Dragon"
+    ]
   },
   {
     "formKey": "mega-steelix",
@@ -157,7 +230,11 @@
     "baseDex": 208,
     "gen": 2,
     "isPrimal": false,
-    "artworkId": 10072
+    "artworkId": 10072,
+    "types": [
+      "Steel",
+      "Ground"
+    ]
   },
   {
     "formKey": "mega-scizor",
@@ -165,7 +242,11 @@
     "baseDex": 212,
     "gen": 2,
     "isPrimal": false,
-    "artworkId": 10046
+    "artworkId": 10046,
+    "types": [
+      "Bug",
+      "Steel"
+    ]
   },
   {
     "formKey": "mega-heracross",
@@ -173,7 +254,11 @@
     "baseDex": 214,
     "gen": 2,
     "isPrimal": false,
-    "artworkId": 10047
+    "artworkId": 10047,
+    "types": [
+      "Bug",
+      "Fighting"
+    ]
   },
   {
     "formKey": "mega-skarmory",
@@ -181,7 +266,11 @@
     "baseDex": 227,
     "gen": 2,
     "isPrimal": false,
-    "artworkId": 10284
+    "artworkId": 10284,
+    "types": [
+      "Steel",
+      "Flying"
+    ]
   },
   {
     "formKey": "mega-houndoom",
@@ -189,7 +278,11 @@
     "baseDex": 229,
     "gen": 2,
     "isPrimal": false,
-    "artworkId": 10048
+    "artworkId": 10048,
+    "types": [
+      "Dark",
+      "Fire"
+    ]
   },
   {
     "formKey": "mega-tyranitar",
@@ -197,7 +290,11 @@
     "baseDex": 248,
     "gen": 2,
     "isPrimal": false,
-    "artworkId": 10049
+    "artworkId": 10049,
+    "types": [
+      "Rock",
+      "Dark"
+    ]
   },
   {
     "formKey": "mega-sceptile",
@@ -205,7 +302,11 @@
     "baseDex": 254,
     "gen": 3,
     "isPrimal": false,
-    "artworkId": 10065
+    "artworkId": 10065,
+    "types": [
+      "Grass",
+      "Dragon"
+    ]
   },
   {
     "formKey": "mega-blaziken",
@@ -213,7 +314,11 @@
     "baseDex": 257,
     "gen": 3,
     "isPrimal": false,
-    "artworkId": 10050
+    "artworkId": 10050,
+    "types": [
+      "Fire",
+      "Fighting"
+    ]
   },
   {
     "formKey": "mega-swampert",
@@ -221,7 +326,11 @@
     "baseDex": 260,
     "gen": 3,
     "isPrimal": false,
-    "artworkId": 10064
+    "artworkId": 10064,
+    "types": [
+      "Water",
+      "Ground"
+    ]
   },
   {
     "formKey": "mega-gardevoir",
@@ -229,7 +338,11 @@
     "baseDex": 282,
     "gen": 3,
     "isPrimal": false,
-    "artworkId": 10051
+    "artworkId": 10051,
+    "types": [
+      "Psychic",
+      "Fairy"
+    ]
   },
   {
     "formKey": "mega-mawile",
@@ -237,7 +350,11 @@
     "baseDex": 303,
     "gen": 3,
     "isPrimal": false,
-    "artworkId": 10052
+    "artworkId": 10052,
+    "types": [
+      "Steel",
+      "Fairy"
+    ]
   },
   {
     "formKey": "mega-aggron",
@@ -245,7 +362,10 @@
     "baseDex": 306,
     "gen": 3,
     "isPrimal": false,
-    "artworkId": 10053
+    "artworkId": 10053,
+    "types": [
+      "Steel"
+    ]
   },
   {
     "formKey": "mega-manectric",
@@ -253,7 +373,10 @@
     "baseDex": 310,
     "gen": 3,
     "isPrimal": false,
-    "artworkId": 10055
+    "artworkId": 10055,
+    "types": [
+      "Electric"
+    ]
   },
   {
     "formKey": "mega-sharpedo",
@@ -261,7 +384,11 @@
     "baseDex": 319,
     "gen": 3,
     "isPrimal": false,
-    "artworkId": 10070
+    "artworkId": 10070,
+    "types": [
+      "Water",
+      "Dark"
+    ]
   },
   {
     "formKey": "mega-camerupt",
@@ -269,7 +396,11 @@
     "baseDex": 323,
     "gen": 3,
     "isPrimal": false,
-    "artworkId": 10087
+    "artworkId": 10087,
+    "types": [
+      "Fire",
+      "Ground"
+    ]
   },
   {
     "formKey": "mega-altaria",
@@ -277,7 +408,11 @@
     "baseDex": 334,
     "gen": 3,
     "isPrimal": false,
-    "artworkId": 10067
+    "artworkId": 10067,
+    "types": [
+      "Dragon",
+      "Fairy"
+    ]
   },
   {
     "formKey": "mega-absol",
@@ -285,7 +420,10 @@
     "baseDex": 359,
     "gen": 3,
     "isPrimal": false,
-    "artworkId": 10057
+    "artworkId": 10057,
+    "types": [
+      "Dark"
+    ]
   },
   {
     "formKey": "mega-glalie",
@@ -293,7 +431,10 @@
     "baseDex": 362,
     "gen": 3,
     "isPrimal": false,
-    "artworkId": 10074
+    "artworkId": 10074,
+    "types": [
+      "Ice"
+    ]
   },
   {
     "formKey": "mega-salamence",
@@ -301,7 +442,11 @@
     "baseDex": 373,
     "gen": 3,
     "isPrimal": false,
-    "artworkId": 10089
+    "artworkId": 10089,
+    "types": [
+      "Dragon",
+      "Flying"
+    ]
   },
   {
     "formKey": "mega-metagross",
@@ -309,7 +454,11 @@
     "baseDex": 376,
     "gen": 3,
     "isPrimal": false,
-    "artworkId": 10076
+    "artworkId": 10076,
+    "types": [
+      "Steel",
+      "Psychic"
+    ]
   },
   {
     "formKey": "mega-latias",
@@ -317,7 +466,11 @@
     "baseDex": 380,
     "gen": 3,
     "isPrimal": false,
-    "artworkId": 10062
+    "artworkId": 10062,
+    "types": [
+      "Dragon",
+      "Psychic"
+    ]
   },
   {
     "formKey": "mega-latios",
@@ -325,7 +478,11 @@
     "baseDex": 381,
     "gen": 3,
     "isPrimal": false,
-    "artworkId": 10063
+    "artworkId": 10063,
+    "types": [
+      "Dragon",
+      "Psychic"
+    ]
   },
   {
     "formKey": "primal-kyogre",
@@ -333,7 +490,10 @@
     "baseDex": 382,
     "gen": 3,
     "isPrimal": true,
-    "artworkId": 10077
+    "artworkId": 10077,
+    "types": [
+      "Water"
+    ]
   },
   {
     "formKey": "primal-groudon",
@@ -341,7 +501,11 @@
     "baseDex": 383,
     "gen": 3,
     "isPrimal": true,
-    "artworkId": 10078
+    "artworkId": 10078,
+    "types": [
+      "Ground",
+      "Fire"
+    ]
   },
   {
     "formKey": "mega-rayquaza",
@@ -349,7 +513,11 @@
     "baseDex": 384,
     "gen": 3,
     "isPrimal": false,
-    "artworkId": 10079
+    "artworkId": 10079,
+    "types": [
+      "Dragon",
+      "Flying"
+    ]
   },
   {
     "formKey": "mega-lopunny",
@@ -357,7 +525,11 @@
     "baseDex": 428,
     "gen": 4,
     "isPrimal": false,
-    "artworkId": 10088
+    "artworkId": 10088,
+    "types": [
+      "Normal",
+      "Fighting"
+    ]
   },
   {
     "formKey": "mega-garchomp",
@@ -365,7 +537,11 @@
     "baseDex": 445,
     "gen": 4,
     "isPrimal": false,
-    "artworkId": 10058
+    "artworkId": 10058,
+    "types": [
+      "Dragon",
+      "Ground"
+    ]
   },
   {
     "formKey": "mega-lucario",
@@ -373,7 +549,11 @@
     "baseDex": 448,
     "gen": 4,
     "isPrimal": false,
-    "artworkId": 10059
+    "artworkId": 10059,
+    "types": [
+      "Fighting",
+      "Steel"
+    ]
   },
   {
     "formKey": "mega-abomasnow",
@@ -381,7 +561,11 @@
     "baseDex": 460,
     "gen": 4,
     "isPrimal": false,
-    "artworkId": 10060
+    "artworkId": 10060,
+    "types": [
+      "Grass",
+      "Ice"
+    ]
   },
   {
     "formKey": "mega-gallade",
@@ -389,7 +573,11 @@
     "baseDex": 475,
     "gen": 4,
     "isPrimal": false,
-    "artworkId": 10068
+    "artworkId": 10068,
+    "types": [
+      "Psychic",
+      "Fighting"
+    ]
   },
   {
     "formKey": "mega-froslass",
@@ -397,7 +585,11 @@
     "baseDex": 478,
     "gen": 4,
     "isPrimal": false,
-    "artworkId": 10285
+    "artworkId": 10285,
+    "types": [
+      "Ice",
+      "Ghost"
+    ]
   },
   {
     "formKey": "mega-emboar",
@@ -405,7 +597,11 @@
     "baseDex": 500,
     "gen": 5,
     "isPrimal": false,
-    "artworkId": 10286
+    "artworkId": 10286,
+    "types": [
+      "Fire",
+      "Fighting"
+    ]
   },
   {
     "formKey": "mega-audino",
@@ -413,7 +609,11 @@
     "baseDex": 531,
     "gen": 5,
     "isPrimal": false,
-    "artworkId": 10069
+    "artworkId": 10069,
+    "types": [
+      "Normal",
+      "Fairy"
+    ]
   },
   {
     "formKey": "mega-scrafty",
@@ -421,7 +621,11 @@
     "baseDex": 560,
     "gen": 5,
     "isPrimal": false,
-    "artworkId": 10289
+    "artworkId": 10289,
+    "types": [
+      "Dark",
+      "Fighting"
+    ]
   },
   {
     "formKey": "mega-eelektross",
@@ -429,7 +633,10 @@
     "baseDex": 604,
     "gen": 5,
     "isPrimal": false,
-    "artworkId": 10290
+    "artworkId": 10290,
+    "types": [
+      "Electric"
+    ]
   },
   {
     "formKey": "mega-greninja",
@@ -437,7 +644,11 @@
     "baseDex": 658,
     "gen": 6,
     "isPrimal": false,
-    "artworkId": 10294
+    "artworkId": 10294,
+    "types": [
+      "Water",
+      "Dark"
+    ]
   },
   {
     "formKey": "mega-pyroar",
@@ -445,7 +656,11 @@
     "baseDex": 668,
     "gen": 6,
     "isPrimal": false,
-    "artworkId": 10295
+    "artworkId": 10295,
+    "types": [
+      "Fire",
+      "Normal"
+    ]
   },
   {
     "formKey": "mega-floette",
@@ -453,7 +668,10 @@
     "baseDex": 670,
     "gen": 6,
     "isPrimal": false,
-    "artworkId": 10296
+    "artworkId": 10296,
+    "types": [
+      "Fairy"
+    ]
   },
   {
     "formKey": "mega-dragalge",
@@ -461,7 +679,11 @@
     "baseDex": 691,
     "gen": 6,
     "isPrimal": false,
-    "artworkId": 10299
+    "artworkId": 10299,
+    "types": [
+      "Poison",
+      "Dragon"
+    ]
   },
   {
     "formKey": "mega-hawlucha",
@@ -469,7 +691,11 @@
     "baseDex": 701,
     "gen": 6,
     "isPrimal": false,
-    "artworkId": 10300
+    "artworkId": 10300,
+    "types": [
+      "Fighting",
+      "Flying"
+    ]
   },
   {
     "formKey": "mega-zygarde",
@@ -477,7 +703,11 @@
     "baseDex": 718,
     "gen": 6,
     "isPrimal": false,
-    "artworkId": 10301
+    "artworkId": 10301,
+    "types": [
+      "Dragon",
+      "Ground"
+    ]
   },
   {
     "formKey": "mega-diancie",
@@ -485,6 +715,10 @@
     "baseDex": 719,
     "gen": 6,
     "isPrimal": false,
-    "artworkId": 10075
+    "artworkId": 10075,
+    "types": [
+      "Rock",
+      "Fairy"
+    ]
   }
 ]

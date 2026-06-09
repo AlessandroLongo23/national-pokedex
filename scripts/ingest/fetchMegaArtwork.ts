@@ -22,6 +22,14 @@ export interface VarietyForm {
   id: number;
 }
 
+interface PokemonResp {
+  types: { type: { name: string } }[];
+}
+
+function capitalise(s: string): string {
+  return s.length ? s[0]!.toUpperCase() + s.slice(1) : s;
+}
+
 async function fetchJson<T>(url: string): Promise<T> {
   let lastErr: unknown;
   for (let i = 0; i < RETRIES; i++) {
@@ -68,10 +76,12 @@ export function chooseMegaVariety(
   return pick?.id ?? null;
 }
 
-/** formKey → PokeAPI form id, for the forms PokeAPI can resolve. */
+/** formKey → { artworkId, types } for the forms PokeAPI can resolve. `types`
+ * are the Mega/Primal's OWN types (Mega Charizard X is Fire/Dragon, not the base
+ * Charizard's Fire/Flying), fetched from the chosen form. */
 export async function resolveMegaArtwork(
   megas: MegaForm[],
-): Promise<Record<string, number>> {
+): Promise<Record<string, { artworkId: number; types: string[] }>> {
   const dexes = [...new Set(megas.map((m) => m.baseDex))];
   const byDex = new Map<number, { slug: string; forms: VarietyForm[] }>();
 
@@ -96,13 +106,39 @@ export async function resolveMegaArtwork(
   }
   await Promise.all(Array.from({ length: CONCURRENCY }, () => worker()));
 
-  const out: Record<string, number> = {};
+  const out: Record<string, { artworkId: number; types: string[] }> = {};
+  const chosen: { formKey: string; id: number }[] = [];
   for (const m of megas) {
     const entry = byDex.get(m.baseDex);
     if (!entry) continue;
     const id = chooseMegaVariety(entry.slug, entry.forms, m.formKey, m.isPrimal);
-    if (id != null) out[m.formKey] = id;
-    else console.warn(`[mega-art] no variety for ${m.formKey} (dex=${m.baseDex})`);
+    if (id != null) {
+      out[m.formKey] = { artworkId: id, types: [] };
+      chosen.push({ formKey: m.formKey, id });
+    } else {
+      console.warn(`[mega-art] no variety for ${m.formKey} (dex=${m.baseDex})`);
+    }
   }
+
+  // Second pass: fetch each resolved form's OWN types from `/pokemon/{formId}`
+  // (Mega/Primal forms are frequently re-typed vs the base species).
+  let nextC = 0;
+  async function typeWorker() {
+    while (true) {
+      const i = nextC++;
+      if (i >= chosen.length) return;
+      const { formKey, id } = chosen[i]!;
+      try {
+        const p = await fetchJson<PokemonResp>(`${POKEAPI}/pokemon/${id}`);
+        out[formKey]!.types = p.types.map((t) => capitalise(t.type.name));
+      } catch (err) {
+        console.warn(
+          `[mega-art] types for ${formKey} (id=${id}) failed: ${(err as Error).message}`,
+        );
+      }
+    }
+  }
+  await Promise.all(Array.from({ length: CONCURRENCY }, () => typeWorker()));
+
   return out;
 }

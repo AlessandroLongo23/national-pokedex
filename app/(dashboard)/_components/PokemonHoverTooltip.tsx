@@ -22,7 +22,9 @@ export function PokemonHoverTooltip() {
   if (state.target.kind === "mega") {
     const { form } = state.target;
     const species = SPECIES[form.baseDex];
-    types = species?.types ?? [];
+    // The Mega/Primal's OWN types (Mega Charizard X is Fire/Dragon), falling
+    // back to the base species only for forms PokeAPI couldn't resolve.
+    types = form.types?.length ? form.types : (species?.types ?? []);
     dexForArt = form.artworkId ?? form.baseDex;
     title = form.displayName;
     idLabel = form.isPrimal ? "PRIMAL" : "MEGA";

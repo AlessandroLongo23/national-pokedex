@@ -121,6 +121,11 @@ export interface MegaForm {
   baseDex: number;
   gen: Generation;
   isPrimal: boolean;
+  /** The Mega/Primal's OWN types, captured from its PokeAPI form at ingest —
+   * NOT the base species' (Mega Charizard X is Fire/Dragon, Mega Ampharos adds
+   * Dragon, etc.). Capitalised. Optional: filled by `resolveMegaArtwork`, so a
+   * form PokeAPI can't resolve falls back to the base species' types. */
+  types?: string[];
   /** PokeAPI "form id" for this Mega/Primal's official artwork sprite
    * (`/official-artwork/{id}.png`) — e.g. 10034 for Mega Charizard X, 10282
    * for Mega Meganium. Resolved during ingest by `resolveMegaArtwork`; absent
