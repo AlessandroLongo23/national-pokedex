@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { CARD_INDEX_BY_MEGA, POKEDEX, SETS, SPECIES } from "@/lib/data";
+import { CARD_INDEX_BY_MEGA, CARD_INDEX_BY_VARIANT, POKEDEX, SETS, SPECIES } from "@/lib/data";
 import { officialArtworkUrl } from "@/lib/pokeapi";
 import { usePokemonHover } from "../_lib/PokemonHoverContext";
 import { typeBackground, typeRgb } from "./pokemonTypeColors";
@@ -33,6 +33,29 @@ export function PokemonHoverTooltip() {
         <span className="text-covered nums tabular-nums">{variants}</span>
         <span className="text-muted">
           card variant{variants === 1 ? "" : "s"} across the tracked sets
+        </span>
+      </div>
+    );
+  } else if (state.target.kind === "variant") {
+    const { form } = state.target;
+    const species = SPECIES[form.baseDex];
+    types = species?.types ?? [];
+    dexForArt = form.artworkId ?? form.baseDex;
+    title = form.displayName;
+    const regionLabel: Record<typeof form.region, string> = {
+      alola: "ALOLAN",
+      galar: "GALARIAN",
+      hisui: "HISUIAN",
+      paldea: "PALDEAN",
+    };
+    idLabel = regionLabel[form.region];
+    metaLine = `Gen ${form.gen}${species?.name ? ` · ${species.name}` : ""}`;
+    const n = CARD_INDEX_BY_VARIANT[form.variantKey]?.length ?? 0;
+    footer = (
+      <div className="flex items-baseline gap-1.5">
+        <span className="text-covered nums tabular-nums">{n}</span>
+        <span className="text-muted">
+          card variant{n === 1 ? "" : "s"} across the tracked sets
         </span>
       </div>
     );

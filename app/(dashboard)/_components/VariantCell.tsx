@@ -6,6 +6,7 @@ import { officialArtworkUrl } from "@/lib/pokeapi";
 import { CARD_INDEX_BY_VARIANT } from "@/lib/data";
 import type { CardEntry, RegionalVariant } from "@/lib/data/types";
 import { useOwnedCards } from "../_lib/OwnedCardsContext";
+import { usePokemonHover } from "../_lib/PokemonHoverContext";
 import { OwnedBadge } from "./OwnedBadge";
 
 interface Props {
@@ -25,6 +26,7 @@ const REGION_BADGE: Record<RegionalVariant["region"], string> = {
 
 function CellBase({ form, onClick, displayCard }: Props) {
   const { isVariantFormOwned, ownedCountForVariantForm } = useOwnedCards();
+  const { show, hide } = usePokemonHover();
   const owned = isVariantFormOwned(form.variantKey);
   const ref = useRef<HTMLButtonElement>(null);
   const totalVariants = CARD_INDEX_BY_VARIANT[form.variantKey]?.length ?? 0;
@@ -46,6 +48,14 @@ function CellBase({ form, onClick, displayCard }: Props) {
       type="button"
       data-variant-form={form.variantKey}
       onClick={onClick ? () => onClick(form) : undefined}
+      onMouseEnter={() =>
+        ref.current && show({ kind: "variant", form }, ref.current.getBoundingClientRect())
+      }
+      onMouseLeave={hide}
+      onFocus={() =>
+        ref.current && show({ kind: "variant", form }, ref.current.getBoundingClientRect())
+      }
+      onBlur={hide}
       className={[
         "pokemon-cell group/cell relative flex aspect-[4/5] w-full items-center justify-center overflow-hidden rounded-md border select-none",
         onClick ? "cursor-pointer" : "cursor-default",

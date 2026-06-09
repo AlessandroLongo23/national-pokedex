@@ -1,12 +1,13 @@
 "use client";
 
 import { createContext, useCallback, useContext, useState } from "react";
-import type { MegaForm } from "@/lib/data/types";
+import type { MegaForm, RegionalVariant } from "@/lib/data/types";
 
-/** What the grid is hovering: a base species (by dex) or a Mega/Primal form. */
+/** What the grid is hovering: a base species (by dex), a Mega/Primal form, or a regional variant. */
 export type HoverTarget =
   | { kind: "dex"; dex: number }
-  | { kind: "mega"; form: MegaForm };
+  | { kind: "mega"; form: MegaForm }
+  | { kind: "variant"; form: RegionalVariant };
 
 interface HoverState {
   target: HoverTarget;
