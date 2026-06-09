@@ -6,6 +6,7 @@ import { requireUserId } from "./current-user";
 import { PRICE_SOURCES, type PriceSource } from "@/lib/pricing/pokemontcg";
 import { isCurrency, type Currency } from "@/lib/pricing/currencies";
 import { MEGA_PLACEMENTS, type MegaPlacement } from "./user-preferences";
+import { VARIANT_PLACEMENTS, type VariantPlacement } from "./user-preferences";
 
 export async function updatePriceSource(source: PriceSource): Promise<void> {
   if (!PRICE_SOURCES.includes(source)) {
@@ -51,6 +52,34 @@ export async function updateMegaSettings(
   revalidatePath("/settings");
   revalidatePath("/pokedex");
   revalidatePath("/megas");
+  revalidatePath("/binders");
+  revalidatePath("/binders/[id]", "page");
+  revalidatePath("/cards");
+}
+
+export async function updateVariantSettings(
+  treatAsSeparate: boolean,
+  placement: VariantPlacement,
+): Promise<void> {
+  if (!VARIANT_PLACEMENTS.includes(placement)) {
+    throw new Error(`Invalid variant placement: ${placement}`);
+  }
+  const userId = await requireUserId();
+  const supabase = await getSupabaseServer();
+  const { error } = await supabase.from("user_preferences").upsert(
+    {
+      user_id: userId,
+      treat_variants_as_separate: treatAsSeparate,
+      variant_placement: placement,
+      updated_at: new Date().toISOString(),
+    },
+    { onConflict: "user_id" },
+  );
+  if (error) throw new Error(`Failed to update variant settings: ${error.message}`);
+  // The toggle affects every page that derives coverage from owned cards.
+  revalidatePath("/settings");
+  revalidatePath("/pokedex");
+  revalidatePath("/variants");
   revalidatePath("/binders");
   revalidatePath("/binders/[id]", "page");
   revalidatePath("/cards");
