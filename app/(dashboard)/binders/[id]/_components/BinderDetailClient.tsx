@@ -9,6 +9,7 @@ import { MEGAS, VARIANTS } from "@/lib/data";
 import {
   ownedCardsByDex,
   pickDisplayCardId,
+  readPokedexFormFlags,
   type ScopeType,
   type ScopeParams,
 } from "@/lib/data/binder-scope";
@@ -24,8 +25,10 @@ import {
   deleteBinder,
   renameBinder,
   setBinderCellOverride,
+  setBinderFormInclusion,
 } from "../../../_lib/binder-actions";
 import { CustomBinderEditor } from "./CustomBinderEditor";
+import { BinderFormSettings } from "./BinderFormSettings";
 import { BinderCellPicker } from "./BinderCellPicker";
 import {
   CardPricesProvider,
@@ -75,15 +78,49 @@ export function BinderDetailClient({
     variantPlacement,
     display,
   } = useUser();
-  const includeMegasInBinder =
-    treatMegasAsSeparate && megaPlacement !== "separate";
-  const includeVariantsInBinder =
-    treatVariantsAsSeparate && variantPlacement !== "separate";
   const [editing, setEditing] = useState(false);
   const [renaming, setRenaming] = useState(false);
   const [nameDraft, setNameDraft] = useState(binder.name);
   const [pending, start] = useTransition();
   const [error, setError] = useState<string | null>(null);
+
+  // Per-binder Mega/variant inclusion flags, seeded from scope_params and
+  // updated optimistically when the settings panel toggles. ANDed onto the
+  // global "treat as separate"/placement rule below so a binder can opt out of
+  // forms even when the global prefs show them.
+  const initialFlags = useMemo(
+    () => readPokedexFormFlags(binder.scopeParams),
+    [binder.scopeParams],
+  );
+  const [includeMegasFlag, setIncludeMegasFlag] = useState(initialFlags.includeMegas);
+  const [includeVariantsFlag, setIncludeVariantsFlag] = useState(initialFlags.includeVariants);
+  useEffect(() => {
+    setIncludeMegasFlag(initialFlags.includeMegas);
+    setIncludeVariantsFlag(initialFlags.includeVariants);
+  }, [initialFlags]);
+
+  const includeMegasInBinder =
+    includeMegasFlag && treatMegasAsSeparate && megaPlacement !== "separate";
+  const includeVariantsInBinder =
+    includeVariantsFlag && treatVariantsAsSeparate && variantPlacement !== "separate";
+
+  function commitFormInclusion(next: { includeMegas: boolean; includeVariants: boolean }) {
+    const prevM = includeMegasFlag;
+    const prevV = includeVariantsFlag;
+    setIncludeMegasFlag(next.includeMegas);
+    setIncludeVariantsFlag(next.includeVariants);
+    setError(null);
+    start(async () => {
+      try {
+        await setBinderFormInclusion(binder.id, next);
+        router.refresh();
+      } catch (err) {
+        setIncludeMegasFlag(prevM);
+        setIncludeVariantsFlag(prevV);
+        setError(err instanceof Error ? err.message : "Failed to update binder contents");
+      }
+    });
+  }
 
   const isPokedex = binder.scopeType === "pokedex";
   const dexRange = useMemo<{ from: number; to: number; nums: number[] } | null>(() => {
@@ -405,6 +442,12 @@ export function BinderDetailClient({
 
         {isPokedex && dexRange ? (
           <>
+            <BinderFormSettings
+              includeMegas={includeMegasFlag}
+              includeVariants={includeVariantsFlag}
+              pending={pending}
+              onChange={commitFormInclusion}
+            />
             <PokedexGrid
               dexNumbers={dexRange.nums}
               groupByGenDefault={dexRange.to - dexRange.from + 1 > 200}
