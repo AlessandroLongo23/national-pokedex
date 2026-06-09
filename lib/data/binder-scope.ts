@@ -64,7 +64,7 @@ export type ScopeParams =
   | { artist: string }
   | { type: string }
   | { number: string }
-  | { dexFrom: number; dexTo: number }
+  | { dexFrom: number; dexTo: number; includeMegas?: boolean; includeVariants?: boolean }
   | { subtype: SubtypeScopeValue }
   | { name: string }
   | Record<string, never>;
@@ -116,6 +116,19 @@ export function filterByScope(
       return cards.filter((c) => c.name === name);
     }
   }
+}
+
+/** Per-binder Mega/variant inclusion flags for a pokedex-scope binder, read
+ * from its `scope_params` jsonb. Absent ⇒ excluded (the default). Only a
+ * literal `true` enables a flag. */
+export function readPokedexFormFlags(
+  scopeParams: ScopeParams | Record<string, unknown>,
+): { includeMegas: boolean; includeVariants: boolean } {
+  const p = scopeParams as { includeMegas?: unknown; includeVariants?: unknown };
+  return {
+    includeMegas: p.includeMegas === true,
+    includeVariants: p.includeVariants === true,
+  };
 }
 
 /** For a pokedex-scope binder cell: pick which owned card's art to show.

@@ -6,6 +6,7 @@ import {
   pokedexCoverage,
   pickDisplayCardId,
   ownedCardsByDex,
+  readPokedexFormFlags,
 } from "@/lib/data/binder-scope";
 import type { CardEntry } from "@/lib/data/types";
 
@@ -220,6 +221,25 @@ describe("filterCardsByIds", () => {
 
   it("empty input returns []", () => {
     expect(filterCardsByIds(cards, [])).toEqual([]);
+  });
+});
+
+describe("readPokedexFormFlags", () => {
+  it("defaults both flags to false when absent", () => {
+    expect(readPokedexFormFlags({ dexFrom: 1, dexTo: 1025 })).toEqual({
+      includeMegas: false,
+      includeVariants: false,
+    });
+  });
+
+  it("reads explicit booleans, treating only literal true as true", () => {
+    expect(
+      readPokedexFormFlags({ dexFrom: 1, dexTo: 9, includeMegas: true, includeVariants: false }),
+    ).toEqual({ includeMegas: true, includeVariants: false });
+    // non-boolean / truthy-but-not-true values do not enable the flag
+    expect(
+      readPokedexFormFlags({ dexFrom: 1, dexTo: 9, includeMegas: "yes" } as never),
+    ).toEqual({ includeMegas: false, includeVariants: false });
   });
 });
 
