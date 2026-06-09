@@ -77,6 +77,7 @@ function PagerLink({ form, direction }: { form: RegionalVariant; direction: "pre
   return (
     <Link
       href={`/variants/${form.variantKey}`}
+      data-region={form.region}
       className="group/pager flex min-h-9 items-center gap-2 rounded-md px-2 py-1 text-muted transition hover:bg-panel-2 hover:text-text active:bg-panel-3 active:text-text"
       aria-label={`${isPrev ? "Previous" : "Next"}: ${form.displayName}`}
     >

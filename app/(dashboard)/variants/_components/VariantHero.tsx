@@ -33,7 +33,7 @@ export function VariantHero({ form }: { form: RegionalVariant }) {
   const primaryRgb = typeRgb(types[0]);
 
   return (
-    <section className="relative">
+    <section className="relative" data-region={form.region}>
       <div className="grid gap-5 py-5 md:grid-cols-[176px_1fr] md:items-start md:gap-7 md:py-6">
         <div className="flex justify-center md:justify-start">
           <div className="relative">

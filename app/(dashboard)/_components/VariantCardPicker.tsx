@@ -59,6 +59,7 @@ export function VariantCardPicker({ form, onClose }: Props) {
       onClick={onClose}
     >
       <div
+        data-region={form.region}
         className="relative max-h-[88vh] w-full max-w-2xl overflow-hidden rounded-t-2xl border border-border bg-panel md:rounded-2xl"
         onClick={(e) => e.stopPropagation()}
       >

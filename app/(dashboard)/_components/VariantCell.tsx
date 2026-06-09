@@ -47,6 +47,7 @@ function CellBase({ form, onClick, displayCard }: Props) {
       ref={ref}
       type="button"
       data-variant-form={form.variantKey}
+      data-region={form.region}
       onClick={onClick ? () => onClick(form) : undefined}
       onMouseEnter={() =>
         ref.current && show({ kind: "variant", form }, ref.current.getBoundingClientRect())
@@ -62,7 +63,6 @@ function CellBase({ form, onClick, displayCard }: Props) {
         "transition-[transform,box-shadow,border-color,background-color] duration-150 ease-out hover:z-10 hover:scale-[1.05] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-variant",
         stateClass,
       ].join(" ")}
-      style={{ "--type-glow": "rgb(45 212 191 / 0.55)" } as React.CSSProperties}
       aria-label={`${form.displayName}${owned ? " owned" : ""}`}
     >
       {showCardArt && displayCard ? (
@@ -91,7 +91,7 @@ function CellBase({ form, onClick, displayCard }: Props) {
         />
       )}
 
-      {/* Region badge — teal, top-left (A/G/H/P) */}
+      {/* Region badge — per-region accent, top-left (A/G/H/P) */}
       <span
         aria-hidden
         className="pointer-events-none absolute top-1 left-1 inline-flex h-[14px] min-w-[14px] items-center justify-center rounded-sm bg-variant/85 px-[3px] text-[9px] font-bold leading-none text-bg shadow-[0_0_0_1px_rgb(0_0_0/0.35)]"

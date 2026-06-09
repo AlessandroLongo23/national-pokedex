@@ -103,8 +103,12 @@
   --pokedex-missing:         oklch(0.595 0.205 25);    /* red */
   --pokedex-missing-dark:    oklch(0.445 0.185 25);
   --pokedex-mega:            oklch(0.555 0.180 290);   /* violet */
-  --pokedex-variant:         oklch(0.560 0.110 195);   /* teal — regional variants */
+  --pokedex-variant:         oklch(0.560 0.110 195);   /* teal — generic/regional-variant fallback */
   --pokedex-variant-dark:    oklch(0.430 0.100 195);
+  --pokedex-variant-alola:   oklch(0.640 0.155 50);    /* coral-orange */
+  --pokedex-variant-galar:   oklch(0.560 0.150 255);   /* blue */
+  --pokedex-variant-hisui:   oklch(0.585 0.120 158);   /* jade green */
+  --pokedex-variant-paldea:  oklch(0.585 0.165 345);   /* magenta-rose */
   --pokedex-me-tint:         oklch(0.555 0.180 290);
   --pokedex-sv-tint:         oklch(0.555 0.155 234);   /* SV blue */
 }
@@ -121,9 +125,23 @@
   --pokedex-mega:            oklch(0.715 0.170 290);   /* ≈ #a78bff */
   --pokedex-variant:         oklch(0.770 0.110 192);   /* ≈ #2dd4bf teal */
   --pokedex-variant-dark:    oklch(0.560 0.110 188);
+  --pokedex-variant-alola:   oklch(0.785 0.150 55);    /* coral-orange */
+  --pokedex-variant-galar:   oklch(0.725 0.140 258);   /* blue */
+  --pokedex-variant-hisui:   oklch(0.785 0.120 160);   /* jade green */
+  --pokedex-variant-paldea:  oklch(0.745 0.155 345);   /* magenta-rose */
   --pokedex-me-tint:         oklch(0.715 0.170 290);
   --pokedex-sv-tint:         oklch(0.745 0.135 234);   /* ≈ #5db8ff */
 }
+
+/* Per-region variant accent. Scopes the generic --pokedex-variant (and the
+   cell hover glow) to each region's hue, so any bg-variant / text-variant /
+   border-variant / ring-variant utility inside a [data-region] subtree recolors
+   automatically — the @theme inline mapping references var(--pokedex-variant)
+   directly, and these values are theme-aware (light :root / dark .dark above). */
+[data-region="alola"]  { --pokedex-variant: var(--pokedex-variant-alola);  --type-glow: color-mix(in oklab, var(--pokedex-variant-alola)  55%, transparent); }
+[data-region="galar"]  { --pokedex-variant: var(--pokedex-variant-galar);  --type-glow: color-mix(in oklab, var(--pokedex-variant-galar)  55%, transparent); }
+[data-region="hisui"]  { --pokedex-variant: var(--pokedex-variant-hisui);  --type-glow: color-mix(in oklab, var(--pokedex-variant-hisui)  55%, transparent); }
+[data-region="paldea"] { --pokedex-variant: var(--pokedex-variant-paldea); --type-glow: color-mix(in oklab, var(--pokedex-variant-paldea) 55%, transparent); }
 
 /* ════════════════════════════════════════════════════════════════════════════
    TAILWIND UTILITY SURFACE
