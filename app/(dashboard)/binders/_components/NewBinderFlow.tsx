@@ -11,6 +11,7 @@ import {
 } from "@/lib/data/binder-scope";
 import { createBinder } from "../../_lib/binder-actions";
 import { typeBackground } from "../../_components/pokemonTypeColors";
+import { Toggle } from "@/lib/components/ui/Toggle";
 
 const TCG_TYPES = [
   "Grass",
@@ -85,6 +86,8 @@ export function NewBinderFlow({ sets, pokedex, artists, cardNames }: Props) {
   const [dexRangePreset, setDexRangePreset] = useState<string>("national");
   const [dexFrom, setDexFrom] = useState<number>(1);
   const [dexTo, setDexTo] = useState<number>(1025);
+  const [includeMegas, setIncludeMegas] = useState(false);
+  const [includeVariants, setIncludeVariants] = useState(false);
 
   function applyPreset(key: string) {
     setDexRangePreset(key);
@@ -207,7 +210,7 @@ export function NewBinderFlow({ sets, pokedex, artists, cardNames }: Props) {
     | { scopeType: "type"; type: string }
     | { scopeType: "position"; number: string }
     | { scopeType: "custom" }
-    | { scopeType: "pokedex"; dexFrom: number; dexTo: number }
+    | { scopeType: "pokedex"; dexFrom: number; dexTo: number; includeMegas: boolean; includeVariants: boolean }
     | { scopeType: "subtype"; subtype: SubtypeScopeValue }
     | { scopeType: "named_card"; name: string }
     | null {
@@ -225,7 +228,7 @@ export function NewBinderFlow({ sets, pokedex, artists, cardNames }: Props) {
       case "custom":
         return { scopeType };
       case "pokedex":
-        return { scopeType, dexFrom, dexTo };
+        return { scopeType, dexFrom, dexTo, includeMegas, includeVariants };
       case "subtype":
         return subtypeValue ? { scopeType, subtype: subtypeValue } : null;
       case "named_card":
@@ -504,6 +507,38 @@ export function NewBinderFlow({ sets, pokedex, artists, cardNames }: Props) {
               {dexTo - dexFrom + 1} species in this range. Progress counts species you own
               (any card of that Pokémon).
             </p>
+
+            <div className="space-y-2 border-t border-border pt-3">
+              <div className="text-[11px] uppercase tracking-wider text-muted">
+                Include in this binder
+              </div>
+              <label className="flex items-center justify-between gap-3 text-sm">
+                <span>
+                  Mega Evolutions
+                  <span className="block text-xs text-muted">
+                    Add a slot per Mega/Primal form whose base Pokémon is in range.
+                  </span>
+                </span>
+                <Toggle
+                  checked={includeMegas}
+                  onCheckedChange={setIncludeMegas}
+                  aria-label="Include Mega Evolutions in this binder"
+                />
+              </label>
+              <label className="flex items-center justify-between gap-3 text-sm">
+                <span>
+                  Regional variants
+                  <span className="block text-xs text-muted">
+                    Add a slot per Alolan/Galarian/Hisuian/Paldean form in range.
+                  </span>
+                </span>
+                <Toggle
+                  checked={includeVariants}
+                  onCheckedChange={setIncludeVariants}
+                  aria-label="Include regional variants in this binder"
+                />
+              </label>
+            </div>
           </div>
         )}
       </div>
