@@ -1,13 +1,17 @@
 "use client";
 
+import { useState } from "react";
 import { Globe2 } from "lucide-react";
 import { VARIANTS } from "@/lib/data";
 import { PageHeader } from "../../_components/PageHeader";
 import { PokedexGrid } from "../../_components/PokedexGrid";
+import { VariantCardPicker } from "../../_components/VariantCardPicker";
 import { useOwnedCards } from "../../_lib/OwnedCardsContext";
 import { useUser } from "../../_lib/UserContext";
+import type { RegionalVariant } from "@/lib/data/types";
 
 export function VariantsPageClient() {
+  const [pickerVariant, setPickerVariant] = useState<RegionalVariant | null>(null);
   const { ownedVariantForms } = useOwnedCards();
   const { isGuest } = useUser();
   const total = VARIANTS.length;
@@ -41,7 +45,14 @@ export function VariantsPageClient() {
           )
         }
       />
-      <PokedexGrid mode="variants" storageKey="variants" groupByGenDefault fitToViewport />
+      <PokedexGrid
+        mode="variants"
+        storageKey="variants"
+        groupByGenDefault
+        fitToViewport
+        onVariantClick={(form) => setPickerVariant(form)}
+      />
+      <VariantCardPicker form={pickerVariant} onClose={() => setPickerVariant(null)} />
     </div>
   );
 }

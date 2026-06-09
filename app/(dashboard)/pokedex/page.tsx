@@ -9,13 +9,15 @@ import { PokeballIcon } from "@/lib/components/ui/PokedexLogo";
 import { PokedexGrid } from "../_components/PokedexGrid";
 import { CardVariantPicker } from "../_components/CardVariantPicker";
 import { MegaVariantPicker } from "../_components/MegaVariantPicker";
+import { VariantCardPicker } from "../_components/VariantCardPicker";
 import { useOwnedCards } from "../_lib/OwnedCardsContext";
 import { useUser } from "../_lib/UserContext";
-import type { MegaForm } from "@/lib/data/types";
+import type { MegaForm, RegionalVariant } from "@/lib/data/types";
 
 export default function PokedexPage() {
   const [pickerDex, setPickerDex] = useState<number | null>(null);
   const [pickerMega, setPickerMega] = useState<MegaForm | null>(null);
+  const [pickerVariant, setPickerVariant] = useState<RegionalVariant | null>(null);
   const { ownedSpecies, ownedMegaForms, ownedVariantForms } = useOwnedCards();
   const { isGuest, treatMegasAsSeparate, megaPlacement, treatVariantsAsSeparate, variantPlacement } =
     useUser();
@@ -76,9 +78,11 @@ export default function PokedexPage() {
         groupByGenDefault={true}
         onCellClick={(dex) => setPickerDex(dex)}
         onMegaClick={(form) => setPickerMega(form)}
+        onVariantClick={(form) => setPickerVariant(form)}
       />
       <CardVariantPicker dex={pickerDex} onClose={() => setPickerDex(null)} />
       <MegaVariantPicker form={pickerMega} onClose={() => setPickerMega(null)} />
+      <VariantCardPicker form={pickerVariant} onClose={() => setPickerVariant(null)} />
     </div>
   );
 }

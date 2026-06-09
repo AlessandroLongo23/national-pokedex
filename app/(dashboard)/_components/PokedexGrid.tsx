@@ -41,6 +41,9 @@ interface Props {
   /** Click handler for Mega/Primal slots — opens the mega card-variant picker
    * on the Pokédex page. When omitted, Mega cells render but aren't clickable. */
   onMegaClick?: (form: MegaForm) => void;
+  /** Click handler for regional-variant slots — opens the variant card-variant
+   * picker. When omitted, variant cells render but aren't clickable. */
+  onVariantClick?: (form: RegionalVariant) => void;
   /** Set of dex numbers visually selected (only used with onCellClick) */
   selectedDex?: Set<number>;
   /** Per-dex card art to show in the cell (letterboxed). Used by
@@ -88,6 +91,7 @@ export function PokedexGrid({
   storageKey = "main",
   onCellClick,
   onMegaClick,
+  onVariantClick,
   selectedDex,
   displayCardByDex,
   fitToViewport = false,
@@ -353,7 +357,7 @@ export function PokedexGrid({
       return <MegaCell key={slot.key} form={slot.form} onClick={onMegaClick} />;
     }
     if (slot.kind === "variant") {
-      return <VariantCell key={slot.key} form={slot.form} />;
+      return <VariantCell key={slot.key} form={slot.form} onClick={onVariantClick} />;
     }
     return (
       <PokemonCell
