@@ -1,30 +1,34 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { ChevronRight } from "lucide-react";
-import { MEGAS, POKEDEX } from "@/lib/data";
+import { MEGAS, POKEDEX, VARIANTS } from "@/lib/data";
 import {
   GEN_NAMES,
   GEN_RANGES,
   type CardEntry,
   type Generation,
   type MegaForm,
+  type RegionalVariant,
 } from "@/lib/data/types";
 import { useOwnedCards } from "../_lib/OwnedCardsContext";
 import { useUser } from "../_lib/UserContext";
 import { FilterBar, type GridFilter } from "./FilterBar";
 import { PokemonCell } from "./PokemonCell";
 import { MegaCell } from "./MegaCell";
+import { VariantCell } from "./VariantCell";
 
 type Slot =
   | { kind: "dex"; key: string; dex: number; name: string; gen: Generation }
-  | { kind: "mega"; key: string; form: MegaForm; gen: Generation };
+  | { kind: "mega"; key: string; form: MegaForm; gen: Generation }
+  | { kind: "variant"; key: string; form: RegionalVariant; gen: Generation };
 
 interface Props {
-  /** Defaults to "pokedex" (renders the 1025 base species + optional Megas).
-   * When "megas", the grid renders ONLY mega forms — used by the /megas
-   * route when placement === "separate". */
-  mode?: "pokedex" | "megas";
+  /** Defaults to "pokedex" (renders the 1025 base species + optional Megas
+   * and/or regional variants). When "megas", the grid renders ONLY mega
+   * forms (the /megas route, placement === "separate"); when "variants", ONLY
+   * regional-variant forms (the /variants route, placement === "separate"). */
+  mode?: "pokedex" | "megas" | "variants";
   dexNumbers?: number[];
   groupByGenDefault?: boolean;
   showGenToggle?: boolean;
@@ -53,6 +57,7 @@ interface Props {
 const COLS_KEY_PREFIX = "pokedex.cols";
 const GROUP_KEY_PREFIX = "pokedex.groupByGen";
 const MEGA_GROUP_LABEL = "Mega Evolutions";
+const VARIANT_GROUP_LABEL = "Regional Variants";
 
 function clampCols(n: number) {
   return Math.max(6, Math.min(40, Math.round(n)));
@@ -87,8 +92,14 @@ export function PokedexGrid({
   displayCardByDex,
   fitToViewport = false,
 }: Props) {
-  const { ownedSpecies, ownedMegaForms } = useOwnedCards();
-  const { isGuest, treatMegasAsSeparate, megaPlacement } = useUser();
+  const { ownedSpecies, ownedMegaForms, ownedVariantForms } = useOwnedCards();
+  const {
+    isGuest,
+    treatMegasAsSeparate,
+    megaPlacement,
+    treatVariantsAsSeparate,
+    variantPlacement,
+  } = useUser();
   const [filter, setFilter] = useState<GridFilter>("all");
   const [query, setQuery] = useState("");
   const [cols, setCols] = useState(20);
@@ -136,16 +147,36 @@ export function PokedexGrid({
   const includeMegas =
     mode === "megas"
       ? true
+      : mode === "variants"
+      ? false
       : !restrict &&
         !displayCardByDex &&
         treatMegasAsSeparate &&
         megaPlacement !== "separate";
+
+  const includeVariants =
+    mode === "variants"
+      ? true
+      : mode === "megas"
+      ? false
+      : !restrict &&
+        !displayCardByDex &&
+        treatVariantsAsSeparate &&
+        variantPlacement !== "separate";
 
   const allSlots: Slot[] = useMemo(() => {
     if (mode === "megas") {
       return MEGAS.map((form) => ({
         kind: "mega" as const,
         key: `mega:${form.formKey}`,
+        form,
+        gen: form.gen,
+      }));
+    }
+    if (mode === "variants") {
+      return VARIANTS.map((form) => ({
+        kind: "variant" as const,
+        key: `variant:${form.variantKey}`,
         form,
         gen: form.gen,
       }));
@@ -161,38 +192,89 @@ export function PokedexGrid({
       }),
     );
 
-    if (!includeMegas) return baseDex;
+    if (!includeMegas && !includeVariants) return baseDex;
 
-    const megaSlots: Slot[] = MEGAS.map((form) => ({
-      kind: "mega" as const,
-      key: `mega:${form.formKey}`,
-      form,
-      gen: form.gen,
-    }));
+    const megaSlots: Slot[] = includeMegas
+      ? MEGAS.map((form) => ({
+          kind: "mega" as const,
+          key: `mega:${form.formKey}`,
+          form,
+          gen: form.gen,
+        }))
+      : [];
 
-    if (megaPlacement === "inline") {
-      // Insert each Mega slot immediately after the last slot for its
-      // baseDex (handles multiple Megas sharing a baseDex like X/Y).
-      const byBaseDex = new Map<number, Slot[]>();
-      for (const m of megaSlots) {
-        const arr = byBaseDex.get(m.kind === "mega" ? m.form.baseDex : -1);
-        if (arr) arr.push(m);
-        else byBaseDex.set(m.kind === "mega" ? m.form.baseDex : -1, [m]);
+    const variantSlots: Slot[] = includeVariants
+      ? VARIANTS.map((form) => ({
+          kind: "variant" as const,
+          key: `variant:${form.variantKey}`,
+          form,
+          gen: form.gen,
+        }))
+      : [];
+
+    const megaInline = includeMegas && megaPlacement === "inline";
+    const variantInline = includeVariants && variantPlacement === "inline";
+
+    if (megaInline || variantInline) {
+      // Insert each inline Mega/variant slot immediately after the slots for
+      // its baseDex. Order per dex is base → mega(s) → variant(s); megas and
+      // variants are each already in their canonical render order.
+      const megasByBaseDex = new Map<number, Slot[]>();
+      if (megaInline) {
+        for (const m of megaSlots) {
+          const dex = m.kind === "mega" ? m.form.baseDex : -1;
+          const arr = megasByBaseDex.get(dex);
+          if (arr) arr.push(m);
+          else megasByBaseDex.set(dex, [m]);
+        }
+      }
+      const variantsByBaseDex = new Map<number, Slot[]>();
+      if (variantInline) {
+        for (const v of variantSlots) {
+          const dex = v.kind === "variant" ? v.form.baseDex : -1;
+          const arr = variantsByBaseDex.get(dex);
+          if (arr) arr.push(v);
+          else variantsByBaseDex.set(dex, [v]);
+        }
       }
       const out: Slot[] = [];
       for (const slot of baseDex) {
         out.push(slot);
         if (slot.kind === "dex") {
-          const megas = byBaseDex.get(slot.dex);
+          const megas = megasByBaseDex.get(slot.dex);
           if (megas) out.push(...megas);
+          const variants = variantsByBaseDex.get(slot.dex);
+          if (variants) out.push(...variants);
         }
       }
-      return out;
+      // Any non-inline (appended) megas/variants still tack on at the end.
+      const appended: Slot[] = [];
+      if (includeMegas && !megaInline) appended.push(...megaSlots);
+      if (includeVariants && !variantInline) appended.push(...variantSlots);
+      return [...out, ...appended];
     }
 
-    // Appended placement → Megas tacked on at the end.
-    return [...baseDex, ...megaSlots];
-  }, [mode, restrict, includeMegas, megaPlacement]);
+    // Both appended (or only one feature on, appended) → tack on at the end,
+    // megas before variants.
+    return [...baseDex, ...megaSlots, ...variantSlots];
+  }, [
+    mode,
+    restrict,
+    includeMegas,
+    includeVariants,
+    megaPlacement,
+    variantPlacement,
+  ]);
+
+  const slotOwned = useCallback(
+    (slot: Slot) =>
+      slot.kind === "mega"
+        ? ownedMegaForms.has(slot.form.formKey)
+        : slot.kind === "variant"
+        ? ownedVariantForms.has(slot.form.variantKey)
+        : ownedSpecies.has(slot.dex),
+    [ownedMegaForms, ownedVariantForms, ownedSpecies],
+  );
 
   const filtered = useMemo(() => {
     const needle = query.trim().toLowerCase();
@@ -204,7 +286,7 @@ export function PokedexGrid({
             return false;
           }
         } else {
-          // Numeric searches don't apply to Megas (they have no dex#).
+          // Numeric searches don't apply to Megas/variants (no dex#).
           if (isNumeric) return false;
           if (!slot.form.displayName.toLowerCase().includes(needle)) return false;
         }
@@ -213,16 +295,12 @@ export function PokedexGrid({
         case "all":
           return true;
         case "owned":
-          return slot.kind === "mega"
-            ? ownedMegaForms.has(slot.form.formKey)
-            : ownedSpecies.has(slot.dex);
+          return slotOwned(slot);
         case "needed":
-          return slot.kind === "mega"
-            ? !ownedMegaForms.has(slot.form.formKey)
-            : !ownedSpecies.has(slot.dex);
+          return !slotOwned(slot);
       }
     });
-  }, [allSlots, query, filter, ownedSpecies, ownedMegaForms]);
+  }, [allSlots, query, filter, slotOwned]);
 
   // Bucket for gen-grouped rendering. In appended mode (mode='pokedex' +
   // placement='appended'), Megas go into their own synthetic bucket below
@@ -230,39 +308,42 @@ export function PokedexGrid({
   const gens: Generation[] = useMemo(() => {
     const set = new Set<Generation>();
     for (const slot of filtered) {
-      if (mode === "megas") set.add(slot.gen);
+      if (mode === "megas" || mode === "variants") set.add(slot.gen);
       else if (slot.kind === "dex") set.add(slot.gen);
-      else if (megaPlacement === "inline") set.add(slot.gen);
-      // appended Megas go in the synthetic group, not a real gen
+      else if (slot.kind === "mega" && megaPlacement === "inline") set.add(slot.gen);
+      else if (slot.kind === "variant" && variantPlacement === "inline") set.add(slot.gen);
+      // appended Megas/variants go in their synthetic groups, not a real gen
     }
     return [...set].sort((a, b) => a - b);
-  }, [filtered, mode, megaPlacement]);
+  }, [filtered, mode, megaPlacement, variantPlacement]);
 
   const slotsByGen = useMemo(() => {
     const map = new Map<Generation, Slot[]>();
     for (const slot of filtered) {
-      if (mode !== "megas" && slot.kind === "mega" && megaPlacement === "appended") continue;
+      if (mode === "pokedex" && slot.kind === "mega" && megaPlacement === "appended") continue;
+      if (mode === "pokedex" && slot.kind === "variant" && variantPlacement === "appended")
+        continue;
       const arr = map.get(slot.gen);
       if (arr) arr.push(slot);
       else map.set(slot.gen, [slot]);
     }
     return map;
-  }, [filtered, mode, megaPlacement]);
+  }, [filtered, mode, megaPlacement, variantPlacement]);
 
   const appendedMegas = useMemo(() => {
-    if (mode === "megas" || megaPlacement !== "appended" || !includeMegas) return [];
+    if (mode !== "pokedex" || megaPlacement !== "appended" || !includeMegas) return [];
     return filtered.filter((s) => s.kind === "mega");
   }, [filtered, mode, megaPlacement, includeMegas]);
 
+  const appendedVariants = useMemo(() => {
+    if (mode !== "pokedex" || variantPlacement !== "appended" || !includeVariants) return [];
+    return filtered.filter((s) => s.kind === "variant");
+  }, [filtered, mode, variantPlacement, includeVariants]);
+
   // For the top-level "owned"/"all" counts in the FilterBar.
   const totalOwnedInView = useMemo(
-    () =>
-      filtered.filter((slot) =>
-        slot.kind === "mega"
-          ? ownedMegaForms.has(slot.form.formKey)
-          : ownedSpecies.has(slot.dex),
-      ).length,
-    [filtered, ownedSpecies, ownedMegaForms],
+    () => filtered.filter(slotOwned).length,
+    [filtered, slotOwned],
   );
 
   const gap = cols <= 10 ? 8 : cols <= 18 ? 6 : 4;
@@ -270,6 +351,9 @@ export function PokedexGrid({
   const renderSlot = (slot: Slot) => {
     if (slot.kind === "mega") {
       return <MegaCell key={slot.key} form={slot.form} onClick={onMegaClick} />;
+    }
+    if (slot.kind === "variant") {
+      return <VariantCell key={slot.key} form={slot.form} />;
     }
     return (
       <PokemonCell
@@ -322,7 +406,7 @@ export function PokedexGrid({
               type="search"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder={mode === "megas" ? "Name" : "Name or #"}
+              placeholder={mode === "megas" || mode === "variants" ? "Name" : "Name or #"}
               className="w-44 rounded-md border border-border bg-panel-2/60 py-1.5 pr-2.5 pl-7 text-xs text-text placeholder:text-muted focus:border-accent focus:bg-panel-2 focus:outline-none"
             />
           </div>
@@ -371,17 +455,16 @@ export function PokedexGrid({
             const items = slotsByGen.get(g);
             if (!items || items.length === 0) return null;
             const [lo, hi] = GEN_RANGES[g];
-            const ownedInGen = items.filter((s) =>
-              s.kind === "mega"
-                ? ownedMegaForms.has(s.form.formKey)
-                : ownedSpecies.has(s.dex),
-            ).length;
+            const ownedInGen = items.filter(slotOwned).length;
             // Denominator considers ALL slots that would belong to this
             // gen group (ignoring the current filter, so percentages stay
             // honest even when filtering down).
             const totalInGen = (() => {
               if (mode === "megas") {
                 return MEGAS.filter((m) => m.gen === g).length;
+              }
+              if (mode === "variants") {
+                return VARIANTS.filter((v) => v.gen === g).length;
               }
               const dexCount = restrict
                 ? POKEDEX.filter((p) => restrict.has(p.dex) && p.gen === g).length
@@ -390,7 +473,11 @@ export function PokedexGrid({
                 includeMegas && megaPlacement === "inline"
                   ? MEGAS.filter((m) => m.gen === g).length
                   : 0;
-              return dexCount + megaCount;
+              const variantCount =
+                includeVariants && variantPlacement === "inline"
+                  ? VARIANTS.filter((v) => v.gen === g).length
+                  : 0;
+              return dexCount + megaCount + variantCount;
             })();
             const pct = totalInGen > 0 ? (ownedInGen / totalInGen) * 100 : 0;
             return (
@@ -475,6 +562,51 @@ export function PokedexGrid({
                 </div>
               </summary>
               <div>{renderGrid(appendedMegas)}</div>
+            </details>
+          )}
+          {appendedVariants.length > 0 && (
+            <details open className="group">
+              <summary className="mb-3 flex cursor-pointer list-none items-end gap-4">
+                <div className="flex items-baseline gap-2.5">
+                  <span className="text-[10px] uppercase tracking-[0.18em] text-muted nums">
+                    Bonus
+                  </span>
+                  <h2 className="text-base font-semibold tracking-tight">{VARIANT_GROUP_LABEL}</h2>
+                  <span className="text-[11px] text-muted nums">{VARIANTS.length} forms</span>
+                </div>
+                <div className="flex flex-1 items-center gap-3">
+                  {isGuest ? (
+                    <div className="flex-1" />
+                  ) : (
+                    (() => {
+                      const owned = appendedVariants.filter(
+                        (s) => s.kind === "variant" && ownedVariantForms.has(s.form.variantKey),
+                      ).length;
+                      const total = VARIANTS.length;
+                      const pct = total > 0 ? (owned / total) * 100 : 0;
+                      return (
+                        <>
+                          <div className="relative h-[3px] flex-1 overflow-hidden rounded-full bg-border">
+                            <div
+                              className="absolute inset-y-0 left-0 rounded-full bg-variant transition-[width] duration-300 ease-out"
+                              style={{ width: `${pct}%` }}
+                            />
+                          </div>
+                          <span className="shrink-0 text-[11px] nums tabular-nums">
+                            <span className="font-semibold text-variant">{owned}</span>
+                            <span className="text-muted"> / {total}</span>
+                          </span>
+                        </>
+                      );
+                    })()
+                  )}
+                  <ChevronRight
+                    aria-hidden
+                    className="ml-1 h-3.5 w-3.5 text-muted transition-transform group-open:rotate-90"
+                  />
+                </div>
+              </summary>
+              <div>{renderGrid(appendedVariants)}</div>
             </details>
           )}
         </div>
