@@ -7,6 +7,7 @@ import type {
 } from "@/lib/pricing/pokemontcg";
 import type { Currency } from "@/lib/pricing/currencies";
 import type { MegaPlacement } from "./mega-prefs";
+import type { VariantPlacement } from "./variant-prefs";
 
 interface UserCtx {
   userId: string;
@@ -14,6 +15,8 @@ interface UserCtx {
   priceSource: PriceSource;
   treatMegasAsSeparate: boolean;
   megaPlacement: MegaPlacement;
+  treatVariantsAsSeparate: boolean;
+  variantPlacement: VariantPlacement;
   displayCurrency: Currency;
   latestRatesFromEur: Record<Currency, number>;
   // Memoized bundle for passing into formatPrice/formatPriceCompact.
@@ -29,6 +32,8 @@ export function UserProvider({
   priceSource,
   treatMegasAsSeparate,
   megaPlacement,
+  treatVariantsAsSeparate,
+  variantPlacement,
   displayCurrency,
   latestRatesFromEur,
   children,
@@ -38,6 +43,8 @@ export function UserProvider({
   priceSource: PriceSource;
   treatMegasAsSeparate: boolean;
   megaPlacement: MegaPlacement;
+  treatVariantsAsSeparate: boolean;
+  variantPlacement: VariantPlacement;
   displayCurrency: Currency;
   latestRatesFromEur: Record<Currency, number>;
   children: React.ReactNode;
@@ -54,6 +61,8 @@ export function UserProvider({
         priceSource,
         treatMegasAsSeparate,
         megaPlacement,
+        treatVariantsAsSeparate,
+        variantPlacement,
         displayCurrency,
         latestRatesFromEur,
         display,
