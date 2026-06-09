@@ -103,6 +103,8 @@
   --pokedex-missing:         oklch(0.595 0.205 25);    /* red */
   --pokedex-missing-dark:    oklch(0.445 0.185 25);
   --pokedex-mega:            oklch(0.555 0.180 290);   /* violet */
+  --pokedex-variant:         oklch(0.560 0.110 195);   /* teal — regional variants */
+  --pokedex-variant-dark:    oklch(0.430 0.100 195);
   --pokedex-me-tint:         oklch(0.555 0.180 290);
   --pokedex-sv-tint:         oklch(0.555 0.155 234);   /* SV blue */
 }
@@ -117,6 +119,8 @@
   --pokedex-missing:         oklch(0.740 0.180 22);    /* ≈ #f87171 */
   --pokedex-missing-dark:    oklch(0.460 0.180 25);    /* ≈ #991b1b */
   --pokedex-mega:            oklch(0.715 0.170 290);   /* ≈ #a78bff */
+  --pokedex-variant:         oklch(0.770 0.110 192);   /* ≈ #2dd4bf teal */
+  --pokedex-variant-dark:    oklch(0.560 0.110 188);
   --pokedex-me-tint:         oklch(0.715 0.170 290);
   --pokedex-sv-tint:         oklch(0.745 0.135 234);   /* ≈ #5db8ff */
 }
@@ -196,6 +200,8 @@
   --color-missing:                      var(--pokedex-missing);
   --color-missing-dark:                 var(--pokedex-missing-dark);
   --color-mega:                         var(--pokedex-mega);
+  --color-variant:                      var(--pokedex-variant);
+  --color-variant-dark:                 var(--pokedex-variant-dark);
   --color-me-tint:                      var(--pokedex-me-tint);
   --color-sv-tint:                      var(--pokedex-sv-tint);
 
