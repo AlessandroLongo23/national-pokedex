@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState, useTransition } from "react";
 import { Notebook, Printer } from "lucide-react";
 import type { CardEntry } from "@/lib/data/types";
-import { MEGAS } from "@/lib/data";
+import { MEGAS, VARIANTS } from "@/lib/data";
 import {
   ownedCardsByDex,
   pickDisplayCardId,
@@ -66,10 +66,19 @@ export function BinderDetailClient({
   prices,
 }: Props) {
   const router = useRouter();
-  const { ownedCards, ownedSpecies, ownedMegaForms } = useOwnedCards();
-  const { treatMegasAsSeparate, megaPlacement, display } = useUser();
+  const { ownedCards, ownedSpecies, ownedMegaForms, ownedVariantForms } =
+    useOwnedCards();
+  const {
+    treatMegasAsSeparate,
+    megaPlacement,
+    treatVariantsAsSeparate,
+    variantPlacement,
+    display,
+  } = useUser();
   const includeMegasInBinder =
     treatMegasAsSeparate && megaPlacement !== "separate";
+  const includeVariantsInBinder =
+    treatVariantsAsSeparate && variantPlacement !== "separate";
   const [editing, setEditing] = useState(false);
   const [renaming, setRenaming] = useState(false);
   const [nameDraft, setNameDraft] = useState(binder.name);
@@ -94,18 +103,39 @@ export function BinderDetailClient({
     return MEGAS.filter((m) => m.baseDex >= dexRange.from && m.baseDex <= dexRange.to);
   }, [isPokedex, dexRange, includeMegasInBinder]);
 
+  // Regional variants that belong to this pokedex-binder's range (only when
+  // the toggle is on AND placement is not "separate") — parallel to megas.
+  const variantsInRange = useMemo(() => {
+    if (!isPokedex || !dexRange || !includeVariantsInBinder) return [];
+    return VARIANTS.filter(
+      (v) => v.baseDex >= dexRange.from && v.baseDex <= dexRange.to,
+    );
+  }, [isPokedex, dexRange, includeVariantsInBinder]);
+
   const total = isPokedex
-    ? (dexRange?.nums.length ?? 0) + megasInRange.length
+    ? (dexRange?.nums.length ?? 0) + megasInRange.length + variantsInRange.length
     : cards.length;
   const ownedCount = useMemo(() => {
     if (isPokedex && dexRange) {
       let n = 0;
       for (const d of dexRange.nums) if (ownedSpecies.has(d)) n++;
       for (const m of megasInRange) if (ownedMegaForms.has(m.formKey)) n++;
+      for (const v of variantsInRange)
+        if (ownedVariantForms.has(v.variantKey)) n++;
       return n;
     }
     return cards.reduce((acc, c) => acc + (ownedCards.has(c.id) ? 1 : 0), 0);
-  }, [isPokedex, dexRange, ownedSpecies, megasInRange, ownedMegaForms, cards, ownedCards]);
+  }, [
+    isPokedex,
+    dexRange,
+    ownedSpecies,
+    megasInRange,
+    ownedMegaForms,
+    variantsInRange,
+    ownedVariantForms,
+    cards,
+    ownedCards,
+  ]);
   const pct = total > 0 ? (ownedCount / total) * 100 : 0;
 
   function commitRename() {
@@ -178,17 +208,31 @@ export function BinderDetailClient({
     const out = new Map<number, CardEntry>();
     for (const d of dexRange.nums) {
       const ownedForDex = ownedByDex.get(d) ?? [];
-      // When the toggle is on, Mega cards must not represent a base dex slot.
-      // Stale overrides pointing at a Mega card fall through to the rarity
-      // fallback (no DB cleanup needed — flipping the toggle off restores).
-      const cardId = pickDisplayCardId(overrides[d], ownedForDex, treatMegasAsSeparate);
+      // When a toggle is on, the corresponding form's cards must not represent
+      // a base dex slot. Stale overrides pointing at an excluded card fall
+      // through to the rarity fallback (no DB cleanup needed — flipping the
+      // toggle off restores).
+      const cardId = pickDisplayCardId(
+        overrides[d],
+        ownedForDex,
+        treatMegasAsSeparate,
+        treatVariantsAsSeparate,
+      );
       if (cardId) {
         const card = byId.get(cardId);
         if (card) out.set(d, card);
       }
     }
     return out;
-  }, [isPokedex, dexRange, cards, ownedByDex, overrides, treatMegasAsSeparate]);
+  }, [
+    isPokedex,
+    dexRange,
+    cards,
+    ownedByDex,
+    overrides,
+    treatMegasAsSeparate,
+    treatVariantsAsSeparate,
+  ]);
 
   function onPickCard(cardId: string) {
     if (pickerDex == null) return;
