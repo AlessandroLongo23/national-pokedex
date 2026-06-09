@@ -4,6 +4,7 @@ import {
   filterCardsByIds,
   getAllCards,
   pokedexCoverage,
+  readPokedexFormFlags,
   type ScopeType,
   type ScopeParams,
 } from "@/lib/data/binder-scope";
@@ -69,12 +70,17 @@ export async function BinderListPricedGrid({
     if (b.scope_type === "pokedex") {
       const params = b.scope_params as { dexFrom: number; dexTo: number };
       const inRange = filterByScope(allCards, "pokedex", params);
+      const flags = readPokedexFormFlags(b.scope_params);
       const cov = pokedexCoverage(
         params,
         ownedIds,
         inRange,
-        { treatMegasAsSeparate, megaPlacement, megas: MEGAS },
-        { treatVariantsAsSeparate, variantPlacement, variants: VARIANTS },
+        { treatMegasAsSeparate, megaPlacement, megas: flags.includeMegas ? MEGAS : [] },
+        {
+          treatVariantsAsSeparate,
+          variantPlacement,
+          variants: flags.includeVariants ? VARIANTS : [],
+        },
       );
       targetCount =
         cov.dexNumbers.length + cov.megaForms.length + cov.variantForms.length;
@@ -165,12 +171,17 @@ export function BinderListUnpricedGrid({
     if (b.scope_type === "pokedex") {
       const params = b.scope_params as { dexFrom: number; dexTo: number };
       const inRange = filterByScope(allCards, "pokedex", params);
+      const flags = readPokedexFormFlags(b.scope_params);
       const cov = pokedexCoverage(
         params,
         ownedIds,
         inRange,
-        { treatMegasAsSeparate, megaPlacement, megas: MEGAS },
-        { treatVariantsAsSeparate, variantPlacement, variants: VARIANTS },
+        { treatMegasAsSeparate, megaPlacement, megas: flags.includeMegas ? MEGAS : [] },
+        {
+          treatVariantsAsSeparate,
+          variantPlacement,
+          variants: flags.includeVariants ? VARIANTS : [],
+        },
       );
       targetCount =
         cov.dexNumbers.length + cov.megaForms.length + cov.variantForms.length;
