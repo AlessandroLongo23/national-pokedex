@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { MEGAS, POKEDEX } from "@/lib/data";
+import { MEGAS, POKEDEX, VARIANTS } from "@/lib/data";
 import { PageHeader } from "../_components/PageHeader";
 import { PokeballIcon } from "@/lib/components/ui/PokedexLogo";
 import { PokedexGrid } from "../_components/PokedexGrid";
@@ -16,11 +16,19 @@ import type { MegaForm } from "@/lib/data/types";
 export default function PokedexPage() {
   const [pickerDex, setPickerDex] = useState<number | null>(null);
   const [pickerMega, setPickerMega] = useState<MegaForm | null>(null);
-  const { ownedSpecies, ownedMegaForms } = useOwnedCards();
-  const { isGuest, treatMegasAsSeparate, megaPlacement } = useUser();
+  const { ownedSpecies, ownedMegaForms, ownedVariantForms } = useOwnedCards();
+  const { isGuest, treatMegasAsSeparate, megaPlacement, treatVariantsAsSeparate, variantPlacement } =
+    useUser();
   const showMegasInDex = treatMegasAsSeparate && megaPlacement !== "separate";
-  const total = POKEDEX.length + (showMegasInDex ? MEGAS.length : 0);
-  const owned = ownedSpecies.size + (showMegasInDex ? ownedMegaForms.size : 0);
+  const showVariantsInDex = treatVariantsAsSeparate && variantPlacement !== "separate";
+  const total =
+    POKEDEX.length +
+    (showMegasInDex ? MEGAS.length : 0) +
+    (showVariantsInDex ? VARIANTS.length : 0);
+  const owned =
+    ownedSpecies.size +
+    (showMegasInDex ? ownedMegaForms.size : 0) +
+    (showVariantsInDex ? ownedVariantForms.size : 0);
   const pct = total > 0 ? (owned / total) * 100 : 0;
 
   return (

@@ -15,6 +15,7 @@ import {
   Receipt,
   Heart,
   Sparkles,
+  Globe2,
   type LucideIcon,
 } from "lucide-react";
 import { OwnedCardsProvider, type InitialOwnedCard } from "../_lib/OwnedCardsContext";
@@ -220,7 +221,7 @@ function buildNavGroups({
           {
             name: "Regional Variants",
             url: "/variants",
-            icon: Sparkles,
+            icon: Globe2,
             group: "Browse" as const,
           },
         ] satisfies FlatNavSpec[])
