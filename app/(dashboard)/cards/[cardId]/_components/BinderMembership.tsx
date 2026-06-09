@@ -23,6 +23,8 @@ interface Props {
   dexNumbers: number[];
   /** This card's Mega form key, if it resolves to a single Mega/Primal form. */
   megaFormKey: string | null;
+  /** This card's regional-variant form key, if it resolves to one. */
+  variantFormKey: string | null;
 }
 
 type RowState = "owned" | "covered" | "needs";
@@ -40,9 +42,11 @@ export function BinderMembership({
   cardId,
   dexNumbers,
   megaFormKey,
+  variantFormKey,
 }: Props) {
-  const { quantityOf, isSpeciesOwned, isMegaFormOwned } = useOwnedCards();
-  const { treatMegasAsSeparate } = useUser();
+  const { quantityOf, isSpeciesOwned, isMegaFormOwned, isVariantFormOwned } =
+    useOwnedCards();
+  const { treatMegasAsSeparate, treatVariantsAsSeparate } = useUser();
 
   if (binders.length === 0) return null;
 
@@ -50,9 +54,13 @@ export function BinderMembership({
 
   // Is this card's pokedex slot already satisfied by any owned card (this one
   // or another print of the same Pokémon)? A Mega-form card is satisfied by its
-  // form when Megas are tracked as separate slots, matching deriveSpecies.
+  // form when Megas are tracked as separate slots; a regional-variant card by
+  // its variant form when variants are tracked separately — both match
+  // deriveSpecies. A card carries at most one of megaFormKey / variantFormKey.
   const slotCovered = (range: { from: number; to: number }): boolean => {
     if (treatMegasAsSeparate && megaFormKey) return isMegaFormOwned(megaFormKey);
+    if (treatVariantsAsSeparate && variantFormKey)
+      return isVariantFormOwned(variantFormKey);
     const lo = Math.min(range.from, range.to);
     const hi = Math.max(range.from, range.to);
     const inRange = dexNumbers.filter((d) => d >= lo && d <= hi);
