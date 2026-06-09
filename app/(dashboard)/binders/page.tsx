@@ -111,6 +111,8 @@ export default async function BindersPage() {
               ownedQuantities={ownedQuantities}
               treatMegasAsSeparate={prefs.treatMegasAsSeparate}
               megaPlacement={prefs.megaPlacement}
+              treatVariantsAsSeparate={prefs.treatVariantsAsSeparate}
+              variantPlacement={prefs.variantPlacement}
               priceSource={prefs.priceSource}
               display={display}
               allCards={allCards}
@@ -123,6 +125,8 @@ export default async function BindersPage() {
             ownedQuantities={ownedQuantities}
             treatMegasAsSeparate={prefs.treatMegasAsSeparate}
             megaPlacement={prefs.megaPlacement}
+            treatVariantsAsSeparate={prefs.treatVariantsAsSeparate}
+            variantPlacement={prefs.variantPlacement}
             priceSource={prefs.priceSource}
             display={display}
           />
