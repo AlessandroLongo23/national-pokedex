@@ -16,6 +16,8 @@ export default async function DashboardLayout({ children }: { children: React.Re
         priceSource="tcgplayer"
         treatMegasAsSeparate={false}
         megaPlacement="appended"
+        treatVariantsAsSeparate={false}
+        variantPlacement="appended"
         displayCurrency="USD"
         latestRatesFromEur={latestRatesFromEur}
         initialOwned={[]}
@@ -64,6 +66,8 @@ export default async function DashboardLayout({ children }: { children: React.Re
       priceSource={prefs.priceSource}
       treatMegasAsSeparate={prefs.treatMegasAsSeparate}
       megaPlacement={prefs.megaPlacement}
+      treatVariantsAsSeparate={prefs.treatVariantsAsSeparate}
+      variantPlacement={prefs.variantPlacement}
       displayCurrency={prefs.displayCurrency}
       latestRatesFromEur={latestRatesFromEur}
       initialOwned={initialOwned}
