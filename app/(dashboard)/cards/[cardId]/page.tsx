@@ -405,6 +405,7 @@ export default async function CardDetailPage({ params }: PageProps) {
               cardId={card.id}
               dexNumbers={card.dex}
               megaFormKey={card.megaFormKey ?? null}
+              variantFormKey={card.variantFormKey ?? null}
             />
           )}
 
