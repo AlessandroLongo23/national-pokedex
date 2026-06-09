@@ -44,7 +44,8 @@
     "evolvesFrom": "Exeggcute",
     "artist": "Satoshi Shirai",
     "imageSmall": "https://images.pokemontcg.io/mcd19/2.png",
-    "imageLarge": "https://images.pokemontcg.io/mcd19/2_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/mcd19/2_hires.png",
+    "variantFormKey": "alola-exeggutor"
   },
   {
     "id": "mcd19-3",
@@ -90,7 +91,8 @@
     ],
     "artist": "Shin Nagasawa",
     "imageSmall": "https://images.pokemontcg.io/mcd19/4.png",
-    "imageLarge": "https://images.pokemontcg.io/mcd19/4_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/mcd19/4_hires.png",
+    "variantFormKey": "alola-sandshrew"
   },
   {
     "id": "mcd19-5",
@@ -228,7 +230,8 @@
     ],
     "artist": "Akira Komayama",
     "imageSmall": "https://images.pokemontcg.io/mcd19/10.png",
-    "imageLarge": "https://images.pokemontcg.io/mcd19/10_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/mcd19/10_hires.png",
+    "variantFormKey": "alola-meowth"
   },
   {
     "id": "mcd19-11",
@@ -252,7 +255,8 @@
     "evolvesFrom": "Alolan Diglett",
     "artist": "Megumi Mizutani",
     "imageSmall": "https://images.pokemontcg.io/mcd19/11.png",
-    "imageLarge": "https://images.pokemontcg.io/mcd19/11_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/mcd19/11_hires.png",
+    "variantFormKey": "alola-dugtrio"
   },
   {
     "id": "mcd19-12",

@@ -121,7 +121,8 @@
     "artist": "MUGENUP",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/pgo/5.png",
-    "imageLarge": "https://images.pokemontcg.io/pgo/5_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/pgo/5_hires.png",
+    "variantFormKey": "alola-exeggutor"
   },
   {
     "id": "pgo-6",
@@ -1002,7 +1003,8 @@
     "artist": "KIYOTAKA OSHIYAMA",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/pgo/41.png",
-    "imageLarge": "https://images.pokemontcg.io/pgo/41_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/pgo/41_hires.png",
+    "variantFormKey": "alola-rattata"
   },
   {
     "id": "pgo-42",
@@ -1027,7 +1029,8 @@
     "artist": "Atsuko Nishida",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/pgo/42.png",
-    "imageLarge": "https://images.pokemontcg.io/pgo/42_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/pgo/42_hires.png",
+    "variantFormKey": "alola-raticate"
   },
   {
     "id": "pgo-43",
@@ -1702,7 +1705,8 @@
     "artist": "MUGENUP",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/pgo/71.png",
-    "imageLarge": "https://images.pokemontcg.io/pgo/71_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/pgo/71_hires.png",
+    "variantFormKey": "alola-exeggutor"
   },
   {
     "id": "pgo-72",

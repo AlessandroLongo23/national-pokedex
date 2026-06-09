@@ -1,1 +1,419 @@
-{}
+{
+  "alola-grimer": [
+    "sm1-57",
+    "sm3-83",
+    "sm9-83",
+    "sm11-127",
+    "sm12-130"
+  ],
+  "alola-muk": [
+    "sm1-58",
+    "sm3-84",
+    "sm3-138",
+    "sm3-157",
+    "sm9-84",
+    "sm12-131"
+  ],
+  "alola-rattata": [
+    "sm1-76",
+    "sm3-81",
+    "sm7-84",
+    "pgo-41"
+  ],
+  "alola-raticate": [
+    "sm1-77",
+    "sm3-82",
+    "sm7-85",
+    "pgo-42"
+  ],
+  "alola-meowth": [
+    "sm1-78",
+    "smp-SM43",
+    "smp-SM51",
+    "mcd17-8",
+    "sm8-118",
+    "mcd19-10",
+    "sm12-128"
+  ],
+  "alola-persian": [
+    "sm1-79",
+    "sm8-119",
+    "sm12-129",
+    "sm12-219",
+    "sm12-257"
+  ],
+  "alola-diglett": [
+    "sm1-86",
+    "mcd17-9",
+    "sm5-78",
+    "sm8-122",
+    "sm10-121",
+    "sv8-122"
+  ],
+  "alola-dugtrio": [
+    "sm1-87",
+    "sm5-79",
+    "sm8-123",
+    "sm10-122",
+    "mcd19-11",
+    "sv8-123",
+    "sv8-208"
+  ],
+  "alola-sandslash": [
+    "smp-SM18",
+    "smp-SM127",
+    "smp-SM236",
+    "sm2-20",
+    "sm5-29",
+    "sm12-138"
+  ],
+  "alola-raichu": [
+    "smp-SM65",
+    "smp-SM72",
+    "sm4-31",
+    "sm11-57"
+  ],
+  "alola-ninetales": [
+    "smp-SM128",
+    "sm2-22",
+    "sm2-132",
+    "sm2-150",
+    "sm3-28",
+    "sm8-132",
+    "sm8-205",
+    "sm8-225",
+    "sm9-111",
+    "sma-SV53",
+    "sm12-145"
+  ],
+  "alola-marowak": [
+    "smp-SM187",
+    "sm4-12",
+    "sm6-12",
+    "sm9-64",
+    "sm11-75",
+    "sv9-57"
+  ],
+  "alola-sandshrew": [
+    "sm2-19",
+    "sm2-19a",
+    "sm5-28",
+    "mcd19-4",
+    "sm12-137"
+  ],
+  "alola-vulpix": [
+    "sm2-21",
+    "sm2-21a",
+    "sm3-27",
+    "sm5-30",
+    "sm8-53",
+    "sma-SV8",
+    "sm12-39",
+    "swsh12-33",
+    "swsh12-34",
+    "swsh12-173",
+    "swsh12-197"
+  ],
+  "alola-geodude": [
+    "sm2-40",
+    "sm4-32",
+    "sm9-34",
+    "sm9-35",
+    "sv9-44"
+  ],
+  "alola-graveler": [
+    "sm2-41",
+    "sm4-33",
+    "sm9-36",
+    "sv9-45"
+  ],
+  "alola-golem": [
+    "sm2-42",
+    "sm4-34",
+    "sm4-102",
+    "sm4-113",
+    "sm9-37",
+    "sv9-46"
+  ],
+  "alola-exeggutor": [
+    "sm4-74",
+    "sm4-107",
+    "sm4-118",
+    "sm5-95",
+    "sm6-2",
+    "sm6-2a",
+    "sm9-114",
+    "sm9-115",
+    "mcd19-2",
+    "swshp-SWSH225",
+    "pgo-5",
+    "pgo-71",
+    "sv8-133",
+    "sv8-225",
+    "sv8-242",
+    "sv8-248"
+  ],
+  "galar-ponyta": [
+    "swshp-SWSH013",
+    "swsh1-81",
+    "swsh45sv-SV047"
+  ],
+  "galar-rapidash": [
+    "swshp-SWSH111",
+    "swsh1-82",
+    "swsh45sv-SV048",
+    "swsh6-167",
+    "swsh6-168"
+  ],
+  "galar-articuno": [
+    "swshp-SWSH123",
+    "swshp-SWSH282",
+    "swsh6-58",
+    "swsh6-169",
+    "swsh6-170",
+    "swsh7-63",
+    "swsh9-181",
+    "swsh10tg-TG16"
+  ],
+  "galar-zapdos": [
+    "swshp-SWSH124",
+    "swshp-SWSH283",
+    "swsh6-80",
+    "swsh6-173",
+    "swsh6-174",
+    "swsh7-82",
+    "swsh9-182",
+    "swsh10tg-TG19"
+  ],
+  "galar-moltres": [
+    "swshp-SWSH125",
+    "swshp-SWSH284",
+    "swsh6-97",
+    "swsh6-176",
+    "swsh6-177",
+    "swsh7-93",
+    "swsh9-183",
+    "swsh10tg-TG20"
+  ],
+  "galar-slowpoke": [
+    "swshp-SWSH126",
+    "swsh5-54",
+    "swsh6-54"
+  ],
+  "hisui-samurott": [
+    "swshp-SWSH207",
+    "swshp-SWSH239",
+    "swsh10-100",
+    "swsh10-101",
+    "swsh10-102",
+    "swsh10-176",
+    "swsh10-197",
+    "swsh10-209",
+    "swsh12pt5gg-GG51",
+    "swsh12pt5gg-GG52"
+  ],
+  "hisui-typhlosion": [
+    "swshp-SWSH237",
+    "swsh10-52",
+    "swsh10-53",
+    "swsh10-54",
+    "swsh10-169",
+    "swsh10-193"
+  ],
+  "hisui-decidueye": [
+    "swshp-SWSH238",
+    "swsh10-82",
+    "swsh10-83",
+    "swsh10-84",
+    "swsh10-173",
+    "swsh10-195"
+  ],
+  "hisui-basculin": [
+    "swshp-SWSH273",
+    "swsh10-43",
+    "swsh11-44"
+  ],
+  "hisui-electrode": [
+    "swshp-SWSH294",
+    "swsh10-3",
+    "swsh11-172"
+  ],
+  "hisui-zoroark": [
+    "swshp-SWSH297",
+    "swshp-SWSH298",
+    "swsh11-76",
+    "swsh11-146",
+    "swsh11-147",
+    "swsh11-203",
+    "swsh11-213",
+    "swsh12pt5gg-GG56"
+  ],
+  "galar-zigzagoon": [
+    "swsh1-117",
+    "swsh35-35",
+    "swsh45sv-SV078",
+    "swsh8-159",
+    "me2pt5-130"
+  ],
+  "galar-linoone": [
+    "swsh1-118",
+    "swsh35-36",
+    "swsh45sv-SV079",
+    "swsh8-160",
+    "me2pt5-131"
+  ],
+  "galar-meowth": [
+    "swsh1-127",
+    "swsh2-126",
+    "swsh4-112",
+    "swsh45sv-SV086",
+    "swsh8-180",
+    "swsh12pt5-84"
+  ],
+  "galar-stunfisk": [
+    "swsh1-132",
+    "swsh3-128",
+    "swsh3-184",
+    "swsh4-125",
+    "swsh45sv-SV088",
+    "swsh11-127",
+    "sv9-106"
+  ],
+  "galar-mr-mime": [
+    "swsh2-37",
+    "swsh3-35",
+    "swsh45sv-SV020",
+    "swsh5-34",
+    "swsh12pt5-30"
+  ],
+  "galar-darumaka": [
+    "swsh2-47",
+    "swsh3-43",
+    "swsh45sv-SV023",
+    "swsh8-71"
+  ],
+  "galar-darmanitan": [
+    "swsh2-48",
+    "swsh3-28",
+    "swsh3-44",
+    "swsh4-36",
+    "swsh4-37",
+    "swsh4-169",
+    "swsh4-187",
+    "swsh45sv-SV024",
+    "swsh8-72"
+  ],
+  "galar-corsola": [
+    "swsh2-78",
+    "swsh45sv-SV049",
+    "swsh8-117"
+  ],
+  "galar-farfetchd": [
+    "swsh2-94",
+    "swsh45sv-SV063",
+    "swsh6-78"
+  ],
+  "galar-yamask": [
+    "swsh2-101",
+    "swsh45sv-SV065",
+    "swsh6-82"
+  ],
+  "galar-weezing": [
+    "swsh2-113",
+    "swsh45-42",
+    "swsh45sv-SV077",
+    "swsh6-96"
+  ],
+  "galar-slowbro": [
+    "swsh3-99",
+    "swsh5-92"
+  ],
+  "galar-slowking": [
+    "swsh6-98",
+    "swsh6-99",
+    "swsh6-100",
+    "swsh6-178",
+    "swsh6-179",
+    "swsh6-207"
+  ],
+  "hisui-voltorb": [
+    "swsh10-2",
+    "swsh12pt5gg-GG01"
+  ],
+  "hisui-lilligant": [
+    "swsh10-16",
+    "swsh10-17",
+    "swsh10-18",
+    "swsh10-162",
+    "swsh10-163",
+    "swsh10-190",
+    "swsh12-10"
+  ],
+  "hisui-avalugg": [
+    "swsh10-48"
+  ],
+  "hisui-growlithe": [
+    "swsh10-70",
+    "swsh11-83",
+    "sv6-99",
+    "sv6-181"
+  ],
+  "hisui-arcanine": [
+    "swsh10-71",
+    "swsh11-84",
+    "swsh11tg-TG08",
+    "swsh12-90",
+    "swsh12-179",
+    "sv6-100"
+  ],
+  "hisui-qwilfish": [
+    "swsh10-88",
+    "swsh10-89"
+  ],
+  "hisui-sneasel": [
+    "swsh10-92"
+  ],
+  "hisui-braviary": [
+    "swsh10-132",
+    "swsh12-149"
+  ],
+  "hisui-zorua": [
+    "swsh11-75"
+  ],
+  "hisui-sliggoo": [
+    "swsh11-133"
+  ],
+  "hisui-goodra": [
+    "swsh11-134",
+    "swsh11-135",
+    "swsh11-136",
+    "swsh11-187",
+    "swsh11-202",
+    "swsh12pt5gg-GG21"
+  ],
+  "paldea-wooper": [
+    "svp-41",
+    "sv2-128",
+    "sv2-129",
+    "sv2-221",
+    "sv3-126",
+    "sv3-127",
+    "sv4pt5-58",
+    "sv4pt5-180",
+    "sv9-93",
+    "me2-102"
+  ],
+  "paldea-tauros": [
+    "sv2-28",
+    "sv2-41",
+    "sv2-108",
+    "sv2-218",
+    "sv4pt5-111",
+    "sv4pt5-120",
+    "sv4pt5-172",
+    "sv8-18",
+    "sv8-39",
+    "sv8-101",
+    "me2-48"
+  ]
+}

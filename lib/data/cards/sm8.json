@@ -1243,7 +1243,8 @@
     ],
     "artist": "Naoyo Kimura",
     "imageSmall": "https://images.pokemontcg.io/sm8/53.png",
-    "imageLarge": "https://images.pokemontcg.io/sm8/53_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm8/53_hires.png",
+    "variantFormKey": "alola-vulpix"
   },
   {
     "id": "sm8-54",
@@ -2763,7 +2764,8 @@
     ],
     "artist": "Akira Komayama",
     "imageSmall": "https://images.pokemontcg.io/sm8/118.png",
-    "imageLarge": "https://images.pokemontcg.io/sm8/118_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm8/118_hires.png",
+    "variantFormKey": "alola-meowth"
   },
   {
     "id": "sm8-119",
@@ -2787,7 +2789,8 @@
     "evolvesFrom": "Alolan Meowth",
     "artist": "Tomokazu Komiya",
     "imageSmall": "https://images.pokemontcg.io/sm8/119.png",
-    "imageLarge": "https://images.pokemontcg.io/sm8/119_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm8/119_hires.png",
+    "variantFormKey": "alola-persian"
   },
   {
     "id": "sm8-120",
@@ -2859,7 +2862,8 @@
     ],
     "artist": "Midori Harada",
     "imageSmall": "https://images.pokemontcg.io/sm8/122.png",
-    "imageLarge": "https://images.pokemontcg.io/sm8/122_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm8/122_hires.png",
+    "variantFormKey": "alola-diglett"
   },
   {
     "id": "sm8-123",
@@ -2883,7 +2887,8 @@
     "evolvesFrom": "Alolan Diglett",
     "artist": "Yuka Morii",
     "imageSmall": "https://images.pokemontcg.io/sm8/123.png",
-    "imageLarge": "https://images.pokemontcg.io/sm8/123_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm8/123_hires.png",
+    "variantFormKey": "alola-dugtrio"
   },
   {
     "id": "sm8-124",
@@ -3096,7 +3101,8 @@
     "evolvesFrom": "Alolan Vulpix",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/sm8/132.png",
-    "imageLarge": "https://images.pokemontcg.io/sm8/132_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm8/132_hires.png",
+    "variantFormKey": "alola-ninetales"
   },
   {
     "id": "sm8-133",
@@ -4668,7 +4674,8 @@
     "evolvesFrom": "Alolan Vulpix",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/sm8/205.png",
-    "imageLarge": "https://images.pokemontcg.io/sm8/205_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm8/205_hires.png",
+    "variantFormKey": "alola-ninetales"
   },
   {
     "id": "sm8-206",
@@ -5111,7 +5118,8 @@
     "evolvesFrom": "Alolan Vulpix",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/sm8/225.png",
-    "imageLarge": "https://images.pokemontcg.io/sm8/225_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm8/225_hires.png",
+    "variantFormKey": "alola-ninetales"
   },
   {
     "id": "sm8-226",

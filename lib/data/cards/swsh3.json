@@ -686,7 +686,8 @@
     "artist": "Misa Tsutsui",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh3/28.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh3/28_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh3/28_hires.png",
+    "variantFormKey": "galar-darmanitan"
   },
   {
     "id": "swsh3-29",
@@ -859,7 +860,8 @@
     "artist": "Misa Tsutsui",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh3/35.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh3/35_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh3/35_hires.png",
+    "variantFormKey": "galar-mr-mime"
   },
   {
     "id": "swsh3-36",
@@ -1054,7 +1056,8 @@
     "artist": "Shin Nagasawa",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh3/43.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh3/43_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh3/43_hires.png",
+    "variantFormKey": "galar-darumaka"
   },
   {
     "id": "swsh3-44",
@@ -1079,7 +1082,8 @@
     "artist": "Masakazu Fukuda",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh3/44.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh3/44_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh3/44_hires.png",
+    "variantFormKey": "galar-darmanitan"
   },
   {
     "id": "swsh3-45",
@@ -2430,7 +2434,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh3/99.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh3/99_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh3/99_hires.png",
+    "variantFormKey": "galar-slowbro"
   },
   {
     "id": "swsh3-100",
@@ -3145,7 +3150,8 @@
     "artist": "PLANETA Tsuji",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh3/128.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh3/128_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh3/128_hires.png",
+    "variantFormKey": "galar-stunfisk"
   },
   {
     "id": "swsh3-129",
@@ -4408,7 +4414,8 @@
     "artist": "PLANETA Tsuji",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh3/184.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh3/184_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh3/184_hires.png",
+    "variantFormKey": "galar-stunfisk"
   },
   {
     "id": "swsh3-185",

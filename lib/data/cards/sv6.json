@@ -2433,7 +2433,8 @@
     "artist": "Whisker",
     "regulationMark": "H",
     "imageSmall": "https://images.pokemontcg.io/sv6/99.png",
-    "imageLarge": "https://images.pokemontcg.io/sv6/99_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv6/99_hires.png",
+    "variantFormKey": "hisui-growlithe"
   },
   {
     "id": "sv6-100",
@@ -2458,7 +2459,8 @@
     "artist": "SIE NANAHARA",
     "regulationMark": "H",
     "imageSmall": "https://images.pokemontcg.io/sv6/100.png",
-    "imageLarge": "https://images.pokemontcg.io/sv6/100_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv6/100_hires.png",
+    "variantFormKey": "hisui-arcanine"
   },
   {
     "id": "sv6-101",
@@ -4307,7 +4309,8 @@
     "artist": "GIDORA",
     "regulationMark": "H",
     "imageSmall": "https://images.pokemontcg.io/sv6/181.png",
-    "imageLarge": "https://images.pokemontcg.io/sv6/181_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv6/181_hires.png",
+    "variantFormKey": "hisui-growlithe"
   },
   {
     "id": "sv6-182",

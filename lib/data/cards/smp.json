@@ -420,7 +420,8 @@
     "evolvesFrom": "Alolan Sandshrew",
     "artist": "TOKIYA",
     "imageSmall": "https://images.pokemontcg.io/smp/SM18.png",
-    "imageLarge": "https://images.pokemontcg.io/smp/SM18_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/smp/SM18_hires.png",
+    "variantFormKey": "alola-sandslash"
   },
   {
     "id": "smp-SM19",
@@ -1036,7 +1037,8 @@
     ],
     "artist": "Megumi Mizutani",
     "imageSmall": "https://images.pokemontcg.io/smp/SM43.png",
-    "imageLarge": "https://images.pokemontcg.io/smp/SM43_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/smp/SM43_hires.png",
+    "variantFormKey": "alola-meowth"
   },
   {
     "id": "smp-SM44",
@@ -1223,7 +1225,8 @@
     ],
     "artist": "sui",
     "imageSmall": "https://images.pokemontcg.io/smp/SM51.png",
-    "imageLarge": "https://images.pokemontcg.io/smp/SM51_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/smp/SM51_hires.png",
+    "variantFormKey": "alola-meowth"
   },
   {
     "id": "smp-SM52",
@@ -1561,7 +1564,8 @@
     "evolvesFrom": "Pikachu",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/smp/SM65.png",
-    "imageLarge": "https://images.pokemontcg.io/smp/SM65_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/smp/SM65_hires.png",
+    "variantFormKey": "alola-raichu"
   },
   {
     "id": "smp-SM66",
@@ -1733,7 +1737,8 @@
     "evolvesFrom": "Pikachu",
     "artist": "Akira Komayama",
     "imageSmall": "https://images.pokemontcg.io/smp/SM72.png",
-    "imageLarge": "https://images.pokemontcg.io/smp/SM72_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/smp/SM72_hires.png",
+    "variantFormKey": "alola-raichu"
   },
   {
     "id": "smp-SM73",
@@ -3081,7 +3086,8 @@
     "evolvesFrom": "Alolan Sandshrew",
     "artist": "kirisAki",
     "imageSmall": "https://images.pokemontcg.io/smp/SM127.png",
-    "imageLarge": "https://images.pokemontcg.io/smp/SM127_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/smp/SM127_hires.png",
+    "variantFormKey": "alola-sandslash"
   },
   {
     "id": "smp-SM128",
@@ -3105,7 +3111,8 @@
     "evolvesFrom": "Alolan Vulpix",
     "artist": "kirisAki",
     "imageSmall": "https://images.pokemontcg.io/smp/SM128.png",
-    "imageLarge": "https://images.pokemontcg.io/smp/SM128_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/smp/SM128_hires.png",
+    "variantFormKey": "alola-ninetales"
   },
   {
     "id": "smp-SM129",
@@ -4508,7 +4515,8 @@
     "evolvesFrom": "Cubone",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/smp/SM187.png",
-    "imageLarge": "https://images.pokemontcg.io/smp/SM187_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/smp/SM187_hires.png",
+    "variantFormKey": "alola-marowak"
   },
   {
     "id": "smp-SM188",
@@ -5682,7 +5690,8 @@
     "evolvesFrom": "Alolan Sandshrew",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/smp/SM236.png",
-    "imageLarge": "https://images.pokemontcg.io/smp/SM236_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/smp/SM236_hires.png",
+    "variantFormKey": "alola-sandslash"
   },
   {
     "id": "smp-SM237",

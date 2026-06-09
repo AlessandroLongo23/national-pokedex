@@ -1032,7 +1032,8 @@
     ],
     "regulationMark": "H",
     "imageSmall": "https://images.pokemontcg.io/sv9/44.png",
-    "imageLarge": "https://images.pokemontcg.io/sv9/44_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv9/44_hires.png",
+    "variantFormKey": "alola-geodude"
   },
   {
     "id": "sv9-45",
@@ -1056,7 +1057,8 @@
     "evolvesFrom": "Alolan Geodude",
     "regulationMark": "H",
     "imageSmall": "https://images.pokemontcg.io/sv9/45.png",
-    "imageLarge": "https://images.pokemontcg.io/sv9/45_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv9/45_hires.png",
+    "variantFormKey": "alola-graveler"
   },
   {
     "id": "sv9-46",
@@ -1080,7 +1082,8 @@
     "evolvesFrom": "Alolan Graveler",
     "regulationMark": "H",
     "imageSmall": "https://images.pokemontcg.io/sv9/46.png",
-    "imageLarge": "https://images.pokemontcg.io/sv9/46_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv9/46_hires.png",
+    "variantFormKey": "alola-golem"
   },
   {
     "id": "sv9-47",
@@ -1340,7 +1343,8 @@
     "evolvesFrom": "Cubone",
     "regulationMark": "H",
     "imageSmall": "https://images.pokemontcg.io/sv9/57.png",
-    "imageLarge": "https://images.pokemontcg.io/sv9/57_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv9/57_hires.png",
+    "variantFormKey": "alola-marowak"
   },
   {
     "id": "sv9-58",
@@ -2185,7 +2189,8 @@
     ],
     "regulationMark": "H",
     "imageSmall": "https://images.pokemontcg.io/sv9/93.png",
-    "imageLarge": "https://images.pokemontcg.io/sv9/93_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv9/93_hires.png",
+    "variantFormKey": "paldea-wooper"
   },
   {
     "id": "sv9-94",
@@ -2494,7 +2499,8 @@
     ],
     "regulationMark": "H",
     "imageSmall": "https://images.pokemontcg.io/sv9/106.png",
-    "imageLarge": "https://images.pokemontcg.io/sv9/106_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv9/106_hires.png",
+    "variantFormKey": "galar-stunfisk"
   },
   {
     "id": "sv9-107",

@@ -1,1 +1,450 @@
-[]
+[
+  {
+    "variantKey": "alola-rattata",
+    "displayName": "Alolan Rattata",
+    "region": "alola",
+    "baseDex": 19,
+    "gen": 1,
+    "artworkId": 10091
+  },
+  {
+    "variantKey": "alola-raticate",
+    "displayName": "Alolan Raticate",
+    "region": "alola",
+    "baseDex": 20,
+    "gen": 1,
+    "artworkId": 10092
+  },
+  {
+    "variantKey": "alola-raichu",
+    "displayName": "Alolan Raichu",
+    "region": "alola",
+    "baseDex": 26,
+    "gen": 1,
+    "artworkId": 10100
+  },
+  {
+    "variantKey": "alola-sandshrew",
+    "displayName": "Alolan Sandshrew",
+    "region": "alola",
+    "baseDex": 27,
+    "gen": 1,
+    "artworkId": 10101
+  },
+  {
+    "variantKey": "alola-sandslash",
+    "displayName": "Alolan Sandslash",
+    "region": "alola",
+    "baseDex": 28,
+    "gen": 1,
+    "artworkId": 10102
+  },
+  {
+    "variantKey": "alola-vulpix",
+    "displayName": "Alolan Vulpix",
+    "region": "alola",
+    "baseDex": 37,
+    "gen": 1,
+    "artworkId": 10103
+  },
+  {
+    "variantKey": "alola-ninetales",
+    "displayName": "Alolan Ninetales",
+    "region": "alola",
+    "baseDex": 38,
+    "gen": 1,
+    "artworkId": 10104
+  },
+  {
+    "variantKey": "alola-diglett",
+    "displayName": "Alolan Diglett",
+    "region": "alola",
+    "baseDex": 50,
+    "gen": 1,
+    "artworkId": 10105
+  },
+  {
+    "variantKey": "alola-dugtrio",
+    "displayName": "Alolan Dugtrio",
+    "region": "alola",
+    "baseDex": 51,
+    "gen": 1,
+    "artworkId": 10106
+  },
+  {
+    "variantKey": "alola-meowth",
+    "displayName": "Alolan Meowth",
+    "region": "alola",
+    "baseDex": 52,
+    "gen": 1,
+    "artworkId": 10107
+  },
+  {
+    "variantKey": "alola-persian",
+    "displayName": "Alolan Persian",
+    "region": "alola",
+    "baseDex": 53,
+    "gen": 1,
+    "artworkId": 10108
+  },
+  {
+    "variantKey": "alola-geodude",
+    "displayName": "Alolan Geodude",
+    "region": "alola",
+    "baseDex": 74,
+    "gen": 1,
+    "artworkId": 10109
+  },
+  {
+    "variantKey": "alola-graveler",
+    "displayName": "Alolan Graveler",
+    "region": "alola",
+    "baseDex": 75,
+    "gen": 1,
+    "artworkId": 10110
+  },
+  {
+    "variantKey": "alola-golem",
+    "displayName": "Alolan Golem",
+    "region": "alola",
+    "baseDex": 76,
+    "gen": 1,
+    "artworkId": 10111
+  },
+  {
+    "variantKey": "alola-grimer",
+    "displayName": "Alolan Grimer",
+    "region": "alola",
+    "baseDex": 88,
+    "gen": 1,
+    "artworkId": 10112
+  },
+  {
+    "variantKey": "alola-muk",
+    "displayName": "Alolan Muk",
+    "region": "alola",
+    "baseDex": 89,
+    "gen": 1,
+    "artworkId": 10113
+  },
+  {
+    "variantKey": "alola-exeggutor",
+    "displayName": "Alolan Exeggutor",
+    "region": "alola",
+    "baseDex": 103,
+    "gen": 1,
+    "artworkId": 10114
+  },
+  {
+    "variantKey": "alola-marowak",
+    "displayName": "Alolan Marowak",
+    "region": "alola",
+    "baseDex": 105,
+    "gen": 1,
+    "artworkId": 10115
+  },
+  {
+    "variantKey": "galar-meowth",
+    "displayName": "Galarian Meowth",
+    "region": "galar",
+    "baseDex": 52,
+    "gen": 1,
+    "artworkId": 10161
+  },
+  {
+    "variantKey": "galar-ponyta",
+    "displayName": "Galarian Ponyta",
+    "region": "galar",
+    "baseDex": 77,
+    "gen": 1,
+    "artworkId": 10162
+  },
+  {
+    "variantKey": "galar-rapidash",
+    "displayName": "Galarian Rapidash",
+    "region": "galar",
+    "baseDex": 78,
+    "gen": 1,
+    "artworkId": 10163
+  },
+  {
+    "variantKey": "galar-slowpoke",
+    "displayName": "Galarian Slowpoke",
+    "region": "galar",
+    "baseDex": 79,
+    "gen": 1,
+    "artworkId": 10164
+  },
+  {
+    "variantKey": "galar-slowbro",
+    "displayName": "Galarian Slowbro",
+    "region": "galar",
+    "baseDex": 80,
+    "gen": 1,
+    "artworkId": 10165
+  },
+  {
+    "variantKey": "galar-farfetchd",
+    "displayName": "Galarian Farfetch'd",
+    "region": "galar",
+    "baseDex": 83,
+    "gen": 1,
+    "artworkId": 10166
+  },
+  {
+    "variantKey": "galar-weezing",
+    "displayName": "Galarian Weezing",
+    "region": "galar",
+    "baseDex": 110,
+    "gen": 1,
+    "artworkId": 10167
+  },
+  {
+    "variantKey": "galar-mr-mime",
+    "displayName": "Galarian Mr. Mime",
+    "region": "galar",
+    "baseDex": 122,
+    "gen": 1,
+    "artworkId": 10168
+  },
+  {
+    "variantKey": "galar-articuno",
+    "displayName": "Galarian Articuno",
+    "region": "galar",
+    "baseDex": 144,
+    "gen": 1,
+    "artworkId": 10169
+  },
+  {
+    "variantKey": "galar-zapdos",
+    "displayName": "Galarian Zapdos",
+    "region": "galar",
+    "baseDex": 145,
+    "gen": 1,
+    "artworkId": 10170
+  },
+  {
+    "variantKey": "galar-moltres",
+    "displayName": "Galarian Moltres",
+    "region": "galar",
+    "baseDex": 146,
+    "gen": 1,
+    "artworkId": 10171
+  },
+  {
+    "variantKey": "galar-slowking",
+    "displayName": "Galarian Slowking",
+    "region": "galar",
+    "baseDex": 199,
+    "gen": 2,
+    "artworkId": 10172
+  },
+  {
+    "variantKey": "galar-corsola",
+    "displayName": "Galarian Corsola",
+    "region": "galar",
+    "baseDex": 222,
+    "gen": 2,
+    "artworkId": 10173
+  },
+  {
+    "variantKey": "galar-zigzagoon",
+    "displayName": "Galarian Zigzagoon",
+    "region": "galar",
+    "baseDex": 263,
+    "gen": 3,
+    "artworkId": 10174
+  },
+  {
+    "variantKey": "galar-linoone",
+    "displayName": "Galarian Linoone",
+    "region": "galar",
+    "baseDex": 264,
+    "gen": 3,
+    "artworkId": 10175
+  },
+  {
+    "variantKey": "galar-darumaka",
+    "displayName": "Galarian Darumaka",
+    "region": "galar",
+    "baseDex": 554,
+    "gen": 5,
+    "artworkId": 10176
+  },
+  {
+    "variantKey": "galar-darmanitan",
+    "displayName": "Galarian Darmanitan",
+    "region": "galar",
+    "baseDex": 555,
+    "gen": 5,
+    "artworkId": 10177
+  },
+  {
+    "variantKey": "galar-yamask",
+    "displayName": "Galarian Yamask",
+    "region": "galar",
+    "baseDex": 562,
+    "gen": 5,
+    "artworkId": 10179
+  },
+  {
+    "variantKey": "galar-stunfisk",
+    "displayName": "Galarian Stunfisk",
+    "region": "galar",
+    "baseDex": 618,
+    "gen": 5,
+    "artworkId": 10180
+  },
+  {
+    "variantKey": "hisui-growlithe",
+    "displayName": "Hisuian Growlithe",
+    "region": "hisui",
+    "baseDex": 58,
+    "gen": 1,
+    "artworkId": 10229
+  },
+  {
+    "variantKey": "hisui-arcanine",
+    "displayName": "Hisuian Arcanine",
+    "region": "hisui",
+    "baseDex": 59,
+    "gen": 1,
+    "artworkId": 10230
+  },
+  {
+    "variantKey": "hisui-voltorb",
+    "displayName": "Hisuian Voltorb",
+    "region": "hisui",
+    "baseDex": 100,
+    "gen": 1,
+    "artworkId": 10231
+  },
+  {
+    "variantKey": "hisui-electrode",
+    "displayName": "Hisuian Electrode",
+    "region": "hisui",
+    "baseDex": 101,
+    "gen": 1,
+    "artworkId": 10232
+  },
+  {
+    "variantKey": "hisui-typhlosion",
+    "displayName": "Hisuian Typhlosion",
+    "region": "hisui",
+    "baseDex": 157,
+    "gen": 2,
+    "artworkId": 10233
+  },
+  {
+    "variantKey": "hisui-qwilfish",
+    "displayName": "Hisuian Qwilfish",
+    "region": "hisui",
+    "baseDex": 211,
+    "gen": 2,
+    "artworkId": 10234
+  },
+  {
+    "variantKey": "hisui-sneasel",
+    "displayName": "Hisuian Sneasel",
+    "region": "hisui",
+    "baseDex": 215,
+    "gen": 2,
+    "artworkId": 10235
+  },
+  {
+    "variantKey": "hisui-samurott",
+    "displayName": "Hisuian Samurott",
+    "region": "hisui",
+    "baseDex": 503,
+    "gen": 5,
+    "artworkId": 10236
+  },
+  {
+    "variantKey": "hisui-lilligant",
+    "displayName": "Hisuian Lilligant",
+    "region": "hisui",
+    "baseDex": 549,
+    "gen": 5,
+    "artworkId": 10237
+  },
+  {
+    "variantKey": "hisui-basculin",
+    "displayName": "Hisuian Basculin",
+    "region": "hisui",
+    "baseDex": 550,
+    "gen": 5,
+    "artworkId": 10247
+  },
+  {
+    "variantKey": "hisui-zorua",
+    "displayName": "Hisuian Zorua",
+    "region": "hisui",
+    "baseDex": 570,
+    "gen": 5,
+    "artworkId": 10238
+  },
+  {
+    "variantKey": "hisui-zoroark",
+    "displayName": "Hisuian Zoroark",
+    "region": "hisui",
+    "baseDex": 571,
+    "gen": 5,
+    "artworkId": 10239
+  },
+  {
+    "variantKey": "hisui-braviary",
+    "displayName": "Hisuian Braviary",
+    "region": "hisui",
+    "baseDex": 628,
+    "gen": 5,
+    "artworkId": 10240
+  },
+  {
+    "variantKey": "hisui-sliggoo",
+    "displayName": "Hisuian Sliggoo",
+    "region": "hisui",
+    "baseDex": 705,
+    "gen": 6,
+    "artworkId": 10241
+  },
+  {
+    "variantKey": "hisui-goodra",
+    "displayName": "Hisuian Goodra",
+    "region": "hisui",
+    "baseDex": 706,
+    "gen": 6,
+    "artworkId": 10242
+  },
+  {
+    "variantKey": "hisui-avalugg",
+    "displayName": "Hisuian Avalugg",
+    "region": "hisui",
+    "baseDex": 713,
+    "gen": 6,
+    "artworkId": 10243
+  },
+  {
+    "variantKey": "hisui-decidueye",
+    "displayName": "Hisuian Decidueye",
+    "region": "hisui",
+    "baseDex": 724,
+    "gen": 7,
+    "artworkId": 10244
+  },
+  {
+    "variantKey": "paldea-tauros",
+    "displayName": "Paldean Tauros",
+    "region": "paldea",
+    "baseDex": 128,
+    "gen": 1,
+    "artworkId": 10250
+  },
+  {
+    "variantKey": "paldea-wooper",
+    "displayName": "Paldean Wooper",
+    "region": "paldea",
+    "baseDex": 194,
+    "gen": 2,
+    "artworkId": 10253
+  }
+]

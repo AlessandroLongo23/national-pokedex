@@ -3097,7 +3097,8 @@
     "artist": "Shibuzoh.",
     "regulationMark": "G",
     "imageSmall": "https://images.pokemontcg.io/sv3/126.png",
-    "imageLarge": "https://images.pokemontcg.io/sv3/126_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv3/126_hires.png",
+    "variantFormKey": "paldea-wooper"
   },
   {
     "id": "sv3-127",
@@ -3121,7 +3122,8 @@
     "artist": "Pani Kobayashi",
     "regulationMark": "G",
     "imageSmall": "https://images.pokemontcg.io/sv3/127.png",
-    "imageLarge": "https://images.pokemontcg.io/sv3/127_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv3/127_hires.png",
+    "variantFormKey": "paldea-wooper"
   },
   {
     "id": "sv3-128",

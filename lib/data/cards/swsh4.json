@@ -882,7 +882,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh4/36.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh4/36_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh4/36_hires.png",
+    "variantFormKey": "galar-darmanitan"
   },
   {
     "id": "swsh4-37",
@@ -907,7 +908,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh4/37.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh4/37_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh4/37_hires.png",
+    "variantFormKey": "galar-darmanitan"
   },
   {
     "id": "swsh4-38",
@@ -2738,7 +2740,8 @@
     "artist": "Kouki Saitou",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh4/112.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh4/112_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh4/112_hires.png",
+    "variantFormKey": "galar-meowth"
   },
   {
     "id": "swsh4-113",
@@ -3058,7 +3061,8 @@
     "artist": "Akira Komayama",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh4/125.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh4/125_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh4/125_hires.png",
+    "variantFormKey": "galar-stunfisk"
   },
   {
     "id": "swsh4-126",
@@ -4023,7 +4027,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh4/169.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh4/169_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh4/169_hires.png",
+    "variantFormKey": "galar-darmanitan"
   },
   {
     "id": "swsh4-170",
@@ -4431,7 +4436,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh4/187.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh4/187_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh4/187_hires.png",
+    "variantFormKey": "galar-darmanitan"
   },
   {
     "id": "swsh4-188",

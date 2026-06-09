@@ -1343,7 +1343,8 @@
     ],
     "artist": "Naoki Saito",
     "imageSmall": "https://images.pokemontcg.io/sm1/57.png",
-    "imageLarge": "https://images.pokemontcg.io/sm1/57_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm1/57_hires.png",
+    "variantFormKey": "alola-grimer"
   },
   {
     "id": "sm1-58",
@@ -1367,7 +1368,8 @@
     "evolvesFrom": "Alolan Grimer",
     "artist": "Hitoshi Ariga",
     "imageSmall": "https://images.pokemontcg.io/sm1/58.png",
-    "imageLarge": "https://images.pokemontcg.io/sm1/58_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm1/58_hires.png",
+    "variantFormKey": "alola-muk"
   },
   {
     "id": "sm1-59",
@@ -1792,7 +1794,8 @@
     ],
     "artist": "Kouki Saitou",
     "imageSmall": "https://images.pokemontcg.io/sm1/76.png",
-    "imageLarge": "https://images.pokemontcg.io/sm1/76_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm1/76_hires.png",
+    "variantFormKey": "alola-rattata"
   },
   {
     "id": "sm1-77",
@@ -1816,7 +1819,8 @@
     "evolvesFrom": "Alolan Rattata",
     "artist": "match",
     "imageSmall": "https://images.pokemontcg.io/sm1/77.png",
-    "imageLarge": "https://images.pokemontcg.io/sm1/77_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm1/77_hires.png",
+    "variantFormKey": "alola-raticate"
   },
   {
     "id": "sm1-78",
@@ -1839,7 +1843,8 @@
     ],
     "artist": "Kagemaru Himeno",
     "imageSmall": "https://images.pokemontcg.io/sm1/78.png",
-    "imageLarge": "https://images.pokemontcg.io/sm1/78_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm1/78_hires.png",
+    "variantFormKey": "alola-meowth"
   },
   {
     "id": "sm1-79",
@@ -1863,7 +1868,8 @@
     "evolvesFrom": "Alolan Meowth",
     "artist": "kirisAki",
     "imageSmall": "https://images.pokemontcg.io/sm1/79.png",
-    "imageLarge": "https://images.pokemontcg.io/sm1/79_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm1/79_hires.png",
+    "variantFormKey": "alola-persian"
   },
   {
     "id": "sm1-80",
@@ -2029,7 +2035,8 @@
     ],
     "artist": "Megumi Mizutani",
     "imageSmall": "https://images.pokemontcg.io/sm1/86.png",
-    "imageLarge": "https://images.pokemontcg.io/sm1/86_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm1/86_hires.png",
+    "variantFormKey": "alola-diglett"
   },
   {
     "id": "sm1-87",
@@ -2053,7 +2060,8 @@
     "evolvesFrom": "Alolan Diglett",
     "artist": "match",
     "imageSmall": "https://images.pokemontcg.io/sm1/87.png",
-    "imageLarge": "https://images.pokemontcg.io/sm1/87_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm1/87_hires.png",
+    "variantFormKey": "alola-dugtrio"
   },
   {
     "id": "sm1-88",

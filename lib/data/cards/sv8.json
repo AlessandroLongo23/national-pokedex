@@ -418,7 +418,8 @@
     ],
     "regulationMark": "H",
     "imageSmall": "https://images.pokemontcg.io/sv8/18.png",
-    "imageLarge": "https://images.pokemontcg.io/sv8/18_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv8/18_hires.png",
+    "variantFormKey": "paldea-tauros"
   },
   {
     "id": "sv8-19",
@@ -914,7 +915,8 @@
     ],
     "regulationMark": "H",
     "imageSmall": "https://images.pokemontcg.io/sv8/39.png",
-    "imageLarge": "https://images.pokemontcg.io/sv8/39_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv8/39_hires.png",
+    "variantFormKey": "paldea-tauros"
   },
   {
     "id": "sv8-40",
@@ -2374,7 +2376,8 @@
     ],
     "regulationMark": "H",
     "imageSmall": "https://images.pokemontcg.io/sv8/101.png",
-    "imageLarge": "https://images.pokemontcg.io/sv8/101_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv8/101_hires.png",
+    "variantFormKey": "paldea-tauros"
   },
   {
     "id": "sv8-102",
@@ -2872,7 +2875,8 @@
     ],
     "regulationMark": "H",
     "imageSmall": "https://images.pokemontcg.io/sv8/122.png",
-    "imageLarge": "https://images.pokemontcg.io/sv8/122_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv8/122_hires.png",
+    "variantFormKey": "alola-diglett"
   },
   {
     "id": "sv8-123",
@@ -2896,7 +2900,8 @@
     "evolvesFrom": "Alolan Diglett",
     "regulationMark": "H",
     "imageSmall": "https://images.pokemontcg.io/sv8/123.png",
-    "imageLarge": "https://images.pokemontcg.io/sv8/123_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv8/123_hires.png",
+    "variantFormKey": "alola-dugtrio"
   },
   {
     "id": "sv8-124",
@@ -3134,7 +3139,8 @@
     "evolvesFrom": "Exeggcute",
     "regulationMark": "H",
     "imageSmall": "https://images.pokemontcg.io/sv8/133.png",
-    "imageLarge": "https://images.pokemontcg.io/sv8/133_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv8/133_hires.png",
+    "variantFormKey": "alola-exeggutor"
   },
   {
     "id": "sv8-134",
@@ -4737,7 +4743,8 @@
     "evolvesFrom": "Alolan Diglett",
     "regulationMark": "H",
     "imageSmall": "https://images.pokemontcg.io/sv8/208.png",
-    "imageLarge": "https://images.pokemontcg.io/sv8/208_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv8/208_hires.png",
+    "variantFormKey": "alola-dugtrio"
   },
   {
     "id": "sv8-209",
@@ -5154,7 +5161,8 @@
     "evolvesFrom": "Exeggcute",
     "regulationMark": "H",
     "imageSmall": "https://images.pokemontcg.io/sv8/225.png",
-    "imageLarge": "https://images.pokemontcg.io/sv8/225_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv8/225_hires.png",
+    "variantFormKey": "alola-exeggutor"
   },
   {
     "id": "sv8-226",
@@ -5530,7 +5538,8 @@
     "evolvesFrom": "Exeggcute",
     "regulationMark": "H",
     "imageSmall": "https://images.pokemontcg.io/sv8/242.png",
-    "imageLarge": "https://images.pokemontcg.io/sv8/242_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv8/242_hires.png",
+    "variantFormKey": "alola-exeggutor"
   },
   {
     "id": "sv8-243",
@@ -5653,7 +5662,8 @@
     "evolvesFrom": "Exeggcute",
     "regulationMark": "H",
     "imageSmall": "https://images.pokemontcg.io/sv8/248.png",
-    "imageLarge": "https://images.pokemontcg.io/sv8/248_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv8/248_hires.png",
+    "variantFormKey": "alola-exeggutor"
   },
   {
     "id": "sv8-249",

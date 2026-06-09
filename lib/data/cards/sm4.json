@@ -279,7 +279,8 @@
     "evolvesFrom": "Cubone",
     "artist": "Mitsuhiro Arita",
     "imageSmall": "https://images.pokemontcg.io/sm4/12.png",
-    "imageLarge": "https://images.pokemontcg.io/sm4/12_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm4/12_hires.png",
+    "variantFormKey": "alola-marowak"
   },
   {
     "id": "sm4-13",
@@ -726,7 +727,8 @@
     "evolvesFrom": "Pikachu",
     "artist": "Akira Komayama",
     "imageSmall": "https://images.pokemontcg.io/sm4/31.png",
-    "imageLarge": "https://images.pokemontcg.io/sm4/31_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm4/31_hires.png",
+    "variantFormKey": "alola-raichu"
   },
   {
     "id": "sm4-32",
@@ -749,7 +751,8 @@
     ],
     "artist": "Mitsuhiro Arita",
     "imageSmall": "https://images.pokemontcg.io/sm4/32.png",
-    "imageLarge": "https://images.pokemontcg.io/sm4/32_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm4/32_hires.png",
+    "variantFormKey": "alola-geodude"
   },
   {
     "id": "sm4-33",
@@ -773,7 +776,8 @@
     "evolvesFrom": "Alolan Geodude",
     "artist": "kirisAki",
     "imageSmall": "https://images.pokemontcg.io/sm4/33.png",
-    "imageLarge": "https://images.pokemontcg.io/sm4/33_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm4/33_hires.png",
+    "variantFormKey": "alola-graveler"
   },
   {
     "id": "sm4-34",
@@ -798,7 +802,8 @@
     "evolvesFrom": "Alolan Graveler",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/sm4/34.png",
-    "imageLarge": "https://images.pokemontcg.io/sm4/34_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm4/34_hires.png",
+    "variantFormKey": "alola-golem"
   },
   {
     "id": "sm4-35",
@@ -1744,7 +1749,8 @@
     "evolvesFrom": "Exeggcute",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/sm4/74.png",
-    "imageLarge": "https://images.pokemontcg.io/sm4/74_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm4/74_hires.png",
+    "variantFormKey": "alola-exeggutor"
   },
   {
     "id": "sm4-75",
@@ -2350,7 +2356,8 @@
     "evolvesFrom": "Alolan Graveler",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/sm4/102.png",
-    "imageLarge": "https://images.pokemontcg.io/sm4/102_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm4/102_hires.png",
+    "variantFormKey": "alola-golem"
   },
   {
     "id": "sm4-103",
@@ -2475,7 +2482,8 @@
     "evolvesFrom": "Exeggcute",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/sm4/107.png",
-    "imageLarge": "https://images.pokemontcg.io/sm4/107_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm4/107_hires.png",
+    "variantFormKey": "alola-exeggutor"
   },
   {
     "id": "sm4-108",
@@ -2604,7 +2612,8 @@
     "evolvesFrom": "Alolan Graveler",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/sm4/113.png",
-    "imageLarge": "https://images.pokemontcg.io/sm4/113_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm4/113_hires.png",
+    "variantFormKey": "alola-golem"
   },
   {
     "id": "sm4-114",
@@ -2729,7 +2738,8 @@
     "evolvesFrom": "Exeggcute",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/sm4/118.png",
-    "imageLarge": "https://images.pokemontcg.io/sm4/118_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm4/118_hires.png",
+    "variantFormKey": "alola-exeggutor"
   },
   {
     "id": "sm4-119",

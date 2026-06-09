@@ -1341,7 +1341,8 @@
     "evolvesFrom": "Pikachu",
     "artist": "Kouki Saitou",
     "imageSmall": "https://images.pokemontcg.io/sm11/57.png",
-    "imageLarge": "https://images.pokemontcg.io/sm11/57_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm11/57_hires.png",
+    "variantFormKey": "alola-raichu"
   },
   {
     "id": "sm11-58",
@@ -1769,7 +1770,8 @@
     "evolvesFrom": "Cubone",
     "artist": "Masakazu Fukuda",
     "imageSmall": "https://images.pokemontcg.io/sm11/75.png",
-    "imageLarge": "https://images.pokemontcg.io/sm11/75_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm11/75_hires.png",
+    "variantFormKey": "alola-marowak"
   },
   {
     "id": "sm11-76",
@@ -2992,7 +2994,8 @@
     ],
     "artist": "kawayoo",
     "imageSmall": "https://images.pokemontcg.io/sm11/127.png",
-    "imageLarge": "https://images.pokemontcg.io/sm11/127_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm11/127_hires.png",
+    "variantFormKey": "alola-grimer"
   },
   {
     "id": "sm11-128",

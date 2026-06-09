@@ -44,7 +44,8 @@
     "evolvesFrom": "Exeggcute",
     "artist": "Satoshi Shirai",
     "imageSmall": "https://images.pokemontcg.io/sm6/2.png",
-    "imageLarge": "https://images.pokemontcg.io/sm6/2_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm6/2_hires.png",
+    "variantFormKey": "alola-exeggutor"
   },
   {
     "id": "sm6-3",
@@ -280,7 +281,8 @@
     "evolvesFrom": "Cubone",
     "artist": "Suwama Chiaki",
     "imageSmall": "https://images.pokemontcg.io/sm6/12.png",
-    "imageLarge": "https://images.pokemontcg.io/sm6/12_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm6/12_hires.png",
+    "variantFormKey": "alola-marowak"
   },
   {
     "id": "sm6-13",
@@ -3333,7 +3335,8 @@
     "evolvesFrom": "Exeggcute",
     "artist": "kawayoo",
     "imageSmall": "https://images.pokemontcg.io/sm6/2a.png",
-    "imageLarge": "https://images.pokemontcg.io/sm6/2a_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm6/2a_hires.png",
+    "variantFormKey": "alola-exeggutor"
   },
   {
     "id": "sm6-102a",

@@ -1425,7 +1425,8 @@
     "artist": "Kouki Saitou",
     "regulationMark": "G",
     "imageSmall": "https://images.pokemontcg.io/sv4pt5/58.png",
-    "imageLarge": "https://images.pokemontcg.io/sv4pt5/58_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv4pt5/58_hires.png",
+    "variantFormKey": "paldea-wooper"
   },
   {
     "id": "sv4pt5-59",
@@ -2639,7 +2640,8 @@
     "artist": "Hitoshi Ariga",
     "regulationMark": "G",
     "imageSmall": "https://images.pokemontcg.io/sv4pt5/111.png",
-    "imageLarge": "https://images.pokemontcg.io/sv4pt5/111_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv4pt5/111_hires.png",
+    "variantFormKey": "paldea-tauros"
   },
   {
     "id": "sv4pt5-112",
@@ -2858,7 +2860,8 @@
     "artist": "GOSSAN",
     "regulationMark": "G",
     "imageSmall": "https://images.pokemontcg.io/sv4pt5/120.png",
-    "imageLarge": "https://images.pokemontcg.io/sv4pt5/120_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv4pt5/120_hires.png",
+    "variantFormKey": "paldea-tauros"
   },
   {
     "id": "sv4pt5-121",
@@ -4131,7 +4134,8 @@
     "artist": "nagimiso",
     "regulationMark": "G",
     "imageSmall": "https://images.pokemontcg.io/sv4pt5/172.png",
-    "imageLarge": "https://images.pokemontcg.io/sv4pt5/172_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv4pt5/172_hires.png",
+    "variantFormKey": "paldea-tauros"
   },
   {
     "id": "sv4pt5-173",
@@ -4326,7 +4330,8 @@
     "artist": "Nisota Niso",
     "regulationMark": "G",
     "imageSmall": "https://images.pokemontcg.io/sv4pt5/180.png",
-    "imageLarge": "https://images.pokemontcg.io/sv4pt5/180_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv4pt5/180_hires.png",
+    "variantFormKey": "paldea-wooper"
   },
   {
     "id": "sv4pt5-181",

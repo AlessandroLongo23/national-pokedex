@@ -635,7 +635,8 @@
     ],
     "artist": "Saya Tsuruta",
     "imageSmall": "https://images.pokemontcg.io/sm3/27.png",
-    "imageLarge": "https://images.pokemontcg.io/sm3/27_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm3/27_hires.png",
+    "variantFormKey": "alola-vulpix"
   },
   {
     "id": "sm3-28",
@@ -659,7 +660,8 @@
     "evolvesFrom": "Alolan Vulpix",
     "artist": "Mitsuhiro Arita",
     "imageSmall": "https://images.pokemontcg.io/sm3/28.png",
-    "imageLarge": "https://images.pokemontcg.io/sm3/28_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm3/28_hires.png",
+    "variantFormKey": "alola-ninetales"
   },
   {
     "id": "sm3-29",
@@ -1907,7 +1909,8 @@
     ],
     "artist": "nagimiso",
     "imageSmall": "https://images.pokemontcg.io/sm3/81.png",
-    "imageLarge": "https://images.pokemontcg.io/sm3/81_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm3/81_hires.png",
+    "variantFormKey": "alola-rattata"
   },
   {
     "id": "sm3-82",
@@ -1931,7 +1934,8 @@
     "evolvesFrom": "Alolan Rattata",
     "artist": "Kouki Saitou",
     "imageSmall": "https://images.pokemontcg.io/sm3/82.png",
-    "imageLarge": "https://images.pokemontcg.io/sm3/82_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm3/82_hires.png",
+    "variantFormKey": "alola-raticate"
   },
   {
     "id": "sm3-83",
@@ -1954,7 +1958,8 @@
     ],
     "artist": "Kouki Saitou",
     "imageSmall": "https://images.pokemontcg.io/sm3/83.png",
-    "imageLarge": "https://images.pokemontcg.io/sm3/83_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm3/83_hires.png",
+    "variantFormKey": "alola-grimer"
   },
   {
     "id": "sm3-84",
@@ -1979,7 +1984,8 @@
     "evolvesFrom": "Alolan Grimer",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/sm3/84.png",
-    "imageLarge": "https://images.pokemontcg.io/sm3/84_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm3/84_hires.png",
+    "variantFormKey": "alola-muk"
   },
   {
     "id": "sm3-85",
@@ -3166,7 +3172,8 @@
     "evolvesFrom": "Alolan Grimer",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/sm3/138.png",
-    "imageLarge": "https://images.pokemontcg.io/sm3/138_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm3/138_hires.png",
+    "variantFormKey": "alola-muk"
   },
   {
     "id": "sm3-139",
@@ -3594,7 +3601,8 @@
     "evolvesFrom": "Alolan Grimer",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/sm3/157.png",
-    "imageLarge": "https://images.pokemontcg.io/sm3/157_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm3/157_hires.png",
+    "variantFormKey": "alola-muk"
   },
   {
     "id": "sm3-158",

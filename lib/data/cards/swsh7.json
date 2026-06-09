@@ -1553,7 +1553,8 @@
     "artist": "Kagemaru Himeno",
     "regulationMark": "E",
     "imageSmall": "https://images.pokemontcg.io/swsh7/63.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh7/63_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh7/63_hires.png",
+    "variantFormKey": "galar-articuno"
   },
   {
     "id": "swsh7-64",
@@ -2028,7 +2029,8 @@
     "artist": "kodama",
     "regulationMark": "E",
     "imageSmall": "https://images.pokemontcg.io/swsh7/82.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh7/82_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh7/82_hires.png",
+    "variantFormKey": "galar-zapdos"
   },
   {
     "id": "swsh7-83",
@@ -2301,7 +2303,8 @@
     "artist": "Kazuma Koda",
     "regulationMark": "E",
     "imageSmall": "https://images.pokemontcg.io/swsh7/93.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh7/93_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh7/93_hires.png",
+    "variantFormKey": "galar-moltres"
   },
   {
     "id": "swsh7-94",

@@ -3224,7 +3224,8 @@
     "artist": "osare",
     "regulationMark": "I",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-130/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-130/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-130/large",
+    "variantFormKey": "galar-zigzagoon"
   },
   {
     "id": "me2pt5-131",
@@ -3249,7 +3250,8 @@
     "artist": "Tomowaka",
     "regulationMark": "I",
     "imageSmall": "https://images.scrydex.com/pokemon/me2pt5-131/small",
-    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-131/large"
+    "imageLarge": "https://images.scrydex.com/pokemon/me2pt5-131/large",
+    "variantFormKey": "galar-linoone"
   },
   {
     "id": "me2pt5-132",

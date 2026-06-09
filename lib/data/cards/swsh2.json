@@ -905,7 +905,8 @@
     "artist": "kirisAki",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh2/37.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh2/37_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh2/37_hires.png",
+    "variantFormKey": "galar-mr-mime"
   },
   {
     "id": "swsh2-38",
@@ -1151,7 +1152,8 @@
     "artist": "Akira Komayama",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh2/47.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh2/47_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh2/47_hires.png",
+    "variantFormKey": "galar-darumaka"
   },
   {
     "id": "swsh2-48",
@@ -1176,7 +1178,8 @@
     "artist": "Kouki Saitou",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh2/48.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh2/48_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh2/48_hires.png",
+    "variantFormKey": "galar-darmanitan"
   },
   {
     "id": "swsh2-49",
@@ -1914,7 +1917,8 @@
     "artist": "Mitsuhiro Arita",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh2/78.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh2/78_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh2/78_hires.png",
+    "variantFormKey": "galar-corsola"
   },
   {
     "id": "swsh2-79",
@@ -2307,7 +2311,8 @@
     "artist": "Akira Komayama",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh2/94.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh2/94_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh2/94_hires.png",
+    "variantFormKey": "galar-farfetchd"
   },
   {
     "id": "swsh2-95",
@@ -2478,7 +2483,8 @@
     "artist": "Akira Komayama",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh2/101.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh2/101_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh2/101_hires.png",
+    "variantFormKey": "galar-yamask"
   },
   {
     "id": "swsh2-102",
@@ -2773,7 +2779,8 @@
     "artist": "Mitsuhiro Arita",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh2/113.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh2/113_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh2/113_hires.png",
+    "variantFormKey": "galar-weezing"
   },
   {
     "id": "swsh2-114",
@@ -3092,7 +3099,8 @@
     "artist": "Misa Tsutsui",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh2/126.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh2/126_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh2/126_hires.png",
+    "variantFormKey": "galar-meowth"
   },
   {
     "id": "swsh2-127",

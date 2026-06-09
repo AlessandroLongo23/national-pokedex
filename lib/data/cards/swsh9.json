@@ -4274,7 +4274,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "E",
     "imageSmall": "https://images.pokemontcg.io/swsh9/181.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh9/181_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh9/181_hires.png",
+    "variantFormKey": "galar-articuno"
   },
   {
     "id": "swsh9-182",
@@ -4299,7 +4300,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "E",
     "imageSmall": "https://images.pokemontcg.io/swsh9/182.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh9/182_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh9/182_hires.png",
+    "variantFormKey": "galar-zapdos"
   },
   {
     "id": "swsh9-183",
@@ -4324,7 +4326,8 @@
     "artist": "akyCG Works",
     "regulationMark": "E",
     "imageSmall": "https://images.pokemontcg.io/swsh9/183.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh9/183_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh9/183_hires.png",
+    "variantFormKey": "galar-moltres"
   },
   {
     "id": "swsh9-184",

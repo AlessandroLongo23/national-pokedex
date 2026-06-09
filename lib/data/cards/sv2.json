@@ -683,7 +683,8 @@
     "artist": "AKIRA EGAWA",
     "regulationMark": "G",
     "imageSmall": "https://images.pokemontcg.io/sv2/28.png",
-    "imageLarge": "https://images.pokemontcg.io/sv2/28_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv2/28_hires.png",
+    "variantFormKey": "paldea-tauros"
   },
   {
     "id": "sv2-29",
@@ -1002,7 +1003,8 @@
     "artist": "Oswaldo KATO",
     "regulationMark": "G",
     "imageSmall": "https://images.pokemontcg.io/sv2/41.png",
-    "imageLarge": "https://images.pokemontcg.io/sv2/41_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv2/41_hires.png",
+    "variantFormKey": "paldea-tauros"
   },
   {
     "id": "sv2-42",
@@ -2645,7 +2647,8 @@
     "artist": "Shin Nagasawa",
     "regulationMark": "G",
     "imageSmall": "https://images.pokemontcg.io/sv2/108.png",
-    "imageLarge": "https://images.pokemontcg.io/sv2/108_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv2/108_hires.png",
+    "variantFormKey": "paldea-tauros"
   },
   {
     "id": "sv2-109",
@@ -3134,7 +3137,8 @@
     "artist": "Kouki Saitou",
     "regulationMark": "G",
     "imageSmall": "https://images.pokemontcg.io/sv2/128.png",
-    "imageLarge": "https://images.pokemontcg.io/sv2/128_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv2/128_hires.png",
+    "variantFormKey": "paldea-wooper"
   },
   {
     "id": "sv2-129",
@@ -3158,7 +3162,8 @@
     "artist": "Saya Tsuruta",
     "regulationMark": "G",
     "imageSmall": "https://images.pokemontcg.io/sv2/129.png",
-    "imageLarge": "https://images.pokemontcg.io/sv2/129_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv2/129_hires.png",
+    "variantFormKey": "paldea-wooper"
   },
   {
     "id": "sv2-130",
@@ -5213,7 +5218,8 @@
     "artist": "Anesaki Dynamic",
     "regulationMark": "G",
     "imageSmall": "https://images.pokemontcg.io/sv2/218.png",
-    "imageLarge": "https://images.pokemontcg.io/sv2/218_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv2/218_hires.png",
+    "variantFormKey": "paldea-tauros"
   },
   {
     "id": "sv2-219",
@@ -5285,7 +5291,8 @@
     "artist": "Miki Tanaka",
     "regulationMark": "G",
     "imageSmall": "https://images.pokemontcg.io/sv2/221.png",
-    "imageLarge": "https://images.pokemontcg.io/sv2/221_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sv2/221_hires.png",
+    "variantFormKey": "paldea-wooper"
   },
   {
     "id": "sv2-222",

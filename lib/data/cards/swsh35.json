@@ -860,7 +860,8 @@
     "artist": "Kouki Saitou",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh35/35.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh35/35_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh35/35_hires.png",
+    "variantFormKey": "galar-zigzagoon"
   },
   {
     "id": "swsh35-36",
@@ -885,7 +886,8 @@
     "artist": "Akira Komayama",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh35/36.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh35/36_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh35/36_hires.png",
+    "variantFormKey": "galar-linoone"
   },
   {
     "id": "swsh35-37",

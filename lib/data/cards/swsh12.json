@@ -243,7 +243,8 @@
     "artist": "Mitsuhiro Arita",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh12/10.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh12/10_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh12/10_hires.png",
+    "variantFormKey": "hisui-lilligant"
   },
   {
     "id": "swsh12-11",
@@ -809,7 +810,8 @@
     "artist": "Ryota Murayama",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh12/33.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh12/33_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh12/33_hires.png",
+    "variantFormKey": "alola-vulpix"
   },
   {
     "id": "swsh12-34",
@@ -834,7 +836,8 @@
     "artist": "PLANETA Hiiragi",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh12/34.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh12/34_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh12/34_hires.png",
+    "variantFormKey": "alola-vulpix"
   },
   {
     "id": "swsh12-35",
@@ -2206,7 +2209,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh12/90.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh12/90_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh12/90_hires.png",
+    "variantFormKey": "hisui-arcanine"
   },
   {
     "id": "swsh12-91",
@@ -3656,7 +3660,8 @@
     "artist": "Jiro Sasumo",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh12/149.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh12/149_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh12/149_hires.png",
+    "variantFormKey": "hisui-braviary"
   },
   {
     "id": "swsh12-150",
@@ -4143,7 +4148,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh12/173.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh12/173_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh12/173_hires.png",
+    "variantFormKey": "alola-vulpix"
   },
   {
     "id": "swsh12-174",
@@ -4293,7 +4299,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh12/179.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh12/179_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh12/179_hires.png",
+    "variantFormKey": "hisui-arcanine"
   },
   {
     "id": "swsh12-180",
@@ -4695,7 +4702,8 @@
     "artist": "PLANETA Hiiragi",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh12/197.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh12/197_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh12/197_hires.png",
+    "variantFormKey": "alola-vulpix"
   },
   {
     "id": "swsh12-198",

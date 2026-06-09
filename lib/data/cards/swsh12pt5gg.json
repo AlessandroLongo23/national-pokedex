@@ -21,7 +21,8 @@
     "artist": "HYOGONOSUKE",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh12pt5gg/GG01.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh12pt5gg/GG01_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh12pt5gg/GG01_hires.png",
+    "variantFormKey": "hisui-voltorb"
   },
   {
     "id": "swsh12pt5gg-GG02",
@@ -515,7 +516,8 @@
     "artist": "You Iribi",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh12pt5gg/GG21.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh12pt5gg/GG21_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh12pt5gg/GG21_hires.png",
+    "variantFormKey": "hisui-goodra"
   },
   {
     "id": "swsh12pt5gg-GG22",
@@ -1253,7 +1255,8 @@
     "artist": "kodama",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh12pt5gg/GG51.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh12pt5gg/GG51_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh12pt5gg/GG51_hires.png",
+    "variantFormKey": "hisui-samurott"
   },
   {
     "id": "swsh12pt5gg-GG52",
@@ -1278,7 +1281,8 @@
     "artist": "Shibuzoh.",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh12pt5gg/GG52.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh12pt5gg/GG52_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh12pt5gg/GG52_hires.png",
+    "variantFormKey": "hisui-samurott"
   },
   {
     "id": "swsh12pt5gg-GG53",
@@ -1379,7 +1383,8 @@
     "artist": "SIE NANAHARA",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh12pt5gg/GG56.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh12pt5gg/GG56_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh12pt5gg/GG56_hires.png",
+    "variantFormKey": "hisui-zoroark"
   },
   {
     "id": "swsh12pt5gg-GG57",

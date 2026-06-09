@@ -2857,7 +2857,8 @@
     ],
     "artist": "Atsuko Nishida",
     "imageSmall": "https://images.pokemontcg.io/sm10/121.png",
-    "imageLarge": "https://images.pokemontcg.io/sm10/121_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm10/121_hires.png",
+    "variantFormKey": "alola-diglett"
   },
   {
     "id": "sm10-122",
@@ -2881,7 +2882,8 @@
     "evolvesFrom": "Alolan Diglett",
     "artist": "SATOSHI NAKAI",
     "imageSmall": "https://images.pokemontcg.io/sm10/122.png",
-    "imageLarge": "https://images.pokemontcg.io/sm10/122_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm10/122_hires.png",
+    "variantFormKey": "alola-dugtrio"
   },
   {
     "id": "sm10-123",

@@ -1968,7 +1968,8 @@
     ],
     "artist": "Shibuzoh.",
     "imageSmall": "https://images.pokemontcg.io/sm7/84.png",
-    "imageLarge": "https://images.pokemontcg.io/sm7/84_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm7/84_hires.png",
+    "variantFormKey": "alola-rattata"
   },
   {
     "id": "sm7-85",
@@ -1993,7 +1994,8 @@
     "evolvesFrom": "Alolan Rattata",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/sm7/85.png",
-    "imageLarge": "https://images.pokemontcg.io/sm7/85_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm7/85_hires.png",
+    "variantFormKey": "alola-raticate"
   },
   {
     "id": "sm7-86",

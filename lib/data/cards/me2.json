@@ -1181,7 +1181,8 @@
     "artist": "Souichirou Gunjima",
     "regulationMark": "I",
     "imageSmall": "https://images.pokemontcg.io/me2/48.png",
-    "imageLarge": "https://images.pokemontcg.io/me2/48_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me2/48_hires.png",
+    "variantFormKey": "paldea-tauros"
   },
   {
     "id": "me2-49",
@@ -2457,7 +2458,8 @@
     "artist": "OKACHEKE",
     "regulationMark": "H",
     "imageSmall": "https://images.pokemontcg.io/me2/102.png",
-    "imageLarge": "https://images.pokemontcg.io/me2/102_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/me2/102_hires.png",
+    "variantFormKey": "paldea-wooper"
   },
   {
     "id": "me2-103",

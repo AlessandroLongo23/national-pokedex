@@ -489,7 +489,8 @@
     "artist": "Masakazu Fukuda",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh45sv/SV020.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh45sv/SV020_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh45sv/SV020_hires.png",
+    "variantFormKey": "galar-mr-mime"
   },
   {
     "id": "swsh45sv-SV021",
@@ -562,7 +563,8 @@
     "artist": "SATOSHI NAKAI",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh45sv/SV023.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh45sv/SV023_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh45sv/SV023_hires.png",
+    "variantFormKey": "galar-darumaka"
   },
   {
     "id": "swsh45sv-SV024",
@@ -587,7 +589,8 @@
     "artist": "nagimiso",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh45sv/SV024.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh45sv/SV024_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh45sv/SV024_hires.png",
+    "variantFormKey": "galar-darmanitan"
   },
   {
     "id": "swsh45sv-SV025",
@@ -1150,7 +1153,8 @@
     "artist": "Sanosuke Sakuma",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh45sv/SV047.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh45sv/SV047_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh45sv/SV047_hires.png",
+    "variantFormKey": "galar-ponyta"
   },
   {
     "id": "swsh45sv-SV048",
@@ -1175,7 +1179,8 @@
     "artist": "Kagemaru Himeno",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh45sv/SV048.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh45sv/SV048_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh45sv/SV048_hires.png",
+    "variantFormKey": "galar-rapidash"
   },
   {
     "id": "swsh45sv-SV049",
@@ -1199,7 +1204,8 @@
     "artist": "Mizue",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh45sv/SV049.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh45sv/SV049_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh45sv/SV049_hires.png",
+    "variantFormKey": "galar-corsola"
   },
   {
     "id": "swsh45sv-SV050",
@@ -1542,7 +1548,8 @@
     "artist": "Kagemaru Himeno",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh45sv/SV063.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh45sv/SV063_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh45sv/SV063_hires.png",
+    "variantFormKey": "galar-farfetchd"
   },
   {
     "id": "swsh45sv-SV064",
@@ -1591,7 +1598,8 @@
     "artist": "sowsow",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh45sv/SV065.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh45sv/SV065_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh45sv/SV065_hires.png",
+    "variantFormKey": "galar-yamask"
   },
   {
     "id": "swsh45sv-SV066",
@@ -1885,7 +1893,8 @@
     "artist": "Kouki Saitou",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh45sv/SV077.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh45sv/SV077_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh45sv/SV077_hires.png",
+    "variantFormKey": "galar-weezing"
   },
   {
     "id": "swsh45sv-SV078",
@@ -1909,7 +1918,8 @@
     "artist": "Misa Tsutsui",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh45sv/SV078.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh45sv/SV078_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh45sv/SV078_hires.png",
+    "variantFormKey": "galar-zigzagoon"
   },
   {
     "id": "swsh45sv-SV079",
@@ -1934,7 +1944,8 @@
     "artist": "Shin Nagasawa",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh45sv/SV079.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh45sv/SV079_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh45sv/SV079_hires.png",
+    "variantFormKey": "galar-linoone"
   },
   {
     "id": "swsh45sv-SV080",
@@ -2106,7 +2117,8 @@
     "artist": "Shigenori Negishi",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh45sv/SV086.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh45sv/SV086_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh45sv/SV086_hires.png",
+    "variantFormKey": "galar-meowth"
   },
   {
     "id": "swsh45sv-SV087",
@@ -2155,7 +2167,8 @@
     "artist": "tetsuya koizumi",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh45sv/SV088.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh45sv/SV088_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh45sv/SV088_hires.png",
+    "variantFormKey": "galar-stunfisk"
   },
   {
     "id": "swsh45sv-SV089",

@@ -443,7 +443,8 @@
     ],
     "artist": "Mizue",
     "imageSmall": "https://images.pokemontcg.io/sm2/19.png",
-    "imageLarge": "https://images.pokemontcg.io/sm2/19_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm2/19_hires.png",
+    "variantFormKey": "alola-sandshrew"
   },
   {
     "id": "sm2-20",
@@ -467,7 +468,8 @@
     "evolvesFrom": "Alolan Sandshrew",
     "artist": "TOKIYA",
     "imageSmall": "https://images.pokemontcg.io/sm2/20.png",
-    "imageLarge": "https://images.pokemontcg.io/sm2/20_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm2/20_hires.png",
+    "variantFormKey": "alola-sandslash"
   },
   {
     "id": "sm2-21",
@@ -490,7 +492,8 @@
     ],
     "artist": "You Iribi",
     "imageSmall": "https://images.pokemontcg.io/sm2/21.png",
-    "imageLarge": "https://images.pokemontcg.io/sm2/21_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm2/21_hires.png",
+    "variantFormKey": "alola-vulpix"
   },
   {
     "id": "sm2-22",
@@ -515,7 +518,8 @@
     "evolvesFrom": "Alolan Vulpix",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/sm2/22.png",
-    "imageLarge": "https://images.pokemontcg.io/sm2/22_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm2/22_hires.png",
+    "variantFormKey": "alola-ninetales"
   },
   {
     "id": "sm2-23",
@@ -937,7 +941,8 @@
     ],
     "artist": "Hitoshi Ariga",
     "imageSmall": "https://images.pokemontcg.io/sm2/40.png",
-    "imageLarge": "https://images.pokemontcg.io/sm2/40_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm2/40_hires.png",
+    "variantFormKey": "alola-geodude"
   },
   {
     "id": "sm2-41",
@@ -961,7 +966,8 @@
     "evolvesFrom": "Alolan Geodude",
     "artist": "match",
     "imageSmall": "https://images.pokemontcg.io/sm2/41.png",
-    "imageLarge": "https://images.pokemontcg.io/sm2/41_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm2/41_hires.png",
+    "variantFormKey": "alola-graveler"
   },
   {
     "id": "sm2-42",
@@ -985,7 +991,8 @@
     "evolvesFrom": "Alolan Graveler",
     "artist": "Shin Nagasawa",
     "imageSmall": "https://images.pokemontcg.io/sm2/42.png",
-    "imageLarge": "https://images.pokemontcg.io/sm2/42_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm2/42_hires.png",
+    "variantFormKey": "alola-golem"
   },
   {
     "id": "sm2-43",
@@ -3025,7 +3032,8 @@
     "evolvesFrom": "Alolan Vulpix",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/sm2/132.png",
-    "imageLarge": "https://images.pokemontcg.io/sm2/132_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm2/132_hires.png",
+    "variantFormKey": "alola-ninetales"
   },
   {
     "id": "sm2-133",
@@ -3449,7 +3457,8 @@
     "evolvesFrom": "Alolan Vulpix",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/sm2/150.png",
-    "imageLarge": "https://images.pokemontcg.io/sm2/150_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm2/150_hires.png",
+    "variantFormKey": "alola-ninetales"
   },
   {
     "id": "sm2-151",
@@ -3876,7 +3885,8 @@
     ],
     "artist": "Hideki Ishikawa",
     "imageSmall": "https://images.pokemontcg.io/sm2/19a.png",
-    "imageLarge": "https://images.pokemontcg.io/sm2/19a_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm2/19a_hires.png",
+    "variantFormKey": "alola-sandshrew"
   },
   {
     "id": "sm2-21a",
@@ -3899,7 +3909,8 @@
     ],
     "artist": "kirisAki",
     "imageSmall": "https://images.pokemontcg.io/sm2/21a.png",
-    "imageLarge": "https://images.pokemontcg.io/sm2/21a_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm2/21a_hires.png",
+    "variantFormKey": "alola-vulpix"
   },
   {
     "id": "sm2-51a",

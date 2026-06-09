@@ -46,7 +46,8 @@
     "artist": "nagimiso",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/2.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/2_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/2_hires.png",
+    "variantFormKey": "hisui-voltorb"
   },
   {
     "id": "swsh10-3",
@@ -71,7 +72,8 @@
     "artist": "Akira Komayama",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/3.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/3_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/3_hires.png",
+    "variantFormKey": "hisui-electrode"
   },
   {
     "id": "swsh10-4",
@@ -388,7 +390,8 @@
     "artist": "Mizue",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/16.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/16_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/16_hires.png",
+    "variantFormKey": "hisui-lilligant"
   },
   {
     "id": "swsh10-17",
@@ -413,7 +416,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/17.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/17_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/17_hires.png",
+    "variantFormKey": "hisui-lilligant"
   },
   {
     "id": "swsh10-18",
@@ -438,7 +442,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/18.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/18_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/18_hires.png",
+    "variantFormKey": "hisui-lilligant"
   },
   {
     "id": "swsh10-19",
@@ -1053,7 +1058,8 @@
     "artist": "Kagemaru Himeno",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/43.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/43_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/43_hires.png",
+    "variantFormKey": "hisui-basculin"
   },
   {
     "id": "swsh10-44",
@@ -1176,7 +1182,8 @@
     "artist": "Kagemaru Himeno",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/48.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/48_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/48_hires.png",
+    "variantFormKey": "hisui-avalugg"
   },
   {
     "id": "swsh10-49",
@@ -1276,7 +1283,8 @@
     "artist": "Kouki Saitou",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/52.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/52_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/52_hires.png",
+    "variantFormKey": "hisui-typhlosion"
   },
   {
     "id": "swsh10-53",
@@ -1301,7 +1309,8 @@
     "artist": "Shin Nagasawa",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/53.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/53_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/53_hires.png",
+    "variantFormKey": "hisui-typhlosion"
   },
   {
     "id": "swsh10-54",
@@ -1326,7 +1335,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/54.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/54_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/54_hires.png",
+    "variantFormKey": "hisui-typhlosion"
   },
   {
     "id": "swsh10-55",
@@ -1717,7 +1727,8 @@
     "artist": "Akira Komayama",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/70.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/70_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/70_hires.png",
+    "variantFormKey": "hisui-growlithe"
   },
   {
     "id": "swsh10-71",
@@ -1742,7 +1753,8 @@
     "artist": "Kagemaru Himeno",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/71.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/71_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/71_hires.png",
+    "variantFormKey": "hisui-arcanine"
   },
   {
     "id": "swsh10-72",
@@ -2014,7 +2026,8 @@
     "artist": "Kouki Saitou",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/82.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/82_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/82_hires.png",
+    "variantFormKey": "hisui-decidueye"
   },
   {
     "id": "swsh10-83",
@@ -2039,7 +2052,8 @@
     "artist": "Shin Nagasawa",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/83.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/83_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/83_hires.png",
+    "variantFormKey": "hisui-decidueye"
   },
   {
     "id": "swsh10-84",
@@ -2064,7 +2078,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/84.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/84_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/84_hires.png",
+    "variantFormKey": "hisui-decidueye"
   },
   {
     "id": "swsh10-85",
@@ -2163,7 +2178,8 @@
     "artist": "Kagemaru Himeno",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/88.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/88_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/88_hires.png",
+    "variantFormKey": "hisui-qwilfish"
   },
   {
     "id": "swsh10-89",
@@ -2187,7 +2203,8 @@
     "artist": "OKACHEKE",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/89.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/89_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/89_hires.png",
+    "variantFormKey": "hisui-qwilfish"
   },
   {
     "id": "swsh10-90",
@@ -2261,7 +2278,8 @@
     "artist": "Mizue",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/92.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/92_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/92_hires.png",
+    "variantFormKey": "hisui-sneasel"
   },
   {
     "id": "swsh10-93",
@@ -2459,7 +2477,8 @@
     "artist": "Kouki Saitou",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/100.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/100_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/100_hires.png",
+    "variantFormKey": "hisui-samurott"
   },
   {
     "id": "swsh10-101",
@@ -2484,7 +2503,8 @@
     "artist": "Shin Nagasawa",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/101.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/101_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/101_hires.png",
+    "variantFormKey": "hisui-samurott"
   },
   {
     "id": "swsh10-102",
@@ -2509,7 +2529,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/102.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/102_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/102_hires.png",
+    "variantFormKey": "hisui-samurott"
   },
   {
     "id": "swsh10-103",
@@ -3244,7 +3265,8 @@
     "artist": "Shin Nagasawa",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/132.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/132_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/132_hires.png",
+    "variantFormKey": "hisui-braviary"
   },
   {
     "id": "swsh10-133",
@@ -3845,7 +3867,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/162.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/162_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/162_hires.png",
+    "variantFormKey": "hisui-lilligant"
   },
   {
     "id": "swsh10-163",
@@ -3870,7 +3893,8 @@
     "artist": "kodama",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/163.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/163_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/163_hires.png",
+    "variantFormKey": "hisui-lilligant"
   },
   {
     "id": "swsh10-164",
@@ -4020,7 +4044,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/169.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/169_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/169_hires.png",
+    "variantFormKey": "hisui-typhlosion"
   },
   {
     "id": "swsh10-170",
@@ -4120,7 +4145,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/173.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/173_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/173_hires.png",
+    "variantFormKey": "hisui-decidueye"
   },
   {
     "id": "swsh10-174",
@@ -4195,7 +4221,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/176.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/176_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/176_hires.png",
+    "variantFormKey": "hisui-samurott"
   },
   {
     "id": "swsh10-177",
@@ -4491,7 +4518,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/190.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/190_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/190_hires.png",
+    "variantFormKey": "hisui-lilligant"
   },
   {
     "id": "swsh10-191",
@@ -4566,7 +4594,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/193.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/193_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/193_hires.png",
+    "variantFormKey": "hisui-typhlosion"
   },
   {
     "id": "swsh10-194",
@@ -4616,7 +4645,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/195.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/195_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/195_hires.png",
+    "variantFormKey": "hisui-decidueye"
   },
   {
     "id": "swsh10-196",
@@ -4666,7 +4696,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/197.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/197_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/197_hires.png",
+    "variantFormKey": "hisui-samurott"
   },
   {
     "id": "swsh10-198",
@@ -4912,7 +4943,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swsh10/209.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh10/209_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh10/209_hires.png",
+    "variantFormKey": "hisui-samurott"
   },
   {
     "id": "swsh10-210",

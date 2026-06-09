@@ -315,7 +315,8 @@
     "artist": "kirisAki",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swshp/SWSH013.png",
-    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH013_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH013_hires.png",
+    "variantFormKey": "galar-ponyta"
   },
   {
     "id": "swshp-SWSH014",
@@ -2746,7 +2747,8 @@
     "artist": "Saki Hayashiro",
     "regulationMark": "E",
     "imageSmall": "https://images.pokemontcg.io/swshp/SWSH111.png",
-    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH111_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH111_hires.png",
+    "variantFormKey": "galar-rapidash"
   },
   {
     "id": "swshp-SWSH112",
@@ -3031,7 +3033,8 @@
     "artist": "Shin Nagasawa",
     "regulationMark": "E",
     "imageSmall": "https://images.pokemontcg.io/swshp/SWSH123.png",
-    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH123_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH123_hires.png",
+    "variantFormKey": "galar-articuno"
   },
   {
     "id": "swshp-SWSH124",
@@ -3055,7 +3058,8 @@
     "artist": "Oswaldo KATO",
     "regulationMark": "E",
     "imageSmall": "https://images.pokemontcg.io/swshp/SWSH124.png",
-    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH124_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH124_hires.png",
+    "variantFormKey": "galar-zapdos"
   },
   {
     "id": "swshp-SWSH125",
@@ -3079,7 +3083,8 @@
     "artist": "KEIICHIRO ITO",
     "regulationMark": "E",
     "imageSmall": "https://images.pokemontcg.io/swshp/SWSH125.png",
-    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH125_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH125_hires.png",
+    "variantFormKey": "galar-moltres"
   },
   {
     "id": "swshp-SWSH126",
@@ -3103,7 +3108,8 @@
     "artist": "sowsow",
     "regulationMark": "E",
     "imageSmall": "https://images.pokemontcg.io/swshp/SWSH126.png",
-    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH126_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH126_hires.png",
+    "variantFormKey": "galar-slowpoke"
   },
   {
     "id": "swshp-SWSH127",
@@ -5082,7 +5088,8 @@
     "artist": "Oswaldo KATO",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swshp/SWSH207.png",
-    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH207_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH207_hires.png",
+    "variantFormKey": "hisui-samurott"
   },
   {
     "id": "swshp-SWSH208",
@@ -5524,7 +5531,8 @@
     "artist": "MUGENUP",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swshp/SWSH225.png",
-    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH225_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH225_hires.png",
+    "variantFormKey": "alola-exeggutor"
   },
   {
     "id": "swshp-SWSH226",
@@ -5802,7 +5810,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swshp/SWSH237.png",
-    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH237_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH237_hires.png",
+    "variantFormKey": "hisui-typhlosion"
   },
   {
     "id": "swshp-SWSH238",
@@ -5827,7 +5836,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swshp/SWSH238.png",
-    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH238_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH238_hires.png",
+    "variantFormKey": "hisui-decidueye"
   },
   {
     "id": "swshp-SWSH239",
@@ -5852,7 +5862,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swshp/SWSH239.png",
-    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH239_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH239_hires.png",
+    "variantFormKey": "hisui-samurott"
   },
   {
     "id": "swshp-SWSH240",
@@ -6690,7 +6701,8 @@
     "artist": "Shin Nagasawa",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swshp/SWSH273.png",
-    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH273_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH273_hires.png",
+    "variantFormKey": "hisui-basculin"
   },
   {
     "id": "swshp-SWSH274",
@@ -6916,7 +6928,8 @@
     "artist": "Shiburingaru",
     "regulationMark": "E",
     "imageSmall": "https://images.pokemontcg.io/swshp/SWSH282.png",
-    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH282_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH282_hires.png",
+    "variantFormKey": "galar-articuno"
   },
   {
     "id": "swshp-SWSH283",
@@ -6940,7 +6953,8 @@
     "artist": "Rianti Hidayat",
     "regulationMark": "E",
     "imageSmall": "https://images.pokemontcg.io/swshp/SWSH283.png",
-    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH283_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH283_hires.png",
+    "variantFormKey": "galar-zapdos"
   },
   {
     "id": "swshp-SWSH284",
@@ -6964,7 +6978,8 @@
     "artist": "Shinji Kanda",
     "regulationMark": "E",
     "imageSmall": "https://images.pokemontcg.io/swshp/SWSH284.png",
-    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH284_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH284_hires.png",
+    "variantFormKey": "galar-moltres"
   },
   {
     "id": "swshp-SWSH285",
@@ -7210,7 +7225,8 @@
     "artist": "5ban Graphics",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swshp/SWSH294.png",
-    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH294_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH294_hires.png",
+    "variantFormKey": "hisui-electrode"
   },
   {
     "id": "swshp-SWSH295",
@@ -7279,7 +7295,8 @@
     "artist": "aky CG Works",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swshp/SWSH297.png",
-    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH297_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH297_hires.png",
+    "variantFormKey": "hisui-zoroark"
   },
   {
     "id": "swshp-SWSH298",
@@ -7304,7 +7321,8 @@
     "artist": "aky CG Works",
     "regulationMark": "F",
     "imageSmall": "https://images.pokemontcg.io/swshp/SWSH298.png",
-    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH298_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swshp/SWSH298_hires.png",
+    "variantFormKey": "hisui-zoroark"
   },
   {
     "id": "swshp-SWSH302",

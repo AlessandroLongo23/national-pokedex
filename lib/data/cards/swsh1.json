@@ -1982,7 +1982,8 @@
     "artist": "Saya Tsuruta",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh1/81.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh1/81_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh1/81_hires.png",
+    "variantFormKey": "galar-ponyta"
   },
   {
     "id": "swsh1-82",
@@ -2007,7 +2008,8 @@
     "artist": "You Iribi",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh1/82.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh1/82_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh1/82_hires.png",
+    "variantFormKey": "galar-rapidash"
   },
   {
     "id": "swsh1-83",
@@ -2864,7 +2866,8 @@
     "artist": "kirisAki",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh1/117.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh1/117_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh1/117_hires.png",
+    "variantFormKey": "galar-zigzagoon"
   },
   {
     "id": "swsh1-118",
@@ -2889,7 +2892,8 @@
     "artist": "nagimiso",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh1/118.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh1/118_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh1/118_hires.png",
+    "variantFormKey": "galar-linoone"
   },
   {
     "id": "swsh1-119",
@@ -3110,7 +3114,8 @@
     "artist": "kirisAki",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh1/127.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh1/127_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh1/127_hires.png",
+    "variantFormKey": "galar-meowth"
   },
   {
     "id": "swsh1-128",
@@ -3232,7 +3237,8 @@
     "artist": "Kouki Saitou",
     "regulationMark": "D",
     "imageSmall": "https://images.pokemontcg.io/swsh1/132.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh1/132_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh1/132_hires.png",
+    "variantFormKey": "galar-stunfisk"
   },
   {
     "id": "swsh1-133",

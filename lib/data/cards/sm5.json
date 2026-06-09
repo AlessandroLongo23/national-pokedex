@@ -653,7 +653,8 @@
     ],
     "artist": "Shin Nagasawa",
     "imageSmall": "https://images.pokemontcg.io/sm5/28.png",
-    "imageLarge": "https://images.pokemontcg.io/sm5/28_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm5/28_hires.png",
+    "variantFormKey": "alola-sandshrew"
   },
   {
     "id": "sm5-29",
@@ -677,7 +678,8 @@
     "evolvesFrom": "Alolan Sandshrew",
     "artist": "Anesaki Dynamic",
     "imageSmall": "https://images.pokemontcg.io/sm5/29.png",
-    "imageLarge": "https://images.pokemontcg.io/sm5/29_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm5/29_hires.png",
+    "variantFormKey": "alola-sandslash"
   },
   {
     "id": "sm5-30",
@@ -700,7 +702,8 @@
     ],
     "artist": "Tomokazu Komiya",
     "imageSmall": "https://images.pokemontcg.io/sm5/30.png",
-    "imageLarge": "https://images.pokemontcg.io/sm5/30_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm5/30_hires.png",
+    "variantFormKey": "alola-vulpix"
   },
   {
     "id": "sm5-31",
@@ -1829,7 +1832,8 @@
     ],
     "artist": "Naoyo Kimura",
     "imageSmall": "https://images.pokemontcg.io/sm5/78.png",
-    "imageLarge": "https://images.pokemontcg.io/sm5/78_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm5/78_hires.png",
+    "variantFormKey": "alola-diglett"
   },
   {
     "id": "sm5-79",
@@ -1853,7 +1857,8 @@
     "evolvesFrom": "Alolan Diglett",
     "artist": "Megumi Mizutani",
     "imageSmall": "https://images.pokemontcg.io/sm5/79.png",
-    "imageLarge": "https://images.pokemontcg.io/sm5/79_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm5/79_hires.png",
+    "variantFormKey": "alola-dugtrio"
   },
   {
     "id": "sm5-80",
@@ -2231,7 +2236,8 @@
     "evolvesFrom": "Exeggcute",
     "artist": "Hasuno",
     "imageSmall": "https://images.pokemontcg.io/sm5/95.png",
-    "imageLarge": "https://images.pokemontcg.io/sm5/95_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm5/95_hires.png",
+    "variantFormKey": "alola-exeggutor"
   },
   {
     "id": "sm5-96",

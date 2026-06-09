@@ -1012,7 +1012,8 @@
     "artist": "kirisAki",
     "regulationMark": "G",
     "imageSmall": "https://images.pokemontcg.io/svp/41.png",
-    "imageLarge": "https://images.pokemontcg.io/svp/41_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/svp/41_hires.png",
+    "variantFormKey": "paldea-wooper"
   },
   {
     "id": "svp-42",

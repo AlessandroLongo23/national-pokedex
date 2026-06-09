@@ -923,7 +923,8 @@
     ],
     "artist": "nagimiso",
     "imageSmall": "https://images.pokemontcg.io/sm12/39.png",
-    "imageLarge": "https://images.pokemontcg.io/sm12/39_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm12/39_hires.png",
+    "variantFormKey": "alola-vulpix"
   },
   {
     "id": "sm12-40",
@@ -3015,7 +3016,8 @@
     ],
     "artist": "Sekio",
     "imageSmall": "https://images.pokemontcg.io/sm12/128.png",
-    "imageLarge": "https://images.pokemontcg.io/sm12/128_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm12/128_hires.png",
+    "variantFormKey": "alola-meowth"
   },
   {
     "id": "sm12-129",
@@ -3040,7 +3042,8 @@
     "evolvesFrom": "Alolan Meowth",
     "artist": "5ban Graphics",
     "imageSmall": "https://images.pokemontcg.io/sm12/129.png",
-    "imageLarge": "https://images.pokemontcg.io/sm12/129_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm12/129_hires.png",
+    "variantFormKey": "alola-persian"
   },
   {
     "id": "sm12-130",
@@ -3063,7 +3066,8 @@
     ],
     "artist": "Sekio",
     "imageSmall": "https://images.pokemontcg.io/sm12/130.png",
-    "imageLarge": "https://images.pokemontcg.io/sm12/130_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm12/130_hires.png",
+    "variantFormKey": "alola-grimer"
   },
   {
     "id": "sm12-131",
@@ -3087,7 +3091,8 @@
     "evolvesFrom": "Alolan Grimer",
     "artist": "MAHOU",
     "imageSmall": "https://images.pokemontcg.io/sm12/131.png",
-    "imageLarge": "https://images.pokemontcg.io/sm12/131_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm12/131_hires.png",
+    "variantFormKey": "alola-muk"
   },
   {
     "id": "sm12-132",
@@ -3227,7 +3232,8 @@
     ],
     "artist": "ryoma uratsuka",
     "imageSmall": "https://images.pokemontcg.io/sm12/137.png",
-    "imageLarge": "https://images.pokemontcg.io/sm12/137_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm12/137_hires.png",
+    "variantFormKey": "alola-sandshrew"
   },
   {
     "id": "sm12-138",
@@ -3251,7 +3257,8 @@
     "evolvesFrom": "Alolan Sandshrew",
     "artist": "Hasuno",
     "imageSmall": "https://images.pokemontcg.io/sm12/138.png",
-    "imageLarge": "https://images.pokemontcg.io/sm12/138_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm12/138_hires.png",
+    "variantFormKey": "alola-sandslash"
   },
   {
     "id": "sm12-139",
@@ -3420,7 +3427,8 @@
     "evolvesFrom": "Alolan Vulpix",
     "artist": "Eri Yamaki",
     "imageSmall": "https://images.pokemontcg.io/sm12/145.png",
-    "imageLarge": "https://images.pokemontcg.io/sm12/145_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm12/145_hires.png",
+    "variantFormKey": "alola-ninetales"
   },
   {
     "id": "sm12-146",
@@ -5059,7 +5067,8 @@
     "evolvesFrom": "Alolan Meowth",
     "artist": "PLANETA Tsuji",
     "imageSmall": "https://images.pokemontcg.io/sm12/219.png",
-    "imageLarge": "https://images.pokemontcg.io/sm12/219_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm12/219_hires.png",
+    "variantFormKey": "alola-persian"
   },
   {
     "id": "sm12-220",
@@ -5945,7 +5954,8 @@
     "evolvesFrom": "Alolan Meowth",
     "artist": "PLANETA Tsuji",
     "imageSmall": "https://images.pokemontcg.io/sm12/257.png",
-    "imageLarge": "https://images.pokemontcg.io/sm12/257_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/sm12/257_hires.png",
+    "variantFormKey": "alola-persian"
   },
   {
     "id": "sm12-258",

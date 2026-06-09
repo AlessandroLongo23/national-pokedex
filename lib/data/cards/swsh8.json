@@ -1757,7 +1757,8 @@
     "artist": "Atsuko Nishida",
     "regulationMark": "E",
     "imageSmall": "https://images.pokemontcg.io/swsh8/71.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh8/71_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh8/71_hires.png",
+    "variantFormKey": "galar-darumaka"
   },
   {
     "id": "swsh8-72",
@@ -1782,7 +1783,8 @@
     "artist": "SATOSHI NAKAI",
     "regulationMark": "E",
     "imageSmall": "https://images.pokemontcg.io/swsh8/72.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh8/72_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh8/72_hires.png",
+    "variantFormKey": "galar-darmanitan"
   },
   {
     "id": "swsh8-73",
@@ -2897,7 +2899,8 @@
     "artist": "Kouki Saitou",
     "regulationMark": "E",
     "imageSmall": "https://images.pokemontcg.io/swsh8/117.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh8/117_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh8/117_hires.png",
+    "variantFormKey": "galar-corsola"
   },
   {
     "id": "swsh8-118",
@@ -3935,7 +3938,8 @@
     "artist": "Eri Yamaki",
     "regulationMark": "E",
     "imageSmall": "https://images.pokemontcg.io/swsh8/159.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh8/159_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh8/159_hires.png",
+    "variantFormKey": "galar-zigzagoon"
   },
   {
     "id": "swsh8-160",
@@ -3960,7 +3964,8 @@
     "artist": "sowsow",
     "regulationMark": "E",
     "imageSmall": "https://images.pokemontcg.io/swsh8/160.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh8/160_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh8/160_hires.png",
+    "variantFormKey": "galar-linoone"
   },
   {
     "id": "swsh8-161",
@@ -4454,7 +4459,8 @@
     "artist": "0313",
     "regulationMark": "E",
     "imageSmall": "https://images.pokemontcg.io/swsh8/180.png",
-    "imageLarge": "https://images.pokemontcg.io/swsh8/180_hires.png"
+    "imageLarge": "https://images.pokemontcg.io/swsh8/180_hires.png",
+    "variantFormKey": "galar-meowth"
   },
   {
     "id": "swsh8-181",
