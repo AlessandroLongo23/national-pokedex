@@ -22,6 +22,8 @@ const scopeInputSchema = z
       scopeType: z.literal("pokedex"),
       dexFrom: z.number().int().min(1).max(1025),
       dexTo: z.number().int().min(1).max(1025),
+      includeMegas: z.boolean().optional(),
+      includeVariants: z.boolean().optional(),
     }),
     z.object({
       scopeType: z.literal("subtype"),
@@ -198,6 +200,48 @@ export async function clearBinderCellOverride(
     .eq("binder_id", id)
     .eq("dex", d);
   if (error) throw new Error(error.message);
+  revalidatePath(`/binders/${id}`);
+}
+
+const formInclusionSchema = z.object({
+  includeMegas: z.boolean(),
+  includeVariants: z.boolean(),
+});
+
+/** Update a pokedex binder's per-binder Mega/variant inclusion flags, merged
+ * into its existing scope_params jsonb. Pokedex-scope only. */
+export async function setBinderFormInclusion(
+  binderId: string,
+  flags: { includeMegas: boolean; includeVariants: boolean },
+): Promise<void> {
+  const id = binderIdSchema.parse(binderId);
+  const { includeMegas, includeVariants } = formInclusionSchema.parse(flags);
+  await assertPokedexBinderOwner(id);
+
+  const userId = await requireUserId();
+  const supabase = await getSupabaseServer();
+  const { data: row, error: readErr } = await supabase
+    .from("binders")
+    .select("scope_params")
+    .eq("id", id)
+    .eq("user_id", userId)
+    .maybeSingle();
+  if (readErr) throw new Error(readErr.message);
+  if (!row) throw new Error("Binder not found");
+
+  const merged = {
+    ...(row.scope_params as Record<string, unknown>),
+    includeMegas,
+    includeVariants,
+  };
+  const { error } = await supabase
+    .from("binders")
+    .update({ scope_params: merged, updated_at: new Date().toISOString() })
+    .eq("id", id)
+    .eq("user_id", userId);
+  if (error) throw new Error(error.message);
+
+  revalidatePath("/binders");
   revalidatePath(`/binders/${id}`);
 }
 
