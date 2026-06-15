@@ -10,9 +10,11 @@ import { SeriesBadge } from "./SeriesBadge";
 interface Props {
   limit?: number;
   filterAvailable: boolean;
+  /** Render without the standalone card chrome so it merges into a parent widget. */
+  embedded?: boolean;
 }
 
-export function RankLeaderboard({ limit = 10, filterAvailable }: Props) {
+export function RankLeaderboard({ limit = 10, filterAvailable, embedded = false }: Props) {
   const { ownedSpecies } = useOwnedCards();
   const { availableSetIds } = useSetAvailability();
   const ranked = useMemo(
@@ -21,8 +23,8 @@ export function RankLeaderboard({ limit = 10, filterAvailable }: Props) {
   );
   const rows = ranked.slice(1, limit + 1);
 
-  return (
-    <section className="overflow-hidden rounded-xl border border-border bg-panel">
+  const inner = (
+    <>
       <div className="flex flex-wrap items-baseline justify-between gap-2 border-b border-border px-5 py-3">
         <h2 className="text-sm font-semibold">Leaderboard</h2>
         <span className="text-[10px] uppercase tracking-wider text-muted">
@@ -78,7 +80,15 @@ export function RankLeaderboard({ limit = 10, filterAvailable }: Props) {
           </tbody>
         </table>
       </div>
-    </section>
+    </>
+  );
+
+  if (embedded) {
+    return <div className="border-t border-accent/15 bg-panel">{inner}</div>;
+  }
+
+  return (
+    <section className="overflow-hidden rounded-xl border border-border bg-panel">{inner}</section>
   );
 }
 

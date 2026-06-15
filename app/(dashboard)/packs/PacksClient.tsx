@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { BestPackHero } from "../_components/BestPackHero";
 import { SinglesToBuy } from "../_components/SinglesToBuy";
-import { RankLeaderboard } from "../_components/RankLeaderboard";
 import { PackHistory, type PackHistoryItem } from "../_components/PackHistory";
 
 interface Props {
@@ -15,8 +14,8 @@ export function PacksClient({ history }: Props) {
 
   return (
     <>
-      <div className="sticky top-16 z-sticky flex flex-wrap items-center justify-between gap-3 rounded-lg border border-border bg-panel/90 p-3 backdrop-blur-md">
-        <label className="flex items-center gap-2 text-sm">
+      <div className="sticky top-[var(--app-header-h)] z-sticky flex flex-wrap items-center justify-between gap-3 rounded-lg border border-border bg-panel/90 p-3 backdrop-blur-md">
+        <label className="flex min-h-10 items-center gap-2 text-sm md:min-h-0">
           <input
             type="checkbox"
             checked={filterAvailable}
@@ -32,7 +31,6 @@ export function PacksClient({ history }: Props) {
       </div>
       <BestPackHero filterAvailable={filterAvailable} />
       <SinglesToBuy filterAvailable={filterAvailable} />
-      <RankLeaderboard filterAvailable={filterAvailable} />
       <PackHistory items={history} />
     </>
   );
