@@ -126,6 +126,23 @@ export interface CardEntry {
 
 export type CardIndex = Record<number, string[]>;
 
+// A single cheap printing of a species, precomputed for the "Buy these as
+// singles" widget. "Cheapest" is the rarity-tier proxy used across the packs
+// pages (Common < Uncommon < Rare < …), newest set first within a tier — there
+// is no live price here. Built by scripts/ingest/cheapestSingles.ts.
+export interface CheapestCard {
+  id: string;
+  name: string;
+  setId: string;
+  setName: string;
+  number: string;
+  rarity: Rarity;
+  imageSmall: string;
+}
+
+// dex → up to N cheapest printings, cheapest first.
+export type CheapestSingles = Record<number, CheapestCard[]>;
+
 export interface MegaForm {
   formKey: string;
   displayName: string;

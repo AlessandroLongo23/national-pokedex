@@ -2,6 +2,7 @@ import pokedex from "./pokedex.json";
 import sets from "./sets.json";
 import coverage from "./coverage.json";
 import greedy from "./greedy.json";
+import cheapestSingles from "./cheapestSingles.json";
 import setPools from "./setPools.json";
 import cardIndex from "./cardIndex.json";
 import species from "./species.json";
@@ -16,6 +17,7 @@ import type {
   BoosterManifest,
   CardEntry,
   CardIndex,
+  CheapestSingles,
   Coverage,
   GreedyEntry,
   LogoManifest,
@@ -42,6 +44,7 @@ export const SETS = (sets as SetInfo[]).map((s) => {
 });
 export const COVERAGE = coverage as Coverage;
 export const GREEDY = greedy as GreedyEntry[];
+export const CHEAPEST_SINGLES = cheapestSingles as CheapestSingles;
 export const SET_POOLS = setPools as SetPools;
 export const CARD_INDEX = cardIndex as CardIndex;
 export const SPECIES = species as SpeciesIndex;
