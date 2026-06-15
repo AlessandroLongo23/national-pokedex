@@ -6,6 +6,7 @@ import setPools from "./setPools.json";
 import cardIndex from "./cardIndex.json";
 import species from "./species.json";
 import boosters from "./boosters.json";
+import logos from "./logos.json";
 import tcgcsvMap from "./tcgcsvMap.json";
 import megas from "./megas.json";
 import cardIndexByMega from "./cardIndexByMega.json";
@@ -17,6 +18,7 @@ import type {
   CardIndex,
   Coverage,
   GreedyEntry,
+  LogoManifest,
   MegaForm,
   MegaIndex,
   PokedexEntry,
@@ -30,7 +32,14 @@ import type {
 import type { OtherCardsBySubtype, OtherSubtype } from "./other-subtypes";
 
 export const POKEDEX = pokedex as PokedexEntry[];
-export const SETS = sets as SetInfo[];
+
+// Prefer higher-resolution Bulbagarden logos where we have them (see
+// scripts/ingest/fetchLogos.ts); fall back to the pokemontcg.io logo otherwise.
+const LOGO_OVERRIDES = logos as LogoManifest;
+export const SETS = (sets as SetInfo[]).map((s) => {
+  const hi = LOGO_OVERRIDES[s.id];
+  return hi ? { ...s, logoUrl: hi.url } : s;
+});
 export const COVERAGE = coverage as Coverage;
 export const GREEDY = greedy as GreedyEntry[];
 export const SET_POOLS = setPools as SetPools;

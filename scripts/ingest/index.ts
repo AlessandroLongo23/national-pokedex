@@ -9,8 +9,10 @@ import { discoverVariants, applyVariantFormKeys } from "./parseVariants";
 import { resolveVariantArtwork } from "./fetchVariantArtwork";
 import { computeCoverage } from "./coverage";
 import { computeGreedyOrder } from "./greedy";
+import { computeCheapestSingles } from "./cheapestSingles";
 import { fetchSpecies } from "./fetchSpecies";
 import { fetchBoosters } from "./fetchBoosters";
+import { fetchLogos } from "./fetchLogos";
 import { fetchTcgCsvMap } from "./fetchTcgCsv";
 import type { CardEntry, CardIndex, SetInfo, SetPools } from "@/lib/data/types";
 import {
@@ -163,6 +165,9 @@ async function main() {
   const greedy = computeGreedyOrder(sets);
   console.log(`[ingest] greedy top: ${greedy[0]?.setName} (+${greedy[0]?.newCount})`);
 
+  const cheapestSingles = computeCheapestSingles(sets, cardsBySet);
+  console.log(`[ingest] cheapest singles: ${Object.keys(cheapestSingles).length} species`);
+
   const species = await fetchSpecies(pokedex);
   console.log(`[ingest] species: ${Object.keys(species).length} entries`);
 
@@ -171,6 +176,9 @@ async function main() {
   console.log(
     `[ingest] boosters: ${wrapperCount} wrappers across ${Object.keys(boosters).length} sets`,
   );
+
+  const logos = await fetchLogos({ sets });
+  console.log(`[ingest] logos: ${Object.keys(logos).length} hi-res overrides`);
 
   // tcgcsv mirror is queried for every set whose name we can match; older
   // sets rarely trigger the runtime fallback (pokemontcg.io's snapshot is
@@ -220,6 +228,7 @@ async function main() {
   writeJson(path.join(dataDir, "sets.json"), sets);
   writeJson(path.join(dataDir, "coverage.json"), coverage);
   writeJson(path.join(dataDir, "greedy.json"), greedy);
+  writeJson(path.join(dataDir, "cheapestSingles.json"), cheapestSingles);
   writeJson(path.join(dataDir, "setPools.json"), pools);
   writeJson(path.join(dataDir, "cardIndex.json"), cardIndex);
   writeJson(path.join(dataDir, "megas.json"), megas);
@@ -228,6 +237,7 @@ async function main() {
   writeJson(path.join(dataDir, "cardIndexByVariant.json"), cardIndexByVariant);
   writeJson(path.join(dataDir, "species.json"), species);
   writeJson(path.join(dataDir, "boosters.json"), boosters);
+  writeJson(path.join(dataDir, "logos.json"), logos);
   writeJson(path.join(dataDir, "tcgcsvMap.json"), tcgcsvMap);
   writeJson(path.join(dataDir, "otherCardsBySubtype.json"), otherCardsBySubtype);
 

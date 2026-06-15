@@ -69,6 +69,17 @@ export interface BoosterWrapper {
 
 export type BoosterManifest = Record<string, BoosterWrapper[]>;
 
+// Higher-resolution set logos harvested from the Bulbagarden Archives, keyed by
+// pokemontcg.io set ID. Only sets whose Bulbagarden logo is taller than the
+// pokemontcg.io default are listed; the app overrides SetInfo.logoUrl with these.
+export interface SetLogoImage {
+  url: string;
+  width: number;
+  height: number;
+}
+
+export type LogoManifest = Record<string, SetLogoImage>;
+
 // Maps from pokemontcg.io identifiers to TCGplayer identifiers, harvested
 // from tcgcsv.com. Used at runtime as a TCGplayer-price fallback for sets
 // where pokemontcg.io's nightly price snapshot is empty (typically new

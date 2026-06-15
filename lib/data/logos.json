@@ -1,0 +1,382 @@
+{
+  "base2": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/6/69/Jungle_Logo.png/960px-Jungle_Logo.png",
+    "width": 960,
+    "height": 785
+  },
+  "base3": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/7/7f/Fossil_Logo.png/960px-Fossil_Logo.png",
+    "width": 960,
+    "height": 805
+  },
+  "base4": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/2/20/Base_Set_2_Logo.png/960px-Base_Set_2_Logo.png",
+    "width": 960,
+    "height": 1039
+  },
+  "gym1": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/1/1b/Gym_Heroes_Logo.png/960px-Gym_Heroes_Logo.png",
+    "width": 960,
+    "height": 447
+  },
+  "gym2": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/e/e0/Gym_Challenge_Logo.png/960px-Gym_Challenge_Logo.png",
+    "width": 960,
+    "height": 427
+  },
+  "neo2": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/9/98/Neo_Discovery_Logo_EN.png/960px-Neo_Discovery_Logo_EN.png",
+    "width": 960,
+    "height": 441
+  },
+  "neo3": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/4/49/Neo_Revelation_Logo_EN.png/960px-Neo_Revelation_Logo_EN.png",
+    "width": 960,
+    "height": 848
+  },
+  "neo4": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/1/18/Neo_Destiny_Logo_EN.png/960px-Neo_Destiny_Logo_EN.png",
+    "width": 960,
+    "height": 454
+  },
+  "ecard2": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/0/0d/E2_Logo_EN.png/960px-E2_Logo_EN.png",
+    "width": 960,
+    "height": 204
+  },
+  "ecard3": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/b/b8/E3_Logo_EN.png/960px-E3_Logo_EN.png",
+    "width": 960,
+    "height": 317
+  },
+  "ex1": {
+    "url": "https://archives.bulbagarden.net/media/upload/e/ec/EX1_Logo_EN.png",
+    "width": 581,
+    "height": 85
+  },
+  "ex5": {
+    "url": "https://archives.bulbagarden.net/media/upload/0/02/EX5_Logo_EN.png",
+    "width": 575,
+    "height": 305
+  },
+  "ex8": {
+    "url": "https://archives.bulbagarden.net/media/upload/2/2b/EX8_Logo_EN.png",
+    "width": 573,
+    "height": 132
+  },
+  "ex10": {
+    "url": "https://archives.bulbagarden.net/media/upload/3/31/EX10_Logo_EN.png",
+    "width": 571,
+    "height": 215
+  },
+  "ex11": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/7/7d/EX11_Logo_EN.png/960px-EX11_Logo_EN.png",
+    "width": 960,
+    "height": 242
+  },
+  "ex12": {
+    "url": "https://archives.bulbagarden.net/media/upload/c/c6/EX12_Logo_EN.png",
+    "width": 578,
+    "height": 210
+  },
+  "ex14": {
+    "url": "https://archives.bulbagarden.net/media/upload/1/14/EX14_Logo_EN.png",
+    "width": 204,
+    "height": 98
+  },
+  "ex15": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/d/d4/EX15_Logo_EN.png/960px-EX15_Logo_EN.png",
+    "width": 960,
+    "height": 252
+  },
+  "dp7": {
+    "url": "https://archives.bulbagarden.net/media/upload/d/d5/DP7_Logo_EN.png",
+    "width": 600,
+    "height": 186
+  },
+  "pl1": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/4/47/PL1_Logo_EN.png/960px-PL1_Logo_EN.png",
+    "width": 960,
+    "height": 186
+  },
+  "pl4": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/0/00/PL4_Logo_EN.png/960px-PL4_Logo_EN.png",
+    "width": 960,
+    "height": 278
+  },
+  "hgss1": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/0/02/HS1_Logo_EN.png/960px-HS1_Logo_EN.png",
+    "width": 960,
+    "height": 402
+  },
+  "bw1": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/6/63/BW1_Logo_EN.png/960px-BW1_Logo_EN.png",
+    "width": 960,
+    "height": 100
+  },
+  "bw2": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/4/40/BW2_Logo_EN.png/960px-BW2_Logo_EN.png",
+    "width": 960,
+    "height": 224
+  },
+  "bw3": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/1/18/BW3_Logo_EN.png/960px-BW3_Logo_EN.png",
+    "width": 960,
+    "height": 222
+  },
+  "bw4": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/1/16/BW4_Logo_EN.png/960px-BW4_Logo_EN.png",
+    "width": 960,
+    "height": 321
+  },
+  "bw5": {
+    "url": "https://archives.bulbagarden.net/media/upload/d/d3/BW5_Logo_EN.png",
+    "width": 588,
+    "height": 169
+  },
+  "bw6": {
+    "url": "https://archives.bulbagarden.net/media/upload/0/08/BW6_Logo_EN.png",
+    "width": 554,
+    "height": 171
+  },
+  "bw7": {
+    "url": "https://archives.bulbagarden.net/media/upload/8/86/BW7_Logo_EN.png",
+    "width": 588,
+    "height": 221
+  },
+  "bw8": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/2/20/BW8_Logo_EN.png/960px-BW8_Logo_EN.png",
+    "width": 960,
+    "height": 216
+  },
+  "bw9": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/d/d6/BW9_Logo_EN.png/960px-BW9_Logo_EN.png",
+    "width": 960,
+    "height": 241
+  },
+  "bw11": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/4/45/BW11_Logo_EN.png/960px-BW11_Logo_EN.png",
+    "width": 960,
+    "height": 274
+  },
+  "xy1": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/4/4b/XY1_Logo_EN.png/960px-XY1_Logo_EN.png",
+    "width": 960,
+    "height": 241
+  },
+  "xy2": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/e/ec/XY2_Logo_EN.png/960px-XY2_Logo_EN.png",
+    "width": 960,
+    "height": 395
+  },
+  "xy3": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/1/11/XY3_Logo_EN.png/960px-XY3_Logo_EN.png",
+    "width": 960,
+    "height": 378
+  },
+  "xy4": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/7/7b/XY4_Logo_EN.png/960px-XY4_Logo_EN.png",
+    "width": 960,
+    "height": 461
+  },
+  "xy5": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/2/2f/XY5_Logo_EN.png/960px-XY5_Logo_EN.png",
+    "width": 960,
+    "height": 323
+  },
+  "xy6": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/1/12/XY6_Logo_EN.png/960px-XY6_Logo_EN.png",
+    "width": 960,
+    "height": 435
+  },
+  "xy7": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/a/a0/XY7_Logo_EN.png/960px-XY7_Logo_EN.png",
+    "width": 960,
+    "height": 402
+  },
+  "sm4": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/5/5e/SM4_Logo_EN.png/960px-SM4_Logo_EN.png",
+    "width": 960,
+    "height": 377
+  },
+  "sm6": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/b/b9/SM6_Logo_EN.png/960px-SM6_Logo_EN.png",
+    "width": 960,
+    "height": 503
+  },
+  "sm8": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/c/c5/SM8_Logo_EN.png/960px-SM8_Logo_EN.png",
+    "width": 960,
+    "height": 315
+  },
+  "sm9": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/f/fd/SM9_Logo_EN.png/960px-SM9_Logo_EN.png",
+    "width": 960,
+    "height": 354
+  },
+  "swsh1": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/5/50/SWSH1_Logo_EN.png/960px-SWSH1_Logo_EN.png",
+    "width": 960,
+    "height": 188
+  },
+  "swsh2": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/2/29/SWSH2_Logo_EN.png/960px-SWSH2_Logo_EN.png",
+    "width": 960,
+    "height": 344
+  },
+  "swsh3": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/e/e0/SWSH3_Logo_EN.png/960px-SWSH3_Logo_EN.png",
+    "width": 960,
+    "height": 259
+  },
+  "swsh35": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/f/f2/Champion_Path_Logo_EN.png/960px-Champion_Path_Logo_EN.png",
+    "width": 960,
+    "height": 348
+  },
+  "swsh4": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/c/c1/SWSH4_Logo_EN.png/960px-SWSH4_Logo_EN.png",
+    "width": 960,
+    "height": 382
+  },
+  "swsh45": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/6/63/Shining_Fates_Logo_EN.png/960px-Shining_Fates_Logo_EN.png",
+    "width": 960,
+    "height": 475
+  },
+  "swsh5": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/b/b3/SWSH5_Logo_EN.png/960px-SWSH5_Logo_EN.png",
+    "width": 960,
+    "height": 317
+  },
+  "swsh6": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/0/01/SWSH6_Logo_EN.png/960px-SWSH6_Logo_EN.png",
+    "width": 960,
+    "height": 510
+  },
+  "swsh7": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/a/ac/SWSH7_Logo_EN.png/960px-SWSH7_Logo_EN.png",
+    "width": 960,
+    "height": 385
+  },
+  "swsh8": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/9/94/SWSH8_Logo_EN.png/960px-SWSH8_Logo_EN.png",
+    "width": 960,
+    "height": 389
+  },
+  "swsh9": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/1/1e/SWSH9_Logo_EN.png/960px-SWSH9_Logo_EN.png",
+    "width": 960,
+    "height": 397
+  },
+  "swsh11": {
+    "url": "https://archives.bulbagarden.net/media/upload/4/4d/SWSH11_Logo_EN.png",
+    "width": 720,
+    "height": 278
+  },
+  "swsh12pt5": {
+    "url": "https://archives.bulbagarden.net/media/upload/9/9a/Crown_Zenith_Logo_EN.png",
+    "width": 720,
+    "height": 272
+  },
+  "sv2": {
+    "url": "https://archives.bulbagarden.net/media/upload/d/d8/SV2_Logo_EN.png",
+    "width": 892,
+    "height": 294
+  },
+  "sv3": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/b/bd/SV3_Logo_EN.png/960px-SV3_Logo_EN.png",
+    "width": 960,
+    "height": 387
+  },
+  "sv3pt5": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/2/26/SV3.5_Logo_EN.png/960px-SV3.5_Logo_EN.png",
+    "width": 960,
+    "height": 729
+  },
+  "sv4": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/7/7e/SV4_Logo_EN.png/960px-SV4_Logo_EN.png",
+    "width": 960,
+    "height": 318
+  },
+  "sv4pt5": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/2/20/SV4.5_Logo_EN.png/960px-SV4.5_Logo_EN.png",
+    "width": 960,
+    "height": 525
+  },
+  "sv5": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/d/d9/SV5_Logo_EN.png/960px-SV5_Logo_EN.png",
+    "width": 960,
+    "height": 380
+  },
+  "sv6": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/1/15/SV6_Logo_EN.png/960px-SV6_Logo_EN.png",
+    "width": 960,
+    "height": 410
+  },
+  "sv6pt5": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/4/43/SV6.5_Logo_EN.png/960px-SV6.5_Logo_EN.png",
+    "width": 960,
+    "height": 451
+  },
+  "sv7": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/8/8d/SV7_Logo_EN.png/960px-SV7_Logo_EN.png",
+    "width": 960,
+    "height": 356
+  },
+  "sv8": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/d/d1/SV8_Logo_EN.png/960px-SV8_Logo_EN.png",
+    "width": 960,
+    "height": 424
+  },
+  "sv8pt5": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/b/b8/SV8.5_Logo_EN.png/960px-SV8.5_Logo_EN.png",
+    "width": 960,
+    "height": 445
+  },
+  "sv9": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/2/2e/SV9_Logo_EN.png/960px-SV9_Logo_EN.png",
+    "width": 960,
+    "height": 302
+  },
+  "sv10": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/f/fd/SV10_Logo_EN.png/960px-SV10_Logo_EN.png",
+    "width": 960,
+    "height": 357
+  },
+  "zsv10pt5": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/a/ab/SV10.5_BLK_Logo_EN.png/960px-SV10.5_BLK_Logo_EN.png",
+    "width": 960,
+    "height": 600
+  },
+  "rsv10pt5": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/5/5c/SV10.5_WHT_Logo_EN.png/960px-SV10.5_WHT_Logo_EN.png",
+    "width": 960,
+    "height": 584
+  },
+  "me1": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/b/be/ME1_Logo_EN.png/960px-ME1_Logo_EN.png",
+    "width": 960,
+    "height": 193
+  },
+  "me2": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/f/fa/ME2_Logo_EN.png/960px-ME2_Logo_EN.png",
+    "width": 960,
+    "height": 417
+  },
+  "me2pt5": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/b/b9/ME2.5_Logo_EN.png/960px-ME2.5_Logo_EN.png",
+    "width": 960,
+    "height": 486
+  },
+  "me3": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/a/ae/ME3_Logo_EN.png/960px-ME3_Logo_EN.png",
+    "width": 960,
+    "height": 427
+  },
+  "me4": {
+    "url": "https://archives.bulbagarden.net/media/upload/thumb/3/31/ME4_Logo_EN.png/960px-ME4_Logo_EN.png",
+    "width": 960,
+    "height": 274
+  }
+}
