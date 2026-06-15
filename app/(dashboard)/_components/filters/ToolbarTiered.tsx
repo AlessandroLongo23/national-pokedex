@@ -82,7 +82,7 @@ export function ToolbarTiered({
   return (
     // `top-16` clears the 64px-tall app top bar; the page scrolls beneath it so
     // the title disappears while this stays pinned.
-    <div className="sticky top-16 z-sticky rounded-lg border border-border bg-panel/85 backdrop-blur-md">
+    <div className="sticky top-[var(--app-header-h)] z-sticky rounded-lg border border-border bg-panel/85 backdrop-blur-md">
       <div className="flex flex-wrap items-center gap-2 px-3 py-2.5 sm:gap-3">
         <SearchInput
           value={filters.search}
@@ -240,7 +240,7 @@ function ViewToggle({
     <div
       role="radiogroup"
       aria-label="View"
-      className="inline-flex h-10 md:h-8 items-center rounded-md bg-panel-2 p-0.5"
+      className="inline-flex h-8 items-center rounded-md bg-panel-2 p-0.5"
     >
       {options.map(({ value: v, Icon, label }) => {
         const active = value === v;
@@ -253,7 +253,7 @@ function ViewToggle({
             aria-label={label}
             onClick={() => onChange(v)}
             className={[
-              "inline-flex h-10 w-10 md:h-7 md:w-7 items-center justify-center rounded transition outline-none",
+              "inline-flex h-7 w-7 items-center justify-center rounded transition outline-none",
               "focus-visible:ring-2 focus-visible:ring-accent/60",
               active
                 ? "bg-panel-3 text-text shadow-[inset_0_0_0_1px_var(--color-border)]"

@@ -44,7 +44,7 @@ export function CardRail({
           {emptyMessage}
         </p>
       ) : (
-        <div className="flex snap-x gap-3 overflow-x-auto pb-2">
+        <div className="no-scrollbar -mx-4 flex snap-x snap-mandatory scroll-px-4 gap-3 overflow-x-auto px-4 pb-2 md:mx-0 md:px-0">
           {cards.map((c) => (
             <div key={c.id} className="w-32 shrink-0 snap-start">
               <CardTile card={c} density="compact" />

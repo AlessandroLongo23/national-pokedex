@@ -168,7 +168,7 @@ export function VariantRow({ card }: { card: CardEntry }) {
             type="button"
             onClick={() => toggleWishlist(card.id)}
             className={[
-              "inline-flex shrink-0 items-center justify-center rounded-md border px-2 py-1.5 transition",
+              "inline-flex shrink-0 items-center justify-center rounded-md border px-2.5 py-2.5 transition md:py-1.5",
               wishlisted
                 ? "border-accent bg-accent/10 text-accent"
                 : "border-border text-muted hover:border-accent hover:text-accent",
@@ -187,7 +187,7 @@ export function VariantRow({ card }: { card: CardEntry }) {
       )}
       {!isGuest && (owned ? (
         <div
-          className="inline-flex shrink-0 items-stretch overflow-hidden rounded-md border border-owned bg-owned/15 text-owned-dark dark:text-owned"
+          className="inline-flex min-h-10 shrink-0 items-stretch overflow-hidden rounded-md border border-owned bg-owned/15 text-owned-dark md:min-h-0 dark:text-owned"
           role="group"
           aria-label={`Owned — ${quantity} ${quantity === 1 ? "copy" : "copies"}`}
         >
@@ -200,7 +200,7 @@ export function VariantRow({ card }: { card: CardEntry }) {
                   ? `Decrease ${card.name} quantity`
                   : `Mark ${card.name} as not owned`
               }
-              className="inline-flex items-center justify-center px-2 transition hover:bg-owned/25"
+              className="inline-flex items-center justify-center px-3 transition hover:bg-owned/25"
             >
               <Minus className="h-3 w-3" strokeWidth={2.5} aria-hidden />
             </button>
@@ -214,7 +214,7 @@ export function VariantRow({ card }: { card: CardEntry }) {
               type="button"
               onClick={() => adjustOwned(card.id, +1)}
               aria-label={`Add another copy of ${card.name}`}
-              className="inline-flex items-center justify-center px-2 transition hover:bg-owned/25"
+              className="inline-flex items-center justify-center px-3 transition hover:bg-owned/25"
             >
               <Plus className="h-3 w-3" strokeWidth={2.5} aria-hidden />
             </button>

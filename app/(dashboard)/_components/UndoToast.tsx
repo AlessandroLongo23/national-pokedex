@@ -40,12 +40,12 @@ export function UndoToast({ count, expiresAt, onUndo, label }: Props) {
     >
       <span>
         {label ?? `${count} transaction${count === 1 ? "" : "s"} deleted`}{" "}
-        <span className="text-muted">· Undo {secondsLeft}s</span>
+        <span className="text-muted">· Undo in {secondsLeft}s</span>
       </span>
       <button
         type="button"
         onClick={onUndo}
-        className="ml-3 font-semibold text-accent hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+        className="ml-3 rounded px-2 py-1 font-semibold text-accent transition hover:underline active:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
       >
         Undo
       </button>

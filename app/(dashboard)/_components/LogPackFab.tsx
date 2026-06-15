@@ -1,7 +1,17 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Plus } from "lucide-react";
 
+// The FAB is a "log a pack" shortcut to /packs/new. Hide it on creation/edit
+// flow pages (their own sticky Save/primary buttons sit bottom-right and would
+// collide) and on the print view — and it's redundant on /packs/new itself.
+const HIDE_ON = /\/(new|edit|print)$/;
+
 export function LogPackFab() {
+  const pathname = usePathname();
+  if (HIDE_ON.test(pathname)) return null;
   return (
     <Link
       href="/packs/new"

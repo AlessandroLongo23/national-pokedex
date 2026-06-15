@@ -513,7 +513,7 @@ function OpenedAtField({
       </button>
       {open && (
         <div
-          className="absolute right-0 z-30 mt-2 w-[280px] rounded-lg border border-border-strong bg-panel p-3 shadow-[0_18px_44px_-16px_rgb(0_0_0/0.7)]"
+          className="absolute right-0 z-30 mt-2 w-[280px] max-w-[calc(100vw-1.5rem)] rounded-lg border border-border-strong bg-panel p-3 shadow-[0_18px_44px_-16px_rgb(0_0_0/0.7)]"
           role="dialog"
           aria-label="Pack opened at"
         >
@@ -635,7 +635,7 @@ function PricePaidField({
       </button>
       {open && (
         <div
-          className="absolute right-0 z-30 mt-2 w-[260px] rounded-lg border border-border-strong bg-panel p-3 shadow-[0_18px_44px_-16px_rgb(0_0_0/0.7)]"
+          className="absolute right-0 z-30 mt-2 w-[260px] max-w-[calc(100vw-1.5rem)] rounded-lg border border-border-strong bg-panel p-3 shadow-[0_18px_44px_-16px_rgb(0_0_0/0.7)]"
           role="dialog"
           aria-label="Pack price paid"
         >
@@ -826,7 +826,7 @@ function SetPicker({ onPick }: { onPick: (id: string) => void }) {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search set name or series…"
-          className="ml-auto w-64 rounded-md border border-border bg-panel-2 px-2.5 py-1 text-base md:text-xs text-text placeholder:text-muted focus:border-accent focus:outline-none"
+          className="ml-auto w-full rounded-md border border-border bg-panel-2 px-2.5 py-1.5 text-base text-text placeholder:text-muted focus:border-accent focus:outline-none sm:w-64 sm:py-1 md:text-xs"
         />
       </div>
       <ul className="grid gap-1.5 md:grid-cols-2">

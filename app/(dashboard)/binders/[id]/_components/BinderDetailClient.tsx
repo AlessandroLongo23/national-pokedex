@@ -383,23 +383,23 @@ export function BinderDetailClient({
                 <button
                   type="button"
                   onClick={() => setEditing((v) => !v)}
-                  className="rounded border border-border bg-panel px-2 py-0.5 hover:border-border-strong"
+                  className="rounded border border-border bg-panel px-3 py-2 md:py-1 hover:border-border-strong"
                 >
                   {editing ? "Done editing" : "Add cards"}
                 </button>
               )}
               <Link
                 href={`/binders/${binder.id}/print`}
-                className="inline-flex items-center gap-1 rounded border border-border bg-panel px-2 py-0.5 hover:border-border-strong"
+                className="inline-flex items-center gap-1 rounded border border-border bg-panel px-3 py-2 md:py-1 hover:border-border-strong"
               >
-                <Printer className="h-3 w-3" />
+                <Printer className="h-3.5 w-3.5" />
                 Print placeholders
               </Link>
               <button
                 type="button"
                 onClick={onDelete}
                 disabled={pending}
-                className="rounded border border-missing/40 bg-panel px-2 py-0.5 text-missing hover:border-missing/70 disabled:opacity-50"
+                className="rounded border border-missing/40 bg-panel px-3 py-2 md:py-1 text-missing hover:border-missing/70 disabled:opacity-50"
               >
                 Delete
               </button>

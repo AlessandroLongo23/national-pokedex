@@ -404,14 +404,14 @@ export function PokedexGrid({
           />
         )}
         {showSearch && (
-          <div className="relative">
+          <div className="relative w-full sm:w-auto">
             <span className="pointer-events-none absolute top-1/2 left-2.5 -translate-y-1/2 text-[11px] text-muted">⌕</span>
             <input
               type="search"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder={mode === "megas" || mode === "variants" ? "Name" : "Name or #"}
-              className="w-44 rounded-md border border-border bg-panel-2/60 py-1.5 pr-2.5 pl-7 text-xs text-text placeholder:text-muted focus:border-accent focus:bg-panel-2 focus:outline-none"
+              className="w-full rounded-md border border-border bg-panel-2/60 py-1.5 pr-2.5 pl-7 text-base text-text placeholder:text-muted focus:border-accent focus:bg-panel-2 focus:outline-none sm:w-44 sm:text-xs"
             />
           </div>
         )}
@@ -633,7 +633,7 @@ export function PokedexGrid({
     // whole grid (a `sticky` element only holds within its containing block).
     return (
       <div className="space-y-5">
-        <div className="sticky top-16 z-sticky bg-white/85 pt-3 backdrop-blur-md dark:bg-zinc-950/85">
+        <div className="sticky top-[var(--app-header-h)] z-sticky bg-panel/90 pt-3 backdrop-blur-md">
           {toolbar}
         </div>
         <div className="space-y-5">{body}</div>

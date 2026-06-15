@@ -26,8 +26,8 @@ export function PageHeader({
       <SetPageTitle title={resolvedTitle} />
       <div className="flex min-w-0 items-center gap-4">
         {Icon && (
-          <span className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-zinc-200 bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-800/60">
-            <Icon className="size-5 text-zinc-900 dark:text-zinc-50" />
+          <span className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-border bg-panel-2">
+            <Icon className="size-5 text-text" />
           </span>
         )}
         <div className="min-w-0">
@@ -38,7 +38,7 @@ export function PageHeader({
             {title}
           </h1>
           {subtitle && (
-            <p className="mt-1.5 text-sm font-normal text-zinc-500 md:truncate dark:text-zinc-400">
+            <p className="mt-1.5 text-sm font-normal text-zinc-500 md:truncate dark:text-zinc-300">
               {subtitle}
             </p>
           )}

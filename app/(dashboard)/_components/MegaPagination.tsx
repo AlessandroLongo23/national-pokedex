@@ -64,13 +64,13 @@ function PagerLink({ form, direction }: { form: MegaForm; direction: "prev" | "n
       width={28}
       height={28}
       unoptimized
-      className="h-7 w-7 shrink-0 object-contain opacity-80 group-hover/pager:opacity-100"
+      className="h-7 w-7 shrink-0 object-contain opacity-80 group-hover/pager:opacity-100 pointer-coarse:opacity-100"
     />
   );
   return (
     <Link
       href={`/megas/${form.formKey}`}
-      className="group/pager flex min-h-9 items-center gap-2 rounded-md px-2 py-1 text-muted transition hover:bg-panel-2 hover:text-text active:bg-panel-3 active:text-text"
+      className="group/pager flex min-h-10 items-center gap-2 rounded-md px-2 py-1 text-muted transition hover:bg-panel-2 hover:text-text active:bg-panel-3 active:text-text md:min-h-9"
       aria-label={`${isPrev ? "Previous" : "Next"}: ${form.displayName}`}
     >
       {isPrev && (

@@ -478,7 +478,7 @@ function PurchasedAtField({
       </button>
       {open && (
         <div
-          className="absolute right-0 z-30 mt-2 w-[280px] rounded-lg border border-border-strong bg-panel p-3 shadow-[0_18px_44px_-16px_rgb(0_0_0/0.7)]"
+          className="absolute right-0 z-30 mt-2 w-[min(280px,calc(100vw-2rem))] rounded-lg border border-border-strong bg-panel p-3 shadow-[0_18px_44px_-16px_rgb(0_0_0/0.7)]"
           role="dialog"
           aria-label="Lot purchased at"
         >
@@ -587,7 +587,7 @@ function PricePaidField({
       </button>
       {open && (
         <div
-          className="absolute right-0 z-30 mt-2 w-[260px] rounded-lg border border-border-strong bg-panel p-3 shadow-[0_18px_44px_-16px_rgb(0_0_0/0.7)]"
+          className="absolute right-0 z-30 mt-2 w-[min(260px,calc(100vw-2rem))] rounded-lg border border-border-strong bg-panel p-3 shadow-[0_18px_44px_-16px_rgb(0_0_0/0.7)]"
           role="dialog"
           aria-label="Lot price paid"
         >

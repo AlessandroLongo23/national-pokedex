@@ -451,7 +451,7 @@ export function NewBinderFlow({ sets, pokedex, artists, cardNames }: Props) {
                     type="button"
                     onClick={() => applyPreset(p.key)}
                     className={[
-                      "rounded-md border px-2.5 py-1 text-xs transition",
+                      "rounded-md border px-3 py-1.5 text-xs transition",
                       active
                         ? "border-accent bg-panel-2"
                         : "border-border bg-panel hover:border-border-strong",

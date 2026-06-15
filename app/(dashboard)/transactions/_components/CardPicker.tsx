@@ -259,7 +259,10 @@ export function CardPicker(props: CardPickerProps) {
         )}
       </div>
 
-      <div className="flex min-h-[280px] flex-1 items-start justify-center rounded-md border border-border bg-panel-2 p-4">
+      {/* Preview pane is a desktop hover/arrow affordance — there's no hover on
+          touch (tapping a result picks it), so it would only ever be a dead
+          empty box on mobile. Hide it below md. */}
+      <div className="hidden min-h-[280px] flex-1 items-start justify-center rounded-md border border-border bg-panel-2 p-4 md:flex">
         {preview ? (
           <div className="flex w-full flex-col items-center gap-3">
             {/* eslint-disable-next-line @next/next/no-img-element */}

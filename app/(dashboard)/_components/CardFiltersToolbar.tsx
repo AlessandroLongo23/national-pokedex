@@ -190,7 +190,7 @@ export function CardFiltersToolbar({
   }, []);
 
   return (
-    <div className="sticky top-16 z-sticky space-y-2 rounded-lg border border-border bg-panel/90 p-3 backdrop-blur shadow-[0_4px_16px_-8px_rgb(0_0_0/0.6)]">
+    <div className="sticky top-[var(--app-header-h)] z-sticky space-y-2 rounded-lg border border-border bg-panel/90 p-3 backdrop-blur shadow-[0_4px_16px_-8px_rgb(0_0_0/0.6)]">
       {/* Row 1: search · supertype · sort · size */}
       <div className="flex flex-wrap items-center gap-3">
         <div className="relative min-w-0 flex-1 sm:min-w-[220px] sm:max-w-xs">
@@ -245,7 +245,7 @@ export function CardFiltersToolbar({
               type="button"
               onClick={() => onSortChange(opt.value)}
               className={[
-                "rounded-md px-2.5 py-2 text-[11px] uppercase tracking-wider transition md:py-1",
+                "rounded-md px-2.5 py-2 text-xs uppercase tracking-wider transition md:py-1",
                 sort === opt.value
                   ? "bg-accent/10 text-accent"
                   : "text-muted hover:bg-panel-2 hover:text-text",

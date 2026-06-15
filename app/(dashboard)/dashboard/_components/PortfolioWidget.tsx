@@ -52,7 +52,7 @@ export async function PortfolioWidget({
     >
       <div className="flex items-baseline justify-between gap-3">
         <span className="eyebrow">Portfolio value</span>
-        <span className="inline-flex items-center gap-1 text-xs text-accent opacity-0 transition group-hover:opacity-100">
+        <span className="inline-flex items-center gap-1 text-xs text-accent opacity-0 transition group-hover:opacity-100 pointer-coarse:opacity-100">
           View all
           <ArrowRight className="h-3 w-3" aria-hidden />
         </span>

@@ -79,7 +79,7 @@ export default async function BindersPage() {
         actions={
           <Link
             href="/binders/new"
-            className="rounded-md border border-border bg-card px-3 py-1.5 text-sm font-medium transition hover:border-border-strong"
+            className="rounded-md border border-border bg-card px-3.5 py-2.5 text-sm font-medium transition hover:border-border-strong md:py-1.5"
           >
             + New binder
           </Link>

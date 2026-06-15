@@ -86,7 +86,7 @@ function RowBase({ card }: { card: CardEntry }) {
                 onClick={() => toggleOwned(card.id)}
                 data-action="owned"
                 aria-label={`Mark ${card.name} as owned`}
-                className="inline-flex h-7 min-w-7 items-center justify-center rounded-md border border-border bg-panel-2 px-1.5 text-muted transition hover:border-owned hover:text-owned focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                className="inline-flex h-7 pointer-coarse:h-9 min-w-7 pointer-coarse:min-w-9 items-center justify-center rounded-md border border-border bg-panel-2 px-1.5 text-muted transition hover:border-owned hover:text-owned focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 <Plus className="h-3.5 w-3.5" strokeWidth={2.5} aria-hidden />
               </button>
@@ -98,7 +98,7 @@ function RowBase({ card }: { card: CardEntry }) {
                 data-action="wishlist"
                 aria-pressed
                 aria-label={`Remove ${card.name} from wishlist`}
-                className="inline-flex h-7 min-w-7 items-center justify-center rounded-md border border-missing bg-missing/20 px-1.5 text-missing transition hover:bg-missing/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                className="inline-flex h-7 pointer-coarse:h-9 min-w-7 pointer-coarse:min-w-9 items-center justify-center rounded-md border border-missing bg-missing/20 px-1.5 text-missing transition hover:bg-missing/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 <Heart className="h-3.5 w-3.5" fill="currentColor" strokeWidth={2} aria-hidden />
               </button>
@@ -109,7 +109,7 @@ function RowBase({ card }: { card: CardEntry }) {
           <Tooltip content="See Pokémon details">
             <Link
               href={detailsHref}
-              className="inline-flex h-7 min-w-7 items-center justify-center rounded-md border border-border bg-panel-2 px-1.5 text-muted transition hover:border-accent hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              className="inline-flex h-7 pointer-coarse:h-9 min-w-7 pointer-coarse:min-w-9 items-center justify-center rounded-md border border-border bg-panel-2 px-1.5 text-muted transition hover:border-accent hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               aria-label="Pokémon details"
             >
               <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />

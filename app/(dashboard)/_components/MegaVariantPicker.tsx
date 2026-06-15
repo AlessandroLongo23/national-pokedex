@@ -94,7 +94,7 @@ export function MegaVariantPicker({ form, onClose }: Props) {
           <button
             type="button"
             onClick={onClose}
-            className="rounded-md p-2.5 md:p-1.5 text-muted transition hover:bg-panel-2 hover:text-text"
+            className="rounded-md p-3 md:p-1.5 text-muted transition hover:bg-panel-2 hover:text-text"
             aria-label="Close"
           >
             <X className="h-4 w-4" aria-hidden />

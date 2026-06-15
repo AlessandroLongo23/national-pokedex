@@ -126,7 +126,7 @@ export function CardGrid({
 
   return (
     <div className="space-y-3">
-      <div className="sticky top-2 z-10 flex flex-wrap items-center gap-3 rounded-lg border border-border bg-panel/90 backdrop-blur p-3 shadow-[0_4px_16px_-8px_rgb(0_0_0/0.6)]">
+      <div className="sticky top-[var(--app-header-h)] z-sticky flex flex-wrap items-center gap-3 rounded-lg border border-border bg-panel/90 backdrop-blur p-3 shadow-[0_4px_16px_-8px_rgb(0_0_0/0.6)]">
         <div className="flex gap-1.5">
           {sortOptions.map((s) => (
             <button
@@ -134,7 +134,7 @@ export function CardGrid({
               type="button"
               onClick={() => setSort(s)}
               className={[
-                "rounded-md px-2.5 py-1 text-[11px] uppercase tracking-wider transition",
+                "rounded-md px-2.5 py-1.5 text-xs uppercase tracking-wider transition",
                 effectiveSort === s
                   ? "bg-accent/10 text-accent"
                   : "text-muted hover:bg-panel-2 hover:text-text",

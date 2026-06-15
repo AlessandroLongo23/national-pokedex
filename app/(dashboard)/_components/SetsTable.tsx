@@ -148,8 +148,11 @@ export function SetsTable({
 
   return (
     <div className="space-y-3">
-      <div className="sticky top-16 z-sticky flex flex-wrap items-center gap-3 rounded-lg border border-border bg-panel/90 p-3 backdrop-blur-md">
-        <div className="relative min-w-0 flex-1 sm:min-w-[220px] sm:max-w-xs">
+      {/* Mobile reflows into rows: search owns the first row, era + view toggle
+          share the next, filters wrap below. `order` keeps the desktop layout a
+          single row in the original sequence. */}
+      <div className="sticky top-[var(--app-header-h)] z-sticky flex flex-wrap items-center gap-2.5 rounded-lg border border-border bg-panel/90 p-3 backdrop-blur-md sm:gap-3">
+        <div className="relative order-1 w-full min-w-0 sm:w-auto sm:flex-1 sm:min-w-[220px] sm:max-w-xs">
           <Search
             className="pointer-events-none absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted"
             aria-hidden
@@ -160,16 +163,16 @@ export function SetsTable({
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search sets or eras"
             aria-label="Search sets or eras"
-            className="h-8 w-full rounded-md border border-border bg-panel-2 pl-8 pr-7 text-base md:text-xs text-text placeholder:text-muted focus:border-accent focus:outline-none"
+            className="h-9 w-full rounded-md border border-border bg-panel-2 pl-8 pr-7 text-base text-text placeholder:text-muted focus:border-accent focus:outline-none sm:h-8 md:text-xs"
           />
           {search && (
             <button
               type="button"
               onClick={() => setSearch("")}
               aria-label="Clear search"
-              className="absolute right-1.5 top-1/2 inline-flex h-5 w-5 -translate-y-1/2 items-center justify-center rounded text-muted transition hover:text-text"
+              className="absolute right-1.5 top-1/2 inline-flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded text-muted transition hover:text-text"
             >
-              <X className="h-3 w-3" aria-hidden />
+              <X className="h-3.5 w-3.5" aria-hidden />
             </button>
           )}
         </div>
@@ -178,7 +181,7 @@ export function SetsTable({
           value={seriesFilter ?? ""}
           onChange={(e) => setSeriesFilter(e.target.value || null)}
           aria-label="Filter by era"
-          className="h-8 rounded-md border border-border bg-panel-2 px-2.5 pr-7 text-base md:text-xs text-text focus:border-accent focus:outline-none [color-scheme:dark]"
+          className="order-2 h-9 flex-1 rounded-md border border-border bg-panel-2 px-2.5 pr-7 text-base text-text focus:border-accent focus:outline-none sm:h-8 sm:flex-none md:text-xs [color-scheme:dark]"
         >
           {SERIES_GROUPS.map((g) => (
             <option key={g.label} value={g.value ?? ""}>
@@ -187,13 +190,17 @@ export function SetsTable({
           ))}
         </select>
 
+        <div className="order-3 shrink-0 sm:order-last">
+          <ViewToggle view={view} onChange={setView} />
+        </div>
+
         {!isGuest && (
-          <label className="flex items-center gap-1.5 text-xs text-muted">
+          <label className="order-4 flex items-center gap-2 text-xs text-muted">
             <input
               type="checkbox"
               checked={availableOnly}
               onChange={(e) => setAvailableOnly(e.target.checked)}
-              className="h-3.5 w-3.5 accent-[var(--color-accent)]"
+              className="h-4 w-4 accent-[var(--color-accent)]"
             />
             Available locally only
           </label>
@@ -204,14 +211,12 @@ export function SetsTable({
             <button
               type="button"
               onClick={clearAll}
-              className="inline-flex items-center gap-1 rounded-md border border-border bg-panel-2 px-2 py-2.5 md:py-1 text-[11px] text-muted transition hover:border-accent hover:text-accent"
+              className="order-5 inline-flex items-center gap-1 rounded-md border border-border bg-panel-2 px-2.5 py-2 text-[11px] text-muted transition hover:border-accent hover:text-accent sm:py-1"
             >
               Reset {overrides.size} override{overrides.size === 1 ? "" : "s"}
             </button>
           </Tooltip>
         )}
-
-        <ViewToggle view={view} onChange={setView} />
       </div>
 
       <div>
@@ -221,7 +226,7 @@ export function SetsTable({
         </div>
       ) : view === "list" ? (
         <div className="overflow-x-auto rounded-xl border border-border bg-panel">
-          <table className="w-full min-w-[640px] border-collapse text-sm">
+          <table className="w-full border-collapse text-sm md:min-w-[640px]">
             <thead>
               <tr>
                 <Th k="name" className="text-left">Set</Th>
@@ -231,8 +236,8 @@ export function SetsTable({
                 {!isGuest && (
                   <>
                     <Th k="packsOpened" className="text-right hidden md:table-cell">Packs</Th>
-                    <Th k="ownedCards" className="text-right">Owned</Th>
-                    <th className="bg-panel-2 px-4 py-3 text-center text-[10px] font-semibold uppercase tracking-[0.14em] text-muted">
+                    <Th k="ownedCards" className="text-right hidden md:table-cell">Owned</Th>
+                    <th className="bg-panel-2 px-3 py-3 text-center text-[10px] font-semibold uppercase tracking-[0.14em] text-muted md:px-4">
                       Local
                     </th>
                   </>
@@ -244,12 +249,12 @@ export function SetsTable({
                 const ownedPct = s.cardCount === 0 ? 0 : s.ownedCards / s.cardCount;
                 return (
                   <tr key={s.id} className="border-t border-border transition hover:bg-panel-2">
-                    <td className="px-4 py-4">
-                      <Link href={`/sets/${s.id}`} className="flex items-center gap-3.5">
+                    <td className="px-3 py-3.5 md:px-4 md:py-4">
+                      <Link href={`/sets/${s.id}`} className="flex items-center gap-3 md:gap-3.5">
                         <SetLogo setId={s.id} setName={s.name} logoUrl={s.logoUrl} size="sm" />
                         <span className="min-w-0 leading-tight">
-                          <span className="block text-base font-semibold">{s.name}</span>
-                          <span className="mt-1 flex items-center gap-1.5 text-[11px] uppercase tracking-wider text-muted">
+                          <span className="block truncate text-[15px] font-semibold md:text-base">{s.name}</span>
+                          <span className="mt-1 flex flex-wrap items-center gap-1.5 text-[11px] uppercase tracking-wider text-muted">
                             <SetCodeBadge setId={s.id} series={s.series} />
                             {s.ptcgoCode && (
                               <span className="rounded border border-border bg-panel-2 px-1 py-px text-[10px] font-medium uppercase tracking-wider text-muted">
@@ -258,6 +263,25 @@ export function SetsTable({
                             )}
                             <span>{s.series}</span>
                           </span>
+                          {/* Owned progress inline on mobile, where the Owned column is hidden. */}
+                          {!isGuest && (
+                            <span className="mt-1.5 flex items-center gap-2 text-[11px] md:hidden">
+                              {s.ownedCards === 0 ? (
+                                <span className="text-muted">Not started</span>
+                              ) : (
+                                <>
+                                  <span className="font-semibold text-owned nums">{s.ownedCards}</span>
+                                  <span className="text-muted nums">/ {s.cardCount}</span>
+                                  <span className="h-1.5 w-20 overflow-hidden rounded-full bg-panel-2">
+                                    <span
+                                      className="block h-full bg-owned"
+                                      style={{ width: `${ownedPct * 100}%` }}
+                                    />
+                                  </span>
+                                </>
+                              )}
+                            </span>
+                          )}
                         </span>
                       </Link>
                     </td>
@@ -273,7 +297,7 @@ export function SetsTable({
                             <span className="text-muted">—</span>
                           )}
                         </td>
-                        <td className="px-4 py-4 text-right nums">
+                        <td className="px-4 py-4 text-right nums hidden md:table-cell">
                           <div className="inline-flex items-center gap-2.5">
                             <span className="text-base font-semibold text-owned">{s.ownedCards}</span>
                             <span className="text-muted">/ {s.cardCount}</span>
@@ -285,7 +309,7 @@ export function SetsTable({
                             </span>
                           </div>
                         </td>
-                        <td className="px-4 py-4 text-center">
+                        <td className="px-3 py-3.5 text-center md:px-4 md:py-4">
                           <SetAvailabilityToggle setId={s.id} compact />
                         </td>
                       </>
@@ -413,7 +437,7 @@ function ToggleButton({
       title={label}
       onClick={onClick}
       className={[
-        "flex h-10 w-10 md:h-7 md:w-7 items-center justify-center rounded transition",
+        "flex h-8 w-8 sm:h-7 sm:w-7 items-center justify-center rounded transition",
         active
           ? "bg-accent/10 text-accent"
           : "text-muted hover:text-text",

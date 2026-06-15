@@ -106,7 +106,7 @@ function CellBase({ form, onClick, displayCard }: Props) {
       {partial && (
         <span
           aria-hidden
-          className="pointer-events-none absolute right-1 bottom-1 rounded-sm bg-bg/75 px-1 text-[9px] font-semibold leading-[1.3] text-owned/95 nums tabular-nums backdrop-blur-sm"
+          className="pointer-events-none absolute right-1 bottom-1 rounded-sm bg-bg/90 px-1 text-[9px] font-semibold leading-[1.3] text-owned nums tabular-nums backdrop-blur-sm"
           title={`${ownedVariants} / ${totalVariants} variants owned`}
         >
           {ownedVariants}/{totalVariants}

@@ -170,11 +170,14 @@ function TileBase({
         )}
       </div>
 
-      {(density === "grid" || (!hideActions && !selectMode)) && (
-        <div className="mt-1.5 flex items-start justify-between gap-2">
+      {density === "grid" && (
+        // On touch the caption stacks above the actions: a narrow tile can't fit
+        // the name beside the full touch-size action cluster (the name would
+        // collapse to zero width), so we stack and trim to the primary control.
+        <div className="mt-1.5 flex items-start justify-between gap-2 pointer-coarse:flex-col pointer-coarse:items-stretch pointer-coarse:gap-1.5">
           {density === "grid" && (
             <div className="min-w-0 flex-1">
-              <div className="truncate text-xs font-medium text-text" title={set?.name}>
+              <div className="truncate text-xs font-medium text-text" title={card.name}>
                 {card.name}
               </div>
               <div className="mt-0.5 flex items-baseline gap-1.5 text-[10px] nums">
@@ -214,7 +217,7 @@ function TileBase({
           )}
           {!hideActions && !selectMode && (
             // pointer-coarse keeps the row visible on touch where hover never fires.
-            <div className="ml-auto flex shrink-0 items-center gap-1 opacity-0 transition-opacity group-hover:opacity-100 focus-within:opacity-100 pointer-coarse:opacity-100">
+            <div className="ml-auto flex shrink-0 items-center gap-1 opacity-0 transition-opacity group-hover:opacity-100 focus-within:opacity-100 pointer-coarse:ml-0 pointer-coarse:opacity-100">
               {!isGuest && (owned ? (
                 <div
                   className="inline-flex h-7 pointer-coarse:h-9 items-stretch overflow-hidden rounded-md border border-owned/70 bg-owned/15 text-owned-dark dark:text-owned"
@@ -269,7 +272,11 @@ function TileBase({
                   </button>
                 </Tooltip>
               ))}
-              {!isGuest && (owned ? (
+              {!isGuest && (
+                // Secondary actions live on the card detail on touch, where there's
+                // no room for them beside the primary control.
+                <span className="contents pointer-coarse:hidden">
+                {owned ? (
                 <Tooltip content={favorited ? "Favorited, click to remove" : "Mark as favorite"}>
                   <button
                     type="button"
@@ -315,8 +322,11 @@ function TileBase({
                     />
                   </button>
                 </Tooltip>
-              ))}
+                )}
+                </span>
+              )}
               {detailsHref && !hideDetailsLink && (
+                <span className="contents pointer-coarse:hidden">
                 <Tooltip content="See Pokémon details">
                   <Link
                     href={detailsHref}
@@ -326,8 +336,68 @@ function TileBase({
                     <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
                   </Link>
                 </Tooltip>
+                </span>
               )}
             </div>
+          )}
+        </div>
+      )}
+
+      {/* Compact rail tile: one full-width primary control. A 128px tile can't
+          fit the grid action cluster (stepper + favorite + details all at
+          touch size), so favorite/details move to the card detail — tap the
+          art — and only owned-quantity / add stays inline, where quick logging
+          matters most. */}
+      {density === "compact" && !hideActions && !selectMode && !isGuest && (
+        <div className="mt-1.5">
+          {owned ? (
+            <div
+              className="flex h-9 items-stretch overflow-hidden rounded-md border border-owned/70 bg-owned/15 text-owned-dark dark:text-owned"
+              data-action="quantity"
+              data-quantity={quantity}
+              role="group"
+              aria-label={`Owned — ${quantity} ${quantity === 1 ? "copy" : "copies"}`}
+            >
+              <button
+                type="button"
+                onClick={() => adjustOwned(card.id, -1)}
+                aria-label={
+                  quantity > 1
+                    ? `Decrease ${card.name} quantity`
+                    : `Mark ${card.name} as not owned`
+                }
+                className="flex flex-1 items-center justify-center transition hover:bg-owned/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset"
+              >
+                <Minus className="h-3.5 w-3.5" strokeWidth={2.5} aria-hidden />
+              </button>
+              <span
+                className="flex flex-[1.4] items-center justify-center gap-1 border-x border-owned/40 bg-owned/10 text-xs font-semibold leading-none tabular-nums"
+                aria-hidden
+              >
+                <Check className="h-3.5 w-3.5" strokeWidth={3} />
+                <span>×{quantity}</span>
+              </span>
+              <button
+                type="button"
+                onClick={() => adjustOwned(card.id, +1)}
+                aria-label={`Add another copy of ${card.name}`}
+                className="flex flex-1 items-center justify-center transition hover:bg-owned/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset"
+              >
+                <Plus className="h-3.5 w-3.5" strokeWidth={2.5} aria-hidden />
+              </button>
+            </div>
+          ) : (
+            <button
+              type="button"
+              onClick={() => toggleOwned(card.id)}
+              data-action="owned"
+              aria-pressed={false}
+              aria-label={`Mark ${card.name} as owned`}
+              className="flex h-9 w-full items-center justify-center gap-1.5 rounded-md border border-border bg-panel-2 text-xs font-medium text-muted transition hover:border-owned hover:text-owned focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+            >
+              <Plus className="h-3.5 w-3.5" strokeWidth={2.5} aria-hidden />
+              Add
+            </button>
           )}
         </div>
       )}

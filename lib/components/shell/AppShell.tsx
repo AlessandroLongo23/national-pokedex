@@ -92,6 +92,9 @@ export function AppShell({ sidebar, topBar, children }: AppShellProps) {
 
   const staticVars: CSSProperties = {
     ["--shell-banner-h" as string]: "0px",
+    // Sticky page toolbars (top-[var(--app-header-h)]) clear the app header.
+    // env() resolves to 0 off-notch, so this equals 4rem on desktop / non-notched.
+    ["--app-header-h" as string]: "calc(4rem + env(safe-area-inset-top))",
   };
 
   const pageAnimationKey = pathname;
@@ -151,15 +154,18 @@ export function AppShell({ sidebar, topBar, children }: AppShellProps) {
           )}
 
           <main className="flex h-screen flex-col pl-0 pt-[var(--shell-banner-h)] md:pl-[var(--shell-sidebar-w)]">
-            <div className="flex min-h-0 flex-1 flex-col p-2">
+            {/* Full-bleed on mobile (no gutter / border / rounding) so the app
+                reads as a native screen, not a website in a floating card; the
+                desktop card treatment returns at md. */}
+            <div className="flex min-h-0 flex-1 flex-col p-0 md:p-2">
               <div
                 ref={scrollAreaRef}
-                className={`relative flex-1 min-h-0 rounded-xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950 ${
+                className={`relative flex-1 min-h-0 border-zinc-200 bg-white md:rounded-xl md:border dark:border-zinc-800 dark:bg-zinc-950 ${
                   isViewportFit ? "flex flex-col overflow-hidden" : "overflow-y-auto"
                 }`}
               >
-                <div className="z-sticky sticky top-0 h-16 rounded-t-xl bg-white dark:bg-zinc-950">
-                  {topBar}
+                <div className="z-sticky sticky top-0 bg-white pt-[env(safe-area-inset-top)] md:rounded-t-xl md:pt-0 dark:bg-zinc-950">
+                  <div className="h-16">{topBar}</div>
                   {!isViewportFit && (
                     <div
                       aria-hidden
@@ -174,8 +180,8 @@ export function AppShell({ sidebar, topBar, children }: AppShellProps) {
                     // the floating LogPack FAB (bottom-right) and the home indicator;
                     // desktop keeps its original pb-8 / pb-12 (md:).
                     isViewportFit
-                      ? "flex flex-1 min-h-0 flex-col px-6 pt-8 pb-[max(6rem,env(safe-area-inset-bottom))] md:px-12 md:pb-8"
-                      : "px-6 pt-10 pb-[max(6rem,env(safe-area-inset-bottom))] md:px-12 md:pb-12"
+                      ? "flex flex-1 min-h-0 flex-col px-4 pt-6 pb-[max(6rem,env(safe-area-inset-bottom))] md:px-12 md:pt-8 md:pb-8"
+                      : "px-4 pt-6 pb-[max(6rem,env(safe-area-inset-bottom))] md:px-12 md:pt-10 md:pb-12"
                   }`}
                 >
                   {children}
