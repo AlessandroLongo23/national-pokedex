@@ -4,7 +4,7 @@ import {
   printDefaultStyle,
   type BuildPrintItemsArgs,
 } from "@/lib/placeholders/build-print-items";
-import type { CardEntry, MegaForm } from "@/lib/data/types";
+import type { CardEntry, MegaForm, RegionalVariant } from "@/lib/data/types";
 
 function card(overrides: Partial<CardEntry>): CardEntry {
   return {
@@ -32,7 +32,9 @@ function args(overrides: Partial<BuildPrintItemsArgs>): BuildPrintItemsArgs {
     ownedCardIds: new Set(),
     ownedSpecies: new Set(),
     ownedMegaForms: new Set(),
+    ownedVariantForms: new Set(),
     treatMegasAsSeparate: false,
+    treatVariantsAsSeparate: false,
     ...overrides,
   };
 }
@@ -167,6 +169,45 @@ describe("buildPrintItems — pokedex scope", () => {
     expect(mega!.owned).toBe(true);
     expect(mega!.species!.name).toBe("Mega Venusaur");
     expect(mega!.species!.artworkUrl).toContain("/official-artwork/10033.png");
+  });
+});
+
+describe("buildPrintItems — variant slots", () => {
+  const variants: RegionalVariant[] = [
+    {
+      variantKey: "alola-vulpix",
+      displayName: "Alolan Vulpix",
+      region: "alola",
+      baseDex: 37,
+      gen: 1,
+      types: ["Ice"],
+      artworkId: 10103,
+    },
+  ];
+
+  it("omits variant slots unless treatVariantsAsSeparate and variantsInRange are provided", () => {
+    const off = buildPrintItems(
+      args({ scopeType: "pokedex", dexRange: { from: 30, to: 40 }, variantsInRange: variants }),
+    );
+    expect(off.some((i) => i.key.startsWith("variant:"))).toBe(false);
+  });
+
+  it("appends variant slots with their own art + name when enabled", () => {
+    const on = buildPrintItems(
+      args({
+        scopeType: "pokedex",
+        dexRange: { from: 30, to: 40 },
+        variantsInRange: variants,
+        treatVariantsAsSeparate: true,
+        ownedVariantForms: new Set(["alola-vulpix"]),
+      }),
+    );
+    const v = on.find((i) => i.key === "variant:alola-vulpix");
+    expect(v).toBeDefined();
+    expect(v!.owned).toBe(true);
+    expect(v!.species!.name).toBe("Alolan Vulpix");
+    expect(v!.species!.artworkUrl).toContain("/official-artwork/10103.png");
+    expect(v!.species!.types).toEqual(["ice"]); // lowercased for typeColor
   });
 });
 

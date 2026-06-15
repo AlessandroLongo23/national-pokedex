@@ -32,16 +32,30 @@
 
 @media print {
   .canvas {
+    display: block !important;
+    height: auto !important;
+    min-height: 0 !important;
     overflow: visible !important;
     background: #fff !important;
     padding: 0 !important;
   }
+  /* The frame is the normal-flow block that paginates: one A4 page each. */
   .sheetFrame {
+    position: static !important;
     width: 210mm !important;
-    height: 297mm !important;
+    height: auto !important;
     margin: 0 !important;
+    break-inside: avoid;
+    break-after: page;
+    page-break-after: always;
   }
+  .sheetFrame:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+  /* Un-scale + return the sheet to normal flow inside the frame. */
   .sheetFrame > .sheet {
+    position: static !important;
     transform: none !important;
     box-shadow: none !important;
     border-radius: 0 !important;

@@ -18,7 +18,7 @@ interface Props {
   defaultStyle: PrintStyle;
 }
 
-type Preset = "all" | "missing" | "owned" | "custom";
+type Preset = "all" | "missing" | "custom";
 type CellStyle = "artwork" | "scan" | "text";
 
 const PER_PAGE = 9;
@@ -50,7 +50,10 @@ export function PrintWorkspace({ binderId, binderName, items, defaultStyle }: Pr
   const router = useRouter();
   const [mounted, setMounted] = useState(false);
   const [style, setStyle] = useState<PrintStyle>(defaultStyle);
-  const [grayscale, setGrayscale] = useState(true);
+  // Scans default to B&W (ink-heavy full-bleed images); artwork placeholders —
+  // mostly white space — default to color. The toggle is shared, so the choice
+  // persists when switching styles.
+  const [grayscale, setGrayscale] = useState(defaultStyle === "scan");
   // 0 = full ink (opacity 1), 1 = lightest (opacity 0.4). Fades B&W scans toward
   // the white sheet to save ink. Default ~mid for a noticeably lighter preview.
   const [lightness, setLightness] = useState(0.5);
@@ -94,9 +97,7 @@ export function PrintWorkspace({ binderId, binderName, items, defaultStyle }: Pr
     (p: Exclude<Preset, "custom">) => {
       setPreset(p);
       if (p === "all") setIncluded(new Set(items.map((i) => i.key)));
-      else if (p === "missing")
-        setIncluded(new Set(items.filter((i) => !i.owned).map((i) => i.key)));
-      else setIncluded(new Set(items.filter((i) => i.owned).map((i) => i.key)));
+      else setIncluded(new Set(items.filter((i) => !i.owned).map((i) => i.key)));
     },
     [items],
   );
@@ -143,20 +144,16 @@ export function PrintWorkspace({ binderId, binderName, items, defaultStyle }: Pr
 
   const renderContent = (item: PrintItem) => {
     const eff = effectiveStyle(item, style);
-    if (eff === "artwork") return <ArtworkPlaceholder species={item.species!} />;
+    const opacity = grayscale ? bwOpacity : 1;
+    if (eff === "artwork")
+      return <ArtworkPlaceholder species={item.species!} grayscale={grayscale} opacity={opacity} />;
     if (eff === "scan")
-      return (
-        <CardScan
-          card={item.card!}
-          grayscale={grayscale}
-          opacity={grayscale ? bwOpacity : 1}
-        />
-      );
+      return <CardScan card={item.card!} grayscale={grayscale} opacity={opacity} />;
     return <TextPlaceholder name={item.card?.name ?? item.species?.name ?? "—"} />;
   };
 
   const workspace = (
-    <div className="fixed inset-0 z-[60] flex flex-col bg-[#e6e6ea]">
+    <div id="print-portal-root" className="fixed inset-0 z-[60] flex flex-col bg-[#e6e6ea]">
       {/* Toolbar */}
       <div className="no-print flex flex-wrap items-center gap-x-3 gap-y-2 border-b border-border bg-panel px-4 py-2.5">
         <Link
@@ -182,18 +179,16 @@ export function PrintWorkspace({ binderId, binderName, items, defaultStyle }: Pr
           </SegGroup>
         </div>
 
-        {style === "scan" && (
-          <SegGroup>
-            <SegBtn active={grayscale} onClick={() => setGrayscale(true)}>
-              B&amp;W
-            </SegBtn>
-            <SegBtn active={!grayscale} onClick={() => setGrayscale(false)}>
-              Color
-            </SegBtn>
-          </SegGroup>
-        )}
+        <SegGroup>
+          <SegBtn active={grayscale} onClick={() => setGrayscale(true)}>
+            B&amp;W
+          </SegBtn>
+          <SegBtn active={!grayscale} onClick={() => setGrayscale(false)}>
+            Color
+          </SegBtn>
+        </SegGroup>
 
-        {style === "scan" && grayscale && (
+        {grayscale && (
           <label className="flex items-center gap-1.5 text-[11px] text-muted">
             <span className="uppercase tracking-wider">Lightness</span>
             <input
@@ -218,9 +213,6 @@ export function PrintWorkspace({ binderId, binderName, items, defaultStyle }: Pr
             </SegBtn>
             <SegBtn active={preset === "missing"} onClick={() => applyPreset("missing")}>
               Missing
-            </SegBtn>
-            <SegBtn active={preset === "owned"} onClick={() => applyPreset("owned")}>
-              Owned
             </SegBtn>
           </SegGroup>
         </div>
@@ -252,7 +244,7 @@ export function PrintWorkspace({ binderId, binderName, items, defaultStyle }: Pr
       </div>
 
       {/* Body: excluded sidebar + sheet canvas */}
-      <div className="flex min-h-0 flex-1">
+      <div className="print-body flex min-h-0 flex-1">
         {/* Excluded sidebar (independently scrollable) */}
         <aside className="no-print flex w-[220px] shrink-0 flex-col border-r border-border bg-panel">
           <div className="border-b border-border px-3 py-2 text-xs font-semibold text-text">
@@ -325,9 +317,8 @@ export function PrintWorkspace({ binderId, binderName, items, defaultStyle }: Pr
 
           {selected.length === 0 ? (
             <div className="no-print mx-auto mt-16 max-w-md rounded-lg border border-border bg-panel p-8 text-center text-sm text-muted">
-              No cards selected. Pick <span className="font-medium text-text">All</span>,{" "}
-              <span className="font-medium text-text">Missing</span>, or{" "}
-              <span className="font-medium text-text">Owned</span> above, or re-include cards
+              No cards selected. Pick <span className="font-medium text-text">All</span> or{" "}
+              <span className="font-medium text-text">Missing</span> above, or re-include cards
               from the sidebar.
             </div>
           ) : (

@@ -3,8 +3,19 @@ import { typeColor, GEN_BADGE_FILL, GEN_ROMAN } from "@/lib/placeholders/type-co
 
 /** Official-artwork placeholder — a faithful port of the legacy ReportLab
  * `draw_card`: gen badge, name, #dex, centered artwork, type pills, and a
- * height / genus / weight footer, all inside a 63×88 mm cut box. */
-export function ArtworkPlaceholder({ species }: { species: SpeciesPayload }) {
+ * height / genus / weight footer, all inside a 63×88 mm cut box. `grayscale`
+ * desaturates the whole cell (sprite, type pills, gen badge, text) and `opacity`
+ * fades it toward the white cell behind — the same B&W / ink-saver controls the
+ * card scan offers, applied to the entire composed placeholder. */
+export function ArtworkPlaceholder({
+  species,
+  grayscale = false,
+  opacity = 1,
+}: {
+  species: SpeciesPayload;
+  grayscale?: boolean;
+  opacity?: number;
+}) {
   const num = `#${String(species.dex).padStart(4, "0")}`;
   const nameSize = species.name.length > 11 ? 10.5 : species.name.length > 9 ? 12 : 13.5;
 
@@ -17,6 +28,8 @@ export function ArtworkPlaceholder({ species }: { species: SpeciesPayload }) {
         display: "flex",
         flexDirection: "column",
         fontFamily: "Arial, Helvetica, sans-serif",
+        filter: grayscale ? "grayscale(1)" : "none",
+        opacity,
       }}
     >
       {/* Gen badge, top-right */}

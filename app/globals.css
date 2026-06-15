@@ -500,18 +500,31 @@ a {
     size: A4;
     margin: 0;
   }
-  /* Hide everything, then reveal only the print root. visibility (not display)
-     keeps the grid intact so cells don't reflow. */
-  body * {
-    visibility: hidden !important;
+  /* Isolate the print portal: drop the app shell (and any other body-level
+     portals), then FLATTEN the workspace's fixed/flex/scroll chrome so the
+     sheets sit in normal block flow. Critical for multi-page output — an
+     absolutely/fixed-positioned print root is sized to one page and won't
+     paginate, so only the first page would print. */
+  body > :not(#print-portal-root) {
+    display: none !important;
   }
-  #print-root,
-  #print-root * {
-    visibility: visible !important;
+  html,
+  body {
+    height: auto !important;
+    overflow: visible !important;
+    background: #fff !important;
   }
+  #print-portal-root,
+  #print-portal-root .print-body,
   #print-root {
-    position: absolute !important;
-    inset: 0 !important;
+    position: static !important;
+    display: block !important;
+    inset: auto !important;
+    width: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
     margin: 0 !important;
     padding: 0 !important;
     background: #fff !important;
@@ -519,22 +532,10 @@ a {
   .no-print {
     display: none !important;
   }
-  html,
-  body {
-    height: auto !important;
-    overflow: visible !important;
-  }
   .print-sheet {
     box-shadow: none !important;
     margin: 0 !important;
     border-radius: 0 !important;
-    break-after: page;
-    page-break-after: always;
-    break-inside: avoid;
-  }
-  .print-sheet:last-child {
-    break-after: auto;
-    page-break-after: auto;
   }
   /* Honor type-pill fills, gen badges, and the grayscale filter in print. */
   .print-sheet,

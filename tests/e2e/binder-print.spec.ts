@@ -147,15 +147,23 @@ test("master-set binder: card-scan placeholders, print isolation, grayscale togg
   await page.getByRole("button", { name: "Color" }).click();
   await expect(firstScan).toHaveCSS("filter", "none");
 
-  // "All" includes at least as many cards as "Missing" (which dropped the owned one).
+  // "All" includes at least as many cards as "Missing" (which dropped the owned one),
+  // and sv1 spans many pages — guards multi-page rendering.
   const missingCount = await sheets.count();
   await page.getByRole("button", { name: "All", exact: true }).click();
   await expect.poll(async () => await sheets.count()).toBeGreaterThanOrEqual(missingCount);
+  await expect.poll(async () => await sheets.count()).toBeGreaterThan(1);
 
   // Print isolation: under print media the toolbar disappears, sheets remain.
   await page.emulateMedia({ media: "print" });
   await expect(page.getByRole("button", { name: /print \/ save as pdf/i })).toBeHidden();
   await expect(sheets.first()).toBeVisible();
+  // Regression guard: the print root must stay in normal flow (NOT absolutely
+  // positioned), otherwise only the first page would print.
+  const pos = await page
+    .locator("#print-portal-root")
+    .evaluate((el) => getComputedStyle(el).position);
+  expect(pos).toBe("static");
   await page.emulateMedia({ media: "screen" });
 });
 
