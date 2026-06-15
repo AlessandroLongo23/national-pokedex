@@ -21,9 +21,101 @@ import type { BoosterManifest, BoosterWrapper } from "@/lib/data/types";
 const USER_AGENT = "national-pokedex/0.1 (https://github.com/local; longoa02@gmail.com)";
 const API = "https://archives.bulbagarden.net/w/api.php";
 
-// pokemontcg.io setId → Bulbapedia category name. Promo sets that don't have
-// retail boosters are excluded entirely.
-const SET_CATEGORY: Record<string, string> = {
+// pokemontcg.io setId → Bulbapedia (Bulbagarden Archives) category name.
+// Only retail sets whose category actually hosts single-pack wrapper art are
+// listed; the map was verified by querying the Archives MediaWiki API. Sets
+// omitted on purpose fall into three buckets:
+//   - never had retail boosters: promos (*p), McDonald's (mcd*), POP league
+//     sets, Trainer Kits (tk*), Trainer Galleries / shiny-vault subsets.
+//   - had boosters but the Archives only hosts the sealed *box* art, not the
+//     individual pack wrapper: most of the Sun & Moon era.
+//   - pack art simply isn't on the wiki yet: base Diamond & Pearl, the XY
+//     BREAK / Evolutions sets, the em-dash HS sets (Unleashed/Undaunted/…).
+export const SET_CATEGORY: Record<string, string> = {
+  // Base / Neo / Gym
+  base2: "Jungle",
+  base3: "Fossil",
+  base4: "Base Set 2",
+  base5: "Team Rocket (TCG)",
+  gym1: "Gym Heroes",
+  gym2: "Gym Challenge",
+  neo1: "Neo Genesis",
+  neo2: "Neo Discovery",
+  neo3: "Neo Revelation",
+  neo4: "Neo Destiny",
+  // e-Card
+  ecard1: "Expedition Base Set",
+  ecard2: "Aquapolis",
+  ecard3: "Skyridge",
+  // EX (categories carry the "EX " prefix)
+  ex1: "EX Ruby & Sapphire",
+  ex2: "EX Sandstorm",
+  ex3: "EX Dragon",
+  ex4: "EX Team Magma vs Team Aqua",
+  ex5: "EX Hidden Legends",
+  ex6: "EX FireRed & LeafGreen",
+  ex7: "EX Team Rocket Returns",
+  ex8: "EX Deoxys",
+  ex9: "EX Emerald",
+  ex10: "EX Unseen Forces",
+  ex11: "EX Delta Species",
+  ex12: "EX Legend Maker",
+  ex13: "EX Holon Phantoms",
+  ex14: "EX Crystal Guardians",
+  ex15: "EX Dragon Frontiers",
+  ex16: "EX Power Keepers",
+  // Diamond & Pearl / Platinum / HGSS (partial wiki coverage)
+  dp4: "Great Encounters",
+  dp7: "Stormfront",
+  pl1: "Platinum",
+  pl2: "Rising Rivals",
+  pl4: "Arceus (TCG)",
+  hgss1: "HeartGold & SoulSilver",
+  // Black & White
+  bw1: "Black & White",
+  bw2: "Emerging Powers",
+  bw3: "Noble Victories",
+  bw4: "Next Destinies",
+  bw5: "Dark Explorers",
+  bw6: "Dragons Exalted",
+  bw7: "Boundaries Crossed",
+  bw8: "Plasma Storm",
+  bw9: "Plasma Freeze",
+  bw10: "Plasma Blast",
+  bw11: "Legendary Treasures",
+  // XY (early sets; BREAK-era pack art isn't on the wiki)
+  xy1: "XY",
+  xy2: "Flashfire",
+  xy3: "Furious Fists",
+  xy4: "Phantom Forces",
+  xy5: "Primal Clash",
+  xy6: "Roaring Skies",
+  xy7: "Ancient Origins",
+  // Sun & Moon (only sets whose single-pack art exists on the wiki)
+  sm4: "Crimson Invasion",
+  sm6: "Forbidden Light",
+  sm8: "Lost Thunder",
+  sm9: "Team Up",
+  det1: "Detective Pikachu (TCG)",
+  // Sword & Shield
+  swsh1: "Sword & Shield",
+  swsh2: "Rebel Clash",
+  swsh3: "Darkness Ablaze",
+  swsh35: "Champion's Path",
+  swsh4: "Vivid Voltage",
+  swsh45: "Shining Fates",
+  swsh5: "Battle Styles",
+  swsh6: "Chilling Reign",
+  swsh7: "Evolving Skies",
+  cel25: "Celebrations",
+  swsh8: "Fusion Strike",
+  swsh9: "Brilliant Stars",
+  swsh10: "Astral Radiance",
+  pgo: "Pokémon GO (TCG)",
+  swsh11: "Lost Origin",
+  swsh12: "Silver Tempest",
+  swsh12pt5: "Crown Zenith",
+  // Scarlet & Violet
   sv1: "Scarlet & Violet",
   sv2: "Paldea Evolved",
   sv3: "Obsidian Flames",
@@ -40,6 +132,7 @@ const SET_CATEGORY: Record<string, string> = {
   sv10: "Destined Rivals",
   zsv10pt5: "Black Bolt",
   rsv10pt5: "White Flare",
+  // Mega Evolution
   me1: "Mega Evolution",
   me2: "Phantasmal Flames",
   me2pt5: "Ascended Heroes",
@@ -50,9 +143,13 @@ const SET_CATEGORY: Record<string, string> = {
 // Boosters yes, ancillary product no. "Booster" is the modern convention;
 // SV1 (Scarlet & Violet base set) instead uses lowercase " pack ".
 const KEEP_RE = /\b(?:Booster|pack)\b/;
-const DROP_RE = /\b(Bundle|Display|Box|Tin|Half|ETB|Elite|Collection|Premium|Logo|Symbol|SetSymbol)\b/i;
-// JP/KR variants — keep English only.
-const NON_EN_RE = /\b(Japanese|Korean|JP|KR|JPN)\b/i;
+const DROP_RE =
+  /\b(Bundle|Display|Box|Tin|Half|ETB|Elite|Collection|Premium|Logo|Symbol|SetSymbol|Deck|Blister|Sleeve|Mini)\b/i;
+// Keep English only. Bulbapedia suffixes non-English wrappers with a language
+// or country code (BR/DE/ES/FR/IT/KO/ZH/…), or spells the language out; the
+// English print carries no marker.
+const NON_EN_RE =
+  /\b(Japanese|Korean|Chinese|Thai|German|French|Spanish|Italian|Portuguese|Dutch|Russian|Polish|Indonesian|JP|KR|JPN|BR|DE|ES|FR|IT|KO|ZH|NL|PT|RU|TW|PL|TH|ID)\b/;
 
 interface CategoryMember {
   pageid: number;
@@ -131,11 +228,15 @@ function prettyName(title: string, category: string): string {
   // Strip "File:" prefix and ".png/.jpg" suffix.
   let s = title.replace(/^File:/, "").replace(/\.(png|jpg|jpeg|webp)$/i, "");
   s = s.replace(/_/g, " ").replace(/\s+/g, " ").trim();
-  // Strip common prefixes like "SV8 Booster ", "ME1 Booster ".
-  const prefix = s.match(/^[A-Z]+\d+(?:\.\d+)?(?:\s+[A-Z]{2,3})?\s+(?:Booster|pack)\s+/i);
-  if (prefix) s = s.slice(prefix[0].length);
-  // "EN" alone after stripping = single-variant pack; use the set name.
-  if (/^EN$/i.test(s) || s.trim() === "") s = category.replace(/\s*\(TCG\)$/i, "");
+  // Drop English print-variant / housekeeping tails that aren't part of a name
+  // ("Unlimited", "Shadowless", "Long", "EN", a trailing "copy").
+  s = s.replace(/\b(Unlimited|Shadowless|Long|EN|copy)\b/gi, "").replace(/\s+/g, " ").trim();
+  // Keep only what follows "Booster"/"pack" — drops the "SWSH11 Booster" /
+  // "Neo Genesis Booster" prefix regardless of set-code shape.
+  const m = s.match(/(?:Booster|pack)\s+(.+)$/i);
+  s = m?.[1]?.trim() ?? "";
+  // Solo pack with no per-variant suffix: fall back to the set name.
+  if (s === "") s = category.replace(/\s*\(TCG\)$/i, "");
   return s.trim();
 }
 
@@ -159,6 +260,9 @@ export async function fetchBoosters(opts: { log?: boolean } = {}): Promise<Boost
       for (const title of candidates) {
         const info = urls.get(title);
         if (!info) continue;
+        // Packs are portrait. Anything landscape/square that slipped past the
+        // title filters is a poster, sealed box, or multi-pack blister — drop it.
+        if (info.height <= info.width) continue;
         entries.push({
           title,
           name: prettyName(title, category),

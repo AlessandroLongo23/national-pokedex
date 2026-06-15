@@ -3,6 +3,15 @@ import type { BoosterWrapper } from "@/lib/data/types";
 type Size = "hero" | "compact";
 
 /**
+ * Portrait pack artwork only. Some sets list a landscape "booster art" poster
+ * or a multi-pack blister in the same manifest (Chaos Rising, Shrouded Fable);
+ * those aren't packs, so the strip drops anything that isn't taller than wide.
+ */
+export function packWrappers(wrappers: BoosterWrapper[]): BoosterWrapper[] {
+  return wrappers.filter((w) => w.height > w.width);
+}
+
+/**
  * Horizontal row of booster-pack artwork with a hover lift. Shared by the
  * "best pack" hero (large) and the set detail header (compact cluster).
  */
@@ -15,8 +24,9 @@ export function BoosterStrip({
   setName: string;
   size?: Size;
 }) {
+  const packs = packWrappers(wrappers);
   // Solo wrapper: center it, slightly larger. Multi: row with consistent gaps.
-  const solo = wrappers.length === 1;
+  const solo = packs.length === 1;
   const compact = size === "compact";
   const heightClass = compact
     ? solo
@@ -30,8 +40,8 @@ export function BoosterStrip({
   return (
     <div className="-mx-1 overflow-x-auto pb-1">
       <ul className={["flex w-max items-end pl-1", gapClass].join(" ")}>
-        {wrappers.map((w, i) => (
-          <li key={w.title} className="group relative" style={{ zIndex: wrappers.length - i }}>
+        {packs.map((w, i) => (
+          <li key={w.title} className="group relative" style={{ zIndex: packs.length - i }}>
             <div
               title={solo ? setName : `${setName} — ${w.name}`}
               className="block transition-transform duration-[420ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform group-hover:-translate-y-1.5 group-hover:scale-[1.03]"
