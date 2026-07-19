@@ -31,6 +31,7 @@ import {
   type LedgerTableRow,
 } from "./_components/LedgerTable";
 import { isCardVariant } from "./_lib/variants";
+import { buildUnpricedLotRows } from "./_lib/unpriced-lots";
 
 function isTransactionKind(value: unknown): value is TransactionKind {
   return TRANSACTION_KINDS.includes(value as TransactionKind);
@@ -43,7 +44,7 @@ export default async function TransactionsPage() {
   const displayCurrency = prefs.displayCurrency;
   const heldValueCurrency = PRICE_SOURCE_CURRENCY[prefs.priceSource];
 
-  const [txnRes, ownedRes, psaCardsRes, lotContentsRes, latestRatesFromEur] =
+  const [txnRes, ownedRes, psaCardsRes, lotContentsRes, lotsRes, latestRatesFromEur] =
     await Promise.all([
       supabase
         .from("transactions")
@@ -69,6 +70,14 @@ export default async function TransactionsPage() {
         .from("lot_contents")
         .select("lot_id, card_lots!inner(user_id)")
         .eq("card_lots.user_id", userId),
+      // All of the user's bulk lots. A lot logged without a price has no
+      // lot_purchase transaction row (see _lib/lot-actions.ts), so it
+      // would be invisible in the ledger; we surface those as synthetic
+      // "unpriced" rows below so they can never be lost.
+      supabase
+        .from("card_lots")
+        .select("id, purchased_at")
+        .eq("user_id", userId),
       // Cached for 24h by Next.js's fetch — essentially free after the
       // first render of the day.
       getLatestRatesFromEur(),
@@ -190,6 +199,28 @@ export default async function TransactionsPage() {
       lotCardCount: r.lot_id ? lotCardCountById.get(r.lot_id) ?? 0 : null,
       variant: isCardVariant(r.variant) ? r.variant : null,
     });
+  }
+
+  // Surface lots logged without a price: they have no lot_purchase row,
+  // so they never appear among the transactions above. Synthesize an
+  // "unpriced" row for each and merge into the date-sorted ledger.
+  const pricedLotIds = new Set<string>();
+  for (const r of rawRows) {
+    if (r.kind === "lot_purchase" && r.lot_id) pricedLotIds.add(r.lot_id);
+  }
+  const unpricedRows = buildUnpricedLotRows(
+    (lotsRes.data ?? []) as Array<{ id: string; purchased_at: string }>,
+    pricedLotIds,
+    lotCardCountById,
+    displayCurrency,
+  );
+  if (unpricedRows.length > 0) {
+    tableRows.push(...unpricedRows);
+    // Transactions arrived occurred_at-desc; re-sort so the synthetic
+    // lot rows slot into the same chronological order.
+    tableRows.sort(
+      (a, b) => new Date(b.occurredAt).getTime() - new Date(a.occurredAt).getTime(),
+    );
   }
 
   const ledgerRows: LedgerRow[] = tableRows;

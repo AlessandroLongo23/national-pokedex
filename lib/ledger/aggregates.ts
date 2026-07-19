@@ -35,6 +35,11 @@ export interface LedgerRow {
   quantity: number | null;
   note: string | null;
   psaSubmissionId: string | null;
+  /** Synthetic rows for lots logged without a price. They have no
+   *  transaction row and no real amount — `amountCents` is a placeholder
+   *  zero. Excluded from KPI/day-total money math; rendered as an
+   *  "add a price" prompt so a priceless lot is never lost from view. */
+  unpriced?: boolean;
 }
 
 export interface LedgerKpis {
@@ -51,6 +56,7 @@ export function computeKpis(
   let totalSpent = 0;
   let totalEarned = 0;
   for (const r of rows) {
+    if (r.unpriced) continue;
     const converted = convertCents(
       r.amountCents,
       r.currency,

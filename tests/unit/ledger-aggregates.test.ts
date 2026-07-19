@@ -57,6 +57,20 @@ describe("computeKpis", () => {
     expect(kpis.netCashFlowCents).toBe(501);
   });
 
+  it("ignores unpriced lot rows entirely", () => {
+    const kpis = computeKpis(
+      [
+        row({ amountCents: -1000, kind: "single_purchase" }),
+        row({ amountCents: 0, kind: "lot_purchase", unpriced: true }),
+      ],
+      "USD",
+      RATES,
+    );
+    expect(kpis.totalSpentCents).toBe(1000);
+    expect(kpis.totalEarnedCents).toBe(0);
+    expect(kpis.netCashFlowCents).toBe(-1000);
+  });
+
   it("converts rows in a different currency using their snapshot rate", () => {
     // 1000 USD with snapshot rate_to_eur = 1/1.10 ≈ 0.9091
     //   → 909 EUR-cents → at "1 EUR = 1.10 USD" today → ~1000 USD-cents

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { Tag } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { formatMoneyCents, type LedgerCurrency } from "@/lib/ledger/money";
 import type { LedgerRow, TransactionKind } from "@/lib/ledger/aggregates";
@@ -280,22 +281,28 @@ function MobileRow({
       <div className="min-w-0 flex-1">
         <div className="flex items-start justify-between gap-2">
           <div className="min-w-0">{renderDescription(row)}</div>
-          <span
-            className={[
-              "shrink-0 text-right text-sm font-semibold tabular-nums",
-              positive ? "text-covered" : "text-missing",
-            ].join(" ")}
-          >
-            {positive ? "+" : "−"}
-            <MoneyDisplay
-              cents={Math.abs(row.amountCents)}
-              currency={row.currency}
-              rateToEur={row.rateToEur}
-              asOf={row.occurredAt}
-              displayCurrency={displayCurrency}
-              latestRatesFromEur={latestRatesFromEur}
-            />
-          </span>
+          {row.unpriced ? (
+            <span className="shrink-0">
+              <AddPriceBadge lotId={row.lotId} />
+            </span>
+          ) : (
+            <span
+              className={[
+                "shrink-0 text-right text-sm font-semibold tabular-nums",
+                positive ? "text-covered" : "text-missing",
+              ].join(" ")}
+            >
+              {positive ? "+" : "−"}
+              <MoneyDisplay
+                cents={Math.abs(row.amountCents)}
+                currency={row.currency}
+                rateToEur={row.rateToEur}
+                asOf={row.occurredAt}
+                displayCurrency={displayCurrency}
+                latestRatesFromEur={latestRatesFromEur}
+              />
+            </span>
+          )}
         </div>
         <div className="mt-1.5 flex items-center gap-2 text-[11px] text-muted">
           <span className="tabular-nums">{timeLabel}</span>
@@ -482,22 +489,28 @@ function Row({
         )}
       </td>
       <td className="px-4 py-2.5">{renderDescription(row)}</td>
-      <td
-        className={[
-          "whitespace-nowrap px-4 py-2.5 text-right font-semibold tabular-nums",
-          positive ? "text-covered" : "text-missing",
-        ].join(" ")}
-      >
-        {positive ? "+" : "−"}
-        <MoneyDisplay
-          cents={Math.abs(row.amountCents)}
-          currency={row.currency}
-          rateToEur={row.rateToEur}
-          asOf={row.occurredAt}
-          displayCurrency={displayCurrency}
-          latestRatesFromEur={latestRatesFromEur}
-        />
-      </td>
+      {row.unpriced ? (
+        <td className="whitespace-nowrap px-4 py-2.5 text-right">
+          <AddPriceBadge lotId={row.lotId} />
+        </td>
+      ) : (
+        <td
+          className={[
+            "whitespace-nowrap px-4 py-2.5 text-right font-semibold tabular-nums",
+            positive ? "text-covered" : "text-missing",
+          ].join(" ")}
+        >
+          {positive ? "+" : "−"}
+          <MoneyDisplay
+            cents={Math.abs(row.amountCents)}
+            currency={row.currency}
+            rateToEur={row.rateToEur}
+            asOf={row.occurredAt}
+            displayCurrency={displayCurrency}
+            latestRatesFromEur={latestRatesFromEur}
+          />
+        </td>
+      )}
       <td className="px-2 py-2.5">
         <RowActions row={row} defaultCurrency={defaultCurrency} />
       </td>
@@ -561,6 +574,24 @@ function RowActions({
     );
   }
   return null;
+}
+
+// Amount-column affordance for an unpriced lot: instead of a money value
+// it invites the user to add the price (which creates the real ledger
+// row). Links to the same lot editor as the row's description/actions.
+function AddPriceBadge({ lotId }: { lotId: string | null }) {
+  if (!lotId) {
+    return <span className="text-[11px] uppercase tracking-wider text-muted">Unpriced</span>;
+  }
+  return (
+    <Link
+      href={`/transactions/lots/${lotId}/edit`}
+      className="inline-flex items-center gap-1 rounded-md border border-accent/40 bg-accent/10 px-2 py-1 text-[11px] font-medium text-accent transition hover:bg-accent/20"
+    >
+      <Tag className="h-3 w-3" aria-hidden />
+      Add price
+    </Link>
+  );
 }
 
 function renderDescription(row: LedgerTableRow) {
@@ -683,6 +714,9 @@ function groupRowsByDay(
     let approximate = false;
     for (const r of g.rows) {
       counts[r.kind] = (counts[r.kind] ?? 0) + 1;
+      // Unpriced lots carry no real amount — count them in the group but
+      // keep their placeholder zero out of the day total.
+      if (r.unpriced) continue;
       const converted = convertCents(
         r.amountCents,
         r.currency,
