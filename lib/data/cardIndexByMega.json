@@ -198,7 +198,8 @@
     "xy11-109"
   ],
   "mega-slowbro": [
-    "xy12-27"
+    "xy12-27",
+    "me5-31"
   ],
   "mega-pidgeot": [
     "xy12-65",
@@ -312,5 +313,28 @@
     "me4-65",
     "me4-104",
     "me4-118"
+  ],
+  "mega-delphox": [
+    "me5-8"
+  ],
+  "mega-zeraora": [
+    "me5-27",
+    "me5-98",
+    "me5-114"
+  ],
+  "mega-chandelure": [
+    "me5-38",
+    "me5-99",
+    "me5-115"
+  ],
+  "mega-darkrai": [
+    "me5-48",
+    "me5-101",
+    "me5-116",
+    "me5-120"
+  ],
+  "mega-excadrill": [
+    "me5-65",
+    "me5-103"
   ]
 }

@@ -2181,30 +2181,30 @@
   ],
   "sv1": [
     {
-      "title": "File:SV1 pack Gyarados.png",
+      "title": "File:SV1 Booster Gyarados.png",
       "name": "Gyarados",
-      "url": "https://archives.bulbagarden.net/media/upload/d/d1/SV1_pack_Gyarados.png",
+      "url": "https://archives.bulbagarden.net/media/upload/a/a5/SV1_Booster_Gyarados.png",
       "width": 780,
       "height": 1429
     },
     {
-      "title": "File:SV1 pack Koraidon.png",
+      "title": "File:SV1 Booster Koraidon.png",
       "name": "Koraidon",
-      "url": "https://archives.bulbagarden.net/media/upload/e/e8/SV1_pack_Koraidon.png",
+      "url": "https://archives.bulbagarden.net/media/upload/2/2e/SV1_Booster_Koraidon.png",
       "width": 780,
       "height": 1429
     },
     {
-      "title": "File:SV1 pack Miraidon.png",
+      "title": "File:SV1 Booster Miraidon.png",
       "name": "Miraidon",
-      "url": "https://archives.bulbagarden.net/media/upload/0/06/SV1_pack_Miraidon.png",
+      "url": "https://archives.bulbagarden.net/media/upload/6/63/SV1_Booster_Miraidon.png",
       "width": 780,
       "height": 1429
     },
     {
-      "title": "File:SV1 pack Partners.png",
+      "title": "File:SV1 Booster Partners.png",
       "name": "Partners",
-      "url": "https://archives.bulbagarden.net/media/upload/6/64/SV1_pack_Partners.png",
+      "url": "https://archives.bulbagarden.net/media/upload/5/58/SV1_Booster_Partners.png",
       "width": 780,
       "height": 1429
     }
@@ -2728,6 +2728,36 @@
       "title": "File:ME4 Booster Mega Pyroar.png",
       "name": "Mega Pyroar",
       "url": "https://archives.bulbagarden.net/media/upload/1/10/ME4_Booster_Mega_Pyroar.png",
+      "width": 780,
+      "height": 1426
+    }
+  ],
+  "me5": [
+    {
+      "title": "File:ME5 Booster Mega Chandelure.png",
+      "name": "Mega Chandelure",
+      "url": "https://archives.bulbagarden.net/media/upload/8/8c/ME5_Booster_Mega_Chandelure.png",
+      "width": 780,
+      "height": 1426
+    },
+    {
+      "title": "File:ME5 Booster Mega Darkrai.png",
+      "name": "Mega Darkrai",
+      "url": "https://archives.bulbagarden.net/media/upload/a/ae/ME5_Booster_Mega_Darkrai.png",
+      "width": 780,
+      "height": 1426
+    },
+    {
+      "title": "File:ME5 Booster Mega Excadrill.png",
+      "name": "Mega Excadrill",
+      "url": "https://archives.bulbagarden.net/media/upload/3/3b/ME5_Booster_Mega_Excadrill.png",
+      "width": 780,
+      "height": 1426
+    },
+    {
+      "title": "File:ME5 Booster Mega Zeraora.png",
+      "name": "Mega Zeraora",
+      "url": "https://archives.bulbagarden.net/media/upload/f/f8/ME5_Booster_Mega_Zeraora.png",
       "width": 780,
       "height": 1426
     }

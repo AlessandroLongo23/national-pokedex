@@ -203,7 +203,7 @@
         6
       ]
     ],
-    "flavorText": "Spits fire that is hot enough to melt boulders. Known to cause forest fires unintentionally.",
+    "flavorText": "It is said that Charizard’s fire burns hotter if it has experienced harsh battles.",
     "generation": 1,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
   },
@@ -505,7 +505,7 @@
         15
       ]
     ],
-    "flavorText": "It has three poisonous stingers on its forelegs and its tail. They are used to jab its enemy repeatedly.",
+    "flavorText": "Flies at high speed and attacks using its large venomous stingers on its forelegs and tail.",
     "generation": 1,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/15.png"
   },
@@ -657,7 +657,7 @@
         20
       ]
     ],
-    "flavorText": "Bites anything when it attacks. Small and very quick, it is a common sight in many places.",
+    "flavorText": "Living wherever there is food available, it ceaselessly scav­ enges for edibles the entire day.",
     "generation": 1,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/19.png"
   },
@@ -724,7 +724,7 @@
         22
       ]
     ],
-    "flavorText": "It flaps its small wings busily to fly. Using its beak, it searches in grass for prey.",
+    "flavorText": "Eats bugs in grassy areas. It has to flap its short wings at high speed to stay airborne.",
     "generation": 1,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/21.png"
   },
@@ -894,7 +894,7 @@
         26
       ]
     ],
-    "flavorText": "Its long tail serves as a ground to protect itself from its own high-voltage power.",
+    "flavorText": "Its long tail serves as a ground to protect itself from its own high voltage power.",
     "generation": 1,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/26.png"
   },
@@ -1437,7 +1437,7 @@
         169
       ]
     ],
-    "flavorText": "Forms colonies in perpetually dark places. Uses ultrasonic waves to identify and approach targets.",
+    "flavorText": "It has no eyes. Instead, it relies on its ultrasonic cries for echolocation to flit about in darkness.",
     "generation": 1,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/41.png"
   },
@@ -1580,7 +1580,7 @@
         182
       ]
     ],
-    "flavorText": "It has the world’s largest petals. With every step, the petals shake out heavy clouds of toxic pollen.",
+    "flavorText": "The larger its petals, the more toxic pollen it contains. Its big head is heavy and hard to hold up.",
     "generation": 1,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/45.png"
   },
@@ -1652,7 +1652,7 @@
         47
       ]
     ],
-    "flavorText": "A host-parasite pair in which the parasite mushroom has taken over the host bug. Prefers damp places.",
+    "flavorText": "It stays mostly in dark, damp places, the preference not of the bug, but of the big mush­ rooms on its back.",
     "generation": 1,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/47.png"
   },
@@ -1688,7 +1688,7 @@
         49
       ]
     ],
-    "flavorText": "Lives in the shadows of tall trees where it eats insects. It is attracted by light at night.",
+    "flavorText": "Its big eyes are actually clusters of tiny eyes. At night, its kind is drawn by light.",
     "generation": 1,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/48.png"
   },
@@ -1724,7 +1724,7 @@
         49
       ]
     ],
-    "flavorText": "The dustlike scales covering its wings are color-coded to indicate the kinds of poison it has.",
+    "flavorText": "The dust-like scales covering its wings are color coded to indicate the kinds of poison it has.",
     "generation": 1,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/49.png"
   },
@@ -1830,7 +1830,7 @@
         863
       ]
     ],
-    "flavorText": "It washes its face regularly to keep the coin on its forehead spotless. It doesn’t get along with Galarian Meowth.",
+    "flavorText": "Adores circular objects. Wanders the streets on a nightly basis to look for dropped loose change.",
     "generation": 1,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/52.png"
   },
@@ -2390,7 +2390,7 @@
         68
       ]
     ],
-    "flavorText": "Its muscular body is so powerful, it must wear a power save belt to be able to regulate its motions.",
+    "flavorText": "It happily carries heavy cargo to toughen up. It willingly does hard work for people.",
     "generation": 1,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/67.png"
   },
@@ -2498,7 +2498,7 @@
         71
       ]
     ],
-    "flavorText": "It spits out POISONPOWDER to immobilize the enemy and then finishes it with a spray of ACID.",
+    "flavorText": "A Pokémon that appears to be a plant. It captures unwary prey by dousing them with a toxic powder.",
     "generation": 1,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/70.png"
   },
@@ -2829,7 +2829,7 @@
         199
       ]
     ],
-    "flavorText": "Incredibly slow and dopey. It takes 5 seconds for it to feel pain when under attack.",
+    "flavorText": "It is always so absent-minded that it won't react, even if its flavorful tail is bitten.",
     "generation": 1,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/79.png"
   },
@@ -3393,7 +3393,7 @@
         208
       ]
     ],
-    "flavorText": "As it grows, the stone portions of its body harden to become similar to a diamond, but colored black.",
+    "flavorText": "It burrows through the ground at a speed of 50 mph while feeding on large boulders.",
     "generation": 1,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/95.png"
   },
@@ -3635,7 +3635,7 @@
         103
       ]
     ],
-    "flavorText": "Often mistaken for eggs. When disturbed, they quickly gather and attack in swarms.",
+    "flavorText": "Using telepathy only they can receive, they always form a cluster of six EXEGGCUTE.",
     "generation": 1,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/102.png"
   },
@@ -3811,7 +3811,7 @@
         237
       ]
     ],
-    "flavorText": "While apparently doing nothing, it fires punches in lightning fast volleys that are impossible to see.",
+    "flavorText": "The arm-twisting punches it throws pulverize even concrete. It rests after three minutes of fighting.",
     "generation": 1,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/107.png"
   },
@@ -3955,7 +3955,7 @@
         464
       ]
     ],
-    "flavorText": "A POKéMON with a one-track mind. Once it charges,  it won't stop running until it falls asleep.",
+    "flavorText": "Its massive bones are 1000 times harder than human bones. It can easily knock a trailer flying.",
     "generation": 1,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/111.png"
   },
@@ -4245,7 +4245,7 @@
         119
       ]
     ],
-    "flavorText": "In the autumn spawning season, they can be seen swimming powerfully up rivers and creeks.",
+    "flavorText": "In autumn, its body becomes more fatty in preparing to propose to a mate. It takes on beautiful colors.",
     "generation": 1,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/119.png"
   },
@@ -4280,7 +4280,7 @@
         121
       ]
     ],
-    "flavorText": "If its body is torn, it can grow back if the red core remains. The core flashes at midnight.",
+    "flavorText": "An enigmatic POKéMON that can effortlessly regenerate any appendage it loses in battle.",
     "generation": 1,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/120.png"
   },
@@ -4623,7 +4623,7 @@
         130
       ]
     ],
-    "flavorText": "Once it begins to rampage, a GYARADOS will burn everything down, even in a harsh storm.",
+    "flavorText": "Rarely seen in the wild. Huge and vicious, it is capable of destroying entire cities in a rage.",
     "generation": 1,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/130.png"
   },
@@ -4684,7 +4684,7 @@
         132
       ]
     ],
-    "flavorText": "Capable of copying an enemy's genetic code to instantly transform itself into a duplicate of the enemy.",
+    "flavorText": "When it spots an enemy, its body transfigures into an almost-perfect copy of its opponent.",
     "generation": 1,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png"
   },
@@ -5022,7 +5022,7 @@
         141
       ]
     ],
-    "flavorText": "Its sleek shape is perfect for swim­ ming. It slashes prey with its claws and drains the body fluids.",
+    "flavorText": "Kabutops slices its prey apart and sucks out the fluids. The discarded body parts become food for other Pokémon.",
     "generation": 1,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/141.png"
   },
@@ -5055,7 +5055,7 @@
         142
       ]
     ],
-    "flavorText": "A Pokémon that roamed the skies in the dinosaur era. Its teeth are like saw blades.",
+    "flavorText": "A ferocious, pre­ historic POKéMON that goes for the enemy's throat with its serrated saw-like fangs.",
     "generation": 1,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/142.png"
   },
@@ -5366,7 +5366,7 @@
         154
       ]
     ],
-    "flavorText": "A sweet aroma gently wafts from the leaf on its head. It is docile and loves to soak up the sun's rays.",
+    "flavorText": "It uses the leaf on its head to determine the temperature and humidity. It loves to sunbathe.",
     "generation": 2,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/152.png"
   },
@@ -5468,7 +5468,7 @@
         157
       ]
     ],
-    "flavorText": "It has a timid nature. If it is startled, the flames on its back burn more vigorously.",
+    "flavorText": "It is timid, and always curls it­ self up in a ball. If attacked, it flares up its back for protection.",
     "generation": 2,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/155.png"
   },
@@ -5673,7 +5673,7 @@
         162
       ]
     ],
-    "flavorText": "A very cautious POKéMON, it raises itself up using its tail to get a better view of its surroundings.",
+    "flavorText": "It has a very nervous nature. It stands up high on its tail so it can scan wide areas.",
     "generation": 2,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/161.png"
   },
@@ -5959,7 +5959,7 @@
         169
       ]
     ],
-    "flavorText": "It flies so si­ lently through the dark on its four wings that it may not be noticed even when nearby.",
+    "flavorText": "Having four wings allows it to fly more quickly and quietly so it can sneak up on prey without its noticing.",
     "generation": 2,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/169.png"
   },
@@ -5995,7 +5995,7 @@
         171
       ]
     ],
-    "flavorText": "Chinchou blink their shining antennae at one another to claim their respective turf.",
+    "flavorText": "It shoots positive and negative elec­ tricity between the tips of its two antennae and zaps its enemies.",
     "generation": 2,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/170.png"
   },
@@ -6219,7 +6219,7 @@
         468
       ]
     ],
-    "flavorText": "They say that it will appear before kindhearted, car­ ing people and shower them with happiness.",
+    "flavorText": "To share its happiness, it flies around the world seeking kind- hearted people.",
     "generation": 2,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/176.png"
   },
@@ -6428,7 +6428,7 @@
         182
       ]
     ],
-    "flavorText": "Plentiful in the tropics. When it dances, its petals rub together and make a pleasant ringing sound.",
+    "flavorText": "BELLOSSOM gather at times and appear to dance. They say that the dance is a ritual to summon the sun.",
     "generation": 2,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/182.png"
   },
@@ -6506,7 +6506,7 @@
         184
       ]
     ],
-    "flavorText": "It lives in water virtually all day long. Its body color and pattern act as camouflage that makes it tough for enemies to spot in water.",
+    "flavorText": "By keeping still and listening in­ tently, it can tell what is in even wild, fast- moving rivers.",
     "generation": 2,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/184.png"
   },
@@ -6541,7 +6541,7 @@
         185
       ]
     ],
-    "flavorText": "Although it always pretends to be a tree, its composi­ tion appears to be closer to a rock than a plant.",
+    "flavorText": "Despite appearing to be a tree, its body is closer to rocks and stones. It is very weak to water.",
     "generation": 2,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/185.png"
   },
@@ -6697,7 +6697,7 @@
         189
       ]
     ],
-    "flavorText": "Once it catches the wind, it deft­ ly controls its cotton-puff spores to float, even around the world.",
+    "flavorText": "Blown by seasonal winds, it circles the globe, scattering cotton spores as it goes.",
     "generation": 2,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/189.png"
   },
@@ -6950,7 +6950,7 @@
         700
       ]
     ],
-    "flavorText": "It uses the fine hair that covers its body to sense air currents and predict its ene­ my's actions.",
+    "flavorText": "Its fur is so sensitive, it can sense minute shifts in the air and predict the weather.",
     "generation": 2,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/196.png"
   },
@@ -7349,7 +7349,7 @@
         208
       ]
     ],
-    "flavorText": "It is thought its body transformed as a result of iron accumulating internally from swallowing soil.",
+    "flavorText": "Its body has been compressed deep under the ground. As a result, it is even harder than a diamond.",
     "generation": 2,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/208.png"
   },
@@ -7492,7 +7492,7 @@
         900
       ]
     ],
-    "flavorText": "It has a steel-hard body. It intimidates foes by upraising its eye-patterned pincers.",
+    "flavorText": "It swings its eye- patterned pincers up to scare its foes. This makes it look like it has three heads.",
     "generation": 2,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/212.png"
   },
@@ -7558,7 +7558,7 @@
         214
       ]
     ],
-    "flavorText": "It is usually docile, but if it is disturbed while sipping honey, it chases off the intruder with its horn.",
+    "flavorText": "This powerful POKéMON thrusts its prized horn under its enemies’ bellies then lifts and throws them.",
     "generation": 2,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/214.png"
   },
@@ -7706,7 +7706,7 @@
         219
       ]
     ],
-    "flavorText": "It never sleeps. It has to keep moving because if it stopped, its magma body would cool and harden.",
+    "flavorText": "Its body is made of magma. If it doesn’t keep moving, its body will cool and harden.",
     "generation": 2,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/218.png"
   },
@@ -7820,7 +7820,7 @@
         473
       ]
     ],
-    "flavorText": "Because the long hair all over its body obscures its sight, it just keeps charging repeatedly.",
+    "flavorText": "Although its legs are short, its rugged hooves prevent it from slipping, even on icy ground.",
     "generation": 2,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/221.png"
   },
@@ -8638,7 +8638,7 @@
         245
       ]
     ],
-    "flavorText": "It races around the world to purify fouled water. It dashes away with the north wind.",
+    "flavorText": "Said to be the reincarnation of north winds, it can instantly purify filthy, murky water.",
     "generation": 2,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/245.png"
   },
@@ -9028,7 +9028,7 @@
         257
       ]
     ],
-    "flavorText": "In battle, BLAZIKEN blows out intense flames from its wrists and attacks foes courageously. The stronger the foe, the more intensely this POKéMON’s wrists burn.",
+    "flavorText": "Flames spout from its wrists, enveloping its knuckles. Its punches scorch its foes.",
     "generation": 3,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/257.png"
   },
@@ -9202,7 +9202,7 @@
         262
       ]
     ],
-    "flavorText": "MIGHTYENA gives obvious signals when it is preparing to attack. It starts to growl deeply and then flattens its body. This POKéMON will bite savagely with its sharply pointed fangs.",
+    "flavorText": "It chases down prey in a pack. It will never disobey the commands of a skilled Trainer.",
     "generation": 3,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/262.png"
   },
@@ -9491,7 +9491,7 @@
         272
       ]
     ],
-    "flavorText": "It searches about for clean water. If it does not drink water for too long, the leaf on its head wilts.",
+    "flavorText": "LOTAD live in ponds and lakes, where they float on the surface. It grows weak if its broad leaf dies. On rare occasions, this POKéMON travels on land in search of clean water.",
     "generation": 3,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/270.png"
   },
@@ -9530,7 +9530,7 @@
         272
       ]
     ],
-    "flavorText": "It lives at the water’s edge where it is sunny. It sleeps on a bed of water grass by day and becomes active at night.",
+    "flavorText": "LOMBRE is nocturnal - it will get active after dusk. It is also a mischief-maker. When this POKéMON spots anglers, it tugs on their fishing lines from beneath the surface and enjoys their consternation.",
     "generation": 3,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/271.png"
   },
@@ -9685,7 +9685,7 @@
         275
       ]
     ],
-    "flavorText": "It lives quietly in the deep forest. It is said to create chilly winter winds with the fans it holds.",
+    "flavorText": "SHIFTRY is a mysterious POKéMON that is said to live atop towering trees  dating back over a thousand years. It creates terrific windstorms with the fans it holds.",
     "generation": 3,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/275.png"
   },
@@ -9821,7 +9821,7 @@
         279
       ]
     ],
-    "flavorText": "It is a messenger of the skies, carrying small Pokémon and eggs to safety in its bill.",
+    "flavorText": "PELIPPER is a flying transporter that carries small POKéMON and eggs inside its massive bill. This POKéMON builds its nest on steep cliffs facing the sea.",
     "generation": 3,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/279.png"
   },
@@ -9941,7 +9941,7 @@
         475
       ]
     ],
-    "flavorText": "GARDEVOIR has the ability to read the future. If it senses impending danger to its TRAINER, this POKéMON is said to unleash its psychokinetic energy at full power.",
+    "flavorText": "It unleashes psychokinetic energy at full power when protecting a Trainer it has bonded closely with.",
     "generation": 3,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/282.png"
   },
@@ -10433,7 +10433,7 @@
         297
       ]
     ],
-    "flavorText": "It has the habit of challenging others without hesitation to tests of strength. It’s been known to stand on train tracks and stop trains using forearm thrusts.",
+    "flavorText": "HARIYAMA practices its straight-arm slaps in any number of locations. One hit of this POKéMON’s powerful, openhanded, straight-arm punches could snap a telephone pole in two.",
     "generation": 3,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/297.png"
   },
@@ -10472,7 +10472,7 @@
         184
       ]
     ],
-    "flavorText": "A Pokémon that lives by water. It moves quickly on land by bouncing on its big tail.",
+    "flavorText": "AZURILL spins its tail as if it were a lasso, then hurls it far. The momentum of the throw sends its body flying, too. Using this unique action, one of these POKéMON managed to hurl itself a record 33 feet.",
     "generation": 3,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/298.png"
   },
@@ -11014,7 +11014,7 @@
         314
       ]
     ],
-    "flavorText": "With its sweet aroma, it guides Volbeat to draw signs with light in the night sky.",
+    "flavorText": "ILLUMISE attracts a swarm of VOLBEAT using a sweet fragrance. Once the VOLBEAT have gathered, this POKéMON leads the lit-up swarm in drawing geometric designs on the canvas of the night sky.",
     "generation": 3,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/314.png"
   },
@@ -11088,7 +11088,7 @@
         317
       ]
     ],
-    "flavorText": "Virtually all of GULPIN’s body is its stomach. As a result, it can swallow something its own size. This POKéMON’s stomach contains a special fluid that digests anything.",
+    "flavorText": "It has a small heart and brain. Its stomach comprises most of its body, with enzymes to dissolve anything.",
     "generation": 3,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/316.png"
   },
@@ -11361,7 +11361,7 @@
         324
       ]
     ],
-    "flavorText": "You can tell how it’s feeling by the smoke spouting from its shell. Tremendous velocity is a sign of good health.",
+    "flavorText": "TORKOAL digs through mountains in search of coal. If it finds some, it fills hollow spaces on its shell with the coal and burns it. If it is attacked, this POKéMON spouts thick black smoke to beat a retreat.",
     "generation": 3,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/324.png"
   },
@@ -11463,7 +11463,7 @@
         327
       ]
     ],
-    "flavorText": "No two Spinda have the same pattern of spots. Its tottering step fouls the aim of foes.",
+    "flavorText": "All the SPINDA that exist in the world are said to have utterly unique spot patterns. The shaky, tottering steps of this POKéMON give it the appearance of dancing.",
     "generation": 3,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/327.png"
   },
@@ -11718,7 +11718,7 @@
         335
       ]
     ],
-    "flavorText": "Memories of battling its arch-rival SEVIPER are etched into every cell of ZANGOOSE’s body. This POKéMON adroitly dodges attacks with incredible agility.",
+    "flavorText": "It has feuded with Seviper for many generations. Its sharp claws are its biggest weapons.",
     "generation": 3,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/335.png"
   },
@@ -11796,7 +11796,7 @@
         338
       ]
     ],
-    "flavorText": "Solar energy is the source of its power, so it is strong during the daytime. When it spins, its body shines.",
+    "flavorText": "SOLROCK is a new species of POKéMON that is said to have fallen from space. It floats in air and moves silently. In battle, this POKéMON releases intensely bright light.",
     "generation": 3,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/338.png"
   },
@@ -11903,7 +11903,7 @@
         342
       ]
     ],
-    "flavorText": "Its hardy vitality enables it to adapt to any environment. Its pincers will never release prey.",
+    "flavorText": "CORPHISH were originally foreign POKéMON that were imported as pets. They eventually turned up in the wild. This POKéMON is very hardy and has greatly increased its population.",
     "generation": 3,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/341.png"
   },
@@ -12027,7 +12027,7 @@
         346
       ]
     ],
-    "flavorText": "LILEEP became extinct approximately a hundred million years ago. This ancient POKéMON attaches itself to a rock on the seafloor and catches approaching prey using tentacles  shaped like flower petals.",
+    "flavorText": "It lived on the seafloor 100 million years ago and was reanimated scientifically.",
     "generation": 3,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/345.png"
   },
@@ -12193,7 +12193,7 @@
         350
       ]
     ],
-    "flavorText": "Its lovely scales are described as rainbow colored. They change color depending on the viewing angle.",
+    "flavorText": "MILOTIC is breathtakingly beautiful. Those that see it are said to forget their combative spirits.",
     "generation": 3,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/350.png"
   },
@@ -12245,7 +12245,7 @@
         352
       ]
     ],
-    "flavorText": "It changes body color to blend in with its surroundings. It also changes color if it is happy or sad.",
+    "flavorText": "KECLEON is capable of changing its body colors at will to blend in with its surroundings. There is one exception - this POKéMON can’t change the zigzag pattern on its belly.",
     "generation": 3,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/352.png"
   },
@@ -12315,7 +12315,7 @@
         354
       ]
     ],
-    "flavorText": "BANETTE generates energy for laying strong curses by sticking pins into its own body. This POKéMON was originally a pitiful plush doll that was thrown away.",
+    "flavorText": "A doll that became a Pokémon over its grudge from being junked. It seeks the child that disowned it.",
     "generation": 3,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/354.png"
   },
@@ -12416,7 +12416,7 @@
         357
       ]
     ],
-    "flavorText": "The bunches of fruit around TROPIUS’s neck are very popular with children. This POKéMON loves fruit, and eats it continuously. Apparently, its love for fruit resulted in its own outgrowth of fruit.",
+    "flavorText": "It lives in tropical jungles. The bunch of fruit around its neck is delicious. The fruit grows twice a year.",
     "generation": 3,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/357.png"
   },
@@ -12656,7 +12656,7 @@
         365
       ]
     ],
-    "flavorText": "SEALEO has the habit of always juggling on the tip of its nose anything it sees for the first time. This POKéMON occasionally entertains itself by balancing and rolling a SPHEAL on its nose.",
+    "flavorText": "It has a very sensitive nose. It touches new things with its nose to examine them.",
     "generation": 3,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/364.png"
   },
@@ -12695,7 +12695,7 @@
         365
       ]
     ],
-    "flavorText": "It swims through icy seas while shattering ice floes with its large tusks. It is protected by its thick blubber.",
+    "flavorText": "WALREIN’s two massively developed tusks can totally shatter blocks of ice weighing ten tons with one blow. This POKéMON’s thick coat of blubber insulates it from subzero temperatures.",
     "generation": 3,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/365.png"
   },
@@ -12886,7 +12886,7 @@
         373
       ]
     ],
-    "flavorText": "Dreaming of one day flying, it practices by leaping off cliffs every day.",
+    "flavorText": "BAGON has a dream of one day soaring in the sky. In doomed efforts to fly, this POKéMON hurls itself off cliffs. As a result of its dives, its head has  grown tough and as hard as tempered steel.",
     "generation": 3,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/371.png"
   },
@@ -12990,7 +12990,7 @@
         376
       ]
     ],
-    "flavorText": "Instead of blood, a powerful magnetic force courses throughout BELDUM’s body. This POKéMON communicates with others by sending controlled pulses of magnetism.",
+    "flavorText": "It converses with others by using magnetic pulses. In a swarm, they move in perfect unison.",
     "generation": 3,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/374.png"
   },
@@ -13088,7 +13088,7 @@
         377
       ]
     ],
-    "flavorText": "Its entire body is made of rock. If any part chips off in battle, it attaches rocks to repair itself.",
+    "flavorText": "REGIROCK was sealed away by people long ago. If this POKéMON’s body is damaged in battle, it is said to seek out suitable rocks on its own to repair itself.",
     "generation": 3,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/377.png"
   },
@@ -13384,7 +13384,7 @@
         389
       ]
     ],
-    "flavorText": "It knows where pure water wells up. It carries fellow Pokémon there on its back.",
+    "flavorText": "A GROTLE that lives in the forest is said to have its own secret springwater.",
     "generation": 4,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/388.png"
   },
@@ -13419,7 +13419,7 @@
         389
       ]
     ],
-    "flavorText": "Small Pokémon occasionally gather on its unmoving back to begin building their nests.",
+    "flavorText": "Some Pokémon are born on a Torterra’s back and spend their entire life there.",
     "generation": 4,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/389.png"
   },
@@ -13766,7 +13766,7 @@
         400
       ]
     ],
-    "flavorText": "With nerves of steel, nothing can perturb it. It is more agile and active than it appears.",
+    "flavorText": "A comparison revealed that Bidoof’s front teeth grow at the same rate as Rattata’s.",
     "generation": 4,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/399.png"
   },
@@ -14670,7 +14670,7 @@
         426
       ]
     ],
-    "flavorText": "At dusk, swarms of them are carried aloft on winds. When noticed, they suddenly vanish.",
+    "flavorText": "It’s drowzy in daytime, but flies off in the evening in big groups. No one knows where they go.",
     "generation": 4,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/426.png"
   },
@@ -15118,7 +15118,7 @@
         866
       ]
     ],
-    "flavorText": "It habitually mimics foes. Once mimicked, the foe cannot take its eyes off this Pokémon.",
+    "flavorText": "In an attempt to confuse its enemy, it mimics the enemy’s movements. Then it wastes no time in making itself scarce!",
     "generation": 4,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/439.png"
   },
@@ -15862,7 +15862,7 @@
         903
       ]
     ],
-    "flavorText": "They live in cold regions, forming groups of four or five that hunt prey with impressive coordination.",
+    "flavorText": "They communicate by clawing signs in boulders and work together to surround enemies.",
     "generation": 4,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/461.png"
   },
@@ -16044,7 +16044,7 @@
         466
       ]
     ],
-    "flavorText": "As its electric charge amplifies, blue sparks begin to crackle between its horns.",
+    "flavorText": "It pushes the tips of its two tails against the foe, then lets loose with over 20,000 volts of power.",
     "generation": 4,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/466.png"
   },
@@ -16418,7 +16418,7 @@
         476
       ]
     ],
-    "flavorText": "It freely controls three small units called Mini-Noses using magnetic force.",
+    "flavorText": "It freely controls three units called Mini-Noses using magnetic force.",
     "generation": 4,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/476.png"
   },
@@ -16510,7 +16510,7 @@
         479
       ]
     ],
-    "flavorText": "Its body is composed of plasma. It is known to infiltrate electronic devices and wreak havoc.",
+    "flavorText": "Research continues on this Pokémon, which could be the power source of a unique motor.",
     "generation": 4,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/479.png"
   },
@@ -16582,7 +16582,7 @@
         482
       ]
     ],
-    "flavorText": "Known as “The Being of Willpower.” It sleeps at the bottom of a lake to keep the world in balance.",
+    "flavorText": "It is thought that Uxie, Mesprit, and Azelf all came from the same egg.",
     "generation": 4,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/482.png"
   },
@@ -16773,7 +16773,7 @@
         490
       ]
     ],
-    "flavorText": "It drifts in warm seas. It always returns to where it was born, no matter how far it may have drifted.",
+    "flavorText": "A Pokémon that lives in warm seas. It inflates the flotation sac on its head to drift and search for food.",
     "generation": 4,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/489.png"
   },
@@ -16872,7 +16872,7 @@
         493
       ]
     ],
-    "flavorText": "It is described in mythology as the Pokémon that shaped the universe with its 1,000 arms.",
+    "flavorText": "It is said to have emerged from an egg in a place where there was nothing, then shaped the world.",
     "generation": 4,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/493.png"
   },
@@ -17103,7 +17103,7 @@
         500
       ]
     ],
-    "flavorText": "It can throw a fire punch by setting its fists on fire with its fiery chin. It cares deeply about its friends.",
+    "flavorText": "It has mastered fast and powerful fighting moves. It grows a beard of fire.",
     "generation": 5,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/500.png"
   },
@@ -17867,7 +17867,7 @@
         523
       ]
     ],
-    "flavorText": "When thunderclouds cover the sky, it will appear. It can catch lightning with its mane and store the electricity.",
+    "flavorText": "Its mane shines when it discharges electricity. They use their flashing manes to communicate with one another.",
     "generation": 5,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/522.png"
   },
@@ -19890,7 +19890,7 @@
         579
       ]
     ],
-    "flavorText": "When Reuniclus shake hands, a network forms between their brains, increasing their psychic power.",
+    "flavorText": "They use psychic power to control their arms, which are made of a special liquid. They can crush boulders psychically.",
     "generation": 5,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/579.png"
   },
@@ -20662,7 +20662,7 @@
         601
       ]
     ],
-    "flavorText": "The gear with the red core is rotated at high speed for a rapid energy charge.",
+    "flavorText": "Its red core functions as an energy tank. It fires the charged energy through its spikes into an area.",
     "generation": 5,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/601.png"
   },
@@ -21642,7 +21642,7 @@
         630
       ]
     ],
-    "flavorText": "Their wings are too tiny to allow them to fly. They guard their posteriors with bones that were gathered by Mandibuzz.",
+    "flavorText": "Its wings are too tiny to allow it to fly. As the time approaches for it to evolve, it discards the bones it was wearing.",
     "generation": 5,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/629.png"
   },
@@ -23114,7 +23114,7 @@
         675
       ]
     ],
-    "flavorText": "Although it possesses a violent temperament, it won’t put up with bullying. It uses the leaf in its mouth to sense the movements of its enemies.",
+    "flavorText": "From the slight twitches of its bamboo leaf, it deduces its opponent’s movements. It’s eager to tussle but kindhearted toward its companions.",
     "generation": 6,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/675.png"
   },
@@ -26289,7 +26289,7 @@
         771
       ]
     ],
-    "flavorText": "It’s covered in a slime that keeps its skin moist, allowing it to stay on land for days without drying up.",
+    "flavorText": "It lives in shallow seas, such as areas near a beach. It can eject its internal organs, which it uses to engulf its prey or battle enemies.",
     "generation": 7,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/771.png"
   },
@@ -27325,7 +27325,7 @@
         808
       ]
     ],
-    "flavorText": "It melts particles of iron and other metals found in the subsoil, so it can absorb them into its body of molten steel.",
+    "flavorText": "It dissolves and eats metal. Circulating liquid metal within its body is how it generates energy.",
     "generation": 7,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/808.png"
   },
@@ -33343,7 +33343,7 @@
         989
       ]
     ],
-    "flavorText": "No records exist of this Pokémon being caught. Data is lacking, but the Pokémon’s traits match up with a creature shown in an expedition journal.",
+    "flavorText": "It slightly resembles a Magneton that lived for 10,000 years and was featured in an article in a paranormal magazine.",
     "generation": 9,
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/989.png"
   },

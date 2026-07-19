@@ -1596,6 +1596,15 @@
   ],
   "56": [
     {
+      "id": "me5-42",
+      "name": "Mankey",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "42",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-42/small"
+    },
+    {
       "id": "sv10-90",
       "name": "Mankey",
       "setId": "sv10",
@@ -1612,18 +1621,18 @@
       "number": "98",
       "rarity": "Common",
       "imageSmall": "https://images.pokemontcg.io/sv8/98.png"
-    },
-    {
-      "id": "sv4pt5-45",
-      "name": "Mankey",
-      "setId": "sv4pt5",
-      "setName": "Paldean Fates",
-      "number": "45",
-      "rarity": "Common",
-      "imageSmall": "https://images.pokemontcg.io/sv4pt5/45.png"
     }
   ],
   "57": [
+    {
+      "id": "me5-43",
+      "name": "Primeape",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "43",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-43/small"
+    },
     {
       "id": "sv10-91",
       "name": "Primeape",
@@ -1641,15 +1650,6 @@
       "number": "99",
       "rarity": "Common",
       "imageSmall": "https://images.pokemontcg.io/sv8/99.png"
-    },
-    {
-      "id": "sv1-108",
-      "name": "Primeape",
-      "setId": "sv1",
-      "setName": "Scarlet & Violet",
-      "number": "108",
-      "rarity": "Common",
-      "imageSmall": "https://images.pokemontcg.io/sv1/108.png"
     }
   ],
   "58": [
@@ -2263,6 +2263,15 @@
   ],
   "79": [
     {
+      "id": "me5-29",
+      "name": "Slowpoke",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "29",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-29/small"
+    },
+    {
       "id": "sv8pt5-18",
       "name": "Slowpoke",
       "setId": "sv8pt5",
@@ -2279,18 +2288,18 @@
       "number": "57",
       "rarity": "Common",
       "imageSmall": "https://images.pokemontcg.io/sv7/57.png"
-    },
-    {
-      "id": "sv3pt5-79",
-      "name": "Slowpoke",
-      "setId": "sv3pt5",
-      "setName": "151",
-      "number": "79",
-      "rarity": "Common",
-      "imageSmall": "https://images.pokemontcg.io/sv3pt5/79.png"
     }
   ],
   "80": [
+    {
+      "id": "me5-30",
+      "name": "Slowbro",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "30",
+      "rarity": "Uncommon",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-30/small"
+    },
     {
       "id": "sv3pt5-80",
       "name": "Slowbro",
@@ -2308,15 +2317,6 @@
       "number": "20",
       "rarity": "Uncommon",
       "imageSmall": "https://images.pokemontcg.io/pgo/20.png"
-    },
-    {
-      "id": "sm2-49",
-      "name": "Slowbro",
-      "setId": "sm2",
-      "setName": "Guardians Rising",
-      "number": "49",
-      "rarity": "Uncommon",
-      "imageSmall": "https://images.pokemontcg.io/sm2/49.png"
     }
   ],
   "81": [
@@ -3394,6 +3394,15 @@
   ],
   "118": [
     {
+      "id": "me5-13",
+      "name": "Goldeen",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "13",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-13/small"
+    },
+    {
       "id": "sv8pt5-20",
       "name": "Goldeen",
       "setId": "sv8pt5",
@@ -3410,15 +3419,6 @@
       "number": "44",
       "rarity": "Common",
       "imageSmall": "https://images.pokemontcg.io/sv6/44.png"
-    },
-    {
-      "id": "sv3pt5-118",
-      "name": "Goldeen",
-      "setId": "sv3pt5",
-      "setName": "151",
-      "number": "118",
-      "rarity": "Common",
-      "imageSmall": "https://images.pokemontcg.io/sv3pt5/118.png"
     }
   ],
   "119": [
@@ -3432,6 +3432,15 @@
       "imageSmall": "https://images.pokemontcg.io/sv6/45.png"
     },
     {
+      "id": "me5-14",
+      "name": "Seaking",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "14",
+      "rarity": "Uncommon",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-14/small"
+    },
+    {
       "id": "sv8pt5-21",
       "name": "Seaking",
       "setId": "sv8pt5",
@@ -3439,15 +3448,6 @@
       "number": "21",
       "rarity": "Uncommon",
       "imageSmall": "https://images.pokemontcg.io/sv8pt5/21.png"
-    },
-    {
-      "id": "sv3pt5-119",
-      "name": "Seaking",
-      "setId": "sv3pt5",
-      "setName": "151",
-      "number": "119",
-      "rarity": "Uncommon",
-      "imageSmall": "https://images.pokemontcg.io/sv3pt5/119.png"
     }
   ],
   "120": [
@@ -3568,6 +3568,15 @@
   ],
   "124": [
     {
+      "id": "me5-32",
+      "name": "Jynx",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "32",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-32/small"
+    },
+    {
       "id": "me1-57",
       "name": "Jynx",
       "setId": "me1",
@@ -3584,15 +3593,6 @@
       "number": "46",
       "rarity": "Common",
       "imageSmall": "https://images.pokemontcg.io/sv6/46.png"
-    },
-    {
-      "id": "swsh11-68",
-      "name": "Jynx",
-      "setId": "swsh11",
-      "setName": "Lost Origin",
-      "number": "68",
-      "rarity": "Common",
-      "imageSmall": "https://images.pokemontcg.io/swsh11/68.png"
     }
   ],
   "125": [
@@ -6555,6 +6555,15 @@
   ],
   "227": [
     {
+      "id": "me5-60",
+      "name": "Skarmory",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "60",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-60/small"
+    },
+    {
       "id": "sv10-141",
       "name": "Skarmory",
       "setId": "sv10",
@@ -6571,15 +6580,6 @@
       "number": "142",
       "rarity": "Common",
       "imageSmall": "https://images.pokemontcg.io/sv10/142.png"
-    },
-    {
-      "id": "sv8-124",
-      "name": "Skarmory",
-      "setId": "sv8",
-      "setName": "Surging Sparks",
-      "number": "124",
-      "rarity": "Common",
-      "imageSmall": "https://images.pokemontcg.io/sv8/124.png"
     }
   ],
   "228": [
@@ -8933,6 +8933,15 @@
   ],
   "309": [
     {
+      "id": "me5-23",
+      "name": "Electrike",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "23",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-23/small"
+    },
+    {
       "id": "me1-49",
       "name": "Electrike",
       "setId": "me1",
@@ -8949,18 +8958,18 @@
       "number": "75",
       "rarity": "Common",
       "imageSmall": "https://images.pokemontcg.io/sv10/75.png"
-    },
-    {
-      "id": "swsh11-54",
-      "name": "Electrike",
-      "setId": "swsh11",
-      "setName": "Lost Origin",
-      "number": "54",
-      "rarity": "Common",
-      "imageSmall": "https://images.pokemontcg.io/swsh11/54.png"
     }
   ],
   "310": [
+    {
+      "id": "me5-24",
+      "name": "Manectric",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "24",
+      "rarity": "Uncommon",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-24/small"
+    },
     {
       "id": "sv10-76",
       "name": "Manectric",
@@ -8978,15 +8987,6 @@
       "number": "25",
       "rarity": "Uncommon",
       "imageSmall": "https://images.pokemontcg.io/xy6/25.png"
-    },
-    {
-      "id": "pl4-44",
-      "name": "Manectric",
-      "setId": "pl4",
-      "setName": "Arceus",
-      "number": "44",
-      "rarity": "Uncommon",
-      "imageSmall": "https://images.pokemontcg.io/pl4/44.png"
     }
   ],
   "311": [
@@ -9252,6 +9252,15 @@
   ],
   "320": [
     {
+      "id": "me5-15",
+      "name": "Wailmer",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "15",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-15/small"
+    },
+    {
       "id": "sv9-40",
       "name": "Wailmer",
       "setId": "sv9",
@@ -9268,15 +9277,6 @@
       "number": "31",
       "rarity": "Common",
       "imageSmall": "https://images.pokemontcg.io/swsh12pt5/31.png"
-    },
-    {
-      "id": "swsh12-37",
-      "name": "Wailmer",
-      "setId": "swsh12",
-      "setName": "Silver Tempest",
-      "number": "37",
-      "rarity": "Common",
-      "imageSmall": "https://images.pokemontcg.io/swsh12/37.png"
     }
   ],
   "321": [
@@ -10209,6 +10209,15 @@
   ],
   "353": [
     {
+      "id": "me5-33",
+      "name": "Shuppet",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "33",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-33/small"
+    },
+    {
       "id": "me2pt5-90",
       "name": "Shuppet",
       "setId": "me2pt5",
@@ -10225,18 +10234,18 @@
       "number": "59",
       "rarity": "Common",
       "imageSmall": "https://images.pokemontcg.io/sv9/59.png"
-    },
-    {
-      "id": "sv1-87",
-      "name": "Shuppet",
-      "setId": "sv1",
-      "setName": "Scarlet & Violet",
-      "number": "87",
-      "rarity": "Common",
-      "imageSmall": "https://images.pokemontcg.io/sv1/87.png"
     }
   ],
   "354": [
+    {
+      "id": "me5-34",
+      "name": "Banette",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "34",
+      "rarity": "Uncommon",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-34/small"
+    },
     {
       "id": "me2pt5-91",
       "name": "Banette",
@@ -10254,15 +10263,6 @@
       "number": "60",
       "rarity": "Uncommon",
       "imageSmall": "https://images.pokemontcg.io/sv9/60.png"
-    },
-    {
-      "id": "swsh11-73",
-      "name": "Banette",
-      "setId": "swsh11",
-      "setName": "Lost Origin",
-      "number": "73",
-      "rarity": "Rare",
-      "imageSmall": "https://images.pokemontcg.io/swsh11/73.png"
     }
   ],
   "355": [
@@ -10325,6 +10325,15 @@
   ],
   "357": [
     {
+      "id": "me5-1",
+      "name": "Tropius",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "1",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-1/small"
+    },
+    {
       "id": "sv9-123",
       "name": "Tropius",
       "setId": "sv9",
@@ -10341,15 +10350,6 @@
       "number": "7",
       "rarity": "Common",
       "imageSmall": "https://images.pokemontcg.io/sv2/7.png"
-    },
-    {
-      "id": "sv1-7",
-      "name": "Tropius",
-      "setId": "sv1",
-      "setName": "Scarlet & Violet",
-      "number": "7",
-      "rarity": "Common",
-      "imageSmall": "https://images.pokemontcg.io/sv1/7.png"
     }
   ],
   "358": [
@@ -11804,6 +11804,15 @@
   ],
   "408": [
     {
+      "id": "me5-44",
+      "name": "Cranidos",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "44",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-44/small"
+    },
+    {
       "id": "swsh10-76",
       "name": "Cranidos",
       "setId": "swsh10",
@@ -11820,15 +11829,6 @@
       "number": "64",
       "rarity": "Uncommon",
       "imageSmall": "https://images.pokemontcg.io/sm5/64.png"
-    },
-    {
-      "id": "pl1-46",
-      "name": "Cranidos",
-      "setId": "pl1",
-      "setName": "Platinum",
-      "number": "46",
-      "rarity": "Uncommon",
-      "imageSmall": "https://images.pokemontcg.io/pl1/46.png"
     }
   ],
   "409": [
@@ -11862,6 +11862,15 @@
   ],
   "410": [
     {
+      "id": "me5-61",
+      "name": "Shieldon",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "61",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-61/small"
+    },
+    {
       "id": "swsh10-109",
       "name": "Shieldon",
       "setId": "swsh10",
@@ -11878,18 +11887,18 @@
       "number": "84",
       "rarity": "Uncommon",
       "imageSmall": "https://images.pokemontcg.io/sm5/84.png"
-    },
-    {
-      "id": "xy11-69",
-      "name": "Shieldon",
-      "setId": "xy11",
-      "setName": "Steam Siege",
-      "number": "69",
-      "rarity": "Uncommon",
-      "imageSmall": "https://images.pokemontcg.io/xy11/69.png"
     }
   ],
   "411": [
+    {
+      "id": "me5-62",
+      "name": "Bastiodon",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "62",
+      "rarity": "Rare",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-62/small"
+    },
     {
       "id": "swsh10-110",
       "name": "Bastiodon",
@@ -11907,15 +11916,6 @@
       "number": "85",
       "rarity": "Rare",
       "imageSmall": "https://images.pokemontcg.io/sm5/85.png"
-    },
-    {
-      "id": "xy11-70",
-      "name": "Bastiodon",
-      "setId": "xy11",
-      "setName": "Steam Siege",
-      "number": "70",
-      "rarity": "Rare",
-      "imageSmall": "https://images.pokemontcg.io/xy11/70.png"
     }
   ],
   "412": [
@@ -12616,6 +12616,15 @@
   ],
   "436": [
     {
+      "id": "me5-63",
+      "name": "Bronzor",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "63",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-63/small"
+    },
+    {
       "id": "me2-71",
       "name": "Bronzor",
       "setId": "me2",
@@ -12632,15 +12641,6 @@
       "number": "66",
       "rarity": "Common",
       "imageSmall": "https://images.pokemontcg.io/sv8pt5/66.png"
-    },
-    {
-      "id": "sv8-126",
-      "name": "Bronzor",
-      "setId": "sv8",
-      "setName": "Surging Sparks",
-      "number": "126",
-      "rarity": "Common",
-      "imageSmall": "https://images.pokemontcg.io/sv8/126.png"
     }
   ],
   "437": [
@@ -12654,6 +12654,15 @@
       "imageSmall": "https://images.pokemontcg.io/sv8/127.png"
     },
     {
+      "id": "me5-64",
+      "name": "Bronzong",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "64",
+      "rarity": "Uncommon",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-64/small"
+    },
+    {
       "id": "me2-72",
       "name": "Bronzong",
       "setId": "me2",
@@ -12661,15 +12670,6 @@
       "number": "72",
       "rarity": "Uncommon",
       "imageSmall": "https://images.pokemontcg.io/me2/72.png"
-    },
-    {
-      "id": "sv8pt5-67",
-      "name": "Bronzong",
-      "setId": "sv8pt5",
-      "setName": "Prismatic Evolutions",
-      "number": "67",
-      "rarity": "Uncommon",
-      "imageSmall": "https://images.pokemontcg.io/sv8pt5/67.png"
     }
   ],
   "438": [
@@ -14028,6 +14028,15 @@
   ],
   "485": [
     {
+      "id": "me5-7",
+      "name": "Heatran",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "7",
+      "rarity": "Uncommon",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-7/small"
+    },
+    {
       "id": "sv8pt5-68",
       "name": "Heatran",
       "setId": "sv8pt5",
@@ -14044,15 +14053,6 @@
       "number": "123",
       "rarity": "Rare",
       "imageSmall": "https://images.pokemontcg.io/sv6/123.png"
-    },
-    {
-      "id": "swsh9-100",
-      "name": "Heatran",
-      "setId": "swsh9",
-      "setName": "Brilliant Stars",
-      "number": "100",
-      "rarity": "Rare",
-      "imageSmall": "https://images.pokemontcg.io/swsh9/100.png"
     }
   ],
   "486": [
@@ -15304,6 +15304,15 @@
   ],
   "529": [
     {
+      "id": "me5-46",
+      "name": "Drilbur",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "46",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-46/small"
+    },
+    {
       "id": "zsv10pt5-45",
       "name": "Drilbur",
       "setId": "zsv10pt5",
@@ -15320,15 +15329,6 @@
       "number": "108",
       "rarity": "Common",
       "imageSmall": "https://images.pokemontcg.io/sv8/108.png"
-    },
-    {
-      "id": "sv5-85",
-      "name": "Drilbur",
-      "setId": "sv5",
-      "setName": "Temporal Forces",
-      "number": "85",
-      "rarity": "Common",
-      "imageSmall": "https://images.pokemontcg.io/sv5/85.png"
     }
   ],
   "530": [
@@ -17566,6 +17566,15 @@
   ],
   "607": [
     {
+      "id": "me5-36",
+      "name": "Litwick",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "36",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-36/small"
+    },
+    {
       "id": "rsv10pt5-16",
       "name": "Litwick",
       "setId": "rsv10pt5",
@@ -17582,15 +17591,6 @@
       "number": "36",
       "rarity": "Common",
       "imageSmall": "https://images.pokemontcg.io/sv6/36.png"
-    },
-    {
-      "id": "sv3-36",
-      "name": "Litwick",
-      "setId": "sv3",
-      "setName": "Obsidian Flames",
-      "number": "36",
-      "rarity": "Common",
-      "imageSmall": "https://images.pokemontcg.io/sv3/36.png"
     }
   ],
   "608": [
@@ -18204,6 +18204,15 @@
   ],
   "629": [
     {
+      "id": "me5-49",
+      "name": "Vullaby",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "49",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-49/small"
+    },
+    {
       "id": "me2pt5-138",
       "name": "Vullaby",
       "setId": "me2pt5",
@@ -18220,18 +18229,18 @@
       "number": "63",
       "rarity": "Common",
       "imageSmall": "https://images.pokemontcg.io/rsv10pt5/63.png"
-    },
-    {
-      "id": "swsh8-172",
-      "name": "Vullaby",
-      "setId": "swsh8",
-      "setName": "Fusion Strike",
-      "number": "172",
-      "rarity": "Common",
-      "imageSmall": "https://images.pokemontcg.io/swsh8/172.png"
     }
   ],
   "630": [
+    {
+      "id": "me5-50",
+      "name": "Mandibuzz",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "50",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-50/small"
+    },
     {
       "id": "rsv10pt5-64",
       "name": "Mandibuzz",
@@ -18249,15 +18258,6 @@
       "number": "173",
       "rarity": "Uncommon",
       "imageSmall": "https://images.pokemontcg.io/swsh8/173.png"
-    },
-    {
-      "id": "bw7-93",
-      "name": "Mandibuzz",
-      "setId": "bw7",
-      "setName": "Boundaries Crossed",
-      "number": "93",
-      "rarity": "Uncommon",
-      "imageSmall": "https://images.pokemontcg.io/bw7/93.png"
     }
   ],
   "631": [
@@ -19857,6 +19857,15 @@
   ],
   "686": [
     {
+      "id": "me5-51",
+      "name": "Inkay",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "51",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-51/small"
+    },
+    {
       "id": "sv6pt5-33",
       "name": "Inkay",
       "setId": "sv6pt5",
@@ -19873,15 +19882,6 @@
       "number": "137",
       "rarity": "Common",
       "imageSmall": "https://images.pokemontcg.io/sv3/137.png"
-    },
-    {
-      "id": "swsh11-77",
-      "name": "Inkay",
-      "setId": "swsh11",
-      "setName": "Lost Origin",
-      "number": "77",
-      "rarity": "Common",
-      "imageSmall": "https://images.pokemontcg.io/swsh11/77.png"
     }
   ],
   "687": [
@@ -19895,6 +19895,15 @@
       "imageSmall": "https://images.pokemontcg.io/xy7/46.png"
     },
     {
+      "id": "me5-52",
+      "name": "Malamar",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "52",
+      "rarity": "Uncommon",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-52/small"
+    },
+    {
       "id": "sv6pt5-34",
       "name": "Malamar",
       "setId": "sv6pt5",
@@ -19902,15 +19911,6 @@
       "number": "34",
       "rarity": "Uncommon",
       "imageSmall": "https://images.pokemontcg.io/sv6pt5/34.png"
-    },
-    {
-      "id": "sv3-138",
-      "name": "Malamar",
-      "setId": "sv3",
-      "setName": "Obsidian Flames",
-      "number": "138",
-      "rarity": "Uncommon",
-      "imageSmall": "https://images.pokemontcg.io/sv3/138.png"
     }
   ],
   "688": [
@@ -21075,6 +21075,15 @@
   ],
   "728": [
     {
+      "id": "me5-18",
+      "name": "Popplio",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "18",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-18/small"
+    },
+    {
       "id": "sm8-64",
       "name": "Popplio",
       "setId": "sm8",
@@ -21091,18 +21100,18 @@
       "number": "65",
       "rarity": "Common",
       "imageSmall": "https://images.pokemontcg.io/sm8/65.png"
-    },
-    {
-      "id": "sm1-39",
-      "name": "Popplio",
-      "setId": "sm1",
-      "setName": "Sun & Moon",
-      "number": "39",
-      "rarity": "Common",
-      "imageSmall": "https://images.pokemontcg.io/sm1/39.png"
     }
   ],
   "729": [
+    {
+      "id": "me5-19",
+      "name": "Brionne",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "19",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-19/small"
+    },
     {
       "id": "sm8-66",
       "name": "Brionne",
@@ -21124,6 +21133,15 @@
   ],
   "730": [
     {
+      "id": "me5-20",
+      "name": "Primarina",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "20",
+      "rarity": "Rare",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-20/small"
+    },
+    {
       "id": "sm8-67",
       "name": "Primarina",
       "setId": "sm8",
@@ -21140,18 +21158,18 @@
       "number": "41",
       "rarity": "Rare",
       "imageSmall": "https://images.pokemontcg.io/sm1/41.png"
-    },
-    {
-      "id": "sm1-42",
-      "name": "Primarina-GX",
-      "setId": "sm1",
-      "setName": "Sun & Moon",
-      "number": "42",
-      "rarity": "DoubleRare",
-      "imageSmall": "https://images.pokemontcg.io/sm1/42.png"
     }
   ],
   "731": [
+    {
+      "id": "me5-66",
+      "name": "Pikipek",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "66",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-66/small"
+    },
     {
       "id": "swsh4-143",
       "name": "Pikipek",
@@ -21169,18 +21187,18 @@
       "number": "163",
       "rarity": "Common",
       "imageSmall": "https://images.pokemontcg.io/sm8/163.png"
-    },
-    {
-      "id": "sm8-164",
-      "name": "Pikipek",
-      "setId": "sm8",
-      "setName": "Lost Thunder",
-      "number": "164",
-      "rarity": "Common",
-      "imageSmall": "https://images.pokemontcg.io/sm8/164.png"
     }
   ],
   "732": [
+    {
+      "id": "me5-67",
+      "name": "Trumbeak",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "67",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-67/small"
+    },
     {
       "id": "swsh4-144",
       "name": "Trumbeak",
@@ -21198,18 +21216,18 @@
       "number": "165",
       "rarity": "Uncommon",
       "imageSmall": "https://images.pokemontcg.io/sm8/165.png"
-    },
-    {
-      "id": "sm1-107",
-      "name": "Trumbeak",
-      "setId": "sm1",
-      "setName": "Sun & Moon",
-      "number": "107",
-      "rarity": "Uncommon",
-      "imageSmall": "https://images.pokemontcg.io/sm1/107.png"
     }
   ],
   "733": [
+    {
+      "id": "me5-68",
+      "name": "Toucannon",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "68",
+      "rarity": "Uncommon",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-68/small"
+    },
     {
       "id": "swsh4-145",
       "name": "Toucannon",
@@ -21227,15 +21245,6 @@
       "number": "166",
       "rarity": "Rare",
       "imageSmall": "https://images.pokemontcg.io/sm8/166.png"
-    },
-    {
-      "id": "sm1-108",
-      "name": "Toucannon",
-      "setId": "sm1",
-      "setName": "Sun & Moon",
-      "number": "108",
-      "rarity": "Rare",
-      "imageSmall": "https://images.pokemontcg.io/sm1/108.png"
     }
   ],
   "734": [
@@ -21298,6 +21307,15 @@
   ],
   "736": [
     {
+      "id": "me5-2",
+      "name": "Grubbin",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "2",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-2/small"
+    },
+    {
       "id": "me2pt5-17",
       "name": "Grubbin",
       "setId": "me2pt5",
@@ -21314,18 +21332,18 @@
       "number": "9",
       "rarity": "Common",
       "imageSmall": "https://images.pokemontcg.io/sv7/9.png"
-    },
-    {
-      "id": "sv5-18",
-      "name": "Grubbin",
-      "setId": "sv5",
-      "setName": "Temporal Forces",
-      "number": "18",
-      "rarity": "Common",
-      "imageSmall": "https://images.pokemontcg.io/sv5/18.png"
     }
   ],
   "737": [
+    {
+      "id": "me5-25",
+      "name": "Charjabug",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "25",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-25/small"
+    },
     {
       "id": "me2pt5-65",
       "name": "Charjabug",
@@ -21343,18 +21361,18 @@
       "number": "52",
       "rarity": "Common",
       "imageSmall": "https://images.pokemontcg.io/sv7/52.png"
-    },
-    {
-      "id": "sv5-55",
-      "name": "Charjabug",
-      "setId": "sv5",
-      "setName": "Temporal Forces",
-      "number": "55",
-      "rarity": "Common",
-      "imageSmall": "https://images.pokemontcg.io/sv5/55.png"
     }
   ],
   "738": [
+    {
+      "id": "me5-26",
+      "name": "Vikavolt",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "26",
+      "rarity": "Uncommon",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-26/small"
+    },
     {
       "id": "me2pt5-66",
       "name": "Vikavolt",
@@ -21372,15 +21390,6 @@
       "number": "53",
       "rarity": "Uncommon",
       "imageSmall": "https://images.pokemontcg.io/sv7/53.png"
-    },
-    {
-      "id": "sv5-56",
-      "name": "Vikavolt",
-      "setId": "sv5",
-      "setName": "Temporal Forces",
-      "number": "56",
-      "rarity": "Uncommon",
-      "imageSmall": "https://images.pokemontcg.io/sv5/56.png"
     }
   ],
   "739": [
@@ -21791,6 +21800,15 @@
   ],
   "753": [
     {
+      "id": "me5-3",
+      "name": "Fomantis",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "3",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-3/small"
+    },
+    {
       "id": "sv10-13",
       "name": "Fomantis",
       "setId": "sv10",
@@ -21807,15 +21825,6 @@
       "number": "14",
       "rarity": "Common",
       "imageSmall": "https://images.pokemontcg.io/swsh5/14.png"
-    },
-    {
-      "id": "sm11-15",
-      "name": "Fomantis",
-      "setId": "sm11",
-      "setName": "Unified Minds",
-      "number": "15",
-      "rarity": "Common",
-      "imageSmall": "https://images.pokemontcg.io/sm11/15.png"
     }
   ],
   "754": [
@@ -22342,6 +22351,15 @@
   ],
   "772": [
     {
+      "id": "me5-69",
+      "name": "Type: Null",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "69",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-69/small"
+    },
+    {
       "id": "sm12-183",
       "name": "Type: Null",
       "setId": "sm12",
@@ -22358,18 +22376,18 @@
       "number": "183",
       "rarity": "Uncommon",
       "imageSmall": "https://images.pokemontcg.io/sm11/183.png"
-    },
-    {
-      "id": "sm5-115",
-      "name": "Type: Null",
-      "setId": "sm5",
-      "setName": "Ultra Prism",
-      "number": "115",
-      "rarity": "Rare",
-      "imageSmall": "https://images.pokemontcg.io/sm5/115.png"
     }
   ],
   "773": [
+    {
+      "id": "me5-70",
+      "name": "Silvally",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "70",
+      "rarity": "Rare",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-70/small"
+    },
     {
       "id": "sm11-184",
       "name": "Silvally",
@@ -22387,15 +22405,6 @@
       "number": "184",
       "rarity": "DoubleRare",
       "imageSmall": "https://images.pokemontcg.io/sm12/184.png"
-    },
-    {
-      "id": "sm5-116",
-      "name": "Silvally-GX",
-      "setId": "sm5",
-      "setName": "Ultra Prism",
-      "number": "116",
-      "rarity": "DoubleRare",
-      "imageSmall": "https://images.pokemontcg.io/sm5/116.png"
     }
   ],
   "774": [
@@ -23212,6 +23221,15 @@
   ],
   "802": [
     {
+      "id": "me5-40",
+      "name": "Marshadow",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "40",
+      "rarity": "Uncommon",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-40/small"
+    },
+    {
       "id": "me1-80",
       "name": "Marshadow",
       "setId": "me1",
@@ -23228,15 +23246,6 @@
       "number": "80",
       "rarity": "Rare",
       "imageSmall": "https://images.pokemontcg.io/swsh7/80.png"
-    },
-    {
-      "id": "sm12-103",
-      "name": "Marshadow",
-      "setId": "sm12",
-      "setName": "Cosmic Eclipse",
-      "number": "103",
-      "rarity": "Rare",
-      "imageSmall": "https://images.pokemontcg.io/sm12/103.png"
     }
   ],
   "803": [
@@ -23937,6 +23946,15 @@
   ],
   "827": [
     {
+      "id": "me5-53",
+      "name": "Nickit",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "53",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-53/small"
+    },
+    {
       "id": "me1-89",
       "name": "Nickit",
       "setId": "me1",
@@ -23953,15 +23971,6 @@
       "number": "119",
       "rarity": "Common",
       "imageSmall": "https://images.pokemontcg.io/sv4/119.png"
-    },
-    {
-      "id": "swsh10-103",
-      "name": "Nickit",
-      "setId": "swsh10",
-      "setName": "Astral Radiance",
-      "number": "103",
-      "rarity": "Common",
-      "imageSmall": "https://images.pokemontcg.io/swsh10/103.png"
     }
   ],
   "828": [
@@ -23975,6 +23984,15 @@
       "imageSmall": "https://images.pokemontcg.io/me1/90.png"
     },
     {
+      "id": "me5-54",
+      "name": "Thievul",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "54",
+      "rarity": "Uncommon",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-54/small"
+    },
+    {
       "id": "sv4-120",
       "name": "Thievul",
       "setId": "sv4",
@@ -23982,15 +24000,6 @@
       "number": "120",
       "rarity": "Rare",
       "imageSmall": "https://images.pokemontcg.io/sv4/120.png"
-    },
-    {
-      "id": "swsh10-104",
-      "name": "Thievul",
-      "setId": "swsh10",
-      "setName": "Astral Radiance",
-      "number": "104",
-      "rarity": "Rare",
-      "imageSmall": "https://images.pokemontcg.io/swsh10/104.png"
     }
   ],
   "829": [
@@ -24604,6 +24613,15 @@
   ],
   "850": [
     {
+      "id": "me5-9",
+      "name": "Sizzlipede",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "9",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-9/small"
+    },
+    {
       "id": "me1-29",
       "name": "Sizzlipede",
       "setId": "me1",
@@ -24620,18 +24638,18 @@
       "number": "27",
       "rarity": "Common",
       "imageSmall": "https://images.pokemontcg.io/sv8/27.png"
-    },
-    {
-      "id": "sv5-36",
-      "name": "Sizzlipede",
-      "setId": "sv5",
-      "setName": "Temporal Forces",
-      "number": "36",
-      "rarity": "Common",
-      "imageSmall": "https://images.pokemontcg.io/sv5/36.png"
     }
   ],
   "851": [
+    {
+      "id": "me5-10",
+      "name": "Centiskorch",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "10",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-10/small"
+    },
     {
       "id": "sv8-28",
       "name": "Centiskorch",
@@ -24649,15 +24667,6 @@
       "number": "30",
       "rarity": "Uncommon",
       "imageSmall": "https://images.pokemontcg.io/me1/30.png"
-    },
-    {
-      "id": "sv5-37",
-      "name": "Centiskorch",
-      "setId": "sv5",
-      "setName": "Temporal Forces",
-      "number": "37",
-      "rarity": "Uncommon",
-      "imageSmall": "https://images.pokemontcg.io/sv5/37.png"
     }
   ],
   "852": [
@@ -25842,6 +25851,15 @@
       "imageSmall": "https://images.pokemontcg.io/swsh8/27.png"
     },
     {
+      "id": "me5-56",
+      "name": "Zarude",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "56",
+      "rarity": "Rare",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-56/small"
+    },
+    {
       "id": "sv8-11",
       "name": "Zarude",
       "setId": "sv8",
@@ -25849,15 +25867,6 @@
       "number": "11",
       "rarity": "Rare",
       "imageSmall": "https://images.pokemontcg.io/sv8/11.png"
-    },
-    {
-      "id": "swsh12pt5-16",
-      "name": "Zarude",
-      "setId": "swsh12pt5",
-      "setName": "Crown Zenith",
-      "number": "16",
-      "rarity": "Rare",
-      "imageSmall": "https://images.pokemontcg.io/swsh12pt5/16.png"
     }
   ],
   "894": [
@@ -27024,6 +27033,15 @@
   ],
   "935": [
     {
+      "id": "me5-11",
+      "name": "Charcadet",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "11",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-11/small"
+    },
+    {
       "id": "me2-19",
       "name": "Charcadet",
       "setId": "me2",
@@ -27040,15 +27058,6 @@
       "number": "32",
       "rarity": "Common",
       "imageSmall": "https://images.pokemontcg.io/sv8/32.png"
-    },
-    {
-      "id": "sv8-33",
-      "name": "Charcadet",
-      "setId": "sv8",
-      "setName": "Surging Sparks",
-      "number": "33",
-      "rarity": "Common",
-      "imageSmall": "https://images.pokemontcg.io/sv8/33.png"
     }
   ],
   "936": [
@@ -27071,13 +27080,13 @@
       "imageSmall": "https://images.pokemontcg.io/sv3/44.png"
     },
     {
-      "id": "sv4pt5-15",
+      "id": "me5-12",
       "name": "Armarouge",
-      "setId": "sv4pt5",
-      "setName": "Paldean Fates",
-      "number": "15",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "12",
       "rarity": "Rare",
-      "imageSmall": "https://images.pokemontcg.io/sv4pt5/15.png"
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-12/small"
     }
   ],
   "937": [
@@ -27227,6 +27236,15 @@
   ],
   "942": [
     {
+      "id": "me5-57",
+      "name": "Maschiff",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "57",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-57/small"
+    },
+    {
       "id": "sv10-138",
       "name": "Arven's Maschiff",
       "setId": "sv10",
@@ -27243,18 +27261,18 @@
       "number": "62",
       "rarity": "Common",
       "imageSmall": "https://images.pokemontcg.io/sv4pt5/62.png"
-    },
-    {
-      "id": "sv2-141",
-      "name": "Maschiff",
-      "setId": "sv2",
-      "setName": "Paldea Evolved",
-      "number": "141",
-      "rarity": "Common",
-      "imageSmall": "https://images.pokemontcg.io/sv2/141.png"
     }
   ],
   "943": [
+    {
+      "id": "me5-58",
+      "name": "Mabosstiff",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "58",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-58/small"
+    },
     {
       "id": "sv2-143",
       "name": "Mabosstiff",
@@ -27272,15 +27290,6 @@
       "number": "137",
       "rarity": "Uncommon",
       "imageSmall": "https://images.pokemontcg.io/sv1/137.png"
-    },
-    {
-      "id": "sv4pt5-63",
-      "name": "Mabosstiff",
-      "setId": "sv4pt5",
-      "setName": "Paldean Fates",
-      "number": "63",
-      "rarity": "Rare",
-      "imageSmall": "https://images.pokemontcg.io/sv4pt5/63.png"
     }
   ],
   "944": [
@@ -27807,6 +27816,15 @@
   ],
   "962": [
     {
+      "id": "me5-71",
+      "name": "Bombirdier",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "71",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-71/small"
+    },
+    {
       "id": "sv9-101",
       "name": "Bombirdier",
       "setId": "sv9",
@@ -27823,18 +27841,18 @@
       "number": "97",
       "rarity": "Common",
       "imageSmall": "https://images.pokemontcg.io/sv7/97.png"
-    },
-    {
-      "id": "sv2-147",
-      "name": "Bombirdier",
-      "setId": "sv2",
-      "setName": "Paldea Evolved",
-      "number": "147",
-      "rarity": "Uncommon",
-      "imageSmall": "https://images.pokemontcg.io/sv2/147.png"
     }
   ],
   "963": [
+    {
+      "id": "me5-21",
+      "name": "Finizen",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "21",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-21/small"
+    },
     {
       "id": "sv6-59",
       "name": "Finizen",
@@ -27852,18 +27870,18 @@
       "number": "48",
       "rarity": "Common",
       "imageSmall": "https://images.pokemontcg.io/sv5/48.png"
-    },
-    {
-      "id": "sv3-60",
-      "name": "Finizen",
-      "setId": "sv3",
-      "setName": "Obsidian Flames",
-      "number": "60",
-      "rarity": "Common",
-      "imageSmall": "https://images.pokemontcg.io/sv3/60.png"
     }
   ],
   "964": [
+    {
+      "id": "me5-22",
+      "name": "Palafin",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "22",
+      "rarity": "Uncommon",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-22/small"
+    },
     {
       "id": "sv6-60",
       "name": "Palafin",
@@ -27881,15 +27899,6 @@
       "number": "49",
       "rarity": "Uncommon",
       "imageSmall": "https://images.pokemontcg.io/sv5/49.png"
-    },
-    {
-      "id": "sv3-62",
-      "name": "Palafin",
-      "setId": "sv3",
-      "setName": "Obsidian Flames",
-      "number": "62",
-      "rarity": "Rare",
-      "imageSmall": "https://images.pokemontcg.io/sv3/62.png"
     }
   ],
   "965": [
@@ -28300,6 +28309,15 @@
   ],
   "979": [
     {
+      "id": "me5-41",
+      "name": "Annihilape",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "41",
+      "rarity": "Uncommon",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-41/small"
+    },
+    {
       "id": "sv8-100",
       "name": "Annihilape",
       "setId": "sv8",
@@ -28316,15 +28334,6 @@
       "number": "92",
       "rarity": "Rare",
       "imageSmall": "https://images.pokemontcg.io/sv10/92.png"
-    },
-    {
-      "id": "sv4pt5-47",
-      "name": "Annihilape",
-      "setId": "sv4pt5",
-      "setName": "Paldean Fates",
-      "number": "47",
-      "rarity": "Rare",
-      "imageSmall": "https://images.pokemontcg.io/sv4pt5/47.png"
     }
   ],
   "980": [
@@ -29043,13 +29052,13 @@
       "imageSmall": "https://images.pokemontcg.io/sv6/39.png"
     },
     {
-      "id": "sv4-29",
+      "id": "me5-59",
       "name": "Chi-Yu",
-      "setId": "sv4",
-      "setName": "Paradox Rift",
-      "number": "29",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "59",
       "rarity": "Rare",
-      "imageSmall": "https://images.pokemontcg.io/sv4/29.png"
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-59/small"
     }
   ],
   "1005": [
@@ -29130,13 +29139,13 @@
       "imageSmall": "https://images.pokemontcg.io/sv7/90.png"
     },
     {
-      "id": "sv5-119",
+      "id": "me5-47",
       "name": "Koraidon",
-      "setId": "sv5",
-      "setName": "Temporal Forces",
-      "number": "119",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "47",
       "rarity": "Rare",
-      "imageSmall": "https://images.pokemontcg.io/sv5/119.png"
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-47/small"
     }
   ],
   "1008": [
@@ -29150,6 +29159,15 @@
       "imageSmall": "https://images.pokemontcg.io/sv8/69.png"
     },
     {
+      "id": "me5-28",
+      "name": "Miraidon",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "28",
+      "rarity": "Rare",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-28/small"
+    },
+    {
       "id": "sv5-121",
       "name": "Miraidon",
       "setId": "sv5",
@@ -29157,15 +29175,6 @@
       "number": "121",
       "rarity": "Rare",
       "imageSmall": "https://images.pokemontcg.io/sv5/121.png"
-    },
-    {
-      "id": "sv1-80",
-      "name": "Miraidon",
-      "setId": "sv1",
-      "setName": "Scarlet & Violet",
-      "number": "80",
-      "rarity": "Rare",
-      "imageSmall": "https://images.pokemontcg.io/sv1/80.png"
     }
   ],
   "1009": [
@@ -29257,6 +29266,15 @@
   ],
   "1012": [
     {
+      "id": "me5-5",
+      "name": "Poltchageist",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "5",
+      "rarity": "Common",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-5/small"
+    },
+    {
       "id": "sv6-20",
       "name": "Poltchageist",
       "setId": "sv6",
@@ -29273,18 +29291,18 @@
       "number": "21",
       "rarity": "Common",
       "imageSmall": "https://images.pokemontcg.io/sv6/21.png"
-    },
-    {
-      "id": "sv6-171",
-      "name": "Poltchageist",
-      "setId": "sv6",
-      "setName": "Twilight Masquerade",
-      "number": "171",
-      "rarity": "IllustrationRare",
-      "imageSmall": "https://images.pokemontcg.io/sv6/171.png"
     }
   ],
   "1013": [
+    {
+      "id": "me5-6",
+      "name": "Sinistcha",
+      "setId": "me5",
+      "setName": "Pitch Black",
+      "number": "6",
+      "rarity": "Uncommon",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-6/small"
+    },
     {
       "id": "sv6-22",
       "name": "Sinistcha",
@@ -29302,15 +29320,6 @@
       "number": "23",
       "rarity": "DoubleRare",
       "imageSmall": "https://images.pokemontcg.io/sv6/23.png"
-    },
-    {
-      "id": "sv6-189",
-      "name": "Sinistcha ex",
-      "setId": "sv6",
-      "setName": "Twilight Masquerade",
-      "number": "189",
-      "rarity": "UltraRare",
-      "imageSmall": "https://images.pokemontcg.io/sv6/189.png"
     }
   ],
   "1014": [

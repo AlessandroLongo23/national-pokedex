@@ -15654,6 +15654,139 @@
       "regulationMark": "I",
       "imageSmall": "https://images.scrydex.com/pokemon/me4-115/small",
       "imageLarge": "https://images.scrydex.com/pokemon/me4-115/large"
+    },
+    {
+      "id": "me5-72",
+      "name": "Antique Armor Fossil",
+      "setId": "me5",
+      "supertype": "Trainer",
+      "number": "72",
+      "numberInt": 72,
+      "rarity": "Common",
+      "rarityRaw": "Common",
+      "dex": [],
+      "types": [],
+      "hp": 60,
+      "subtypes": [
+        "Item"
+      ],
+      "artist": "AYUMI ODASHIMA",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-72/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me5-72/large"
+    },
+    {
+      "id": "me5-73",
+      "name": "Antique Skull Fossil",
+      "setId": "me5",
+      "supertype": "Trainer",
+      "number": "73",
+      "numberInt": 73,
+      "rarity": "Common",
+      "rarityRaw": "Common",
+      "dex": [],
+      "types": [],
+      "hp": 60,
+      "subtypes": [
+        "Item"
+      ],
+      "artist": "AYUMI ODASHIMA",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-73/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me5-73/large"
+    },
+    {
+      "id": "me5-75",
+      "name": "Dark Bell",
+      "setId": "me5",
+      "supertype": "Trainer",
+      "number": "75",
+      "numberInt": 75,
+      "rarity": "Uncommon",
+      "rarityRaw": "Uncommon",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Item"
+      ],
+      "artist": "Toyste Beach",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-75/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me5-75/large"
+    },
+    {
+      "id": "me5-105",
+      "name": "Crushing Hammer",
+      "setId": "me5",
+      "supertype": "Trainer",
+      "number": "105",
+      "numberInt": 105,
+      "rarity": "UltraRare",
+      "rarityRaw": "Ultra Rare",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Item"
+      ],
+      "artist": "Ayaka Yoshida",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-105/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me5-105/large"
+    },
+    {
+      "id": "me5-106",
+      "name": "Dark Bell",
+      "setId": "me5",
+      "supertype": "Trainer",
+      "number": "106",
+      "numberInt": 106,
+      "rarity": "UltraRare",
+      "rarityRaw": "Ultra Rare",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Item"
+      ],
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-106/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me5-106/large"
+    },
+    {
+      "id": "me5-107",
+      "name": "Energy Switch",
+      "setId": "me5",
+      "supertype": "Trainer",
+      "number": "107",
+      "numberInt": 107,
+      "rarity": "UltraRare",
+      "rarityRaw": "Ultra Rare",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Item"
+      ],
+      "regulationMark": "I",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-107/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me5-107/large"
+    },
+    {
+      "id": "me5-110",
+      "name": "Iron Defender",
+      "setId": "me5",
+      "supertype": "Trainer",
+      "number": "110",
+      "numberInt": 110,
+      "rarity": "UltraRare",
+      "rarityRaw": "Ultra Rare",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Item"
+      ],
+      "artist": "Studio Bora Inc.",
+      "regulationMark": "I",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-110/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me5-110/large"
     }
   ],
   "supporters": [
@@ -37071,6 +37204,215 @@
       "regulationMark": "J",
       "imageSmall": "https://images.scrydex.com/pokemon/me4-121/small",
       "imageLarge": "https://images.scrydex.com/pokemon/me4-121/large"
+    },
+    {
+      "id": "me5-77",
+      "name": "Gladion's Final Battle",
+      "setId": "me5",
+      "supertype": "Trainer",
+      "number": "77",
+      "numberInt": 77,
+      "rarity": "Uncommon",
+      "rarityRaw": "Uncommon",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Supporter"
+      ],
+      "artist": "akagi",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-77/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me5-77/large"
+    },
+    {
+      "id": "me5-78",
+      "name": "Gwynn",
+      "setId": "me5",
+      "supertype": "Trainer",
+      "number": "78",
+      "numberInt": 78,
+      "rarity": "Uncommon",
+      "rarityRaw": "Uncommon",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Supporter"
+      ],
+      "artist": "nagimiso",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-78/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me5-78/large"
+    },
+    {
+      "id": "me5-79",
+      "name": "Jett",
+      "setId": "me5",
+      "supertype": "Trainer",
+      "number": "79",
+      "numberInt": 79,
+      "rarity": "Uncommon",
+      "rarityRaw": "Uncommon",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Supporter"
+      ],
+      "artist": "GIDORA",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-79/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me5-79/large"
+    },
+    {
+      "id": "me5-80",
+      "name": "Misty's Vitality",
+      "setId": "me5",
+      "supertype": "Trainer",
+      "number": "80",
+      "numberInt": 80,
+      "rarity": "Uncommon",
+      "rarityRaw": "Uncommon",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Supporter"
+      ],
+      "artist": "En Morikura",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-80/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me5-80/large"
+    },
+    {
+      "id": "me5-81",
+      "name": "Rust Syndicate Grunt",
+      "setId": "me5",
+      "supertype": "Trainer",
+      "number": "81",
+      "numberInt": 81,
+      "rarity": "Uncommon",
+      "rarityRaw": "Uncommon",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Supporter"
+      ],
+      "artist": "Teeziro",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-81/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me5-81/large"
+    },
+    {
+      "id": "me5-108",
+      "name": "Gladion's Final Battle",
+      "setId": "me5",
+      "supertype": "Trainer",
+      "number": "108",
+      "numberInt": 108,
+      "rarity": "UltraRare",
+      "rarityRaw": "Ultra Rare",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Supporter"
+      ],
+      "artist": "akagi",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-108/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me5-108/large"
+    },
+    {
+      "id": "me5-109",
+      "name": "Gwynn",
+      "setId": "me5",
+      "supertype": "Trainer",
+      "number": "109",
+      "numberInt": 109,
+      "rarity": "UltraRare",
+      "rarityRaw": "Ultra Rare",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Supporter"
+      ],
+      "artist": "nagimiso",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-109/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me5-109/large"
+    },
+    {
+      "id": "me5-111",
+      "name": "Misty's Vitality",
+      "setId": "me5",
+      "supertype": "Trainer",
+      "number": "111",
+      "numberInt": 111,
+      "rarity": "UltraRare",
+      "rarityRaw": "Ultra Rare",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Supporter"
+      ],
+      "artist": "En Morikura",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-111/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me5-111/large"
+    },
+    {
+      "id": "me5-112",
+      "name": "Rust Syndicate Grunt",
+      "setId": "me5",
+      "supertype": "Trainer",
+      "number": "112",
+      "numberInt": 112,
+      "rarity": "UltraRare",
+      "rarityRaw": "Ultra Rare",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Supporter"
+      ],
+      "artist": "Teeziro",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-112/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me5-112/large"
+    },
+    {
+      "id": "me5-118",
+      "name": "Gladion's Final Battle",
+      "setId": "me5",
+      "supertype": "Trainer",
+      "number": "118",
+      "numberInt": 118,
+      "rarity": "SpecialIllustrationRare",
+      "rarityRaw": "Special Illustration Rare",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Supporter"
+      ],
+      "artist": "DOM",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-118/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me5-118/large"
+    },
+    {
+      "id": "me5-119",
+      "name": "Gwynn",
+      "setId": "me5",
+      "supertype": "Trainer",
+      "number": "119",
+      "numberInt": 119,
+      "rarity": "SpecialIllustrationRare",
+      "rarityRaw": "Special Illustration Rare",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Supporter"
+      ],
+      "artist": "Naoki Saito",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-119/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me5-119/large"
     }
   ],
   "stadiums": [
@@ -41909,6 +42251,25 @@
       "regulationMark": "I",
       "imageSmall": "https://images.scrydex.com/pokemon/me4-114/small",
       "imageLarge": "https://images.scrydex.com/pokemon/me4-114/large"
+    },
+    {
+      "id": "me5-76",
+      "name": "Fossil Quarry",
+      "setId": "me5",
+      "supertype": "Trainer",
+      "number": "76",
+      "numberInt": 76,
+      "rarity": "Uncommon",
+      "rarityRaw": "Uncommon",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Stadium"
+      ],
+      "artist": "Oswaldo KATO",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-76/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me5-76/large"
     }
   ],
   "tools": [
@@ -48067,6 +48428,82 @@
       "regulationMark": "I",
       "imageSmall": "https://images.scrydex.com/pokemon/me4-74/small",
       "imageLarge": "https://images.scrydex.com/pokemon/me4-74/large"
+    },
+    {
+      "id": "me5-74",
+      "name": "Backtrack Badge",
+      "setId": "me5",
+      "supertype": "Trainer",
+      "number": "74",
+      "numberInt": 74,
+      "rarity": "Uncommon",
+      "rarityRaw": "Uncommon",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Pokémon Tool"
+      ],
+      "artist": "Toyste Beach",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-74/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me5-74/large"
+    },
+    {
+      "id": "me5-82",
+      "name": "Tremendous Bomb",
+      "setId": "me5",
+      "supertype": "Trainer",
+      "number": "82",
+      "numberInt": 82,
+      "rarity": "Uncommon",
+      "rarityRaw": "Uncommon",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Pokémon Tool"
+      ],
+      "artist": "inose yukie",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-82/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me5-82/large"
+    },
+    {
+      "id": "me5-104",
+      "name": "Brave Bangle",
+      "setId": "me5",
+      "supertype": "Trainer",
+      "number": "104",
+      "numberInt": 104,
+      "rarity": "UltraRare",
+      "rarityRaw": "Ultra Rare",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Pokémon Tool"
+      ],
+      "artist": "Toyste Beach",
+      "regulationMark": "I",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-104/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me5-104/large"
+    },
+    {
+      "id": "me5-113",
+      "name": "Tremendous Bomb",
+      "setId": "me5",
+      "supertype": "Trainer",
+      "number": "113",
+      "numberInt": 113,
+      "rarity": "UltraRare",
+      "rarityRaw": "Ultra Rare",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Pokémon Tool"
+      ],
+      "artist": "inose yukie",
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-113/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me5-113/large"
     }
   ],
   "energies": [
@@ -54699,6 +55136,42 @@
       "regulationMark": "J",
       "imageSmall": "https://images.scrydex.com/pokemon/me4-86/small",
       "imageLarge": "https://images.scrydex.com/pokemon/me4-86/large"
+    },
+    {
+      "id": "me5-83",
+      "name": "Shadowy Darkness Energy",
+      "setId": "me5",
+      "supertype": "Energy",
+      "number": "83",
+      "numberInt": 83,
+      "rarity": "Rare",
+      "rarityRaw": "Rare",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Special"
+      ],
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-83/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me5-83/large"
+    },
+    {
+      "id": "me5-84",
+      "name": "Voltaic Lightning Energy",
+      "setId": "me5",
+      "supertype": "Energy",
+      "number": "84",
+      "numberInt": 84,
+      "rarity": "Rare",
+      "rarityRaw": "Rare",
+      "dex": [],
+      "types": [],
+      "subtypes": [
+        "Special"
+      ],
+      "regulationMark": "J",
+      "imageSmall": "https://images.scrydex.com/pokemon/me5-84/small",
+      "imageLarge": "https://images.scrydex.com/pokemon/me5-84/large"
     }
   ]
 }

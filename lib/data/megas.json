@@ -592,6 +592,17 @@
     ]
   },
   {
+    "formKey": "mega-darkrai",
+    "displayName": "Mega Darkrai",
+    "baseDex": 491,
+    "gen": 4,
+    "isPrimal": false,
+    "artworkId": 10312,
+    "types": [
+      "Dark"
+    ]
+  },
+  {
     "formKey": "mega-emboar",
     "displayName": "Mega Emboar",
     "baseDex": 500,
@@ -601,6 +612,18 @@
     "types": [
       "Fire",
       "Fighting"
+    ]
+  },
+  {
+    "formKey": "mega-excadrill",
+    "displayName": "Mega Excadrill",
+    "baseDex": 530,
+    "gen": 5,
+    "isPrimal": false,
+    "artworkId": 10287,
+    "types": [
+      "Ground",
+      "Steel"
     ]
   },
   {
@@ -636,6 +659,30 @@
     "artworkId": 10290,
     "types": [
       "Electric"
+    ]
+  },
+  {
+    "formKey": "mega-chandelure",
+    "displayName": "Mega Chandelure",
+    "baseDex": 609,
+    "gen": 5,
+    "isPrimal": false,
+    "artworkId": 10291,
+    "types": [
+      "Ghost",
+      "Fire"
+    ]
+  },
+  {
+    "formKey": "mega-delphox",
+    "displayName": "Mega Delphox",
+    "baseDex": 655,
+    "gen": 6,
+    "isPrimal": false,
+    "artworkId": 10293,
+    "types": [
+      "Fire",
+      "Psychic"
     ]
   },
   {
@@ -719,6 +766,17 @@
     "types": [
       "Rock",
       "Fairy"
+    ]
+  },
+  {
+    "formKey": "mega-zeraora",
+    "displayName": "Mega Zeraora",
+    "baseDex": 807,
+    "gen": 7,
+    "isPrimal": false,
+    "artworkId": 10319,
+    "types": [
+      "Electric"
     ]
   }
 ]
