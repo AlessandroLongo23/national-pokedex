@@ -5,7 +5,10 @@ import { revalidatePath } from "next/cache";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { getSupabaseServer } from "@/lib/supabase/server";
 import { isCurrency, type Currency } from "@/lib/pricing/currencies";
-import { getRateToEurToday } from "@/lib/pricing/exchange-rates";
+import {
+  getRateToEurOn,
+  getRateToEurToday,
+} from "@/lib/pricing/exchange-rates";
 import { requireUserId } from "./current-user";
 import { diffLotContents, type LotContentRow } from "./lot-contents";
 
@@ -345,6 +348,57 @@ export async function updateCardLot(
   revalidatePath("/portfolio");
   revalidatePath("/collection");
   return { newCards };
+}
+
+const setLotCostSchema = z.object({
+  lotId: z.string().uuid(),
+  costCents: z.number().int().min(0).max(MAX_COST_CENTS),
+  currency: z.string().refine(isCurrency, "unsupported currency"),
+});
+
+// Price-only edit for a bulk lot — the lot-side twin of setPackCost in
+// pack-actions.ts, and for the same reason: the ledger's inline "Add
+// price" modal shouldn't have to load the lot's contents just to fill in
+// a number. Rate is snapshotted as of purchased_at, not today.
+export async function setLotCost(
+  lotId: string,
+  costCents: number,
+  currency: Currency,
+): Promise<void> {
+  const parsed = setLotCostSchema.parse({ lotId, costCents, currency });
+  const userId = await requireUserId();
+  const supabase = await getSupabaseServer();
+
+  const { data: lot, error: lookupErr } = await supabase
+    .from("card_lots")
+    .select("id, purchased_at")
+    .eq("id", parsed.lotId)
+    .eq("user_id", userId)
+    .maybeSingle();
+  if (lookupErr) throw new Error(lookupErr.message);
+  if (!lot) throw new Error("Lot not found");
+
+  const purchasedAt = lot.purchased_at as string;
+  const rate =
+    (await getRateToEurOn(parsed.currency as Currency, purchasedAt)) ??
+    (await getRateToEurToday(parsed.currency as Currency));
+
+  const { error: patchErr } = await supabase
+    .from("card_lots")
+    .update({
+      cost_cents: parsed.costCents,
+      currency: parsed.currency,
+      rate_to_eur: rate,
+    })
+    .eq("id", parsed.lotId)
+    .eq("user_id", userId);
+  if (patchErr) throw new Error(patchErr.message);
+
+  await syncLotPurchaseTransaction(supabase, userId, parsed.lotId);
+
+  revalidatePath("/transactions");
+  revalidatePath("/portfolio");
+  revalidatePath("/collection");
 }
 
 export async function deleteCardLot(lotId: string): Promise<void> {

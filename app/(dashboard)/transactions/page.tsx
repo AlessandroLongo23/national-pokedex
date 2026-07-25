@@ -31,7 +31,11 @@ import {
   type LedgerTableRow,
 } from "./_components/LedgerTable";
 import { isCardVariant } from "./_lib/variants";
-import { buildUnpricedLotRows } from "./_lib/unpriced-lots";
+import {
+  buildUnpricedLotRows,
+  buildUnpricedPackRows,
+} from "./_lib/unpriced-rows";
+import { UndisplayableNotice } from "./_components/UndisplayableNotice";
 
 function isTransactionKind(value: unknown): value is TransactionKind {
   return TRANSACTION_KINDS.includes(value as TransactionKind);
@@ -44,8 +48,15 @@ export default async function TransactionsPage() {
   const displayCurrency = prefs.displayCurrency;
   const heldValueCurrency = PRICE_SOURCE_CURRENCY[prefs.priceSource];
 
-  const [txnRes, ownedRes, psaCardsRes, lotContentsRes, lotsRes, latestRatesFromEur] =
-    await Promise.all([
+  const [
+    txnRes,
+    ownedRes,
+    psaCardsRes,
+    lotContentsRes,
+    lotsRes,
+    packsRes,
+    latestRatesFromEur,
+  ] = await Promise.all([
       supabase
         .from("transactions")
         .select(
@@ -77,6 +88,13 @@ export default async function TransactionsPage() {
       supabase
         .from("card_lots")
         .select("id, purchased_at")
+        .eq("user_id", userId),
+      // Same story for packs: a pack opened without a cost has no
+      // pack_purchase row (see _lib/pack-actions.ts). Fetched in full so
+      // the unpriced ones can be synthesized alongside the lots.
+      supabase
+        .from("packs_opened")
+        .select("id, set_id, opened_at")
         .eq("user_id", userId),
       // Cached for 24h by Next.js's fetch — essentially free after the
       // first render of the day.
@@ -169,9 +187,23 @@ export default async function TransactionsPage() {
   }>;
 
   const tableRows: LedgerTableRow[] = [];
+  // Rows the table has no way to render: an unrecognised `kind` has no
+  // label or actions, and an unsupported `currency` can't be formatted
+  // or converted. Both are impossible through the app's own writes, so
+  // a non-zero count here means data arrived from elsewhere (a manual
+  // SQL insert, a half-finished migration). Count them and say so
+  // rather than dropping them on the floor.
+  const undisplayable: Array<{ id: string; reason: string }> = [];
   for (const r of rawRows) {
-    if (!isTransactionKind(r.kind)) continue;
-    if (!isLedgerCurrency(r.currency)) continue;
+    if (!isTransactionKind(r.kind) || !isLedgerCurrency(r.currency)) {
+      undisplayable.push({
+        id: r.id,
+        reason: !isTransactionKind(r.kind)
+          ? `unrecognised kind "${r.kind}"`
+          : `unsupported currency "${r.currency}"`,
+      });
+      continue;
+    }
     const pack = Array.isArray(r.packs_opened) ? r.packs_opened[0] ?? null : r.packs_opened;
     const setId = pack?.set_id ?? null;
     // Supabase returns numeric columns as strings to preserve precision;
@@ -201,23 +233,38 @@ export default async function TransactionsPage() {
     });
   }
 
-  // Surface lots logged without a price: they have no lot_purchase row,
-  // so they never appear among the transactions above. Synthesize an
-  // "unpriced" row for each and merge into the date-sorted ledger.
+  // Surface lots and packs logged without a price: they have no
+  // lot_purchase / pack_purchase row, so they never appear among the
+  // transactions above. Synthesize an "unpriced" row for each and merge
+  // into the date-sorted ledger.
   const pricedLotIds = new Set<string>();
+  const pricedPackIds = new Set<string>();
   for (const r of rawRows) {
     if (r.kind === "lot_purchase" && r.lot_id) pricedLotIds.add(r.lot_id);
+    if (r.kind === "pack_purchase" && r.pack_id) pricedPackIds.add(r.pack_id);
   }
-  const unpricedRows = buildUnpricedLotRows(
-    (lotsRes.data ?? []) as Array<{ id: string; purchased_at: string }>,
-    pricedLotIds,
-    lotCardCountById,
-    displayCurrency,
-  );
+  const unpricedRows = [
+    ...buildUnpricedLotRows(
+      (lotsRes.data ?? []) as Array<{ id: string; purchased_at: string }>,
+      pricedLotIds,
+      lotCardCountById,
+      displayCurrency,
+    ),
+    ...buildUnpricedPackRows(
+      (packsRes.data ?? []) as Array<{
+        id: string;
+        set_id: string | null;
+        opened_at: string;
+      }>,
+      pricedPackIds,
+      setNameById,
+      displayCurrency,
+    ),
+  ];
   if (unpricedRows.length > 0) {
     tableRows.push(...unpricedRows);
     // Transactions arrived occurred_at-desc; re-sort so the synthetic
-    // lot rows slot into the same chronological order.
+    // rows slot into the same chronological order.
     tableRows.sort(
       (a, b) => new Date(b.occurredAt).getTime() - new Date(a.occurredAt).getTime(),
     );
@@ -242,6 +289,8 @@ export default async function TransactionsPage() {
         displayCurrency={displayCurrency}
         priceSource={prefs.priceSource}
       />
+
+      <UndisplayableNotice rows={undisplayable} />
 
       <div className="mt-6 flex justify-start md:justify-end">
         <ActionsBar defaultCurrency={displayCurrency} />

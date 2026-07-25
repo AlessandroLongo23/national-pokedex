@@ -5,7 +5,10 @@ import { revalidatePath } from "next/cache";
 import { getSupabaseServer } from "@/lib/supabase/server";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { isCurrency, type Currency } from "@/lib/pricing/currencies";
-import { getRateToEurToday } from "@/lib/pricing/exchange-rates";
+import {
+  getRateToEurOn,
+  getRateToEurToday,
+} from "@/lib/pricing/exchange-rates";
 import { requireUserId } from "./current-user";
 
 // Replaces the pack's pack_purchase ledger row with one reflecting the
@@ -52,6 +55,61 @@ async function syncPackPurchaseTransaction(
 // MAX_COST_CENTS guards against a fat-fingered "$100,000,000" entry —
 // no sane pack costs anywhere near this; well under postgres int range.
 const MAX_COST_CENTS = 1_000_000_00;
+
+const setPackCostSchema = z.object({
+  packId: z.string().uuid(),
+  costCents: z.number().int().min(0).max(MAX_COST_CENTS),
+  currency: z.string().refine(isCurrency, "unsupported currency"),
+});
+
+// Price-only edit for a pack, used by the ledger's inline "Add price"
+// modal. updatePack() is the full editor and needs the pack's card list;
+// this one deliberately touches nothing but cost/currency/rate so the
+// caller doesn't have to load contents just to fill in a number.
+//
+// The FX rate is snapshotted as of the pack's opened_at, not today —
+// the pack is being priced retroactively, and the ledger's whole
+// multi-currency model rests on the rate that applied on the row's date.
+export async function setPackCost(
+  packId: string,
+  costCents: number,
+  currency: Currency,
+): Promise<void> {
+  const parsed = setPackCostSchema.parse({ packId, costCents, currency });
+  const userId = await requireUserId();
+  const supabase = await getSupabaseServer();
+
+  const { data: pack, error: lookupErr } = await supabase
+    .from("packs_opened")
+    .select("id, opened_at")
+    .eq("id", parsed.packId)
+    .eq("user_id", userId)
+    .maybeSingle();
+  if (lookupErr) throw new Error(lookupErr.message);
+  if (!pack) throw new Error("Pack not found");
+
+  const openedAt = pack.opened_at as string;
+  const rate =
+    (await getRateToEurOn(parsed.currency as Currency, openedAt)) ??
+    (await getRateToEurToday(parsed.currency as Currency));
+
+  const { error: patchErr } = await supabase
+    .from("packs_opened")
+    .update({
+      cost_cents: parsed.costCents,
+      currency: parsed.currency,
+      rate_to_eur: rate,
+    })
+    .eq("id", parsed.packId)
+    .eq("user_id", userId);
+  if (patchErr) throw new Error(patchErr.message);
+
+  await syncPackPurchaseTransaction(supabase, userId, parsed.packId);
+
+  revalidatePath("/transactions");
+  revalidatePath("/portfolio");
+  revalidatePath("/packs");
+}
 
 const costSchema = z
   .object({

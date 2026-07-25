@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Tag } from "lucide-react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { formatMoneyCents, type LedgerCurrency } from "@/lib/ledger/money";
 import type { LedgerRow, TransactionKind } from "@/lib/ledger/aggregates";
 import type { Currency } from "@/lib/pricing/currencies";
@@ -10,6 +10,7 @@ import { convertCents } from "@/lib/pricing/exchange-rates";
 import { MoneyDisplay } from "../../_components/MoneyDisplay";
 import type { CardVariant } from "../_lib/variants";
 import { LedgerRowActions } from "./LedgerRowActions";
+import { AddPriceModal, type AddPriceTarget } from "./AddPriceModal";
 
 export type SelectableKind = "single_purchase" | "sale";
 
@@ -283,7 +284,7 @@ function MobileRow({
           <div className="min-w-0">{renderDescription(row)}</div>
           {row.unpriced ? (
             <span className="shrink-0">
-              <AddPriceBadge lotId={row.lotId} />
+              <AddPriceBadge row={row} defaultCurrency={defaultCurrency} />
             </span>
           ) : (
             <span
@@ -491,7 +492,7 @@ function Row({
       <td className="px-4 py-2.5">{renderDescription(row)}</td>
       {row.unpriced ? (
         <td className="whitespace-nowrap px-4 py-2.5 text-right">
-          <AddPriceBadge lotId={row.lotId} />
+          <AddPriceBadge row={row} defaultCurrency={defaultCurrency} />
         </td>
       ) : (
         <td
@@ -576,21 +577,57 @@ function RowActions({
   return null;
 }
 
-// Amount-column affordance for an unpriced lot: instead of a money value
-// it invites the user to add the price (which creates the real ledger
-// row). Links to the same lot editor as the row's description/actions.
-function AddPriceBadge({ lotId }: { lotId: string | null }) {
-  if (!lotId) {
+// Amount-column affordance for an unpriced lot or pack: instead of a
+// money value it invites the user to add the price, which creates the
+// real ledger row and makes this synthetic row disappear. Opens a modal
+// rather than navigating to the full editor — those load the whole card
+// catalogue, which is a heavy trip for entering one number.
+function AddPriceBadge({
+  row,
+  defaultCurrency,
+}: {
+  row: LedgerTableRow;
+  defaultCurrency: LedgerCurrency;
+}) {
+  const [open, setOpen] = useState(false);
+
+  const target: AddPriceTarget | null = row.lotId
+    ? {
+        kind: "lot",
+        lotId: row.lotId,
+        label: `Bulk lot${
+          row.lotCardCount ? ` · ${row.lotCardCount} card${row.lotCardCount === 1 ? "" : "s"}` : ""
+        }`,
+      }
+    : row.packId
+      ? {
+          kind: "pack",
+          packId: row.packId,
+          label: `Pack${row.setName ? ` from ${row.setName}` : ""}`,
+        }
+      : null;
+
+  if (!target) {
     return <span className="text-[11px] uppercase tracking-wider text-muted">Unpriced</span>;
   }
+
   return (
-    <Link
-      href={`/transactions/lots/${lotId}/edit`}
-      className="inline-flex items-center gap-1 rounded-md border border-accent/40 bg-accent/10 px-2 py-1 text-[11px] font-medium text-accent transition hover:bg-accent/20"
-    >
-      <Tag className="h-3 w-3" aria-hidden />
-      Add price
-    </Link>
+    <>
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        className="inline-flex items-center gap-1 rounded-md border border-accent/40 bg-accent/10 px-2 py-1 text-[11px] font-medium text-accent transition hover:bg-accent/20"
+      >
+        <Tag className="h-3 w-3" aria-hidden />
+        Add price
+      </button>
+      <AddPriceModal
+        open={open}
+        onClose={() => setOpen(false)}
+        target={target}
+        defaultCurrency={defaultCurrency}
+      />
+    </>
   );
 }
 
