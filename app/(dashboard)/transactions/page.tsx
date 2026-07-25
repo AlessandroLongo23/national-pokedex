@@ -1,18 +1,10 @@
+import { Suspense } from "react";
 import { getSupabaseServer } from "@/lib/supabase/server";
 import { SETS } from "@/lib/data";
 import { getAllCards } from "@/lib/data/binder-scope";
-import {
-  fetchPricesForCards,
-  PRICE_SOURCE_CURRENCY,
-  sumPricesByQuantity,
-} from "@/lib/pricing/pokemontcg";
-import {
-  convertCents,
-  getLatestRatesFromEur,
-} from "@/lib/pricing/exchange-rates";
+import { getLatestRatesFromEur } from "@/lib/pricing/exchange-rates";
 import {
   computeKpis,
-  computeNetPositionCents,
   TRANSACTION_KINDS,
   type LedgerRow,
   type TransactionKind,
@@ -36,6 +28,13 @@ import {
   buildUnpricedPackRows,
 } from "./_lib/unpriced-rows";
 import { UndisplayableNotice } from "./_components/UndisplayableNotice";
+import {
+  HeldStat,
+  HeldStatSkeleton,
+  NetPositionSkeleton,
+  NetPositionValue,
+} from "./_components/PricedHeroStats";
+import { computeHeldValueCents } from "./_lib/held-value";
 
 function isTransactionKind(value: unknown): value is TransactionKind {
   return TRANSACTION_KINDS.includes(value as TransactionKind);
@@ -46,11 +45,20 @@ export default async function TransactionsPage() {
   const supabase = await getSupabaseServer();
   const prefs = await loadUserPreferences(userId);
   const displayCurrency = prefs.displayCurrency;
-  const heldValueCurrency = PRICE_SOURCE_CURRENCY[prefs.priceSource];
+
+  // Kicked off here but deliberately NOT awaited: pricing is the slowest
+  // thing on this page by an order of magnitude, and only two hero
+  // figures need it. Starting it now means it runs while the queries
+  // below do their work; handing the promise to Suspense boundaries at
+  // the bottom means the ledger renders without waiting for it.
+  const heldValuePromise = computeHeldValueCents(
+    userId,
+    prefs.priceSource,
+    displayCurrency,
+  );
 
   const [
     txnRes,
-    ownedRes,
     psaCardsRes,
     lotContentsRes,
     lotsRes,
@@ -64,10 +72,6 @@ export default async function TransactionsPage() {
         )
         .eq("user_id", userId)
         .order("occurred_at", { ascending: false }),
-      supabase
-        .from("owned_cards")
-        .select("card_id, quantity")
-        .eq("user_id", userId),
       // For each PSA submission referenced in the ledger we want to show
       // a card count next to the fee row. One round-trip groups all of
       // them up front.
@@ -100,38 +104,6 @@ export default async function TransactionsPage() {
       // first render of the day.
       getLatestRatesFromEur(),
     ]);
-
-  // Pricing the held value mirrors the portfolio page so the two pages
-  // agree on the same number for the same set of cards.
-  const owned = ownedRes.data ?? [];
-  const ownedQuantities = new Map<string, number>();
-  for (const r of owned) {
-    ownedQuantities.set(
-      r.card_id as string,
-      (r.quantity as number | null) ?? 1,
-    );
-  }
-  const priceMap = await fetchPricesForCards(ownedQuantities.keys());
-  const { total: heldValueUnits } = sumPricesByQuantity(
-    priceMap,
-    ownedQuantities,
-    prefs.priceSource,
-  );
-  const heldValueCentsNative = Math.round(heldValueUnits * 100);
-  // Held value comes priced in the chosen marketplace's native currency
-  // (USD for TCGplayer, EUR for Cardmarket). Convert at today's rate so
-  // the KPI math sums with ledger totals which are in displayCurrency.
-  const heldValueCents =
-    convertCents(
-      heldValueCentsNative,
-      heldValueCurrency,
-      displayCurrency,
-      // No snapshot — market values are always "as of now".
-      heldValueCurrency === "EUR"
-        ? 1
-        : 1 / (latestRatesFromEur[heldValueCurrency] ?? 1),
-      latestRatesFromEur,
-    ) ?? heldValueCentsNative;
 
   const allCards = await getAllCards();
   const cardInfoById = new Map<string, LedgerTableCardInfo>();
@@ -272,7 +244,6 @@ export default async function TransactionsPage() {
 
   const ledgerRows: LedgerRow[] = tableRows;
   const kpis = computeKpis(ledgerRows, displayCurrency, latestRatesFromEur);
-  const netPositionCents = computeNetPositionCents(kpis, heldValueCents);
 
   return (
     <div className="mx-auto flex w-full min-h-0 max-w-[1280px] flex-1 flex-col gap-6">
@@ -284,10 +255,25 @@ export default async function TransactionsPage() {
       <div className="min-h-0 flex-1 overflow-y-auto pr-1">
       <LedgerHero
         kpis={kpis}
-        heldValueCents={heldValueCents}
-        netPositionCents={netPositionCents}
         displayCurrency={displayCurrency}
         priceSource={prefs.priceSource}
+        netPositionSlot={
+          <Suspense fallback={<NetPositionSkeleton />}>
+            <NetPositionValue
+              heldValuePromise={heldValuePromise}
+              kpis={kpis}
+              displayCurrency={displayCurrency}
+            />
+          </Suspense>
+        }
+        heldSlot={
+          <Suspense fallback={<HeldStatSkeleton />}>
+            <HeldStat
+              heldValuePromise={heldValuePromise}
+              displayCurrency={displayCurrency}
+            />
+          </Suspense>
+        }
       />
 
       <UndisplayableNotice rows={undisplayable} />

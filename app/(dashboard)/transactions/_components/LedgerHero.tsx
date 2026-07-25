@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Link from "next/link";
 import { formatMoneyCents, type LedgerCurrency } from "@/lib/ledger/money";
 import type { LedgerKpis } from "@/lib/ledger/aggregates";
@@ -9,10 +10,14 @@ import {
 
 interface Props {
   kpis: LedgerKpis;
-  heldValueCents: number;
-  netPositionCents: number;
   displayCurrency: LedgerCurrency;
   priceSource: PriceSource;
+  /** The big net-position figure. A slot rather than a value because it
+   *  depends on live pricing, which the page streams in under Suspense
+   *  instead of blocking the ledger on it. */
+  netPositionSlot: ReactNode;
+  /** Likewise for the "Held" stat — same pricing dependency. */
+  heldSlot: ReactNode;
 }
 
 // Net position leads — that's the user's actual answer to "am I ahead?".
@@ -20,18 +25,17 @@ interface Props {
 // matching the PortfolioHero rhythm where one number dominates and the
 // rest flow beneath as compact prose.
 //
-// All values arrive pre-converted into displayCurrency by the page's
-// computeKpis call, so this component just formats — no MoneyDisplay
-// tooltips needed here; the per-row tooltips in LedgerTable expose the
-// original amounts.
+// The cash-flow values arrive pre-converted into displayCurrency by the
+// page's computeKpis call, so this component just formats — no
+// MoneyDisplay tooltips needed here; the per-row tooltips in LedgerTable
+// expose the original amounts.
 export function LedgerHero({
   kpis,
-  heldValueCents,
-  netPositionCents,
   displayCurrency,
   priceSource,
+  netPositionSlot,
+  heldSlot,
 }: Props) {
-  const ahead = netPositionCents >= 0;
   const sourceNative = PRICE_SOURCE_CURRENCY[priceSource];
 
   return (
@@ -39,16 +43,7 @@ export function LedgerHero({
       <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div className="space-y-1.5">
           <p className="text-[11px] uppercase tracking-wider text-muted">Net position</p>
-          <p
-            className={[
-              "text-4xl font-semibold tracking-tight tabular-nums md:text-5xl",
-              ahead ? "text-covered" : "text-missing",
-            ].join(" ")}
-            aria-label={`Net position ${formatMoneyCents(netPositionCents, displayCurrency)}`}
-          >
-            {ahead ? "+" : "−"}
-            {formatMoneyCents(Math.abs(netPositionCents), displayCurrency)}
-          </p>
+          {netPositionSlot}
           <p className="text-xs text-muted">
             held − spent + earned · {displayCurrency} via{" "}
             <Link
@@ -76,20 +71,20 @@ export function LedgerHero({
             }
             tone={kpis.netCashFlowCents >= 0 ? "pos" : "neg"}
           />
-          <Stat label="Held" value={formatMoneyCents(heldValueCents, displayCurrency)} />
+          {heldSlot}
         </dl>
       </div>
     </section>
   );
 }
 
-function Stat({
+export function Stat({
   label,
   value,
   tone,
 }: {
   label: string;
-  value: string;
+  value: ReactNode;
   tone?: "pos" | "neg";
 }) {
   return (
