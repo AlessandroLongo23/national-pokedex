@@ -57,6 +57,9 @@ export function CardPicker(props: CardPickerProps) {
   const { filter, emptyMessage, autoFocus } = props;
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<CardPickerResult[]>([]);
+  // Full match count on the server, before its safety-valve slice. Lets
+  // the list say "showing 500 of 1627" instead of quietly truncating.
+  const [total, setTotal] = useState(0);
   const [searching, setSearching] = useState(false);
   const [hoverIdx, setHoverIdx] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -75,6 +78,7 @@ export function CardPicker(props: CardPickerProps) {
     const trimmed = query.trim();
     if (trimmed.length < 2) {
       setResults([]);
+      setTotal(0);
       setSearching(false);
       setHoverIdx(0);
       return;
@@ -82,16 +86,24 @@ export function CardPicker(props: CardPickerProps) {
     setSearching(true);
     const handle = setTimeout(async () => {
       try {
+        // No `limit` — the route's default returns every match up to its
+        // own safety valve. Asking for 20 here was one of three caps that
+        // compounded into "the list never shows all the cards".
         const res = await fetch(
-          `/api/cards/search?q=${encodeURIComponent(trimmed)}&limit=20`,
+          `/api/cards/search?q=${encodeURIComponent(trimmed)}`,
           { cache: "no-store" },
         );
         if (!res.ok) throw new Error("search failed");
-        const data = (await res.json()) as { results: CardPickerResult[] };
+        const data = (await res.json()) as {
+          results: CardPickerResult[];
+          total?: number;
+        };
         setResults(data.results);
+        setTotal(data.total ?? data.results.length);
         setHoverIdx(0);
       } catch {
         setResults([]);
+        setTotal(0);
       } finally {
         setSearching(false);
       }
@@ -100,8 +112,9 @@ export function CardPicker(props: CardPickerProps) {
   }, [query]);
 
   // In multi mode, hide already-picked cards so they don't appear twice
-  // (matches the pre-refactor NewPsaModal behavior). N ≤ 20 results, so
-  // computing inline is fine.
+  // (matches the pre-refactor NewPsaModal behavior). Two array passes
+  // over at most a few hundred results per keystroke — cheap enough to
+  // do inline, and the 200ms debounce above bounds how often it runs.
   const pickedIds =
     props.mode === "multi" ? new Set(props.picked.map((c) => c.id)) : null;
   const visible = results.filter((c) => {
@@ -220,6 +233,20 @@ export function CardPicker(props: CardPickerProps) {
             </ul>
           )}
         </div>
+        {hasQuery && visible.length > 0 && (
+          <p className="px-0.5 text-[11px] text-muted tabular-nums">
+            {total > results.length ? (
+              <>
+                Showing {visible.length} of {total} matches — keep typing to
+                narrow.
+              </>
+            ) : (
+              <>
+                {visible.length} match{visible.length === 1 ? "" : "es"}
+              </>
+            )}
+          </p>
+        )}
         {props.mode === "multi" && props.picked.length > 0 && (
           <div className="space-y-1 rounded-md border border-accent/40 bg-accent/5 p-2">
             {props.picked.map((c) => (
